@@ -1,0 +1,32 @@
+name: Build Lambda Release
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: kotlin-function
+        
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+          
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+        
+      - name: Build with Gradle
+        run: ./gradlew buildLambdaRelease
+        
+      - name: Upload build directory
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-artifacts
+          path: kotlin-function/build/
