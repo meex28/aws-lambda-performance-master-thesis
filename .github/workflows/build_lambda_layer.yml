@@ -1,0 +1,44 @@
+name: Build Lambda Layer
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-lambda-layer:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # Set up Docker and build the Lambda layer
+      - name: Build Lambda Layer
+        run: |
+          # Create directory structure
+          mkdir -p layer/lib
+
+          # Use Amazon Linux 2 container to ensure compatibility
+          docker run --rm -v $(pwd):/lambda-layer amazonlinux:2 bash -c '
+              yum update -y && \
+              yum groupinstall -y "Development Tools" && \
+              cp /lib64/libcrypt.so.1 /lambda-layer/layer/lib/ && \
+              cp /lib64/libfreebl3.so /lambda-layer/layer/lib/ && \
+              cd /lambda-layer/layer/lib && \
+              ln -s libcrypt.so.1 libcrypt.so
+          '
+
+          # Create zip file for the layer
+          cd layer
+          zip -r ../lambda-layer.zip .
+          cd ..
+
+      # Upload the ZIP file as an artifact
+      - name: Upload Lambda Layer Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: lambda-layer
+          path: lambda-layer.zip
