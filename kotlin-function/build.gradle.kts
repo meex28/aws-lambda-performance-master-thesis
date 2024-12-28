@@ -18,7 +18,7 @@ kotlin {
     sourceSets {
         nativeMain.dependencies {
             implementation("io.github.trueangle:lambda-runtime:0.0.2")
-            implementation("io.github.trueangle:lambda-events:0.0.2")
+//            implementation("io.github.trueangle:lambda-events:0.0.2")
         }
     }
 
@@ -29,8 +29,6 @@ kotlin {
     }
 
     listOf(
-//        macosArm64(),
-//        macosX64(),
         linuxX64(),
     ).forEach {
         it.binaries {
