@@ -4,7 +4,7 @@
     <option name="workspaceFolders">
       <list>
         <WorkspaceFolder>
-          <option name="name" value="java-function" />
+          <option name="name" value="aws-lambda-performance-master-thesis" />
           <option name="uri" value="$PROJECT_DIR$" />
         </WorkspaceFolder>
       </list>
