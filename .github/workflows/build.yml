@@ -141,6 +141,7 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
+  # TODO: build only native
   build-kotlin-function-native:
     runs-on: ubuntu-latest
     container:
@@ -154,7 +155,7 @@ jobs:
         run: |
           task --version
           apt-get update 
-          apt-get install -y curl libcurl4-openssl-dev unzip
+          apt-get install -y curl libcurl4-openssl-dev unzip zip
         shell: bash
       - name: build
         run: task build:kotlin-function:native
