@@ -3,4 +3,5 @@ description: Installs Taskfile on the runner
 runs:
     using: "composite"
     steps:
-        - run: curl -sSL https://taskfile.dev/install.sh | sh
+        -   run: curl -sSL https://taskfile.dev/install.sh | sh
+            shell: bash
