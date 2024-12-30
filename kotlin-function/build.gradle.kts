@@ -70,3 +70,26 @@ tasks.withType<KotlinJsCompile>().configureEach {
         target = "es2015"
     }
 }
+
+tasks.register<Zip>("compressJsLambda") {
+    dependsOn("jsNodeProductionRun")
+
+    from("build/js") {
+        include("**/*")
+    }
+
+    archiveFileName.set("kotlin-function-js.zip")
+    destinationDirectory.set(layout.buildDirectory.dir("lambda"))
+
+    doFirst {
+        if (!file("build/js").exists()) {
+            throw GradleException("build/js directory not found. Run jsNodeProductionRun first.")
+        }
+    }
+}
+
+tasks.register("buildJsLambdaRelease") {
+    dependsOn("jsNodeProductionRun", "compressJsLambda")
+
+    tasks.findByName("compressJsLambda")?.mustRunAfter("jsNodeProductionRun")
+}

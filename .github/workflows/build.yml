@@ -107,6 +107,7 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
+  #  install zip
   build-kotlin-function-js:
     runs-on: ubuntu-latest
     container:
@@ -121,13 +122,11 @@ jobs:
           task --version
       - name: build
         run: task build:kotlin-function:js
-      - name: compress artifact
-        run: zip -r kotlin-function-js.zip kotlin-function/build/js
       - name: publish artifact
         uses: actions/upload-artifact@v3
         with:
           name: kotlin-function-js
-          path: kotlin-function-js.zip
+          path: kotlin-function/build/lambda/kotlin-function-js.zip
   upload-kotlin-function-js:
     needs: build-kotlin-function-js
     runs-on: ubuntu-latest
