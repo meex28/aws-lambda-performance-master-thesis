@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-quarkus-jar:
+  build-java-function-jar:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -18,7 +18,12 @@ jobs:
         run: |
           task --version
       - name: build
-        run: task build:quarkus:jar
+        run: task build:java-function:jar
+      - name: publish
+        uses: actions/upload-artifact@v4
+        with:
+          name: java-function-jar
+          path: java-function/build/function.zip
 
 #  build:
 #    runs-on: ubuntu-latest
