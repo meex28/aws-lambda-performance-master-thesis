@@ -16,5 +16,5 @@ tasks:
     build:kotlin-function:js:
         dir: kotlin-function
         cmds:
-            - gradle jsNodeProductionRun
+            - gradle buildJsLambdaRelease
 
