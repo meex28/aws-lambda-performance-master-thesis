@@ -153,8 +153,8 @@ jobs:
       - name: preinstall dependencies
         run: |
           task --version
-          sudo apt-get update 
-          sudo apt-get install -y curl libcurl4-openssl-dev unzip
+          apt-get update 
+          apt-get install -y curl libcurl4-openssl-dev unzip
         shell: bash
       - name: build
         run: task build:kotlin-function:native
