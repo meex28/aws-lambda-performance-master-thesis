@@ -1,7 +1,11 @@
-name: build
+name: Build functions
 
 on:
   workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
 
 jobs:
   build-java-function-jar:
@@ -18,11 +22,24 @@ jobs:
           task --version
       - name: build
         run: task build:java-function:jar
-      - name: publish
-        uses: actions/upload-artifact@v4
+      - name: publish artifact
+        uses: actions/upload-artifact@v3
         with:
           name: java-function-jar
           path: java-function/build/function.zip
+  upload-java-function-jar:
+    needs: build-java-function-jar
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v3
+      - name: upload to S3
+        uses: ./.github/actions/upload_to_s3
+        with:
+          artifact-name: java-function-jar
+          s3-path: java-function-jar
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
 #  build:
 #    runs-on: ubuntu-latest

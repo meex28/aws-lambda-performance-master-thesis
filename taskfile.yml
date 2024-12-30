@@ -4,9 +4,9 @@ tasks:
     build:java-function:jar:
         dir: java-function
         cmds:
-            - ./gradlew build
+            - gradle build
     build:java-function:native:
         dir: java-function
         cmds:
-            - ./gradlew build -Dquarkus.native.enabled=true -Dquarkus.package.jar.enabled=false
+            - gradle build -Dquarkus.native.enabled=true -Dquarkus.package.jar.enabled=false
 
