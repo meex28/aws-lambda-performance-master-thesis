@@ -41,6 +41,39 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
+  build-java-function-native:
+    runs-on: ubuntu-latest
+    container:
+      image: gradle:jdk21-graal-jammy
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v3
+      - name: install taskfile
+        uses: ./.github/actions/install_taskfile
+      - name: preinstall dependencies
+        run: |
+          task --version
+      - name: build
+        run: task build:java-function:native
+      - name: publish artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: java-function-native
+          path: java-function/build/function.zip
+  upload-java-function-native:
+    needs: build-java-function-jar
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v3
+      - name: upload to S3
+        uses: ./.github/actions/upload_to_s3
+        with:
+          artifact-name: java-function-native
+          s3-path: java-function-native
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
 #  build:
 #    runs-on: ubuntu-latest
 #    defaults:
