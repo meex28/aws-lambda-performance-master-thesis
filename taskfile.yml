@@ -9,4 +9,8 @@ tasks:
         dir: java-function
         cmds:
             - gradle build -Dquarkus.native.enabled=true -Dquarkus.package.jar.enabled=false -x test
+    build:kotlin-function:jar:
+        dir: kotlin-function
+        cmds:
+            - gradle shadowJar
 
