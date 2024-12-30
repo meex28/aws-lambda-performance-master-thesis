@@ -61,7 +61,7 @@ jobs:
           name: java-function-native
           path: java-function/build/function.zip
   upload-java-function-native:
-    needs: build-java-function-jar
+    needs: build-java-function-native
     runs-on: ubuntu-latest
     steps:
       - name: checkout code
