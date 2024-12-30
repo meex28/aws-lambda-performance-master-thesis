@@ -1,4 +1,6 @@
 import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
+import org.jetbrains.kotlin.gradle.dsl.KotlinJsCompile
+import org.jetbrains.kotlin.gradle.internal.builtins.StandardNames.FqNames.target
 
 plugins {
     kotlin("multiplatform") version "2.1.0"
@@ -30,7 +32,10 @@ kotlin {
 
     jvm()
 
-    js().nodejs()
+    js {
+        nodejs { }
+        binaries.executable()
+    }
 
     linuxX64().binaries {
         executable {
@@ -57,5 +62,11 @@ tasks.register<ShadowJar>("shadowJar") {
     mergeServiceFiles()
     manifest {
         attributes["Main-Class"] = "org.lambda.performance.jvm.Handler"
+    }
+}
+
+tasks.withType<KotlinJsCompile>().configureEach {
+    compilerOptions {
+        target = "es2015"
     }
 }

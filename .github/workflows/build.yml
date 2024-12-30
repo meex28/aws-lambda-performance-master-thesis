@@ -107,6 +107,41 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
+  build-kotlin-function-js:
+    runs-on: ubuntu-latest
+    container:
+      image: gradle:jdk21-jammy
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v3
+      - name: install taskfile
+        uses: ./.github/actions/install_taskfile
+      - name: preinstall dependencies
+        run: |
+          task --version
+      - name: build
+        run: task build:kotlin-function:js
+      - name: compress artifact
+        run: zip -r kotlin-function-js.zip kotlin-function/build/js
+      - name: publish artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: kotlin-function-js
+          path: kotlin-function-js.zip
+  upload-kotlin-function-js:
+    needs: build-kotlin-function-js
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v3
+      - name: upload to S3
+        uses: ./.github/actions/upload_to_s3
+        with:
+          artifact-name: kotlin-function-js
+          s3-path: kotlin-function-js
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
 #  build:
 #    runs-on: ubuntu-latest
 #    defaults:

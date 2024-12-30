@@ -13,4 +13,8 @@ tasks:
         dir: kotlin-function
         cmds:
             - gradle shadowJar
+    build:kotlin-function:js:
+        dir: kotlin-function
+        cmds:
+            - gradle jsNodeProductionRun
 
