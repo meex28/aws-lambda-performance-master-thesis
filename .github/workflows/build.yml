@@ -1,0 +1,51 @@
+name: build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-quarkus-jar:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: java-function
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v3
+      - name: install taskfile
+        uses: ./.github/actions/install_taskfile
+      - name: preinstall dependencies
+        run: |
+          task --version
+      - name: build
+        run: task build:quarkus:jar
+
+#  build:
+#    runs-on: ubuntu-latest
+#    defaults:
+#      run:
+#        working-directory: kotlin-function
+#
+#    steps:
+#      - uses: actions/checkout@v3
+#
+#      - name: Install system dependencies
+#        run: sudo apt-get update && sudo apt-get install -y curl libcurl4-openssl-dev unzip
+#
+#      - name: Set up JDK
+#        uses: actions/setup-java@v3
+#        with:
+#          java-version: '21'
+#          distribution: 'temurin'
+#
+#      - name: Make gradlew executable
+#        run: chmod +x ./gradlew
+#
+#      - name: Build with Gradle
+#        run: ./gradlew buildLambdaRelease
+#
+#      - name: Upload build directory
+#        uses: actions/upload-artifact@v3
+#        with:
+#          name: build-artifacts
+#          path: kotlin-function/build/
