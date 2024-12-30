@@ -17,4 +17,7 @@ tasks:
         dir: kotlin-function
         cmds:
             - gradle buildJsLambdaRelease
-
+    build:kotlin-function:native:
+        dir: kotlin-function
+        cmds:
+            - gradle buildLambdaRelease

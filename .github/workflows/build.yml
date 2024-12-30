@@ -141,32 +141,37 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
-#  build:
-#    runs-on: ubuntu-latest
-#    defaults:
-#      run:
-#        working-directory: kotlin-function
-#
-#    steps:
-#      - uses: actions/checkout@v3
-#
-#      - name: Install system dependencies
-#        run: sudo apt-get update && sudo apt-get install -y curl libcurl4-openssl-dev unzip
-#
-#      - name: Set up JDK
-#        uses: actions/setup-java@v3
-#        with:
-#          java-version: '21'
-#          distribution: 'temurin'
-#
-#      - name: Make gradlew executable
-#        run: chmod +x ./gradlew
-#
-#      - name: Build with Gradle
-#        run: ./gradlew buildLambdaRelease
-#
-#      - name: Upload build directory
-#        uses: actions/upload-artifact@v3
-#        with:
-#          name: build-artifacts
-#          path: kotlin-function/build/
+  build-kotlin-function-native:
+    runs-on: ubuntu-latest
+    container:
+      image: gradle:jdk21-graal-jammy
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v3
+      - name: install taskfile
+        uses: ./.github/actions/install_taskfile
+      - name: preinstall dependencies
+        run: |
+          task --version
+          sudo apt-get update 
+          sudo apt-get install -y curl libcurl4-openssl-dev unzip
+      - name: build
+        run: task build:kotlin-function:native
+      - name: publish artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: kotlin-function-native
+          path: kotlin-function/build/lambda/release/kotlin-function.zip
+  upload-kotlin-function-native:
+    needs: build-kotlin-function-native
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v3
+      - name: upload to S3
+        uses: ./.github/actions/upload_to_s3
+        with:
+          artifact-name: kotlin-function-native
+          s3-path: kotlin-function-native
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
