@@ -1,7 +1,11 @@
 name: Build functions
 
 on:
-  workflow_dispatch:
+  push:
+    paths:
+      - "java-function/**"
+      - "kotlin-function/**"
+      - "taskfile.yml"
 
 permissions:
   id-token: write
