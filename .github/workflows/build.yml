@@ -1,6 +1,7 @@
 name: Build functions
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - "java-function/**"
