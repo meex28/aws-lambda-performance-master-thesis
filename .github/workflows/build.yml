@@ -31,7 +31,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: java-function-jar
-          path: java-function/build/java-function-1.0.0-runner.jar
+          path: java-function/build/function.zip
   upload-java-function-jar:
     needs: build-java-function-jar
     runs-on: ubuntu-latest

@@ -1,4 +1,4 @@
-package org.lambda.performance.lambda;
+package org.lambda.performance;
 
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
