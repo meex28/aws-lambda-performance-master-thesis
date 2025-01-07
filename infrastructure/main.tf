@@ -32,6 +32,9 @@ resource "aws_lambda_function" "this" {
   s3_bucket     = aws_s3_bucket.mte_functions_code.bucket
   s3_key        = each.value.bucket_source_file
   handler       = each.value.handler
-  runtime       = "provided.al2"       # Update this based on your runtime (e.g., nodejs18.x, java11, etc.)
+  runtime       = each.value.runtime
   role          = aws_iam_role.this.arn
+  timeout       = 60
+
+  publish = true
 }

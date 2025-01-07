@@ -2,7 +2,7 @@ locals {
   lambda_functions = [
     {
       name = "java-function-jar"
-      bucket_source_file = "java-function-jar/java-function-1.0.0-runner.jar"
+      bucket_source_file = "java-function-jar/function.zip"
       handler = "io.quarkus.amazon.lambda.runtime.QuarkusStreamHandler::handleRequest"
       layers = []
       runtime = "java21"
@@ -27,7 +27,7 @@ locals {
       bucket_source_file = "kotlin-function-native/kotlin-function.zip"
       handler = "kotlin-function.kexe"
       layers = [data.aws_lambda_layer_version.libcrypt_layer.arn]
-      runtime = "provided.al2023"
+      runtime = "provided.al2"
     },
   ]
 }
