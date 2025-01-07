@@ -4,20 +4,20 @@ tasks:
     build:java-function:jar:
         dir: java-function
         cmds:
-            - gradle build -x test
+            - ./gradlew build -x test
     build:java-function:native:
         dir: java-function
         cmds:
-            - gradle build -Dquarkus.native.enabled=true -Dquarkus.package.jar.enabled=false -x test
+            - ./gradlew build -Dquarkus.native.enabled=true -Dquarkus.package.jar.enabled=false -x test
     build:kotlin-function:jar:
         dir: kotlin-function
         cmds:
-            - gradle shadowJar
+            - ./gradlew shadowJar
     build:kotlin-function:js:
         dir: kotlin-function
         cmds:
-            - gradle buildJsLambdaRelease
+            - ./gradlew buildJsLambdaRelease
     build:kotlin-function:native:
         dir: kotlin-function
         cmds:
-            - gradle buildLambdaRelease
+            - ./gradlew buildLambdaRelease
