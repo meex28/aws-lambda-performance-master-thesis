@@ -24,13 +24,18 @@ jobs:
       - name: preinstall dependencies
         run: |
           task --version
+          apt-get update 
+          apt-get install -y zip
       - name: build
         run: task build:java-function:jar
+      - name: compress jar
+        run: |
+          zip java-function.zip java-function/build/java-function-1.0.0-runner.jar
       - name: publish artifact
         uses: actions/upload-artifact@v3
         with:
           name: java-function-jar
-          path: java-function/build/java-function-1.0.0-runner.jar
+          path: java-function.zip
   upload-java-function-jar:
     needs: build-java-function-jar
     runs-on: ubuntu-latest
