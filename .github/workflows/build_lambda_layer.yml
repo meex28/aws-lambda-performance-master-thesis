@@ -2,6 +2,9 @@ name: Build Lambda Layer
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/build_lambda_layer.yml"
 
 jobs:
   build-lambda-layer:
