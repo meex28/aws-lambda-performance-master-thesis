@@ -20,12 +20,12 @@ jobs:
 
           # Use Amazon Linux 2023 container to ensure compatibility
           docker run --rm -v $(pwd):/lambda-layer amazonlinux:2023 bash -c '
-              yum update -y && \
-              yum groupinstall -y "Development Tools" && \
-              cp /lib64/libcrypt.so.1 /lambda-layer/layer/lib/ && \
-              cp /lib64/libfreebl3.so /lambda-layer/layer/lib/ && \
-              cd /lambda-layer/layer/lib && \
-              ln -s libcrypt.so.1 libcrypt.so
+            yum update -y && \
+            yum install -y libxcrypt-compat && \
+            mkdir -p /lambda-layer/layer/lib && \
+            cp /lib64/libcrypt.so.1 /lambda-layer/layer/lib/ && \
+            cd /lambda-layer/layer/lib && \
+            ln -s libcrypt.so.1 libcrypt.so
           '
 
           # Create zip file for the layer
