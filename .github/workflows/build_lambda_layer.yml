@@ -18,8 +18,8 @@ jobs:
           # Create directory structure
           mkdir -p layer/lib
 
-          # Use Amazon Linux 2 container to ensure compatibility
-          docker run --rm -v $(pwd):/lambda-layer amazonlinux:2 bash -c '
+          # Use Amazon Linux 2023 container to ensure compatibility
+          docker run --rm -v $(pwd):/lambda-layer amazonlinux:2023 bash -c '
               yum update -y && \
               yum groupinstall -y "Development Tools" && \
               cp /lib64/libcrypt.so.1 /lambda-layer/layer/lib/ && \
