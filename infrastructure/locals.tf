@@ -13,8 +13,8 @@ locals {
     # },
     {
       name = "kotlin-function-jar"
-      bucket_source_file = "kotlin-function-jar/kotlin-function-1.0-all.jar"
-      handler = "org.lambda.performance.Handler::handleRequest"
+      bucket_source_file = "kotlin-function-jar/kotlin-function-jvm-1.0-all.jar"
+      handler = "org.lambda.performance.jvm.Handler"
       layers = []
       runtime = "java21"
     },

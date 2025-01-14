@@ -1,6 +1,5 @@
 import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 import org.jetbrains.kotlin.gradle.dsl.KotlinJsCompile
-import org.jetbrains.kotlin.gradle.internal.builtins.StandardNames.FqNames.target
 
 plugins {
     kotlin("multiplatform") version "2.1.0"
@@ -14,9 +13,6 @@ version = "1.0"
 
 repositories {
     mavenCentral()
-}
-
-dependencies {
 }
 
 kotlin {
@@ -48,7 +44,7 @@ kotlin {
 }
 
 tasks.register<ShadowJar>("shadowJar") {
-    archiveBaseName.set(project.name)
+    archiveBaseName.set("${project.name}-jvm")
     archiveVersion.set("1.0")
     archiveClassifier.set("all")
 

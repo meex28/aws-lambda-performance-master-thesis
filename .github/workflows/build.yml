@@ -97,7 +97,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: kotlin-function-jar
-          path: kotlin-function/build/libs/kotlin-function-1.0-all.jar
+          path: kotlin-function/build/libs/kotlin-function-jvm-1.0-all.jar
   upload-kotlin-function-jar:
     needs: build-kotlin-function-jar
     runs-on: ubuntu-latest
