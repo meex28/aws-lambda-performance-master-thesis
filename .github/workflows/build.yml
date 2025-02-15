@@ -28,7 +28,7 @@ jobs:
       - name: build
         run: task build:java-function:jar
       - name: publish artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: java-function-jar
           path: java-function/build/function.zip
@@ -61,7 +61,7 @@ jobs:
       - name: build
         run: task build:java-function:native
       - name: publish artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: java-function-native
           path: java-function/build/function.zip
@@ -94,7 +94,7 @@ jobs:
       - name: build
         run: task build:kotlin-function:jar
       - name: publish artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: kotlin-function-jar
           path: kotlin-function/build/libs/kotlin-function-jvm-1.0-all.jar
@@ -128,7 +128,7 @@ jobs:
       - name: build
         run: task build:kotlin-function:js
       - name: publish artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: kotlin-function-js
           path: kotlin-function/build/lambda/kotlin-function-js.zip
@@ -165,7 +165,7 @@ jobs:
       - name: build
         run: task build:kotlin-function:native
       - name: publish artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: kotlin-function-native
           path: kotlin-function/build/lambda/release/kotlin-function.zip
