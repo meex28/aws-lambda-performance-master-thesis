@@ -10,9 +10,18 @@ data class LambdaResponse(
     val body: String
 )
 
+fun LambdaResponse.toJson() = JSON.stringify(
+    mapOf(
+        "statusCode" to statusCode,
+        "body" to body
+    )
+)
+
 fun handler(input: Any?, context: Any?, callback: dynamic) {
-    callback(null, LambdaResponse(
-        statusCode = 200,
-        body = JSON.stringify(mapOf("message" to handle()))
-    ))
+    callback(
+        null, LambdaResponse(
+            statusCode = 200,
+            body = JSON.stringify(mapOf("message" to handle()))
+        ).toJson()
+    )
 }
