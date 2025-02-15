@@ -67,7 +67,7 @@ tasks.withType<KotlinJsCompile>().configureEach {
     }
 }
 
-tasks.register<Zip>("compressJsLambda") {
+tasks.register<Zip>("buildJsLambdaRelease") {
     dependsOn("jsNodeProductionRun")
 
     from("build/js") {
@@ -84,8 +84,6 @@ tasks.register<Zip>("compressJsLambda") {
     }
 }
 
-tasks.register("buildJsLambdaRelease") {
-    dependsOn("jsNodeProductionRun", "compressJsLambda")
-
-    tasks.findByName("compressJsLambda")?.mustRunAfter("jsNodeProductionRun")
+project.plugins.withType<org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsPlugin> {
+    project.the<org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsEnvSpec>().version = "22.13.0"
 }
