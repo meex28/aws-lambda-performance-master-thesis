@@ -10,9 +10,9 @@ data class LambdaResponse(
     val body: String
 )
 
-fun handler(input: Any?, context: Any?): LambdaResponse {
-    return LambdaResponse(
+fun handler(input: Any?, context: Any?, callback: dynamic) {
+    callback(null, LambdaResponse(
         statusCode = 200,
         body = JSON.stringify(mapOf("message" to handle()))
-    )
+    ))
 }
