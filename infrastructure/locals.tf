@@ -32,4 +32,6 @@ locals {
       runtime            = "provided.al2023"
     },
   ]
+
+  bun_runtime_layer_arn = "arn:aws:lambda:us-east-1:205979422636:layer:bun:1"
 }
