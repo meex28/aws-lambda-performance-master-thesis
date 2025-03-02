@@ -1,1 +1,5 @@
 /infrastructure/.terraform/
+/infrastructure/terraform/function-source/
+/infrastructure/benchmark/functions/build/
+/infrastructure/benchmark/functions/node_modules/
+/infrastructure/terraform/.terraform/
