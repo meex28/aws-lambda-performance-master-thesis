@@ -1,28 +1,9 @@
-data "archive_file" "invoker" {
-  type        = "zip"
-  source_dir  = "${path.root}/../benchmark/functions/build/invoker"
-  output_path = "${path.module}/function-source/invoker.zip"
-}
-
-data "archive_file" "log_processor" {
-  type        = "zip"
-  source_dir  = "${path.root}/../benchmark/functions/build/log_processor"
-  output_path = "${path.module}/function-source/log_processor.zip"
-}
-
-locals {
-  functions_arns_env_var = {
-    for idx, func in aws_lambda_function.this :
-    replace("FUNCTION_ARN_${idx}", "-", "_") => func.arn
-  }
-}
-
-resource "aws_s3_bucket" "benchmark_results" {
+resource "aws_s3_bucket" "results" {
   bucket = "mte-benchmark-results"
 }
 
 resource "aws_lambda_function" "invoker" {
-  function_name = "mte-benchmark-invoker-function"
+  function_name = "${local.lambda_name_prefix}-invoker"
   role          = aws_iam_role.this.arn
 
   filename         = data.archive_file.invoker.output_path
@@ -41,7 +22,7 @@ resource "aws_lambda_function" "invoker" {
 }
 
 resource "aws_lambda_function" "log_processor" {
-  function_name = "mte-benchmark-log-processor-function"
+  function_name = "${local.lambda_name_prefix}-log-processor"
   role          = aws_iam_role.this.arn
 
   filename         = data.archive_file.log_processor.output_path
