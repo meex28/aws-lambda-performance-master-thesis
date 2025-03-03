@@ -35,8 +35,7 @@ resource "aws_iam_role_policy" "lambda_invoke_policy" {
   })
 }
 
-resource "aws_iam_policy_attachment" "this" {
-  name       = "lambda-basic-policy"
-  roles      = [aws_iam_role.this.name]
+resource "aws_iam_role_policy_attachment" "this" {
+  role       = aws_iam_role.this.name
   policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
 }

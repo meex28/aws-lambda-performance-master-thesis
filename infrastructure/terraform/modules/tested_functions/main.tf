@@ -17,4 +17,11 @@ resource "aws_lambda_function" "this" {
   layers  = try(each.value.layers, [])
 
   timeout = 60
+
+  dynamic "snap_start" {
+    for_each = each.value.snapstart_enabled ? [1] : []
+    content {
+      apply_on = "PublishedVersions"
+    }
+  }
 }

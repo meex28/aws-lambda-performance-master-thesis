@@ -35,8 +35,7 @@ resource "aws_iam_role_policy" "lambda_benchmark" {
   })
 }
 
-resource "aws_iam_policy_attachment" "lambda_benchmark_execution_policy" {
-  name       = "lambda-basic-policy"
-  roles      = [aws_iam_role.this.name]
+resource "aws_iam_role_policy_attachment" "lambda_benchmark_execution_policy" {
+  role       = aws_iam_role.this.name
   policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
 }
