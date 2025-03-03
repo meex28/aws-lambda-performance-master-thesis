@@ -28,10 +28,8 @@ locals {
       name               = "kotlin-function-native"
       bucket_source_file = "kotlin-function-native/kotlin-function.zip"
       handler            = "kotlin-function.kexe"
-      layers = [data.aws_lambda_layer_version.libcrypt_layer.arn]
+      layers             = [data.aws_lambda_layer_version.libcrypt_layer.arn]
       runtime            = "provided.al2023"
     },
   ]
-
-  bun_runtime_layer_arn = "arn:aws:lambda:us-east-1:205979422636:layer:bun:1"
 }

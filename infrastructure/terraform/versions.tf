@@ -10,9 +10,9 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket         = "mte-terraform-state"
-    key            = "terraform.tfstate"
-    region         = "eu-central-1"
+    bucket = "mte-terraform-state"
+    key    = "terraform.tfstate"
+    region = "eu-central-1"
   }
 
   required_providers {

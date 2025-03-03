@@ -1,9 +1,8 @@
+module "tested_functions" {
+  source = "./modules/tested_functions"
+}
+
 module "benchmarking" {
   source           = "./modules/benchmarking"
-  tested_functions = [
-    for _, func in aws_lambda_function.this : {
-      arn  = func.arn
-      name = func.function_name
-    }
-  ]
+  tested_functions = module.tested_functions.functions
 }
