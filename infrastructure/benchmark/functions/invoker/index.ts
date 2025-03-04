@@ -27,8 +27,6 @@ async function benchmarkFunction(functionArn: string) {
 
     console.log(`Processing function: ${functionName}`);
 
-    await waitForLambdaActive(functionArn);
-
     const isSnapstart = functionArn.includes('snapstart');
     let results = [];
 
@@ -169,49 +167,5 @@ async function cleanupSnapstartFunctionVersions(functionArn: string): Promise<vo
             FunctionName: functionName,
             Qualifier: version
         }).promise();
-    }
-}
-
-async function waitForLambdaActive(
-    functionArn: string,
-): Promise<void> {
-    const maxAttempts = 30;
-    const delayMs = 1000
-    const functionName = extractFunctionNameFromArn(functionArn)
-
-    let attempts = 0;
-    let isActive = false;
-
-    console.log(`Waiting for Lambda function ${functionName} to become active...`);
-
-    while (!isActive && attempts < maxAttempts) {
-        attempts++;
-        try {
-            const response = await lambdaClient.getFunction({FunctionName: functionName}).promise();
-
-            const state = response.Configuration?.State;
-            const lastUpdateStatus = response.Configuration?.LastUpdateStatus;
-
-            console.log(`${functionName}: Attempt ${attempts}: Function state is "${state}", update status is "${lastUpdateStatus}"`);
-
-            if (state === 'Active' && (lastUpdateStatus === 'Successful' || !lastUpdateStatus)) {
-                isActive = true;
-                console.log(`Lambda function ${functionName} is now active!`);
-            } else {
-                await sleep(delayMs)
-            }
-        } catch (error) {
-            if (attempts >= maxAttempts) {
-                throw new Error(`${functionName}: Maximum attempts (${maxAttempts}) reached. Lambda function ${functionName} did not become active: ${error}`);
-            }
-
-            console.warn(`${functionName}: Attempt ${attempts}: Error checking Lambda status: ${error}`);
-            await sleep(delayMs);
-            await new Promise(resolve => setTimeout(resolve, delayMs));
-        }
-    }
-
-    if (!isActive) {
-        throw new Error(`Maximum attempts (${maxAttempts}) reached. Lambda function ${functionName} did not become active.`);
     }
 }
