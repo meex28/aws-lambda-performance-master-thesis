@@ -15,5 +15,8 @@ val productService = OrderService(
 
 fun handle(input: String): String {
     val cart = Json.decodeFromString<Cart>(input)
-    return Json.encodeToString(productService.processCart(cart))
+
+    val result = productService.processCart(cart)
+
+    return Json.encodeToString(result.getOrThrow())
 }
