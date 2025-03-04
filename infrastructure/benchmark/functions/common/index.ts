@@ -24,3 +24,6 @@ export const getFunctionNames = (): string[] =>
 
 export const convertTimestampToDate = (timestamp: number): Date =>
     new Date(timestamp * 1000)
+
+export const sleep = (ms: number): Promise<void> =>
+    new Promise(resolve => setTimeout(resolve, ms))

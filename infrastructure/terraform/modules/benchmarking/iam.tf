@@ -26,7 +26,8 @@ resource "aws_iam_role_policy" "lambda_benchmark" {
         Action = [
           "lambda:*",
           "logs:*",
-          "s3:*"
+          "s3:*",
+          "sns:*"
         ],
         Effect   = "Allow",
         Resource = "*"

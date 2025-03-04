@@ -1,3 +1,9 @@
+data "archive_file" "invoke_orchestrator" {
+  type        = "zip"
+  source_dir  = "${path.root}/../benchmark/functions/build/invoke_orchestrator"
+  output_path = "${path.module}/function-source/invoke_orchestrator.zip"
+}
+
 data "archive_file" "invoker" {
   type        = "zip"
   source_dir  = "${path.root}/../benchmark/functions/build/invoker"

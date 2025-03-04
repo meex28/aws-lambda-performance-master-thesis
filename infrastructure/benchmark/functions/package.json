@@ -8,5 +8,11 @@
   "peerDependencies": {
     "typescript": "^5.0.0",
     "aws-sdk": "^2.1692.0"
+  },
+  "scripts": {
+    "build:invoke_orchestrator": "bun build invoke_orchestrator/index.ts --outdir=build/invoke_orchestrator --target=node --format=cjs",
+    "build:invoker": "bun build invoker/index.ts --outdir=build/invoker --target=node --format=cjs",
+    "build:log_processor": "bun build log_processor/index.ts --outdir=build/log_processor --target=node --format=cjs",
+    "build": "bun run build:invoke_orchestrator & bun run build:invoker & bun run build:log_processor"
   }
 }
