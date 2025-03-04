@@ -17,11 +17,13 @@ fun LambdaResponse.toJson() = JSON.stringify(
     )
 )
 
-fun handler(input: Any?, context: Any?, callback: dynamic) {
+fun handler(input: String?, context: Any?, callback: dynamic) {
+    val result = handle(input!!)
+
     callback(
         null, LambdaResponse(
             statusCode = 200,
-            body = JSON.stringify(mapOf("message" to handle()))
+            body = JSON.stringify(result)
         ).toJson()
     )
 }
