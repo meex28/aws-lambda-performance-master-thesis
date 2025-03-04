@@ -4,6 +4,8 @@ import org.jetbrains.kotlin.gradle.dsl.KotlinJsCompile
 plugins {
     kotlin("multiplatform") version "2.1.0"
 
+    kotlin("plugin.serialization") version "1.9.22"
+
     id("io.github.trueangle.plugin.lambda") version "0.0.1"
     id("com.gradleup.shadow") version "8.3.5"
 }
@@ -17,6 +19,11 @@ repositories {
 
 kotlin {
     sourceSets {
+        commonMain.dependencies {
+            implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.8.0")
+            implementation("io.konform:konform:0.10.0")
+        }
+
         nativeMain.dependencies {
             implementation("io.github.trueangle:lambda-runtime:0.0.2")
         }
