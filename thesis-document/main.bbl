@@ -1,0 +1,43 @@
+\begin{thebibliography}{1}
+
+\bibitem{ServerlessApplicationsWhyWhenAndHow}
+S.~Eismann, J.~Scheuner, E.~van Eyk, M.~Schwinger, J.~Grohmann, N.~Herbst, C.~L. Abad, and A.~Iosup.
+\newblock Serverless applications: Why, when, and how?
+\newblock {\em IEEE Software}, 38(1):32--39, 2021.
+
+\bibitem{9284261}
+D.~Kelly, F.~Glavin, and E.~Barrett.
+\newblock Serverless computing: Behind the scenes of major platforms.
+\newblock In {\em 2020 IEEE 13th International Conference on Cloud Computing (CLOUD)}, pages 304--312, 2020.
+
+\bibitem{serverlessArchitectureMarketReport}
+Research and Markets.
+\newblock Serverless architecture market report 2025, (2025).
+\newblock Dostęp 20.03.2025 z https://www.researchandmarkets.com/reports/5953253/serverless-architecture-market-report.
+
+\bibitem{awsEc2Guide}
+A.~W. Services.
+\newblock Amazon ec2 documentation, {2025}.
+\newblock Dostęp 21.03.2025 z https://docs.aws.amazon.com/ec2/.
+
+\bibitem{awsEcsDevGuide}
+A.~W. Services.
+\newblock Amazon ecs developer guide, {2025}.
+\newblock Dostęp 21.03.2025 z https://docs.aws.amazon.com/AmazonECS/latest/developerguide.
+
+\bibitem{awsLambdaDocs}
+A.~W. Services.
+\newblock Aws lambda documentation, {2025}.
+\newblock Dostęp 21.03.2025 z https://docs.aws.amazon.com/lambda/latest/dg/.
+
+\bibitem{SpecRgCloudGroupVisionOnThePerformanceChallengesOfFaas}
+E.~van Eyk, A.~Iosup, C.~L. Abad, J.~Grohmann, and S.~Eismann.
+\newblock A spec rg cloud group's vision on the performance challenges of faas cloud architectures.
+\newblock In {\em Companion of the 2018 ACM/SPEC International Conference on Performance Engineering}, page 21–24, New York, NY, USA, 2018. Association for Computing Machinery.
+
+\bibitem{riseOfThePlanetOfServerlessComputing}
+J.~Wen, Z.~Chen, X.~Jin, and X.~Liu.
+\newblock Rise of the planet of serverless computing: A systematic review.
+\newblock {\em ACM Trans. Softw. Eng. Methodol.}, 32(5), 2023.
+
+\end{thebibliography}

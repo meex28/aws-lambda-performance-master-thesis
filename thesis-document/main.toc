@@ -1,0 +1,9 @@
+\babel@toc {polish}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {chapter}{Wstęp}{1}{chapter*.1}%
+\contentsline {chapter}{Słownik pojęć i akronimów}{3}{chapter*.2}%
+\contentsline {chapter}{\numberline {1}Opis działania modelu FaaS}{5}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Model serverless}{5}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Przegląd literatury}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Wyniki przeglądu}{7}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Czynniki wpływające na wydajność funkcji}{7}{subsection.2.1.1}%

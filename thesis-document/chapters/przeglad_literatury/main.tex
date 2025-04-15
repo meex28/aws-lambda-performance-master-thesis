@@ -1,0 +1,23 @@
+\chapter{Przegląd literatury}\label{chapter:przeglad_literatury}
+
+\section{Wyniki przeglądu}\label{chapter:przeglad_literatury_wyniki}
+
+W ramach przeglądu wybrano X prac badawczych. Na bazie prac rozpatrzono postawione pytania badawcze. Odpowiedzi na nie zostały zawarte w kolejnych podrozdziałach.
+
+\subsection{Czynniki wpływające na wydajność funkcji}\label{chapter:przeglad_literatury_wyniki_czynniki}
+
+Pierwszym pytaniem badawczym postawionym do przeglądu literatury jest: ,,Jakie są główne czynniki wpływające na wydajność funkcji AWS Lambda?''.
+Identyfikacja czynników wpływających na wydajność jest kluczowa w kontekście jej optymalizacji.
+Pozwoli to następnie na zrozumienie na które z czynników ma także wpływ twórca funkcji AWS Lambda, co ułatwi dalszą analizę metod poprawy ich wydajności.
+
+\subsubsection*{Wielkosć pamięci funkcji}
+
+Kelly et al. \cite{9284261} zauważa, że wielkość pamięci funkcji oprócz bezpośredniego wpływu na czas działania funkcji, wywiera także wpływ na inne czynniki jak użycie procesora czy wydajność I/O dysku. 
+W ramach badania wykonano pomiary dla funkcji bezserwerowych oferowanych przez wielu dostawców chmurowych, w tym Amazon Web Services, w celu zrozumienia infrastruktury i jej zarządzania, co domyślnie jest ukryte dla użytkownika funkcji jak AWS Lambda.   
+Poprzez analizę maszyn wirtualnych, w ramach których uruchamiany jest kod funkcji, możliwe było otrzymanie wartości parametrów, które nie są domyślnie konfigurowalne podczas wdrażania funkcji przez programistę.
+
+Pomiary pokrywały wiele parametrów funkcji, m. in. łączny czas wykonania, czas inicjalizacji, użycie procesora, wydajność I/O dysku oraz liczbę utworzonych maszyn wirtualnych (co wpływa na częstość zimnych startów). 
+W badaniu uwzględniono predefiniowane wielkości pamięci, które mogą być wybrane przez programistę (128MB, 256MB, 512MB, 1024MB oraz 2048MB).
+Wraz z wzrostem pamięci funkcji, parametry te poprawiały się.
+
+Autorzy podkreślili ważność odpowiedniego doboru wielkości pamięci podczas tworzenia funkcji. Dodatkowo, wykazali, że platforma AWS nie używa ponownie maszyn wirtualnych w celu wykonania kolejnych zapytań funkcji, co powoduje częstsze zimne starty. Wykazano zatem, że te dwa czynniki (wielkość pamięci i zimne starty) znacząco wpływają na ogólną wydajność funkcji AWS Lambda.

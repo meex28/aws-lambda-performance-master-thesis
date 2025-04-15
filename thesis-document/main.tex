@@ -1,0 +1,57 @@
+ % !TEX encoding = UTF-8 Unicode
+% !TeX TXS-program:compile = txs:///pdflatex/[--shell-escape] 
+
+\documentclass[12pt, twoside]{book}
+\input{latex-settings.tex}
+
+\frontmatter
+%check the current front page here:
+%https://wiz.pwr.edu.pl/en/students/thesis
+%and generate pdfs, and save in title_page folder.
+\begin{document}
+
+\includepdf[pages={1}]{title_page/title_page.pdf}
+\doublepage
+
+% Add table of contents
+\pagestyle{tableOfContentStyle}
+% Add abstract
+\pagenumbering{Roman}
+\input{chapters/abstrakt.tex}
+\doublepage
+\tableofcontents 
+\doublepage
+% Set page style 
+\pagestyle{custom}
+\mainmatter
+
+% Create chapters:
+\input{chapters/wstep/main}
+\input{chapters/slownik_pojec}
+\input{chapters/dzialanie_faas/main}
+\input{chapters/przeglad_literatury/main}
+
+% Redefine plain for 1st bibliography page style
+\resetformatting
+% Please read :
+%https://www.overleaf.com/learn/latex/Bibliography_management_with_bibtex
+\pagestyle{bibliographyStyle}
+\bibliographystyle{abbrv}
+\bibliography{sources/bibliography}
+
+%https://www.overleaf.com/learn/latex/Bibliography_management_with_bibtex
+% \pagestyle{bibliographyStyle}
+% \bibliographystyle{abbrv}
+% % zmienić tytuł
+% \bibliography{sources/internet_sources}
+
+% Add list of figures and tables
+% \pagestyle{custom}
+% \newpage
+% \pagestyle{ListofFiguresStyle}
+% \listoffigures
+% \newpage
+% \pagestyle{ListofTablesStyle}
+% \listoftables
+
+\end{document}
