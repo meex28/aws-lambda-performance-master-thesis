@@ -1,0 +1,115 @@
+\section{Wyniki przeglądu}\label{chapter:przeglad_literatury_wyniki}
+
+W ramach przeglądu wybrano X prac badawczych. Na bazie prac rozpatrzono postawione pytania badawcze. Odpowiedzi na nie zostały zawarte w kolejnych podrozdziałach.
+
+\subsection{Czynniki wpływające na wydajność funkcji}\label{chapter:przeglad_literatury_wyniki_czynniki}
+
+Pierwszym pytaniem badawczym postawionym do przeglądu literatury jest: ,,Jakie są główne czynniki wpływające na wydajność funkcji AWS Lambda?''.
+Identyfikacja czynników wpływających na wydajność jest kluczowa w kontekście jej optymalizacji.
+Pozwoli to następnie na zrozumienie na które z czynników ma także wpływ twórca funkcji AWS Lambda, co ułatwi dalszą analizę metod poprawy ich wydajności.
+
+\subsubsection*{Wielkosć pamięci funkcji}
+
+Kelly, Glavin i Barrett \cite{9284261} zauważają, że wielkość pamięci funkcji oprócz bezpośredniego wpływu na całkowity czas działania, wywiera także wpływ na inne czynniki jak użycie procesora czy wydajność I/O dysku. 
+W ramach badania wykonano pomiary dla funkcji bezserwerowych oferowanych przez wielu dostawców chmurowych, w tym Amazon Web Services, w celu zrozumienia infrastruktury i jej zarządzania, co domyślnie jest ukryte dla użytkownika.   
+Poprzez analizę maszyn wirtualnych, w ramach których uruchamiany jest kod funkcji, możliwe było otrzymanie wartości parametrów, które nie są domyślnie konfigurowalne podczas wdrażania funkcji przez programistę.
+
+Pomiary pokrywały wiele parametrów funkcji, m. in. łączny czas wykonania, czas inicjalizacji, użycie procesora, wydajność I/O dysku oraz liczbę utworzonych maszyn wirtualnych (co wpływa na częstość zimnych startów). 
+W badaniu uwzględniono predefiniowane wielkości pamięci, które mogą być wybrane przez programistę (128MB, 256MB, 512MB, 1024MB oraz 2048MB).
+Wraz z wzrostem pamięci funkcji, parametry te poprawiały się.
+
+Autorzy podkreślili ważność odpowiedniego doboru wielkości pamięci podczas tworzenia funkcji. 
+Dodatkowo, wykazali, że w przypadku kolejnych wywołań funkcji, platforma AWS ogranicza ponowne użycie wykorzystanych wcześniej maszyn wirtualnych, co powoduje częstsze zimne starty.
+Wykazano zatem, że zarówno wielkość pamięci, jak i zimne starty znacząco wpływają na ogólną wydajność funkcji AWS Lambda.
+
+Innym aspektem optymalizacji pamięci jest odpowiednie jej wykorzystanie. 
+W nowoczesnych językach programowania, takich jak Java, powszechne jest użycie różnych implementacji odśmiecania pamięci (ang. garbage collection). 
+Quaresma, Fireman i Pereira \cite{9235063} przeanalizowali wpływ odśmiecania pamięci w środowisku wykonawczym Java i AWS Lambda. 
+Po pierwsze, wykazali oni, że użycie odśmiecania pamięci może negatywnie wpłynąć na wydajność funkcji. 
+Następnie, poprzez użycie techniki  ,,Garbage Collector Control Interceptor", złagodzili negatywny wpływ GC (ang. Garbace Collector), co przyspieszyło czas odpowiedzi o około 10\% oraz zmniejszyło koszt działania o 7\%. 
+
+Wybór odpowiedniej wielkości pamięci funkcji jest bardzo ważnym elementem wdrożenia także ze względu na bezpośredni jej wpływ na koszty. Elgamal i inni autorzy \cite{8567674} zaproponowali model optymalizacji kosztów funkcji, w którym jednym z czynników była pamięć AWS Lambda. 
+Zwrócili uwagę na to, że nawet niewielkie wartości (z 128 MB do 256 MB) było wstanie poprawić szybkość wykonania algorytmu o 10\%, przy jednoczesnym obniżeniu kosztów o 6\%.
+
+Pawlik, Figiela i Malawski \cite{pawlik2019performanceconsiderationsexecutionlarge} zwrócili uwagę na wpływ pamięci FaaS dla konkretnych zastosowań naukowych. 
+Dokonali równoczesnej ewaluacji 5120 zadań z użyciem serwisów różnych dostawców (m. in. AWS). 
+Duża liczba zadań wynikała z chęci przetestowania przekroczenia limitów współbieżności oferowanych przez dostawców. 
+Wykazali, że wraz z wzrostem pamięci rośnie wydajność funkcji, mierzona za pomocą wskaźnika GFlops (ang. Giga Floating Point Operations Per Second). 
+Interesującym szczegółem jest niewielka różnica wydajności pomiędzy 2048 MB i 3008 MB (około 0.8\%). 
+Autorzy wskazują, że może to być spowodowane taką samą konfiguracją limitów procesora, gdyż wielkość 2048 do niedawna była największą oferowaną przez AWS.
+
+\subsection*{Architektura procesora}
+
+Amazon Web Services oferuje możliwość wyboru architektury procesora spośród X86\_64 oraz ARM64. Architektura ARM64 jest wspierana poprzez procesory AWS Graviton2 rozwijane przez AWS.
+
+Chen, Hung, Cordingly oraz Lloyd \cite{10.1145/3631295.3631394} zwrócili uwagę na znaczące różnice wydajności między obiema dostępnymi architekturami procesora. Autorzy przeprowadzili testy wydajnościowe 18 funkcji AWS Lambda i działających na obu rodzajach procesorów (Intel Xeon dla X86\_64 oraz AWS Graviton2 dla ARM64). 
+
+Wykazali oni podobne zużycie procesora dla obu architektur. Wiele funkcji wykorzystywało wyłącznie jeden z dostępnych rdzeni procesora, co wskazuje na możliwość optymalizacji w kierunku zrównoleglania obliczeń. 
+Mimo podobnego zużycia, sam czas działania funkcji był zróżnicowany. 
+7 z 18 funkcji działało szybciej na ARM64 (4 były ponad 10\% szybsze), podczas gdy 6 działało znacznie wolniej (o ponad 10\%). 
+Funkcje ARM64 były bardziej opłacalne dla większości przypadków. 15 z 18 funkcji miało niższe szacunkowe koszty działania na ARM64 w porównaniu do X86 (jednak znaczący wpływ na to miała zniżka oferowana przez dostawcę chmurowego).
+
+Lambion i inni autorzy \cite{10.1145/3491204.3543506} przeprowadzili analizę użycia algorytmów przetwarzania języka naturalnego z użyciem obu architektur procesora. W ramach badania przygotowali oni składający się z kilku etapów pipeline, który używał wspomniancyh algorytmów. Funkcje zostały wdrożone z użyciem obu architektur oraz w różnych regionach AWS.
+
+Wydajność obu architektur różniła się w zależności od etapu pipeline’u. Dla regionu us-east-2 ARM64 był szybszy w przypadku funkcji przetwarzania wstępnego (o 7,3\%) i zapytań (o 8,9\%), podczas gdy X86\_64 był znacznie szybszy (o 23,6\%) w przypadku funkcji treningowej. W ujęciu globalnym funkcje ARM64 były średnio o 1.7\% szybsze niż funkcje X86\_64.
+
+Działanie funkcji różniło się także w zależności od regionu. Funkcje w architekturze X86\_64 działały najszybciej w regionie eu-central-1, a najwolniej w us-west-2. W przypadku ARM64, region us-west-2 był najszybszy, a us-east-2 najwolniejszy. Funkcje wykazały także tendencję do bycia szybszymi poza typowymi godzinami pracy (np. funkcje w godzinach 6:00-8:00 działały o 6\% szybciej niż funkcje w godzinach 10:00-12:00).
+
+\subsection*{Zimne starty}
+
+Specyficznym zjawiskiem dla usług FaaS są tzw. zimne starty. 
+Polegają one na dłuższym czasie inicjalizacji funkcji, co wynika z konieczności przygotowania infrastruktury w postaci maszyny wirtualnej i środowiska wykonawczego. 
+Jest to ważny czynnik wpływający na serwisy jak AWS Lambda, w szczególności w przypadku aplikacji skierowanych do użytkowników.
+
+Zimne starty występują często na platformie AWS, co stwierdzili Kelly, Glavin i Barrett \cite{9284261} podczas analizy infrastruktury obsługującej AWS Lambda. 
+Podczas badań z użyciem powtarzających się co godzinę wywołań doświadczyli oni bardzo częstych zimnych startów funkcji (aż około 89\% uruchomień). 
+Podkreśla to wielkość problemu zimnych startów w przypadku rzadko używanych funkcji. 
+Zimne start na platformie AWS były jednak znacząco krótsze niż w usługach innych dostawców. 
+Dla funkcji o pamięci 128 MB było to maksymalnie około 350 milisekund. 
+W przypadku funkcji o większym rozmiarze pamięci opóźnienia były zbliżone. 
+Na bazie porówniania różnych dostawców chmurowych autorzy podkreślili, że infrastruktura AWS Lambda ma tendencję do utrzymywania gotowych maszyn wirtualnych krócej niż inni dostawcy, co prowadzi do częstszych zimnych startów, jednak z mniejszymi opóźnieniami.
+
+Manner i inni autorzy \cite{8605777} skupili się na występowaniu zimnych startów i wpływu różnych czynników na nie. 
+Wykazali oni różnice w czasie wykonania funkcji w przypadku zimnych i ciepłych startów. 
+Udowodnili, że bezpośredni wpływ na nie ma wybrany język programowania, wielkość pamięci i rodzaj wdrożenia artefaktu (ZIP lub Docker). 
+Pokazuje to skomplikowanie pojęcia jakim są zimne starty.
+
+Na istotę zimnych startów wskazali także Ebrahimi, Ghoabaei-Arani i Saboohi \cite{EBRAHIMI2024103115}, poprzez dokonanie przeglądu literatury w zakresie metod ich optymalizacji. 
+Jedną z najczęściej omawianych platform w literaturze jest właśnie AWS Lambda. 
+Zimne starty są mierzone poprzez m. in. opóźnienie, liczbę wystąpień, użycie pamięci i całkowity czas odpowiedzi funkcji. 
+Użycie odpowiednich metryk pozwala następnie na ocenę jakości konkretnych metod optymalizacji zimnych startów.
+
+\subsection*{Język programowania}
+
+Znaczące różnice w wydajności pomiędzy językami w AWS Lambda podkreślili Jackson i Clynch  \cite{8605773}. Przeanalizowali oni ich wpływ na zarówno ciepłe i zimne starty oraz koszty funkcji. Testowane funkcje zostały napisane w językach .NET 2, JavaScript (dla NodeJS), Java 8, Go oraz Python 3. 
+
+W przypadku ciepłych startów najszybszymi testowanymi językami były Python (średnio 6,13 ms) oraz  .NET 2 (średnio 6,32 ms). 
+Java uplasowała się na trzecim miejscu (średnio 11,33 ms), a najgorszy okazał się Go (średnio 19,21 ms). 
+Wzorce wydajności zmieniają się jednak diametralnie w przypadku zimnych startów: najszybszy dalej jest Python (średnio 2,94 ms). 
+Java wykazała znacząco większe opóźnienia (391,91 ms) w porównaniu z ciepłym startem (ponad 3-krotny wzrost). 
+Interesującym faktem jest około 40-krotny wzrost opóźnienia funkcji .NET 2 dla zimnych startów (średnio 2.5 sekundy). 
+Czas wykonania wpłynął bezpośrednio na koszty, które różniły się nawet 13-krotnie. 
+Badania nie zostały niestety wykonane na różnych wielkościach pamięci, która jest jednym z głównych składowych kosztu działania.
+
+Cordingly i inni autorzy \cite{Cordingly2020704} zwracają uwagę na potrzebę odpowiedniego doboru języka programowania do konkretnej funkcji AWS Lambda. 
+Poprzez przygotowanie procesu Transform-Load-Query, składającego się z kilku komponentów, byli w stanie dokładnie przeanalizować wpływ języków na poszczególne jego etapy. 
+Badane języki mogą być podzielone na dwie grupy: kompilowane (Java, Go) oraz interpretowane (Python, Javascript). Wykazano, że żaden z języków nie był najlepszego dla każdego etapu procesu. 
+Poprzez przygotowanie hybrydowego pipeline’u możliwe było osiągnięcie znaczącej poprawy opóźnień (17\%-129\% szybciej). Wybrany język ma także wpływ na czas inicjalizacji funkcji. 
+W przypadku Javy wymagana jest inicjalizacja JVM, jednak nie powodowało to znacząco dłuższych zimnych startów w porównaniu z Python i Node.js. Go prezentowało jednak około 20\% dłuższe zimne starty.
+
+Podobne porównanie zostało wykonane przez Shrestha \cite{shrestha2019lambda}, który przeanalizował natywnie wspierane języki w AWS Lambda. 
+Języki interpretowane (Javascript, Python, Ruby) cechowały się szybszymi zimnymi startami niż kompilowane (Java, C\#, Go), choć w przypadku ciepłych startów Java oferowała wysoką wydajność. 
+Shrestha zwraca jednak uwagę, że istnieje wiele innych czynników wpływających na wydajność. 
+Podkreśla on, że w wyborze języka programowania ważnym elementem powinny być także osobiste preferencje programisty co do niego, a nie tylko wydajność.
+
+\subsection{Metody optymalizacji funkcji w ekosystemie Java}\label{chapter:przeglad_literatury_wyniki_metody}
+
+TODO: wstep dla podrozdziału
+
+\subsection{Cechy rozwoju aplikacji w AWS Lambda}\label{chapter:przeglad_literatury_wyniki_cechy_rozwoju}
+
+TODO: wstep dla podrozdziału
+
+\subsection{Podsumowanie wyników przeglądu}\label{chapter:przeglad_literatury_wyniki_podsumowanie}
+
+TODO: napisac wnioski
