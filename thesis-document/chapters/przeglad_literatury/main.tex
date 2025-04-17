@@ -76,15 +76,30 @@ Wykazali oni różnice w czasie wykonania funkcji w przypadku zimnych i ciepłyc
 Udowodnili, że bezpośredni wpływ na nie ma wybrany język programowania, wielkość pamięci i rodzaj wdrożenia artefaktu (ZIP lub Docker). 
 Pokazuje to skomplikowanie pojęcia jakim są zimne starty.
 
-Ważność zimnych startów wskazali także Ebrahimi, Ghoabaei-Arani i Saboohi \cite{EBRAHIMI2024103115}, poprzez dokonanie przeglądu literatury w zakresie metod ich optymalizacji. 
+Na istotę zimnych startów wskazali także Ebrahimi, Ghoabaei-Arani i Saboohi \cite{EBRAHIMI2024103115}, poprzez dokonanie przeglądu literatury w zakresie metod ich optymalizacji. 
 Jedną z najczęściej omawianych platform w literaturze jest właśnie AWS Lambda. 
 Zimne starty są mierzone poprzez m. in. opóźnienie, liczbę wystąpień, użycie pamięci i całkowity czas odpowiedzi funkcji. 
 Użycie odpowiednich metryk pozwala następnie na ocenę jakości konkretnych metod optymalizacji zimnych startów.
 
 \subsection*{Język programowania}
 
-TODO: \cite{8605773}
+Znaczące różnice w wydajności pomiędzy językami w AWS Lambda podkreślili Jackson i Clynch  \cite{8605773}. Przeanalizowali oni ich wpływ na zarówno ciepłe i zimne starty oraz koszty funkcji. Testowane funkcje zostały napisane w językach .NET 2, JavaScript (dla NodeJS), Java 8, Go oraz Python 3. 
 
-TODO: \cite{shrestha2019lambda}
+W przypadku ciepłych startów najszybszymi testowanymi językami były Python (średnio 6,13 ms) oraz  .NET 2 (średnio 6,32 ms). 
+Java uplasowała się na trzecim miejscu (średnio 11,33 ms), a najgorszy okazał się Go (średnio 19,21 ms). 
+Wzorce wydajności zmieniają się jednak diametralnie w przypadku zimnych startów: najszybszy dalej jest Python (średnio 2,94 ms). 
+Java wykazała znacząco większe opóźnienia (391,91 ms) w porównaniu z ciepłym startem (ponad 3-krotny wzrost). 
+Interesującym faktem jest około 40-krotny wzrost opóźnienia funkcji .NET 2 dla zimnych startów (średnio 2.5 sekundy). 
+Czas wykonania wpłynął bezpośrednio na koszty, które różniły się nawet 13-krotnie. 
+Badania nie zostały niestety wykonane na różnych wielkościach pamięci, która jest jednym z głównych składowych kosztu działania.
 
-TODO: \cite{Cordingly2020704}
+Cordingly i inni autorzy \cite{Cordingly2020704} zwracają uwagę na potrzebę odpowiedniego doboru języka programowania do konkretnej funkcji AWS Lambda. 
+Poprzez przygotowanie procesu Transform-Load-Query, składającego się z kilku komponentów, byli w stanie dokładnie przeanalizować wpływ języków na poszczególne jego etapy. 
+Badane języki mogą być podzielone na dwie grupy: kompilowane (Java, Go) oraz interpretowane (Python, Javascript). Wykazano, że żaden z języków nie był najlepszego dla każdego etapu procesu. 
+Poprzez przygotowanie hybrydowego pipeline’u możliwe było osiągnięcie znaczącej poprawy opóźnień (17\%-129\% szybciej). Wybrany język ma także wpływ na czas inicjalizacji funkcji. 
+W przypadku Javy wymagana jest inicjalizacja JVM, jednak nie powodowało to znacząco dłuższych zimnych startów w porównaniu z Python i Node.js. Go prezentowało jednak około 20\% dłuższe zimne starty.
+
+Podobne porównanie zostało wykonane przez Shrestha \cite{shrestha2019lambda}, który przeanalizował natywnie wspierane języki w AWS Lambda. 
+Języki interpretowane (Javascript, Python, Ruby) cechowały się szybszymi zimnymi startami niż kompilowane (Java, C\#, Go), choć w przypadku ciepłych startów Java oferowała wysoką wydajność. 
+Shrestha zwraca jednak uwagę, że istnieje wiele innych czynników wpływających na wydajność. 
+Podkreśla on, że w wyborze języka programowania ważnym elementem powinny być także osobiste preferencje programisty co do niego, a nie tylko wydajność.

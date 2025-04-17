@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.30)  17 APR 2025 23:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.30)  18 APR 2025 00:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1330,16 +1330,16 @@ Rozdzia\l  2.
 
 [7]
 
-[8]) (./main.bbl
+[8]
 
-[9]
+[9]) (./main.bbl
 
-[10
+[10]
+
+[11
 
 
 ]
-
-[11]
 Underfull \hbox (badness 2326) in paragraph at lines 64--67
 []\T1/lmr/m/n/12 (+20) A. W. Se-rvi-ces.  Ama-zon ec2 do-cu-men-ta-tion, 2025.  Do-st¦p 21.03.2025 z
  []
@@ -1357,7 +1357,7 @@ Underfull \hbox (badness 2285) in paragraph at lines 74--77
 )
 
 [12]
-runsystem(latexminted cleantemp  --timestamp 20250417234906 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
+runsystem(latexminted cleantemp  --timestamp 20250418004922 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
 
  (./main.aux)
  ***********
@@ -1372,15 +1372,15 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: B2A4556EB2278CD25B29BE0ECD217400;1153.
  ) 
 Here is how much of TeX's memory you used:
- 30339 strings out of 473190
- 554087 string characters out of 5715800
+ 30343 strings out of 473190
+ 554129 string characters out of 5715800
  1162822 words of memory out of 5000000
  52840 multiletter control sequences out of 15000+600000
- 614801 words of font info for 140 fonts, out of 8000000 for 9000
+ 614983 words of font info for 142 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,17n,96p,1423b,684s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb>
-Output written on main.pdf (18 pages, 296862 bytes).
+Output written on main.pdf (18 pages, 299841 bytes).
 PDF statistics:
  271 PDF objects out of 1000 (max. 8388607)
  205 compressed objects within 3 object streams
