@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1744918711.32711 "main.aux" "main.bbl" "main" 1744922525.47858 0
+["bibtex main"] 1744926484.55757 "main.aux" "main.bbl" "main" 1744926548.26211 0
   "./sources/bibliography.bib" 1744918707.61822 13361 0f75ff8a960359e09ccc58caf33e6ebc ""
   "/usr/local/texlive/2025/texmf-dist/bibtex/bst/base/abbrv.bst" 1292289607 20329 b5fed53e10044d0f8112183785c759b1 ""
-  "main.aux" 1744922525.22594 3736 805684035019627a4cdfc70152a2b871 "pdflatex"
+  "main.aux" 1744926548.01283 3673 0406225ab8ab82ec21f7057262001368 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1744922524.05578 "/Users/piotr/dev/aws-lambda-performance-master-thesis/thesis-document/main.tex" "main.pdf" "main" 1744922525.47873 0
+["pdflatex"] 1744926546.80763 "/Users/piotr/dev/aws-lambda-performance-master-thesis/thesis-document/main.tex" "main.pdf" "main" 1744926548.26225 0
   "/Users/piotr/dev/aws-lambda-performance-master-thesis/thesis-document/main.tex" 1744725156.22055 1393 fb60f52f403f19a28ddb2310284c4f00 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc" 1254269338 3031 6c4d3515bf7115d8518af1c9ab97ca44 ""
@@ -226,15 +226,15 @@
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
   "chapters/abstrakt.tex" 1743361834 495 f3e38a515f93e822205ceb1a8abddf71 ""
   "chapters/dzialanie_faas/main.tex" 1743361834 3439 a1fc59e5a0d358acb6e6829d3d44fdeb ""
-  "chapters/przeglad_literatury/main.tex" 1744922523.79907 7136 742995d746e81c7ab740e5a61c28a20f ""
+  "chapters/przeglad_literatury/main.tex" 1744926546.51162 9302 ea8797f056abd4f468903e3aa44144bb ""
   "chapters/slownik_pojec.tex" 1743361834 162 d8f8402ae61d5c1bae08585dfc734609 ""
   "chapters/wstep/main.tex" 1744129566.40214 2675 54d707979cf969cf678811e93757cb66 ""
   "latex-settings.tex" 1743369258.76325 13723 5de9b2fc9e696b8f3c089c1cd92c0ecb ""
-  "main.aux" 1744922525.22594 3736 805684035019627a4cdfc70152a2b871 "pdflatex"
-  "main.bbl" 1744918711.40023 5256 a6e41ea3b8934d085cb4cb232763d88e "bibtex main"
-  "main.out" 1744922525.22721 1153 b2a4556eb2278cd25b29be0ecd217400 "pdflatex"
+  "main.aux" 1744926548.01283 3673 0406225ab8ab82ec21f7057262001368 "pdflatex"
+  "main.bbl" 1744926484.63266 4739 248b7bff7aa1380e7822d0be2411a62a "bibtex main"
+  "main.out" 1744926548.01412 1153 b2a4556eb2278cd25b29be0ecd217400 "pdflatex"
   "main.tex" 1744725156.22055 1393 fb60f52f403f19a28ddb2310284c4f00 ""
-  "main.toc" 1744922525.22753 603 7c729b47b281a6d9df11c860ff7af734 "pdflatex"
+  "main.toc" 1744926548.01443 603 7c729b47b281a6d9df11c860ff7af734 "pdflatex"
   "title_page/title_page.pdf" 1743361834 144139 62ae5feb3df1e7daff15bf715bfb2fa9 ""
   (generated)
   "main.aux"

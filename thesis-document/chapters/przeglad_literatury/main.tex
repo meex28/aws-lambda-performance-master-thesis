@@ -58,12 +58,33 @@ Wydajność obu architektur różniła się w zależności od etapu pipeline’u
 Działanie funkcji różniło się także w zależności od regionu. Funkcje w architekturze X86\_64 działały najszybciej w regionie eu-central-1, a najwolniej w us-west-2. W przypadku ARM64, region us-west-2 był najszybszy, a us-east-2 najwolniejszy. Funkcje wykazały także tendencję do bycia szybszymi poza typowymi godzinami pracy (np. funkcje w godzinach 6:00-8:00 działały o 6\% szybciej niż funkcje w godzinach 10:00-12:00).
 
 \subsection*{Zimne starty}
-TODO: \cite{8605777}
-TODO: \cite{9191377}
-TODO: \cite{EBRAHIMI2024103115}
-TODO: \cite{9860368}
+
+Specyficznym zjawiskiem dla usług FaaS są tzw. zimne starty. 
+Polegają one na dłuższym czasie inicjalizacji funkcji, co wynika z konieczności przygotowania infrastruktury w postaci maszyny wirtualnej i środowiska wykonawczego. 
+Jest to ważny czynnik wpływający na serwisy jak AWS Lambda, w szczególności w przypadku aplikacji skierowanych do użytkowników.
+
+Zimne starty występują często na platformie AWS, co stwierdzili Kelly, Glavin i Barrett \cite{9284261} podczas analizy infrastruktury obsługującej AWS Lambda. 
+Podczas badań z użyciem powtarzających się co godzinę wywołań doświadczyli oni bardzo częstych zimnych startów funkcji (aż około 89\% uruchomień). 
+Podkreśla to wielkość problemu zimnych startów w przypadku rzadko używanych funkcji. 
+Zimne start na platformie AWS były jednak znacząco krótsze niż w usługach innych dostawców. 
+Dla funkcji o pamięci 128 MB było to maksymalnie około 350 milisekund. 
+W przypadku funkcji o większym rozmiarze pamięci opóźnienia były zbliżone. 
+Na bazie porówniania różnych dostawców chmurowych autorzy podkreślili, że infrastruktura AWS Lambda ma tendencję do utrzymywania gotowych maszyn wirtualnych krócej niż inni dostawcy, co prowadzi do częstszych zimnych startów, jednak z mniejszymi opóźnieniami.
+
+Manner i inni autorzy \cite{8605777} skupili się na występowaniu zimnych startów i wpływu różnych czynników na nie. 
+Wykazali oni różnice w czasie wykonania funkcji w przypadku zimnych i ciepłych startów. 
+Udowodnili, że bezpośredni wpływ na nie ma wybrany język programowania, wielkość pamięci i rodzaj wdrożenia artefaktu (ZIP lub Docker). 
+Pokazuje to skomplikowanie pojęcia jakim są zimne starty.
+
+Ważność zimnych startów wskazali także Ebrahimi, Ghoabaei-Arani i Saboohi \cite{EBRAHIMI2024103115}, poprzez dokonanie przeglądu literatury w zakresie metod ich optymalizacji. 
+Jedną z najczęściej omawianych platform w literaturze jest właśnie AWS Lambda. 
+Zimne starty są mierzone poprzez m. in. opóźnienie, liczbę wystąpień, użycie pamięci i całkowity czas odpowiedzi funkcji. 
+Użycie odpowiednich metryk pozwala następnie na ocenę jakości konkretnych metod optymalizacji zimnych startów.
 
 \subsection*{Język programowania}
+
 TODO: \cite{8605773}
+
 TODO: \cite{shrestha2019lambda}
+
 TODO: \cite{Cordingly2020704}
