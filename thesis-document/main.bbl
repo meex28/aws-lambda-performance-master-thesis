@@ -1,14 +1,64 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{10.1145/3631295.3631394}
+X.~Chen, L.-H. Hung, R.~Cordingly, and W.~Lloyd.
+\newblock X86 vs. arm64: An investigation of factors influencing serverless performance.
+\newblock In {\em Proceedings of the 9th International Workshop on Serverless Computing}, WoSC '23, page 7–12, New York, NY, USA, 2023. Association for Computing Machinery.
+
+\bibitem{Cordingly2020704}
+R.~Cordingly, H.~Yu, V.~Hoang, D.~Perez, D.~Foster, Z.~Sadeghi, R.~Hatchett, and W.~J. Lloyd.
+\newblock Implications of programming language selection for serverless data processing pipelines.
+\newblock page 704 – 711, 2020.
+\newblock Cited by: 21.
+
+\bibitem{9860368}
+J.~Dantas, H.~Khazaei, and M.~Litoiu.
+\newblock Application deployment strategies for reducing the cold start delay of aws lambda.
+\newblock In {\em 2022 IEEE 15th International Conference on Cloud Computing (CLOUD)}, pages 1--10, 2022.
+
+\bibitem{EBRAHIMI2024103115}
+A.~Ebrahimi, M.~Ghobaei-Arani, and H.~Saboohi.
+\newblock Cold start latency mitigation mechanisms in serverless computing: Taxonomy, review, and future directions.
+\newblock {\em Journal of Systems Architecture}, 151:103115, 2024.
 
 \bibitem{ServerlessApplicationsWhyWhenAndHow}
 S.~Eismann, J.~Scheuner, E.~van Eyk, M.~Schwinger, J.~Grohmann, N.~Herbst, C.~L. Abad, and A.~Iosup.
 \newblock Serverless applications: Why, when, and how?
 \newblock {\em IEEE Software}, 38(1):32--39, 2021.
 
+\bibitem{8567674}
+T.~Elgamal, A.~Sandur, K.~Nahrstedt, and G.~Agha.
+\newblock Costless: Optimizing cost of serverless computing through function fusion and placement.
+\newblock In {\em 2018 IEEE/ACM Symposium on Edge Computing (SEC)}, pages 300--312, 2018.
+
+\bibitem{8605773}
+D.~Jackson and G.~Clynch.
+\newblock An investigation of the impact of language runtime on the performance and cost of serverless functions.
+\newblock In {\em 2018 IEEE/ACM International Conference on Utility and Cloud Computing Companion (UCC Companion)}, pages 154--160, 2018.
+
 \bibitem{9284261}
 D.~Kelly, F.~Glavin, and E.~Barrett.
 \newblock Serverless computing: Behind the scenes of major platforms.
 \newblock In {\em 2020 IEEE 13th International Conference on Cloud Computing (CLOUD)}, pages 304--312, 2020.
+
+\bibitem{10.1145/3491204.3543506}
+D.~Lambion, R.~Schmitz, R.~Cordingly, N.~Heydari, and W.~Lloyd.
+\newblock Characterizing x86 and arm serverless performance variation: A natural language processing case study.
+\newblock In {\em Companion of the 2022 ACM/SPEC International Conference on Performance Engineering}, ICPE '22, page 69–75, New York, NY, USA, 2022. Association for Computing Machinery.
+
+\bibitem{8605777}
+J.~Manner, M.~Endreß, T.~Heckel, and G.~Wirtz.
+\newblock Cold start influencing factors in function as a service.
+\newblock In {\em 2018 IEEE/ACM International Conference on Utility and Cloud Computing Companion (UCC Companion)}, pages 181--188, 2018.
+
+\bibitem{pawlik2019performanceconsiderationsexecutionlarge}
+M.~Pawlik, K.~Figiela, and M.~Malawski.
+\newblock Performance considerations on execution of large scale workflow applications on cloud functions, 2019.
+
+\bibitem{9235063}
+D.~Quaresma, D.~Fireman, and T.~E. Pereira.
+\newblock Controlling garbage collection and request admission to improve performance of faas applications.
+\newblock In {\em 2020 IEEE 32nd International Symposium on Computer Architecture and High Performance Computing (SBAC-PAD)}, pages 175--182, 2020.
 
 \bibitem{serverlessArchitectureMarketReport}
 Research and Markets.
@@ -29,6 +79,16 @@ A.~W. Services.
 A.~W. Services.
 \newblock Aws lambda documentation, {2025}.
 \newblock Dostęp 21.03.2025 z https://docs.aws.amazon.com/lambda/latest/dg/.
+
+\bibitem{shrestha2019lambda}
+S.~Shrestha.
+\newblock Comparing programming languages used in aws lambda for serverless architecture.
+\newblock Bachelor's thesis, Theseus, 2019.
+
+\bibitem{9191377}
+P.~Vahidinia, B.~Farahani, and F.~S. Aliee.
+\newblock Cold start in serverless computing: Current trends and mitigation strategies.
+\newblock In {\em 2020 International Conference on Omni-layer Intelligent Systems (COINS)}, pages 1--7, 2020.
 
 \bibitem{SpecRgCloudGroupVisionOnThePerformanceChallengesOfFaas}
 E.~van Eyk, A.~Iosup, C.~L. Abad, J.~Grohmann, and S.~Eismann.

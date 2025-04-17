@@ -12,12 +12,58 @@ Pozwoli to następnie na zrozumienie na które z czynników ma także wpływ tw�
 
 \subsubsection*{Wielkosć pamięci funkcji}
 
-Kelly et al. \cite{9284261} zauważa, że wielkość pamięci funkcji oprócz bezpośredniego wpływu na czas działania funkcji, wywiera także wpływ na inne czynniki jak użycie procesora czy wydajność I/O dysku. 
-W ramach badania wykonano pomiary dla funkcji bezserwerowych oferowanych przez wielu dostawców chmurowych, w tym Amazon Web Services, w celu zrozumienia infrastruktury i jej zarządzania, co domyślnie jest ukryte dla użytkownika funkcji jak AWS Lambda.   
+Kelly, Glavin i Barrett \cite{9284261} zauważają, że wielkość pamięci funkcji oprócz bezpośredniego wpływu na całkowity czas działania, wywiera także wpływ na inne czynniki jak użycie procesora czy wydajność I/O dysku. 
+W ramach badania wykonano pomiary dla funkcji bezserwerowych oferowanych przez wielu dostawców chmurowych, w tym Amazon Web Services, w celu zrozumienia infrastruktury i jej zarządzania, co domyślnie jest ukryte dla użytkownika.   
 Poprzez analizę maszyn wirtualnych, w ramach których uruchamiany jest kod funkcji, możliwe było otrzymanie wartości parametrów, które nie są domyślnie konfigurowalne podczas wdrażania funkcji przez programistę.
 
 Pomiary pokrywały wiele parametrów funkcji, m. in. łączny czas wykonania, czas inicjalizacji, użycie procesora, wydajność I/O dysku oraz liczbę utworzonych maszyn wirtualnych (co wpływa na częstość zimnych startów). 
 W badaniu uwzględniono predefiniowane wielkości pamięci, które mogą być wybrane przez programistę (128MB, 256MB, 512MB, 1024MB oraz 2048MB).
 Wraz z wzrostem pamięci funkcji, parametry te poprawiały się.
 
-Autorzy podkreślili ważność odpowiedniego doboru wielkości pamięci podczas tworzenia funkcji. Dodatkowo, wykazali, że platforma AWS nie używa ponownie maszyn wirtualnych w celu wykonania kolejnych zapytań funkcji, co powoduje częstsze zimne starty. Wykazano zatem, że te dwa czynniki (wielkość pamięci i zimne starty) znacząco wpływają na ogólną wydajność funkcji AWS Lambda.
+Autorzy podkreślili ważność odpowiedniego doboru wielkości pamięci podczas tworzenia funkcji. 
+Dodatkowo, wykazali, że w przypadku kolejnych wywołań funkcji, platforma AWS ogranicza ponowne użycie wykorzystanych wcześniej maszyn wirtualnych, co powoduje częstsze zimne starty.
+Wykazano zatem, że zarówno wielkość pamięci, jak i zimne starty znacząco wpływają na ogólną wydajność funkcji AWS Lambda.
+
+Innym aspektem optymalizacji pamięci jest odpowiednie jej wykorzystanie. 
+W nowoczesnych językach programowania, takich jak Java, powszechne jest użycie różnych implementacji odśmiecania pamięci (ang. garbage collection). 
+Quaresma, Fireman i Pereira \cite{9235063} przeanalizowali wpływ odśmiecania pamięci w środowisku wykonawczym Java i AWS Lambda. 
+Po pierwsze, wykazali oni, że użycie odśmiecania pamięci może negatywnie wpłynąć na wydajność funkcji. 
+Następnie, poprzez użycie techniki  ,,Garbage Collector Control Interceptor", złagodzili negatywny wpływ GC (ang. Garbace Collector), co przyspieszyło czas odpowiedzi o około 10\% oraz zmniejszyło koszt działania o 7\%. 
+
+Wybór odpowiedniej wielkości pamięci funkcji jest bardzo ważnym elementem wdrożenia także ze względu na bezpośredni jej wpływ na koszty. Elgamal i inni autorzy \cite{8567674} zaproponowali model optymalizacji kosztów funkcji, w którym jednym z czynników była pamięć AWS Lambda. 
+Zwrócili uwagę na to, że nawet niewielkie wartości (z 128 MB do 256 MB) było wstanie poprawić szybkość wykonania algorytmu o 10\%, przy jednoczesnym obniżeniu kosztów o 6\%.
+
+Pawlik, Figiela i Malawski \cite{pawlik2019performanceconsiderationsexecutionlarge} zwrócili uwagę na wpływ pamięci FaaS dla konkretnych zastosowań naukowych. 
+Dokonali równoczesnej ewaluacji 5120 zadań z użyciem serwisów różnych dostawców (m. in. AWS). 
+Duża liczba zadań wynikała z chęci przetestowania przekroczenia limitów współbieżności oferowanych przez dostawców. 
+Wykazali, że wraz z wzrostem pamięci rośnie wydajność funkcji, mierzona za pomocą wskaźnika GFlops (ang. Giga Floating Point Operations Per Second). 
+Interesującym szczegółem jest niewielka różnica wydajności pomiędzy 2048 MB i 3008 MB (około 0.8\%). 
+Autorzy wskazują, że może to być spowodowane taką samą konfiguracją limitów procesora, gdyż wielkość 2048 do niedawna była największą oferowaną przez AWS.
+
+\subsection*{Architektura procesora}
+
+Amazon Web Services oferuje możliwość wyboru architektury procesora spośród X86\_64 oraz ARM64. Architektura ARM64 jest wspierana poprzez procesory AWS Graviton2 rozwijane przez AWS.
+
+Chen, Hung, Cordingly oraz Lloyd \cite{10.1145/3631295.3631394} zwrócili uwagę na znaczące różnice wydajności między obiema dostępnymi architekturami procesora. Autorzy przeprowadzili testy wydajnościowe 18 funkcji AWS Lambda i działających na obu rodzajach procesorów (Intel Xeon dla X86\_64 oraz AWS Graviton2 dla ARM64). 
+
+Wykazali oni podobne zużycie procesora dla obu architektur. Wiele funkcji wykorzystywało wyłącznie jeden z dostępnych rdzeni procesora, co wskazuje na możliwość optymalizacji w kierunku zrównoleglania obliczeń. 
+Mimo podobnego zużycia, sam czas działania funkcji był zróżnicowany. 
+7 z 18 funkcji działało szybciej na ARM64 (4 były ponad 10\% szybsze), podczas gdy 6 działało znacznie wolniej (o ponad 10\%). 
+Funkcje ARM64 były bardziej opłacalne dla większości przypadków. 15 z 18 funkcji miało niższe szacunkowe koszty działania na ARM64 w porównaniu do X86 (jednak znaczący wpływ na to miała zniżka oferowana przez dostawcę chmurowego).
+
+Lambion i inni autorzy \cite{10.1145/3491204.3543506} przeprowadzili analizę użycia algorytmów przetwarzania języka naturalnego z użyciem obu architektur procesora. W ramach badania przygotowali oni składający się z kilku etapów pipeline, który używał wspomniancyh algorytmów. Funkcje zostały wdrożone z użyciem obu architektur oraz w różnych regionach AWS.
+
+Wydajność obu architektur różniła się w zależności od etapu pipeline’u. Dla regionu us-east-2 ARM64 był szybszy w przypadku funkcji przetwarzania wstępnego (o 7,3\%) i zapytań (o 8,9\%), podczas gdy X86\_64 był znacznie szybszy (o 23,6\%) w przypadku funkcji treningowej. W ujęciu globalnym funkcje ARM64 były średnio o 1.7\% szybsze niż funkcje X86\_64.
+
+Działanie funkcji różniło się także w zależności od regionu. Funkcje w architekturze X86\_64 działały najszybciej w regionie eu-central-1, a najwolniej w us-west-2. W przypadku ARM64, region us-west-2 był najszybszy, a us-east-2 najwolniejszy. Funkcje wykazały także tendencję do bycia szybszymi poza typowymi godzinami pracy (np. funkcje w godzinach 6:00-8:00 działały o 6\% szybciej niż funkcje w godzinach 10:00-12:00).
+
+\subsection*{Zimne starty}
+TODO: \cite{8605777}
+TODO: \cite{9191377}
+TODO: \cite{EBRAHIMI2024103115}
+TODO: \cite{9860368}
+
+\subsection*{Język programowania}
+TODO: \cite{8605773}
+TODO: \cite{shrestha2019lambda}
+TODO: \cite{Cordingly2020704}

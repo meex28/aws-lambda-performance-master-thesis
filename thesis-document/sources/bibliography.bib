@@ -27,6 +27,19 @@ number = {5},
 journal = {ACM Trans. Softw. Eng. Methodol.},
 }
 
+@article{EBRAHIMI2024103115,
+title = {Cold start latency mitigation mechanisms in serverless computing: Taxonomy, review, and future directions},
+journal = {Journal of Systems Architecture},
+volume = {151},
+pages = {103115},
+year = {2024},
+issn = {1383-7621},
+doi = {https://doi.org/10.1016/j.sysarc.2024.103115},
+url = {https://www.sciencedirect.com/science/article/pii/S1383762124000523},
+author = {Ana Ebrahimi and Mostafa Ghobaei-Arani and Hadi Saboohi},
+keywords = {Serverless computing, Cold start, Function-as-a-Service, Performance, Benchmarking, Latency, Survey},
+}
+
 @inproceedings{9284261,
   author={Kelly, Daniel and Glavin, Frank and Barrett, Enda},
   booktitle={2020 IEEE 13th International Conference on Cloud Computing (CLOUD)}, 
@@ -53,6 +66,110 @@ booktitle = {Companion of the 2018 ACM/SPEC International Conference on Performa
 pages = {21–24},
 numpages = {4},
 }
+
+@INPROCEEDINGS{9235063,
+  author={Quaresma, David and Fireman, Daniel and Pereira, Thiago Emmanuel},
+  booktitle={2020 IEEE 32nd International Symposium on Computer Architecture and High Performance Computing (SBAC-PAD)}, 
+  title={Controlling Garbage Collection and Request Admission to Improve Performance of FaaS Applications}, 
+  year={2020},
+  volume={},
+  number={},
+  pages={175-182},
+  keywords={FAA;Time factors;Memory management;Cloud computing;Runtime environment;Load modeling;Java;serverless;faas;garbage collector;cold start;gci;cloud computing;cloud services},
+  doi={10.1109/SBAC-PAD49847.2020.00033}
+  }
+
+@inproceedings{10.1145/3491204.3543506,
+author = {Lambion, Danielle and Schmitz, Robert and Cordingly, Robert and Heydari, Navid and Lloyd, Wes},
+title = {Characterizing X86 and ARM Serverless Performance Variation: A Natural Language Processing Case Study},
+year = {2022},
+isbn = {9781450391597},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3491204.3543506},
+doi = {10.1145/3491204.3543506},
+abstract = {In this paper, we leverage a Natural Language Processing (NLP) pipeline for topic modeling consisting of three functions for data preprocessing, model training, and inferencing to analyze serverless platform performance variation. Specifically, we investigated performance using x86_64 and ARM64 processors over a 24-hour day starting at midnight local time on four cloud regions across three continents on AWS Lambda. We identified public cloud resource contention by leveraging the CPU steal metric, and examined relationships to NLP pipeline runtime. Intel x86_64 Xeon processors at the same clock rate as ARM64 processors (Graviton 2) were more than 23\% faster for model training, but ARM64 processors were faster for data preprocessing and inferencing. Use of the Intel x86_64 architecture for the NLP pipeline was up to 33.4\% more expensive than ARM64 as a result of incentivized pricing from the cloud provider and slower pipeline runtime due to greater resource contention for Intel processors.},
+booktitle = {Companion of the 2022 ACM/SPEC International Conference on Performance Engineering},
+pages = {69–75},
+numpages = {7},
+keywords = {topic modeling, serverless computing, resource contention, performance variation, function-as-a-service},
+location = {Bejing, China},
+series = {ICPE '22}
+}
+
+@inproceedings{10.1145/3631295.3631394,
+author = {Chen, Xinghan and Hung, Ling-Hong and Cordingly, Robert and Lloyd, Wes},
+title = {X86 vs. ARM64: An Investigation of Factors Influencing Serverless Performance},
+year = {2023},
+isbn = {9798400704550},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3631295.3631394},
+doi = {10.1145/3631295.3631394},
+abstract = {Function-as-a-Service (FaaS) platforms enable easy deployment and hosting of code known as serverless functions and have gained considerable traction among software developers. Recently, Amazon has offered ARM64 processors as an alternative to x86 for hosting serverless functions on AWS Lambda. To encourage developers to migrate code to ARM64, use of ARM64 processors has been incentivized with a 20\% discount. In this paper, we investigate the implications of adopting ARM64 processors for hosting serverless functions. We deploy and benchmark 18 distinct serverless functions that stress a variety of system resources. Additionally, we scaled up the runtime for each of our functions by increasing the work they performed using 40 incremental steps to increase runtime from a few seconds to several minutes. We compared performance differences of x86 vs. ARM64 processors for our serverless function workoads and present our findings summarizing differences in: CPU utilization, function runtime, function runtime variation, and hosting costs. While only 7 of 18 functions ran faster on ARM64, 15 of 18 were less expensive thanks to the cloud provider discount. Performance variation on ARM64 processors was less than half compared to x86 processors potentially from the lack of hyperthreading and lower resource contention for ARM64 CPUs.},
+booktitle = {Proceedings of the 9th International Workshop on Serverless Computing},
+pages = {7–12},
+numpages = {6},
+keywords = {Serverless Computing, Performance, Function-as-a-Service, ARM},
+location = {Bologna, Italy},
+series = {WoSC '23}
+}
+
+@INPROCEEDINGS{8567674,
+  author={Elgamal, Tarek and Sandur, Atul and Nahrstedt, Klara and Agha, Gul},
+  booktitle={2018 IEEE/ACM Symposium on Edge Computing (SEC)}, 
+  title={Costless: Optimizing Cost of Serverless Computing through Function Fusion and Placement}, 
+  year={2018},
+  volume={},
+  number={},
+  pages={300-312},
+  keywords={Computational modeling;Fuses;Pricing;Cloud computing;Internet of Things;Memory management;Face;Serverless;Edge computing;AWS Lambda;Cloud Computing;Cost Optimization},
+  doi={10.1109/SEC.2018.00029}
+  }
+
+@INPROCEEDINGS{8605773,
+  author={Jackson, David and Clynch, Gary},
+  booktitle={2018 IEEE/ACM International Conference on Utility and Cloud Computing Companion (UCC Companion)}, 
+  title={An Investigation of the Impact of Language Runtime on the Performance and Cost of Serverless Functions}, 
+  year={2018},
+  volume={},
+  number={},
+  pages={154-160},
+  keywords={Runtime;Measurement;Testing;Containers;Java;C# languages;Cloud computing;serverless;FaaS;Lambda;aws;azure;functions;performance;cloud},
+  doi={10.1109/UCC-Companion.2018.00050}}
+
+@INPROCEEDINGS{9191377,
+  author={Vahidinia, Parichehr and Farahani, Bahar and Aliee, Fereidoon Shams},
+  booktitle={2020 International Conference on Omni-layer Intelligent Systems (COINS)}, 
+  title={Cold Start in Serverless Computing: Current Trends and Mitigation Strategies}, 
+  year={2020},
+  volume={},
+  number={},
+  pages={1-7},
+  keywords={Containers;Delays;Cloud computing;Computational modeling;Libraries;Servers;Google;Cloud Computing;Serverless Computing;Function as a Service;Cold Start Delay;Serverless Computing Platforms},
+  doi={10.1109/COINS49042.2020.9191377}}
+
+@INPROCEEDINGS{8605777,
+  author={Manner, Johannes and Endreß, Martin and Heckel, Tobias and Wirtz, Guido},
+  booktitle={2018 IEEE/ACM International Conference on Utility and Cloud Computing Companion (UCC Companion)}, 
+  title={Cold Start Influencing Factors in Function as a Service}, 
+  year={2018},
+  volume={},
+  number={},
+  pages={181-188},
+  keywords={FAA;Containers;Benchmark testing;Cloud computing;Java;Pipelines;Serverless Computing, Function as a Service, FaaS, Cloud Functions, Cold Start, Benchmarking},
+  doi={10.1109/UCC-Companion.2018.00054}}
+
+@INPROCEEDINGS{9860368,
+  author={Dantas, Jaime and Khazaei, Hamzeh and Litoiu, Marin},
+  booktitle={2022 IEEE 15th International Conference on Cloud Computing (CLOUD)}, 
+  title={Application Deployment Strategies for Reducing the Cold Start Delay of AWS Lambda}, 
+  year={2022},
+  volume={},
+  number={},
+  pages={1-10},
+  keywords={Industries;Runtime;Web services;Computational modeling;Serverless computing;Benchmark testing;Software;AWS Lambda;Cold Start;Function as a Service;Serverless Computing;Performance Benchmark},
+  doi={10.1109/CLOUD55607.2022.00016}}
 
 @misc{serverlessArchitectureMarketReport,
   author = {Research and Markets},
@@ -81,4 +198,36 @@ numpages = {4},
   title        = {Amazon EC2 Documentation},
   year         = {{2025}},
   note         = {Dostęp 21.03.2025 z https://docs.aws.amazon.com/ec2/}
+}
+
+@misc{pawlik2019performanceconsiderationsexecutionlarge,
+      title={Performance considerations on execution of large scale workflow applications on cloud functions}, 
+      author={Maciej Pawlik and Kamil Figiela and Maciej Malawski},
+      year={2019},
+      eprint={1909.03555},
+      archivePrefix={arXiv},
+      primaryClass={cs.DC},
+      url={https://arxiv.org/abs/1909.03555}, 
+}
+
+@misc{shrestha2019lambda,
+author = {Shrestha, Sachin},
+title = {Comparing Programming Languages used in AWS Lambda for Serverless Architecture},
+year = {2019},
+howpublished = {Bachelor's thesis, Theseus},
+url = {https://www.theseus.fi/handle/10024/227117},
+}
+
+@CONFERENCE{Cordingly2020704,
+	author = {Cordingly, Robert and Yu, Hanfei and Hoang, Varik and Perez, David and Foster, David and Sadeghi, Zohreh and Hatchett, Rashad and Lloyd, Wes J.},
+	title = {Implications of Programming Language Selection for Serverless Data Processing Pipelines},
+	year = {2020},
+	journal = {Proceedings - IEEE 18th International Conference on Dependable, Autonomic and Secure Computing, IEEE 18th International Conference on Pervasive Intelligence and Computing, IEEE 6th International Conference on Cloud and Big Data Computing and IEEE 5th Cyber Science and Technology Congress, DASC/PiCom/CBDCom/CyberSciTech 2020},
+	pages = {704 – 711},
+	doi = {10.1109/DASC-PICom-CBDCom-CyberSciTech49142.2020.00120},
+	url = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85097643570&doi=10.1109%2fDASC-PICom-CBDCom-CyberSciTech49142.2020.00120&partnerID=40&md5=6ba8219c9d3074d2cf8457077c211184},
+	type = {Conference paper},
+	publication_stage = {Final},
+	source = {Scopus},
+	note = {Cited by: 21}
 }
