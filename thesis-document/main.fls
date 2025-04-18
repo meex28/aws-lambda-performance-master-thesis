@@ -479,6 +479,9 @@ INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
 INPUT ./chapters/przeglad_literatury/results.tex
 INPUT ./chapters/przeglad_literatury/results.tex
 INPUT chapters/przeglad_literatury/results.tex
+INPUT ./chapters/przeglad_literatury/results_papers.tex
+INPUT ./chapters/przeglad_literatury/results_papers.tex
+INPUT chapters/przeglad_literatury/results_papers.tex
 INPUT ./main.bbl
 INPUT ./main.bbl
 INPUT main.bbl

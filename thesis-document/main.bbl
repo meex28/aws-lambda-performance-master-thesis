@@ -1,5 +1,15 @@
 \begin{thebibliography}{10}
 
+\bibitem{10.1145/3458336.3465305}
+J.~Carreira, S.~Kohli, R.~Bruno, and P.~Fonseca.
+\newblock From warm to hot starts: leveraging runtimes for the serverless era.
+\newblock In {\em Proceedings of the Workshop on Hot Topics in Operating Systems}, HotOS '21, page 58–64, New York, NY, USA, 2021. Association for Computing Machinery.
+
+\bibitem{10.1145/3377812.3382135}
+R.~Chatley and T.~Allerton.
+\newblock Nimbus: improving the developer experience for serverless applications.
+\newblock In {\em Proceedings of the ACM/IEEE 42nd International Conference on Software Engineering: Companion Proceedings}, ICSE '20, page 85–88, New York, NY, USA, 2020. Association for Computing Machinery.
+
 \bibitem{10.1145/3631295.3631394}
 X.~Chen, L.-H. Hung, R.~Cordingly, and W.~Lloyd.
 \newblock X86 vs. arm64: An investigation of factors influencing serverless performance.
@@ -10,6 +20,11 @@ R.~Cordingly, H.~Yu, V.~Hoang, D.~Perez, D.~Foster, Z.~Sadeghi, R.~Hatchett, and
 \newblock Implications of programming language selection for serverless data processing pipelines.
 \newblock page 704 – 711, 2020.
 \newblock Cited by: 21.
+
+\bibitem{9860368}
+J.~Dantas, H.~Khazaei, and M.~Litoiu.
+\newblock Application deployment strategies for reducing the cold start delay of aws lambda.
+\newblock In {\em 2022 IEEE 15th International Conference on Cloud Computing (CLOUD)}, pages 1--10, 2022.
 
 \bibitem{EBRAHIMI2024103115}
 A.~Ebrahimi, M.~Ghobaei-Arani, and H.~Saboohi.
@@ -26,29 +41,64 @@ T.~Elgamal, A.~Sandur, K.~Nahrstedt, and G.~Agha.
 \newblock Costless: Optimizing cost of serverless computing through function fusion and placement.
 \newblock In {\em 2018 IEEE/ACM Symposium on Edge Computing (SEC)}, pages 300--312, 2018.
 
+\bibitem{FerreiraDosSantos2023}
+P.~O. Ferreira Dos~Santos, H.~Jorge De Moura~Costa, V.~R.~Q. Leithardt, and P.~Jorge Silveira~Ferreira.
+\newblock An alternative to faas cold start latency of low request frequency applications.
+\newblock 2023.
+\newblock Cited by: 0.
+
 \bibitem{8605773}
 D.~Jackson and G.~Clynch.
 \newblock An investigation of the impact of language runtime on the performance and cost of serverless functions.
 \newblock In {\em 2018 IEEE/ACM International Conference on Utility and Cloud Computing Companion (UCC Companion)}, pages 154--160, 2018.
+
+\bibitem{8844428}
+A.~Kaplunovich.
+\newblock Tolambda--automatic path to serverless architectures.
+\newblock In {\em 2019 IEEE/ACM 3rd International Workshop on Refactoring (IWoR)}, pages 1--8, 2019.
 
 \bibitem{9284261}
 D.~Kelly, F.~Glavin, and E.~Barrett.
 \newblock Serverless computing: Behind the scenes of major platforms.
 \newblock In {\em 2020 IEEE 13th International Conference on Cloud Computing (CLOUD)}, pages 304--312, 2020.
 
+\bibitem{8605774}
+K.~Kritikos and P.~Skrzypek.
+\newblock A review of serverless frameworks.
+\newblock In {\em 2018 IEEE/ACM International Conference on Utility and Cloud Computing Companion (UCC Companion)}, pages 161--168, 2018.
+
 \bibitem{10.1145/3491204.3543506}
 D.~Lambion, R.~Schmitz, R.~Cordingly, N.~Heydari, and W.~Lloyd.
 \newblock Characterizing x86 and arm serverless performance variation: A natural language processing case study.
 \newblock In {\em Companion of the 2022 ACM/SPEC International Conference on Performance Engineering}, ICPE '22, page 69–75, New York, NY, USA, 2022. Association for Computing Machinery.
+
+\bibitem{8605779}
+W.~Lloyd, M.~Vu, B.~Zhang, O.~David, and G.~Leavesley.
+\newblock Improving application migration to serverless computing platforms: Latency mitigation with keep-alive workloads.
+\newblock In {\em 2018 IEEE/ACM International Conference on Utility and Cloud Computing Companion (UCC Companion)}, pages 195--200, 2018.
 
 \bibitem{8605777}
 J.~Manner, M.~Endreß, T.~Heckel, and G.~Wirtz.
 \newblock Cold start influencing factors in function as a service.
 \newblock In {\em 2018 IEEE/ACM International Conference on Utility and Cloud Computing Companion (UCC Companion)}, pages 181--188, 2018.
 
+\bibitem{menéndez2023performancebestpracticesusing}
+J.~M. Menéndez and M.~Bartlett.
+\newblock Performance best practices using java and aws lambda, 2023.
+
+\bibitem{9095731}
+J.~Nupponen and D.~Taibi.
+\newblock Serverless: What it is, what to do and what not to do.
+\newblock In {\em 2020 IEEE International Conference on Software Architecture Companion (ICSA-C)}, pages 49--50, 2020.
+
 \bibitem{pawlik2019performanceconsiderationsexecutionlarge}
 M.~Pawlik, K.~Figiela, and M.~Malawski.
 \newblock Performance considerations on execution of large scale workflow applications on cloud functions, 2019.
+
+\bibitem{8116416}
+H.~Puripunpinyo and M.~Samadzadeh.
+\newblock Effect of optimizing java deployment artifacts on aws lambda.
+\newblock In {\em 2017 IEEE Conference on Computer Communications Workshops (INFOCOM WKSHPS)}, pages 438--443, 2017.
 
 \bibitem{9235063}
 D.~Quaresma, D.~Fireman, and T.~E. Pereira.
@@ -59,6 +109,11 @@ D.~Quaresma, D.~Fireman, and T.~E. Pereira.
 Research and Markets.
 \newblock Serverless architecture market report 2025, (2025).
 \newblock Dostęp 20.03.2025 z https://www.researchandmarkets.com/reports/5953253/serverless-architecture-market-report.
+
+\bibitem{ritzal2020optimizing}
+R.~Ritzal.
+\newblock Optimizing java for serverless applications.
+\newblock Master's thesis, University of Applied Sciences FH Campus Wien, 2020.
 
 \bibitem{awsEc2Guide}
 A.~W. Services.
@@ -79,6 +134,11 @@ A.~W. Services.
 S.~Shrestha.
 \newblock Comparing programming languages used in aws lambda for serverless architecture.
 \newblock Bachelor's thesis, Theseus, 2019.
+
+\bibitem{9912641}
+D.~Taibi, B.~Kehoe, and D.~Poccia.
+\newblock Serverless: From bad practices to good solutions.
+\newblock In {\em 2022 IEEE International Conference on Service-Oriented System Engineering (SOSE)}, pages 85--92, 2022.
 
 \bibitem{SpecRgCloudGroupVisionOnThePerformanceChallengesOfFaas}
 E.~van Eyk, A.~Iosup, C.~L. Abad, J.~Grohmann, and S.~Eismann.

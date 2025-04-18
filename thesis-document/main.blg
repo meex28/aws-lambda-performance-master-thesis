@@ -3,46 +3,48 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: abbrv.bst
 Database file #1: sources/bibliography.bib
+Warning--I didn't find a database entry for "aaaa"
 Warning--empty booktitle in Cordingly2020704
-You've used 18 entries,
+Warning--empty booktitle in FerreiraDosSantos2023
+You've used 30 entries,
             2118 wiz_defined-function locations,
-            604 strings with 8154 characters,
-and the built_in function-call counts, 7158 in all, are:
-= -- 693
-> -- 360
-< -- 9
-+ -- 144
-- -- 124
-* -- 424
-:= -- 1095
-add.period$ -- 57
-call.type$ -- 18
-change.case$ -- 116
+            664 strings with 10467 characters,
+and the built_in function-call counts, 11871 in all, are:
+= -- 1156
+> -- 549
+< -- 18
++ -- 220
+- -- 186
+* -- 678
+:= -- 1790
+add.period$ -- 95
+call.type$ -- 30
+change.case$ -- 183
 chr.to.int$ -- 0
-cite$ -- 19
-duplicate$ -- 310
-empty$ -- 545
-format.name$ -- 124
-if$ -- 1600
+cite$ -- 32
+duplicate$ -- 545
+empty$ -- 945
+format.name$ -- 186
+if$ -- 2692
 int.to.chr$ -- 0
-int.to.str$ -- 18
-missing$ -- 12
-newline$ -- 93
-num.names$ -- 36
-pop$ -- 163
+int.to.str$ -- 30
+missing$ -- 22
+newline$ -- 153
+num.names$ -- 60
+pop$ -- 261
 preamble$ -- 1
-purify$ -- 98
+purify$ -- 153
 quote$ -- 0
-skip$ -- 283
+skip$ -- 485
 stack$ -- 0
-substring$ -- 327
-swap$ -- 134
-text.length$ -- 9
+substring$ -- 568
+swap$ -- 233
+text.length$ -- 18
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 72
-warning$ -- 1
-while$ -- 52
-width$ -- 20
-write$ -- 201
-(There was 1 warning)
+type$ -- 120
+warning$ -- 2
+while$ -- 92
+width$ -- 32
+write$ -- 336
+(There were 3 warnings)

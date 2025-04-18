@@ -42,7 +42,7 @@ kotlin {
 
     linuxX64().binaries {
         executable {
-            entryPoint = "org.lambda.performance.native.main" // Link this to your main function entry point
+            entryPoint = "org.lambda.performance.native.main"
 //                freeCompilerArgs += listOf("-Xallocator=mimalloc") // to understand how the choice of allocator impacts the performance, refer https://medium.com/aws-tip/leveraging-kotlin-native-for-efficient-serverless-applications-on-aws-lambda-66d992c074cc
         }
     }

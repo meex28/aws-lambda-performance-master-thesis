@@ -2,6 +2,8 @@
 
 W ramach przeglądu wybrano X prac badawczych. Na bazie prac rozpatrzono postawione pytania badawcze. Odpowiedzi na nie zostały zawarte w kolejnych podrozdziałach.
 
+\input{chapters/przeglad_literatury/results_papers.tex}
+
 \subsection{Czynniki wpływające na wydajność funkcji}\label{chapter:przeglad_literatury_wyniki_czynniki}
 
 Pierwszym pytaniem badawczym postawionym do przeglądu literatury jest: ,,Jakie są główne czynniki wpływające na wydajność funkcji AWS Lambda?''.
@@ -106,9 +108,61 @@ Podkreśla on, że w wyborze języka programowania ważnym elementem powinny by�
 
 TODO: wstep dla podrozdziału
 
+\subsection*{Redukcja rozmiaru artefaktu}\label{chapter:przeglad_literatury_wyniki_redukcja_rozmiaru}
+
+Podczas rozwoju aplikacji w ekosystemie Java ważnym etapem jest odpowiednie utworzenie artefaktu, który zawiera wszystkie zależności potrzebne do uruchomienia.
+Wynikiem tego są pliki JAR, które podczas użycia w AWS Lambda muszą zostać pobrane do używanej maszyny wirtualnej, co wpływa na czas inicjalizacji.
+
+Puripunpinyo i Samadzadeh \cite{8116416} zwrócili uwagę, że klasyczne narzędzia budowy artefaków tworzą często artefakty o dużym rozmiarze, gdzie część kodu jest niepotrzebna.
+Zademonstrowali, że optymalizacja tych artefaktów pozwoli na poprawę wydajności, w tym zmniejszenie efektu zimnych startów. 
+Dodatkowo, problemem może być przekroczenie limitu wielkości artefaktu dla AWS Lambda, który wynosi 50 MB.
+
+Autorzy zaproponowali kilka technik optymalizacji, jak odpowiedni wybór wersji danej zależności, czy użycie zewnętrznego oprogramowania (jak ProGuard), co pozwoliło na redukcję rozmiaru.
+Wśród zaproponowanych metod bardzą ważną dla kontekstu FaaS jest odpowiednie grupowanie artekfatów i funkcji. W pracy przedyskutowano głównie dwa podejścia: grupowanie ze względu na serwis oraz na rozmiar.
+
+Grupowanie ze względu na serwis wynikało z chęci zmniejszenia rozmiaru artefaktu, który jak wykazali autorzy wpływa na czas zimnych startów. 
+Odpowiedni podział artefaktów może pozwolić na otrzymanie rozmiaru, który pozwoli na szybsze wykonanie funkcji. Może to jednak powodować konieczność wysłania żądania do innej funkcji, w której znajduje się potrzebny kod.
+Grupowanie ze względu na serwis pozwala zastąpić zapytania między funkcjami zapytaniami natywnymi w obrębie jednej funkcji, które z natury są szybsze. Strategia ta jednak prowadzi do większych artefaktów.
+
+Metodą na zmiejszenie rozmiaru może być także użycie mniejszej liczby bibliotek. Problemem dla funkcji AWS Lambda może być za duża liczba zależności, co podkreślili Nupponen i Taibi \cite{9095731}.
+Z przedstawionych przez nich problemów, które dotyczą funkcji AWS Lambda wynika, że odpowiednia budowa artefaktu może być kluczowa dla wydajności funkcji. 
+Zbyt duży ich podział prowadzi do zapytań między nimi, które mogą być wolne oraz trudne do debuggowania. 
+Jednocześnie, zbyt duży wspólny kod między funkcjami może prowadzić do zwiększenia rozmiaru funkcji i opóźnień. 
+
+Problem optymalizacji artefaktów dla Javy w kontekście AWS Lambda podjęli również Chatley i Allerton w ramach prac nad frameworkiem Nimbus \cite{10.1145/3377812.3382135}.
+Podkreślili, że klasyczne narzędzia (jak Maven Shade) łączą wszystkie zależności w jeden artefakt, nawet jeśli funkcja wykorzystuje niewielką ich część.
+Aby temu zaradzić ich framework Nimbus wprowadza mechanizm budowy artefaktów, które zawierają wyłącznie te klasy, które są potrzebne do uruchomienia funkcji.
+Autorzy wykazali, że takie podejście pozwala zmniejszyć rozmiar plików JAR, co przyczynia się do redukcji czasu zimnych startów. 
+Nimbus potrafi także wykryć i wdrożyć tylko zmienione funkcje, co dodatkowo ogranicza liczbę niepotrzebnych zimnych startów.
+
+\subsection*{Rodzaj wdrożenia (ZIP lub Docker)}
+\cite{9860368}
+
+\subsection*{Pingowanie}
+\cite{8605779}
+
+\subsection*{Użycie Javascript}
+\cite{8844428}
+\cite{FerreiraDosSantos2023}
+
+\subsection*{JIT}
+\cite{10.1145/3458336.3465305}
+
+\subsection*{GraalVM}
+\cite{menéndez2023performancebestpracticesusing}
+\cite{ritzal2020optimizing}
+
 \subsection{Cechy rozwoju aplikacji w AWS Lambda}\label{chapter:przeglad_literatury_wyniki_cechy_rozwoju}
 
 TODO: wstep dla podrozdziału
+
+\cite{9095731} - mocno podzielone, małe funkcje, różne technologie itp (takie mikro-mikroserwisy)
+
+\cite{9912641} - w sumie to co wyżej ale lepiej opisane, opiera się na ankietach
+
+\cite{8605774} - https://gemini.google.com/gem/180d518dd570/9ba1bf85bf544314
+
+\cite{10.1145/3377812.3382135} - gemini.google.com/gem/180d518dd570/d2c2aaa642e9fcd1
 
 \subsection{Podsumowanie wyników przeglądu}\label{chapter:przeglad_literatury_wyniki_podsumowanie}
 
