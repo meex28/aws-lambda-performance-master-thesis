@@ -126,8 +126,8 @@ Grupowanie ze względu na serwis pozwala zastąpić zapytania między funkcjami 
 
 Metodą na zmiejszenie rozmiaru może być także użycie mniejszej liczby bibliotek. Problemem dla funkcji AWS Lambda może być za duża liczba zależności, co podkreślili Nupponen i Taibi \cite{9095731}.
 Z przedstawionych przez nich problemów, które dotyczą funkcji AWS Lambda wynika, że odpowiednia budowa artefaktu może być kluczowa dla wydajności funkcji. 
-Zbyt duży ich podział prowadzi do zapytań między nimi, które mogą być wolne oraz trudne do debuggowania. 
-Jednocześnie, zbyt duży wspólny kod między funkcjami może prowadzić do zwiększenia rozmiaru funkcji i opóźnień. 
+Zbyt duży ich podział prowadzi do zapytań między funkcjami, podczas gdy zapytania te mogą być wolne oraz trudne do debuggowania. 
+Jednocześnie, zbyt duży ilość kodu współdzielonego między funkcjami może prowadzić do zwiększenia rozmiaru funkcji i opóźnień, zatem zalecane jest stosowanie się do zasady pojedynczej odpowiedzialności funkcji. 
 
 Problem optymalizacji artefaktów dla Javy w kontekście AWS Lambda podjęli również Chatley i Allerton w ramach prac nad frameworkiem Nimbus \cite{10.1145/3377812.3382135}.
 Podkreślili, że klasyczne narzędzia (jak Maven Shade) łączą wszystkie zależności w jeden artefakt, nawet jeśli funkcja wykorzystuje niewielką ich część.
@@ -135,11 +135,24 @@ Aby temu zaradzić ich framework Nimbus wprowadza mechanizm budowy artefaktów, 
 Autorzy wykazali, że takie podejście pozwala zmniejszyć rozmiar plików JAR, co przyczynia się do redukcji czasu zimnych startów. 
 Nimbus potrafi także wykryć i wdrożyć tylko zmienione funkcje, co dodatkowo ogranicza liczbę niepotrzebnych zimnych startów.
 
-\subsection*{Rodzaj wdrożenia (ZIP lub Docker)}
-\cite{9860368}
+\subsection*{Wybór rodzaju wdrożenia}
+
+AWS oferuje dwie strategie wdrożenia funkcji Lambda, opierające się o pliki ZIP lub obrazy Docker. 
+Świadomy ich wybór ma znaczący wpływ na wydajność, szczególnie na czas zimnych startów.
+Dantas, Khazaei i Litoiu \cite{9860368} przeprowadzili szczegółowe badania porównujące obie opcje dla wybranych języków programowania.
+
+Wyniki różniły się w zależności od wybranego języka. Dla Pythona oraz Javascriptu obie opcje działały podobnie, lub z korzyścią dla obrazów Dockerowych. 
+Co ciekawe, dla języka Java tendencja była odwrotna - wdrożenie oparte o pliki ZIP zapewniało krótszy czas zimnego startu w porównaniu do wdrożenia kontenerowego. 
+Wyniki te były spójne niezależnie od testowanego rozmiaru aplikacji czy ilości przydzielonej pamięci, a przewaga wdrożeń ZIP była szczególnie widoczna dla większych aplikacji.
 
 \subsection*{Pingowanie}
-\cite{8605779}
+
+Po wykonaniu zapytania do funkcji AWS Lambda maszyny wirtualne, które zostały wykorzystane, pozostają aktywne w oczekiwaniu na kolejne uruchomienia. 
+Trwa to przeważnie kilka minut \cite{9284261}, gdy uruchomiony już kod dalej jest gotowy do działania.
+Taktyką z tym związaną jest regularne uruchamianie funkcji zaproponowane przez \cite{8605779} Lloyd i innych autorów. 
+Funkcje AWS Lambda były uruchamiane przez specjalne instancje EC2 lub uslugę CloudWatch, co pozwoliło utrzymać funkcje aktywne nawet do 24 godzin.
+Podejście to pozwoliło na redukcję zimnych startów i przyspieszenie funkcji około czterokrotnie.
+W porównaniu z klasyczną infrastrukturą (opartą o np. kontenery Docker) funkcje Lambda były około 10\% wolniejsze, jednak użycie funkcji bezserwerowych pozwoliło na około 18-krotne zmniejszenie kosztów. 
 
 \subsection*{Użycie Javascript}
 \cite{8844428}
