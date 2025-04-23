@@ -155,8 +155,28 @@ Podejście to pozwoliło na redukcję zimnych startów i przyspieszenie funkcji 
 W porównaniu z klasyczną infrastrukturą (opartą o np. kontenery Docker) funkcje Lambda były około 10\% wolniejsze, jednak użycie funkcji bezserwerowych pozwoliło na około 18-krotne zmniejszenie kosztów. 
 
 \subsection*{Użycie Javascript}
-\cite{8844428}
-\cite{FerreiraDosSantos2023}
+Kaplunovich \cite{8844428} proponuje interesujące podejście do migracji monolitycznych aplikacji napisanych w technologii Java do AWS Lambda.
+Migracja ta prowadzona jest z użyciem narzędzia ToLambda, które jest w stanie transformować kod Java na JavaScript, który jest następnie uruchamiany w AWS Lambda jako funkcje NodeJS.
+Autor motywuje wybór JavaScriptu jako docelowego języka ze względu na trendy wskazujące lepszą wydajność i popularność tego języka.
+Dodatkowo, podkreśla takie zalety jak mniejsza szczegółowość kodu w porównaniu do Javy, brak konieczności kompilacji, co przyspiesza wdrożenia oraz dobra integracja z usługami AWS.
+
+Z użyciem zaproponowanego narzędzia ToLambda użytkownik jest w stanie przekształcić wybraną funkcję publiczną Javy w niezależne funkcje Lambda.
+Dla każdej funkcji transformowane są także wszystkie wymagane do uruchomienia zależności (jak klasy), wraz z zachowaniem ich właściowości (np. poziom dostępu do pól).
+Autor zwraca jednak uwagę na skomplikowanie Javy i jej specyficznych konstrukcji (jak polimorfizm czy hierarchia konstruktorów), które stanowią wyzwanie w trakcie transformacji. 
+
+Choć głównym celem pracy jest automatyzacja migracji monolitycznych aplikacji do architektury bezserwerowej, autor prezentuje interesujące podejście do użycia Java w AWS Lambda.
+W celu uniknięcia wyzwań jak zimne starty czy czasochłonność budowy aplikacji, pośrednie użycie innego języka może być skuteczną metodą optymalizacji.
+
+Podobny trend został także zaprezentowany w pracy Dos Santosa i innych autorów \cite{FerreiraDosSantos2023}.
+Jako rozwiązanie problemu zimnych startów funkcji AWS Lambda o niskiej częstotliwości użycia, autorzy zaproponowali użycie NodeJS jako alternatywy dla Javy.
+W ramach badania wykazano, że Node.js oferuje znaczącą redukcję czasu zimnego startu w porównaniu do Javy (nawet o 82\%). 
+Zaobserwowano, że funkcje z pamięcią 512 MB stawały się nieaktywne już po 6-7 minutach, co czyni problem zimnego startu szczególnie istotnym dla rzadziej używanych aplikacji.
+
+Autorzy zasugerowali zastosowanie NodeJS jako łatwiejszą w implementacji alternatywę dla bardziej złożonych technik optymalizacji Javy w środowisku AWS Lambda. 
+Choć Java oferuje lepszą wydajność przy ciepłych startach, w przypadku systemów, w których wywołania funkcji następują w odstępach kilku minut, NodeJS może skutecznie ograniczyć opóźnienia związane ze startem funkcji.
+
+Mimo interesującego podejścia, użycie JavaScript w miejsce Javy może być jednak nieoptymalne dla zespołów programistycznych z umiejętnościami w ekosystemie Java. 
+Wymaga to kompletnej zmiany używanych narzędzi, co może być kosztowne. Dlatego metody te zostały zawarte w wynikach przeglądu jako prezentacja alternatywy, jednak nie jako pełne rozwiązanie problemu wydajności.
 
 \subsection*{JIT}
 \cite{10.1145/3458336.3465305}

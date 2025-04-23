@@ -16,5 +16,5 @@
 \contentsline {section}{\numberline {2.4}Wyniki przeglądu}{7}{section.2.4}%
 \contentsline {subsection}{\numberline {2.4.1}Czynniki wpływające na wydajność funkcji}{7}{subsection.2.4.1}%
 \contentsline {subsection}{\numberline {2.4.2}Metody optymalizacji funkcji w ekosystemie Java}{11}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}Cechy rozwoju aplikacji w AWS Lambda}{13}{subsection.2.4.3}%
-\contentsline {subsection}{\numberline {2.4.4}Podsumowanie wyników przeglądu}{13}{subsection.2.4.4}%
+\contentsline {subsection}{\numberline {2.4.3}Cechy rozwoju aplikacji w AWS Lambda}{14}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}Podsumowanie wyników przeglądu}{14}{subsection.2.4.4}%
