@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1745422862.99331 "main.aux" "main.bbl" "main" 1745423212.47061 0
-  "./sources/bibliography.bib" 1745001654.53637 21377 9404c40335a838638e859ad6ce4b2841 ""
+["bibtex main"] 1745586114.55817 "main.aux" "main.bbl" "main" 1745586140.03272 0
+  "./sources/bibliography.bib" 1745586114.33341 27944 f90c346af7c4f3bc4101f6f7f69df5a2 ""
   "/usr/local/texlive/2025/texmf-dist/bibtex/bst/base/abbrv.bst" 1292289607 20329 b5fed53e10044d0f8112183785c759b1 ""
-  "main.aux" 1745423212.22452 8016 c208fa9500eae0e4f14b062106240410 "pdflatex"
+  "main.aux" 1745586139.77231 8617 d5525bf99fb992556b2f9991afde6c54 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1745423210.97638 "/Users/piotr/dev/aws-lambda-performance-master-thesis/thesis-document/main.tex" "main.pdf" "main" 1745423212.47077 0
+["pdflatex"] 1745586138.71116 "/Users/piotr/dev/aws-lambda-performance-master-thesis/thesis-document/main.tex" "main.pdf" "main" 1745586140.03285 2
   "/Users/piotr/dev/aws-lambda-performance-master-thesis/thesis-document/main.tex" 1744725156.22055 1393 fb60f52f403f19a28ddb2310284c4f00 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc" 1254269338 3031 6c4d3515bf7115d8518af1c9ab97ca44 ""
@@ -227,16 +227,16 @@
   "chapters/abstrakt.tex" 1743361834 495 f3e38a515f93e822205ceb1a8abddf71 ""
   "chapters/dzialanie_faas/main.tex" 1743361834 3439 a1fc59e5a0d358acb6e6829d3d44fdeb ""
   "chapters/przeglad_literatury/main.tex" 1744931603.82746 791 1f068d8deb5eb50e0a27bc2aae646e25 ""
-  "chapters/przeglad_literatury/results.tex" 1745423210.70178 20926 4cf6f03ff541b9c2583dce776b195842 ""
-  "chapters/przeglad_literatury/results_papers.tex" 1745001659.60376 1833 fae3f778db17e006720583d23a9de734 ""
+  "chapters/przeglad_literatury/results.tex" 1745586040.75439 24847 41e716ce2183608fbfbea9974aa89f23 ""
+  "chapters/przeglad_literatury/results_papers.tex" 1745586136.58942 2225 23c6008909f89ea7379cca3ed2881979 ""
   "chapters/slownik_pojec.tex" 1743361834 162 d8f8402ae61d5c1bae08585dfc734609 ""
   "chapters/wstep/main.tex" 1744129566.40214 2675 54d707979cf969cf678811e93757cb66 ""
   "latex-settings.tex" 1744931793.57963 13553 3dbb1c46cae4995498d843172222b899 ""
-  "main.aux" 1745423212.22452 8016 c208fa9500eae0e4f14b062106240410 "pdflatex"
-  "main.bbl" 1745422863.06773 7759 9604a08ac7c03890e0bc72e7d5cfed24 "bibtex main"
-  "main.out" 1745423212.22602 3242 7a53a56cd1a22909af9fc844866cb267 "pdflatex"
+  "main.aux" 1745586139.77231 8617 d5525bf99fb992556b2f9991afde6c54 "pdflatex"
+  "main.bbl" 1745586114.63953 9426 b63d8a93cf11d33ed992fbece28ebe46 "bibtex main"
+  "main.out" 1745586139.77386 3242 7a53a56cd1a22909af9fc844866cb267 "pdflatex"
   "main.tex" 1744725156.22055 1393 fb60f52f403f19a28ddb2310284c4f00 ""
-  "main.toc" 1745423212.22635 1622 d8fae26eae68e1308ff8330797f0b022 "pdflatex"
+  "main.toc" 1745586139.78412 1622 b942e598160ec215daeda0b6aa0d782e "pdflatex"
   "title_page/title_page.pdf" 1743361834 144139 62ae5feb3df1e7daff15bf715bfb2fa9 ""
   (generated)
   "main.aux"

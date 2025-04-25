@@ -81,6 +81,10 @@ Jedną z najczęściej omawianych platform w literaturze jest właśnie AWS Lamb
 Zimne starty są mierzone poprzez m. in. opóźnienie, liczbę wystąpień, użycie pamięci i całkowity czas odpowiedzi funkcji. 
 Użycie odpowiednich metryk pozwala następnie na ocenę jakości konkretnych metod optymalizacji zimnych startów.
 
+Na popularność tematu zimnych startów wśród społeczności wskazują także Nazari i inni \cite{9732138}.
+Podkreślają oni wpływ tego problemu na wydajność, gdzie często czas inicjalizacji może przewyższać czas potrzebny na wykonanie logiki biznesowej.
+W ramach przeglądu literatury zauważają, że poprawa zimnych startów to jeden z kierunków rozwoju platform bezserwerowych.
+
 \subsection*{Język programowania}
 
 Znaczące różnice w wydajności pomiędzy językami w AWS Lambda podkreślili Jackson i Clynch  \cite{8605773}. Przeanalizowali oni ich wpływ na zarówno ciepłe i zimne starty oraz koszty funkcji. Testowane funkcje zostały napisane w językach .NET 2, JavaScript (dla NodeJS), Java 8, Go oraz Python 3. 
@@ -179,11 +183,40 @@ Mimo interesującego podejścia, użycie JavaScript w miejsce Javy może być je
 Wymaga to kompletnej zmiany używanych narzędzi, co może być kosztowne. Dlatego metody te zostały zawarte w wynikach przeglądu jako prezentacja alternatywy, jednak nie jako pełne rozwiązanie problemu wydajności.
 
 \subsection*{JIT}
-\cite{10.1145/3458336.3465305}
+
+Jedną z metod optymalizacji nowoczesnych języków programowania jest JIT (ang. just-in-time compilation), czyli metoda kompilacji fragmentów kodu do kodu maszynowego, bezpośrednio przed ich wykonaniem.
+Metoda ta jest często wykorzystywana przez maszyny wirtualne Javy. Jednak według Carreira i innych autorów \cite{10.1145/3458336.3465305}, technika ta jest niewystarczająco wspierana w funkcjach AWS Lambda.
+W ramach pracy zademonstrowano problem ciepłych startów, które uruchamiają niezoptymalizowany kod, co prowadzi do pogorszenia wydajności.
+
+Autorzy zaproponowali platformę IGNITE, która wprowadza pojęcie gorących startów. Są to uruchomienia funkcji z użyciem dodatkowo zoptymalizowanego kodu (poprzez JIT).
+W ramach badania, stworzona została alternatywna platforma funkcji, oparta o kontenery Docker. 
+Gorące starty były możliwe poprzez ponowne użycie, już uruchomionych wcześniej kontenerów, zawierających zoptymalizowany kod.
+
+Zaproponowana metoda prowadziła do znaczącej redukcji czasu wykonania funkcji (nawet 55-krotnego dla Javy). 
+Dodatkowo, widoczny był trend coraz lepszej poprawy wydajności, wraz z kolejnymi uruchomieniami funkcji.
 
 \subsection*{GraalVM}
-\cite{menéndez2023performancebestpracticesusing}
-\cite{ritzal2020optimizing}
+
+Innym podejściem do optymalizacji funkcji Java w AWS Lambda jest wykorzystanie GraalVM.
+GraalVM to wysokowydajny zestaw JDK (ang. Java Development Kit), który może przyspieszyć działanie aplikacji opartych na technologii Java.
+Umożliwia kompilację AOT (ang. ahead-of-time) kodu Java do natywnego obrazu, który następnie uruchamiany jest niemal natychmiast oraz zużywa mało zasobów pamięci.
+
+GraalVM to jedna z technik zaproponowanych przez Menendez i Bartlett \cite{menéndez2023performancebestpracticesusing}.
+Autorzy wykazali, że użycie tej metody pozwoliło na przyspieszenie zimnych startów o 83\% oraz opóźnienia dla rozgrzanych funkcji o 55\%.
+Zaznaczyli oni jednak, że użycie GraalVM może być bardziej skomplikowane w porównaniu do klasycznej maszyny wirtualnej Javy. 
+Wynika to z konieczności użycia niestandardowych środowisk uruchomieniowych (ang. custom runtimes) w ramach AWS Lambda, które muszą zostać skonfigurowane przez programistę.
+
+Optymalizacji z użyciem GraalVM oraz różnych frameworków Javy dokonał także Ritzal \cite{ritzal2020optimizing}.
+W ramach pracy autor przeanalizował użycie frameworków SpringBoot, Micronaut oraz Quarkus, działających zarówno w ramach klasycznego JVM oraz GraalVM.
+Dodatkowo, przetestowana została funkcja bazowa bez użycia żadnego z frameworków.
+
+Wyniki eksperymentu pokazały, że w przypadku użycia zwykłego JVM funkcja bazowa charakteryzowała się najszybszymi zimnymi startami.
+Funkcje oparte o frameworki były znacząco wolniejsze. Jednak podczas użycia GraalVM, funkcja oparta o Micronaut posiadała najniższe opóźnienia podczas zimnych startów.
+Jednocześnie, charakteryzowała się ona niskim zużyciem pamięci.
+
+\subsection*{Inne metody / SnapStart}
+
+\cite{menéndez2023performancebestpracticesusing} - SnapStart?
 
 \subsection{Cechy rozwoju aplikacji w AWS Lambda}\label{chapter:przeglad_literatury_wyniki_cechy_rozwoju}
 
@@ -196,6 +229,19 @@ TODO: wstep dla podrozdziału
 \cite{8605774} - https://gemini.google.com/gem/180d518dd570/9ba1bf85bf544314
 
 \cite{10.1145/3377812.3382135} - gemini.google.com/gem/180d518dd570/d2c2aaa642e9fcd1
+
+\cite{9027427} - użycie różnych zewnętrznych serwisów, zaproponowana metoda cachowania (https://gemini.google.com/gem/180d518dd570/7e48018efb39bbc2)
+
+\cite{8513710} - używanie różnych języków w zależności od przypadku, różne usługi (https://gemini.google.com/gem/180d518dd570/929ecefb19ed43fe) 
+
+\cite{raza2021sok} - różne decyzje dewelopera jak wybór języka, parametrów itp.
+
+\cite{Cavalheiro202389} - może testowanie, debugging, complexity
+
+\cite{LEITNER2019340} - małe funkcje, trudne testowanie, 
+
+\cite{Ivanov_Petrova_2024} - integracja z innymi serwisami, debuggowanie, testowanie lokalnie
+
 
 \subsection{Podsumowanie wyników przeglądu}\label{chapter:przeglad_literatury_wyniki_podsumowanie}
 

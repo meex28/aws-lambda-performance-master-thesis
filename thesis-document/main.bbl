@@ -1,9 +1,20 @@
 \begin{thebibliography}{10}
 
+\bibitem{8513710}
+D.~Bardsley, L.~Ryan, and J.~Howard.
+\newblock Serverless performance and optimization strategies.
+\newblock In {\em 2018 IEEE International Conference on Smart Cloud (SmartCloud)}, pages 19--26, 2018.
+
 \bibitem{10.1145/3458336.3465305}
 J.~Carreira, S.~Kohli, R.~Bruno, and P.~Fonseca.
 \newblock From warm to hot starts: leveraging runtimes for the serverless era.
 \newblock In {\em Proceedings of the Workshop on Hot Topics in Operating Systems}, HotOS '21, page 58–64, New York, NY, USA, 2021. Association for Computing Machinery.
+
+\bibitem{Cavalheiro202389}
+A.~P. Cavalheiro and C.~Schepke.
+\newblock Exploring the serverless first strategy in cloud application development.
+\newblock page 89 – 94, 2023.
+\newblock Cited by: 0.
 
 \bibitem{10.1145/3377812.3382135}
 R.~Chatley and T.~Allerton.
@@ -47,6 +58,16 @@ P.~O. Ferreira Dos~Santos, H.~Jorge De Moura~Costa, V.~R.~Q. Leithardt, and P.~J
 \newblock 2023.
 \newblock Cited by: 0.
 
+\bibitem{9027427}
+B.~C. Ghosh, S.~K. Addya, N.~B. Somy, S.~B. Nath, S.~Chakraborty, and S.~K. Ghosh.
+\newblock Caching techniques to improve latency in serverless architectures.
+\newblock In {\em 2020 International Conference on COMmunication Systems \& NETworkS (COMSNETS)}, pages 666--669, 2020.
+
+\bibitem{Ivanov_Petrova_2024}
+D.~Ivanov and A.~Petrova.
+\newblock Serverless computing architectures and applications in aws.
+\newblock {\em MZ Journal of Artificial Intelligence}, 1(1):1−10, Jun. 2024.
+
 \bibitem{8605773}
 D.~Jackson and G.~Clynch.
 \newblock An investigation of the impact of language runtime on the performance and cost of serverless functions.
@@ -72,6 +93,11 @@ D.~Lambion, R.~Schmitz, R.~Cordingly, N.~Heydari, and W.~Lloyd.
 \newblock Characterizing x86 and arm serverless performance variation: A natural language processing case study.
 \newblock In {\em Companion of the 2022 ACM/SPEC International Conference on Performance Engineering}, ICPE '22, page 69–75, New York, NY, USA, 2022. Association for Computing Machinery.
 
+\bibitem{LEITNER2019340}
+P.~Leitner, E.~Wittern, J.~Spillner, and W.~Hummer.
+\newblock A mixed-method empirical study of function-as-a-service software development in industrial practice.
+\newblock {\em Journal of Systems and Software}, 149:340--359, 2019.
+
 \bibitem{8605779}
 W.~Lloyd, M.~Vu, B.~Zhang, O.~David, and G.~Leavesley.
 \newblock Improving application migration to serverless computing platforms: Latency mitigation with keep-alive workloads.
@@ -85,6 +111,11 @@ J.~Manner, M.~Endreß, T.~Heckel, and G.~Wirtz.
 \bibitem{menéndez2023performancebestpracticesusing}
 J.~M. Menéndez and M.~Bartlett.
 \newblock Performance best practices using java and aws lambda, 2023.
+
+\bibitem{9732138}
+M.~Nazari, S.~Goodarzy, E.~Keller, E.~Rozner, and S.~Mishra.
+\newblock Optimizing and extending serverless platforms: A survey.
+\newblock In {\em 2021 Eighth International Conference on Software Defined Systems (SDS)}, pages 1--8, 2021.
 
 \bibitem{9095731}
 J.~Nupponen and D.~Taibi.
@@ -104,6 +135,11 @@ H.~Puripunpinyo and M.~Samadzadeh.
 D.~Quaresma, D.~Fireman, and T.~E. Pereira.
 \newblock Controlling garbage collection and request admission to improve performance of faas applications.
 \newblock In {\em 2020 IEEE 32nd International Symposium on Computer Architecture and High Performance Computing (SBAC-PAD)}, pages 175--182, 2020.
+
+\bibitem{raza2021sok}
+A.~Raza, I.~Matta, N.~Akhtar, V.~Kalavri, and V.~Isahagian.
+\newblock {SoK: Function-As-A-Service: From An Application Developer’s Perspective}.
+\newblock {\em Journal of Systems Research}, 1(1), 2021.
 
 \bibitem{serverlessArchitectureMarketReport}
 Research and Markets.
