@@ -10,6 +10,10 @@ J.~Carreira, S.~Kohli, R.~Bruno, and P.~Fonseca.
 \newblock From warm to hot starts: leveraging runtimes for the serverless era.
 \newblock In {\em Proceedings of the Workshop on Hot Topics in Operating Systems}, HotOS '21, page 58–64, New York, NY, USA, 2021. Association for Computing Machinery.
 
+\bibitem{cartaxo2020rapidreviewssoftwareengineering}
+B.~Cartaxo, G.~Pinto, and S.~Soares.
+\newblock Rapid reviews in software engineering, 2020.
+
 \bibitem{Cavalheiro202389}
 A.~P. Cavalheiro and C.~Schepke.
 \newblock Exploring the serverless first strategy in cloud application development.
@@ -42,6 +46,10 @@ A.~Ebrahimi, M.~Ghobaei-Arani, and H.~Saboohi.
 \newblock Cold start latency mitigation mechanisms in serverless computing: Taxonomy, review, and future directions.
 \newblock {\em Journal of Systems Architecture}, 151:103115, 2024.
 
+\bibitem{eismann2021reviewserverlessusecases}
+S.~Eismann, J.~Scheuner, E.~van Eyk, M.~Schwinger, J.~Grohmann, N.~Herbst, C.~L. Abad, and A.~Iosup.
+\newblock A review of serverless use cases and their characteristics, 2021.
+
 \bibitem{ServerlessApplicationsWhyWhenAndHow}
 S.~Eismann, J.~Scheuner, E.~van Eyk, M.~Schwinger, J.~Grohmann, N.~Herbst, C.~L. Abad, and A.~Iosup.
 \newblock Serverless applications: Why, when, and how?
@@ -66,7 +74,7 @@ B.~C. Ghosh, S.~K. Addya, N.~B. Somy, S.~B. Nath, S.~Chakraborty, and S.~K. Ghos
 \bibitem{Ivanov_Petrova_2024}
 D.~Ivanov and A.~Petrova.
 \newblock Serverless computing architectures and applications in aws.
-\newblock {\em MZ Journal of Artificial Intelligence}, 1(1):1−10, Jun. 2024.
+\newblock {\em MZ Journal of Artificial Intelligence}, 1(1):1--10, Jun. 2024.
 
 \bibitem{8605773}
 D.~Jackson and G.~Clynch.
@@ -82,6 +90,11 @@ A.~Kaplunovich.
 D.~Kelly, F.~Glavin, and E.~Barrett.
 \newblock Serverless computing: Behind the scenes of major platforms.
 \newblock In {\em 2020 IEEE 13th International Conference on Cloud Computing (CLOUD)}, pages 304--312, 2020.
+
+\bibitem{KitchenhamProceduresSR}
+B.~Kitchenham.
+\newblock Procedures for performing systematic reviews.
+\newblock {\em Keele, UK, Keele Univ.}, 33, 08 2004.
 
 \bibitem{8605774}
 K.~Kritikos and P.~Skrzypek.

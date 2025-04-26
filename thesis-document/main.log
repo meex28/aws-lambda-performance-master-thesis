@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.30)  25 APR 2025 15:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.30)  26 APR 2025 14:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1073,8 +1073,11 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count413
 \l__pdf_internal_box=\box146
+) (./main.aux
+
+LaTeX Warning: Label `chapter:wstep' multiply defined.
+
 )
-No file main.aux.
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
@@ -1095,7 +1098,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
-(/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count414
 \scratchdimen=\dimen381
@@ -1151,6 +1154,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring ON on input line 11.
+(./main.out) (./main.out)
 \@outlinefile=\write6
 \openout6 = `main.out'.
 
@@ -1181,7 +1185,7 @@ LaTeX Info: Redefining \showhyphens on input line 11.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
-(/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
@@ -1192,12 +1196,12 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
-<title_page/title_page.pdf, id=7, 597.432pt x 845.07718pt>
+<title_page/title_page.pdf, id=79, 597.432pt x 845.07718pt>
 File: title_page/title_page.pdf Graphic file (type pdf)
 <use title_page/title_page.pdf>
 Package pdftex.def Info: title_page/title_page.pdf  used on input line 13.
 (pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
-<title_page/title_page.pdf, id=9, page=1, 597.432pt x 845.07718pt>
+<title_page/title_page.pdf, id=81, page=1, 597.432pt x 845.07718pt>
 File: title_page/title_page.pdf Graphic file (type pdf)
 <use title_page/title_page.pdf, page 1>
 Package pdftex.def Info: title_page/title_page.pdf , page1 used on input line 13.
@@ -1277,8 +1281,7 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 [2
 
 
-]
-No file main.toc.
+] (./main.toc)
 \tf@toc=\write7
 \openout7 = `main.toc'.
 
@@ -1314,27 +1317,6 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 
 ]
 Rozdzia\l  1.
-
-LaTeX Warning: Citation `serverlessArchitectureMarketReport' on page 5 undefined on input line 5.
-
-
-LaTeX Warning: Citation `ServerlessApplicationsWhyWhenAndHow' on page 5 undefined on input line 5.
-
-
-LaTeX Warning: Citation `SpecRgCloudGroupVisionOnThePerformanceChallengesOfFaas' on page 5 undefined on input line 7.
-
-
-LaTeX Warning: Citation `awsLambdaDocs' on page 5 undefined on input line 14.
-
-
-LaTeX Warning: Citation `awsEcsDevGuide' on page 5 undefined on input line 14.
-
-
-LaTeX Warning: Citation `riseOfThePlanetOfServerlessComputing' on page 5 undefined on input line 14.
-
-
-LaTeX Warning: Citation `awsEc2Guide' on page 5 undefined on input line 16.
-
 ) (./chapters/przeglad_literatury/main.tex
 
 [5]
@@ -1344,341 +1326,104 @@ LaTeX Warning: Citation `awsEc2Guide' on page 5 undefined on input line 16.
 
 ]
 Rozdzia\l  2.
-(./chapters/przeglad_literatury/results.tex (./chapters/przeglad_literatury/results_papers.tex
 
-LaTeX Warning: Citation `9284261' on page 7 undefined on input line 7.
 
+[7] (./chapters/przeglad_literatury/results.tex (./chapters/przeglad_literatury/results_papers.tex
 
-LaTeX Warning: Citation `9235063' on page 7 undefined on input line 9.
-
-
-LaTeX Warning: Citation `8567674' on page 7 undefined on input line 11.
-
-
-LaTeX Warning: Citation `pawlik2019performanceconsiderationsexecutionlarge' on page 7 undefined on input line 13.
-
-
-LaTeX Warning: Citation `10.1145/3631295.3631394' on page 7 undefined on input line 15.
-
-
-LaTeX Warning: Citation `10.1145/3491204.3543506' on page 7 undefined on input line 17.
-
-
-LaTeX Warning: Citation `9284261' on page 7 undefined on input line 19.
-
-
-LaTeX Warning: Citation `8605777' on page 7 undefined on input line 21.
-
-
-LaTeX Warning: Citation `EBRAHIMI2024103115' on page 7 undefined on input line 23.
-
-
-LaTeX Warning: Citation `8605773' on page 7 undefined on input line 25.
-
-
-LaTeX Warning: Citation `Cordingly2020704' on page 7 undefined on input line 27.
-
-
-LaTeX Warning: Citation `shrestha2019lambda' on page 7 undefined on input line 29.
-
-
-LaTeX Warning: Citation `8116416' on page 7 undefined on input line 31.
-
-
-LaTeX Warning: Citation `9860368' on page 7 undefined on input line 33.
-
-
-LaTeX Warning: Citation `8605779' on page 7 undefined on input line 35.
-
-
-LaTeX Warning: Citation `8844428' on page 7 undefined on input line 37.
-
-
-LaTeX Warning: Citation `FerreiraDosSantos2023' on page 7 undefined on input line 39.
-
-
-LaTeX Warning: Citation `10.1145/3458336.3465305' on page 7 undefined on input line 41.
-
-
-LaTeX Warning: Citation `ritzal2020optimizing' on page 7 undefined on input line 43.
-
-
-LaTeX Warning: Citation `menÃ©ndez2023performancebestpracticesusing' on page 7 undefined on input line 45.
-
-
-LaTeX Warning: Citation `9095731' on page 7 undefined on input line 47.
-
-
-LaTeX Warning: Citation `9912641' on page 7 undefined on input line 49.
-
-
-LaTeX Warning: Citation `8605774' on page 7 undefined on input line 51.
-
-
-LaTeX Warning: Citation `10.1145/3377812.3382135' on page 7 undefined on input line 53.
-
-
-LaTeX Warning: Citation `9732138' on page 7 undefined on input line 55.
-
-
-LaTeX Warning: Citation `9027427' on page 7 undefined on input line 57.
-
-
-LaTeX Warning: Citation `8513710' on page 7 undefined on input line 59.
-
-
-LaTeX Warning: Citation `Cavalheiro202389' on page 7 undefined on input line 61.
-
-
-LaTeX Warning: Citation `raza2021sok' on page 7 undefined on input line 63.
-
-
-LaTeX Warning: Citation `LEITNER2019340' on page 7 undefined on input line 65.
-
-
-LaTeX Warning: Citation `eismann2021reviewserverlessusecases' on page 7 undefined on input line 67.
-
-
-LaTeX Warning: Citation `Ivanov_Petrova_2024' on page 7 undefined on input line 69.
-
-
-LaTeX Warning: Citation `aaaa' on page 7 undefined on input line 71.
-
-
-LaTeX Warning: Citation `aaaa' on page 7 undefined on input line 73.
-
-
-LaTeX Warning: Citation `aaaa' on page 7 undefined on input line 75.
-
-
-LaTeX Warning: Citation `aaaa' on page 7 undefined on input line 77.
-
-
-LaTeX Warning: Citation `aaaa' on page 7 undefined on input line 79.
-
+[8]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 )
 
-LaTeX Warning: Citation `9284261' on page 7 undefined on input line 15.
-
-
-
-[7]
-
-[8]
-
-LaTeX Warning: Citation `9235063' on page 9 undefined on input line 29.
-
-
-LaTeX Warning: Citation `8567674' on page 9 undefined on input line 33.
-
-
-LaTeX Warning: Citation `pawlik2019performanceconsiderationsexecutionlarge' on page 9 undefined on input line 36.
-
-
-LaTeX Warning: Citation `10.1145/3631295.3631394' on page 9 undefined on input line 47.
-
-
-
 [9]
-
-LaTeX Warning: Citation `10.1145/3491204.3543506' on page 10 undefined on input line 54.
-
-
-LaTeX Warning: Citation `9284261' on page 10 undefined on input line 66.
-
-
-LaTeX Warning: Citation `8605777' on page 10 undefined on input line 74.
-
-
-LaTeX Warning: Citation `EBRAHIMI2024103115' on page 10 undefined on input line 79.
-
-
-LaTeX Warning: Citation `9732138' on page 10 undefined on input line 84.
-
-
 
 [10]
 
-LaTeX Warning: Citation `8605773' on page 11 undefined on input line 90.
-
-
-LaTeX Warning: Citation `Cordingly2020704' on page 11 undefined on input line 100.
-
-
-LaTeX Warning: Citation `shrestha2019lambda' on page 11 undefined on input line 106.
-
-
-Underfull \vbox (badness 3364) has occurred while \output is active []
-
-
-
 [11]
-
-LaTeX Warning: Citation `8116416' on page 12 undefined on input line 120.
-
-
-LaTeX Warning: Citation `9095731' on page 12 undefined on input line 131.
-
-
-LaTeX Warning: Citation `10.1145/3377812.3382135' on page 12 undefined on input line 136.
-
-
-LaTeX Warning: Citation `9860368' on page 12 undefined on input line 146.
-
-
 
 [12]
 
-LaTeX Warning: Citation `9284261' on page 13 undefined on input line 155.
-
-
-LaTeX Warning: Citation `8605779' on page 13 undefined on input line 156.
-
-
-LaTeX Warning: Citation `8844428' on page 13 undefined on input line 162.
-
-
-LaTeX Warning: Citation `FerreiraDosSantos2023' on page 13 undefined on input line 174.
-
-
-
 [13]
-
-LaTeX Warning: Citation `10.1145/3458336.3465305' on page 14 undefined on input line 188.
-
-
-LaTeX Warning: Citation `menÃ©ndez2023performancebestpracticesusing' on page 14 undefined on input line 204.
-
-
-LaTeX Warning: Citation `ritzal2020optimizing' on page 14 undefined on input line 209.
+Underfull \vbox (badness 1789) has occurred while \output is active []
 
 
 
 [14]
 
-LaTeX Warning: Citation `menÃ©ndez2023performancebestpracticesusing' on page 15 undefined on input line 219.
+[15]
+Underfull \vbox (badness 1831) has occurred while \output is active []
 
 
-LaTeX Warning: Citation `9095731' on page 15 undefined on input line 225.
 
-
-LaTeX Warning: Citation `9912641' on page 15 undefined on input line 227.
-
-
-LaTeX Warning: Citation `8605774' on page 15 undefined on input line 229.
-
-
-LaTeX Warning: Citation `10.1145/3377812.3382135' on page 15 undefined on input line 231.
-
-
-LaTeX Warning: Citation `9027427' on page 15 undefined on input line 233.
-
-
-Overfull \hbox (283.2976pt too wide) in paragraph at lines 233--234
-[] \T1/lmr/m/n/12 (-20) [\T1/lmr/bx/n/12 (-20) ?\T1/lmr/m/n/12 (-20) ] - u»y-cie ró»-nych ze-wn¦trz-nych ser-wi-sów, za-pro-po-no-wana me-toda ca-cho-wa-nia (https://gemini.google.com/gem/180d518dd570/7e48018efb39bbc2) 
+[16]
+Overfull \hbox (288.5651pt too wide) in paragraph at lines 247--248
+[] \T1/lmr/m/n/12 (-20) [[][]14[][]] - u»y-cie ró»-nych ze-wn¦trz-nych ser-wi-sów, za-pro-po-no-wana me-toda ca-cho-wa-nia (https://gemini.google.com/gem/180d518dd570/7e48018efb39bbc2) 
  []
 
 
-LaTeX Warning: Citation `8513710' on page 15 undefined on input line 235.
-
-
-Overfull \hbox (235.47488pt too wide) in paragraph at lines 235--236
-[] \T1/lmr/m/n/12 (-20) [\T1/lmr/bx/n/12 (-20) ?\T1/lmr/m/n/12 (-20) ] - u»y-wa-nie ró»-nych j¦-zy-ków w za-le»-no-±ci od przy-padku, ró»ne usªugi (https://gemini.google.com/gem/180d518dd570/929ecefb19ed43fe) 
+Overfull \hbox (234.98488pt too wide) in paragraph at lines 249--250
+[] \T1/lmr/m/n/12 (-20) [[][]1[][]] - u»y-wa-nie ró»-nych j¦-zy-ków w za-le»-no-±ci od przy-padku, ró»ne usªugi (https://gemini.google.com/gem/180d518dd570/929ecefb19ed43fe) 
  []
-
-
-LaTeX Warning: Citation `raza2021sok' on page 15 undefined on input line 237.
-
-
-LaTeX Warning: Citation `Cavalheiro202389' on page 15 undefined on input line 239.
-
-
-LaTeX Warning: Citation `LEITNER2019340' on page 15 undefined on input line 241.
-
-
-LaTeX Warning: Citation `Ivanov_Petrova_2024' on page 15 undefined on input line 243.
 
 )) (./main.bbl
 
-[15]
+[17]
 
-[16
+[18
 
 
 ]
 
-[17]
+[19]
 
-./main.bbl:69: LaTeX Error: Unicode character âˆ’ (U+2212)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.69 ...nal of Artificial Intelligence}, 1(1):1âˆ’
-                                                  10, Jun. 2024.
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-
-[18]
-Underfull \hbox (badness 2326) in paragraph at lines 155--158
+[20]
+Underfull \hbox (badness 2326) in paragraph at lines 168--171
 []\T1/lmr/m/n/12 (+20) A. W. Se-rvi-ces.  Ama-zon ec2 do-cu-men-ta-tion, 2025.  Do-st¦p 21.03.2025 z
  []
 
 
-Underfull \hbox (badness 1688) in paragraph at lines 160--163
+Underfull \hbox (badness 1688) in paragraph at lines 173--176
 []\T1/lmr/m/n/12 (+20) A. W. Se-rvi-ces.  Ama-zon ecs de-ve-lo-per gu-ide, 2025.  Do-st¦p 21.03.2025 z
  []
 
 
-Underfull \hbox (badness 2285) in paragraph at lines 165--168
+Underfull \hbox (badness 2285) in paragraph at lines 178--181
 []\T1/lmr/m/n/12 (+20) A. W. Se-rvi-ces.  Aws lambda do-cu-men-ta-tion, 2025.  Do-st¦p 21.03.2025 z
  []
 
 
 
-[19])
+[21])
 
-[20] (./main.aux)
+[22]
+runsystem(latexminted cleantemp  --timestamp 20250426144636 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
+
+ (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: There were multiply-defined labels.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  7A53A56CD1A22909AF9FC844866CB267;3242.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 7A53A56CD1A22909AF9FC844866CB267;3242.
  ) 
 Here is how much of TeX's memory you used:
- 30457 strings out of 473190
- 556429 string characters out of 5715800
- 1169352 words of memory out of 5000000
- 52879 multiletter control sequences out of 15000+600000
- 616994 words of font info for 161 fonts, out of 8000000 for 9000
+ 30482 strings out of 473190
+ 556869 string characters out of 5715800
+ 1173186 words of memory out of 5000000
+ 52901 multiletter control sequences out of 15000+600000
+ 616212 words of font info for 153 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,17n,96p,1423b,684s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb>
-Output written on main.pdf (26 pages, 322626 bytes).
+Output written on main.pdf (28 pages, 336339 bytes).
 PDF statistics:
- 295 PDF objects out of 1000 (max. 8388607)
- 221 compressed objects within 3 object streams
- 89 named destinations out of 1000 (max. 500000)
- 30748 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 467 PDF objects out of 1000 (max. 8388607)
+ 390 compressed objects within 4 object streams
+ 100 named destinations out of 1000 (max. 500000)
+ 30892 words of extra memory for PDF output out of 35830 (max. 10000000)
 

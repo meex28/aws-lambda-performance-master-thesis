@@ -222,7 +222,21 @@ Jednocześnie, charakteryzowała się ona niskim zużyciem pamięci.
 
 TODO: wstep dla podrozdziału
 
-\cite{9095731} - mocno podzielone, małe funkcje, różne technologie itp (takie mikro-mikroserwisy)
+\subsection*{Integracja z zewnętrznymi usługami}
+
+\subsection*{Wielkość funkcji}
+
+Zbyte duże rozdrobnienie funkcji może powodować wiele pośrednich problemów, które zostały przedstawione przez Nupponen i Taibi \cite{9095731}.
+Na bazie doświadczeń programistów, zebrali oni najczęstsze problemy związane z rozwojem oprogramowania w aplikacjach bezserwerowych.
+Bezpośrednio wskazują oni na problem zbyt wielu funkcji, który może utrudnić utrzymanie i zrozumienie systemu.
+Problemem jest także komunikacja między funkcjami, która może być szczególnie wymagana przy dużej ich liczbie. 
+Autorzy podkreślają, że ,,asynchroniczne wywołania do i pomiędzy funkcjami bezserwerowymi zwiększają złożoność systemu''\cite{9095731}, 
+a problemem bezpośrednich wywołań jest ,,Złożone debugowanie, luźna izolacja funkcji. Dodatkowe koszty, jeśli funkcje są wywoływane synchronicznie, ponieważ musimy płacić za dwie funkcje działające w tym samym czasie.''\cite{9095731}
+W przypadku zbyt dużych funkcji, problematyczne staje się także użycie zbyt dużej liczby bibliotek, co zwiększa ryzyko przekroczenia limitu wielkości artefaktu funkcji.
+
+\subsection*{Odpowiedni język programowania}
+
+\subsection*{Testowanie i debbugowanie}
 
 \cite{9912641} - w sumie to co wyżej ale lepiej opisane, opiera się na ankietach
 
@@ -242,6 +256,7 @@ TODO: wstep dla podrozdziału
 
 \cite{Ivanov_Petrova_2024} - integracja z innymi serwisami, debuggowanie, testowanie lokalnie
 
+\cite{eismann2021reviewserverlessusecases} - serwisy, wielkość funkcji nie jest zawsze taka sama, 
 
 \subsection{Podsumowanie wyników przeglądu}\label{chapter:przeglad_literatury_wyniki_podsumowanie}
 
