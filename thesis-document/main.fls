@@ -475,6 +475,9 @@ INPUT ./chapters/przeglad_literatury/main.tex
 INPUT ./chapters/przeglad_literatury/main.tex
 INPUT ./chapters/przeglad_literatury/main.tex
 INPUT chapters/przeglad_literatury/main.tex
+INPUT ./chapters/przeglad_literatury/review_method.tex
+INPUT ./chapters/przeglad_literatury/review_method.tex
+INPUT chapters/przeglad_literatury/review_method.tex
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
 INPUT ./chapters/przeglad_literatury/results.tex
 INPUT ./chapters/przeglad_literatury/results.tex

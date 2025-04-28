@@ -1,6 +1,8 @@
 \section{Wyniki przeglądu}\label{chapter:przeglad_literatury_wyniki}
 
-W ramach przeglądu wybrano X prac badawczych. Na bazie prac rozpatrzono postawione pytania badawcze. Odpowiedzi na nie zostały zawarte w kolejnych podrozdziałach.
+W ramach przeglądu wybrano 34 prace badawcze, które zostały przedstawione w Tabeli \ref{table:research_papers_results}. 
+Na bazie prac rozpatrzono postawione pytania badawcze. 
+Odpowiedzi na nie zostały zawarte w kolejnych podrozdziałach.
 
 \input{chapters/przeglad_literatury/results_papers.tex}
 
@@ -39,6 +41,12 @@ Duża liczba zadań wynikała z chęci przetestowania przekroczenia limitów wsp
 Wykazali, że wraz z wzrostem pamięci rośnie wydajność funkcji, mierzona za pomocą wskaźnika GFlops (ang. Giga Floating Point Operations Per Second). 
 Interesującym szczegółem jest niewielka różnica wydajności pomiędzy 2048 MB i 3008 MB (około 0.8\%). 
 Autorzy wskazują, że może to być spowodowane taką samą konfiguracją limitów procesora, gdyż wielkość 2048 do niedawna była największą oferowaną przez AWS.
+
+Cordingly i inni \cite{9946331} zaproponowali podejście CPU Time Accounting Memory Selection (CPU-TAMS), które pozwala na optymalizację wielkości pamięci.
+Bazuje ono na szczegółowych metrykach czasu procesora, takich jak czas w trybie użytkownika, jądra czy oczekiwanie na I/O.
+Celem jest znalezienie wielkości pamięci, która zapewnia najlepszy stosunek wydajności do kosztu, a nie tylko najniższego kosztu lub najkrótszego czasu wykonania.
+Badania wykazały, że zasoby takie jak czas procesora, przepustowość I/O oraz sieci rosną wraz z wielkością pamięci.
+Jednak wzrost ten nie jest zawsze liniowy, często osiągając plateau przy wielkościach pamięci około 1.5-2GB dla I/O i sieci. 
 
 \subsubsection*{Architektura procesora}
 
@@ -84,6 +92,13 @@ Użycie odpowiednich metryk pozwala następnie na ocenę jakości konkretnych me
 Na popularność tematu zimnych startów wśród społeczności wskazują także Nazari i inni \cite{9732138}.
 Podkreślają oni wpływ tego problemu na wydajność, gdzie często czas inicjalizacji może przewyższać czas potrzebny na wykonanie logiki biznesowej.
 W ramach przeglądu literatury zauważają, że poprawa zimnych startów to jeden z kierunków rozwoju platform bezserwerowych.
+
+AWS Lambda wyróżnia się na tle innych platform FaaS w kontekście zimnych startów.
+Yu i inni autorzy \cite{10.1145/3419111.3421280} podkreślili różnicę w technologiach używanych przez dostawców funkcji bezserwerowych.
+Funkcje AWS Lambda uruchamiane są z użyciem mikro maszyn wirtualnych Firecracker.
+Pozwala to na osiągnięcie lepszych zimnych startów niż występujące w innych platformach (np. Google Cloud Platform).
+Autorzy zauważają jednak, że zimne starty dalej znacząco wydłużają czas odpowiedzi.
+Wynika to z potrzeby pobrania kodu (np. z S3) oraz inicjalizacji funkcji.
 
 \subsubsection*{Język programowania}
 

@@ -30,6 +30,11 @@ X.~Chen, L.-H. Hung, R.~Cordingly, and W.~Lloyd.
 \newblock X86 vs. arm64: An investigation of factors influencing serverless performance.
 \newblock In {\em Proceedings of the 9th International Workshop on Serverless Computing}, WoSC '23, page 7–12, New York, NY, USA, 2023. Association for Computing Machinery.
 
+\bibitem{9946331}
+R.~Cordingly, S.~Xu, and W.~Lloyd.
+\newblock Function memory optimization for heterogeneous serverless platforms with cpu time accounting.
+\newblock In {\em 2022 IEEE International Conference on Cloud Engineering (IC2E)}, pages 104--115, 2022.
+
 \bibitem{Cordingly2020704}
 R.~Cordingly, H.~Yu, V.~Hoang, D.~Perez, D.~Foster, Z.~Sadeghi, R.~Hatchett, and W.~J. Lloyd.
 \newblock Implications of programming language selection for serverless data processing pipelines.
@@ -208,5 +213,10 @@ E.~van Eyk, A.~Iosup, C.~L. Abad, J.~Grohmann, and S.~Eismann.
 J.~Wen, Z.~Chen, X.~Jin, and X.~Liu.
 \newblock Rise of the planet of serverless computing: A systematic review.
 \newblock {\em ACM Trans. Softw. Eng. Methodol.}, 32(5), 2023.
+
+\bibitem{10.1145/3419111.3421280}
+T.~Yu, Q.~Liu, D.~Du, Y.~Xia, B.~Zang, Z.~Lu, P.~Yang, C.~Qin, and H.~Chen.
+\newblock Characterizing serverless platforms with serverlessbench.
+\newblock In {\em Proceedings of the 11th ACM Symposium on Cloud Computing}, SoCC '20, page 30–44, New York, NY, USA, 2020. Association for Computing Machinery.
 
 \end{thebibliography}

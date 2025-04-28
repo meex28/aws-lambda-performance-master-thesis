@@ -4,49 +4,49 @@ The top-level auxiliary file: main.aux
 The style file: abbrv.bst
 Database file #1: sources/bibliography.bib
 Warning--entry type for "cui2024serverless" isn't style-file defined
---line 440 of file sources/bibliography.bib
+--line 469 of file sources/bibliography.bib
 Warning--empty booktitle in Cavalheiro202389
 Warning--empty booktitle in Cordingly2020704
 Warning--empty booktitle in FerreiraDosSantos2023
-You've used 42 entries,
+You've used 44 entries,
             2118 wiz_defined-function locations,
-            722 strings with 12667 characters,
-and the built_in function-call counts, 16132 in all, are:
-= -- 1549
-> -- 787
-< -- 22
-+ -- 316
-- -- 268
-* -- 950
-:= -- 2474
-add.period$ -- 130
-call.type$ -- 42
-change.case$ -- 260
+            733 strings with 13172 characters,
+and the built_in function-call counts, 17270 in all, are:
+= -- 1661
+> -- 853
+< -- 24
++ -- 342
+- -- 292
+* -- 1026
+:= -- 2642
+add.period$ -- 137
+call.type$ -- 44
+change.case$ -- 278
 chr.to.int$ -- 0
-cite$ -- 45
-duplicate$ -- 710
-empty$ -- 1268
-format.name$ -- 268
-if$ -- 3609
+cite$ -- 47
+duplicate$ -- 762
+empty$ -- 1343
+format.name$ -- 292
+if$ -- 3867
 int.to.chr$ -- 0
-int.to.str$ -- 42
-missing$ -- 30
-newline$ -- 212
-num.names$ -- 84
-pop$ -- 363
+int.to.str$ -- 44
+missing$ -- 32
+newline$ -- 222
+num.names$ -- 88
+pop$ -- 385
 preamble$ -- 1
-purify$ -- 218
+purify$ -- 234
 quote$ -- 0
-skip$ -- 632
+skip$ -- 679
 stack$ -- 0
-substring$ -- 741
-swap$ -- 288
-text.length$ -- 22
+substring$ -- 793
+swap$ -- 315
+text.length$ -- 24
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 168
+type$ -- 176
 warning$ -- 3
-while$ -- 125
-width$ -- 44
-write$ -- 461
+while$ -- 132
+width$ -- 46
+write$ -- 486
 (There were 4 warnings)

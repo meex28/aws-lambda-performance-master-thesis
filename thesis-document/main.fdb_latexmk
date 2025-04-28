@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1745852151.04931 "main.aux" "main.bbl" "main" 1745852209.67292 0
-  "./sources/bibliography.bib" 1745843928.04345 27979 36e0650f353e44549cbea32a797dfb30 ""
+["bibtex main"] 1745855267.36459 "main.aux" "main.bbl" "main" 1745855328.80141 0
+  "./sources/bibliography.bib" 1745854401.80538 30545 4f6b1bfbed02d0f2fe2fa37972dcedc0 ""
   "/usr/local/texlive/2025/texmf-dist/bibtex/bst/base/abbrv.bst" 1292289607 20329 b5fed53e10044d0f8112183785c759b1 ""
-  "main.aux" 1745852209.40289 9684 5e08dd7ff137ee523b67a739a883e05b "pdflatex"
+  "main.aux" 1745855328.55385 10099 cf9c3b2e4d9390eda7fc04a19b01a055 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1745852208.06042 "/Users/piotr/dev/aws-lambda-performance-master-thesis/thesis-document/main.tex" "main.pdf" "main" 1745852209.67306 0
+["pdflatex"] 1745855326.78683 "/Users/piotr/dev/aws-lambda-performance-master-thesis/thesis-document/main.tex" "main.pdf" "main" 1745855328.80154 0
   "/Users/piotr/dev/aws-lambda-performance-master-thesis/thesis-document/main.tex" 1744725156.22055 1393 fb60f52f403f19a28ddb2310284c4f00 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc" 1254269338 3031 6c4d3515bf7115d8518af1c9ab97ca44 ""
@@ -226,17 +226,18 @@
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
   "chapters/abstrakt.tex" 1743361834 495 f3e38a515f93e822205ceb1a8abddf71 ""
   "chapters/dzialanie_faas/main.tex" 1745851453.12342 6020 56c18a2b1536b12febadb0481f4be077 ""
-  "chapters/przeglad_literatury/main.tex" 1745671595.942 5854 ae4b93489e9771853f4b4f1088894dc3 ""
-  "chapters/przeglad_literatury/results.tex" 1745852206.783 35243 0976c1e25bfe8fdb205e7b206d4906c8 ""
-  "chapters/przeglad_literatury/results_papers.tex" 1745586652.97356 2005 5e34cb71b0c867f9f09b9ab879a475fb ""
+  "chapters/przeglad_literatury/main.tex" 1745855056.74722 730 0f8c4e49d5cff38c9280956ceabc2044 ""
+  "chapters/przeglad_literatury/results.tex" 1745855326.478 36635 9786312e8f04f3fd07704146a9cca664 ""
+  "chapters/przeglad_literatury/results_papers.tex" 1745855255.30852 2191 6b3fba62602779d303ff80f441859e83 ""
+  "chapters/przeglad_literatury/review_method.tex" 1745855043.59553 5179 dec78eed84e6e4255bfb46a0d6811a0d ""
   "chapters/slownik_pojec.tex" 1743361834 162 d8f8402ae61d5c1bae08585dfc734609 ""
   "chapters/wstep/main.tex" 1744129566.40214 2675 54d707979cf969cf678811e93757cb66 ""
   "latex-settings.tex" 1744931793.57963 13553 3dbb1c46cae4995498d843172222b899 ""
-  "main.aux" 1745852209.40289 9684 5e08dd7ff137ee523b67a739a883e05b "pdflatex"
-  "main.bbl" 1745852151.13687 10222 73b983f22c81538e7fca5554c1a1fb56 "bibtex main"
-  "main.out" 1745852209.40459 3509 158712f4951c31c063f886c8ecc67e31 "pdflatex"
+  "main.aux" 1745855328.55385 10099 cf9c3b2e4d9390eda7fc04a19b01a055 "pdflatex"
+  "main.bbl" 1745855267.44181 10827 d06e87ebea320357bc44baa2c2257451 "bibtex main"
+  "main.out" 1745855328.55562 3509 158712f4951c31c063f886c8ecc67e31 "pdflatex"
   "main.tex" 1744725156.22055 1393 fb60f52f403f19a28ddb2310284c4f00 ""
-  "main.toc" 1745852209.40501 1772 79f051fd2d57cc1cb87c5a4b4272c9a5 "pdflatex"
+  "main.toc" 1745855328.55601 1772 c195cabd280eb42718a093a231c6ea42 "pdflatex"
   "title_page/title_page.pdf" 1743361834 144139 62ae5feb3df1e7daff15bf715bfb2fa9 ""
   (generated)
   "main.aux"
