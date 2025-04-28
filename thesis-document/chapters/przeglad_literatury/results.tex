@@ -214,9 +214,12 @@ Wyniki eksperymentu pokazały, że w przypadku użycia zwykłego JVM funkcja baz
 Funkcje oparte o frameworki były znacząco wolniejsze. Jednak podczas użycia GraalVM, funkcja oparta o Micronaut posiadała najniższe opóźnienia podczas zimnych startów.
 Jednocześnie, charakteryzowała się ona niskim zużyciem pamięci.
 
-\subsubsection*{Inne metody / SnapStart}
+\subsubsection*{SnapStart}
 
-\cite{menéndez2023performancebestpracticesusing} - SnapStart?
+SnapStart to funkcjonalność oferowana przez AWS w celu łagodzenia problemu zimnych startów dla funkcji napisanych w Javie. 
+Jest to jedna z technik zaproponowanych przez Menendeza i Bartletta w celu optymalizacji funkcji AWS Lambda opartych o Javę \cite{menéndez2023performancebestpracticesusing}. 
+Autorzy wykazali, że włączenie tej opcji w testowanym systemie pozwoliło na przyspieszenie zimnych startów o 16\% oraz zmniejszenie opóźnień dla rozgrzanych funkcji o 21\%. 
+Zaznaczyli oni jednak, że SnapStart posiada istotne ograniczenia, takie jak brak wsparcia dla architektury ARM64, niestandardowych środowisk uruchomieniowych (ang. custom runtimes), integracji z Amazon EFS czy możliwości połączenia funkcji z VPC.
 
 \subsection{Cechy rozwoju aplikacji w AWS Lambda}\label{chapter:przeglad_literatury_wyniki_cechy_rozwoju}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.30)  28 APR 2025 16:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.30)  28 APR 2025 16:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1356,9 +1356,6 @@ Underfull \vbox (badness 2689) has occurred while \output is active []
 [16]
 
 [17]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 [18])) (./main.bbl
 
@@ -1391,7 +1388,7 @@ Underfull \hbox (badness 2285) in paragraph at lines 188--191
 [23])
 
 [24]
-runsystem(latexminted cleantemp  --timestamp 20250428161610 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
+runsystem(latexminted cleantemp  --timestamp 20250428162327 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
 
  (./main.aux)
  ***********
@@ -1414,7 +1411,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  99i,17n,96p,1071b,684s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb>
-Output written on main.pdf (30 pages, 348031 bytes).
+Output written on main.pdf (30 pages, 348443 bytes).
 PDF statistics:
  499 PDF objects out of 1000 (max. 8388607)
  419 compressed objects within 5 object streams
