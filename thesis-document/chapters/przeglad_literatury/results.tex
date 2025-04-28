@@ -349,6 +349,112 @@ Zostały one przedstawione w kontekście każdego pytania badawczego.
 
 \subsubsection*{Wnioski odnośnie PB1: ,,Jakie są główne czynniki wpływające na wydajność funkcji AWS Lambda?''}
 
+Przegląd literatury pozwolił na identyfikację czynników i ich wpływu na wydajność funkcji AWS Lambda.
+Zauważono, że wiele z nich może być w łatwy sposób zaprogramowana przez twórcę funkcji.
+Takimi czynnikami są pamięć funkcji czy architektura procesora.
+Dzięki naturze usług FaaS konfiguracja infrastruktury jest bardzo prosta, a parametry te mogą być konfigurowane w trakcie całego cyklu rozwoju oprogramowania.
+Istotny wpływ na czas działania funkcji ma także język programowania w którym została ona stworzona.
+Bardzo szerokim obszarem badań są również zimne starty, które wpływają na czas wykonania funkcji.
+Warto jednak zaznaczyć, że na zimne starty wpływ wywiera wiele innych czynników.
+
+Pierwszym ważnym aspektem jest wielkość pamięci funkcji. 
+Został on poruszony w pięciu badanych pracach \cite{9284261}\cite{9235063}\cite{8567674}\cite{pawlik2019performanceconsiderationsexecutionlarge}\cite{9946331}.
+Popularność badań pod tym względem może wynikać z kilku czynników. 
+Wpływ wielkości pamięci na wydajność oprogramowania jest dość oczywisty niezależnie od modelu w jakim ono działa (serwerowe lub bezserwerowe).
+Jednak w przypadku architektur serverless, wielkość pamięci jest bezpośrednio powiązana z kosztem działania.
+Naturalnie zachęca to do badań nad optymalizacją tego parametru.
+Dodatkowo, pamięć to czynnik, który jest bardzo prosto konfigurowalny przez programistę.
+
+W badaniach wykazano, że pamięć oprócz wpływu na czas działania, ma także wpływ na czynniki, które nie są dostępne do konfiguracji (jak wydajność I/O czy sieciowa).
+Z analizy tego obszaru wynika, że w przypadku analizy wydajności AWS Lambda, bardzo istotnym elementem jest badanie działania funkcji dla różnych wielkości pamięci.
+
+Mimo wystąpienia wyłącznie w dwóch pracach \cite{10.1145/3631295.3631394}\cite{10.1145/3491204.3543506} architektura procesora także jest interesującym aspektem do uwzględniania w badaniach.
+Niemożliwe jest jednak stwierdzenie, że któraś z dostępnych architektur (ARM64 i X86\_64) pozwala na osiągnięcie lepszej wydajności funkcji.
+Optymalizacja efektywności AWS Lambda pod względem tego parametru wymaga konkretnej analizy danego przypadku i testów obu opcji.
+
+Popularną strefą badań są także języki programowania dostępne dla AWS Lambda \cite{8605773}\cite{Cordingly2020704}\cite{shrestha2019lambda}.
+Autorzy często porównują szybkość języków kompilowanych (jak Java) i interpretowanych (jak Python).
+W tym zakresie wyniki często różnią się w zależności od użycia dla ciepłych i zimnych startów.
+Mimo badań nad wieloma językami programowania, interesujący jest jednak brak reprezentacji innych niż Java języków działających w JVM.
+Mogą to być na przykład Kotlin, Scala czy Groovy.
+
+Języki wywodzące się z Javy (jak Kotlin) mogą być interesującym obszarem dalszych badań w kontekście wydajności.
+Każdy z tych języków posiada specyficzne aspekty, które mogą wpłynąć na wydajność.
+Dodatkowo, ich kompatybilność z Javą może usprawnić ich użycie przez istniejące już zespoły zaznajomione z tym językiem.
+
+Bardzo szerokim obszarem badań są także zimne starty.
+Polegają one na inicjalizacji infrastruktury potrzebnej do uruchomienia kodu wywołanej funkcji, co powoduje dodatkowe opóźnienia. 
+Wpływają one bezpośrednio na wydajność funkcji, a wpływ na zimne starty mają także pozostałe czynniki przedstawione we wnioskach.
+Wynika z tego, że eksperymenty z użyciem metod poprawy wydajności powinny uwzględniać zarówno ciepłe, jak i zimne starty.
+
 \subsubsection*{Wnioski odnośnie PB2: ,,Jakie są istniejące metody optymalizacji wydajności funkcji AWS Lambda działających w ekosystemie Java?''}
 
+Dokonanie przeglądu literatury pozwoliło na poznanie aktualnego stanu wiedzy w kontekście metod optymalizacji wydajności.
+Ważnym elementem poprawy wydajności jest zmniejszanie wielkości artefaktu, które może być dokonywane w całym procesie rozwoju oprogramowania.
+Składa się na niego wiele czynników (jak np. użyte biblioteki), co daje szeroką możliwość optymalizacji tego aspektu.
+W literaturze zawarte występują także metody, które nie są specyficzne dla Javy jak odpowiedni rodzaj wdrożeń (ZIP lub Docker) czy pingowanie.
+W ramach odpowiedzi na pierwsze pytanie badawcze wykazano znaczący wpływ języka programowania na wydajność, zatem ciekawym kierunkiem w literaturze jest propozycja użycia języków alternatywnych do Javy.
+Nie istnieje jednak wiele badań na temat bardzo skutecznych metod opierających się o usprawnienia kompilacji (jak techniki JIT czy GraalVM) oraz SnapStart.
+
+Redukcja wielkości artefaktu może być dokononana poprzez różne techniki jak redukcja nieużywanego kodu, czy zmniejszenie liczby bibliotek.
+Jest ona wykonywana w celu poprawy wydajność oraz uniknięcia sytuacji przekroczenia limitu wielkości funkcji.
+Jednak ważnym aspektem tej metody jest stronienie od nadmiernego podziału funkcji.
+Zbyt duża ich liczba może prowadzić do wydłużenia czasu działania, ze względu na kosztowne zapytania między funkcjami.
+Dlatego każda optymalizacja powinna być dokładnie analizowana w zależności od optymalizowanego komponentu.
+
+Znaleziono wyłącznie pojedynczą pracę porównującą wdrożenia oparte o ZIP i obrazy Docker \cite{9860368}.
+Na jej bazie możemy jednak stwierdzić o skuteczności użycia ZIP jako metody optymalizacji sprawności AWS Lambda dla technologii Java.
+Technika ta może być jednak użyta w kombinacji z nowymi metodami.
+
+Bardzo interesującym kierunkiem badań są techniki oparte o użycie innych języków.
+Na ten temat zawarto w wynikach dwie prace.
+Pierwsze z nich, proponuje użycie JavaScript jako całkowite zastąpienie Javy \cite{FerreiraDosSantos2023}.
+Metoda ta jednak nie jest rozwiązaniem dla programistów Javy i trudno nazwać ją metodą optymalizacji wydajności w ekosystemie Java.
+Wskazuje ona jednak wartościowy trend dla użycia odpowiednich języków w konkretnych elementach systemu.
+
+Druga praca proponuje migracje aplikacji monolitycznych z Javy do języka JavaScript \cite{8844428}.
+Stworzone narzędzie pozwoliło na migrację starych systemów do architektury bezserwerowej.
+Technika ta nie pozwala jednak na rozwój aplikacji opartych o Javę, a docelowo zastępuje ją JavaScriptem.
+Jednak ponownie, praca ukazuje ciekawy obszar do dalszych badań.
+
+Bardzo skuteczne okazują się metody optymalizujące kompilację i uruchomienie kodu Java.
+Techniki jak JIT \cite{10.1145/3458336.3465305} czy GraalVM \cite{menéndez2023performancebestpracticesusing}\cite{ritzal2020optimizing} pozwalają na znaczące zmniejszenie opóźnień.
+Jednak liczba prac jest niewielka w porównaniu z skutecznością tego rozwiązania.
+Dodatkowo, prace skupiały się wyłącznie na wpływie na czas działania funkcji pomijając inne czynniki (np. czas budowania artefaktu).
+Z tego względu to pole może wymagać dokładniejszej analizy.
+
+Niespodziewanym było znalezienie wyłącznie pojedynczego badania w kontekście SnapStart \cite{menéndez2023performancebestpracticesusing}.
+Metoda ta jest dostępna od roku 2022, a jej wdrożenie przez programistę jest stosunkowo proste.
+Sama technika nie niesie za sobą także dodatkowych kosztów, a pozwala na zmniejszenie wpływu zimnych startów na efektywność AWS Lambda.
+Jest ona także dostępna dla innych języków działających w JVM, co nie zostało zbadane.
+Zatem obszar ten może wykazywać potencjał do dalszych badań.
+
 \subsubsection*{Wnioski odnośnie PB3: ,,Jakie są cechy rozwoju aplikacji w architekturze bezserwerowej AWS Lambda?''}
+
+W trakcie rozwoju aplikacji w architekturze bezserwerowej od programisty wymagane są konkretne decyzje i działania.
+W celu optymalizacji architektury istotne jest tworzenie funkcji odpowiedniego rozmiaru (co także znacząco wpływa na wydajność).
+Systemy często oparte są o dodatkowe serwisy (np. bazodanowe), co dodatkowo utrudnia kolejny aspekt tej architektury, czyli testowanie.
+W przypadku testowania funkcji bezserwerowych dominują testy jednostkowe, a testy integracyjne są utrudnione.
+Ważnym elementem tworzenia nowego komponentu jest wybór języka, a jego twórca musi dostosować tę decyzję do konkretnych wymagań.
+
+Tworzenie systemów w architekturze opartej o AWS Lambda cechuje się odpowiednią kompozycją tych funkcji.
+Ich wielkość oprócz znaczącego wpływu na wydajność ma także wpływ na rozwój systemu \cite{9095731}\cite{9912641}.
+Wynika z tego, że w badania nad metodami optymalizacji wydajności muszą zostać przeprowadzone w kontekście odpowiednich funkcji.
+Powinny być one nie za duże, a skupione na konkretnym zadaniu biznesowym.
+
+Kluczową rolę w modelu bezserwerowym odgrywają zewnętrzne serwisy. 
+Funkcje FaaS w swojej naturze są bezserwerowe, dlatego bardzo istotne jest użycie usług jak bazy danych \cite{eismann2021reviewserverlessusecases}.
+Element ten jest istotny ze względu na potrzebę posiadania odpowiednich narzędzi do takich integracji.
+Mogą to być różne narzędzia SDK (ang. Software Development Kit), na przykład od integracji z usługami AWS.
+Z tego względu metody optymalizacji nie mogą ograniczać tak krytycznych zależności.
+
+Fundamentalnym wyborem dla tworzonej funkcji AWS Lambda jest język programowania.
+W ramach poprzednich pytań badawczych wykazano ich znaczący wpływ na wydajność.
+Ma on także znaczny udział w rozwoju oprogramowania opartego o model serverless.
+Autorzy prac zaznaczają, że musi być on odpowiedni dla konkretnych wymagań biznesowych \cite{raza2021sok}\cite{8513710}.
+Dlatego interesującym obszarem badań mogą być metody, które ułatwią użycie różnych języków w ramach AWS Lambda.
+
+Trudności w procesie progamistycznym aplikacji opartych o AWS Lambda przynosi testowanie oprogramowania.
+Aktualnie testy funkcji opierają się głównie o testy jednostkowe, które są wspierane przez różne frameworki \cite{8605774}.
+Brakującym elementem są testy integracyjne, które w tym modelu są mocno skomplikowane.
+Dlatego metody poprawy wydajności nie powinny utrudniać testowania, które jest już teraz jest wyzwaniem.
