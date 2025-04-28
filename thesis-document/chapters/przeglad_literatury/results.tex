@@ -40,7 +40,7 @@ Wykazali, że wraz z wzrostem pamięci rośnie wydajność funkcji, mierzona za 
 Interesującym szczegółem jest niewielka różnica wydajności pomiędzy 2048 MB i 3008 MB (około 0.8\%). 
 Autorzy wskazują, że może to być spowodowane taką samą konfiguracją limitów procesora, gdyż wielkość 2048 do niedawna była największą oferowaną przez AWS.
 
-\subsection*{Architektura procesora}
+\subsubsection*{Architektura procesora}
 
 Amazon Web Services oferuje możliwość wyboru architektury procesora spośród X86\_64 oraz ARM64. Architektura ARM64 jest wspierana poprzez procesory AWS Graviton2 rozwijane przez AWS.
 
@@ -57,7 +57,7 @@ Wydajność obu architektur różniła się w zależności od etapu pipeline’u
 
 Działanie funkcji różniło się także w zależności od regionu. Funkcje w architekturze X86\_64 działały najszybciej w regionie eu-central-1, a najwolniej w us-west-2. W przypadku ARM64, region us-west-2 był najszybszy, a us-east-2 najwolniejszy. Funkcje wykazały także tendencję do bycia szybszymi poza typowymi godzinami pracy (np. funkcje w godzinach 6:00-8:00 działały o 6\% szybciej niż funkcje w godzinach 10:00-12:00).
 
-\subsection*{Zimne starty}
+\subsubsection*{Zimne starty}
 
 Specyficznym zjawiskiem dla usług FaaS są tzw. zimne starty. 
 Polegają one na dłuższym czasie inicjalizacji funkcji, co wynika z konieczności przygotowania infrastruktury w postaci maszyny wirtualnej i środowiska wykonawczego. 
@@ -85,7 +85,7 @@ Na popularność tematu zimnych startów wśród społeczności wskazują także
 Podkreślają oni wpływ tego problemu na wydajność, gdzie często czas inicjalizacji może przewyższać czas potrzebny na wykonanie logiki biznesowej.
 W ramach przeglądu literatury zauważają, że poprawa zimnych startów to jeden z kierunków rozwoju platform bezserwerowych.
 
-\subsection*{Język programowania}
+\subsubsection*{Język programowania}
 
 Znaczące różnice w wydajności pomiędzy językami w AWS Lambda podkreślili Jackson i Clynch  \cite{8605773}. Przeanalizowali oni ich wpływ na zarówno ciepłe i zimne starty oraz koszty funkcji. Testowane funkcje zostały napisane w językach .NET 2, JavaScript (dla NodeJS), Java 8, Go oraz Python 3. 
 
@@ -112,7 +112,7 @@ Podkreśla on, że w wyborze języka programowania ważnym elementem powinny by�
 
 TODO: wstep dla podrozdziału
 
-\subsection*{Redukcja rozmiaru artefaktu}\label{chapter:przeglad_literatury_wyniki_redukcja_rozmiaru}
+\subsubsection*{Redukcja rozmiaru artefaktu}\label{chapter:przeglad_literatury_wyniki_redukcja_rozmiaru}
 
 Podczas rozwoju aplikacji w ekosystemie Java ważnym etapem jest odpowiednie utworzenie artefaktu, który zawiera wszystkie zależności potrzebne do uruchomienia.
 Wynikiem tego są pliki JAR, które podczas użycia w AWS Lambda muszą zostać pobrane do używanej maszyny wirtualnej, co wpływa na czas inicjalizacji.
@@ -139,7 +139,7 @@ Aby temu zaradzić ich framework Nimbus wprowadza mechanizm budowy artefaktów, 
 Autorzy wykazali, że takie podejście pozwala zmniejszyć rozmiar plików JAR, co przyczynia się do redukcji czasu zimnych startów. 
 Nimbus potrafi także wykryć i wdrożyć tylko zmienione funkcje, co dodatkowo ogranicza liczbę niepotrzebnych zimnych startów.
 
-\subsection*{Wybór rodzaju wdrożenia}
+\subsubsection*{Wybór rodzaju wdrożenia}
 
 AWS oferuje dwie strategie wdrożenia funkcji Lambda, opierające się o pliki ZIP lub obrazy Docker. 
 Świadomy ich wybór ma znaczący wpływ na wydajność, szczególnie na czas zimnych startów.
@@ -149,7 +149,7 @@ Wyniki różniły się w zależności od wybranego języka. Dla Pythona oraz Jav
 Co ciekawe, dla języka Java tendencja była odwrotna - wdrożenie oparte o pliki ZIP zapewniało krótszy czas zimnego startu w porównaniu do wdrożenia kontenerowego. 
 Wyniki te były spójne niezależnie od testowanego rozmiaru aplikacji czy ilości przydzielonej pamięci, a przewaga wdrożeń ZIP była szczególnie widoczna dla większych aplikacji.
 
-\subsection*{Pingowanie}
+\subsubsection*{Pingowanie}
 
 Po wykonaniu zapytania do funkcji AWS Lambda maszyny wirtualne, które zostały wykorzystane, pozostają aktywne w oczekiwaniu na kolejne uruchomienia. 
 Trwa to przeważnie kilka minut \cite{9284261}, gdy uruchomiony już kod dalej jest gotowy do działania.
@@ -158,7 +158,7 @@ Funkcje AWS Lambda były uruchamiane przez specjalne instancje EC2 lub uslugę C
 Podejście to pozwoliło na redukcję zimnych startów i przyspieszenie funkcji około czterokrotnie.
 W porównaniu z klasyczną infrastrukturą (opartą o np. kontenery Docker) funkcje Lambda były około 10\% wolniejsze, jednak użycie funkcji bezserwerowych pozwoliło na około 18-krotne zmniejszenie kosztów. 
 
-\subsection*{Użycie Javascript}
+\subsubsection*{Użycie Javascript}
 Kaplunovich \cite{8844428} proponuje interesujące podejście do migracji monolitycznych aplikacji napisanych w technologii Java do AWS Lambda.
 Migracja ta prowadzona jest z użyciem narzędzia ToLambda, które jest w stanie transformować kod Java na JavaScript, który jest następnie uruchamiany w AWS Lambda jako funkcje NodeJS.
 Autor motywuje wybór JavaScriptu jako docelowego języka ze względu na trendy wskazujące lepszą wydajność i popularność tego języka.
@@ -182,7 +182,7 @@ Choć Java oferuje lepszą wydajność przy ciepłych startach, w przypadku syst
 Mimo interesującego podejścia, użycie JavaScript w miejsce Javy może być jednak nieoptymalne dla zespołów programistycznych z umiejętnościami w ekosystemie Java. 
 Wymaga to kompletnej zmiany używanych narzędzi, co może być kosztowne. Dlatego metody te zostały zawarte w wynikach przeglądu jako prezentacja alternatywy, jednak nie jako pełne rozwiązanie problemu wydajności.
 
-\subsection*{JIT}
+\subsubsection*{JIT}
 
 Jedną z metod optymalizacji nowoczesnych języków programowania jest JIT (ang. just-in-time compilation), czyli metoda kompilacji fragmentów kodu do kodu maszynowego, bezpośrednio przed ich wykonaniem.
 Metoda ta jest często wykorzystywana przez maszyny wirtualne Javy. Jednak według Carreira i innych autorów \cite{10.1145/3458336.3465305}, technika ta jest niewystarczająco wspierana w funkcjach AWS Lambda.
@@ -195,7 +195,7 @@ Gorące starty były możliwe poprzez ponowne użycie, już uruchomionych wcześ
 Zaproponowana metoda prowadziła do znaczącej redukcji czasu wykonania funkcji (nawet 55-krotnego dla Javy). 
 Dodatkowo, widoczny był trend coraz lepszej poprawy wydajności, wraz z kolejnymi uruchomieniami funkcji.
 
-\subsection*{GraalVM}
+\subsubsection*{GraalVM}
 
 Innym podejściem do optymalizacji funkcji Java w AWS Lambda jest wykorzystanie GraalVM.
 GraalVM to wysokowydajny zestaw JDK (ang. Java Development Kit), który może przyspieszyć działanie aplikacji opartych na technologii Java.
@@ -214,7 +214,7 @@ Wyniki eksperymentu pokazały, że w przypadku użycia zwykłego JVM funkcja baz
 Funkcje oparte o frameworki były znacząco wolniejsze. Jednak podczas użycia GraalVM, funkcja oparta o Micronaut posiadała najniższe opóźnienia podczas zimnych startów.
 Jednocześnie, charakteryzowała się ona niskim zużyciem pamięci.
 
-\subsection*{Inne metody / SnapStart}
+\subsubsection*{Inne metody / SnapStart}
 
 \cite{menéndez2023performancebestpracticesusing} - SnapStart?
 
@@ -222,9 +222,7 @@ Jednocześnie, charakteryzowała się ona niskim zużyciem pamięci.
 
 TODO: wstep dla podrozdziału
 
-\subsection*{Integracja z zewnętrznymi usługami}
-
-\subsection*{Wielkość funkcji}
+\subsubsection*{Zarządzanie wielkością funkcji}
 
 Zbyte duże rozdrobnienie funkcji może powodować wiele pośrednich problemów, które zostały przedstawione przez Nupponen i Taibi \cite{9095731}.
 Na bazie doświadczeń programistów, zebrali oni najczęstsze problemy związane z rozwojem oprogramowania w aplikacjach bezserwerowych.
@@ -234,29 +232,93 @@ Autorzy podkreślają, że ,,asynchroniczne wywołania do i pomiędzy funkcjami 
 a problemem bezpośrednich wywołań jest ,,Złożone debugowanie, luźna izolacja funkcji. Dodatkowe koszty, jeśli funkcje są wywoływane synchronicznie, ponieważ musimy płacić za dwie funkcje działające w tym samym czasie.''\cite{9095731}
 W przypadku zbyt dużych funkcji, problematyczne staje się także użycie zbyt dużej liczby bibliotek, co zwiększa ryzyko przekroczenia limitu wielkości artefaktu funkcji.
 
-\subsection*{Odpowiedni język programowania}
+W kolejnej pracy Taibi kontynuuje analizy w tym zakresie wraz z Kehoe i Poccia \cite{9912641}. 
+Wykonali oni badanie ankietowe wśród doświadczonych praktyków pracujących z aplikacjami w architekturach bezserwerowych.
+Aż 38.46\% badanych wskazało, że synchroniczne zapytania między funkcjami mają znaczny negatywny wpływ na stan aplikacji.
+Także około co 5. badany wskazał, że złą praktyką jest także dzielenie tego samego kodu między wieloma funkcjami.
+Same funkcje powinny być skupione wyłącznie na pojedynczym zadaniu biznesowym.
 
-\subsection*{Testowanie i debbugowanie}
+Jak wykazali Eismann i inni \cite{eismann2021reviewserverlessusecases} systemy składające się powyżej 5 funkcji są bardzo rzadkie.
+W ich badaniach aż 82\% analizowanych przypadków użycia zawierało pięć funkcji lub mniej, a 93\% mniej niż dziesięć. 
+Według autorów wynika to potencjalnie z dwóch głównych czynników:
+\begin{quote}
+    ,,Po pierwsze, bezserwerowe modele aplikacji zmniejszają ilość kodu, który programiści muszą napisać, ponieważ pozwalają im skupić się na logice biznesowej (\dots). Po drugie, wydaje się to wskazywać, że programiści wybierają obecnie raczej dużą ziarnistość dla rozmiaru funkcji bezserwerowych'' \cite{eismann2021reviewserverlessusecases}
+\end{quote}
+Eismann i inni autorzy podkreślają, że optymalizacja wielkości funkcji jest interesującym tematem do dalszych badań.
 
-\cite{9912641} - w sumie to co wyżej ale lepiej opisane, opiera się na ankietach
+W badaniach Leitnera i innych \cite{LEITNER2019340} potwierdzono, że aplikacje bezserwerowe zazwyczaj składają się z niewielkiej liczby funkcji.
+Aż 64\% badanych wskazało, że ich aplikacje zawierają od 1 do 10 funkcji, co jest zbliżone do wyników Eismanna.
+W kontekście granularności funkcji, najczęściej stosowaną praktyką była drobna granularność, z funkcjami przypisanymi do pojedynczych metod REST (36\% badanych).
+Jednak większa liczba funkcji może prowadzić do problemów z zarządzaniem, testowaniem i brakiem odpowiednich narzędzi do monitorowania, co stanowi wyzwanie w praktyce.
 
-\cite{8605774} - https://gemini.google.com/gem/180d518dd570/9ba1bf85bf544314
+\subsubsection*{Integracja z zewnętrznymi usługami}
 
-\cite{10.1145/3377812.3382135} - gemini.google.com/gem/180d518dd570/d2c2aaa642e9fcd1
+Rozwój aplikacji w modelu serverless opiera się w dużej mierze na integracji z innymi usługami.
+Wynika to znacznie z bezstanowości AWS Lambda, które uruchamiane są na żądanie.
+Konieczność integracji podkreślają autorzy Ivanon i Petrova \cite{Ivanov_Petrova_2024}.
+Pozwala to budować kompletne systemy w oparciu o funkcje AWS Lambda oraz zarządzane serwisy chmurowe.
+Kluczową rolę odgrywają tutaj różnego rodzaju wyzwalacze zdarzeń (na przykład zmiany danych w Amazon S3 czy DynamoDB) i wiadomości przesyłane przez Amazon SNS.
+AWS Lambda integruje się także z usługami takimi jak API Gateway, EventBridge czy Step Functions.
+Pozwala to budować pełne aplikacje bez własnej infrastruktury.
+Autorzy wskazują, że rozwój aplikacji serverless opiera się na łączeniu funkcji z zarządzanymi usługami.
 
-\cite{9027427} - użycie różnych zewnętrznych serwisów, zaproponowana metoda cachowania (https://gemini.google.com/gem/180d518dd570/7e48018efb39bbc2)
+Bezstanowość funkcji AWS Lambda wymusza integrację z zewnętrznymi serwisami, takimi jak bazy danych czy systemy plików.
+Ghosh i inni \cite{9027427} zwracają uwagę, że taka komunikacja odbywa się po sieci i może znacząco zwiększać opóźnienia działania aplikacji.
+W ich badaniach dostęp do Amazon DynamoDB z funkcji Lambda był prawie czternastokrotnie wolniejszy niż dostęp do lokalnej bazy danych z tradycyjnej aplikacji.
+Problem ten narasta w bardziej złożonych systemach, gdzie sieciowe opóźnienia sumują się na ścieżce krytycznej.
+Autorzy podkreślają, że problem wynika z samej architektury serverless, gdzie funkcje są uruchamiane w izolacji.
+Mimo wad związanych z integracjami z serwisami zewnętrznymi, pozostają one konieczne w rozwoju systemów bezserwerowych.
 
-\cite{8513710} - używanie różnych języków w zależności od przypadku, różne usługi (https://gemini.google.com/gem/180d518dd570/929ecefb19ed43fe) 
+Na powszechność integracji z serwisami chmurowymi wskazali również Eismann i inni \cite{eismann2021reviewserverlessusecases}.
+Dokonali oni analizy przypadków użycia serverless z projektów otwartoźródłowych, białej i szarej literatury oraz konsultacji z ekspertammi.
+Wykazali oni, że aplikacje najczęściej korzystały z zewnętrznych rozwiązań przechowywania danych (np. Amazon S3) i baz danych (np. DynamoDB).
+Było to odpowiednio 61\% i 47\% analizowanych systemów.
+Użycie takich usług było spodziewane ze względu na bezstanowy charakter usług FaaS.
+Interesującym wynikiem badania jest, że jedynie 18\% funkcji korzysta z rozwiązań API Gateway (bramka API).
 
-\cite{raza2021sok} - różne decyzje dewelopera jak wybór języka, parametrów itp.
+\subsubsection*{Odpowiedni język programowania}
 
-\cite{Cavalheiro202389} - może testowanie, debugging, complexity
+Usługa AWS Lambda oferuje wsparcie dla różnych języków programowania. 
+Ich odpowiedni wybór może być kluczowy ze względu na np. wydajność.
+Kluczową rolę tej decyzji w cyklu rozwoju oprogramowania wskazali Raza i inni autorzy \cite{raza2021sok}.
+Skupili się oni na modelu FaaS z perspektywy programisty, rozwijającego systemu w oparciu o te usługi.
+Decyzja o wyborze języka została uznana przez nich jako jednorazowa.
+Jej wybór może być podyktowany na przykład kosztem funkcji czy wymaganą wydajnością.
+Zaznaczają oni jednak, że zmiana ,,wiązałaby się ze znacznymi kosztami rozwoju i wdrożenia, dlatego deweloper może podjąć taką decyzję tylko raz w cyklu życia aplikacji'' \cite{raza2021sok}.
+Zmiana innych parametrów (jak np. wielkości pamięci) ma mniejsze konsekwencje i według programista dokonuje ich bez większego wysiłku.
+Mogą one jednak wymagać utworzenia odpowiedniego sposobu ich kontroli i aktualizacji, opartego o analizę ich wpływu na wydajność.
 
-\cite{LEITNER2019340} - małe funkcje, trudne testowanie, 
+Bardsley, Ryan i Howard \cite{8513710} podkreślają, że wybór języka programowania wpływa bezpośrednio na późniejszy rozwój aplikacji. 
+Odpowiednie decyzje mogą ograniczyć opóźnienia i poprawić wydajność systemu. 
+Autorzy wskazują, że różne komponenty aplikacji mogą używać różnych języków, w zależności od charakterystyki wywołań funkcji i wymagań wydajnościowcyh. 
+W funkcjach reagujących na działania użytkownika (na przykład wykonanie akcji na stronie, jak kliknięcie przycisku) lepiej sprawdzają się języki interpretowane.
+Mogą to być na przykład Python czy Node.js, które szybciej inicjalizują kontener. 
+Funkcje przetwarzające duże ilości danych lub działające w tle mogą natomiast korzystać z języków kompilowanych, takich jak Java czy C\#.
+W takim podejściu każdy element systemu optymalizowany jest indywidualnie. 
+Pozwala to zmniejszyć czas odpowiedzi tam, gdzie jest to kluczowe oraz zwiększyć wydajność tam, gdzie operacje są bardziej kosztowne.
 
-\cite{Ivanov_Petrova_2024} - integracja z innymi serwisami, debuggowanie, testowanie lokalnie
+\subsubsection*{Testowanie}
 
-\cite{eismann2021reviewserverlessusecases} - serwisy, wielkość funkcji nie jest zawsze taka sama, 
+Narzędziami, które mogą znacząco poprawić doświadczenie programistów pracujących z technologiami bezserwerowymi są różnego rodzaju frameworki. 
+Ich analizy dokonali Skrzypek i Kritikos \cite{8605774}, którzy w swoim przeglądzie wskazali na kluczowe cechy tych narzędzi wspierające zespoły programistyczne.
+Zwrócili oni uwagę na wsparcie dla testowania, poprzez lokalne lub zdalne wywołanie wykonanie funkcji.
+Tylko niektóre narzędzia w ograniczony sposób wspierały testy jednostkowe (np. framework ,,Fn'' dla Javy i JavaScript oraz framework ,,Serverless'' dla Javascript).
+W narzędziach brakuje jednak wsparcia dla testów integracyjnych.
+
+Chatley i Allerton \cite{10.1145/3377812.3382135} w swojej pracy nad frameworkiem Nimbus również mocno podkreślają, że testowanie jest jednym z głównych wyzwań w trakcie tworzenia aplikacji bezserwerowych.
+Autorzy na bazie badań ankietowych i własnych doświadczeń projektowych stwierdzają, że aktualne metody testowania są często trudne, powolne i kosztowne.
+Framework Nimbus wprowadza możliwość uruchomienia kompletnej aplikacji w lokalnym środowisku, które symuluje docelową infrastrukturę chmurową.
+Pozwala to na wykonanie testów integracyjnych dla funkcji w języku Java.
+
+Testowanie było także cechą podejścia bezserwerowego, wskazanego przez Cavalheiro i Schepke \cite{Cavalheiro202389}.
+Dokonali oni implementacji aplikacji z użyciem narzędzi AWS Lambda, Chalice (framework oparty o AWS Lambda) oraz biblioteki Flask (działającej lokalnie, jako podejście tradycyjne).
+Zwrócili oni uwagę na o wiele łatwiejsze testowanie z użyciem Flask. 
+Umożliwiał on rozwój testów jednostkowych API, co było utrudnione w przypadku modelu serverless.
+W przypadku rozwoju AWS Lambda i Chalice trudności sprawiał także proces debuggowania.
+
+Znaczenie testów jednostkowych podkreśla także Leitner i inni autorzy \cite{LEITNER2019340}.
+Poprzez wykonane badania ankietowe aż 87\% badanych programistów wykorzystuje ten rodzaj testów w trakcie rozwoju oprogramowania serverless.
+Także 55\% uważa, że aktualnie dostępne narzędzia są niewystarczające w obszarach jak testowanie czy wdrożenie.
 
 \subsection{Podsumowanie wyników przeglądu}\label{chapter:przeglad_literatury_wyniki_podsumowanie}
 
