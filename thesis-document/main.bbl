@@ -36,6 +36,11 @@ R.~Cordingly, H.~Yu, V.~Hoang, D.~Perez, D.~Foster, Z.~Sadeghi, R.~Hatchett, and
 \newblock page 704 – 711, 2020.
 \newblock Cited by: 21.
 
+\bibitem{cui2024serverless}
+Y.~Cui.
+\newblock Should "serverless" just mean "function-as-a-service"?, October 2024.
+\newblock Dostęp: 2025-04-28.
+
 \bibitem{9860368}
 J.~Dantas, H.~Khazaei, and M.~Litoiu.
 \newblock Application deployment strategies for reducing the cold start delay of aws lambda.
@@ -85,6 +90,11 @@ D.~Jackson and G.~Clynch.
 A.~Kaplunovich.
 \newblock Tolambda--automatic path to serverless architectures.
 \newblock In {\em 2019 IEEE/ACM 3rd International Workshop on Refactoring (IWoR)}, pages 1--8, 2019.
+
+\bibitem{kehoe_serverless_2018}
+B.~Kehoe.
+\newblock Serverless is a state of mind, 2018.
+\newblock Dostęp: 2025-04-28.
 
 \bibitem{9284261}
 D.~Kelly, F.~Glavin, and E.~Barrett.
