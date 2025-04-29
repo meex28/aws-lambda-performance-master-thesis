@@ -111,6 +111,11 @@ B.~Kitchenham.
 \newblock Procedures for performing systematic reviews.
 \newblock {\em Keele, UK, Keele Univ.}, 33, 08 2004.
 
+\bibitem{9754223}
+B.~Kitchenham, L.~Madeyski, and D.~Budgen.
+\newblock How should software engineering secondary studies include grey material?
+\newblock {\em IEEE Transactions on Software Engineering}, 49(2):872--882, 2023.
+
 \bibitem{8605774}
 K.~Kritikos and P.~Skrzypek.
 \newblock A review of serverless frameworks.
@@ -213,6 +218,11 @@ E.~van Eyk, A.~Iosup, C.~L. Abad, J.~Grohmann, and S.~Eismann.
 J.~Wen, Z.~Chen, X.~Jin, and X.~Liu.
 \newblock Rise of the planet of serverless computing: A systematic review.
 \newblock {\em ACM Trans. Softw. Eng. Methodol.}, 32(5), 2023.
+
+\bibitem{doi:10.1177/0739456X17723971}
+Y.~Xiao and M.~Watson.
+\newblock Guidance on conducting a systematic literature review.
+\newblock {\em Journal of Planning Education and Research}, 39(1):93--112, 2019.
 
 \bibitem{10.1145/3419111.3421280}
 T.~Yu, Q.~Liu, D.~Du, Y.~Xia, B.~Zang, Z.~Lu, P.~Yang, C.~Qin, and H.~Chen.

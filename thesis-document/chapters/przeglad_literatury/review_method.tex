@@ -68,8 +68,136 @@ Do każdego z nich dołączono krótkie wyjaśnienie i motywację.
 
 \subsection{Przeszukiwane zasoby}\label{chapter:przeszukiwane_zasoby}
 
+\subsubsection{Biblioteki cyfrowe}
+
+Głównymi źródłami informacji, które zostały przeszukane były biblioteki cyfrowe IEEE oraz Scopus. 
+Wybór bibliotek był podyktowany dostępnością w e-zasobach Politechniki Wrocławskiej. 
+Kluczową cechą wybranych bibliotek była możliwość użycia operatorów logicznych i wyszukiwania słów kluczowych w konkretnych elementach pracy.
+W ramach pierwszych iteracji stwierdzono potrzebę ich użycia ze względu na obszerność tematów bezserwerowych, co opisano w dalszej części pracy.
+
+\subsubsection{Szara literatura}
+
+W celu uwzględnienia w przeglądzie szarej literatury zdecydowano się na użycie wyszukiwarki Google Scholar.
+W procesie użyto zapytań odpowiednio dostosowanych do wyszukiwarki, gdzie przeszukiwano tytuł, abstrakt oraz pełny tekst pracy.
+
+Rekomendacje w zakresie włączania szarej literatury do systematycznych przeglądów wyznaczyli Kitchenham, Madeyski i Budgen \cite{9754223}.
+Podkreślają oni jendak, aby wyraźnie rozróżnić informacje uzyskane z źródeł zgodnych z definicją ,,Prague'' a innych zasobów internetowych (jak np. blogi).
+W ramach przeglądu przeszukiwano dodatkowe materiały internetowe, które posłużyły jako wsparcie wyjaśnienia poszczególnych metod optymalizacji.
+Nie zostały one jednak włączone bezpośrednio do wyników przeglądu.
+
 \subsection{Wyszukiwane terminy}\label{chapter:wyszukiwane_terminy}
 
+Istotnym elementem strategii wyszukiwania było stworzenie odpowiednich zapytań dla wyszukiwarek. 
+Zostały one przygotowane na bazie postawionych pytań badawczych do przeglądu literatury.
+Każde zapytanie zostało przygotowane według poniższego procesu:
+
+\begin{enumerate}
+    \item Wyznaczenie słów kluczowych na bazie pytania badawczego, gdzie słowa kluczowe definiują odpowiednie domeny \cite{doi:10.1177/0739456X17723971}.
+    Pozwoliło to na wykonanie pierwszych prób wyszukiwania, co pozwoliło na późniejsze dostosowanie zapytań i użycie odpowiednich filtrów oferowanych przez wyszukiwarki.
+    Wszystkie słowa kluczowe zostały przedstawione w języku polskim i angielskim.
+    \item Dla każdego słowa kluczowego określono synonimy i wyrazy bliskoznaczne. Tam gdzie to możliwe terminy zostały zawarte zarówno w liczbie mnogiej jak i pojedynczej.
+    \item Połączono terminy odpowiednimi operatorami logicznymi. Synonimy i wyrazy bliskoznaczne zostały połączone operatorami OR, a poszczególne ich grupy AND.
+    \item Dostosowano wyszukiwania fraz aby obejmowały elementy pracy, jak: słowa kluczowe, tytuł, abstrakt oraz pełny tekst (w miarę dostępności dla wyszukiwarki).
+\end{enumerate}
+
+\subsubsection*{Ustalenie słów kluczowych}
+
+Dla każdego pytania badawczego ustalono zbiór pytań kluczowych:
+
+\begin{itemize}
+    \item PB1: ,,Jakie są główne czynniki wpływające na wydajność funkcji AWS Lambda?''
+    \begin{itemize}
+        \item W języku polskim: czynniki, wydajność, AWS Lambda
+        \item W języku angielskim: factors, performance, AWS Lambda
+    \end{itemize}
+    \item PB2: ,,Jakie są istniejące metody optymalizacji wydajności funkcji AWS Lambda działających w ekosystemie Java?''
+    \begin{itemize}
+        \item W języku polskim: optymalizacja, wydajność, AWS Lambda, Java
+        \item W języku angielskim: optimization, performance, AWS Lambda, Java
+    \end{itemize}
+    \item PB3: ,,Jakie są cechy rozwoju aplikacji w architekturze bezserwerowej AWS Lambda?''
+    \begin{itemize}
+        \item W języku polskim: rozwój oprogramowania, AWS Lambda, model bezserwerowy
+        \item W języku angielskim: software development, AWS Lambda, serverless
+    \end{itemize}
+\end{itemize}
+
+\subsubsection*{Ustalenie synonimów i wyrazów bliskoznacznych}
+
+Dla każdego słowa kluczowego ustalono synonimy, wyrazy bliskoznaczne i powiązane terminy. 
+Zostały one określone poprzez iteracyjne testowanie kolejnych terminów.
+Słowo kluczowe ,,AWS Lambda'' zostało rozdzielone na dwa pojęcia: AWS oraz Lambda.
+Wynika to z różnych użyć tych terminów w wyszukiwanych pracach.
+
+Opracowane słowa kluczowe z powiązanymi terminami:
+
+\begin{itemize}
+    \item PB1:
+    \begin{itemize}
+        \item \textbf{factors}: factor, factors, aspect, aspects, component, components, parameter, parameters, influence, influences, consideration, considerations
+        \item \textbf{performance}: performance, efficiency, effectiveness, speed, throughput, responsiveness, latency, execution time, processing time, productivity, computational efficiency, optimization
+        \item \textbf{AWS}: AWS, Amazon
+        \item \textbf{Lambda}: Lambda, FaaS, Function-as-a-Service, serverless function, serverless functions, cloud function, cloud functions
+    \end{itemize}
+    \item PB2:
+    \begin{itemize}
+        \item \textbf{optimization}: optimization, optimisation, optimizing, improve, improvement, improving, method, methods, strategy, strategies, approach, approaches, technique, techniques, procedure, procedures, practice, practices, mechanism, mechanisms, solution, solutions, pattern, patterns
+        \item \textbf{performance}: performance, efficiency, effectiveness, speed, throughput, responsiveness, latency, execution time, processing time, delay, warm start, cold start
+        \item \textbf{Java}: Java, JVM, Java Virtual Machine, JDK, Kotlin, Scala, GraalVM, Spring, SpringBoot
+        \item \textbf{AWS}: AWS, Amazon
+        \item \textbf{Lambda}: Lambda, FaaS, Function as a Service, serverless function, serverless functions
+    \end{itemize}
+    \item PB3:
+    \begin{itemize}
+        \item \textbf{software development}: development process, development workflow, development lifecycle, software development, developing, software engineering, developer experience, patterns
+        \item \textbf{serverless}: serverless
+        \item \textbf{Lambda}: Lambda, FaaS, Function as a Service, serverless function, serverless functions
+        \item \textbf{AWS}: AWS, Amazon
+    \end{itemize}
+\end{itemize}
+
+\subsubsection*{Opracowane zapytania}
+
+Na bazie słów kluczowych i pozwiązanych z nimi terminów opracowano poniższe zapytania:
+
+\begin{itemize}
+    \item PB1:
+
+    (,,factor'' OR ,,factors'' OR ,,aspect'' OR ,,aspects'' OR ,,component'' OR ,,components'' OR ,,parameter'' OR ,,parameters'' OR ,,influence'' OR ,,influences'' OR ,,consideration'' OR ,,considerations'') 
+    AND (,,performance'' OR ,,efficiency'' OR ,,effectiveness'' OR ,,speed'' OR ,,throughput'' OR ,,responsiveness'' OR ,,latency'' OR ,,execution time'' OR ,,processing time'' OR ,,productivity'' OR ,,computational efficiency'' OR ,,optimization'') 
+    AND (,,Lambda'' OR ,,FaaS'' OR ,,Function as a Service'' OR ,,serverless function'' OR ,,serverless functions'' OR ,,cloud function'' OR ,,cloud functions'')
+    AND (,,AWS'' OR ,,Amazon'')
+
+    \item PB2:
+    
+    (,,optimization'' OR ,,optimisation'' OR ,,optimizing'' OR ,,improve'' OR ,,improvement'' OR ,,improving'' OR ,,method'' OR ,,methods'' OR ,,strategy'' OR ,,strategies'' OR ,,approach'' OR ,,approaches'' OR ,,technique'' OR ,,techniques'' OR ,,procedure'' OR ,,procedures'' OR ,,practice'' OR ,,practices'' OR ,,mechanism'' OR ,,mechanisms'' OR ,,solution'' OR ,,solutions'' OR ,,pattern'' OR ,,patterns'')
+    AND (,,performance'' OR ,,efficiency'' OR ,,effectiveness'' OR ,,speed'' OR ,,throughput'' OR ,,responsiveness'' OR ,,latency'' OR ,,execution time'' OR ,,processing time'' OR ,,delay'' OR ,,warm start'' OR ,,cold start'')
+    AND (,,Java'' OR ,,JVM'' OR ,,Java Virtual Machine'' OR ,,JDK'' OR ,,Kotlin'' OR ,,Scala'' OR ,,GraalVM'' OR ,,Spring'' OR ,,SpringBoot'')
+    AND (,,Lambda'' OR ,,FaaS'' OR ,,Function as a Service'' OR ,,serverless function'' OR ,,serverless functions'')
+    AND (,,AWS'' OR ,,Amazon'')
+
+    \item PB3:
+    
+    (,,serverless'') 
+    AND (,,development process'' OR ,,development workflow'' OR ,,development lifecycle'' OR ,,software development'' OR ,,developing'' OR ,,software engineering'' OR ,,developer experience'' OR ,,patterns'') 
+    AND (,,Lambda'' OR ,,FaaS'' OR ,,Function as a Service'' OR ,,serverless function'' OR ,,serverless functions'') 
+    AND (,,AWS'' OR ,,Amazon'')
+    
+\end{itemize}
+
+W pierwszych wyszukaniach z użyciem powyższych zapytań zauważono, że znacząca część wyników nie odnosi się do serwisu AWS Lambda, na którym skupia się praca.
+Wyniki te odnosiły się przeważnie do innych usług lub platform bezserwerowych (np. OpenWhisk).
+Z tego powdou zdecydowano się na zawężenie wyników poprzez dodanie wymogu występowania terminów AWS i Lambda (oraz ich powiązanych terminów) w tytule lub abstrakcie.
+W wyszukaniach IEEE oraz Scopus warunek ten został dodany do istniejącej części zapytania. 
+W wyszukiwarce Google Scholar, została dodana część wyszukująca jakikolwiek z powiązanych terminów z obu tych grup w tytule. 
+
 \subsection{Selekcja literatury}\label{chapter:selekcja_literatury}
+
+% Jakie kryteria włączenia i wyłaczenia literatury
+% Tabelka z wynikami
+% Rysunek z procesem
+% 
+
+\include{chapters/przeglad_literatury/review_process_table}
 
 \subsection{Ocena jakości}\label{chapter:ocena_jakosci}

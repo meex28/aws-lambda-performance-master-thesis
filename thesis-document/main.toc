@@ -12,11 +12,13 @@
 \contentsline {section}{\numberline {2.3}Proces przeglądu}{8}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}Omówienie pytań badawczych}{8}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}Przeszukiwane zasoby}{9}{subsection.2.3.2}%
+\contentsline {subsubsection}{Biblioteki cyfrowe}{9}{subsubsection*.3}%
+\contentsline {subsubsection}{Szara literatura}{9}{subsubsection*.4}%
 \contentsline {subsection}{\numberline {2.3.3}Wyszukiwane terminy}{9}{subsection.2.3.3}%
-\contentsline {subsection}{\numberline {2.3.4}Selekcja literatury}{9}{subsection.2.3.4}%
-\contentsline {subsection}{\numberline {2.3.5}Ocena jakości}{9}{subsection.2.3.5}%
-\contentsline {section}{\numberline {2.4}Wyniki przeglądu}{9}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Czynniki wpływające na wydajność funkcji}{9}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Metody optymalizacji funkcji w ekosystemie Java}{13}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}Cechy rozwoju aplikacji w AWS Lambda}{17}{subsection.2.4.3}%
-\contentsline {subsection}{\numberline {2.4.4}Podsumowanie wyników przeglądu}{20}{subsection.2.4.4}%
+\contentsline {subsection}{\numberline {2.3.4}Selekcja literatury}{12}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}Ocena jakości}{14}{subsection.2.3.5}%
+\contentsline {section}{\numberline {2.4}Wyniki przeglądu}{14}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Czynniki wpływające na wydajność funkcji}{15}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Metody optymalizacji funkcji w ekosystemie Java}{18}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Cechy rozwoju aplikacji w AWS Lambda}{22}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}Podsumowanie wyników przeglądu}{25}{subsection.2.4.4}%

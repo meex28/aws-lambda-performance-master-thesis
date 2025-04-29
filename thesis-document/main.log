@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.30)  28 APR 2025 21:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.30)  29 APR 2025 19:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1077,7 +1077,7 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 
 LaTeX Warning: Label `chapter:wstep' multiply defined.
 
-)
+(./chapters/przeglad_literatury/review_process_table.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
@@ -1328,9 +1328,9 @@ Rozdzia\l  2.
 [7
 
 
-]) (./chapters/przeglad_literatury/results.tex
+]
 
-[8] (./chapters/przeglad_literatury/results_papers.tex)
+[8]
 
 [9]
 
@@ -1339,10 +1339,28 @@ Rozdzia\l  2.
 [11]
 
 [12]
+\openout2 = `chapters/przeglad_literatury/review_process_table.aux'.
 
-[13]
+ (./chapters/przeglad_literatury/review_process_table.tex
+Overfull \hbox (1.31326pt too wide) in paragraph at lines 8--8
+ []|\T1/lmr/bx/n/8 (-20) Wyszukanie| 
+ []
 
-[14]
+
+Overfull \hbox (1.99545pt too wide) in paragraph at lines 8--9
+ []|\T1/lmr/bx/n/8 (-20) Snowballing| 
+ []
+
+)
+
+[13
+
+]) (./chapters/przeglad_literatury/results.tex (./chapters/przeglad_literatury/results_papers.tex)
+
+[14
+
+
+]
 
 [15]
 
@@ -1356,42 +1374,53 @@ Rozdzia\l  2.
 
 [20]
 
-[21]))
+[21]
 
-[22] (./main.bbl
+[22]
+Underfull \vbox (badness 1577) has occurred while \output is active []
+
+
 
 [23]
 
-[24
+[24]
+
+[25]
+
+[26])) (./main.bbl
+
+[27]
+
+[28
 
 
 ]
 
-[25]
+[29]
 
-[26]
-Underfull \hbox (badness 2326) in paragraph at lines 183--186
+[30]
+
+[31]
+Underfull \hbox (badness 2326) in paragraph at lines 188--191
 []\T1/lmr/m/n/12 (+20) A. W. Se-rvi-ces.  Ama-zon ec2 do-cu-men-ta-tion, 2025.  Do-st¦p 21.03.2025 z
  []
 
 
-Underfull \hbox (badness 1688) in paragraph at lines 188--191
+Underfull \hbox (badness 1688) in paragraph at lines 193--196
 []\T1/lmr/m/n/12 (+20) A. W. Se-rvi-ces.  Ama-zon ecs de-ve-lo-per gu-ide, 2025.  Do-st¦p 21.03.2025 z
  []
 
 
-Underfull \hbox (badness 2285) in paragraph at lines 193--196
+Underfull \hbox (badness 2285) in paragraph at lines 198--201
 []\T1/lmr/m/n/12 (+20) A. W. Se-rvi-ces.  Aws lambda do-cu-men-ta-tion, 2025.  Do-st¦p 21.03.2025 z
  []
 
+)
 
+[32]
+runsystem(latexminted cleantemp  --timestamp 20250429195026 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
 
-[27])
-
-[28]
-runsystem(latexminted cleantemp  --timestamp 20250428214409 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
-
- (./main.aux)
+ (./main.aux (./chapters/przeglad_literatury/review_process_table.aux))
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1404,18 +1433,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 158712F4951C31C063F886C8ECC67E31;3509.
  ) 
 Here is how much of TeX's memory you used:
- 30523 strings out of 473190
- 557677 string characters out of 5715800
- 1174539 words of memory out of 5000000
- 52919 multiletter control sequences out of 15000+600000
- 616696 words of font info for 157 fonts, out of 8000000 for 9000
+ 30579 strings out of 473190
+ 559659 string characters out of 5715800
+ 1179788 words of memory out of 5000000
+ 52944 multiletter control sequences out of 15000+600000
+ 620166 words of font info for 163 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,17n,96p,1071b,684s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb>
-Output written on main.pdf (34 pages, 364734 bytes).
+ 99i,17n,96p,1071b,760s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb>
+Output written on main.pdf (38 pages, 404387 bytes).
 PDF statistics:
- 547 PDF objects out of 1000 (max. 8388607)
- 463 compressed objects within 5 object streams
- 112 named destinations out of 1000 (max. 500000)
- 30908 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 584 PDF objects out of 1000 (max. 8388607)
+ 494 compressed objects within 5 object streams
+ 125 named destinations out of 1000 (max. 500000)
+ 32956 words of extra memory for PDF output out of 35830 (max. 10000000)
 

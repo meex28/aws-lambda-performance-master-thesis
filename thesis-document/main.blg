@@ -1,52 +1,53 @@
 This is BibTeX, Version 0.99d (TeX Live 2025)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
+A level-1 auxiliary file: chapters/przeglad_literatury/review_process_table.aux
 The style file: abbrv.bst
 Database file #1: sources/bibliography.bib
 Warning--entry type for "cui2024serverless" isn't style-file defined
---line 469 of file sources/bibliography.bib
+--line 493 of file sources/bibliography.bib
 Warning--empty booktitle in Cavalheiro202389
 Warning--empty booktitle in Cordingly2020704
 Warning--empty booktitle in FerreiraDosSantos2023
-You've used 44 entries,
+You've used 46 entries,
             2118 wiz_defined-function locations,
-            733 strings with 13172 characters,
-and the built_in function-call counts, 17270 in all, are:
-= -- 1661
-> -- 853
+            747 strings with 13593 characters,
+and the built_in function-call counts, 17938 in all, are:
+= -- 1726
+> -- 884
 < -- 24
-+ -- 342
-- -- 292
-* -- 1026
-:= -- 2642
-add.period$ -- 137
-call.type$ -- 44
-change.case$ -- 278
++ -- 354
+- -- 302
+* -- 1080
+:= -- 2755
+add.period$ -- 143
+call.type$ -- 46
+change.case$ -- 289
 chr.to.int$ -- 0
-cite$ -- 47
-duplicate$ -- 762
-empty$ -- 1343
-format.name$ -- 292
-if$ -- 3867
+cite$ -- 49
+duplicate$ -- 784
+empty$ -- 1396
+format.name$ -- 302
+if$ -- 4006
 int.to.chr$ -- 0
-int.to.str$ -- 44
-missing$ -- 32
-newline$ -- 222
-num.names$ -- 88
-pop$ -- 385
+int.to.str$ -- 46
+missing$ -- 34
+newline$ -- 232
+num.names$ -- 92
+pop$ -- 392
 preamble$ -- 1
-purify$ -- 234
+purify$ -- 243
 quote$ -- 0
-skip$ -- 679
+skip$ -- 694
 stack$ -- 0
-substring$ -- 793
-swap$ -- 315
+substring$ -- 842
+swap$ -- 317
 text.length$ -- 24
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 176
+type$ -- 184
 warning$ -- 3
-while$ -- 132
-width$ -- 46
-write$ -- 486
+while$ -- 138
+width$ -- 48
+write$ -- 508
 (There were 4 warnings)
