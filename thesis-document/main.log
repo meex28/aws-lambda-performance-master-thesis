@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.30)  29 APR 2025 19:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.30)  4 MAY 2025 21:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1342,12 +1342,12 @@ Rozdzia\l  2.
 \openout2 = `chapters/przeglad_literatury/review_process_table.aux'.
 
  (./chapters/przeglad_literatury/review_process_table.tex
-Overfull \hbox (1.31326pt too wide) in paragraph at lines 8--8
+Overfull \hbox (1.31326pt too wide) in paragraph at lines 9--9
  []|\T1/lmr/bx/n/8 (-20) Wyszukanie| 
  []
 
 
-Overfull \hbox (1.99545pt too wide) in paragraph at lines 8--9
+Overfull \hbox (1.99545pt too wide) in paragraph at lines 9--10
  []|\T1/lmr/bx/n/8 (-20) Snowballing| 
  []
 
@@ -1418,7 +1418,7 @@ Underfull \hbox (badness 2285) in paragraph at lines 198--201
 )
 
 [32]
-runsystem(latexminted cleantemp  --timestamp 20250429195026 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
+runsystem(latexminted cleantemp  --timestamp 20250504212603 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
 
  (./main.aux (./chapters/przeglad_literatury/review_process_table.aux))
  ***********
@@ -1441,7 +1441,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  99i,17n,96p,1071b,760s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb>
-Output written on main.pdf (38 pages, 404387 bytes).
+Output written on main.pdf (38 pages, 404341 bytes).
 PDF statistics:
  584 PDF objects out of 1000 (max. 8388607)
  494 compressed objects within 5 object streams
