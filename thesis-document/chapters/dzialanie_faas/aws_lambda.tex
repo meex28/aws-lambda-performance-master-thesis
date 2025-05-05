@@ -1,0 +1,40 @@
+\section{AWS Lambda}\label{chapter:aws_lambda}
+
+AWS Lambda to konkretna implementacja funkcji jako usługi oferowana przez Amazon Web Services od 2015 roku.
+W ramach rozdziału opisano działanie usługi, wraz z jej najważniejszymi z perspektywy programisty cechami.
+Skupiono się na konkretnym użyciu języka Java, który jest dostępny w serwisie.
+
+AWS Lambda była pierwszą platformą FaaS oferowaną przez dużego dostawcę chmurowego.
+Znacząco przyczyniło się to do popularyzacji paradygmatu bezserwerowego.
+Usługa ta implementuje założenia modelu funkcji jako usługi, oferując programistom możliwość uruchamiania kodu bez konieczności zarządzania infrasktrukturą.
+AWS Lambda przejmuje odpowiedzialność za przydzielenie zasobów, skalowanie, monitorowanie oraz zarządzanie cyklem życia wykonywanych funkcji,
+Umożliwia to twórcom oprogramowania skupienie się na logice biznesowej aplikacji, rozliczając ich jedynie za faktyczny czas obliczeń i liczbę wywołań.
+
+\begin{lstlisting}[caption={Przykładowa implementacja funkcji AWS Lambda w języku Java [źródło: opracowanie własne]} label={code:example_aws_lambda}]
+public class MyHandler implements RequestHandler<MyHandler.Request, String> {
+    public record Request(String message) {}
+
+    @Override
+    public String handleRequest(Request event, Context context) {
+        // logika biznesowa funkcji
+    }
+}
+\end{lstlisting}
+
+Pierwszym krokiem wdrożenia funkcji AWS Lambda jest napisanie uruchamianego kodu.
+Przykładowa implementacja została przedstawiona na [TODO: dodać listing]. 
+Odpowiedni interfejs, który wykorzystuje programista, jest dostarczany przez AWS.
+Jego implementacja w klasie MyHandler pozwala na nadpisanie metody handleRequest, która jest wywoływana w momencie obsługi zdarzenia.
+W ciele metody umieszczana jest konkretna logika biznesowa funkcji chmurowej, na której skupia się użytkownik.
+
+% Pakowanie funkcji i upload do AWS Lambda
+
+% Konfiguracja funkcji (typowe parametry np. pamięć)
+
+% Konfiguracja wywołań (co możemy wybrać), jakie rodzaje
+
+% Opisać środowiska wykonawcze
+
+% Opisać cykl życia
+
+% https://gemini.google.com/app/a27228310f848b08?hl=pl

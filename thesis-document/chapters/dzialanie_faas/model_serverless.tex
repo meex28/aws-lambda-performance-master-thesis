@@ -1,0 +1,61 @@
+\section{Model serverless}\label{chapter:model_serverless}
+Jednym z dynamicznie rozwijających się obszarów chmur obliczeniowych są usługi serverless. 
+W 2025 roku rynek usług opartych o architekturę bezserwerową jest wart 17,88 miliarda dolarów amerykańskich, 
+a według prognoz jego wartość wzrośnie do 41,14 miliarda w roku 2029~\cite{serverlessArchitectureMarketReport}. 
+Badania wykonane na otwartoźródłowych projektach serverless wykazały, 
+że architektura ta używana jest ze względu na niższe koszty, uproszczenie procesów operacyjnych (jak wdrażanie, skalowanie i monitorowanie) 
+oraz bardzo wysoką skalowalność~\cite{ServerlessApplicationsWhyWhenAndHow}. 
+Cechy te są osiągalne ze względu na wyjątkowe założenia tego modelu.
+
+Przetwarzanie bezserwerowe możemy zdefiniować jako 
+,,formę przetwarzania w chmurze, która umożliwia użytkownikom uruchamianie aplikacji sterowanych zdarzeniami i rozliczanych granularnie bez konieczności zarządzania logiką operacyjną''~\cite{SpecRgCloudGroupVisionOnThePerformanceChallengesOfFaas}.
+W definicji tej znajdują się dwa ważne aspekty działania modelu bezserwerowego:
+
+\begin{enumerate}
+    \item ,,Przetwarzania w chmurze, która umożliwia użytkownikom uruchamianie aplikacji (\dots) bez konieczności zarządzania logiką operacyjną.''
+    \item ,,Aplikacji sterowanych zdarzeniami i rozliczanych granularnie.''
+\end{enumerate}
+
+Pierwszy punkt odnosi się do zwiększenia zakresu odpowiedzialności dostawcy chmurowego w porównaniu do klasycznych usług (np. Amazon Elastic Compute Cloud). 
+W usługach tych fizyczne serwery są utrzymywane przez dostawcę chmurowego, a użytkownik jedynie wynajmuje jednostki obliczeniowe. 
+Posiada on dalej kontrolę nad konfiguracją wielu aspektów infrastruktury, co pozwala na większą wydajność rozwoju oprogramowania w porównaniu z środowiskami niechmurowymi. 
+Mimo to, dalej wymaga to poświęcenia czasu i środków na skonfigurowanie oraz zabezpieczenie aplikacji. 
+Architektury bezserwerowe mają na celu uproszczenie tych procesów.
+
+Podczas tworzenia aplikacji w usługach bezserwerowych zespoły programistyczne nie muszą zarządzać wdrożeniem, a następnie utrzymaniem serwerów (nawet w formie jednostek jak AWS EC2). 
+Rolą twórcy oprogramowania jest dostarczenie kodu aplikacji lub obrazu Docker~\cite{awsLambdaDocs}~\cite{awsEcsDevGuide}, które zostaną uruchomione w utrzymywanym przez dostawcę chmurowego środowisku. 
+Dzięki temu inżynierowie mogą skupić się w większym stopniu na logice aplikacji. 
+Pozwala to na zmniejszenie liczby obowiązków, a co za tym idzie kosztów zespołu~\cite{riseOfThePlanetOfServerlessComputing}. 
+
+Drugi punkt skupia się na charakterystycznym modelu płatności oraz sposobie działania architektur bezserwerowych, który umożliwia taki rodzaj rozliczeń. 
+W przypadku klasycznych usług jak AWS EC2 płatność dokonywana jest za czas działania instancji, niezależnie od tego czy jest ona używana~\cite{awsEc2Guide}. 
+Model ten może być nieefektywny kosztowo dla systemów o zmiennym lub niewielkim obciążeniu. 
+Często powoduje to konieczność tworzenia rozwiązań skalowania mocy obliczeniowej w zależności od ruchu w aplikacji, co wymaga znaczących nakładów pracy.
+
+Usługi serverless wprowadzają kompletnie nowy sposób rozliczeń, często określany jako model ,,pay-per-use'' (ang. płać za użycie) ~\cite{ServerlessApplicationsWhyWhenAndHow}.
+Obejmuje on głównie dwa elementy: liczbę wywołań (zapytań lub zdarzeń uruchamiających funkcję) oraz łączny czas obliczeń wykorzystany przez wszystkie wykonania. 
+Czas ten jest zazwyczaj mierzony z wysoką precyzją (np. co do milisekundy lub 100 milisekund) i powiązany z ilością przydzielonej pamięci (np. w jednostkach GB-sekund) \cite{awsLambdaDocs}.
+Jest to możliwe dzięki sterowanej zdarzeniami naturze usług bezserwerowych.
+
+W usługach serverless zasoby obliczeniowe nie są stale aktywne. 
+W momencie pojawienia się zdarzenia (np. żądania HTTP, wiadomości w kolejce, zmiany w bazie danych) dostawca chmurowy alokuje część swojej infrastruktury dla naszych obliczeń.
+Dostawca chmurowy zarządza pulą zasobów i mogą być one zwolnione po zakończeniu obliczeń.
+Dzięki temu użytkownicy płacą wyłącznie za używaną w danym momencie infrastrukturę, co eliminuje koszty związane z jej bezczynnością.
+Pozwala to także na osiągnięcie bardzo wysokiej skalowalności, którą zarządza platforma chmurowa, a nie programista aplikacji.
+
+Warto zaznaczyć, że model bezserwerowy nie ma jeszcze ogólnoprzyjętej przez społeczność terminologii \cite{SpecRgCloudGroupVisionOnThePerformanceChallengesOfFaas}.
+Powyższa definicja została przyjęta na potrzeby niniejszej pracy, jednak istnieją także alternatywne opisy formy serverless.
+Jedną z nich zaprezentował Ben Kehoe \cite{kehoe_serverless_2018}, który definuje serverless jako pewien stan umysłu (ang. state of mind).
+W swoim artykule Kehoe przekazuje, że ,,serverless to sposób na skupienie się na wartości biznesowej'' \cite{kehoe_serverless_2018}.
+Jednocześnie odrzuca on skupianie się na elementach modeli bezserwerowych jak na przykład kod, funkcje, serwisy zarządzane czy koszt takiej architektury.
+
+Inne podejście prezentuje znany w społeczności Yan Cui \cite{cui2024serverless}, który dochodzi do wniosku, że powinniśmy utożsamiać serverless z FaaS (ang. function-as-a-service).
+Wynika to częściowo z niedokładności innych definicji, a sam Cui proponuje skupienie się na prostej definicji.
+Według autora pozwoliłoby to na łatwiejsze zrozumienie modeli bezserwerowych przez początkujących.
+
+Niezależnie od przyjętej definicji praca w modelu bezserwerowym wymaga często użycia innych schematów niż te już znane przez programistów.
+Interesującym przypadkiem jest migracja do modelu bezserwerowego firmy PostNL, opisana przez Donkersgoed \cite{vanDonkersgoed2023postnl}.
+Jako jeden z problemów dla takiej tranzycji wskazuje on często wąskie specjalizacje inżynierów (np. aplikacje monolityczne Java czy aplikacje Kubernetes).
+Model serverless łączy się z użyciem różnych technologii i podejść.
+Części z nich można nauczyć się w ramach pracy, jednak część podejść wymaga pewnego ,,oduczenia się'' starych praktyk.
+W przypadku PostNL problem ten wymagał utworzenia dedykowanej ścieżki nauki i rozwoju, we współpracy z AWS.

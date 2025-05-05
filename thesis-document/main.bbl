@@ -44,7 +44,7 @@ R.~Cordingly, H.~Yu, V.~Hoang, D.~Perez, D.~Foster, Z.~Sadeghi, R.~Hatchett, and
 \bibitem{cui2024serverless}
 Y.~Cui.
 \newblock Should "serverless" just mean "function-as-a-service"?, October 2024.
-\newblock Dostęp: 2025-04-28.
+\newblock Dostęp: 28.04.2025.
 
 \bibitem{9860368}
 J.~Dantas, H.~Khazaei, and M.~Litoiu.
@@ -64,6 +64,11 @@ S.~Eismann, J.~Scheuner, E.~van Eyk, M.~Schwinger, J.~Grohmann, N.~Herbst, C.~L.
 S.~Eismann, J.~Scheuner, E.~van Eyk, M.~Schwinger, J.~Grohmann, N.~Herbst, C.~L. Abad, and A.~Iosup.
 \newblock Serverless applications: Why, when, and how?
 \newblock {\em IEEE Software}, 38(1):32--39, 2021.
+
+\bibitem{Ekwe_Ekwe_2024}
+N.~Ekwe-Ekwe and L.~Amos.
+\newblock The state of faas: An analysis of public functions-as-a-service providers.
+\newblock In {\em 2024 IEEE 17th International Conference on Cloud Computing (CLOUD)}, pages 430--438. IEEE, July 2024.
 
 \bibitem{8567674}
 T.~Elgamal, A.~Sandur, K.~Nahrstedt, and G.~Agha.
@@ -99,7 +104,7 @@ A.~Kaplunovich.
 \bibitem{kehoe_serverless_2018}
 B.~Kehoe.
 \newblock Serverless is a state of mind, 2018.
-\newblock Dostęp: 2025-04-28.
+\newblock Dostęp: 28.04.2025.
 
 \bibitem{9284261}
 D.~Kelly, F.~Glavin, and E.~Barrett.
@@ -209,10 +214,20 @@ D.~Taibi, B.~Kehoe, and D.~Poccia.
 \newblock Serverless: From bad practices to good solutions.
 \newblock In {\em 2022 IEEE International Conference on Service-Oriented System Engineering (SOSE)}, pages 85--92, 2022.
 
+\bibitem{vanDonkersgoed2023postnl}
+L.~van Donkersgoed.
+\newblock Postnl’s serverless journey: Business overview, oct 2023.
+\newblock Dostęp: 04.05.2025.
+
 \bibitem{SpecRgCloudGroupVisionOnThePerformanceChallengesOfFaas}
 E.~van Eyk, A.~Iosup, C.~L. Abad, J.~Grohmann, and S.~Eismann.
 \newblock A spec rg cloud group's vision on the performance challenges of faas cloud architectures.
 \newblock In {\em Companion of the 2018 ACM/SPEC International Conference on Performance Engineering}, page 21–24, New York, NY, USA, 2018. Association for Computing Machinery.
+
+\bibitem{ServerlessIsMoreFromPaaSToPresentCloudComputing}
+E.~van Eyk, L.~Toader, S.~Talluri, L.~Versluis, A.~Uță, and A.~Iosup.
+\newblock Serverless is more: From paas to present cloud computing.
+\newblock {\em IEEE Internet Computing}, 22(5):8--17, 2018.
 
 \bibitem{riseOfThePlanetOfServerlessComputing}
 J.~Wen, Z.~Chen, X.~Jin, and X.~Liu.

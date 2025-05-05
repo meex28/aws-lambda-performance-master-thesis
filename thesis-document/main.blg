@@ -1,53 +1,58 @@
 This is BibTeX, Version 0.99d (TeX Live 2025)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
+A level-1 auxiliary file: chapters/dzialanie_faas/model_serverless.aux
+A level-1 auxiliary file: chapters/dzialanie_faas/funkcja_jako_usluga.aux
+A level-1 auxiliary file: chapters/dzialanie_faas/aws_lambda.aux
 A level-1 auxiliary file: chapters/przeglad_literatury/review_process_table.aux
 The style file: abbrv.bst
 Database file #1: sources/bibliography.bib
 Warning--entry type for "cui2024serverless" isn't style-file defined
---line 493 of file sources/bibliography.bib
+--line 503 of file sources/bibliography.bib
+Warning--entry type for "vanDonkersgoed2023postnl" isn't style-file defined
+--line 512 of file sources/bibliography.bib
 Warning--empty booktitle in Cavalheiro202389
 Warning--empty booktitle in Cordingly2020704
 Warning--empty booktitle in FerreiraDosSantos2023
-You've used 46 entries,
+You've used 49 entries,
             2118 wiz_defined-function locations,
-            747 strings with 13593 characters,
-and the built_in function-call counts, 17938 in all, are:
-= -- 1726
-> -- 884
-< -- 24
-+ -- 354
-- -- 302
-* -- 1080
-:= -- 2755
-add.period$ -- 143
-call.type$ -- 46
-change.case$ -- 289
+            770 strings with 14395 characters,
+and the built_in function-call counts, 19025 in all, are:
+= -- 1831
+> -- 937
+< -- 25
++ -- 376
+- -- 320
+* -- 1153
+:= -- 2927
+add.period$ -- 153
+call.type$ -- 49
+change.case$ -- 307
 chr.to.int$ -- 0
-cite$ -- 49
-duplicate$ -- 784
-empty$ -- 1396
-format.name$ -- 302
-if$ -- 4006
+cite$ -- 52
+duplicate$ -- 825
+empty$ -- 1483
+format.name$ -- 320
+if$ -- 4244
 int.to.chr$ -- 0
-int.to.str$ -- 46
-missing$ -- 34
-newline$ -- 232
-num.names$ -- 92
-pop$ -- 392
+int.to.str$ -- 49
+missing$ -- 36
+newline$ -- 247
+num.names$ -- 98
+pop$ -- 415
 preamble$ -- 1
-purify$ -- 243
+purify$ -- 258
 quote$ -- 0
-skip$ -- 694
+skip$ -- 728
 stack$ -- 0
-substring$ -- 842
-swap$ -- 317
-text.length$ -- 24
+substring$ -- 898
+swap$ -- 330
+text.length$ -- 25
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 184
+type$ -- 196
 warning$ -- 3
-while$ -- 138
-width$ -- 48
-write$ -- 508
-(There were 4 warnings)
+while$ -- 147
+width$ -- 51
+write$ -- 541
+(There were 5 warnings)
