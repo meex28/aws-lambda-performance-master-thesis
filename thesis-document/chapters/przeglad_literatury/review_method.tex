@@ -193,11 +193,34 @@ W wyszukiwarce Google Scholar, została dodana część wyszukująca jakikolwiek
 
 \subsection{Selekcja literatury}\label{chapter:selekcja_literatury}
 
-% Jakie kryteria włączenia i wyłaczenia literatury
-% Tabelka z wynikami
-% Rysunek z procesem
-% 
+W celu ograniczenia liczby analizowanych prac i zgromadzić badania niezbędne do dalszych analiz, określono poniższe kryteria włączenia oraz wyłączenia pozycji literaturowych \cite{cartaxo2020rapidreviewssoftwareengineering}:
+\begin{itemize}
+    \item praca została opublikowana w 2014 roku lub później - jest to rok kiedy po raz pierwszy zaprezentowano AWS Lambda, zatem założono, że prace jej temat nie zostały napisane wcześniej,
+    \item praca zawiera się w dziedzinie informatyki (ang. computer science) lub inżynierii oprogramowania (ang. software engineering)
+    \item praca została napisana w języku angielskim
+    \item duplikaty pomiędzy poszczególnymi wyszukiwarkami oraz frazami nie są włączane do przeglądu literatury 
+\end{itemize}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.95\textwidth]{charts/literature_review_process.drawio.png}
+    \caption{Proces selekcji literatury [źródło: opracowanie własne]}
+    \label{fig:literature_review_process}
+\end{figure}
 
 \input{chapters/przeglad_literatury/review_process_table}
+
+Wcześniej opracowane zapytania zostały użyte do wyszukań w poszczególnych wyszukiwarkach. 
+Dla prac wyszukanych w poszczególnych wyszukiwarkach, został zastosowany proces selekcji.
+Liczba prac w poszczególnych etapach procesu została przedstawiona w Tabeli \ref{table:review_process_table}.
+Dodatkowo, zobrazowano proces selekcji na Rysunku \ref{fig:literature_review_process}.
+
+W przypadku, gdy dla danej frazy wyszukiwania odnaleziono więcej niż 200 publikacji, do dalszej analizy kwalifikowano pierwszych 200 pozycji, posortowanych według malejącej trafności.
+Następnie, każda z tych prac była poddawana procesowi selekcji, który polegał na poddaniu kryteriom włączenia i wyłączenia, analizie tytułów, abstraktów i treści.
+Jeśli praca została włączona do przeglądu literatury, dokonywano analizy jej bibliografii, wykorzystując metodę kuli śnieżnej (ang. snowballing sampling method) \cite{10.1214/aoms/1177705148}.
+Artykuły włączone w ten sposób do przeglądu zostały przypisane do frazy, z której pochodziła pierwotna praca.
+
+Dla każdej pracy naukowej, która została włączona do przeglądu literatury, przygotowano odpowiedni wpis w formacie BibTeX, umożliwiający jej późniejsze zacytowanie. 
+Zapytania do bibliotek cyfrowych zostały wykonane w dniu 8 kwietnia 2025 roku. 
 
 \subsection{Ocena jakości}\label{chapter:ocena_jakosci}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.30)  6 MAY 2025 18:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.30)  6 MAY 2025 22:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -531,7 +531,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 )
 \Hy@SectionHShift=\skip140
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 319.
+Package hyperref Info: Option `colorlinks' set `true' on input line 345.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
 \labelindent=\skip141
@@ -1073,11 +1073,7 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count413
 \l__pdf_internal_box=\box146
-) (./main.aux
-
-LaTeX Warning: Label `chapter:wstep' multiply defined.
-
-)
+) (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
@@ -1236,7 +1232,14 @@ Non-PDF special ignored!
 [2
 
 
-] (./chapters/abstrakt.tex
+] (./chapters/abstrakt.tex)
+
+[1{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}]
+
+[2
+
+
+] (./main.toc
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 3.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -1275,13 +1278,6 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 3.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ))
-
-[1{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}]
-
-[2
-
-
-] (./main.toc)
 \tf@toc=\write7
 \openout7 = `main.toc'.
 
@@ -1335,7 +1331,7 @@ Overfull \hbox (0.3159pt too wide) in paragraph at lines 25--26
 
 
 [9]
-<charts/aws_lambda_lifecycle.drawio.png, id=304, 1087.06125pt x 171.64125pt>
+<charts/aws_lambda_lifecycle.drawio.png, id=302, 1087.06125pt x 171.64125pt>
 File: charts/aws_lambda_lifecycle.drawio.png Graphic file (type png)
 <use charts/aws_lambda_lifecycle.drawio.png>
 Package pdftex.def Info: charts/aws_lambda_lifecycle.drawio.png  used on input line 66.
@@ -1343,7 +1339,7 @@ Package pdftex.def Info: charts/aws_lambda_lifecycle.drawio.png  used on input l
 
 
 [10 <./charts/aws_lambda_lifecycle.drawio.png>]
-<charts/warm_cold_starts_lambda.png, id=319, 773.89125pt x 156.585pt>
+<charts/warm_cold_starts_lambda.png, id=317, 773.89125pt x 156.585pt>
 File: charts/warm_cold_starts_lambda.png Graphic file (type png)
 <use charts/warm_cold_starts_lambda.png>
 Package pdftex.def Info: charts/warm_cold_starts_lambda.png  used on input line 100.
@@ -1367,7 +1363,13 @@ Rozdzia\l  2.
 
 [16]
 
-[17] (./chapters/przeglad_literatury/review_process_table.tex
+[17]
+<charts/literature_review_process.drawio.png, id=372, 1024.82875pt x 402.50375pt>
+File: charts/literature_review_process.drawio.png Graphic file (type png)
+<use charts/literature_review_process.drawio.png>
+Package pdftex.def Info: charts/literature_review_process.drawio.png  used on input line 206.
+(pdftex.def)             Requested size: 448.42822pt x 176.11952pt.
+ (./chapters/przeglad_literatury/review_process_table.tex
 Overfull \hbox (1.31326pt too wide) in paragraph at lines 9--9
  []|\T1/lmr/bx/n/8 (-20) Wyszukanie| 
  []
@@ -1377,9 +1379,12 @@ Overfull \hbox (1.99545pt too wide) in paragraph at lines 9--10
  []|\T1/lmr/bx/n/8 (-20) Snowballing| 
  []
 
-)) (./chapters/przeglad_literatury/results.tex (./chapters/przeglad_literatury/results_papers.tex)
 
-[18]
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
+[18 <./charts/literature_review_process.drawio.png>]) (./chapters/przeglad_literatury/results.tex (./chapters/przeglad_literatury/results_papers.tex)
 
 [19]
 
@@ -1400,70 +1405,82 @@ Overfull \hbox (1.99545pt too wide) in paragraph at lines 9--10
 [27]
 
 [28]
+
+[29]
 Underfull \vbox (badness 2600) has occurred while \output is active []
 
 
 
-[29]
-
 [30]
 
-[31])) (./main.bbl
+[31]
 
-[32]
+[32])) (./main.bbl
 
-[33
+[33]
+
+[34
 
 
 ]
 
-[34]
-
 [35]
-Underfull \hbox (badness 2326) in paragraph at lines 193--196
+
+[36]
+
+[37]
+Underfull \hbox (badness 2326) in paragraph at lines 198--201
 []\T1/lmr/m/n/12 (+20) A. W. Se-rvi-ces.  Ama-zon ec2 do-cu-men-ta-tion, 2025.  Do-st¦p 21.03.2025 z
  []
 
 
-Underfull \hbox (badness 1688) in paragraph at lines 198--201
+Underfull \hbox (badness 1688) in paragraph at lines 203--206
 []\T1/lmr/m/n/12 (+20) A. W. Se-rvi-ces.  Ama-zon ecs de-ve-lo-per gu-ide, 2025.  Do-st¦p 21.03.2025 z
  []
 
 
-Underfull \hbox (badness 2285) in paragraph at lines 203--206
+Underfull \hbox (badness 2285) in paragraph at lines 208--211
 []\T1/lmr/m/n/12 (+20) A. W. Se-rvi-ces.  Aws lambda do-cu-men-ta-tion, 2025.  Do-st¦p 21.03.2025 z
  []
 
 )
 
-[36]
-runsystem(latexminted cleantemp  --timestamp 20250506181715 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
+[38] (./main.lof)
+\tf@lof=\write8
+\openout8 = `main.lof'.
+
+
+
+[39] (./main.lot)
+\tf@lot=\write9
+\openout9 = `main.lot'.
+
+
+
+[40]
+runsystem(latexminted cleantemp  --timestamp 20250506222707 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
 
  (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 158712F4951C31C063F886C8ECC67E31;3509.
+(rerunfilecheck)             Checksum: 5F0790E43B64CB297723EE2380539E2A;3524.
  ) 
 Here is how much of TeX's memory you used:
- 30904 strings out of 473190
- 563005 string characters out of 5715800
- 1194365 words of memory out of 5000000
- 53236 multiletter control sequences out of 15000+600000
+ 30936 strings out of 473190
+ 563736 string characters out of 5715800
+ 1194766 words of memory out of 5000000
+ 53256 multiletter control sequences out of 15000+600000
  623312 words of font info for 166 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,17n,96p,1071b,1062s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb>
-Output written on main.pdf (42 pages, 467920 bytes).
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb>
+Output written on main.pdf (46 pages, 491658 bytes).
 PDF statistics:
- 663 PDF objects out of 1000 (max. 8388607)
- 560 compressed objects within 6 object streams
- 148 named destinations out of 1000 (max. 500000)
- 35014 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 694 PDF objects out of 1000 (max. 8388607)
+ 587 compressed objects within 6 object streams
+ 154 named destinations out of 1000 (max. 500000)
+ 35019 words of extra memory for PDF output out of 35830 (max. 10000000)
 

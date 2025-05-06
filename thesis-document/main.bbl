@@ -86,6 +86,11 @@ B.~C. Ghosh, S.~K. Addya, N.~B. Somy, S.~B. Nath, S.~Chakraborty, and S.~K. Ghos
 \newblock Caching techniques to improve latency in serverless architectures.
 \newblock In {\em 2020 International Conference on COMmunication Systems \& NETworkS (COMSNETS)}, pages 666--669, 2020.
 
+\bibitem{10.1214/aoms/1177705148}
+L.~A. Goodman.
+\newblock {Snowball Sampling}.
+\newblock {\em The Annals of Mathematical Statistics}, 32(1):148 -- 170, 1961.
+
 \bibitem{Ivanov_Petrova_2024}
 D.~Ivanov and A.~Petrova.
 \newblock Serverless computing architectures and applications in aws.
