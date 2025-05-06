@@ -1,0 +1,48 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36" version="24.8.3">
+  <diagram name="Page-1" id="nsQRKGPOqUmXlzQDBtEy">
+    <mxGraphModel dx="1026" dy="656" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Jjvabj_FQRQaArnH1djp-3" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=5;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="120" y="240" as="sourcePoint" />
+            <mxPoint x="800" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Jjvabj_FQRQaArnH1djp-4" value="&lt;font style=&quot;font-size: 22px;&quot;&gt;Czas&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="Jjvabj_FQRQaArnH1djp-3">
+          <mxGeometry x="0.8733" y="1" relative="1" as="geometry">
+            <mxPoint x="-7" y="-19" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Jjvabj_FQRQaArnH1djp-5" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.lambda_function;fillColor=#F58534;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="40" y="200" width="69" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="Jjvabj_FQRQaArnH1djp-6" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;Pobranie kodu funkcji&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="140" y="250" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="Jjvabj_FQRQaArnH1djp-8" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;Uruchomienie środowiska wykonawczego&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="270" y="250" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="Jjvabj_FQRQaArnH1djp-9" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;Uruchomienie kodu inicjalizującego&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="440" y="250" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="Jjvabj_FQRQaArnH1djp-11" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Uruchomienie kodu obsługującego zdarzenie&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="570" y="250" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="Jjvabj_FQRQaArnH1djp-13" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;size=0.5;rotation=90;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="550" y="80" width="20" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="Jjvabj_FQRQaArnH1djp-17" value="&lt;font style=&quot;font-size: 21px;&quot;&gt;Ciepły start&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=21;fontStyle=0" vertex="1" parent="1">
+          <mxGeometry x="495" y="165" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Jjvabj_FQRQaArnH1djp-18" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;size=0.5;rotation=90;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="255" y="80" width="20" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="Jjvabj_FQRQaArnH1djp-19" value="&lt;font style=&quot;font-size: 21px;&quot;&gt;Zimny start&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=21;fontStyle=0" vertex="1" parent="1">
+          <mxGeometry x="200" y="165" width="130" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

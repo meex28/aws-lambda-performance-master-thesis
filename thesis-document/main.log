@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.30)  6 MAY 2025 15:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.30)  6 MAY 2025 18:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1077,7 +1077,7 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 
 LaTeX Warning: Label `chapter:wstep' multiply defined.
 
-(./chapters/dzialanie_faas/model_serverless.aux) (./chapters/dzialanie_faas/funkcja_jako_usluga.aux) (./chapters/dzialanie_faas/aws_lambda.aux) (./chapters/przeglad_literatury/review_process_table.aux))
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
@@ -1317,56 +1317,42 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 
 ]
 Rozdzia\l  1.
+(./chapters/dzialanie_faas/model_serverless.tex
 
+[5]) (./chapters/dzialanie_faas/funkcja_jako_usluga.tex
 
-[5]
-\openout2 = `chapters/dzialanie_faas/model_serverless.aux'.
+[6]
 
- (./chapters/dzialanie_faas/model_serverless.tex
+[7]) (./chapters/dzialanie_faas/aws_lambda.tex
 
-[6
+[8]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 16.
 
-])
-
-[7]
-\openout2 = `chapters/dzialanie_faas/funkcja_jako_usluga.aux'.
-
- (./chapters/dzialanie_faas/funkcja_jako_usluga.tex
-
-[8
-
-
-
-])
-
-[9]
-\openout2 = `chapters/dzialanie_faas/aws_lambda.aux'.
-
- (./chapters/dzialanie_faas/aws_lambda.tex
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 13.
-
-Overfull \hbox (70.81548pt too wide) in paragraph at lines 14--15
-[][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (0.3159pt too wide) in paragraph at lines 20--21
+Overfull \hbox (0.3159pt too wide) in paragraph at lines 25--26
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
 
-[10
+[9]
+<charts/aws_lambda_lifecycle.drawio.png, id=304, 1087.06125pt x 171.64125pt>
+File: charts/aws_lambda_lifecycle.drawio.png Graphic file (type png)
+<use charts/aws_lambda_lifecycle.drawio.png>
+Package pdftex.def Info: charts/aws_lambda_lifecycle.drawio.png  used on input line 66.
+(pdftex.def)             Requested size: 448.42822pt x 70.8055pt.
 
 
+[10 <./charts/aws_lambda_lifecycle.drawio.png>]
+<charts/warm_cold_starts_lambda.png, id=319, 773.89125pt x 156.585pt>
+File: charts/warm_cold_starts_lambda.png Graphic file (type png)
+<use charts/warm_cold_starts_lambda.png>
+Package pdftex.def Info: charts/warm_cold_starts_lambda.png  used on input line 100.
+(pdftex.def)             Requested size: 448.42822pt x 90.73334pt.
+)) (./chapters/przeglad_literatury/main.tex
 
-])
-
-[11]) (./chapters/przeglad_literatury/main.tex
+[11 <./charts/warm_cold_starts_lambda.png>]
 
 [12
-
-
 
 
 ]
@@ -1381,12 +1367,7 @@ Rozdzia\l  2.
 
 [16]
 
-[17]
-
-[18]
-\openout2 = `chapters/przeglad_literatury/review_process_table.aux'.
-
- (./chapters/przeglad_literatury/review_process_table.tex
+[17] (./chapters/przeglad_literatury/review_process_table.tex
 Overfull \hbox (1.31326pt too wide) in paragraph at lines 9--9
  []|\T1/lmr/bx/n/8 (-20) Wyszukanie| 
  []
@@ -1396,16 +1377,13 @@ Overfull \hbox (1.99545pt too wide) in paragraph at lines 9--10
  []|\T1/lmr/bx/n/8 (-20) Snowballing| 
  []
 
-)
+)) (./chapters/przeglad_literatury/results.tex (./chapters/przeglad_literatury/results_papers.tex)
 
-[19
+[18]
 
-]) (./chapters/przeglad_literatury/results.tex (./chapters/przeglad_literatury/results_papers.tex)
+[19]
 
-[20
-
-
-]
+[20]
 
 [21]
 
@@ -1422,7 +1400,7 @@ Overfull \hbox (1.99545pt too wide) in paragraph at lines 9--10
 [27]
 
 [28]
-Underfull \vbox (badness 1577) has occurred while \output is active []
+Underfull \vbox (badness 2600) has occurred while \output is active []
 
 
 
@@ -1430,22 +1408,18 @@ Underfull \vbox (badness 1577) has occurred while \output is active []
 
 [30]
 
-[31]
+[31])) (./main.bbl
 
-[32])) (./main.bbl
+[32]
 
-[33]
-
-[34
+[33
 
 
 ]
 
+[34]
+
 [35]
-
-[36]
-
-[37]
 Underfull \hbox (badness 2326) in paragraph at lines 193--196
 []\T1/lmr/m/n/12 (+20) A. W. Se-rvi-ces.  Ama-zon ec2 do-cu-men-ta-tion, 2025.  Do-st¦p 21.03.2025 z
  []
@@ -1462,10 +1436,10 @@ Underfull \hbox (badness 2285) in paragraph at lines 203--206
 
 )
 
-[38]
-runsystem(latexminted cleantemp  --timestamp 20250506154454 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
+[36]
+runsystem(latexminted cleantemp  --timestamp 20250506181715 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
 
- (./main.aux (./chapters/dzialanie_faas/model_serverless.aux) (./chapters/dzialanie_faas/funkcja_jako_usluga.aux) (./chapters/dzialanie_faas/aws_lambda.aux) (./chapters/przeglad_literatury/review_process_table.aux))
+ (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1478,18 +1452,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 158712F4951C31C063F886C8ECC67E31;3509.
  ) 
 Here is how much of TeX's memory you used:
- 30949 strings out of 473190
- 566200 string characters out of 5715800
- 1183084 words of memory out of 5000000
- 53267 multiletter control sequences out of 15000+600000
+ 30904 strings out of 473190
+ 563005 string characters out of 5715800
+ 1194365 words of memory out of 5000000
+ 53236 multiletter control sequences out of 15000+600000
  623312 words of font info for 166 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,17n,96p,1071b,1056s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,17n,96p,1071b,1062s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb>
-Output written on main.pdf (44 pages, 423065 bytes).
+Output written on main.pdf (42 pages, 467920 bytes).
 PDF statistics:
- 652 PDF objects out of 1000 (max. 8388607)
- 553 compressed objects within 6 object streams
- 146 named destinations out of 1000 (max. 500000)
- 35004 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 663 PDF objects out of 1000 (max. 8388607)
+ 560 compressed objects within 6 object streams
+ 148 named destinations out of 1000 (max. 500000)
+ 35014 words of extra memory for PDF output out of 35830 (max. 10000000)
 
