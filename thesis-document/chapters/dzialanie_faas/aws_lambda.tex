@@ -14,9 +14,12 @@ Umożliwia to twórcom oprogramowania skupienie się na logice biznesowej aplika
 public class MyHandler implements RequestHandler<MyHandler.Request, String> {
     public record Request(String message) {}
 
+    public record Response() {}
+
     @Override
-    public String handleRequest(Request event, Context context) {
+    public Response handleRequest(Request event, Context context) {
         // logika biznesowa funkcji
+        return Response()
     }
 }
 \end{lstlisting}
@@ -27,11 +30,29 @@ Odpowiedni interfejs, który wykorzystuje programista, jest dostarczany przez AW
 Jego implementacja w klasie MyHandler pozwala na nadpisanie metody handleRequest, która jest wywoływana w momencie obsługi zdarzenia.
 W ciele metody umieszczana jest konkretna logika biznesowa funkcji chmurowej, na której skupia się użytkownik.
 
-% Pakowanie funkcji i upload do AWS Lambda
+Aby kod został uruchomiony w chmurze należy utworzyć nową funkcję AWS Lambda.
+Może to być wykonane poprzez konsolę Amazon Web Services, AWS CLI (ang. Command Line Interface) lub narzędzia infrasktruktury jako kod (np. AWS CDK, Terraform) \cite{awsLambdaDocs}.
+Niezbędne do tego jest przygotowanie zasobów do wdrożenia.
+Może to być wykonane na dwa sposoby: poprzez pliki ZIP lub JAR (istnieje także możliwość wdrożenia obrazów Dockerowych, jednak w ramach podrozdziału skupiamy się na środowisku uruchomieniowym Java) \cite{awsLambdaDocs}.
+Tak przygotowany plik jest gotowy do wdrożenia podczas uruchamiania funkcji.
 
-% Konfiguracja funkcji (typowe parametry np. pamięć)
+Kolejnym krokiem jest skonfigurowanie funkcji w usłudze AWS Lambda, co obejmuje zdefiniowanie kluczowych parametrów \cite{awsLambdaDocs}.
+Jednym z najważniejszych jest pamięć funkcji, która odpowiada ilości pamięci RAM w megabajtach.
+Innym parametrem jest limit czasu wykonania (timeout), który definiuje maksymalny czas, przez jaki pojedyncze wywołanie funkcji może być przetwarzane, zanim zostanie automatycznie zakończone przez platformę. 
+Dodatkowo, programista ma możliwość zdefiniowania zmiennych środowiskowych, które pozwalają na przekazywanie konfiguracji do kodu funkcji w czasie jej działania.
 
-% Konfiguracja wywołań (co możemy wybrać), jakie rodzaje
+Aby funkcja mogła zostać zintegrowana z tworzonym systemem należy skonfigurować źródła zdarzeń.
+Zgodnie z naturą FaaS, funkcje Lambda są projektowane do uruchamiania w odpowiedzi na zdarzenia pochodzące z szerokiego ekosystemu usług AWS lub źródeł zewnętrznych.
+Do typowych usług integrujących się z Lambda jako wyzwalacze należą m.in. \cite{awsLambdaDocs}:
+\begin{itemize}
+    \item Amazon S3 (np. przy tworzeniu nowego obiektu),
+    \item Amazon API Gateway (dla żądań HTTP),
+    \item Amazon DynamoDB Streams (reakcja na zmiany w tabelach),
+    \item Amazon SQS (nowe wiadomości w kolejce),
+    \item Amazon SNS (powiadomienia tematyczne),
+    \item Amazon EventBridge (dla zdarzeń harmonogramowych oraz zdarzeń z innych usług i aplikacji).
+\end{itemize}
+Dzięki temu programista określa, w jakich okolicznościach i z jakimi danymi wejściowymi funkcja Lambda ma zostać automatycznie uruchomiona.
 
 % Opisać środowiska wykonawcze
 
