@@ -1,4 +1,5 @@
 import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
+import org.gradle.kotlin.dsl.the
 import org.jetbrains.kotlin.gradle.dsl.KotlinJsCompile
 
 plugins {
@@ -43,7 +44,12 @@ kotlin {
     linuxX64().binaries {
         executable {
             entryPoint = "org.lambda.performance.native.main"
-//                freeCompilerArgs += listOf("-Xallocator=mimalloc") // to understand how the choice of allocator impacts the performance, refer https://medium.com/aws-tip/leveraging-kotlin-native-for-efficient-serverless-applications-on-aws-lambda-66d992c074cc
+        }
+    }
+
+    linuxArm64().binaries {
+        executable {
+            entryPoint = "org.lambda.performance.native.main"
         }
     }
 

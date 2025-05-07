@@ -1,5 +1,5 @@
 locals {
-  lambda_functions = [
+  base_lambda_functions = [
     {
       name               = "java-function-jar"
       bucket_source_file = "java-function-jar/function.zip"
@@ -51,4 +51,17 @@ locals {
       snapstart_enabled  = false
     },
   ]
+  memory_configurations = [128, 256, 512, 1024, 2048]
+  lambda_functions = flatten([
+    for lambda in local.base_lambda_functions : [
+      for memory in local.memory_configurations : {
+        name               = "${lambda.name}-${memory}mb"
+        handler            = lambda.handler
+        runtime            = lambda.runtime
+        bucket_source_file = lambda.bucket_source_file
+        snapstart_enabled  = lambda.snapstart_enabled
+        memory_size        = memory
+      }
+    ]
+  ])
 }
