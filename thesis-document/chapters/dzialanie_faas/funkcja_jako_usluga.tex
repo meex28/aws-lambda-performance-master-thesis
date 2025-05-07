@@ -12,10 +12,10 @@ Usługa jako serwis to techniczna implementacja tego modelu, definiowana jako ,,
 Pierwszą istotną cechą poruszoną w definicji funkcji jako usługi jest zarządzanie zasobami. 
 Oznacza to, że dostawca usługi przejmuje pełną odpowiedzialność za przydzielanie, konfigurację oraz utrzymanie jednostek niezbędnych do uruchomienia funkcji chmurowej.
 Mogą to być serwery, maszyny wirtualne czy kontenery.
-Użytkownik funkcji nie musi być jednak tego świadomy, a może skupić się na działeniu wyłącznie dostarczanej funkcji \cite{eismann2021reviewserverlessusecases}.
+Użytkownik funkcji nie musi być jednak tego świadomy, a może skupić się wyłącznie na działeniu dostarczanej funkcji \cite{eismann2021reviewserverlessusecases}.
 
 Platforma FaaS oprócz zarządzania zasobami odpowiada również za cykl życia funkcji \cite{ServerlessIsMoreFromPaaSToPresentCloudComputing}. 
-Deweloper dostarcza jedynie kod, który ma zostać wykonany z użyciem infrasktruktury chmurowej.
+Deweloper zapewnia jedynie kod, który ma zostać wykonany z użyciem infrasktruktury chmurowej.
 Dostawca następnie wdraża dostarczony kod oraz inicjuje środowisko uruchomieniowe (co jest przyczyną tzw. ,,zimnych startów'', omówionych w dalszej części rozdziału).
 Następnie monitoruje on obciążenie funkcji i w razie wzmożenia ruchu tworzy nowe instancje funkcji (np. maszyny wirtualne) lub usuwa te nadmiarowe. 
 W razie potrzeby dostawca może także kompletnie wygasić funkcję poprzez zwolnienie wszystkich instancji.
@@ -30,27 +30,27 @@ Funkcje w nich mogą reagować na zdarzenia w sposób zarówno synchroniczny, ja
 
 Kluczem funkcji jako usługi z perspektywy programisty jest kod.
 Jest on dostarczany przez dewelopera w momencie tworzenia nowej funkcji i jest niezbędny do jej utworzenia.
-Zgodnie z przytoczoną definicją jest to zazwyczaj niewielki fragment kodu (lub jej kolejnej wersji), który realizuje pojedynczą, dobrze zdefiniowaną odpowiedzialność.
+Zgodnie z przytoczoną definicją jest to zazwyczaj niewielki fragment kodu (lub jego kolejnej wersji), który realizuje pojedynczą, dobrze zdefiniowaną odpowiedzialność.
 Istotną cechą FaaS jest wsparcie dla wielu języków programowania (np. Java, JavaScript, Python) oraz dostarczenie środowiska wykonawczego do ich uruchomienia.
 Dzięki temu użytkownik jest w stanie skupić się na logice biznesowej aplikacji \cite{ServerlessApplicationsWhyWhenAndHow}.
 
-Bardzo istotną cechą fukcji chmurowych jest ich bezstanowość, co znacząco wpływa na wcześniej poruszone elementy 
-Bezstanowość funkcji oznacza, że funkcja nie przechowuje żadnych danych pomiędzy kolejnymi wywołaniami.
+Bardzo istotną cechą fukcji chmurowych jest ich bezstanowość, co znacząco wpływa na wcześniej poruszone elementy.
+Bezstanowość funkcji oznacza, że usluga nie przechowuje żadnych danych pomiędzy kolejnymi wywołaniami.
 Wszelkie potrzebne dane wejściowe są przekazywane w momencie wywołania (najczęściej jako część zdarzenia wywołującego uruchomienie kodu).
-Następne, ewentualne wyniki muszą być bezpośrednio zwrócone z funkcji (w przypadku wywołań synchronicznych) lub zapisane w zewnętrznych usługach (w przypadku wywołań asynchronicznych).
+Następnie, ewentualne wyniki muszą być bezpośrednio zwrócone z funkcji (w przypadku wywołań synchronicznych) lub zapisane w zewnętrznych usługach (w przypadku wywołań asynchronicznych).
 Usługami tymi mogą być na przykład bazy danych, czy systemy plików. 
 Powoduje to, że usługi FaaS są bardzo często integrowane z zarządzanymi serwisami oferowanymi przez dostawcę chmurowego.
-Potwiedza to Eismann i inni autorzy, stwierdzając poprzez analizę aplikacji otwartoźródłowych, że jedynie 12\% z nich nie korzysta z rozwiązań BaaS (ang. Backend as a Service), w kontekście serwisów zarządznych.
+Potwierdza to Eismann i inni autorzy, stwierdzając poprzez analizę aplikacji otwartoźródłowych, że jedynie 12\% z nich nie korzysta z rozwiązań BaaS (ang. Backend as a Service), w kontekście serwisów zarządznych.
 
 Oprócz bezstanowości, kolejną charakterystyczną właściwością funkcji chmurowych jest ich zazwyczaj krótki czas życia.
 Oznacza to, że pojedyncze wywołanie jest z natury krótkie.
 Analiza przeprowadzona przez Eismanna i innych autorów wykazała, że obecne platformy bezserwerowe mogą nie być odpowiednie dla zadań długotrwałych \cite{ServerlessApplicationsWhyWhenAndHow}. 
-Ich badanie 89 aplikacji serwerless potwierdziło tę hipotezę, wskazując, że aż 75\% zbadanych przypadków użycia miało czas wykonania mieszczący się w zakresie sekund. 
+Ich badanie 89 aplikacji serverless potwierdziło tę hipotezę, wskazując, że aż 75\% zbadanych przypadków użycia miało czas wykonania mieszczący się w zakresie sekund. 
 Wskazuje to, że funkcje FaaS są najczęściej wykorzystywane do realizacji zadań, które z natury są krótkie i nie wymagają długotrwałego przetwarzania w ramach pojedynczej instancji funkcji.
 
 Rozwinięciem koncepcji zarządzania cyklem życia przez platformę FaaS jest zjawisko tzw. zimnych i ciepłych startów funkcji.
 Zimny start (ang. cold start) występuje, gdy funkcja wywołana zostanie w momencie, gdy żadna z jej instancji nie jest aktywna i gotowa do jego obsługi.
-W takim przypadku musi zostanić wykonany cały proces inicjaliacji: przydzielenie zasobów, wdrożenie kodu oraz uruchomienie środowiska wykonawczego \cite{SpecRgCloudGroupVisionOnThePerformanceChallengesOfFaas}.
+W takim przypadku musi zostać wykonany cały proces inicjaliacji: przydzielenie zasobów, wdrożenie kodu oraz uruchomienie środowiska wykonawczego \cite{SpecRgCloudGroupVisionOnThePerformanceChallengesOfFaas}.
 Ten proces wprowadza zauważalne opóźnienie, które jest szczególnie problematyczne dla aplikacji wrażliwych na czas odpowiedzi.
 
 Przeciwieństwem zimnych startów są tzw. ciepłe starty (ang. warm starts).
@@ -65,7 +65,7 @@ Mogą to być elementy procesów automatycznej integracji i wdrażania, czy moni
 Na bazie badań projektów otwartoźródłowych możemy stwierdzić, że FaaS służy zarówno do budowy kluczowych funkcjonalności aplikacji, zadań pomocniczych oraz obliczeń naukowych \cite{ServerlessApplicationsWhyWhenAndHow}.
 
 Szerokie możliwości użycia omawianych funkcji znacząco wpływają na jej popularność. 
-Sam koncept nie jest związany z konkretną chmurą obliczeniową, jednak konkretne implementacje modelu są oferowane przez większość znaczących dostawców.
+Sam koncept nie jest związany z konkretną chmurą obliczeniową, jednak konkretne implementacje modelu są oferowane przez większość dużych dostawców.
 Pierwszą znaczącą usługą była AWS Lambda (zaprezentowana w 2015 roku), oferowana przez Amazon Web Services \cite{Ekwe_Ekwe_2024}.
-Jednak także dostawcy jak Azure czy Google Cloud Platform oferują swoje alternatywy (odpowiednio Azure Function i Google Cloud Functions).
-Model funkcji jako usługi dostarczany jest także przez mniejsze chmury, jak Vercel, czy Netlify.
+Jednak także platformy jak Azure czy Google Cloud Platform oferują swoje alternatywy (odpowiednio Azure Function i Google Cloud Functions).
+Model funkcji jako usługi dostarczany jest także przez mniej popularne chmury obliczeniowe, jak Vercel, czy Netlify.

@@ -529,9 +529,9 @@ INPUT chapters/opis_badania/main.tex
 INPUT ./chapters/wyniki/main.tex
 INPUT ./chapters/wyniki/main.tex
 INPUT chapters/wyniki/main.tex
-INPUT ./chapters/podsumowanie_wnioski/main.tex
-INPUT ./chapters/podsumowanie_wnioski/main.tex
-INPUT chapters/podsumowanie_wnioski/main.tex
+INPUT ./chapters/wnioski_dyskusja/main.tex
+INPUT ./chapters/wnioski_dyskusja/main.tex
+INPUT chapters/wnioski_dyskusja/main.tex
 INPUT ./chapters/zakonczenie/main.tex
 INPUT ./chapters/zakonczenie/main.tex
 INPUT chapters/zakonczenie/main.tex
