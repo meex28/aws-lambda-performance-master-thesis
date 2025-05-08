@@ -1,20 +1,25 @@
 import {SNS} from 'aws-sdk';
-import {getFunctionArns} from "../common";
+import {getFunctionArns, sleep} from "../common";
 import type {InvokeFunctionMessage} from "../common/types.ts";
 
 const snsClient = new SNS();
 
 export const handler = async (): Promise<any> => {
-    const functionArns = getFunctionArns();
+    const functionArns = (await getFunctionArns()).slice(4, 7);
     const snsTopicArn = getSnsTopicArn();
 
+    const sleepTime = 600000 / functionArns.length; // 10 minutes / number of functions
+
     // Publish function ARNs to SNS topic
-    await Promise.all(functionArns.map(async (functionArn) => {
-        return snsClient.publish({
+    for (const functionArn of functionArns) {
+        console.log(`Publish for function arn: ${functionArn}`);
+        await snsClient.publish({
             TopicArn: snsTopicArn,
             Message: JSON.stringify({functionArn} as InvokeFunctionMessage)
         }).promise();
-    }));
+        console.log(`Sleeping for ${sleepTime} ms`);
+        await sleep(sleepTime);
+    }
 
     return {
         statusCode: 200,

@@ -18,9 +18,11 @@ resource "aws_lambda_function" "invoke_orchestrator" {
   runtime     = "nodejs22.x"
   memory_size = 1024
 
+  timeout = 900
+
   environment {
     variables = merge(
-      local.functions_arns_env_var,
+      // local.functions_arns_env_var,
       {
         SNS_TOPIC_ARN = aws_sns_topic.this.arn
       }
@@ -72,6 +74,6 @@ resource "aws_lambda_function" "log_processor" {
   timeout = 900
 
   environment {
-    variables = local.functions_arns_env_var
+    // variables = local.functions_arns_env_var
   }
 }

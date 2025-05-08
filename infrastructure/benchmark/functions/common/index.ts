@@ -1,14 +1,17 @@
-export const getFunctionArns = (): string[] => {
-    const functionArns = Object.keys(process.env)
-        .filter(key => key.startsWith('FUNCTION_ARN'))
-        .map(key => process.env[key] as string);
+import {Lambda} from 'aws-sdk';
 
-    if (functionArns.length === 0) {
-        throw Error('No function ARNs found in environment variables');
-    }
+export const getFunctionArns = async (): Promise<string[]> => {
+    const lambdaClient = new Lambda();
 
-    return functionArns;
-}
+    const {Functions} = await lambdaClient.listFunctions({
+        FunctionVersion: 'ALL',
+        MaxItems: 1000,
+    }).promise();
+
+    return Functions!!
+        .filter(f => f.FunctionName!!.startsWith('mte-tested'))
+        .map(f => f.FunctionArn!!);
+};
 
 export const extractFunctionNameFromArn = (arn: string): string => {
     const parts = arn.split(':');
@@ -19,8 +22,8 @@ export const extractFunctionNameFromArn = (arn: string): string => {
     }
 }
 
-export const getFunctionNames = (): string[] =>
-    getFunctionArns().map(extractFunctionNameFromArn)
+export const getFunctionNames = async (): Promise<string[]> =>
+    (await getFunctionArns()).map(extractFunctionNameFromArn)
 
 export const convertTimestampToDate = (timestamp: number): Date =>
     new Date(timestamp * 1000)

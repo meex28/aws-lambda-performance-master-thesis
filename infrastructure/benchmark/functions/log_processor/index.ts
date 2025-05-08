@@ -23,7 +23,7 @@ interface LambdaInvokeLogReport {
 export const handler = async (event: LambdaEvent): Promise<any> => {
     try {
         const startTime = event.timestamp
-        const functionNames = getFunctionNames()
+        const functionNames = await getFunctionNames()
 
         const results: Record<string, LambdaInvokeLogReport[]> = {};
 
