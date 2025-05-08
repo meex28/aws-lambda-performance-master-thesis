@@ -25,7 +25,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-public class Handler implements RequestHandler<Object, String> {
+public class Handler implements RequestHandler<RequestWrapper, String> {
 
     private static final Validator validator;
 
@@ -36,12 +36,8 @@ public class Handler implements RequestHandler<Object, String> {
     }
 
     @Override
-    public String handleRequest(Object input, Context context) {
-        if (!(input instanceof String)) {
-            return createErrorResponse("Input must be a string");
-        }
-
-        return handle((String) input);
+    public String handleRequest(RequestWrapper input, Context context) {
+        return handle(input.getRequest());
     }
 
     public static String handle(String input) {

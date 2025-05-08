@@ -18,8 +18,8 @@ fun LambdaResponse.toJson() = JSON.stringify(
     )
 )
 
-fun handler(input: dynamic, context: Any?, callback: dynamic) {
-    val result = handle(JSON.stringify(input))
+fun handler(requestWrapper: dynamic, context: Any?, callback: dynamic) {
+    val result = handle(requestWrapper.request)
 
     callback(
         null, LambdaResponse(
