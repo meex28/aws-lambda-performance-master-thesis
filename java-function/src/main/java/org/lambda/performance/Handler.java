@@ -13,8 +13,6 @@ import jakarta.validation.Payload;
 import jakarta.validation.Validation;
 import jakarta.validation.Validator;
 import jakarta.validation.ValidatorFactory;
-import jakarta.validation.constraints.NotEmpty;
-import jakarta.validation.constraints.NotNull;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -239,24 +237,6 @@ public class Handler implements RequestHandler<RequestWrapper, String> {
                 return true;
             }
         }
-    }
-
-    // Model classes
-    @MatrixCompatibility(
-            firstMatrix = "fistMatrix",
-            secondMatrix = "secondMatrix",
-            message = "Matrices are not compatible for multiplication"
-    )
-    public static class Request {
-        @NotNull(message = "First matrix cannot be null")
-        @NotEmpty(message = "First matrix must not be empty")
-        @RectangularMatrix
-        public List<List<Integer>> fistMatrix; // keeping the typo from the original code
-
-        @NotNull(message = "Second matrix cannot be null")
-        @NotEmpty(message = "Second matrix must not be empty")
-        @RectangularMatrix
-        public List<List<Integer>> secondMatrix;
     }
 
     public static class ResultResponse {

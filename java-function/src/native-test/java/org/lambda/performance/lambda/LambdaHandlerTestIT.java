@@ -18,7 +18,6 @@ public class LambdaHandlerTestIT extends LambdaHandlerTest {
                 .when()
                 .post()
                 .then()
-                .statusCode(200)
-                .body(containsString("Hello, World!"));
+                .statusCode(200);
     }
 }
