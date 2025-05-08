@@ -17,8 +17,7 @@ dependencies {
     implementation("io.quarkus:quarkus-amazon-lambda")
     implementation("io.quarkus:quarkus-arc")
     implementation("io.quarkus:quarkus-hibernate-validator:3.22.1")
-    implementation("jakarta.json.bind:jakarta.json.bind-api:3.0.1")
-    implementation("org.eclipse:yasson:3.0.4")
+    implementation("io.quarkus:quarkus-jackson")
     testImplementation("io.quarkus:quarkus-junit5")
     testImplementation("io.rest-assured:rest-assured")
 }

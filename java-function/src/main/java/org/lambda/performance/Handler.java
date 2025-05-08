@@ -2,9 +2,9 @@ package org.lambda.performance;
 
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
-import jakarta.json.bind.Jsonb;
-import jakarta.json.bind.JsonbBuilder;
-import jakarta.json.bind.JsonbException;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import jakarta.inject.Inject;
 import jakarta.validation.Constraint;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
@@ -35,38 +35,29 @@ public class Handler implements RequestHandler<RequestWrapper, String> {
         }
     }
 
+    @Inject
+    ObjectMapper objectMapper;
+
     @Override
-    public String handleRequest(RequestWrapper input, Context context) {
-        return handle(input.getRequest());
-    }
-
-    public static String handle(String input) {
+    public String handleRequest(RequestWrapper input, Context context)  {
         try {
-            Jsonb jsonb = JsonbBuilder.create();
-            Request request = jsonb.fromJson(input, Request.class);
-
-            try {
-                // Validate request using Bean Validation
-                validateRequest(request);
-
-                List<List<Integer>> result = multiply(request.fistMatrix, request.secondMatrix);
-                return jsonb.toJson(new ResultResponse(result));
-            } catch (IllegalArgumentException e) {
-                return jsonb.toJson(new ErrorResponse(e.getMessage()));
-            }
-        } catch (JsonbException e) {
-            return createErrorResponse("Invalid JSON input: " + e.getMessage());
-        } catch (Exception e) {
-            return createErrorResponse("Unexpected error: " + e.getMessage());
+            return handle(input.getRequest(), objectMapper);
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
         }
     }
 
-    private static String createErrorResponse(String message) {
+    public static String handle(String input, ObjectMapper objectMapper) throws JsonProcessingException {
+        Request request = objectMapper.readValue(input, Request.class);
+
         try {
-            Jsonb jsonb = JsonbBuilder.create();
-            return jsonb.toJson(new ErrorResponse(message));
-        } catch (Exception e) {
-            return "{\"message\":\"" + message + "\"}";
+            // Validate request using Bean Validation
+            validateRequest(request);
+
+            List<List<Integer>> result = multiply(request.fistMatrix, request.secondMatrix);
+            return objectMapper.writeValueAsString(new ResultResponse(result));
+        } catch (IllegalArgumentException e) {
+            return objectMapper.writeValueAsString(new ErrorResponse(e.getMessage()));
         }
     }
 
