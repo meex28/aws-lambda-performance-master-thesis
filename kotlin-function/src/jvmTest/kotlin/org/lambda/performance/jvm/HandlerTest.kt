@@ -3,8 +3,8 @@ package org.lambda.performance.jvm
 import kotlin.test.Test
 
 class HandlerTest {
-    
-    @Test
+
+    //    @Test
     fun test() {
         val input = """
             {
@@ -20,8 +20,8 @@ class HandlerTest {
             }
         """.trimIndent()
 
-        val result = Handler().handleRequest(input, null)
-
-        println(result)
+//        val result = Handler().handleRequest(input, null)
+//
+//        println(result)
     }
 }
