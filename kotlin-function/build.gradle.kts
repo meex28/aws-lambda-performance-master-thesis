@@ -25,6 +25,10 @@ kotlin {
             implementation("io.konform:konform:0.10.0")
         }
 
+        commonTest.dependencies {
+            implementation(kotlin("test"))
+        }
+
         nativeMain.dependencies {
             implementation("io.github.trueangle:lambda-runtime:0.0.2")
         }

@@ -23,7 +23,7 @@ fun handler(input: String?, context: Any?, callback: dynamic) {
     callback(
         null, LambdaResponse(
             statusCode = 200,
-            body = JSON.stringify(result)
+            body = result
         ).toJson()
     )
 }

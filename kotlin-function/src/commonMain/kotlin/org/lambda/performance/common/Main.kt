@@ -16,6 +16,16 @@ data class Request(
     val secondMatrix: Matrix
 )
 
+@Serializable
+data class ResultResponse(
+    val result: Matrix
+)
+
+@Serializable
+data class ErrorResponse(
+    val message: String
+)
+
 val validateMatrix = Validation<Matrix> {
     minItems(1)
 
@@ -78,13 +88,19 @@ fun handle(input: String): String {
     val request = Json.decodeFromString<Request>(input)
 
     val result = try {
-        multiply(
-            matrix1 = request.fistMatrix,
-            matrix2 = request.secondMatrix
+        ResultResponse(
+            result = multiply(
+                matrix1 = request.fistMatrix,
+                matrix2 = request.secondMatrix
+            )
         )
     } catch (e: IllegalArgumentException) {
-        mapOf("error" to e.message)
+        ErrorResponse(message = e.message!!)
     }
 
-    return Json.encodeToString(result)
+    return when(result) {
+        is ResultResponse -> Json.encodeToString(result)
+        is ErrorResponse -> Json.encodeToString(result)
+        else -> throw Exception("Unknown result type")
+    }
 }
