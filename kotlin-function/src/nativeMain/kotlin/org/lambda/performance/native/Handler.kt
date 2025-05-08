@@ -3,8 +3,10 @@ package org.lambda.performance.native
 import io.github.trueangle.knative.lambda.runtime.LambdaRuntime
 import io.github.trueangle.knative.lambda.runtime.api.Context
 import io.github.trueangle.knative.lambda.runtime.handler.LambdaBufferedHandler
+import kotlinx.serialization.Serializable
 import org.lambda.performance.common.handle
 
+@Serializable
 class RequestWrapper(
     val request: String
 )
