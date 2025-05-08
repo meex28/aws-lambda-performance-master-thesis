@@ -2,14 +2,10 @@ package org.lambda.performance.jvm
 
 import com.amazonaws.services.lambda.runtime.Context
 import com.amazonaws.services.lambda.runtime.RequestHandler
-import kotlinx.serialization.Serializable
-import org.lambda.performance.common.Request
 import org.lambda.performance.common.handle
-import org.lambda.performance.jvm.RequestWrapper
 
-@Serializable
-class RequestWrapper(
-    val request: String
+data class RequestWrapper(
+    var request: String = "" // default value for Jackson
 )
 
 class Handler : RequestHandler<RequestWrapper, String> {

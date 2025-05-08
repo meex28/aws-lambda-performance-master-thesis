@@ -61,6 +61,7 @@ locals {
         bucket_source_file = lambda.bucket_source_file
         snapstart_enabled  = lambda.snapstart_enabled
         memory_size        = memory
+        layers = try(lambda.layers, [])
       }
     ]
   ])
