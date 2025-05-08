@@ -51,11 +51,11 @@ kotlin {
         }
     }
 
-    linuxArm64().binaries {
-        executable {
-            entryPoint = "org.lambda.performance.native.main"
-        }
-    }
+//    linuxArm64().binaries {
+//        executable {
+//            entryPoint = "org.lambda.performance.native.main"
+//        }
+//    }
 
     jvmToolchain(21)
 }
