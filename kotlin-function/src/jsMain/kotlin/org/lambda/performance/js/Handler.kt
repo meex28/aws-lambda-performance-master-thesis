@@ -4,6 +4,7 @@
 package org.lambda.performance.js
 
 import org.lambda.performance.common.handle
+import org.lambda.performance.js.LambdaResponse
 
 data class LambdaResponse(
     val statusCode: Int,
@@ -17,8 +18,8 @@ fun LambdaResponse.toJson() = JSON.stringify(
     )
 )
 
-fun handler(input: String?, context: Any?, callback: dynamic) {
-    val result = handle(input!!)
+fun handler(input: dynamic, context: Any?, callback: dynamic) {
+    val result = handle(JSON.stringify(input))
 
     callback(
         null, LambdaResponse(
