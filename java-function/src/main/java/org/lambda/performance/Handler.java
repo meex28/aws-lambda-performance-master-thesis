@@ -238,20 +238,4 @@ public class Handler implements RequestHandler<RequestWrapper, String> {
             }
         }
     }
-
-    public static class ResultResponse {
-        public List<List<Integer>> result;
-
-        public ResultResponse(List<List<Integer>> result) {
-            this.result = result;
-        }
-    }
-
-    public static class ErrorResponse {
-        public String message;
-
-        public ErrorResponse(String message) {
-            this.message = message;
-        }
-    }
 }
