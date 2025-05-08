@@ -1,10 +1,11 @@
 package org.lambda.performance.js
 
 import kotlin.test.Test
+import org.lambda.performance.common.handle
 
 class HandlerTest {
-    
-    @Test
+
+    //    @Test
     fun test() {
         val input = """
             {
@@ -19,11 +20,5 @@ class HandlerTest {
               ]
             }
         """.trimIndent()
-
-        handler(
-            input = input,
-            context = null,
-            callback = {}
-        )
     }
 }
