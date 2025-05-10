@@ -1,6 +1,7 @@
 import {Lambda} from 'aws-sdk';
 import {extractFunctionNameFromArn, sleep} from "../common";
 import type {InvokeFunctionMessage} from "../common/types.ts";
+// @ts-ignore
 import requestBodyJson from "./request.json";
 
 const lambdaClient = new Lambda();
@@ -8,7 +9,7 @@ const requestBody = {
     request: JSON.stringify(requestBodyJson.request)
 }
 
-const INVOKE_COUNT = 3;
+const INVOKE_COUNT = 50;
 
 export const handler = async (event: any): Promise<any> => {
     const message: InvokeFunctionMessage = JSON.parse(event.Records[0].Sns.Message)

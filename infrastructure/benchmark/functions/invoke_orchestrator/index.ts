@@ -4,11 +4,17 @@ import type {InvokeFunctionMessage} from "../common/types.ts";
 
 const snsClient = new SNS();
 
-export const handler = async (): Promise<any> => {
-    const functionArns = (await getFunctionArns()).slice(4, 7);
+type FunctionType = "no-snapstart" | "snapstart";
+
+interface InvokeOrchestratorEvent {
+    testedFunctionsType: FunctionType;
+}
+
+export const handler = async (event: any): Promise<any> => {
+    const functionArns = await getTestedFunctionsArns(event.testedFunctionsType);
     const snsTopicArn = getSnsTopicArn();
 
-    const sleepTime = 600000 / functionArns.length; // 10 minutes / number of functions
+    const sleepTime = (13 * 60 * 1000) / functionArns.length; // 13 minutes / number of functions
 
     // Publish function ARNs to SNS topic
     for (const functionArn of functionArns) {
@@ -35,4 +41,13 @@ const getSnsTopicArn = (): string => {
         throw Error('No SNS_TOPIC_ARN found in environment variables');
     }
     return topicArn;
+}
+
+const getTestedFunctionsArns = async (functionType: FunctionType): Promise<string[]> => {
+    const allFunctionsArns = await getFunctionArns();
+    const filterFunction = functionType === 'no-snapstart'
+        ? (f: string) => !f.includes('snapstart')
+        : (f: string) => f.includes('snapstart');
+
+    return allFunctionsArns.filter(filterFunction);
 }
