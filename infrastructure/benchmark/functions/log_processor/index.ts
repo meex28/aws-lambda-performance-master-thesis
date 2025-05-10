@@ -6,10 +6,6 @@ const s3 = new S3();
 
 const RESULTS_BUCKET = "mte-benchmark-results"
 
-interface LambdaEvent {
-    timestamp: number;
-}
-
 interface LambdaInvokeLogReport {
     requestId: string;
     duration: number;
@@ -17,12 +13,14 @@ interface LambdaInvokeLogReport {
     memorySize: number;
     maxMemoryUsed: number;
     initDuration?: number;
+    restoreDuration?: number;
+    billedRestoreDuration?: number;
     timestamp: number;
 }
 
-export const handler = async (event: LambdaEvent): Promise<any> => {
+export const handler = async (): Promise<any> => {
     try {
-        const startTime = event.timestamp
+        const startTime = Date.now()
         const functionNames = await getFunctionNames()
 
         const results: Record<string, LambdaInvokeLogReport[]> = {};
@@ -30,8 +28,7 @@ export const handler = async (event: LambdaEvent): Promise<any> => {
         for (const functionName of functionNames) {
             console.log(`Analyzing logs for function: ${functionName}`);
 
-            const logGroupName = `/aws/lambda/${functionName}`;
-            results[functionName] = await getReportLogsForFunction(logGroupName, startTime);
+            results[functionName] = await getReportLogsForFunction(functionName);
         }
 
         const uploadResults = await uploadObjectToS3(
@@ -60,15 +57,16 @@ export const handler = async (event: LambdaEvent): Promise<any> => {
     }
 };
 
-async function getReportLogsForFunction(logGroupName: string, startTime: number): Promise<LambdaInvokeLogReport[]> {
-    const logStreams = await getLogStreams(logGroupName, startTime);
+async function getReportLogsForFunction(functionName: string): Promise<LambdaInvokeLogReport[]> {
+    const logGroupName = `/aws/lambda/${functionName}`;
+    const logStreams = await getLogStreams(logGroupName);
     const reports: LambdaInvokeLogReport[] = [];
 
     for (const stream of logStreams) {
         const streamName = stream.logStreamName;
         if (!streamName) continue;
 
-        const logs = await getLogsFromStream(logGroupName, streamName, startTime);
+        const logs = await getLogsFromStream(logGroupName, streamName);
 
         for (const log of logs) {
             if (log.message && log.message.startsWith('REPORT')) {
@@ -83,7 +81,7 @@ async function getReportLogsForFunction(logGroupName: string, startTime: number)
     return reports;
 }
 
-async function getLogStreams(logGroupName: string, startTime: number): Promise<CloudWatchLogs.LogStream[]> {
+async function getLogStreams(logGroupName: string): Promise<CloudWatchLogs.LogStream[]> {
     try {
         const streams: CloudWatchLogs.LogStream[] = [];
         let nextToken: string | undefined;
@@ -96,9 +94,7 @@ async function getLogStreams(logGroupName: string, startTime: number): Promise<C
                 nextToken
             }).promise();
 
-            const relevantStreams = (response.logStreams || []).filter(stream =>
-                !stream.lastEventTimestamp || stream.lastEventTimestamp >= startTime * 1000
-            );
+            const relevantStreams = response.logStreams || []
 
             streams.push(...relevantStreams);
             nextToken = response.nextToken;
@@ -114,7 +110,6 @@ async function getLogStreams(logGroupName: string, startTime: number): Promise<C
 async function getLogsFromStream(
     logGroupName: string,
     logStreamName: string,
-    startTime: number
 ): Promise<CloudWatchLogs.OutputLogEvent[]> {
     try {
         const logs: CloudWatchLogs.OutputLogEvent[] = [];
@@ -124,7 +119,6 @@ async function getLogsFromStream(
             const response = await cloudWatchLogs.getLogEvents({
                 logGroupName,
                 logStreamName,
-                startTime: startTime * 1000,
                 startFromHead: true,
                 nextToken
             }).promise();
@@ -155,6 +149,8 @@ function parseReportLog(logMessage: string, timestamp: number): LambdaInvokeLogR
         const memorySizeMatch = logMessage.match(/Memory Size: ([0-9]+) MB/);
         const maxMemoryUsedMatch = logMessage.match(/Max Memory Used: ([0-9]+) MB/);
         const initDurationMatch = logMessage.match(/Init Duration: ([0-9.]+) ms/);
+        const restoreDurationMatch = logMessage.match(/Restore Duration: ([0-9.]+) ms/);
+        const billedRestoreDurationMatch = logMessage.match(/Billed Restore Duration: ([0-9.]+) ms/);
 
         if (!requestIdMatch || !durationMatch || !billedDurationMatch || !memorySizeMatch || !maxMemoryUsedMatch) {
             return null;
@@ -167,6 +163,8 @@ function parseReportLog(logMessage: string, timestamp: number): LambdaInvokeLogR
             memorySize: parseInt(memorySizeMatch[1], 10),
             maxMemoryUsed: parseInt(maxMemoryUsedMatch[1], 10),
             initDuration: initDurationMatch ? parseFloat(initDurationMatch[1]) : undefined,
+            restoreDuration: restoreDurationMatch ? parseFloat(restoreDurationMatch[1]) : undefined,
+            billedRestoreDuration: billedRestoreDurationMatch ? parseFloat(billedRestoreDurationMatch[1]) : undefined,
             timestamp
         };
     } catch (error) {

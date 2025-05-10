@@ -4,14 +4,17 @@ import type {InvokeFunctionMessage} from "../common/types.ts";
 
 const snsClient = new SNS();
 
-type FunctionType = "no-snapstart" | "snapstart";
-
-interface InvokeOrchestratorEvent {
-    testedFunctionsType: FunctionType;
+interface FunctionFilters {
+    isSnapstart: boolean;
+    language: "java" | "kotlin";
 }
 
-export const handler = async (event: any): Promise<any> => {
-    const functionArns = await getTestedFunctionsArns(event.testedFunctionsType);
+interface Event {
+    filters: FunctionFilters;
+}
+
+export const handler = async (event: Event): Promise<any> => {
+    const functionArns = await getTestedFunctionsArns(event.filters);
     const snsTopicArn = getSnsTopicArn();
 
     const sleepTime = (13 * 60 * 1000) / functionArns.length; // 13 minutes / number of functions
@@ -43,11 +46,13 @@ const getSnsTopicArn = (): string => {
     return topicArn;
 }
 
-const getTestedFunctionsArns = async (functionType: FunctionType): Promise<string[]> => {
+const getTestedFunctionsArns = async (filters: FunctionFilters): Promise<string[]> => {
     const allFunctionsArns = await getFunctionArns();
-    const filterFunction = functionType === 'no-snapstart'
-        ? (f: string) => !f.includes('snapstart')
-        : (f: string) => f.includes('snapstart');
 
-    return allFunctionsArns.filter(filterFunction);
+    const snapstartFilter = (f: string) => filters.isSnapstart
+        ? f.includes('snapstart')
+        : !f.includes('snapstart');
+    const languageFilter = (f: string) => f.includes(filters.language);
+
+    return allFunctionsArns.filter(f => snapstartFilter(f) && languageFilter(f));
 }
