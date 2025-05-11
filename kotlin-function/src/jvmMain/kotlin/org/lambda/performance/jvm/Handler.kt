@@ -1,36 +1,28 @@
 package org.lambda.performance.jvm
 
-import com.amazonaws.services.lambda.runtime.Context
-import com.amazonaws.services.lambda.runtime.RequestHandler
+import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.Json
+import org.http4k.core.Method.GET
+import org.http4k.core.Response
+import org.http4k.core.Status.Companion.OK
+import org.http4k.routing.bind
+import org.http4k.routing.routes
+import org.http4k.serverless.InvocationLambdaFunction
 import org.lambda.performance.common.handle
 
+@Serializable
 data class RequestWrapper(
-    var request: String = "" // default value for Jackson
+    var request: String = ""
 )
 
-class Handler : RequestHandler<RequestWrapper, String> {
-    override fun handleRequest(input: RequestWrapper, context: Context?): String {
-        return handle(input.request)
-    }
-}
+val http4kApp = routes(
+    "/" bind GET to { request ->
+        val requestWrapper = Json.decodeFromString<RequestWrapper>(request.bodyString())
+        val result = handle(requestWrapper.request)
 
-//fun main(args: Array<String>) {
-//    val sampleJson = """
-//    {
-//        "fistMatrix": [
-//            [1, 2, 3],
-//            [4, 5, 6]
-//        ],
-//        "secondMatrix": [
-//            [7, 8],
-//            [9, 10],
-//            [11, 12]
-//        ]
-//    }
-//    """.trimIndent()
-//
-//    Handler().handleRequest(
-//        input = RequestWrapper(sampleJson),
-//        context = null
-//    )
-//}
+        Response(OK).body(Json.encodeToString(result))
+    }
+)
+
+@Suppress("unused")
+class HelloServerlessHttp4k : InvocationLambdaFunction(http4kApp)
