@@ -35,7 +35,6 @@ kotlin {
 
         jvmMain.dependencies {
             implementation("org.http4k:http4k-serverless-lambda:6.9.0.0")
-            implementation("org.http4k:http4k-format-kotlinx-serialization")
         }
     }
 
