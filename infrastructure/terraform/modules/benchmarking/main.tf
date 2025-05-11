@@ -72,8 +72,64 @@ resource "aws_lambda_function" "log_processor" {
   memory_size = 1024
 
   timeout = 900
-
-  environment {
-    // variables = local.functions_arns_env_var
-  }
 }
+
+# resource "aws_sfn_state_machine" "lambda_invoker" {
+#   name     = "lambda-repeated-invoker"
+#   role_arn = aws_iam_role.step_function_role.arn
+#
+#   definition = jsonencode({
+#     Comment = "Run MTE benchmark for all functions tested configurations.",
+#     StartAt = "Initialize",
+#     States = {
+#       "Initialize" = {
+#         Type = "Pass",
+#         Result = {
+#           count     = 0,
+#           max_count = 8
+#         },
+#         Next = "CheckCount"
+#       },
+#       "CheckCount" = {
+#         Type = "Choice",
+#         Choices = [
+#           {
+#             Variable        = "$.count",
+#             NumericLessThan = "$.max_count",
+#             Next            = "InvokeLambda"
+#           }
+#         ],
+#         Default = "Done"
+#       },
+#       "InvokeLambda" = {
+#         Type     = "Task",
+#         Resource = "arn:aws:states:::lambda:invoke",
+#         Parameters = {
+#           FunctionName = aws_lambda_function.invoke_orchestrator.function_name,
+#           Payload = {
+#             "execution.$" = "$.count"
+#           }
+#         },
+#         ResultPath = "$.lambdaResult",
+#         Next       = "Wait"
+#       },
+#       "Wait" = {
+#         Type    = "Wait",
+#         Seconds = 1800, # 30 minutes wait
+#         Next    = "Increment"
+#       },
+#       "Increment" = {
+#         Type = "Pass",
+#         Parameters = {
+#           "count.$" : "States.MathAdd($.count, 1)",
+#           "max_count.$" : "$.max_count",
+#           "lambdaResult.$" : "$.lambdaResult"
+#         },
+#         Next = "CheckCount"
+#       },
+#       "Done" = {
+#         Type = "Succeed"
+#       }
+#     }
+#   })
+# }
