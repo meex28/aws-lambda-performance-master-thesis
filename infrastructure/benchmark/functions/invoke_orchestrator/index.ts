@@ -1,6 +1,6 @@
 import {SNS} from 'aws-sdk';
 import {getFunctionArns, sleep} from "../common";
-import type {InvokeFunctionMessage} from "../common/types.ts";
+import type {FunctionStartType, InvokeFunctionMessage} from "../common/types.ts";
 
 const snsClient = new SNS();
 
@@ -11,6 +11,7 @@ interface FunctionFilters {
 
 interface Event {
     filters: FunctionFilters;
+    functionStartType: FunctionStartType;
 }
 
 export const handler = async (event: Event): Promise<any> => {
@@ -22,9 +23,15 @@ export const handler = async (event: Event): Promise<any> => {
     // Publish function ARNs to SNS topic
     for (const functionArn of functionArns) {
         console.log(`Publish for function arn: ${functionArn}`);
+
+        const message: InvokeFunctionMessage = {
+            functionArn,
+            invokeFunctionStartType: event.functionStartType
+        }
+
         await snsClient.publish({
             TopicArn: snsTopicArn,
-            Message: JSON.stringify({functionArn} as InvokeFunctionMessage)
+            Message: JSON.stringify(message)
         }).promise();
         console.log(`Sleeping for ${sleepTime} ms`);
         await sleep(sleepTime);

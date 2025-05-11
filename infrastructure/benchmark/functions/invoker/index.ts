@@ -1,34 +1,34 @@
 import {Lambda} from 'aws-sdk';
 import {extractFunctionNameFromArn, sleep} from "../common";
-import type {InvokeFunctionMessage} from "../common/types.ts";
+import type {FunctionStartType, InvokeFunctionMessage} from "../common/types.ts";
 // @ts-ignore
 import requestBodyJson from "./request.json";
 
 const lambdaClient = new Lambda();
-const requestBody = {
-    request: JSON.stringify(requestBodyJson.request)
-}
 
 const INVOKE_COUNT = 50;
 
 export const handler = async (event: any): Promise<any> => {
     const message: InvokeFunctionMessage = JSON.parse(event.Records[0].Sns.Message)
     const functionArn = message.functionArn!!;
+    const invokeFunctionStartType = message.invokeFunctionStartType!!;
 
-    const results = await benchmarkFunction(functionArn);
+    const results = await benchmarkFunction(functionArn, invokeFunctionStartType);
 
     return {
         statusCode: 200,
         body: JSON.stringify({
             message: 'Function processed successfully.',
             functionName: extractFunctionNameFromArn(functionArn),
+            invokeFunctionStartType,
             results
         })
     };
 };
 
-async function benchmarkFunction(functionArn: string) {
+async function benchmarkFunction(functionArn: string, functionStartType: FunctionStartType): Promise<any[]> {
     const functionName = extractFunctionNameFromArn(functionArn);
+    const isTestingColdStart = functionStartType == "cold";
 
     console.log(`Processing function: ${functionName}`);
 
@@ -36,19 +36,22 @@ async function benchmarkFunction(functionArn: string) {
     let results = [];
 
     if (isSnapstart) {
-        const versionsArns = await setupSnapstartFunctionVersions(functionArn, INVOKE_COUNT);
+        const versionsArns = await setupSnapstartFunctionVersions(functionArn, INVOKE_COUNT, functionStartType);
         results = await invokeSnapstartFunction(versionsArns)
         await cleanupSnapstartFunctionVersions(functionArn);
     } else {
-        results = await invokeFunctionMultipleTimes(functionArn, INVOKE_COUNT);
+        results = await invokeFunctionMultipleTimes(functionArn, INVOKE_COUNT, isTestingColdStart);
     }
 
     return results;
 }
 
-async function invokeFunctionMultipleTimes(functionArn: string, count: number, updateEnvVar: boolean = true): Promise<any[]> {
+async function invokeFunctionMultipleTimes(functionArn: string, count: number, updateEnvVar: boolean): Promise<any[]> {
     const results = [];
     const functionName = extractFunctionNameFromArn(functionArn);
+    const invokeRequestBody = {
+        request: JSON.stringify(requestBodyJson.request)
+    }
 
     for (let i = 0; i < count; i++) {
         // TODO: after test remove this var
@@ -65,7 +68,7 @@ async function invokeFunctionMultipleTimes(functionArn: string, count: number, u
             invokeResult = await lambdaClient.invoke({
                 FunctionName: functionArn,
                 InvocationType: 'RequestResponse',
-                Payload: JSON.stringify(requestBody)
+                Payload: JSON.stringify(invokeRequestBody)
             }).promise();
         } catch (error: any) {
             if (error.retryable) {
@@ -117,18 +120,22 @@ async function updateFunctionEnvironmentVariable(functionName: string, timestamp
 
 const snapstartVersionDescriptionPrefix = "SNAPSTART VERSION:";
 
-async function setupSnapstartFunctionVersions(functionArn: string, versionsCount: number): Promise<string[]> {
+async function setupSnapstartFunctionVersions(functionArn: string, versionsCount: number, functionStartType: FunctionStartType): Promise<string[]> {
     const functionName = extractFunctionNameFromArn(functionArn);
+    const isTestingColdStart = functionStartType == "cold";
 
     console.log(`Preparing ${versionsCount} versions for SnapStart function: ${functionName}`);
     const versionArns: string[] = [];
 
     // First invoke to ensure function is initialized
-    await invokeFunctionMultipleTimes(functionArn, 1);
+    await invokeFunctionMultipleTimes(functionArn, 1, isTestingColdStart);
 
     for (let i = 0; i < versionsCount; i++) {
         const timestamp = Date.now().toString();
-        await updateFunctionEnvironmentVariable(functionName, timestamp);
+
+        if (isTestingColdStart) {
+            await updateFunctionEnvironmentVariable(functionName, timestamp);
+        }
 
         await sleep(5000);
 
