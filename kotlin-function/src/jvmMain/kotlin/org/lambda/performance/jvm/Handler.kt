@@ -20,9 +20,9 @@ val http4kApp = routes(
         val requestWrapper = Json.decodeFromString<RequestWrapper>(request.bodyString())
         val result = handle(requestWrapper.request)
 
-        Response(OK).body(Json.encodeToString(result))
+        Response(OK).body(result)
     }
 )
 
 @Suppress("unused")
-class HelloServerlessHttp4k : InvocationLambdaFunction(http4kApp)
+class Handler : InvocationLambdaFunction(http4kApp)
