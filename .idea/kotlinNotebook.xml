@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="KotlinNotebookOptionsProvider">
+    <option name="jdkName" value="21" />
+  </component>
+  <component name="KotlinNotebookPlotExportOptionsProvider">
+    <option name="fileName" value="plot.png" />
+    <option name="format" value="PNG" />
+    <option name="letsPlotFlavor" value="HIGH_CONTRAST_LIGHT" />
+    <option name="scalingFactor" value="1.0" />
+  </component>
+</project>

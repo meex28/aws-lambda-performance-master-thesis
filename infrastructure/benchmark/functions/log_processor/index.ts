@@ -7,6 +7,7 @@ const s3 = new S3();
 const RESULTS_BUCKET = "mte-benchmark-results"
 
 interface LambdaInvokeLogReport {
+    functionName: string;
     requestId: string;
     duration: number;
     billedDuration: number;
@@ -23,12 +24,12 @@ export const handler = async (): Promise<any> => {
         const startTime = Date.now()
         const functionNames = await getFunctionNames()
 
-        const results: Record<string, LambdaInvokeLogReport[]> = {};
+        const results: LambdaInvokeLogReport[] = [];
 
         for (const functionName of functionNames) {
             console.log(`Analyzing logs for function: ${functionName}`);
 
-            results[functionName] = await getReportLogsForFunction(functionName);
+            results.push(...(await getReportLogsForFunction(functionName)));
         }
 
         const uploadResults = await uploadObjectToS3(
@@ -70,7 +71,7 @@ async function getReportLogsForFunction(functionName: string): Promise<LambdaInv
 
         for (const log of logs) {
             if (log.message && log.message.startsWith('REPORT')) {
-                const reportData = parseReportLog(log.message, log.timestamp || 0);
+                const reportData = parseReportLog(log.message, log.timestamp || 0, functionName);
                 if (reportData) {
                     reports.push(reportData);
                 }
@@ -141,7 +142,7 @@ async function getLogsFromStream(
     }
 }
 
-function parseReportLog(logMessage: string, timestamp: number): LambdaInvokeLogReport | null {
+function parseReportLog(logMessage: string, timestamp: number, functionName: string): LambdaInvokeLogReport | null {
     try {
         const requestIdMatch = logMessage.match(/RequestId: ([a-f0-9-]+)/);
         const durationMatch = logMessage.match(/Duration: ([0-9.]+) ms/);
@@ -157,6 +158,7 @@ function parseReportLog(logMessage: string, timestamp: number): LambdaInvokeLogR
         }
 
         return {
+            functionName,
             requestId: requestIdMatch[1],
             duration: parseFloat(durationMatch[1]),
             billedDuration: parseFloat(billedDurationMatch[1]),
