@@ -3,3 +3,4 @@
 /infrastructure/benchmark/functions/node_modules/
 /infrastructure/terraform/.terraform/
 /infrastructure/terraform/modules/benchmarking/function-source/
+/results-processing/lets-plot-images/
