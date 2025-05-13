@@ -523,6 +523,14 @@ INPUT chapters/przeglad_literatury/results_papers.tex
 INPUT ./chapters/metody_optimalizacji/main.tex
 INPUT ./chapters/metody_optimalizacji/main.tex
 INPUT chapters/metody_optimalizacji/main.tex
+INPUT ./chapters/metody_optimalizacji/snapstart.tex
+INPUT ./chapters/metody_optimalizacji/snapstart.tex
+INPUT chapters/metody_optimalizacji/snapstart.tex
+INPUT ./charts/snapstart.png
+INPUT ./charts/snapstart.png
+INPUT ./charts/snapstart.png
+INPUT ./charts/snapstart.png
+INPUT ./charts/snapstart.png
 INPUT ./chapters/opis_badania/main.tex
 INPUT ./chapters/opis_badania/main.tex
 INPUT chapters/opis_badania/main.tex

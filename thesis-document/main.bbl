@@ -1,9 +1,24 @@
 \begin{thebibliography}{10}
 
+\bibitem{246288}
+A.~Agache, M.~Brooker, A.~Iordache, A.~Liguori, R.~Neugebauer, P.~Piwonka, and D.-M. Popa.
+\newblock Firecracker: Lightweight virtualization for serverless applications.
+\newblock In {\em 17th USENIX Symposium on Networked Systems Design and Implementation (NSDI 20)}, pages 419--434, Santa Clara, CA, Feb. 2020. USENIX Association.
+
+\bibitem{amazonSnapstartDeveloperGUide}
+{Amazon Web Services}.
+\newblock Aws lambda snapstart developer guide.
+\newblock \url{https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html}.
+\newblock [Accessed 13-05-2025].
+
 \bibitem{8513710}
 D.~Bardsley, L.~Ryan, and J.~Howard.
 \newblock Serverless performance and optimization strategies.
 \newblock In {\em 2018 IEEE International Conference on Smart Cloud (SmartCloud)}, pages 19--26, 2018.
+
+\bibitem{brooker2021restoringuniquenessmicrovmsnapshots}
+M.~Brooker, A.~C. Catangiu, M.~Danilov, A.~Graf, C.~MacCarthaigh, and A.~Sandu.
+\newblock Restoring uniqueness in microvm snapshots, 2021.
 
 \bibitem{10.1145/3458336.3465305}
 J.~Carreira, S.~Kohli, R.~Bruno, and P.~Fonseca.
@@ -218,6 +233,12 @@ S.~Shrestha.
 D.~Taibi, B.~Kehoe, and D.~Poccia.
 \newblock Serverless: From bad practices to good solutions.
 \newblock In {\em 2022 IEEE International Conference on Service-Oriented System Engineering (SOSE)}, pages 85--92, 2022.
+
+\bibitem{SpotBugsProject}
+{The SpotBugs team}.
+\newblock Spotbugs static analysis for java.
+\newblock \url{https://spotbugs.github.io/}.
+\newblock Dostęp: 13.05.2025.
 
 \bibitem{vanDonkersgoed2023postnl}
 L.~van Donkersgoed.
