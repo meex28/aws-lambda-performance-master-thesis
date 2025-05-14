@@ -4,51 +4,51 @@ The top-level auxiliary file: main.aux
 The style file: abbrv.bst
 Database file #1: sources/bibliography.bib
 Warning--entry type for "cui2024serverless" isn't style-file defined
---line 523 of file sources/bibliography.bib
+--line 530 of file sources/bibliography.bib
 Warning--entry type for "vanDonkersgoed2023postnl" isn't style-file defined
---line 532 of file sources/bibliography.bib
+--line 539 of file sources/bibliography.bib
 Warning--empty booktitle in Cavalheiro202389
 Warning--empty booktitle in Cordingly2020704
 Warning--empty booktitle in FerreiraDosSantos2023
-You've used 54 entries,
+You've used 59 entries,
             2118 wiz_defined-function locations,
-            795 strings with 15218 characters,
-and the built_in function-call counts, 20744 in all, are:
-= -- 1998
-> -- 1029
-< -- 26
-+ -- 413
-- -- 352
-* -- 1263
-:= -- 3207
-add.period$ -- 170
-call.type$ -- 54
-change.case$ -- 338
+            817 strings with 15987 characters,
+and the built_in function-call counts, 22413 in all, are:
+= -- 2164
+> -- 1091
+< -- 28
++ -- 438
+- -- 372
+* -- 1348
+:= -- 3460
+add.period$ -- 187
+call.type$ -- 59
+change.case$ -- 361
 chr.to.int$ -- 0
-cite$ -- 57
-duplicate$ -- 880
-empty$ -- 1617
-format.name$ -- 352
-if$ -- 4608
+cite$ -- 62
+duplicate$ -- 955
+empty$ -- 1763
+format.name$ -- 372
+if$ -- 4985
 int.to.chr$ -- 0
-int.to.str$ -- 54
-missing$ -- 38
-newline$ -- 273
-num.names$ -- 108
-pop$ -- 463
+int.to.str$ -- 59
+missing$ -- 40
+newline$ -- 300
+num.names$ -- 118
+pop$ -- 500
 preamble$ -- 1
-purify$ -- 284
+purify$ -- 304
 quote$ -- 0
-skip$ -- 771
+skip$ -- 834
 stack$ -- 0
-substring$ -- 986
-swap$ -- 344
-text.length$ -- 26
+substring$ -- 1083
+swap$ -- 375
+text.length$ -- 28
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 216
+type$ -- 236
 warning$ -- 3
-while$ -- 162
-width$ -- 56
-write$ -- 595
+while$ -- 176
+width$ -- 61
+write$ -- 650
 (There were 5 warnings)

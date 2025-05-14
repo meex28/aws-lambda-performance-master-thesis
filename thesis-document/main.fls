@@ -531,6 +531,14 @@ INPUT ./charts/snapstart.png
 INPUT ./charts/snapstart.png
 INPUT ./charts/snapstart.png
 INPUT ./charts/snapstart.png
+INPUT ./chapters/metody_optimalizacji/graalvm.tex
+INPUT ./chapters/metody_optimalizacji/graalvm.tex
+INPUT chapters/metody_optimalizacji/graalvm.tex
+INPUT ./charts/graalvm-build-process.drawio.png
+INPUT ./charts/graalvm-build-process.drawio.png
+INPUT ./charts/graalvm-build-process.drawio.png
+INPUT ./charts/graalvm-build-process.drawio.png
+INPUT ./charts/graalvm-build-process.drawio.png
 INPUT ./chapters/opis_badania/main.tex
 INPUT ./chapters/opis_badania/main.tex
 INPUT chapters/opis_badania/main.tex

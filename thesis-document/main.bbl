@@ -5,6 +5,12 @@ A.~Agache, M.~Brooker, A.~Iordache, A.~Liguori, R.~Neugebauer, P.~Piwonka, and D
 \newblock Firecracker: Lightweight virtualization for serverless applications.
 \newblock In {\em 17th USENIX Symposium on Networked Systems Design and Implementation (NSDI 20)}, pages 419--434, Santa Clara, CA, Feb. 2020. USENIX Association.
 
+\bibitem{awsLambdaDeveloperGuide}
+{Amazon Web Services}.
+\newblock Aws lambda developer guide.
+\newblock \url{https://docs.aws.amazon.com/lambda/latest/dg/welcome.html}.
+\newblock [Accessed 13-05-2025].
+
 \bibitem{amazonSnapstartDeveloperGUide}
 {Amazon Web Services}.
 \newblock Aws lambda snapstart developer guide.
@@ -106,6 +112,11 @@ L.~A. Goodman.
 \newblock {Snowball Sampling}.
 \newblock {\em The Annals of Mathematical Statistics}, 32(1):148 -- 170, 1961.
 
+\bibitem{graalvm-reflection-jdk21}
+{GraalVM Team}.
+\newblock {\em Reflekcja w obrazie natywnym}, 2024.
+\newblock Dostęp: 13.05.2025.
+
 \bibitem{Ivanov_Petrova_2024}
 D.~Ivanov and A.~Petrova.
 \newblock Serverless computing architectures and applications in aws.
@@ -194,6 +205,12 @@ D.~Quaresma, D.~Fireman, and T.~E. Pereira.
 \newblock Controlling garbage collection and request admission to improve performance of faas applications.
 \newblock In {\em 2020 IEEE 32nd International Symposium on Computer Architecture and High Performance Computing (SBAC-PAD)}, pages 175--182, 2020.
 
+\bibitem{quarkus-docs}
+{Quarkus}.
+\newblock {\em Dokumentacja Quarkus}.
+\newblock Red Hat, 2025.
+\newblock Dostęp: 13.05.2025.
+
 \bibitem{raza2021sok}
 A.~Raza, I.~Matta, N.~Akhtar, V.~Kalavri, and V.~Isahagian.
 \newblock {SoK: Function-As-A-Service: From An Application Developer’s Perspective}.
@@ -269,5 +286,15 @@ Y.~Xiao and M.~Watson.
 T.~Yu, Q.~Liu, D.~Du, Y.~Xia, B.~Zang, Z.~Lu, P.~Yang, C.~Qin, and H.~Chen.
 \newblock Characterizing serverless platforms with serverlessbench.
 \newblock In {\em Proceedings of the 11th ACM Symposium on Cloud Computing}, SoCC '20, page 30–44, New York, NY, USA, 2020. Association for Computing Machinery.
+
+\bibitem{8756917}
+M.~Šipek, B.~Mihaljević, and A.~Radovan.
+\newblock Exploring aspects of polyglot high-performance virtual machine graalvm.
+\newblock In {\em 2019 42nd International Convention on Information and Communication Technology, Electronics and Microelectronics (MIPRO)}, pages 1671--1676, 2019.
+
+\bibitem{9245290}
+M.~Šipek, D.~Muharemagić, B.~Mihaljević, and A.~Radovan.
+\newblock Enhancing performance of cloud-based software applications with graalvm and quarkus.
+\newblock In {\em 2020 43rd International Convention on Information, Communication and Electronic Technology (MIPRO)}, pages 1746--1751, 2020.
 
 \end{thebibliography}

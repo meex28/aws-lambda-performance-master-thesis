@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.30)  13 MAY 2025 23:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.30)  14 MAY 2025 22:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1433,16 +1433,17 @@ Package pdftex.def Info: charts/snapstart.png  used on input line 22.
 
 [35 <./charts/snapstart.png>]
 
-[36])) (./chapters/opis_badania/main.tex
+[36]) (./chapters/metody_optimalizacji/graalvm.tex
 
 [37]
+<charts/graalvm-build-process.drawio.png, id=692, 603.25375pt x 289.08pt>
+File: charts/graalvm-build-process.drawio.png Graphic file (type png)
+<use charts/graalvm-build-process.drawio.png>
+Package pdftex.def Info: charts/graalvm-build-process.drawio.png  used on input line 38.
+(pdftex.def)             Requested size: 448.42822pt x 214.88626pt.
+)
 
-[38
-
-
-]
-Rozdzia\l  4.
-) (./chapters/wyniki/main.tex
+[38 <./charts/graalvm-build-process.drawio.png>]) (./chapters/opis_badania/main.tex
 
 [39]
 
@@ -1450,8 +1451,8 @@ Rozdzia\l  4.
 
 
 ]
-Rozdzia\l  5.
-) (./chapters/wnioski_dyskusja/main.tex
+Rozdzia\l  4.
+) (./chapters/wyniki/main.tex
 
 [41]
 
@@ -1459,60 +1460,69 @@ Rozdzia\l  5.
 
 
 ]
-Rozdzia\l  6.
-) (./chapters/zakonczenie/main.tex
+Rozdzia\l  5.
+) (./chapters/wnioski_dyskusja/main.tex
 
 [43]
 
 [44
 
 
-]) (./main.bbl
+]
+Rozdzia\l  6.
+) (./chapters/zakonczenie/main.tex
 
 [45]
 
 [46
 
 
-]
+]) (./main.bbl
 
 [47]
 
-[48]
+[48
+
+
+]
 
 [49]
-Underfull \hbox (badness 2326) in paragraph at lines 213--216
+
+[50]
+
+[51]
+Underfull \hbox (badness 2326) in paragraph at lines 230--233
 []\T1/lmr/m/n/12 (+20) A. W. Se-rvi-ces.  Ama-zon ec2 do-cu-men-ta-tion, 2025.  Do-st¦p 21.03.2025 z
  []
 
 
-Underfull \hbox (badness 1688) in paragraph at lines 218--221
+Underfull \hbox (badness 1688) in paragraph at lines 235--238
 []\T1/lmr/m/n/12 (+20) A. W. Se-rvi-ces.  Ama-zon ecs de-ve-lo-per gu-ide, 2025.  Do-st¦p 21.03.2025 z
  []
 
 
-Underfull \hbox (badness 2285) in paragraph at lines 223--226
+Underfull \hbox (badness 2285) in paragraph at lines 240--243
 []\T1/lmr/m/n/12 (+20) A. W. Se-rvi-ces.  Aws lambda do-cu-men-ta-tion, 2025.  Do-st¦p 21.03.2025 z
  []
 
 
 
-[50])
+[52])
 
-[51] (./main.lof)
+[53] (./main.lof)
 \tf@lof=\write8
 \openout8 = `main.lof'.
 
 
 
-[52] (./main.lot)
+[54] (./main.lot)
 \tf@lot=\write9
 \openout9 = `main.lot'.
 
 
 
-[53]
-runsystem(latexminted cleantemp  --timestamp 20250513230803 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
+[55]
+runsystem(latexminted cleantemp  --timestamp 20250514222238 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
 
  (./main.aux)
  ***********
@@ -1520,21 +1530,21 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E4E5CE35015AC1878F6F559041231D5A;4644.
+(rerunfilecheck)             Checksum: BBA502E46103F6F6552115C9723F6BAF;4644.
  ) 
 Here is how much of TeX's memory you used:
- 31033 strings out of 473190
- 566024 string characters out of 5715800
- 1195461 words of memory out of 5000000
- 53306 multiletter control sequences out of 15000+600000
- 623312 words of font info for 166 fonts, out of 8000000 for 9000
+ 31064 strings out of 473190
+ 566871 string characters out of 5715800
+ 1195766 words of memory out of 5000000
+ 53322 multiletter control sequences out of 15000+600000
+ 623570 words of font info for 168 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,17n,96p,1071b,1062s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb>
-Output written on main.pdf (59 pages, 524839 bytes).
+Output written on main.pdf (61 pages, 549636 bytes).
 PDF statistics:
- 839 PDF objects out of 1000 (max. 8388607)
- 715 compressed objects within 8 object streams
- 183 named destinations out of 1000 (max. 500000)
- 35104 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 873 PDF objects out of 1000 (max. 8388607)
+ 745 compressed objects within 8 object streams
+ 191 named destinations out of 1000 (max. 500000)
+ 35109 words of extra memory for PDF output out of 35830 (max. 10000000)
 
