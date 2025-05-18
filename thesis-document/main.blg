@@ -4,51 +4,53 @@ The top-level auxiliary file: main.aux
 The style file: abbrv.bst
 Database file #1: sources/bibliography.bib
 Warning--entry type for "cui2024serverless" isn't style-file defined
---line 530 of file sources/bibliography.bib
+--line 537 of file sources/bibliography.bib
 Warning--entry type for "vanDonkersgoed2023postnl" isn't style-file defined
---line 539 of file sources/bibliography.bib
+--line 546 of file sources/bibliography.bib
+Warning--to sort, need author or key in kotlinlangKotlinDocs
+Warning--to sort, need author or key in http4kCoreDocs
 Warning--empty booktitle in Cavalheiro202389
 Warning--empty booktitle in Cordingly2020704
 Warning--empty booktitle in FerreiraDosSantos2023
-You've used 59 entries,
+You've used 66 entries,
             2118 wiz_defined-function locations,
-            817 strings with 15987 characters,
-and the built_in function-call counts, 22413 in all, are:
-= -- 2164
-> -- 1091
-< -- 28
-+ -- 438
-- -- 372
-* -- 1348
-:= -- 3460
-add.period$ -- 187
-call.type$ -- 59
-change.case$ -- 361
+            854 strings with 17311 characters,
+and the built_in function-call counts, 24342 in all, are:
+= -- 2353
+> -- 1166
+< -- 29
++ -- 469
+- -- 396
+* -- 1448
+:= -- 3757
+add.period$ -- 210
+call.type$ -- 66
+change.case$ -- 394
 chr.to.int$ -- 0
-cite$ -- 62
-duplicate$ -- 955
-empty$ -- 1763
-format.name$ -- 372
-if$ -- 4985
+cite$ -- 71
+duplicate$ -- 1029
+empty$ -- 1940
+format.name$ -- 396
+if$ -- 5415
 int.to.chr$ -- 0
-int.to.str$ -- 59
-missing$ -- 40
-newline$ -- 300
-num.names$ -- 118
-pop$ -- 500
+int.to.str$ -- 66
+missing$ -- 43
+newline$ -- 337
+num.names$ -- 128
+pop$ -- 558
 preamble$ -- 1
-purify$ -- 304
+purify$ -- 330
 quote$ -- 0
-skip$ -- 834
+skip$ -- 893
 stack$ -- 0
-substring$ -- 1083
-swap$ -- 375
-text.length$ -- 28
+substring$ -- 1175
+swap$ -- 394
+text.length$ -- 29
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 236
-warning$ -- 3
-while$ -- 176
-width$ -- 61
-write$ -- 650
-(There were 5 warnings)
+type$ -- 264
+warning$ -- 5
+while$ -- 189
+width$ -- 68
+write$ -- 723
+(There were 7 warnings)

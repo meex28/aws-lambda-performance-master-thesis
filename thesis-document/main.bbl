@@ -1,5 +1,15 @@
 \begin{thebibliography}{10}
 
+\bibitem{kotlinlangKotlinDocs}
+{Dokumentacja Kotlin}.
+\newblock \url{https://kotlinlang.org/docs/home.html}.
+\newblock [Dostęp: 15.05.2025].
+
+\bibitem{http4kCoreDocs}
+{Dokumentacja narzędzia http4k Core}.
+\newblock \url{https://www.http4k.org/ecosystem/http4k/}.
+\newblock [Dostęp: 16.05.2025].
+
 \bibitem{246288}
 A.~Agache, M.~Brooker, A.~Iordache, A.~Liguori, R.~Neugebauer, P.~Piwonka, and D.-M. Popa.
 \newblock Firecracker: Lightweight virtualization for serverless applications.
@@ -9,18 +19,34 @@ A.~Agache, M.~Brooker, A.~Iordache, A.~Liguori, R.~Neugebauer, P.~Piwonka, and D
 {Amazon Web Services}.
 \newblock Aws lambda developer guide.
 \newblock \url{https://docs.aws.amazon.com/lambda/latest/dg/welcome.html}.
-\newblock [Accessed 13-05-2025].
+\newblock [Dostęp: 13.05.2025].
 
 \bibitem{amazonSnapstartDeveloperGUide}
 {Amazon Web Services}.
 \newblock Aws lambda snapstart developer guide.
 \newblock \url{https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html}.
-\newblock [Accessed 13-05-2025].
+\newblock [Dostęp: 13.05.2025].
+
+\bibitem{awsSDKForKotlinDeveloperGuide}
+{Amazon Web Services}.
+\newblock Aws sdk for kotlin developer guide.
+\newblock \url{https://docs.aws.amazon.com/sdk-for-kotlin/latest/developer-guide/home.html}.
+\newblock [Dostęp: 13.05.2025].
 
 \bibitem{8513710}
 D.~Bardsley, L.~Ryan, and J.~Howard.
 \newblock Serverless performance and optimization strategies.
 \newblock In {\em 2018 IEEE International Conference on Smart Cloud (SmartCloud)}, pages 19--26, 2018.
+
+\bibitem{DBLP:journals/corr/BergstromFRS13}
+L.~Bergstrom, M.~Fluet, J.~H. Reppy, and N.~Sandler.
+\newblock Practical inlining of functions with free variables.
+\newblock {\em CoRR}, abs/1306.1919, 2013.
+
+\bibitem{9803765}
+D.~Beronić, L.~Modrić, B.~Mihaljević, and A.~Radovan.
+\newblock Comparison of structured concurrency constructs in java and kotlin - virtual threads and coroutines.
+\newblock In {\em 2022 45th Jubilee International Convention on Information, Communication and Electronic Technology (MIPRO)}, pages 1466--1471, 2022.
 
 \bibitem{brooker2021restoringuniquenessmicrovmsnapshots}
 M.~Brooker, A.~C. Catangiu, M.~Danilov, A.~Graf, C.~MacCarthaigh, and A.~Sandu.
@@ -102,6 +128,11 @@ P.~O. Ferreira Dos~Santos, H.~Jorge De Moura~Costa, V.~R.~Q. Leithardt, and P.~J
 \newblock 2023.
 \newblock Cited by: 0.
 
+\bibitem{Gajek_Plechawska-Wójcik_2024}
+P.~Gajek and M.~Plechawska-Wójcik.
+\newblock Performance comparison of the java and kotlin programming languages based on an auto-scroller mobile game.
+\newblock {\em Journal of Computer Sciences Institute}, 33:285--291, Dec. 2024.
+
 \bibitem{9027427}
 B.~C. Ghosh, S.~K. Addya, N.~B. Somy, S.~B. Nath, S.~Chakraborty, and S.~K. Ghosh.
 \newblock Caching techniques to improve latency in serverless architectures.
@@ -126,6 +157,12 @@ D.~Ivanov and A.~Petrova.
 D.~Jackson and G.~Clynch.
 \newblock An investigation of the impact of language runtime on the performance and cost of serverless functions.
 \newblock In {\em 2018 IEEE/ACM International Conference on Utility and Cloud Computing Companion (UCC Companion)}, pages 154--160, 2018.
+
+\bibitem{kotlinMultiplatformDev}
+JetBrains.
+\newblock {Kotlin Multiplatform Development}.
+\newblock \url{https://www.jetbrains.com/help/kotlin-multiplatform-dev}.
+\newblock [Dostęp: 15.05.2025].
 
 \bibitem{8844428}
 A.~Kaplunovich.

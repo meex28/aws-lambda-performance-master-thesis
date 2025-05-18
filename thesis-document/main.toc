@@ -26,9 +26,9 @@
 \contentsline {section}{\numberline {3.1}SnapStart}{35}{section.3.1}%
 \contentsline {section}{\numberline {3.2}GraalVM}{37}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Kotlin}{39}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Kotlin/JS}{39}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Kotlin/Native}{39}{section.3.5}%
-\contentsline {chapter}{\numberline {4}Opis badania}{41}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Wyniki}{43}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Wnioski i dyskusja}{45}{chapter.6}%
-\contentsline {chapter}{Zakończenie}{47}{chapter*.12}%
+\contentsline {section}{\numberline {3.4}Kotlin/JS}{42}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Kotlin/Native}{42}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Opis badania}{43}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Wyniki}{45}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Wnioski i dyskusja}{47}{chapter.6}%
+\contentsline {chapter}{Zakończenie}{49}{chapter*.13}%
