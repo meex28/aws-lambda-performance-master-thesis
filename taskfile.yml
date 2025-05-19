@@ -1,23 +1,27 @@
 version: '3'
 
 tasks:
-    build:java-function:jar:
-        dir: java-function
-        cmds:
-            - ./gradlew build -x test
-    build:java-function:native:
-        dir: java-function
-        cmds:
-            - ./gradlew build -Dquarkus.native.enabled=true -Dquarkus.package.jar.enabled=false -x test
-    build:kotlin-function:jar:
-        dir: kotlin-function
-        cmds:
-            - ./gradlew shadowJar
-    build:kotlin-function:js:
-        dir: kotlin-function
-        cmds:
-            - ./gradlew buildJsLambdaRelease
-    build:kotlin-function:native:
-        dir: kotlin-function
-        cmds:
-            - ./gradlew buildLambdaRelease
+  build:java-function:jar:
+    dir: java-function
+    cmds:
+      - ./gradlew build -x test
+  build:java-function:native:
+    dir: java-function
+    cmds:
+      - ./gradlew build -Dquarkus.native.enabled=true -Dquarkus.package.jar.enabled=false -x test
+  build:kotlin-function:jar:
+    dir: kotlin-function
+    cmds:
+      - ./gradlew shadowJar
+  build:kotlin-function:js:
+    dir: kotlin-function
+    cmds:
+      - ./gradlew buildJsLambdaRelease
+  build:kotlin-function:native:
+    dir: kotlin-function
+    cmds:
+      - ./gradlew buildLambdaRelease
+  build:kotlin-function:raw-native:
+    dir: kotlin-function
+    cmds:
+      - ./gradlew linkReleaseExecutableLinuxX64

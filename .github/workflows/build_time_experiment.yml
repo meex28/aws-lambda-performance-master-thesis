@@ -1,0 +1,88 @@
+name: Measure functions build time
+
+on:
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  build-java-function-jar:
+    runs-on: ubuntu-latest
+    container:
+      image: gradle:jdk21-jammy
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v3
+      - name: install taskfile
+        uses: ./.github/actions/install_taskfile
+      - name: preinstall dependencies
+        run: |
+          task --version
+      - name: build
+        run: task build:java-function:jar
+
+  build-java-function-native:
+    runs-on: ubuntu-latest
+    container:
+      image: gradle:jdk21-graal-jammy
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v3
+      - name: install taskfile
+        uses: ./.github/actions/install_taskfile
+      - name: preinstall dependencies
+        run: |
+          task --version
+      - name: build
+        run: task build:java-function:native
+
+  build-kotlin-function-jar:
+    runs-on: ubuntu-latest
+    container:
+      image: gradle:jdk21-jammy
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v3
+      - name: install taskfile
+        uses: ./.github/actions/install_taskfile
+      - name: preinstall dependencies
+        run: |
+          task --version
+      - name: build
+        run: task build:kotlin-function:jar
+
+  #  install zip
+  build-kotlin-function-js:
+    runs-on: ubuntu-latest
+    container:
+      image: gradle:jdk21-jammy
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v3
+      - name: install taskfile
+        uses: ./.github/actions/install_taskfile
+      - name: preinstall dependencies
+        run: |
+          task --version
+      - name: build
+        run: task build:kotlin-function:js
+
+  build-kotlin-function-native:
+    runs-on: ubuntu-latest
+    container:
+      image: gradle:jdk21-graal-jammy
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v3
+      - name: install taskfile
+        uses: ./.github/actions/install_taskfile
+      - name: preinstall dependencies
+        run: |
+          task --version
+          apt-get update 
+          apt-get install -y curl libcurl4-openssl-dev unzip zip
+        shell: bash
+      - name: build
+        run: task build:kotlin-function:raw-native
