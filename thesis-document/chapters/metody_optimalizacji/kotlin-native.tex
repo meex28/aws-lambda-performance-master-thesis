@@ -1,1 +1,55 @@
 \section{Kotlin/Native}\label{chapter:kotlin_native}
+
+Bardzo skuteczną metodą optymalizacji wydajności może być rezygnacja z zarządzanych środowisk uruchomieniowych jak JVM.
+Jedną z metod jest kompilacja do kodu natywnego, który uruchamiany jest bezpośrednio na systemie operacyjnym poza maszyną wirtualną.
+Kotlin/Native oferuje zaawansową kompilację kodu Kotlin, który następnie może zostać uruchomiony w AWS Lambda z użyciem Amazon Linux.
+W ramach rozdziału opisano sposób działania Kotlin/Native, jego możliwości i cechy, które mogą negatywnie wpłynąć na rozwój oprogramowania bezserwerowego.
+
+Kluczowym elementami Kotlin/Native są kompilator oparty o LLVM oraz natywne implementacje bibliotek standardowych Kotlina \cite{kotlinlangKotlinDocs}.
+Jak opisują Lattner i Adve \cite{1281665}, LLVM to framework kompilatora zaprojektowany do wspierania ciągłej i transparentnej analizy oraz transformacji programów.
+Definiuje on wspólną, niskopoziomową reprezentację kodu w formie SSA (ang. Static Single Assignment) z systemem typów niezależnym od języka, co umożliwia implementację cech języków wysokiego poziomu. 
+Głównym celem LLVM jest umożliwienie analizy i transformacji programu na różnych etapach jego życia, w tym w czasie kompilacji, linkowania, uruchomienia oraz w czasie bezczynności między uruchomieniami.
+Jego użycie pozwala następnie na zbudowanie natywnych plików binarnych, które mogą zostać uruchomione bezpośrednio na docelowej platformie, dla której zostały skompilowane.
+Wymaga to jednak dokładnego określenia systemu operacyjnego i architektury już w momencie kompilacji.
+
+Kompilacja Kotlina do kodu natywnego otwiera przez KMP możliwość tworzenia samodzielnych programów wykonywalnych, które nie wymagają zewnętrznego środowiska uruchomieniowego.
+Znajduje to zastosowanie w scenariuszach takich jak rozwój aplikacji mobilnych na platformę iOS, współdzielenie logiki biznesowej między różnymi platformami (np. Android i iOS) czy budowa narzędzi konsolowych.
+Dlatego ważnym aspektem Kotlin/Native jest współdziałanie z istniejącym kodem natywnym.
+Pozwala to na bezpośrednie wywoływanie funkcji z bibliotek napisanych w języku C, a na platformach firmy Apple również Objective-C \cite{kotlinlangKotlinDocs}.
+Znacząco rozszerza to zakres dostępnych narzędzi i bibliotek, które mogą zostać użyte przez programistów.
+
+Kotlin/Native oferuje wiele różnych platform docelowych, rozszerzając tym samym zakres zastosowań języka Kotlin.
+Wśród wspieranych systemów docelowych znajdują się platformy Apple (takie jak macOS, iOS, watchOS, tvOS), Android, a także systemy z rodziny Windows oraz Linux \cite{kotlinlangKotlinDocs}.
+Szczególnie istotnie dla usługi AWS Lambda są jednak platformy linuxowe.
+Są to linuxX64 oraz linuxArm64, które pozwalają na uruchomienie kodu z użyciem odpowiednio architektur x86 oraz ARM.
+Pozwala to następnie na ich bezpośrednie użycie w AWS Lambda, działającej bezpośrednio w systemie Amazon Linux.
+Dzięki temu możliwa jest poprawa wydajności, szczególnie w aspekcie zimnych startów, które są znacznym wyzwaniem dla funkcji opartych o JVM.
+
+Istotnym elementen funkcji bezserwerowych jest zarządzanie pamięcią, która wpływa bezpośrednio na koszty.
+W przypadku Kotlin/Native, ewolucja modelu zarządzania pamięcią znacząco wpłynęła na jego użyteczność i możliwości optymalizacyjne.
+Początkowa technologia ta opierała się na restrykcyjnym modelu z izolacją obiektów między wątkami \cite{kotlinlangKotlinDocs}.
+Powodowało to skomplikowane zarządzanie stanem w operacjach współbieżnych.
+Aktualnie, Kotlin/Native implementuje nowy menedżer pamięci.
+Wprowadza on automatyczne zarządzanie pamięcią poprzez współbieżny, nieblokujący moduł zbierania śmieci (ang. garbage collector) \cite{kotlinlangKotlinDocs}.
+Znacząco upraszcza to programowanie współbieżne, które teraz nie wymaga ręcznego zarządzania obiektami.
+Mechanizm ten wprowadza intuicyjne współdzielenie stanu, które jest analogiczne do środowiska JVM, jednak bez konieczności kosztownej obsługi maszyny wirtualnej Java.
+
+Mimo potencjalnych zysków w ramach wydajności, użycie Kotlin/Native może nieść utrudnienia w kontekście integracji z bibliotekami zewnętrznymi.
+Język C nie jest oficjalnie wspierany jako język programowania AWS Lambda \cite{awsLambdaDeveloperGuide}, co wynika zapewne z jego niewielkiej popularności na tej platformie.
+Współdziałanie z kodem natywnym w Kotlin/Native skupia się jednak na platformach klienckich, co nie musi być do końca użyteczne w zakresie AWS Lambda.
+Amazon Web Services oferuje swoje SDK w języku C++, który nie jest jednak łatwo integrowalny z Kotlin/Native (w odróżnieniu od C i Objective-C).
+Jest to ważny czynnik, który powinien być uwzględniony przez programistów projektujących aplikacje bezserwerowe.
+
+% Plan
+% 0. Wstęp
+
+% 1. Jak to działa:
+% - Opisać LLVM
+% - Gdzie się głównie używa
+% - Wspomnieć o interoperacyjności z C, Objective-C itp
+% - Jakie platformy? (https://kotlinlang.org/docs/native-target-support.html#for-library-authors)
+
+% 2. Zarządzanie pamięcią (https://kotlinlang.org/docs/native-memory-manager.html)
+
+% 3. Wady - problem z dostępnością bibliotek
+% - AWS SDK może poprzez C++ jednak może to wymagać większego nakładu pracy

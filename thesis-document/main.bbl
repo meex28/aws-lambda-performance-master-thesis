@@ -10,6 +10,11 @@
 \newblock \url{https://www.http4k.org/ecosystem/http4k/}.
 \newblock [Dostęp: 16.05.2025].
 
+\bibitem{kotlinIrCompilatorGithub}
+{Repozytorium kodu źródłowego kompilatora Kotlin IR}.
+\newblock \url{https://github.com/JetBrains/kotlin/tree/master/compiler/ir/}.
+\newblock [Dostęp: 16.05.2025].
+
 \bibitem{246288}
 A.~Agache, M.~Brooker, A.~Iordache, A.~Liguori, R.~Neugebauer, P.~Piwonka, and D.-M. Popa.
 \newblock Firecracker: Lightweight virtualization for serverless applications.
@@ -64,7 +69,7 @@ B.~Cartaxo, G.~Pinto, and S.~Soares.
 \bibitem{Cavalheiro202389}
 A.~P. Cavalheiro and C.~Schepke.
 \newblock Exploring the serverless first strategy in cloud application development.
-\newblock page 89 – 94, 2023.
+\newblock pages 89 -- 94, 2023.
 \newblock Cited by: 0.
 
 \bibitem{10.1145/3377812.3382135}
@@ -199,6 +204,11 @@ D.~Lambion, R.~Schmitz, R.~Cordingly, N.~Heydari, and W.~Lloyd.
 \newblock Characterizing x86 and arm serverless performance variation: A natural language processing case study.
 \newblock In {\em Companion of the 2022 ACM/SPEC International Conference on Performance Engineering}, ICPE '22, page 69–75, New York, NY, USA, 2022. Association for Computing Machinery.
 
+\bibitem{1281665}
+C.~Lattner and V.~Adve.
+\newblock Llvm: a compilation framework for lifelong program analysis \& transformation.
+\newblock In {\em International Symposium on Code Generation and Optimization, 2004. CGO 2004.}, pages 75--86, 2004.
+
 \bibitem{LEITNER2019340}
 P.~Leitner, E.~Wittern, J.~Spillner, and W.~Hummer.
 \newblock A mixed-method empirical study of function-as-a-service software development in industrial practice.
@@ -296,7 +306,7 @@ D.~Taibi, B.~Kehoe, and D.~Poccia.
 
 \bibitem{vanDonkersgoed2023postnl}
 L.~van Donkersgoed.
-\newblock Postnl’s serverless journey: Business overview, oct 2023.
+\newblock Postnl's serverless journey: Business overview, oct 2023.
 \newblock Dostęp: 04.05.2025.
 
 \bibitem{SpecRgCloudGroupVisionOnThePerformanceChallengesOfFaas}

@@ -9,48 +9,49 @@ Warning--entry type for "vanDonkersgoed2023postnl" isn't style-file defined
 --line 546 of file sources/bibliography.bib
 Warning--to sort, need author or key in kotlinlangKotlinDocs
 Warning--to sort, need author or key in http4kCoreDocs
+Warning--to sort, need author or key in kotlinIrCompilatorGithub
 Warning--empty booktitle in Cavalheiro202389
 Warning--empty booktitle in Cordingly2020704
 Warning--empty booktitle in FerreiraDosSantos2023
-You've used 66 entries,
+You've used 68 entries,
             2118 wiz_defined-function locations,
-            854 strings with 17311 characters,
-and the built_in function-call counts, 24342 in all, are:
-= -- 2353
-> -- 1166
-< -- 29
-+ -- 469
-- -- 396
-* -- 1448
-:= -- 3757
-add.period$ -- 210
-call.type$ -- 66
-change.case$ -- 394
+            863 strings with 17665 characters,
+and the built_in function-call counts, 24882 in all, are:
+= -- 2402
+> -- 1180
+< -- 30
++ -- 475
+- -- 400
+* -- 1481
+:= -- 3836
+add.period$ -- 216
+call.type$ -- 68
+change.case$ -- 402
 chr.to.int$ -- 0
-cite$ -- 71
-duplicate$ -- 1029
-empty$ -- 1940
-format.name$ -- 396
-if$ -- 5415
+cite$ -- 74
+duplicate$ -- 1047
+empty$ -- 2004
+format.name$ -- 400
+if$ -- 5540
 int.to.chr$ -- 0
-int.to.str$ -- 66
-missing$ -- 43
-newline$ -- 337
-num.names$ -- 128
-pop$ -- 558
+int.to.str$ -- 68
+missing$ -- 44
+newline$ -- 347
+num.names$ -- 130
+pop$ -- 575
 preamble$ -- 1
-purify$ -- 330
+purify$ -- 336
 quote$ -- 0
-skip$ -- 893
+skip$ -- 902
 stack$ -- 0
-substring$ -- 1175
+substring$ -- 1215
 swap$ -- 394
-text.length$ -- 29
+text.length$ -- 30
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 264
-warning$ -- 5
-while$ -- 189
-width$ -- 68
-write$ -- 723
-(There were 7 warnings)
+type$ -- 272
+warning$ -- 6
+while$ -- 194
+width$ -- 70
+write$ -- 743
+(There were 8 warnings)

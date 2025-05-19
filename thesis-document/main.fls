@@ -446,6 +446,8 @@ INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm
 OUTPUT main.toc
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmr12.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmr10.tfm
 INPUT ./chapters/wstep/main.tex
 INPUT ./chapters/wstep/main.tex
 INPUT ./chapters/wstep/main.tex
@@ -461,8 +463,6 @@ INPUT ./chapters/slownik_pojec.tex
 INPUT ./chapters/slownik_pojec.tex
 INPUT ./chapters/slownik_pojec.tex
 INPUT chapters/slownik_pojec.tex
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmr12.tfm
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmr10.tfm
 INPUT ./chapters/dzialanie_faas/main.tex
 INPUT ./chapters/dzialanie_faas/main.tex
 INPUT ./chapters/dzialanie_faas/main.tex
@@ -550,6 +550,11 @@ INPUT ./charts/kmp-structure.drawio.png
 INPUT ./chapters/metody_optimalizacji/kotlin-js.tex
 INPUT ./chapters/metody_optimalizacji/kotlin-js.tex
 INPUT chapters/metody_optimalizacji/kotlin-js.tex
+INPUT ./charts/kotlin-js-ir.drawio.png
+INPUT ./charts/kotlin-js-ir.drawio.png
+INPUT ./charts/kotlin-js-ir.drawio.png
+INPUT ./charts/kotlin-js-ir.drawio.png
+INPUT ./charts/kotlin-js-ir.drawio.png
 INPUT ./chapters/metody_optimalizacji/kotlin-native.tex
 INPUT ./chapters/metody_optimalizacji/kotlin-native.tex
 INPUT chapters/metody_optimalizacji/kotlin-native.tex

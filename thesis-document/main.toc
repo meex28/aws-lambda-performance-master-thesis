@@ -27,8 +27,8 @@
 \contentsline {section}{\numberline {3.2}GraalVM}{37}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Kotlin}{39}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Kotlin/JS}{42}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Kotlin/Native}{42}{section.3.5}%
-\contentsline {chapter}{\numberline {4}Opis badania}{43}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Wyniki}{45}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Wnioski i dyskusja}{47}{chapter.6}%
-\contentsline {chapter}{Zakończenie}{49}{chapter*.13}%
+\contentsline {section}{\numberline {3.5}Kotlin/Native}{44}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Opis badania}{47}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Wyniki}{49}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Wnioski i dyskusja}{51}{chapter.6}%
+\contentsline {chapter}{Zakończenie}{53}{chapter*.14}%

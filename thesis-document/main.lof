@@ -9,6 +9,7 @@
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Proces uruchomienia AWS Lambda z użyciem metody SnapStart [źródło:~opracowanie~własne]}}{35}{figure.caption.10}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Uproszczony proces budowy obrazu natywnego GraalVM [źródło:~opracowanie~własne]}}{38}{figure.caption.11}%
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Przykładowa struktura pojektu Kotlin Multiplatform [źródło:~opracowanie~własne]}}{41}{figure.caption.12}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Proces transformacji kodu Kotlin do kodu JavaScript [źródło:~opracowanie~własne na bazie repozytorium kompilatora IR \cite {kotlinIrCompilatorGithub}]}}{43}{figure.caption.13}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
