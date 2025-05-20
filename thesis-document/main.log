@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.30)  19 MAY 2025 18:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.30)  20 MAY 2025 19:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1073,7 +1073,14 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count413
 \l__pdf_internal_box=\box146
-) (./main.aux)
+) (./main.aux
+
+LaTeX Warning: Label `chapter:implementacja_funkcji' multiply defined.
+
+
+LaTeX Warning: Label `chapter:implementacja_funkcji' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
@@ -1192,12 +1199,12 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
-<title_page/title_page.pdf, id=127, 597.432pt x 845.07718pt>
+<title_page/title_page.pdf, id=143, 597.432pt x 845.07718pt>
 File: title_page/title_page.pdf Graphic file (type pdf)
 <use title_page/title_page.pdf>
 Package pdftex.def Info: title_page/title_page.pdf  used on input line 13.
 (pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
-<title_page/title_page.pdf, id=129, page=1, 597.432pt x 845.07718pt>
+<title_page/title_page.pdf, id=145, page=1, 597.432pt x 845.07718pt>
 File: title_page/title_page.pdf Graphic file (type pdf)
 <use title_page/title_page.pdf, page 1>
 Package pdftex.def Info: title_page/title_page.pdf , page1 used on input line 13.
@@ -1267,15 +1274,15 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 3.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-))
+)
+
+[2
+
+])
 \tf@toc=\write7
 \openout7 = `main.toc'.
 
 
-
-[2
-
-]
 
 [3]
 
@@ -1323,7 +1330,7 @@ Overfull \hbox (0.3159pt too wide) in paragraph at lines 25--26
 
 
 [9]
-<charts/aws_lambda_lifecycle.drawio.png, id=350, 1087.06125pt x 171.64125pt>
+<charts/aws_lambda_lifecycle.drawio.png, id=370, 1087.06125pt x 171.64125pt>
 File: charts/aws_lambda_lifecycle.drawio.png Graphic file (type png)
 <use charts/aws_lambda_lifecycle.drawio.png>
 Package pdftex.def Info: charts/aws_lambda_lifecycle.drawio.png  used on input line 66.
@@ -1331,7 +1338,7 @@ Package pdftex.def Info: charts/aws_lambda_lifecycle.drawio.png  used on input l
 
 
 [10 <./charts/aws_lambda_lifecycle.drawio.png>]
-<charts/warm_cold_starts_lambda.png, id=364, 773.89125pt x 156.585pt>
+<charts/warm_cold_starts_lambda.png, id=384, 773.89125pt x 156.585pt>
 File: charts/warm_cold_starts_lambda.png Graphic file (type png)
 <use charts/warm_cold_starts_lambda.png>
 Package pdftex.def Info: charts/warm_cold_starts_lambda.png  used on input line 100.
@@ -1356,7 +1363,7 @@ Rozdzia\l  2.
 [16]
 
 [17]
-<charts/literature_review_process.drawio.png, id=419, 1024.82875pt x 402.50375pt>
+<charts/literature_review_process.drawio.png, id=439, 1024.82875pt x 402.50375pt>
 File: charts/literature_review_process.drawio.png Graphic file (type png)
 <use charts/literature_review_process.drawio.png>
 Package pdftex.def Info: charts/literature_review_process.drawio.png  used on input line 206.
@@ -1417,19 +1424,23 @@ Underfull \vbox (badness 2600) has occurred while \output is active []
 ]
 Rozdzia\l  3.
 (./chapters/metody_optimalizacji/snapstart.tex
-<charts/snapstart.png, id=641, 764.8575pt x 214.8025pt>
+<charts/snapstart.png, id=661, 764.8575pt x 214.8025pt>
 File: charts/snapstart.png Graphic file (type png)
 <use charts/snapstart.png>
 Package pdftex.def Info: charts/snapstart.png  used on input line 22.
 (pdftex.def)             Requested size: 448.42822pt x 125.93591pt.
 
 
-[35 <./charts/snapstart.png>]
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-[36]) (./chapters/metody_optimalizacji/graalvm.tex
+
+
+[35]
+
+[36 <./charts/snapstart.png>]) (./chapters/metody_optimalizacji/graalvm.tex
 
 [37]
-<charts/graalvm-build-process.drawio.png, id=687, 603.25375pt x 289.08pt>
+<charts/graalvm-build-process.drawio.png, id=706, 603.25375pt x 289.08pt>
 File: charts/graalvm-build-process.drawio.png Graphic file (type png)
 <use charts/graalvm-build-process.drawio.png>
 Package pdftex.def Info: charts/graalvm-build-process.drawio.png  used on input line 38.
@@ -1441,17 +1452,27 @@ Package pdftex.def Info: charts/graalvm-build-process.drawio.png  used on input 
 [39]
 
 [40]
-<charts/kmp-structure.drawio.png, id=730, 643.40375pt x 563.10374pt>
+<charts/kmp-structure.drawio.png, id=750, 643.40375pt x 563.10374pt>
 File: charts/kmp-structure.drawio.png Graphic file (type png)
 <use charts/kmp-structure.drawio.png>
 Package pdftex.def Info: charts/kmp-structure.drawio.png  used on input line 88.
 (pdftex.def)             Requested size: 448.42822pt x 392.47726pt.
 
 
-[41 <./charts/kmp-structure.drawio.png>]) (./chapters/metody_optimalizacji/kotlin-js.tex
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-[42]
-<charts/kotlin-js-ir.drawio.png, id=751, 1478.52374pt x 983.675pt>
+) (./chapters/metody_optimalizacji/kotlin-js.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[41]
+Underfull \vbox (badness 1748) has occurred while \output is active []
+
+
+
+[42 <./charts/kmp-structure.drawio.png>]
+<charts/kotlin-js-ir.drawio.png, id=770, 1478.52374pt x 983.675pt>
 File: charts/kotlin-js-ir.drawio.png Graphic file (type png)
 <use charts/kotlin-js-ir.drawio.png>
 Package pdftex.def Info: charts/kotlin-js-ir.drawio.png  used on input line 21.
@@ -1469,101 +1490,100 @@ Package pdftex.def Info: charts/kotlin-js-ir.drawio.png  used on input line 21.
 
 ]
 Rozdzia\l  4.
-) (./chapters/wyniki/main.tex
+
 
 [47]
 
-[48
+[48{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
+<charts/experiment-architecture.drawio.png, id=831, 815.045pt x 618.31pt>
+File: charts/experiment-architecture.drawio.png Graphic file (type png)
+<use charts/experiment-architecture.drawio.png>
+Package pdftex.def Info: charts/experiment-architecture.drawio.png  used on input line 99.
+(pdftex.def)             Requested size: 472.03123pt x 358.0917pt.
+) (./chapters/wyniki/main.tex
+
+[49 <./charts/experiment-architecture.drawio.png>]
+
+[50
 
 
 ]
 Rozdzia\l  5.
 ) (./chapters/wnioski_dyskusja/main.tex
 
-[49]
+[51]
 
-[50
+[52
 
 
 ]
 Rozdzia\l  6.
 ) (./chapters/zakonczenie/main.tex
 
-[51]
-
-[52
-
-
-]) (./main.bbl
-
 [53]
 
 [54
 
 
-]
+]) (./main.bbl
 
 [55]
 
-[56]
+[56
+
+
+]
 
 [57]
-Underfull \hbox (badness 2326) in paragraph at lines 277--280
-[]\T1/lmr/m/n/12 (+20) A. W. Se-rvi-ces.  Ama-zon ec2 do-cu-men-ta-tion, 2025.  Do-st¦p 21.03.2025 z
- []
-
-
 
 [58]
-Underfull \hbox (badness 1688) in paragraph at lines 282--285
-[]\T1/lmr/m/n/12 (+20) A. W. Se-rvi-ces.  Ama-zon ecs de-ve-lo-per gu-ide, 2025.  Do-st¦p 21.03.2025 z
- []
 
+[59]
 
-Underfull \hbox (badness 2285) in paragraph at lines 287--290
-[]\T1/lmr/m/n/12 (+20) A. W. Se-rvi-ces.  Aws lambda do-cu-men-ta-tion, 2025.  Do-st¦p 21.03.2025 z
- []
+[60]
 
+[61])
 
-
-[59])
-
-[60] (./main.lof)
+[62] (./main.lof)
 \tf@lof=\write8
 \openout8 = `main.lof'.
 
 
 
-[61] (./main.lot)
+[63] (./main.lot)
 \tf@lot=\write9
 \openout9 = `main.lot'.
 
 
 
-[62]
-runsystem(latexminted cleantemp  --timestamp 20250519185240 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
+[64]
+runsystem(latexminted cleantemp  --timestamp 20250520192901 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
 
  (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 972A2745D2A766D31B15AD9081D4DFBC;4644.
+(rerunfilecheck)             Checksum: 4CD1B738A1211C93F20F5EE6C7D3EBC1;5291.
  ) 
 Here is how much of TeX's memory you used:
- 31126 strings out of 473190
- 568737 string characters out of 5715800
- 1196459 words of memory out of 5000000
- 53356 multiletter control sequences out of 15000+600000
+ 31160 strings out of 473190
+ 569520 string characters out of 5715800
+ 1196742 words of memory out of 5000000
+ 53375 multiletter control sequences out of 15000+600000
  623699 words of font info for 169 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,17n,96p,1071b,1062s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb>
-Output written on main.pdf (67 pages, 796832 bytes).
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
+Output written on main.pdf (69 pages, 852562 bytes).
 PDF statistics:
- 970 PDF objects out of 1000 (max. 8388607)
- 830 compressed objects within 9 object streams
- 208 named destinations out of 1000 (max. 500000)
- 35119 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 1043 PDF objects out of 1200 (max. 8388607)
+ 892 compressed objects within 9 object streams
+ 220 named destinations out of 1000 (max. 500000)
+ 35156 words of extra memory for PDF output out of 35830 (max. 10000000)
 

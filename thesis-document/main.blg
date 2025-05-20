@@ -4,54 +4,54 @@ The top-level auxiliary file: main.aux
 The style file: abbrv.bst
 Database file #1: sources/bibliography.bib
 Warning--entry type for "cui2024serverless" isn't style-file defined
---line 537 of file sources/bibliography.bib
+--line 547 of file sources/bibliography.bib
 Warning--entry type for "vanDonkersgoed2023postnl" isn't style-file defined
---line 546 of file sources/bibliography.bib
+--line 556 of file sources/bibliography.bib
 Warning--to sort, need author or key in kotlinlangKotlinDocs
 Warning--to sort, need author or key in http4kCoreDocs
 Warning--to sort, need author or key in kotlinIrCompilatorGithub
 Warning--empty booktitle in Cavalheiro202389
 Warning--empty booktitle in Cordingly2020704
 Warning--empty booktitle in FerreiraDosSantos2023
-You've used 68 entries,
+You've used 69 entries,
             2118 wiz_defined-function locations,
-            863 strings with 17665 characters,
-and the built_in function-call counts, 24882 in all, are:
-= -- 2402
-> -- 1180
+            869 strings with 17769 characters,
+and the built_in function-call counts, 25121 in all, are:
+= -- 2430
+> -- 1187
 < -- 30
-+ -- 475
-- -- 400
-* -- 1481
-:= -- 3836
-add.period$ -- 216
-call.type$ -- 68
-change.case$ -- 402
++ -- 478
+- -- 402
+* -- 1487
+:= -- 3879
+add.period$ -- 222
+call.type$ -- 69
+change.case$ -- 406
 chr.to.int$ -- 0
-cite$ -- 74
-duplicate$ -- 1047
-empty$ -- 2004
-format.name$ -- 400
-if$ -- 5540
+cite$ -- 75
+duplicate$ -- 1054
+empty$ -- 2026
+format.name$ -- 402
+if$ -- 5594
 int.to.chr$ -- 0
-int.to.str$ -- 68
+int.to.str$ -- 69
 missing$ -- 44
-newline$ -- 347
-num.names$ -- 130
-pop$ -- 575
+newline$ -- 355
+num.names$ -- 132
+pop$ -- 581
 preamble$ -- 1
-purify$ -- 336
+purify$ -- 339
 quote$ -- 0
-skip$ -- 902
+skip$ -- 906
 stack$ -- 0
-substring$ -- 1215
-swap$ -- 394
+substring$ -- 1220
+swap$ -- 395
 text.length$ -- 30
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 272
+type$ -- 276
 warning$ -- 6
-while$ -- 194
-width$ -- 70
-write$ -- 743
+while$ -- 196
+width$ -- 71
+write$ -- 759
 (There were 8 warnings)

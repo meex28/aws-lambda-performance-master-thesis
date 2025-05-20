@@ -38,6 +38,28 @@ A.~Agache, M.~Brooker, A.~Iordache, A.~Liguori, R.~Neugebauer, P.~Piwonka, and D
 \newblock \url{https://docs.aws.amazon.com/sdk-for-kotlin/latest/developer-guide/home.html}.
 \newblock [Dostęp: 13.05.2025].
 
+\bibitem{awsEc2Guide}
+{Amazon Web Services}.
+\newblock Amazon ec2 documentation, {2025}.
+\newblock Dostęp 21.03.2025 z https://docs.aws.amazon.com/ec2/.
+
+\bibitem{awsEcsDevGuide}
+{Amazon Web Services}.
+\newblock Amazon ecs developer guide, {2025}.
+\newblock Dostęp 21.03.2025 z https://docs.aws.amazon.com/AmazonECS/latest/developerguide.
+
+\bibitem{awsLambdaDocs}
+{Amazon Web Services}.
+\newblock Aws lambda documentation.
+\newblock \url{https://docs.aws.amazon.com/lambda/latest/dg/}, {2025}.
+\newblock Dostęp: 21.03.2025.
+
+\bibitem{awsLambdaPricing}
+{Amazon Web Services}.
+\newblock {AWS Lambda pricing}.
+\newblock \url{https://aws.amazon.com/lambda/pricing/}, {2025}.
+\newblock Dostęp: 20.05.2025.
+
 \bibitem{8513710}
 D.~Bardsley, L.~Ryan, and J.~Howard.
 \newblock Serverless performance and optimization strategies.
@@ -265,28 +287,14 @@ A.~Raza, I.~Matta, N.~Akhtar, V.~Kalavri, and V.~Isahagian.
 
 \bibitem{serverlessArchitectureMarketReport}
 Research and Markets.
-\newblock Serverless architecture market report 2025, (2025).
-\newblock Dostęp 20.03.2025 z https://www.researchandmarkets.com/reports/5953253/serverless-architecture-market-report.
+\newblock Serverless architecture market report 2025.
+\newblock \url{https://www.researchandmarkets.com/reports/5953253/serverless-architecture-market-report}, (2025).
+\newblock Dostęp: 20.03.2025.
 
 \bibitem{ritzal2020optimizing}
 R.~Ritzal.
 \newblock Optimizing java for serverless applications.
 \newblock Master's thesis, University of Applied Sciences FH Campus Wien, 2020.
-
-\bibitem{awsEc2Guide}
-A.~W. Services.
-\newblock Amazon ec2 documentation, {2025}.
-\newblock Dostęp 21.03.2025 z https://docs.aws.amazon.com/ec2/.
-
-\bibitem{awsEcsDevGuide}
-A.~W. Services.
-\newblock Amazon ecs developer guide, {2025}.
-\newblock Dostęp 21.03.2025 z https://docs.aws.amazon.com/AmazonECS/latest/developerguide.
-
-\bibitem{awsLambdaDocs}
-A.~W. Services.
-\newblock Aws lambda documentation, {2025}.
-\newblock Dostęp 21.03.2025 z https://docs.aws.amazon.com/lambda/latest/dg/.
 
 \bibitem{shrestha2019lambda}
 S.~Shrestha.
