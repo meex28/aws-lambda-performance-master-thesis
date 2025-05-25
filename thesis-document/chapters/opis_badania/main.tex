@@ -83,9 +83,110 @@ gdzie:
 
 \section{Implementacja funkcji}\label{chapter:implementacja_funkcji}
 
-% Co robi funkcja? Dlaczego taka, dlaczego nie używa usług zewnętrznych
-% Co dokładnie zaimplementowano: Java (Quarkus + GraalVM), Kotlin (CommonMain + odpowiednio JVM, Native, JS) oraz SnapStart
-% Jakieś problemy, które są związane z implementacją (np. funkcja async dla KotlinJS, budowa Kotlin/Native)
+Dla przeprowadzenia badania niezbędne było określenie zadań, które będą realizowane przez funkcję AWS Lambda.
+W celu zapewnienia lepszej oceny skuteczności konkretnych metod optymalizacji oraz upodobnienia środowiska badawczego do realnych użyć usługi, przyjęto kilka założeń.
+Następnie, stworzono implementację usługi, zgodną z przyjętymi wcześniej zasadami.
+
+Po pierwsze, funkcja powinna wykonywać pewne obliczenia oraz nie być programem zwracającym jedynie tekstową wiadomość (np. ,,Hello World!''). 
+Założenie to pozwoli na lepszą weryfikację metod, poprzez realne użycie zaimplementowanego kodu.
+Eismann i inni autorzy \cite{eismann2021reviewserverlessusecases} dokonali przeglądu przypadków użycia technologii bezserwerowych.
+Wynika z niego, że najczęstsze przypadki użycia to implementacje interfejsu API, procesowanie wydarzeń, zadania wsadowe (ang. batch tasks) oraz wsparcie operacji i monitoring istniejących systemów.
+Wszystkie te przypadki wymagają wykonania choćby podstawowych operacji, dlatego stworzenie funkcji wykonującej określone obliczenia pozwoli na analizę metod, w środowisku bardziej zbliżonym do realnych zastosowań.
+W przypadku prostych funkcji, które jedynie zwracają pewien tekst niezależny od danych wejściowych, wywołanie skupiłoby się jedynie na procesie inicjalizacji danego narzędzia.
+
+Drugim założeniem jest użycie zewnętrznych zależności, które powinny zostać zawarte w zbudowanym artefakcie.
+Wynika ono z dwóch powodów. Po pierwsze, biznesowe użycia AWS Lambda często wymagają zależności zewnętrznych (np. pakietów SDK dla innych usług \cite{eismann2021reviewserverlessusecases}).
+Po drugie, wielkość pakietu wdrożeniowego wpływa na wydajność funkcji \cite{8116416}\cite{9095731}.
+Zatem aby zwiększyć jego rozmiar i upodobnić ostateczne artefakty do zastosowań praktycznych, zdecydowano się dodać biblioteki zewnętrzne.
+Są one jednak zorientowane na konkretnym zadaniu (co zostanie przedstawione w dalszej części rozdziału), a ich liczba nie powinna być zbyt duża.
+
+Po trzecie, funkcja nie powinna używać usług zewnętrznych.
+Funkcje bezserwerowe bardzo często integrują się z innymi usługami \cite{eismann2021reviewserverlessusecases}, jednak odrzucono ich użycie w badanych funkcjach.
+Wynika to z ryzyka wpływu czynników, które są niezależne od badanych metod, na czas procesowania funkcji.
+Mogą to być różnego typu opóźnienia sieciowe (np. w przypadku zapytań do baz danych działających poza infrastrukturą AWS Lambda), które mogą różnić się między wywołaniami.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.95\textwidth]{charts/lambda_workflow.drawio.png}
+    \caption{Wizualizacja procesu realizowanego przez badane funkcje AWS Lambda [źródło: opracowanie własne]}
+    \label{fig:lambda_workflow}
+\end{figure}
+
+Zgodnie z powyższym opracowano zadanie, które będzie realizowane przez funkcje.
+Aby utrzymać prostotę implementacji, zdecydowano się na wykonanie przez nią obliczeń, którymi jest mnożenie macierzy.
+Są to już jednak wystarczające operacje, które wydłużą czas działania funkcji.
+Macierze, które zostaną poddane mnożeniu były przekazywane do funkcji jako dane wejściowe.
+Umożliwiło to wykonanie dwóch kolejnych operacji: walidacji oraz deserializacji.
+W tym celu użyto zewnętrznych zależności, które pozwoliły na zwiększenie rozmiaru artefaktu.
+Biblioteki dla konkretnych języków oraz zastosowań zostały przedstawione w Tabeli \ref{table:lambda_external_dependencies}.
+Mimo interoperacyjności Javy i Kotlina, zdecydowano się na użycie bibliotek, które zostały zaimplementowane w konretnym języku używanym w danej funkcji.
+Cały proces realizowany przez funkcję AWS Lambda został przedstawiony na Rysunku \ref{fig:lambda_workflow}.
+Jego pierwszym elementem była deserializacja danych wejściowych, które zostały przekazane jako napis (typ String) w formacie JSON.
+Już odczytane macierze zostały poddane walidacji sprawdzającej ich wielkość, a następnie pomnożone.
+Wynik działania został poddany serializacji z powrotem do postaci napisu i zwrócony jako wynik wywołania funkcji.
+Cały proces został analogicznie zaimplementowany w każdej z badanych funkcji.
+
+\begin{table}[h!]
+    \caption{Zewnętrzne zależności wykorzystane w badanych funkcjach}
+    \centering
+    \begin{tabularx}{\textwidth}{|X|X|X|} % Wszystkie trzy kolumny o równej szerokości, tabela na całą szerokość tekstu
+    \hline
+    \textbf{Język programowania} & \textbf{Przeznaczenie}           & \textbf{Nazwa biblioteki} \\ \hline
+    \multirow{2}{*}{Java}        & Serializacja i deserializacja    & io.quarkus:quarkus-jackson           \\ \cline{2-3}
+                                & Walidacja                        & io.quarkus:quarkus-hibernate-validator \\ \hline
+    \multirow{2}{*}{Kotlin}      & Serializacja i deserializacja    & org.jetbrains.kotlinx:kotlinx-serialization-json \\ \cline{2-3}
+                                & Walidacja                        & io.konform:konform                    \\ \hline
+    \end{tabularx}
+    \label{table:lambda_external_dependencies}
+\end{table}
+
+W ramach badania przygotowano 7 funkcji, które realizowały wybrane metody optymalizacji wydajności.
+Każda funkcja wykorzystywała specyficzne narzędzia, które zostały opisane poniżej, a ich wersje zostały podane w Tabeli \ref{table:lambda_tools_versions}.
+Funkcje wykorzystujące język Java używały jej w wersji 21, funkcje oparte o Kotlin używały go w wersji 2.1.0. 
+W ramach pracy zrealizowano poniższe warianty:
+
+\begin{itemize}
+    \item \textbf{Java JVM} - standardowa implementacja w języku Java, działająca w środowisku JVM, która służy jako baza do analizy skuteczności wybranych metod.
+    Została zrealizowana w oparciu framework Quarkus, który wspiera wdrożenia do AWS Lambda \cite{quarkus-docs} i znacząco przyspieszona rozwój oprogramowania.
+    Framework został wybrany także z powodu integracji z natywnymi obrazami GraalVM i wsparciem dla usługi SnapStart \cite{quarkus-docs}.
+    \item \textbf{Java JVM + SnapStart} - w celu wykorzystania metody SnapStart użyto tej samej implementacji jak w przypadku funkcji Java JVM.
+    Funkcja ta działa także z użyciem maszyny wirtualnej Java ale z aktywowaną funkcją SnapStart.
+    \item \textbf{Java GraalVM} - implementacja w języku Java, wykorzystująca ten sam kod jak w przypadku dwóch poprzednich funkcji, jednak skompilowany do obrazu natywnego GraalVM.
+    W tym celu wykorzystano możliwości frameworka Quarkus oraz niestandardowe środowisko uruchomieniowe (ang. custom runtime) w AWS Lambda.
+    \item \textbf{Kotlin JVM} - analogiczna implementacja w języku Kotlin, zrealizowana z użyciem narzędzia http4k zapewniającego integrację z serwisem AWS Lambda \cite{http4kCoreDocs}.
+    Narzędzie zostało użyte ze względu na jego oparcie o język Kotlin i natywne wsparcie dla tego języka programowania.
+    Następnie funkcja została wdrożona i uruchamiana w środowisku JVM.
+    \item \textbf{Kotlin JVM + SnapStart} - funkcja oparta o implementację poprzedniej funkcji, działająca z użyciem maszyny wirtualnej Java i z uruchomioną usługą SnapStart.
+    \item \textbf{Kotlin/JS} - implementacja w języku Kotlin, która została następnie transpilowana do języka JavaScript.
+    Nie zostały użyte żadne dodatkowe biblioteki (oprócz zależności określonych w Tabeli \ref{table:lambda_external_dependencies}), a komponent oparty jest bezpośrednio o projekt Kotlin Multiplatform.
+    We wdrożeniu funkcji użyto środowiska Node.js, oferowanego przez AWS Lambda \cite{awsLambdaDocs}.
+    \item \textbf{Kotlin/Native} - implementacja w języku Kotlin, która została następnie skompilowana do binarnego pliku natywnego i wdrożona z użyciem niestandardowego środowiska uruchomieniowego (ang. custom runtime).
+    Funkcja wykorzystuje bibliotekę kotlin-native-aws-lambda-runtime \cite{kotlinNativeLambdaRuntime}, która zapewnia możliwość budowy artefaktów natywnych i wsparcie obsługi żądań.
+    Biblioteka oparta jest w całości o język Kotlin, framework Ktor oraz możliwości Kotlin Multiplatform. 
+\end{itemize}
+
+\begin{table}[h!]
+    \caption{Biblioteki oraz frameworki użyte podczas implementacji badanych funkcji}
+    \centering
+    \begin{tabular}{|l|l|l|}
+    \hline
+    \textbf{Rodzaj funkcji}           & \textbf{Użyta biblioteka/framework}                               & \textbf{Wersja} \\ \hline
+    Java JVM                          & \multirow{3}{*}{io.quarkus:quarkus-amazon-lambda} & \multirow{3}{*}{3.17.5}   \\ \cline{1-1}
+    Java JVM + SnapStart              &                                                  &                           \\ \cline{1-1}
+    Java GraalVM                      &                                                  &                           \\ \hline
+    Kotlin JVM                        & \multirow{2}{*}{http4k-serverless-lambda}         & \multirow{2}{*}{6.9.0.0}  \\ \cline{1-1}
+    Kotlin JVM + SnapStart            &                                                  &                           \\ \hline
+    Kotlin/JS                         & Brak                                             & Brak                      \\ \hline
+    Kotlin/Native                     & io.github.trueangle:lambda-runtime               & 0.0.2                     \\ \hline
+    \end{tabular}
+    \label{table:lambda_tools_versions}
+\end{table}
+
+Wartym zaznaczenia w kontekście implementacji funkcji są zdolności Kotlin Multiplatform (opisane w Rozdziale \ref{chapter:kotlin_multiplatform}), które zostały użyte podczas tworzenia funkcji.
+Główna część funkcji, tj. serializacja, walidacja, mnożenie oraz deserializacja, zostały umieszczone w module commonMain oraz współdzielone między wszystkie docelowe platformy.
+Następnie w modułach dla danych platform (jvmMain, jsMain oraz nativeMain) została zaimplementowane obsługa zapytania oraz wywołania funkcji z części commonMain.
+Pozwoliło to na badanie oparte o dokładnie ten sam kod, który został użyty w każdej z badanych funkcji.
+Możliwości współdzielenia kodu miały także wpływ na wybór bibliotek do walidacji oraz serializacji, które musiały wspierać kompilację dla każdej z badanych platform.
 
 \section{Wdrożenie funkcji}\label{chapter:implementacja_funkcji}
 

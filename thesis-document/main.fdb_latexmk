@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1747761677.28667 "main.aux" "main.bbl" "main" 1747762143.40534 0
-  "./sources/bibliography.bib" 1747761677.00718 39877 d4ff9a1558caf50f8aa64e3388893916 ""
+["bibtex main"] 1748164724.75586 "main.aux" "main.bbl" "main" 1748165631.69817 0
+  "./sources/bibliography.bib" 1748106114.58324 40132 ec9f2876b44814447b28b0dbd15eb636 ""
   "/usr/local/texlive/2025/texmf-dist/bibtex/bst/base/abbrv.bst" 1292289607 20329 b5fed53e10044d0f8112183785c759b1 ""
-  "main.aux" 1747762143.14155 22156 ce936072d918d781d657982e4aff26dc "pdflatex"
+  "main.aux" 1748165631.43965 23550 bef0b23a9331ec89b3a4fe5660dd5260 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1747762141.21655 "/Users/piotr/dev/aws-lambda-performance-master-thesis/thesis-document/main.tex" "main.pdf" "main" 1747762143.40551 0
+["pdflatex"] 1748165629.55427 "/Users/piotr/dev/aws-lambda-performance-master-thesis/thesis-document/main.tex" "main.pdf" "main" 1748165631.69833 0
   "/Users/piotr/dev/aws-lambda-performance-master-thesis/thesis-document/main.tex" 1747560372.17962 1632 05ab45c87171aac344f89567b5cd90ec ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -244,12 +244,12 @@
   "chapters/metody_optimalizacji/kotlin.tex" 1747560206.01832 11213 8aa06655d461005e7b8fd158cd395d2b ""
   "chapters/metody_optimalizacji/main.tex" 1747674264.21291 445 947a99fce0cfe9db3b96a9628a6aeead ""
   "chapters/metody_optimalizacji/snapstart.tex" 1747247509.51885 7570 4a20a02c857b5bd91b45fd6b226516c2 ""
-  "chapters/opis_badania/main.tex" 1747762139.53211 7418 4aa3f09841f6696952ce748ada4a45d7 ""
+  "chapters/opis_badania/main.tex" 1748165629.24663 17521 5852f48a75e04cd53b3997d140bbf79b ""
   "chapters/przeglad_literatury/main.tex" 1745855056.74722 730 0f8c4e49d5cff38c9280956ceabc2044 ""
   "chapters/przeglad_literatury/results.tex" 1745869448.97638 47178 993843f232121dd6047ca555bcf9fe27 ""
   "chapters/przeglad_literatury/results_papers.tex" 1746386763.17655 2751 d3e68082c715b51119b25da65deeed3d ""
   "chapters/przeglad_literatury/review_method.tex" 1746563226.87061 16418 e77d33ddb2c486255f7c17f9dc7d82da ""
-  "chapters/przeglad_literatury/review_process_table.tex" 1746560740.24067 2041 6d2a3e7096fd04654af2db77d4944aa2 ""
+  "chapters/przeglad_literatury/review_process_table.tex" 1748084117.57061 2042 fde9cdd2857ca19542df84fb6b9c183f ""
   "chapters/slownik_pojec.tex" 1746642346.34888 335 e0b2bfbbb6d1c0f4a25ccf2990225463 ""
   "chapters/wnioski_dyskusja/main.tex" 1746639576.02439 61 7ec3f28d1c328e9b0ec6349b0139f42c ""
   "chapters/wstep/main.tex" 1746639659.75855 4882 6725282e3c6f358dde99cd25f2a27ead ""
@@ -260,17 +260,18 @@
   "charts/graalvm-build-process.drawio.png" 1747252479.87776 37145 e270406f863c451c4dcee6df946699a7 ""
   "charts/kmp-structure.drawio.png" 1747488161.99805 44866 9c7a0b3b21a58c08a2348bdcf40bcfcc ""
   "charts/kotlin-js-ir.drawio.png" 1747582582.70545 571392 2e62b240e527f00cea3e184a8bfc52ac ""
+  "charts/lambda_workflow.drawio.png" 1748090285.16536 28203 ad72c415dc4d71b6c26c33e7b418eb29 ""
   "charts/literature_review_process.drawio.png" 1746563076.69757 78979 39d0aa2ffd95a9135f09073965e2acf3 ""
   "charts/snapstart.png" 1747166600.43648 34764 c43215429c0695a75ee03953cacf9371 ""
   "charts/warm_cold_starts_lambda.png" 1746546942.012 42675 885c6ed02a874e6f4e4e06e114eec961 ""
   "latex-settings.tex" 1746550926.26899 14285 8fae86bf86dad49d3b64c988cc7545e7 ""
-  "main.aux" 1747762143.14155 22156 ce936072d918d781d657982e4aff26dc "pdflatex"
-  "main.bbl" 1747761677.3822 16358 b632c7ee2dc567e5c02c8b209c52988f "bibtex main"
-  "main.lof" 1747762143.14459 1649 d5e8b531b338830c7581d5610a9b77a1 "pdflatex"
-  "main.lot" 1747762143.14462 500 6cfbe21b92e699ca41591927bc1a7f54 "pdflatex"
-  "main.out" 1747762143.14409 5291 4cd1b738a1211c93f20f5ee6c7d3ebc1 "pdflatex"
+  "main.aux" 1748165631.43965 23550 bef0b23a9331ec89b3a4fe5660dd5260 "pdflatex"
+  "main.bbl" 1748164724.83527 16573 1de04c80e35d94356ea924b20a86e5ae "bibtex main"
+  "main.lof" 1748165631.4427 1830 0e9e68e959c6446ca37e83b775691cd8 "pdflatex"
+  "main.lot" 1748165631.44273 790 dc9721bb9b2652065eb911f84506edd1 "pdflatex"
+  "main.out" 1748165631.44221 5291 6890d37760b24668ccb2a3b4bff2d4af "pdflatex"
   "main.tex" 1747560372.17962 1632 05ab45c87171aac344f89567b5cd90ec ""
-  "main.toc" 1747762143.14454 2956 169828f1ffc932a3e3d234b6a8f56808 "pdflatex"
+  "main.toc" 1748165631.44265 2956 bf244176818e743b0ae04786d5938aa5 "pdflatex"
   "title_page/title_page.pdf" 1743361834 144139 62ae5feb3df1e7daff15bf715bfb2fa9 ""
   (generated)
   "main.aux"

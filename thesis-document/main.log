@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.30)  20 MAY 2025 19:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.30)  25 MAY 2025 11:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1378,9 +1378,6 @@ Overfull \hbox (1.99545pt too wide) in paragraph at lines 9--10
  []|\T1/lmr/bx/n/8 (-20) Snowballing| 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 )
 
 [18 <./charts/literature_review_process.drawio.png>]) (./chapters/przeglad_literatury/results.tex (./chapters/przeglad_literatury/results_papers.tex)
@@ -1495,69 +1492,88 @@ Rozdzia\l  4.
 [47]
 
 [48{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
-<charts/experiment-architecture.drawio.png, id=831, 815.045pt x 618.31pt>
+<charts/lambda_workflow.drawio.png, id=836, 603.25375pt x 171.64125pt>
+File: charts/lambda_workflow.drawio.png Graphic file (type png)
+<use charts/lambda_workflow.drawio.png>
+Package pdftex.def Info: charts/lambda_workflow.drawio.png  used on input line 110.
+(pdftex.def)             Requested size: 448.42822pt x 127.5887pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+[49]
+Underfull \hbox (badness 10000) in paragraph at lines 139--139
+[]|\T1/lmr/m/n/12 (+20) io.quarkus:quarkus-
+ []
+
+
+
+[50 <./charts/lambda_workflow.drawio.png>]
+
+[51]
+<charts/experiment-architecture.drawio.png, id=866, 815.045pt x 618.31pt>
 File: charts/experiment-architecture.drawio.png Graphic file (type png)
 <use charts/experiment-architecture.drawio.png>
-Package pdftex.def Info: charts/experiment-architecture.drawio.png  used on input line 99.
+Package pdftex.def Info: charts/experiment-architecture.drawio.png  used on input line 200.
 (pdftex.def)             Requested size: 472.03123pt x 358.0917pt.
 ) (./chapters/wyniki/main.tex
 
-[49 <./charts/experiment-architecture.drawio.png>]
-
-[50
-
-
-]
+[52 <./charts/experiment-architecture.drawio.png>]
 Rozdzia\l  5.
 ) (./chapters/wnioski_dyskusja/main.tex
 
-[51]
+[53
 
-[52
+
+]
+
+[54
 
 
 ]
 Rozdzia\l  6.
 ) (./chapters/zakonczenie/main.tex
 
-[53]
-
-[54
-
-
-]) (./main.bbl
-
 [55]
 
 [56
 
 
-]
+]) (./main.bbl
 
 [57]
 
-[58]
+[58
+
+
+]
 
 [59]
 
 [60]
 
-[61])
+[61]
 
-[62] (./main.lof)
+[62]
+
+[63])
+
+[64] (./main.lof)
 \tf@lof=\write8
 \openout8 = `main.lof'.
 
 
 
-[63] (./main.lot)
+[65] (./main.lot)
 \tf@lot=\write9
 \openout9 = `main.lot'.
 
 
 
-[64]
-runsystem(latexminted cleantemp  --timestamp 20250520192901 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
+[66]
+runsystem(latexminted cleantemp  --timestamp 20250525113349 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
 
  (./main.aux)
  ***********
@@ -1569,21 +1585,21 @@ L3 programming layer <2025-01-18>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 4CD1B738A1211C93F20F5EE6C7D3EBC1;5291.
+(rerunfilecheck)             Checksum: 6890D37760B24668CCB2A3B4BFF2D4AF;5291.
  ) 
 Here is how much of TeX's memory you used:
- 31160 strings out of 473190
- 569520 string characters out of 5715800
- 1196742 words of memory out of 5000000
- 53375 multiletter control sequences out of 15000+600000
- 623699 words of font info for 169 fonts, out of 8000000 for 9000
+ 31181 strings out of 473190
+ 570087 string characters out of 5715800
+ 1197119 words of memory out of 5000000
+ 53388 multiletter control sequences out of 15000+600000
+ 623796 words of font info for 170 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,17n,96p,1071b,1062s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
-Output written on main.pdf (69 pages, 852562 bytes).
+Output written on main.pdf (71 pages, 877905 bytes).
 PDF statistics:
- 1043 PDF objects out of 1200 (max. 8388607)
- 892 compressed objects within 9 object streams
- 220 named destinations out of 1000 (max. 500000)
- 35156 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 1080 PDF objects out of 1200 (max. 8388607)
+ 924 compressed objects within 10 object streams
+ 226 named destinations out of 1000 (max. 500000)
+ 35161 words of extra memory for PDF output out of 35830 (max. 10000000)
 

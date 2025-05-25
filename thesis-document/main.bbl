@@ -180,6 +180,12 @@ D.~Ivanov and A.~Petrova.
 \newblock Serverless computing architectures and applications in aws.
 \newblock {\em MZ Journal of Artificial Intelligence}, 1(1):1--10, Jun. 2024.
 
+\bibitem{kotlinNativeLambdaRuntime}
+V.~Ivanovichev.
+\newblock {Kotlin Native Runtime for AWS Lambda}.
+\newblock \url{https://github.com/trueangle/kotlin-native-aws-lambda-runtime}.
+\newblock [Dostęp: 16.05.2025].
+
 \bibitem{8605773}
 D.~Jackson and G.~Clynch.
 \newblock An investigation of the impact of language runtime on the performance and cost of serverless functions.

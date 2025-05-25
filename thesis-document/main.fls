@@ -565,6 +565,11 @@ INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmr6.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
+INPUT ./charts/lambda_workflow.drawio.png
+INPUT ./charts/lambda_workflow.drawio.png
+INPUT ./charts/lambda_workflow.drawio.png
+INPUT ./charts/lambda_workflow.drawio.png
+INPUT ./charts/lambda_workflow.drawio.png
 INPUT ./charts/experiment-architecture.drawio.png
 INPUT ./charts/experiment-architecture.drawio.png
 INPUT ./charts/experiment-architecture.drawio.png

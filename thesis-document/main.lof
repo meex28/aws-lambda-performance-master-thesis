@@ -11,6 +11,7 @@
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Przykładowa struktura pojektu Kotlin Multiplatform [źródło:~opracowanie~własne]}}{42}{figure.caption.12}%
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Proces transformacji kodu Kotlin do kodu JavaScript [źródło:~opracowanie~własne na bazie repozytorium kompilatora IR \cite {kotlinIrCompilatorGithub}]}}{43}{figure.caption.13}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Architektura środowiska badawczego [źródło:~opracowanie~własne]}}{49}{figure.caption.14}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Wizualizacja procesu realizowanego przez badane funkcje AWS Lambda [źródło: opracowanie własne]}}{50}{figure.caption.14}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Architektura środowiska badawczego [źródło:~opracowanie~własne]}}{52}{figure.caption.17}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
