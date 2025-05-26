@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.30)  26 MAY 2025 15:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.30)  26 MAY 2025 17:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1508,27 +1508,31 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [51]
 
 [52]
+<charts/experiment-architecture.drawio.png, id=880, 733.74126pt x 630.355pt>
+File: charts/experiment-architecture.drawio.png Graphic file (type png)
+<use charts/experiment-architecture.drawio.png>
+Package pdftex.def Info: charts/experiment-architecture.drawio.png  used on input line 265.
+(pdftex.def)             Requested size: 472.03123pt x 405.52263pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
 
 [53]
 
-[54]
-<charts/experiment-architecture.drawio.png, id=889, 815.045pt x 618.31pt>
-File: charts/experiment-architecture.drawio.png Graphic file (type png)
-<use charts/experiment-architecture.drawio.png>
-Package pdftex.def Info: charts/experiment-architecture.drawio.png  used on input line 311.
-(pdftex.def)             Requested size: 472.03123pt x 358.0917pt.
-) (./chapters/wyniki/main.tex
+[54 <./charts/experiment-architecture.drawio.png>]) (./chapters/wyniki/main.tex
 
-[55 <./charts/experiment-architecture.drawio.png>]
+[55]
 
-[56
-
-
-]
+[56]
 Rozdzia\l  5.
 ) (./chapters/wnioski_dyskusja/main.tex
 
-[57]
+[57
+
+
+]
 
 [58
 
@@ -1574,7 +1578,7 @@ Rozdzia\l  6.
 
 
 [70]
-runsystem(latexminted cleantemp  --timestamp 20250526154414 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
+runsystem(latexminted cleantemp  --timestamp 20250526172656 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
 
  (./main.aux)
  ***********
@@ -1593,10 +1597,10 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  99i,17n,96p,1071b,1062s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
-Output written on main.pdf (75 pages, 889218 bytes).
+Output written on main.pdf (75 pages, 888080 bytes).
 PDF statistics:
- 1111 PDF objects out of 1200 (max. 8388607)
- 951 compressed objects within 10 object streams
+ 1115 PDF objects out of 1200 (max. 8388607)
+ 955 compressed objects within 10 object streams
  235 named destinations out of 1000 (max. 500000)
  35161 words of extra memory for PDF output out of 35830 (max. 10000000)
 

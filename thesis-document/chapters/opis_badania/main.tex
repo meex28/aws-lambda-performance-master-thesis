@@ -258,7 +258,14 @@ Zebrane wyniki są następnie przetwarzane i agregowane, co pozwala na generowan
 Kluczowym aspektem badania jest rozróżnienie między zimnym a ciepłym startem funkcji.
 Dlatego niezbędne było odpowiednie przygotowanie badanej funkcji przed jej wywołaniem, co pozwoliło osiągnąć oczekiwany rodzaj startu.
 Inicjalizacja ta różniła się od rodzaju startu oraz od faktu, czy aktywowana jest usługa SnapStart.
-W tym celu przygotowano specjalną funkcję AWS Lambda, która otrzymywała jako dane wejściowe kod ARN (ang. Amazon Resource Name) badanej funkcji AWS Lambda, która ma zostać przygotowana i wywołana.
+W tym celu przygotowano specjalną funkcję AWS Lambda (,,funkcję wywołującą'' oznaczoną numerem 3 na Rysunku \ref{fig:experiment_architecture}) otrzymującą jako dane wejściowe kod ARN (ang. Amazon Resource Name) badanej funkcji AWS Lambda, która ma zostać przygotowana i wywołana.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{charts/experiment-architecture.drawio.png}
+    \caption{Architektura środowiska badawczego [źródło:~opracowanie~własne]}
+    \label{fig:experiment_architecture}
+\end{figure}
 
 W celu wiarygodnego pomiaru czasu zimnego startu standardowej funkcji Lambda (bez aktywowanej funkcji SnapStart), funkcja wywołująca przed każdym pomiarem celowo modyfikuje konfigurację badanej funkcji poprzez zmianę wartości jej zmiennej środowiskowej. 
 Ta operacja wymusza na platformie AWS Lambda odrzucenie ewentualnie istniejącego, gotowego do użycia środowiska wykonawczego i utworzenie nowego, co dokładnie symuluje warunki zimnego startu \cite{awsLambdaDocs}.
@@ -276,8 +283,8 @@ Kolejnym elementem badania jest odpowiednie uruchomienie funkcji wywołującej.
 Proces ten został zaprojektowany w taki sposób, aby uniknąć przekraczania limitów API AWS Lambda, co było problemem podczas tworzenia pierwszych iteracji środowiska badawczego.
 Procedura opierała się m.in. na oczekiwaniu pomiędzy kolejnymi operacjami.
 Po pierwsze, w funkcji wywołującej pomiędzy kolejnymi aktualizacjami oraz wywołaniami funkcji, program jest zatrzymywany.
-Sama funkcja wywołująca nie była uruchamiana w tym samym czasie, aby dokonać pomiaru wszystkich funkcji jednocześnie.
-Do zarządzania pomiarami stworzono funkcję koordynatora wywołań, której rolą jest wybór funkcji przeznaczonych do analizy na podstawie określonych kryteriów, takich jak użycie mechanizmu SnapStart czy język implementacji.
+Sama funkcja wywołująca nie była uruchamiała pomiaru wszystkich funkcji jednocześnie.
+Do zarządzania pomiarami stworzono funkcję koordynatora wywołań (oznaczoną numerem 2 na Rysunku \ref{fig:experiment_architecture}), której rolą jest wybór funkcji przeznaczonych do analizy na podstawie określonych kryteriów, takich jak użycie mechanizmu SnapStart czy język implementacji.
 Pozwala to na zmniejszenie badanych jednocześnie funkcji, a co za tym idzie zapytań do API.
 
 Dla każdej z wybranych funkcji, koordynator przygotowuje i wysyła wiadomość do tematu w usłudze Amazon Simple Notification Service (SNS).
@@ -285,9 +292,9 @@ Wiadomość ta zawiera identyfikator ARN badanej funkcji oraz pożądany typ sta
 Istotnym elementem działania koordynatora jest również wprowadzenie kontrolowanego opóźnienia pomiędzy publikacją kolejnych wiadomości, co ma na celu rozłożenie obciążenia w czasie i zapobieganie wspomnianym problemom z limitami usług AWS.
 
 Pomiędzy kolejnymi wywołaniami funkcji koorydnatora także zastosowano określone przerwy.
-W tym celu użyto usługi AWS Step Functions, która pozwala na tworzenie i wizualizację procesów składających się z różnych serwisów AWS.
+W tym celu użyto usługi AWS Step Functions (oznaczonej numerem 1 na Rysunku \ref{fig:experiment_architecture}), która pozwala na tworzenie i wizualizację procesów wchodzących w interakcję z różnymi serwisami AWS.
 Jej zadaniem było iteracyjne uruchamianie koordynatora dla kolejnych kombinacji parametrów (języka implementacji, aktywacji SnapStart oraz typu startów).
-Po każdym uruchomieniu następuje 30-minutowa przerwa, podczas której usługa czeka aby najnowsze wywołanie koordynatora zostało zakończone.
+Po każdym uruchomieniu następuje 30 minutowa przerwa, podczas której usługa czeka aby najnowsze wywołanie koordynatora zostało zakończone.
 Wydłuża to znacząco czas potrzebny na wykonanie badanie, jednak pozwala na uniknięcie zbytniego obciążenia API, a co za tym idzie blokady kolejnych wywołań.
 
 Ostatnim elementem badania była agregacja wyników pomiarów.
@@ -302,13 +309,6 @@ Po każdym wywołaniu, funkcja AWS Lambda automatycznie tworzy raport, który za
 \end{itemize}
 Wszystkie te dane są następnie przesyłane do usługi CloudWatch. 
 Aby móc dokonać analizy wyników niezbędne było ich zagregowanie i zapisanie (np. w pliku JSON).
-Wykorzystano do tego przygotowaną funkcję procesora logów, która pobierała logi z raportami z usługi CloudWatch, transformowała oraz zapisywała w pliku JSON.
+Wykorzystano do tego przygotowaną funkcję procesora logów (oznaczoną numerem 4 na Rysunku \ref{fig:experiment_architecture}), która pobierała logi z raportami z usługi CloudWatch, transformowała oraz zapisywała w pliku JSON.
 Następnie plik był wgrywany do usługi S3, co pozwalało na pobranie przez użytkownika.
 Tak przygotowana agregacja logów umożliwiła następnie niezbędną analizę wyników badania.
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=1\textwidth]{charts/experiment-architecture.drawio.png}
-    \caption{ Architektura środowiska badawczego [źródło:~opracowanie~własne]}
-    \label{fig:experiment_architecture}
-\end{figure}
