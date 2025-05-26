@@ -79,6 +79,14 @@ gdzie:
   \item \( d_w \) - średni rozliczany czas dla ciepłych startów (w sekundach).
 \end{itemize}
 
+Kryteria dla PB3:
+
+\begin{enumerate}
+    \item Czas budowy artefaktu
+    \item Wielkość artefaktu
+    \item Dostępność AWS SDK
+    \item Wsparcie dla testów
+\end{enumerate}
 % TODO: opisać badanie w związku z PB3 (czas budowy, dostępność SDK, wielkość artefaktu (?), wsparcie dla testów (?))
 
 \section{Implementacja funkcji}\label{chapter:implementacja_funkcji}
@@ -188,12 +196,115 @@ Następnie w modułach dla danych platform (jvmMain, jsMain oraz nativeMain) zos
 Pozwoliło to na badanie oparte o dokładnie ten sam kod, który został użyty w każdej z badanych funkcji.
 Możliwości współdzielenia kodu miały także wpływ na wybór bibliotek do walidacji oraz serializacji, które musiały wspierać kompilację dla każdej z badanych platform.
 
-\section{Wdrożenie funkcji}\label{chapter:implementacja_funkcji}
+\section{Wdrożenie funkcji}\label{chapter:wdrożenie_funkcji}
 
-% Opisać cały proces budowy z użyciem githuba i wrzucaniem na S3
-% Opisać proces wdrażania z terraformem
+Kolejnym elementem niezbędnym do przeprowadzenia badania było wdrożenie testowanych funkcji już na platformę chmurową.
+Etap ten wymagał utworzenia także niezbędnej infrastruktury ciągłej integracji oraz procesu wdrażania, co umożliwiło automatyzację procesu budowy i aktualizacji funkcji AWS Lambda. 
+Proces ten został zrealizowany z wykorzystaniem narzędzi infrakstruktury jako kod (ang. Infrastructure as a Code), co zapewniło powtarzalność i spójność środowiska testowego.
+Przygotowanie potoku ciągłego integracji jest także niezbędne w przypadku używania środowisk deweloperskich z procesorami o architekturze ARM64.
+Funkcje zostały wdrożone w architekturze x86-64, zatem do budowy artefaktów potrzebne było użycie maszyn operujących także w tym typie procesora.
 
-\section{Środowisko badawcze}\label{chapter:implementacja_funkcji}
+Cały proces budowy artefaktów oraz ich wdrażania został zautomatyzowany z użyciem GitHub Actions.
+Do wytworzenia artefaktu użyto narzędzia Gradle, który pozwał na uruchomienie odpowiedniego zadania dla każdej z zaimplementowanych funkcji.
+Odpowiadało ono za kompilację kodu źródłowego, czego wynikiem były pliki gotowe do uruchomienia programu.
+Dla każdej z przygotowanych funkcji utworzono odpowiedni krok w procesie GitHub Actions, który uruchamiał proces budowy dla danej platformy i docelowej architektury x86-64 (np. Java JVM czy Kotlin/JS).
+Stworzone w ten sposób pliki były następnie przekazywane do drugiego kroku, który odpowiadał za wgranie ich do usługi S3 (ang. Simple Storage Service).
+Przechowywane tak pakiety były już gotowe do użycia w wdrażanych funkcjach AWS Lambda.
+Dodatkowo, opisany proces ciągłej integracji pozwolił na pomiar czasu budowy funkcji, co jest istotne w odpowiedzi na postawione pytania badawcze i zostało zawarte w wynikach badania.
+Wielkość artefaktów została zmierzona jako wielkośc plików przechowywanych w usłudze S3.
+
+Kolejnym etapem było wdrożenie przechowywanych w serwisie S3 artefaktów jako funkcje AWS Lambda.
+W tym celu użyto narzędzia Terraform, które pozwala na wdrożenie infrastruktury chmurowej w oparciu o kod.
+W ramach konfiguracji Terraform dla każdej instancji AWS Lambda określono nazwę funkcji, lokalizację artefaktu w usłudze S3, sygnaturę wywoływanej metody (tj. pełną ścieżkę do metody, która będzie wywoływana po otrzymaniu zdarzenia), środowisko wykonawcze oraz czy funkcja aktywuje usługę SnapStart.
+Środowiska wykonawcze, w których uruchomiano poszczególne funkcje, zostały przedstawione w Tabeli \ref{table:lambda_runtimes}.
+Każda funkcja została wdrożona dla następujących wielkości pamięci: 128 MB, 256 MB, 512 MB, 1024 MB oraz 2048 MB.
+
+Istotnym faktem dla wdrożenia funkcji z użyciem Kotlin/Native jest potrzeba utworzenia dodatkowej warstwy AWS Lambda (ang. lambda layer).
+Warstwy te stanowią archiwum w formacie .zip, zawierające dodatkowy kod lub dane, takie jak zależności biblioteczne, niestandardowe środowiska wykonawcze czy pliki konfiguracyjne.
+Dla funkcji Kotlin/Native zbudowano warstwę, która zawierała zależność libcrypt.
+Biblioteka ta nie jest domyślnie dostępna w dystrybucji Amazon Linux 2023, jednak jest wymagana do działania przez technologię użytą w implementacji Kotlin/Native \cite{kotlinNativeLambdaRuntime}.
+Potrzeba ta wynikała z użycia niestandardowego środowiska uruchomieniowego, co może wpłynąć na jakość procesu rozwoju oprogramowania i powinny być wzięte pod uwagę podczas użycia takich środowisk.
+
+\begin{table}[h!]
+    \caption{Środowiska wykonawcze użyte w badanych funkcjach AWS Lambda}
+    \centering
+    \begin{tabular}{|l|l|}
+    \hline
+    \textbf{Rodzaj funkcji}           & \textbf{Identyfikator środowiska wykonawczego}                               \\ \hline
+    Java JVM                          & java21                                                      \\ \hline
+    Java JVM + SnapStart              & java21                                                      \\ \hline
+    Java GraalVM                      & provided.al2023                                              \\ \hline
+    Kotlin JVM                        & java21                                                      \\ \hline
+    Kotlin JVM + SnapStart            & java21                                                      \\ \hline
+    Kotlin/JS                         & nodejs22.x                                                   \\ \hline
+    Kotlin/Native                     & provided.al2023                                              \\ \hline
+    \end{tabular}
+    \label{table:lambda_runtimes}
+\end{table}
+
+\section{Środowisko badawcze}\label{chapter:srodowisko_badawcze}
+
+W celu pomiaru wartości metryk (określonych w Rozdziale \ref{chapter:cel_i_metodologia_badan}) przygotowano odpowiednią infrastrukturę chmurową wdrożoną w środowisku AWS.
+Jej zadaniem było odpowiednie przygotowanie badanych funkcji, ich uruchomienie oraz zebranie wyników pomiarowych.
+Architektura środowiska badawczego została przedstawiona na Rysunku \ref{fig:experiment_architecture} oraz dokładnie opisana w poniższym rozdziale.
+Przygotowanie takiego środowiska pozwoliło na automatyczne przeprowadzenie eksperymentu oraz ułatwia jego ewentualne powtórzenie.
+Do wdrożenia środowiska wykorzystano bezserwerowe usługi oferowane przez AWS (m.in. AWS Lambda oraz serwisy integrujące się z nią).
+
+Głównym zadaniem przygotowanego środowiska badawczego jest wywołanie przygotowanych wcześniej funkcji, aby przeprowadzić serię pomiarów ich wydajności.
+W tym celu środowisko zostało zaprojektowane tak, aby umożliwić kontrolowane wykonanie funkcji po określonej liczbie tzw. zimnych startów (ang. cold starts) oraz ciepłych startów (ang. warm starts). 
+Po każdym wywołaniu, środowisko odpowiada za zebranie kluczowych metryk wydajnościowych. 
+Zebrane wyniki są następnie przetwarzane i agregowane, co pozwala na generowanie finalnego pliku w formacie JSON, który stanowi podstawę do dalszej analizy badanych metod.
+
+Kluczowym aspektem badania jest rozróżnienie między zimnym a ciepłym startem funkcji.
+Dlatego niezbędne było odpowiednie przygotowanie badanej funkcji przed jej wywołaniem, co pozwoliło osiągnąć oczekiwany rodzaj startu.
+Inicjalizacja ta różniła się od rodzaju startu oraz od faktu, czy aktywowana jest usługa SnapStart.
+W tym celu przygotowano specjalną funkcję AWS Lambda, która otrzymywała jako dane wejściowe kod ARN (ang. Amazon Resource Name) badanej funkcji AWS Lambda, która ma zostać przygotowana i wywołana.
+
+W celu wiarygodnego pomiaru czasu zimnego startu standardowej funkcji Lambda (bez aktywowanej funkcji SnapStart), funkcja wywołująca przed każdym pomiarem celowo modyfikuje konfigurację badanej funkcji poprzez zmianę wartości jej zmiennej środowiskowej. 
+Ta operacja wymusza na platformie AWS Lambda odrzucenie ewentualnie istniejącego, gotowego do użycia środowiska wykonawczego i utworzenie nowego, co dokładnie symuluje warunki zimnego startu \cite{awsLambdaDocs}.
+Ciepłe starty dla funkcji standardowych mierzone są poprzez kolejne, następujące po sobie wywołania tej samej, już ,,rozgrzanej'' instancji funkcji, bez wprowadzania zmian w jej konfiguracji.
+
+Inaczej realizowane jest przygotowanie do testów dla funkcji z aktywowaną opcją SnapStart.
+Wynika to z przygotowywania migawek stanu przez AWS Lambda dla każdej z utworzonych wersji funkcji.
+Aby zatem precyzyjnie zmierzyć czas zimnego startu funkcji wykorzystującej SnapStart, zastosowano metodę polegającą na opublikowaniu kolejnych wersji badanej funkcji. 
+Każda z tak przygotowanych wersji jest następnie poddawana jednokrotnemu wywołaniu. 
+Takie podejście gwarantuje, że każde zarejestrowane uruchomienie stanowi pomiar czasu potrzebnego na odtworzenie funkcji ze stanu zapisanego w migawce, rzetelnie testując mechanizm SnapStart. 
+Po zakończeniu dedykowanej serii pomiarów, wszystkie wersje funkcji, które zostały utworzone wyłącznie na potrzeby tego etapu badania są usuwane. 
+Metody te pozwalają na dokładne wywołania funkcji, które uruchamiane są zgodnie z planem badań.
+
+Kolejnym elementem badania jest odpowiednie uruchomienie funkcji wywołującej.
+Proces ten został zaprojektowany w taki sposób, aby uniknąć przekraczania limitów API AWS Lambda, co było problemem podczas tworzenia pierwszych iteracji środowiska badawczego.
+Procedura opierała się m.in. na oczekiwaniu pomiędzy kolejnymi operacjami.
+Po pierwsze, w funkcji wywołującej pomiędzy kolejnymi aktualizacjami oraz wywołaniami funkcji, program jest zatrzymywany.
+Sama funkcja wywołująca nie była uruchamiana w tym samym czasie, aby dokonać pomiaru wszystkich funkcji jednocześnie.
+Do zarządzania pomiarami stworzono funkcję koordynatora wywołań, której rolą jest wybór funkcji przeznaczonych do analizy na podstawie określonych kryteriów, takich jak użycie mechanizmu SnapStart czy język implementacji.
+Pozwala to na zmniejszenie badanych jednocześnie funkcji, a co za tym idzie zapytań do API.
+
+Dla każdej z wybranych funkcji, koordynator przygotowuje i wysyła wiadomość do tematu w usłudze Amazon Simple Notification Service (SNS).
+Wiadomość ta zawiera identyfikator ARN badanej funkcji oraz pożądany typ startu (zimny lub ciepły), inicjując w ten sposób funkcję wywołującą.
+Istotnym elementem działania koordynatora jest również wprowadzenie kontrolowanego opóźnienia pomiędzy publikacją kolejnych wiadomości, co ma na celu rozłożenie obciążenia w czasie i zapobieganie wspomnianym problemom z limitami usług AWS.
+
+Pomiędzy kolejnymi wywołaniami funkcji koorydnatora także zastosowano określone przerwy.
+W tym celu użyto usługi AWS Step Functions, która pozwala na tworzenie i wizualizację procesów składających się z różnych serwisów AWS.
+Jej zadaniem było iteracyjne uruchamianie koordynatora dla kolejnych kombinacji parametrów (języka implementacji, aktywacji SnapStart oraz typu startów).
+Po każdym uruchomieniu następuje 30-minutowa przerwa, podczas której usługa czeka aby najnowsze wywołanie koordynatora zostało zakończone.
+Wydłuża to znacząco czas potrzebny na wykonanie badanie, jednak pozwala na uniknięcie zbytniego obciążenia API, a co za tym idzie blokady kolejnych wywołań.
+
+Ostatnim elementem badania była agregacja wyników pomiarów.
+W tym celu użyto usługi AWS CloudWatch, który pozwala na przesyłanie wszystkich logów wywoływanych funkcji.
+Po każdym wywołaniu, funkcja AWS Lambda automatycznie tworzy raport, który zawiera:
+\begin{itemize}
+    \item czas wykonania,
+    \item opłacony czas wykonania,
+    \item czas inicjalizacji,
+    \item czas odtworzenia stanu z migawki (w przypadku aktywnego SnapStart)
+    \item opłacony czas odtworzenia stanu z migawki (w przypadku aktywnego SnapStart)
+\end{itemize}
+Wszystkie te dane są następnie przesyłane do usługi CloudWatch. 
+Aby móc dokonać analizy wyników niezbędne było ich zagregowanie i zapisanie (np. w pliku JSON).
+Wykorzystano do tego przygotowaną funkcję procesora logów, która pobierała logi z raportami z usługi CloudWatch, transformowała oraz zapisywała w pliku JSON.
+Następnie plik był wgrywany do usługi S3, co pozwalało na pobranie przez użytkownika.
+Tak przygotowana agregacja logów umożliwiła następnie niezbędną analizę wyników badania.
 
 \begin{figure}[h]
     \centering
@@ -201,19 +312,3 @@ Możliwości współdzielenia kodu miały także wpływ na wybór bibliotek do w
     \caption{ Architektura środowiska badawczego [źródło:~opracowanie~własne]}
     \label{fig:experiment_architecture}
 \end{figure}
-
-    % \begin{enumerate}
-    %     \item Cel badania, co mierzono i w jakiej konfiguracji (pamięć)
-    %     \item Przygotowana funkcja:
-    %     \begin{enumerate}
-    %         \item Ogólna (mnożenie macierzy) + założenia
-    %         \item Implementacja Java (Quarkus + GraalVM)
-    %         \item Implementacja Kotlin (CommonMain + odpowiednio JVM, Native, JS)
-    %     \end{enumerate}
-    %     \item Budowanie i wdrożenie funkcji
-    %     \begin{enumerate}
-    %         \item Mierzenie czasu budowania
-    %     \end{enumerate}
-    %     \item Wykonywanie pomiarów (architektura)
-    %     \item Obliczenie wydajności z wzoru oraz kosztów
-    % \end{enumerate}
