@@ -79,15 +79,24 @@ gdzie:
   \item \( d_w \) - średni rozliczany czas dla ciepłych startów (w sekundach).
 \end{itemize}
 
-Kryteria dla PB3:
-
+Kolejnym istotnym obszarem badawczym pracy jest analiza kompromisów w procesie rozwoju oprogramowania, które mogą wynikać z implementacji poszczególnych metod optymalizacji.
+W tym celu zaproponowano badania, które odpowiedzą na ostatnie pytanie badawcze:
+\begin{itemize}
+    \item PB3: Jakie kompromisy w procesie rozwoju oprogramowania wiążą się implementacją poszczególnych metod optymalizacji wydajności funkcji Java w AWS Lambda?
+\end{itemize}
+Odpowiedź na pytanie wymaga zdefiniowania kryteriów, które pozwolą ocenić wpływ analizowanych technik na proces tworzenia systemów opartych o usługi bezserwerowe. 
+Bazując na wnioskach z systematycznego przeglądu literatury (przedstawionego w Rozdziale \ref{chapter:przeglad_literatury}) wybrano trzy kluczowe kryteria:
 \begin{enumerate}
     \item Czas budowy artefaktu
     \item Wielkość artefaktu
     \item Dostępność AWS SDK
-    \item Wsparcie dla testów
 \end{enumerate}
-% TODO: opisać badanie w związku z PB3 (czas budowy, dostępność SDK, wielkość artefaktu (?), wsparcie dla testów (?))
+
+Pierwszym analizowanym aspektem jest czas budowy artefaktu. Służy on ocenie wpływu metody optymalizacji na czas potrzebny do przygotowania plików wdrożeniowych funkcji. W ramach badania zmierzony zostanie całkowity czas budowy artefaktu dla każdej z analizowanych implementacji. Wybór tej miary wynika z faktu, że czas budowy bezpośrednio przekłada się na efektywność i szybkość iteracji w cyklu rozwoju oprogramowania. Jest to istotnie ważne z perspektywy programisty, zwłaszcza w architekturach bezserwerowych. W takich systemach tempo wdrożeń jest szybkie, kod jest z nimi bezpośrednio powiązany, a także często testowany w sposób integracyjny już w środowisku chmurowym.
+
+Kolejnym istotnym czynnikiem branym pod uwagę jest wielkość artefaktu. Dotyczy on fizycznego rozmiaru pakietu wdrożeniowego funkcji. Dla każdej przygotowanej funkcji AWS Lambda zmierzona zostanie wielkość finalnego artefaktu. Ten parametr oceny wynika z istoty wielkości funkcji AWS Lambda, które wpływają na proces rozwoju oprogramowania oraz niosą ryzyko przekroczenia limitów wielkości pakietu wdrożeniowego \cite{9095731}.
+
+Ostatnim z przyjętych mierników jest dostępność AWS SDK. Ocena tego elementu będzie polegała na weryfikacji, czy dana metoda optymalizacji pozwala na bezproblemową integrację ze standardowym zestawem narzędzi AWS SDK (ang. Software Development Kit). Jak wskazano w Rozdziale \ref{chapter:przeglad_literatury}, funkcje FaaS często wykorzystują zewnętrzne serwisy AWS. Dostęp do tych usług odbywa się często poprzez SDK, dlatego metody optymalizacji nie powinny go ograniczać.
 
 \section{Implementacja funkcji}\label{chapter:implementacja_funkcji}
 

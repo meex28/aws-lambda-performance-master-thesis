@@ -30,9 +30,9 @@
 \contentsline {section}{\numberline {3.5}Kotlin/Native}{44}{section.3.5}%
 \contentsline {chapter}{\numberline {4}Opis badania}{47}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Cel i metodologia badań}{47}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Implementacja funkcji}{49}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Wdrożenie funkcji}{52}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Środowisko badawcze}{53}{section.4.4}%
+\contentsline {section}{\numberline {4.2}Implementacja funkcji}{50}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Wdrożenie funkcji}{53}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Środowisko badawcze}{54}{section.4.4}%
 \contentsline {chapter}{\numberline {5}Wyniki}{57}{chapter.5}%
 \contentsline {chapter}{\numberline {6}Wnioski i dyskusja}{59}{chapter.6}%
 \contentsline {chapter}{Zakończenie}{61}{chapter*.19}%
