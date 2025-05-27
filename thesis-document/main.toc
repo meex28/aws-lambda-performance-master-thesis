@@ -34,5 +34,5 @@
 \contentsline {section}{\numberline {4.3}Wdrożenie funkcji}{53}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Środowisko badawcze}{54}{section.4.4}%
 \contentsline {chapter}{\numberline {5}Wyniki}{57}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Wnioski i dyskusja}{59}{chapter.6}%
-\contentsline {chapter}{Zakończenie}{61}{chapter*.19}%
+\contentsline {chapter}{\numberline {6}Wnioski i dyskusja}{61}{chapter.6}%
+\contentsline {chapter}{Zakończenie}{63}{chapter*.26}%

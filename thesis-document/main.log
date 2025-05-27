@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.30)  27 MAY 2025 18:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.30)  27 MAY 2025 23:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -385,39 +385,35 @@ Package tocloft Info: The document has chapter divisions on input line 51.
 \cftbeforefigskip=\skip110
 \cftfigindent=\skip111
 \cftfignumwidth=\skip112
+\c@lofdepth=\count313
+\c@lotdepth=\count314
 \cftbeforelottitleskip=\skip113
 \cftafterlottitleskip=\skip114
 \cftbeforetabskip=\skip115
 \cfttabindent=\skip116
 \cfttabnumwidth=\skip117
-\cftbeforesubfigskip=\skip118
-\cftsubfigindent=\skip119
-\cftsubfignumwidth=\skip120
-\cftbeforesubtabskip=\skip121
-\cftsubtabindent=\skip122
-\cftsubtabnumwidth=\skip123
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
-\f@nch@headwidth=\skip124
-\f@nch@offset@elh=\skip125
-\f@nch@offset@erh=\skip126
-\f@nch@offset@olh=\skip127
-\f@nch@offset@orh=\skip128
-\f@nch@offset@elf=\skip129
-\f@nch@offset@erf=\skip130
-\f@nch@offset@olf=\skip131
-\f@nch@offset@orf=\skip132
-\f@nch@height=\skip133
-\f@nch@footalignment=\skip134
-\f@nch@widthL=\skip135
-\f@nch@widthC=\skip136
-\f@nch@widthR=\skip137
+\f@nch@headwidth=\skip118
+\f@nch@offset@elh=\skip119
+\f@nch@offset@erh=\skip120
+\f@nch@offset@olh=\skip121
+\f@nch@offset@orh=\skip122
+\f@nch@offset@elf=\skip123
+\f@nch@offset@erf=\skip124
+\f@nch@offset@olf=\skip125
+\f@nch@offset@orf=\skip126
+\f@nch@height=\skip127
+\f@nch@footalignment=\skip128
+\f@nch@widthL=\skip129
+\f@nch@widthC=\skip130
+\f@nch@widthR=\skip131
 \@temptokenb=\toks31
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \ttl@box=\box72
-\beforetitleunit=\skip138
-\aftertitleunit=\skip139
+\beforetitleunit=\skip132
+\aftertitleunit=\skip133
 \ttl@plus=\dimen193
 \ttl@minus=\dimen194
 \ttl@toksa=\toks32
@@ -453,16 +449,16 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
  (/usr/local/texlive/2025/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count313
+\c@section@level=\count315
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count314
+\etb@tempcnta=\count316
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
 \@linkdim=\dimen198
-\Hy@linkcounter=\count315
-\Hy@pagecounter=\count316
+\Hy@linkcounter=\count317
+\Hy@pagecounter=\count318
  (/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2024-11-05 v7.01l Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -470,7 +466,7 @@ Now handling font encoding PD1 ...
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count317
+\Hy@SavedSpaceFactor=\count319
  (/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2024-11-05 v7.01l Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -483,7 +479,7 @@ Package hyperref Info: Plain pages OFF on input line 4172.
 Package hyperref Info: Backreferencing OFF on input line 4177.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4424.
-\c@Hy@tempcnt=\count318
+\c@Hy@tempcnt=\count320
  (/usr/local/texlive/2025/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -495,7 +491,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  (/usr/local/texlive/2025/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count319
+\Fld@menulength=\count321
 \Field@Width=\dimen256
 \Fld@charsize=\dimen257
 Package hyperref Info: Hyper figures OFF on input line 6042.
@@ -509,9 +505,9 @@ Package hyperref Info: PDF/A mode OFF on input line 6072.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count320
-\c@Item=\count321
-\c@Hfootnote=\count322
+\Hy@abspage=\count322
+\c@Item=\count323
+\c@Hfootnote=\count324
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/hpdftex.def
@@ -520,8 +516,8 @@ File: hpdftex.def 2024-11-05 v7.01l Hyperref driver for pdfTeX
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
 with kernel methods
 )
-\Fld@listcount=\count323
-\c@bookmark@seq@number=\count324
+\Fld@listcount=\count325
+\c@bookmark@seq@number=\count326
  (/usr/local/texlive/2025/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
  (/usr/local/texlive/2025/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
@@ -529,19 +525,19 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
 )
-\Hy@SectionHShift=\skip140
+\Hy@SectionHShift=\skip134
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 345.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
-\labelindent=\skip141
+\labelindent=\skip135
 \enit@outerparindent=\dimen258
 \enit@toks=\toks33
 \enit@inbox=\box73
-\enit@count@id=\count325
-\enitdp@description=\count326
+\enit@count@id=\count327
+\enitdp@description=\count328
 )
-\enitdp@myitemize=\count327
+\enitdp@myitemize=\count329
  (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
  (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty
@@ -569,10 +565,16 @@ Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 \caption@hangindent=\dimen268
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count328
-\c@continuedfloat=\count329
+\c@caption@flags=\count330
+\c@continuedfloat=\count331
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count332
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count333
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/mdwtools/footnote.sty
 Package: footnote 1997/01/28 1.13 Save footnotes around boxes
 \fn@notes=\box74
@@ -587,10 +589,10 @@ Package: dirtree 2012/12/11 v0.32 package wrapper for dirtree
 \DT@rulewidth=\dimen274
 \DT@dotwidth=\dimen275
 \DTbaselineskip=\dimen276
-\DT@counti=\count330
-\DT@countii=\count331
-\DT@countiii=\count332
-\DT@countiv=\count333
+\DT@counti=\count334
+\DT@countii=\count335
+\DT@countiii=\count336
+\DT@countiv=\count337
 \DT@indent=\dimen277
 \DT@parskip=\dimen278
 \DT@baselineskip=\dimen279
@@ -598,28 +600,28 @@ Package: dirtree 2012/12/11 v0.32 package wrapper for dirtree
 File: dirtree.tex 2012/12/11 v0.32 `dirtree' (jcc)
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
-\multirow@colwidth=\skip142
-\multirow@cntb=\count334
-\multirow@dima=\skip143
+\multirow@colwidth=\skip136
+\multirow@cntb=\count338
+\multirow@dima=\skip137
 \bigstrutjot=\dimen280
 )
-\c@theorem=\count335
-\c@lemma=\count336
-\c@example=\count337
-\c@corollary=\count338
-\c@definition=\count339
+\c@theorem=\count339
+\c@lemma=\count340
+\c@example=\count341
+\c@corollary=\count342
+\c@definition=\count343
  (/usr/local/texlive/2025/texmf-dist/tex/latex/psfrag/psfrag.sty
 Package: psfrag 1998/04/11 v3.04 PSfrag (MCG)
-\pfg@pcount=\count340
-\pfg@scount=\count341
+\pfg@pcount=\count344
+\pfg@scount=\count345
 \pfg@temp=\write3
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/supertabular/supertabular.sty
 Package: supertabular 2024/07/20 v4.2c the supertabular environment
-\c@tracingst=\count342
+\c@tracingst=\count346
 \ST@wd=\dimen281
-\ST@rightskip=\skip144
-\ST@leftskip=\skip145
-\ST@parfillskip=\skip146
+\ST@rightskip=\skip138
+\ST@leftskip=\skip139
+\ST@parfillskip=\skip140
 \ST@pageleft=\dimen282
 \ST@headht=\dimen283
 \ST@tailht=\dimen284
@@ -637,7 +639,7 @@ Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
 \TX@old@col=\dimen293
 \TX@target=\dimen294
 \TX@delta=\dimen295
-\TX@cols=\count343
+\TX@cols=\count347
 \TX@ftn=\toks34
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/tools/hhline.sty
 Package: hhline 2020/01/04 v2.04 Table rule package (DPC)
@@ -651,58 +653,58 @@ Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 Package: fvextra 2025/03/04 v1.12.0 fvextra - extensions and patches for fancyvrb
  (/usr/local/texlive/2025/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
 Package: fancyvrb 2024/01/20 4.5c verbatim text (tvz,hv)
-\FV@CodeLineNo=\count344
+\FV@CodeLineNo=\count348
 \FV@InFile=\read3
 \FV@TabBox=\box76
-\c@FancyVerbLine=\count345
-\FV@StepNumber=\count346
+\c@FancyVerbLine=\count349
+\FV@StepNumber=\count350
 \FV@OutFile=\write4
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2025/01/29 line numbers on paragraphs v5.4
-\linenopenalty=\count347
+\linenopenalty=\count351
 \output=\toks35
-\linenoprevgraf=\count348
+\linenoprevgraf=\count352
 \linenumbersep=\dimen296
 \linenumberwidth=\dimen297
-\c@linenumber=\count349
-\c@pagewiselinenumber=\count350
-\c@LN@truepage=\count351
-\c@internallinenumber=\count352
-\c@internallinenumbers=\count353
+\c@linenumber=\count353
+\c@pagewiselinenumber=\count354
+\c@LN@truepage=\count355
+\c@internallinenumber=\count356
+\c@internallinenumbers=\count357
 \quotelinenumbersep=\dimen298
 \bframerule=\dimen299
 \bframesep=\dimen300
 \bframebox=\box77
-\@LN@amsmath@ams@eqpen=\count354
+\@LN@amsmath@ams@eqpen=\count358
 LaTeX Info: Redefining \\ on input line 3187.
 )
-\c@FancyVerbWriteLine=\count355
-\c@FancyVerbBufferLine=\count356
-\c@FV@TrueTabGroupLevel=\count357
-\c@FV@TrueTabCounter=\count358
+\c@FancyVerbWriteLine=\count359
+\c@FancyVerbBufferLine=\count360
+\c@FV@TrueTabGroupLevel=\count361
+\c@FV@TrueTabCounter=\count362
 \FV@TabBox@Group=\box78
 \FV@bgcolorstructbox=\box79
-\FV@TmpLength=\skip147
-\c@FV@HighlightLinesStart=\count359
-\c@FV@HighlightLinesStop=\count360
-\FV@LoopCount=\count361
+\FV@TmpLength=\skip141
+\c@FV@HighlightLinesStart=\count363
+\c@FV@HighlightLinesStop=\count364
+\FV@LoopCount=\count365
 \FV@NCharsBox=\box80
 \FV@BreakIndent=\dimen301
-\FV@BreakIndentNChars=\count362
+\FV@BreakIndentNChars=\count366
 \FV@BreakSymbolSepLeft=\dimen302
-\FV@BreakSymbolSepLeftNChars=\count363
+\FV@BreakSymbolSepLeftNChars=\count367
 \FV@BreakSymbolSepRight=\dimen303
-\FV@BreakSymbolSepRightNChars=\count364
+\FV@BreakSymbolSepRightNChars=\count368
 \FV@BreakSymbolIndentLeft=\dimen304
-\FV@BreakSymbolIndentLeftNChars=\count365
+\FV@BreakSymbolIndentLeftNChars=\count369
 \FV@BreakSymbolIndentRight=\dimen305
-\FV@BreakSymbolIndentRightNChars=\count366
-\c@FancyVerbLineBreakLast=\count367
+\FV@BreakSymbolIndentRightNChars=\count370
+\c@FancyVerbLineBreakLast=\count371
 \FV@LineBox=\box81
 \FV@LineIndentBox=\box82
-\c@FV@BreakBufferDepth=\count368
+\c@FV@BreakBufferDepth=\count372
 \FV@LineWidth=\dimen306
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/latex2pydata/latex2pydata.sty
 Package: latex2pydata 2025/03/03 v0.5.0 latex2pydata - write data to file in Python literal format
@@ -720,20 +722,20 @@ Package: shellesc 2023/07/08 v1.0d unified shell escape interface for LaTeX
 Package shellesc Info: Restricted shell escape enabled on input line 77.
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count369
+\c@float@type=\count373
 \float@exts=\toks41
 \float@box=\box83
 \@float@everytoks=\toks42
 \@floatcapt=\box84
 )
-\c@minted@FancyVerbLineTemp=\count370
+\c@minted@FancyVerbLineTemp=\count374
 \@float@every@listing=\toks43
-\c@listing=\count371
+\c@listing=\count375
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2025/02/11 v3.2a Micro-typographical refinements (RS)
 \MT@toks=\toks44
 \MT@tempbox=\box85
-\MT@count=\count372
+\MT@count=\count376
 LaTeX Info: Redefining \noprotrusionifhmode on input line 1087.
 LaTeX Info: Redefining \leftprotrusion on input line 1088.
 \MT@prot@toks=\toks45
@@ -742,12 +744,12 @@ LaTeX Info: Redefining \textls on input line 1449.
 \MT@outer@kern=\dimen307
 LaTeX Info: Redefining \microtypecontext on input line 2053.
 LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
-\MT@listname@count=\count373
+\MT@listname@count=\count377
  (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/microtype-pdftex.def
 File: microtype-pdftex.def 2025/02/11 v3.2a Definitions specific to pdftex (RS)
 LaTeX Info: Redefining \lsstyle on input line 944.
 LaTeX Info: Redefining \lslig on input line 944.
-\MT@outer@space=\skip148
+\MT@outer@space=\skip142
 )
 Package microtype Info: Loading configuration file microtype.cfg.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/microtype.cfg
@@ -766,41 +768,41 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \cmidrulesep=\dimen315
 \cmidrulekern=\dimen316
 \defaultaddspace=\dimen317
-\@cmidla=\count374
-\@cmidlb=\count375
+\@cmidla=\count378
+\@cmidlb=\count379
 \@aboverulesep=\dimen318
 \@belowrulesep=\dimen319
-\@thisruleclass=\count376
-\@lastruleclass=\count377
+\@thisruleclass=\count380
+\@lastruleclass=\count381
 \@thisrulewidth=\dimen320
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/makecell/makecell.sty
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 \rotheadsize=\dimen321
-\c@nlinenum=\count378
+\c@nlinenum=\count382
 \TeXr@lab=\toks46
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/rotating.sty
 Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
-\c@r@tfl@t=\count379
-\rotFPtop=\skip149
-\rotFPbot=\skip150
+\c@r@tfl@t=\count383
+\rotFPtop=\skip143
+\rotFPbot=\skip144
 \rot@float@box=\box86
 \rot@mess@toks=\toks47
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2024/09/14 v1.9i multicolumn formatting (FMi)
-\c@tracingmulticols=\count380
+\c@tracingmulticols=\count384
 \mult@box=\box87
 \multicol@leftmargin=\dimen322
-\c@unbalance=\count381
-\c@collectmore=\count382
-\doublecol@number=\count383
-\multicoltolerance=\count384
-\multicolpretolerance=\count385
+\c@unbalance=\count385
+\c@collectmore=\count386
+\doublecol@number=\count387
+\multicoltolerance=\count388
+\multicolpretolerance=\count389
 \full@width=\dimen323
 \page@free=\dimen324
 \premulticols=\dimen325
 \postmulticols=\dimen326
-\multicolsep=\skip151
-\multicolbaselineskip=\skip152
+\multicolsep=\skip145
+\multicolbaselineskip=\skip146
 \partial@page=\box88
 \last@line=\box89
 \mc@boxedresult=\box90
@@ -845,15 +847,15 @@ Package: multicol 2024/09/14 v1.9i multicolumn formatting (FMi)
 \@tempa=\box128
 \@tempa=\box129
 \@tempa=\box130
-\c@minrows=\count386
-\c@columnbadness=\count387
-\c@finalcolumnbadness=\count388
+\c@minrows=\count390
+\c@columnbadness=\count391
+\c@finalcolumnbadness=\count392
 \last@try=\dimen328
 \multicolovershoot=\dimen329
 \multicolundershoot=\dimen330
 \mult@nat@firstbox=\box131
 \colbreak@box=\box132
-\mc@col@check@num=\count389
+\mc@col@check@num=\count393
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/sttools/cuted.sty
 Package: cuted 2021/10/04 v2.0 Mixing onecolumn and twocolumn modes
 \At@ViperColsBreak=\toks48
@@ -872,8 +874,8 @@ Package: cuted 2021/10/04 v2.0 Mixing onecolumn and twocolumn modes
 \ht@hold@viper=\dimen334
 \ht@viper=\dimen335
 \var@@pagediscards@ht=\dimen336
-\stripsep=\skip153
-\viper@penalty=\count390
+\stripsep=\skip147
+\viper@penalty=\count394
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/adjustbox/adjustbox.sty
 Package: adjustbox 2025/02/26 v1.3c Adjusting TeX boxes (trim, clip, ...)
  (/usr/local/texlive/2025/texmf-dist/tex/latex/xkeyval/xkeyval.sty
@@ -882,7 +884,7 @@ Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 \XKV@toks=\toks51
 \XKV@tempa@toks=\toks52
 )
-\XKV@depth=\count391
+\XKV@depth=\count395
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )) (/usr/local/texlive/2025/texmf-dist/tex/latex/adjustbox/adjcalc.sty
 Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-ends (calc, etex, pgfmath)
@@ -924,43 +926,24 @@ Package: soul-ori 2023-06-14 v3.1 letterspacing/underlining (mf)
 \SOUL@hyphkern=\dimen352
 \SOUL@dimen=\dimen353
 \SOUL@dimeni=\dimen354
-\SOUL@minus=\count392
-\SOUL@comma=\count393
-\SOUL@apo=\count394
-\SOUL@grave=\count395
-\SOUL@spaceskip=\skip154
+\SOUL@minus=\count396
+\SOUL@comma=\count397
+\SOUL@apo=\count398
+\SOUL@grave=\count399
+\SOUL@spaceskip=\skip148
 \SOUL@ttwidth=\dimen355
 \SOUL@uldp=\dimen356
 \SOUL@ulht=\dimen357
-)) (/usr/local/texlive/2025/texmf-dist/tex/latex/subfigure/subfigure.sty
-Package: subfigure 2002/03/15 v2.1.5 subfigure package
-\subfigtopskip=\skip155
-\subfigcapskip=\skip156
-\subfigcaptopadj=\dimen358
-\subfigbottomskip=\skip157
-\subfigcapmargin=\dimen359
-\subfiglabelskip=\skip158
-\c@subfigure=\count396
-\c@lofdepth=\count397
-\c@subtable=\count398
-\c@lotdepth=\count399
-
-****************************************
-* Local config file subfigure.cfg used *
-****************************************
-(/usr/local/texlive/2025/texmf-dist/tex/latex/subfigure/subfigure.cfg)
-\subfig@top=\skip159
-\subfig@bottom=\skip160
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+)) (/usr/local/texlive/2025/texmf-dist/tex/latex/pdfpages/pdfpages.sty
 Package: pdfpages 2025/01/30 v0.6e Insert pages of external PDF documents (AM)
  (/usr/local/texlive/2025/texmf-dist/tex/latex/eso-pic/eso-pic.sty
 Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
-\ESO@tempdima=\dimen360
-\ESO@tempdimb=\dimen361
+\ESO@tempdima=\dimen358
+\ESO@tempdimb=\dimen359
 )
-\AM@pagewidth=\dimen362
-\AM@pageheight=\dimen363
-\AM@fboxrule=\dimen364
+\AM@pagewidth=\dimen360
+\AM@pageheight=\dimen361
+\AM@fboxrule=\dimen362
  (/usr/local/texlive/2025/texmf-dist/tex/latex/pdfpages/pppdftex.def
 File: pppdftex.def 2025/01/30 v0.6e Pdfpages driver for pdfTeX (AM)
 )
@@ -1012,24 +995,24 @@ Package: transparent-nometadata 2022-10-27 v1.5 Transparency via pdfTeX's color 
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 ))) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks62
-\pgfutil@tempdima=\dimen365
-\pgfutil@tempdimb=\dimen366
+\pgfutil@tempdima=\dimen363
+\pgfutil@tempdimb=\dimen364
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
 \pgfutil@abb=\box144
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/pgf.revision.tex)
 Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
 )) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
-\pgf@x=\dimen367
-\pgf@y=\dimen368
-\pgf@xa=\dimen369
-\pgf@ya=\dimen370
-\pgf@xb=\dimen371
-\pgf@yb=\dimen372
-\pgf@xc=\dimen373
-\pgf@yc=\dimen374
-\pgf@xd=\dimen375
-\pgf@yd=\dimen376
+\pgf@x=\dimen365
+\pgf@y=\dimen366
+\pgf@xa=\dimen367
+\pgf@ya=\dimen368
+\pgf@xb=\dimen369
+\pgf@yb=\dimen370
+\pgf@xc=\dimen371
+\pgf@yc=\dimen372
+\pgf@xd=\dimen373
+\pgf@yd=\dimen374
 \w@pgf@writea=\write5
 \r@pgf@reada=\read4
 \c@pgf@counta=\count405
@@ -1056,11 +1039,11 @@ File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
 File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )) (/usr/local/texlive/2025/texmf-dist/tex/latex/tabto-ltx/tabto.sty
 Package: tabto 2018/12/28  v 1.4  Another tabbing mechanism
-\CurrentLineWidth=\dimen377
-\TabPrevPos=\dimen378
+\CurrentLineWidth=\dimen375
+\TabPrevPos=\dimen376
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen379
-\WF@size=\dimen380
+\wrapoverhang=\dimen377
+\WF@size=\dimen378
 \c@WF@wrappedlines=\count412
 \WF@box=\box145
 \WF@everypar=\toks66
@@ -1073,7 +1056,15 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count413
 \l__pdf_internal_box=\box146
-) (./main.aux)
+)
+(./main.aux
+
+LaTeX Warning: Label `fig:lambda_workflow' multiply defined.
+
+
+LaTeX Warning: Label `fig:lambda_workflow' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
@@ -1097,13 +1088,13 @@ LaTeX Font Info:    ... okay on input line 11.
  (/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count414
-\scratchdimen=\dimen381
+\scratchdimen=\dimen379
 \scratchbox=\box147
 \nofMPsegments=\count415
 \nofMParguments=\count416
 \everyMPshowfont=\toks67
 \MPscratchCnt=\count417
-\MPscratchDim=\dimen382
+\MPscratchDim=\dimen380
 \MPnumerator=\count418
 \makeMPintoPDFobject=\count419
 \everyMPtoPDFconversion=\toks68
@@ -1157,13 +1148,12 @@ Package hyperref Info: Link coloring ON on input line 11.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: rotating package is loaded.
-Package caption Info: subfigure package is loaded.
 Package caption Info: supertabular package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package microtype Info: Patching varwidth to enable character protrusion.
-\MT@vwid@leftmargin=\dimen383
-\MT@vwid@rightmargin=\dimen384
+\MT@vwid@leftmargin=\dimen381
+\MT@vwid@rightmargin=\dimen382
 LaTeX Info: Redefining \microtypecontext on input line 11.
 Package microtype Info: Applying patch `item' on input line 11.
 Package microtype Info: Applying patch `toc' on input line 11.
@@ -1513,7 +1503,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [53]
-<charts/experiment-architecture.drawio.png, id=886, 733.74126pt x 630.355pt>
+<charts/experiment-architecture.drawio.png, id=887, 733.74126pt x 630.355pt>
 File: charts/experiment-architecture.drawio.png Graphic file (type png)
 <use charts/experiment-architecture.drawio.png>
 Package pdftex.def Info: charts/experiment-architecture.drawio.png  used on input line 274.
@@ -1530,80 +1520,152 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [56]
 Rozdzia\l  5.
-) (./chapters/wnioski_dyskusja/main.tex
+(./chapters/wyniki/warm-start-charts.tex
+<charts/results/avg-warm-start.png, id=907, 752.8125pt x 376.40625pt>
+File: charts/results/avg-warm-start.png Graphic file (type png)
+<use charts/results/avg-warm-start.png>
+Package pdftex.def Info: charts/results/avg-warm-start.png  used on input line 3.
+(pdftex.def)             Requested size: 448.42822pt x 224.22008pt.
+<charts/results/warm-start-boxplot-256.png, id=908, 451.6875pt x 451.6875pt>
+File: charts/results/warm-start-boxplot-256.png Graphic file (type png)
+<use charts/results/warm-start-boxplot-256.png>
+Package pdftex.def Info: charts/results/warm-start-boxplot-256.png  used on input line 13.
+(pdftex.def)             Requested size: 226.57297pt x 226.57376pt.
+<charts/results/warm-start-boxplot-1024.png, id=909, 451.6875pt x 451.6875pt>
+File: charts/results/warm-start-boxplot-1024.png Graphic file (type png)
+<use charts/results/warm-start-boxplot-1024.png>
+Package pdftex.def Info: charts/results/warm-start-boxplot-1024.png  used on input line 20.
+(pdftex.def)             Requested size: 226.57297pt x 226.57376pt.
+) (./chapters/wyniki/cold-start-charts.tex
+<charts/results/avg-cold-start-128-256.png, id=910, 752.8125pt x 376.40625pt>
+File: charts/results/avg-cold-start-128-256.png Graphic file (type png)
+<use charts/results/avg-cold-start-128-256.png>
+Package pdftex.def Info: charts/results/avg-cold-start-128-256.png  used on input line 3.
+(pdftex.def)             Requested size: 448.42822pt x 224.22008pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<charts/results/avg-cold-start-512-2048.png, id=911, 752.8125pt x 376.40625pt>
+File: charts/results/avg-cold-start-512-2048.png Graphic file (type png)
+<use charts/results/avg-cold-start-512-2048.png>
+Package pdftex.def Info: charts/results/avg-cold-start-512-2048.png  used on input line 10.
+(pdftex.def)             Requested size: 448.42822pt x 224.22008pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<charts/results/cold-start-boxplot-256.png, id=912, 451.6875pt x 451.6875pt>
+File: charts/results/cold-start-boxplot-256.png Graphic file (type png)
+<use charts/results/cold-start-boxplot-256.png>
+Package pdftex.def Info: charts/results/cold-start-boxplot-256.png  used on input line 20.
+(pdftex.def)             Requested size: 226.57297pt x 226.57376pt.
+<charts/results/cold-start-boxplot-1024.png, id=913, 451.6875pt x 451.6875pt>
+File: charts/results/cold-start-boxplot-1024.png Graphic file (type png)
+<use charts/results/cold-start-boxplot-1024.png>
+Package pdftex.def Info: charts/results/cold-start-boxplot-1024.png  used on input line 27.
+(pdftex.def)             Requested size: 226.57297pt x 226.57376pt.
+) (./chapters/wyniki/wwf-chart.tex
+<charts/results/wwf.png, id=914, 752.8125pt x 376.40625pt>
+File: charts/results/wwf.png Graphic file (type png)
+<use charts/results/wwf.png>
+Package pdftex.def Info: charts/results/wwf.png  used on input line 3.
+(pdftex.def)             Requested size: 448.42822pt x 224.22008pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (./chapters/wyniki/average-cost-chart.tex
+<charts/results/average-cost.png, id=915, 752.8125pt x 376.40625pt>
+File: charts/results/average-cost.png Graphic file (type png)
+<use charts/results/average-cost.png>
+Package pdftex.def Info: charts/results/average-cost.png  used on input line 3.
+(pdftex.def)             Requested size: 448.42822pt x 224.22008pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)) (./chapters/wnioski_dyskusja/main.tex
 
 [57
 
 
-]
+ <./charts/results/avg-warm-start.png>]
 
-[58
+[58 <./charts/results/warm-start-boxplot-256.png> <./charts/results/warm-start-boxplot-1024.png> <./charts/results/avg-cold-start-128-256.png>]
 
+[59 <./charts/results/avg-cold-start-512-2048.png> <./charts/results/cold-start-boxplot-256.png> <./charts/results/cold-start-boxplot-1024.png>]
 
-]
+[60 <./charts/results/wwf.png> <./charts/results/average-cost.png>]
 Rozdzia\l  6.
 ) (./chapters/zakonczenie/main.tex
 
-[59]
-
-[60
+[61
 
 
-]) (./main.bbl
-
-[61]
+]
 
 [62
 
 
-]
+]) (./main.bbl
 
 [63]
 
-[64]
+[64
+
+
+]
 
 [65]
 
 [66]
 
-[67])
+[67]
 
-[68] (./main.lof)
+[68]
+
+[69])
+
+[70] (./main.lof)
 \tf@lof=\write8
 \openout8 = `main.lof'.
 
 
 
-[69] (./main.lot)
+[71] (./main.lot)
 \tf@lot=\write9
 \openout9 = `main.lot'.
 
 
 
-[70]
-runsystem(latexminted cleantemp  --timestamp 20250527180528 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
+[72]
+runsystem(latexminted cleantemp  --timestamp 20250527230314 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
 
  (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 1314FF88A98FC5FB113039616D2BEB38;5291.
+(rerunfilecheck)             Checksum: B0D8DD0C94D6D02E1D980822B85AA28F;5291.
  ) 
 Here is how much of TeX's memory you used:
- 31192 strings out of 473190
- 570232 string characters out of 5715800
- 1197269 words of memory out of 5000000
- 53391 multiletter control sequences out of 15000+600000
+ 31254 strings out of 473190
+ 573793 string characters out of 5715800
+ 1197796 words of memory out of 5000000
+ 53436 multiletter control sequences out of 15000+600000
  623796 words of font info for 170 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,17n,96p,1071b,1062s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
-Output written on main.pdf (75 pages, 890450 bytes).
+Output written on main.pdf (77 pages, 1164278 bytes).
 PDF statistics:
- 1116 PDF objects out of 1200 (max. 8388607)
- 956 compressed objects within 10 object streams
- 234 named destinations out of 1000 (max. 500000)
- 35161 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 1165 PDF objects out of 1200 (max. 8388607)
+ 985 compressed objects within 10 object streams
+ 243 named destinations out of 1000 (max. 500000)
+ 35206 words of extra memory for PDF output out of 35830 (max. 10000000)
 
