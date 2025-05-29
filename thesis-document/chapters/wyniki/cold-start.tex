@@ -1,41 +1,16 @@
+\newpage
 \section{Zimny start}\label{chapter:results_cold_start}
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.95\textwidth]{charts/results/avg-cold-start-128-256.png}
-    \caption{Średni czas wykonywania funkcji (zimny start) dla rozmiarów pamięci: 128 MB, 256 MB  [źródło: opracowanie własne]}
-    \label{fig:avg_cold_start_128_256}
-\end{figure}
+Drugim badanym kryterium jest czas działania funkcji podczas zimnych startów, które wymagają odpowiedniej inicjaliacji funkcji.
+Z reguły są one dłuższe niż ciepłe starty, co może szczególnie wpłynąć na ogólną wydajność \cite{9284261}\cite{8605777}.
+Średni czas działania funkcji został przedstawiony na Rysunkach \ref{fig:avg_cold_start_128_256} oraz \ref{fig:avg_cold_start_512_2045}.
 
-\begin{figure}[h]
+\begin{figure}[!h]
     \centering
     \includegraphics[width=0.95\textwidth]{charts/results/avg-cold-start-512-2048.png}
     \caption{Średni czas wykonywania funkcji (zimny start) dla rozmiarów pamięci: 512 MB, 1024 MB, 2048 MB  [źródło: opracowanie własne]}
     \label{fig:avg_cold_start_512_2045}
 \end{figure}
-
-% --- Row 1: 256 MB and 1024 MB charts ---
-\begin{figure}[htbp]
-    \centering % Center the minipages on the line
-    \begin{minipage}[t]{0.48\textwidth} % [t] for top alignment
-        \centering % Center content within this minipage
-        \includegraphics[width=\linewidth]{charts/results/cold-start-boxplot-256.png}
-        \captionof{figure}{Czas wykonania funkcji (zimny start, 256 MB) [źródło: opracowanie własne]}
-        \label{fig:cold_start_128} % Unique label for this figure
-    \end{minipage}% <--- % is important
-    \hfill % Space between minipages
-    \begin{minipage}[t]{0.48\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{charts/results/cold-start-boxplot-1024.png}
-        \captionof{figure}{Czas wykonania funkcji (zimny start, 1024 MB) [źródło: opracowanie własne]}
-        \label{fig:cold_start_256} % Unique label
-    \end{minipage}
-    % No overall \caption for this outer figure environment, as it's just for layout.
-\end{figure}
-
-Drugim badanym kryterium jest czas działania funkcji podczas zimnych startów, które wymagają odpowiedniej inicjaliacji funkcji.
-Z reguły są one dłuższe niż ciepłe starty, co może szczególnie wpłynąć na ogólną wydajność \cite{9284261}\cite{8605777}.
-Średni czas działania funkcji został przedstawiony na Rysunkach \ref{fig:avg_cold_start_128_256} oraz \ref{fig:avg_cold_start_512_2045}.
 
 Wpływ aktywacji usługi SnapStart jest różny w zależności od języka oprogramowania.
 Dla Javy, usługa ta pozwoliła na poprawę czasu działania funkcji, w szczególności dla większych rozmiarów pamięci.
@@ -49,7 +24,7 @@ Niezależnie od rozmiaru pamięci najkrótszy czas działania w przypadku zimneg
 Metoda ta pozwoliła także na osiągnięcie wyników o podobnej stabilności jak pozostałe funkcje, co zostało przedstawione na Rysunkach \ref{fig:warm_start_256} i \ref{fig:warm_start_1024}.
 Mocno zróżnicowane wyniki zostały osiągnięte przez funkcję Kotlin z aktywowaną funkcją SnapStart.
 
-\begin{table}[!h]
+\begin{table}[h]
     \caption{Porównanie średnich czasów działania funkcji podczas zimnego startu względem funkcji bazowej [źródło: opracowanie własne]}
     \centering
     % Modified column definitions for left alignment
@@ -77,3 +52,32 @@ Mocno zróżnicowane wyniki zostały osiągnięte przez funkcję Kotlin z aktywo
     \end{tabular}
     \label{table:cold_start_comparison}
 \end{table}
+
+\begin{figure}[p] % Use [p] to suggest a float page. Or [!htbp] for more flexibility.
+    \centering
+
+    % --- First graphical element ---
+    \includegraphics[width=0.95\textwidth]{charts/results/avg-cold-start-128-256.png}
+    \caption{Średni czas wykonywania funkcji (zimny start) dla rozmiarów pamięci: 128 MB, 256 MB  [źródło: opracowanie własne]}
+    \label{fig:avg_cold_start_128_256}
+
+    \vspace{2em} % Optional: Add some vertical space between the distinct parts within this single figure
+
+    % --- Second graphical element (with minipages) ---
+    % Note: No new \begin{figure} here. This is part of the same float.
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{charts/results/cold-start-boxplot-256.png}
+        \captionof{figure}{Czas wykonania funkcji (zimny start, 256 MB) [źródło: opracowanie własne]} % \captionof requires the 'caption' or 'capt-of' package
+        \label{fig:cold_start_128}
+    \end{minipage}% <--- % is important to prevent extra horizontal space
+    \hfill % Creates flexible space between the minipages
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{charts/results/cold-start-boxplot-1024.png}
+        \captionof{figure}{Czas wykonania funkcji (zimny start, 1024 MB) [źródło: opracowanie własne]}
+        \label{fig:cold_start_256}
+    \end{minipage}
+    % If this combined figure needs an overall caption, you could add another \caption{} here.
+    % If the first caption serves as the overall caption, then this is fine.
+\end{figure}

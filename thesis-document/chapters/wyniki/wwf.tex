@@ -1,4 +1,11 @@
+\newpage
 \section{Współczynnik wydajności funkcji}\label{chapter:results_wwf}
+
+Kolejnym badanym kryterium jest współczynnik wydajności funkcji (WWF), opisany w Rozdziale \ref{chapter:cel_i_metodologia_badan}.
+Pozwala on na jednoczesną analizę zarówno ciepłych, jak i zimnych startów, a wyższe wartości WWF oznaczają wyższą wydajność funkcji.
+Wartości WWF zostały obliczone na bazie średnich czasów wykonania podczas zimnych i ciepłych startów.
+W ramach obliczeń przyjęto wagi: 0,95 dla ciepłych startów oraz 0,05 dla zimnych startów.
+Wyniki dla poszczególnych metod i rozmiarów pamięci zostały przedstawione na Rysunku \ref{fig:avg_wwf}.
 
 \begin{figure}[h]
     \centering
@@ -6,12 +13,6 @@
     \caption{Współczynnik wydajności funkcji w zależności od rozmiaru pamięci [źródło: opracowanie własne]}
     \label{fig:avg_wwf}
 \end{figure}
-
-Kolejnym badanym kryterium jest współczynnik wydajności funkcji (WWF), opisany w Rozdziale \ref{chapter:cel_i_metodologia_badan}.
-Pozwala on na jednoczesną analizę zarówno ciepłych, jak i zimnych startów, a wyższe wartości WWF oznaczają wyższą wydajność funkcji.
-Wartości WWF zostały obliczone na bazie średnich czasów wykonania podczas zimnych i ciepłych startów.
-W ramach obliczeń przyjęto wagi: 0,95 dla ciepłych startów oraz 0,05 dla zimnych startów.
-Wyniki dla poszczególnych metod i rozmiarów pamięci zostały przedstawione na Rysunku \ref{fig:avg_wwf}.
 
 Dla funkcji Java opartej o JVM, wartość współczynnika rośnie wraz z wzrostem pamięci.
 Podobny trend występuje dla funkcji Kotlin JVM, gdzie jednak wzrost ten jest bardziej dynamiczny.

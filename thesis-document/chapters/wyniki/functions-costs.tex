@@ -1,16 +1,16 @@
 \section{Koszt funkcji}\label{chapter:results_cost}
 
+Miarą, która wynika bezpośrednio z czasu działania funkcji oraz rozmiaru jej pamięci jest koszt jej działania.
+W ramach badania został on obliczony na bazie średnich czasów procesowania funkcji, co zostało opisane w Rodziale \ref{chapter:cel_i_metodologia_badan}.
+W obliczeniach przyjęto 500 wywołań funkcji na sekundę.
+Wyniki dla poszczególnych metod i rozmiarów pamięci zostały przedstawione na Rysunku \ref{fig:avg_costs}.
+
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.95\textwidth]{charts/results/average-cost.png}
     \caption{Średni koszt funkcji w zależności od rozmiaru pamięci [źródło: opracowanie własne]}
     \label{fig:avg_costs}
 \end{figure}
-
-Miarą, która wynika bezpośrednio z czasu działania funkcji oraz rozmiaru jej pamięci jest koszt jej działania.
-W ramach badania został on obliczony na bazie średnich czasów procesowania funkcji, co zostało opisane w Rodziale \ref{chapter:cel_i_metodologia_badan}.
-W obliczeniach przyjęto 500 wywołań funkcji na sekundę.
-Wyniki dla poszczególnych metod i rozmiarów pamięci zostały przedstawione na Rysunku \ref{fig:avg_costs}.
 
 Analizując cztery funkcje oparte o JVM można zauważyć, że koszt jest najniższy dla pamięci 256 MB lub 512 MB.
 Interesującym faktem jest, że rozmiaru 128 MB koszt działania jest wyższy, co przeczy oczekiwaniom, że koszty maleją wraz z spadkiem wielkości pamięci, niezależnie od jej wartości.

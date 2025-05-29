@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.30)  29 MAY 2025 12:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.30)  29 MAY 2025 13:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1514,107 +1514,84 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [56]
 Rozdzia\l  5.
 (./chapters/wyniki/warm-start.tex
-<charts/results/avg-warm-start.png, id=931, 752.8125pt x 376.40625pt>
+<charts/results/avg-warm-start.png, id=933, 752.8125pt x 376.40625pt>
 File: charts/results/avg-warm-start.png Graphic file (type png)
 <use charts/results/avg-warm-start.png>
-Package pdftex.def Info: charts/results/avg-warm-start.png  used on input line 5.
+Package pdftex.def Info: charts/results/avg-warm-start.png  used on input line 11.
 (pdftex.def)             Requested size: 448.42822pt x 224.22008pt.
-<charts/results/warm-start-boxplot-256.png, id=932, 451.6875pt x 451.6875pt>
-File: charts/results/warm-start-boxplot-256.png Graphic file (type png)
-<use charts/results/warm-start-boxplot-256.png>
-Package pdftex.def Info: charts/results/warm-start-boxplot-256.png  used on input line 15.
-(pdftex.def)             Requested size: 226.57297pt x 226.57376pt.
-<charts/results/warm-start-boxplot-1024.png, id=933, 451.6875pt x 451.6875pt>
-File: charts/results/warm-start-boxplot-1024.png Graphic file (type png)
-<use charts/results/warm-start-boxplot-1024.png>
-Package pdftex.def Info: charts/results/warm-start-boxplot-1024.png  used on input line 22.
-(pdftex.def)             Requested size: 226.57297pt x 226.57376pt.
 
 
 [57
 
 
  <./charts/results/avg-warm-start.png>]
+<charts/results/warm-start-boxplot-256.png, id=943, 451.6875pt x 451.6875pt>
+File: charts/results/warm-start-boxplot-256.png Graphic file (type png)
+<use charts/results/warm-start-boxplot-256.png>
+Package pdftex.def Info: charts/results/warm-start-boxplot-256.png  used on input line 67.
+(pdftex.def)             Requested size: 226.57297pt x 226.57376pt.
+<charts/results/warm-start-boxplot-1024.png, id=944, 451.6875pt x 451.6875pt>
+File: charts/results/warm-start-boxplot-1024.png Graphic file (type png)
+<use charts/results/warm-start-boxplot-1024.png>
+Package pdftex.def Info: charts/results/warm-start-boxplot-1024.png  used on input line 74.
+(pdftex.def)             Requested size: 226.57297pt x 226.57376pt.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 ) (./chapters/wyniki/cold-start.tex
-<charts/results/avg-cold-start-128-256.png, id=943, 752.8125pt x 376.40625pt>
-File: charts/results/avg-cold-start-128-256.png Graphic file (type png)
-<use charts/results/avg-cold-start-128-256.png>
-Package pdftex.def Info: charts/results/avg-cold-start-128-256.png  used on input line 5.
-(pdftex.def)             Requested size: 448.42822pt x 224.22008pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<charts/results/avg-cold-start-512-2048.png, id=944, 752.8125pt x 376.40625pt>
+[58]
+<charts/results/avg-cold-start-512-2048.png, id=955, 752.8125pt x 376.40625pt>
 File: charts/results/avg-cold-start-512-2048.png Graphic file (type png)
 <use charts/results/avg-cold-start-512-2048.png>
-Package pdftex.def Info: charts/results/avg-cold-start-512-2048.png  used on input line 12.
+Package pdftex.def Info: charts/results/avg-cold-start-512-2048.png  used on input line 10.
 (pdftex.def)             Requested size: 448.42822pt x 224.22008pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
 
-<charts/results/cold-start-boxplot-256.png, id=945, 451.6875pt x 451.6875pt>
+[59 <./charts/results/warm-start-boxplot-256.png> <./charts/results/warm-start-boxplot-1024.png> <./charts/results/avg-cold-start-512-2048.png>]
+<charts/results/avg-cold-start-128-256.png, id=967, 752.8125pt x 376.40625pt>
+File: charts/results/avg-cold-start-128-256.png Graphic file (type png)
+<use charts/results/avg-cold-start-128-256.png>
+Package pdftex.def Info: charts/results/avg-cold-start-128-256.png  used on input line 60.
+(pdftex.def)             Requested size: 448.42822pt x 224.22008pt.
+<charts/results/cold-start-boxplot-256.png, id=968, 451.6875pt x 451.6875pt>
 File: charts/results/cold-start-boxplot-256.png Graphic file (type png)
 <use charts/results/cold-start-boxplot-256.png>
-Package pdftex.def Info: charts/results/cold-start-boxplot-256.png  used on input line 22.
+Package pdftex.def Info: charts/results/cold-start-boxplot-256.png  used on input line 70.
 (pdftex.def)             Requested size: 226.57297pt x 226.57376pt.
-<charts/results/cold-start-boxplot-1024.png, id=946, 451.6875pt x 451.6875pt>
+<charts/results/cold-start-boxplot-1024.png, id=969, 451.6875pt x 451.6875pt>
 File: charts/results/cold-start-boxplot-1024.png Graphic file (type png)
 <use charts/results/cold-start-boxplot-1024.png>
-Package pdftex.def Info: charts/results/cold-start-boxplot-1024.png  used on input line 29.
+Package pdftex.def Info: charts/results/cold-start-boxplot-1024.png  used on input line 77.
 (pdftex.def)             Requested size: 226.57297pt x 226.57376pt.
-
-
-[58 <./charts/results/warm-start-boxplot-256.png> <./charts/results/warm-start-boxplot-1024.png>]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 ) (./chapters/wyniki/wwf.tex
-<charts/results/wwf.png, id=960, 752.8125pt x 376.40625pt>
+
+[60]
+
+[61 <./charts/results/avg-cold-start-128-256.png> <./charts/results/cold-start-boxplot-256.png> <./charts/results/cold-start-boxplot-1024.png>]
+<charts/results/wwf.png, id=985, 752.8125pt x 376.40625pt>
 File: charts/results/wwf.png Graphic file (type png)
 <use charts/results/wwf.png>
-Package pdftex.def Info: charts/results/wwf.png  used on input line 5.
+Package pdftex.def Info: charts/results/wwf.png  used on input line 12.
 (pdftex.def)             Requested size: 448.42822pt x 224.22008pt.
+)
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-
-[59]
-Underfull \vbox (badness 2717) has occurred while \output is active []
-
-
-
-[60 <./charts/results/avg-cold-start-128-256.png>]) (./chapters/wyniki/functions-costs.tex
-<charts/results/average-cost.png, id=979, 752.8125pt x 376.40625pt>
+[62 <./charts/results/wwf.png>] (./chapters/wyniki/functions-costs.tex
+<charts/results/average-cost.png, id=995, 752.8125pt x 376.40625pt>
 File: charts/results/average-cost.png Graphic file (type png)
 <use charts/results/average-cost.png>
-Package pdftex.def Info: charts/results/average-cost.png  used on input line 5.
+Package pdftex.def Info: charts/results/average-cost.png  used on input line 10.
 (pdftex.def)             Requested size: 448.42822pt x 224.22008pt.
+)
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-
-[61 <./charts/results/avg-cold-start-512-2048.png>]) (./chapters/wyniki/development-process.tex
-<charts/results/avg-build-times.png, id=989, 752.8125pt x 376.40625pt>
+[63 <./charts/results/average-cost.png>] (./chapters/wyniki/development-process.tex
+<charts/results/avg-build-times.png, id=1003, 752.8125pt x 376.40625pt>
 File: charts/results/avg-build-times.png Graphic file (type png)
 <use charts/results/avg-build-times.png>
 Package pdftex.def Info: charts/results/avg-build-times.png  used on input line 9.
 (pdftex.def)             Requested size: 448.42822pt x 224.22008pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-
-[62 <./charts/results/cold-start-boxplot-256.png> <./charts/results/cold-start-boxplot-1024.png>]
-<charts/results/artifact-size.png, id=1000, 752.8125pt x 376.40625pt>
+<charts/results/artifact-size.png, id=1005, 752.8125pt x 376.40625pt>
 File: charts/results/artifact-size.png Graphic file (type png)
 <use charts/results/artifact-size.png>
 Package pdftex.def Info: charts/results/artifact-size.png  used on input line 23.
@@ -1624,29 +1601,27 @@ Package pdftex.def Info: charts/results/artifact-size.png  used on input line 23
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
+
+[64 <./charts/results/avg-build-times.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 42--42
 []|\T1/lmr/bx/n/12 (+20) Dost¦pno±¢
  []
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 )) (./chapters/wnioski_dyskusja/main.tex
 
-[63 <./charts/results/wwf.png>]
+[65 <./charts/results/artifact-size.png>]
 
-[64 <./charts/results/average-cost.png>]
-
-[65 <./charts/results/avg-build-times.png> <./charts/results/artifact-size.png>]
-
-[66
-
-
-]
+[66]
 Rozdzia\l  6.
 ) (./chapters/zakonczenie/main.tex
 
-[67]
+[67
+
+
+]
 
 [68
 
@@ -1683,7 +1658,7 @@ Rozdzia\l  6.
 
 
 [78]
-runsystem(latexminted cleantemp  --timestamp 20250529124300 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
+runsystem(latexminted cleantemp  --timestamp 20250529131027 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
 
  (./main.aux)
  ***********
@@ -1691,21 +1666,21 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: BE92B94FAE9A281F7A69B1154594C78E;6093.
+(rerunfilecheck)             Checksum: 5989988F58BFC41DCF3517CFA7178384;6093.
  ) 
 Here is how much of TeX's memory you used:
- 31322 strings out of 473190
- 575195 string characters out of 5715800
+ 31321 strings out of 473190
+ 575178 string characters out of 5715800
  1199109 words of memory out of 5000000
  53475 multiletter control sequences out of 15000+600000
  628419 words of font info for 174 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,21n,96p,1071b,1062s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
-Output written on main.pdf (83 pages, 1235305 bytes).
+Output written on main.pdf (83 pages, 1235797 bytes).
 PDF statistics:
  1274 PDF objects out of 1440 (max. 8388607)
  1081 compressed objects within 11 object streams
- 262 named destinations out of 1000 (max. 500000)
+ 261 named destinations out of 1000 (max. 500000)
  37304 words of extra memory for PDF output out of 42996 (max. 10000000)
 

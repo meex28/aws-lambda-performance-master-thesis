@@ -10,7 +10,7 @@
 \contentsline {table}{\numberline {4.2}{\ignorespaces Biblioteki oraz frameworki użyte podczas implementacji badanych funkcji}}{52}{table.caption.16}%
 \contentsline {table}{\numberline {4.3}{\ignorespaces Środowiska wykonawcze użyte w badanych funkcjach AWS Lambda}}{54}{table.caption.17}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Porównanie średnich czasów działania funkcji podczas ciepłego startu względem funkcji bazowej [źródło: opracowanie własne]}}{59}{table.caption.21}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces Porównanie średnich czasów działania funkcji podczas zimnego startu względem funkcji bazowej [źródło: opracowanie własne]}}{60}{table.caption.25}%
-\contentsline {table}{\numberline {5.3}{\ignorespaces Dostępność AWS SDK dla rodzajów funkcji [źródło: opracowanie własne]}}{64}{table.caption.30}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Porównanie średnich czasów działania funkcji podczas ciepłego startu względem funkcji bazowej [źródło: opracowanie własne]}}{58}{table.caption.20}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Porównanie średnich czasów działania funkcji podczas zimnego startu względem funkcji bazowej [źródło: opracowanie własne]}}{60}{table.caption.23}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Dostępność AWS SDK dla rodzajów funkcji [źródło: opracowanie własne]}}{66}{table.caption.29}%
 \addvspace {10\p@ }

@@ -1,35 +1,17 @@
 \section{Ciepły start}\label{chapter:results_warm_start}
 
+Pierwszym kryterium badanym w testach wydajnościowych był czas działania funkcji podczas ciepłych startów.
+Oznacza to sytuację, gdy funkcja była wywołana w momencie, gdy aktywna była jedna z instancji funkcji.
+Powoduje to, że nie jest wymagana inicjalizacja usługi, a kod rozpoczyna działanie bezpośrednio po wywołaniu.
+Średni czas wykonania w zależności od metody i rozmiaru pamięci został przedstawiony na Rysunku \ref{fig:avg_warm_start}.
+Dokładne wartości oraz różnica względem funkcji bazowej (Java JVM) zostały zaprezentowane w Tabeli \ref{table:warm_start_comparison}.
+
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.95\textwidth]{charts/results/avg-warm-start.png}
     \caption{Średni czas wykonywania funkcji (ciepły start) z użyciem wybranych metod w zależności od rozmiaru pamięci [źródło: opracowanie własne]}
     \label{fig:avg_warm_start}
 \end{figure}
-
-% --- Row 1: 256 MB and 1024 MB charts ---
-\begin{figure}[htbp]
-    \centering % Center the minipages on the line
-    \begin{minipage}[t]{0.48\textwidth} % [t] for top alignment
-        \centering % Center content within this minipage
-        \includegraphics[width=\linewidth]{charts/results/warm-start-boxplot-256.png}
-        \captionof{figure}{Czas wykonania funkcji (ciepły start, 256 MB) [źródło: opracowanie własne]}
-        \label{fig:warm_start_256} % Unique label for this figure
-    \end{minipage}% <--- % is important
-    \hfill % Space between minipages
-    \begin{minipage}[t]{0.48\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{charts/results/warm-start-boxplot-1024.png}
-        \captionof{figure}{Czas wykonania funkcji (ciepły start, 1024 MB) [źródło: opracowanie własne]}
-        \label{fig:warm_start_1024} % Unique label
-    \end{minipage}
-    % No overall \caption for this outer figure environment, as it's just for layout.
-\end{figure}
-
-Pierwszym kryterium badanym w testach wydajnościowych był czas działania funkcji podczas ciepłych startów.
-Oznacza to sytuację, gdy funkcja była wywołana w momencie, gdy aktywna była jedna z instancji funkcji.
-Powoduje to, że nie jest wymagana inicjalizacja usługi, a kod rozpoczyna działanie bezpośrednio po wywołaniu.
-Średni czas wykonania w zależności od metody i rozmiaru pamięci został przedstawiony na Rysunku \ref{fig:avg_warm_start}.
 
 Dla każdego z badanych rodzajów funkcji widoczne jest znaczne zróżnicowanie czasu wykonania w zależności od rozmiaru pamięci.
 Sama skuteczność metod w poprawie wydajności różni się także ze względu na pamięć funkcji.
@@ -43,14 +25,7 @@ Dodatkowo, nie widać znacznej poprawy efektywności wraz z wzrostem rozmiaru pa
 Ciekawa zależność widoczna jest w przypadku funkcji Kotlin/Native, która wskazuje wykazuje poprawę czasu działania dla małych wielkości pamięci (128 MB i 256 MB).
 Szczególna poprawa widoczna jest dla rozmiaru 256 MB, gdzie metoda ta osiągnęła niższe czasy wykonania niż funkcja Java JVM dla większych wielkości pamięci (512-2048 MB).
 
-Na Rysunkach \ref{fig:warm_start_256} oraz \ref{fig:warm_start_1024} przedstawiono wykresy pudełkowe z czasami wykonania funkcji dla rozmiarów pamięci 256 MB i 1024 MB.
-Funkcje oparte wyłącznie o maszynę wirtualną wykazały najmniej zróżnicowane wyniki.
-Aktywacja funkcji SnapStart znacząco obniżyła stabilność czasów odpowiedzi, podobnie jak Kotlin/JS.
-Warte zwrócenia uwagi są jednak funkcje natywne. 
-Obrazy GraalVM wykazują jednolite wyniki, oprócz pamięci 256 MB, gdzie czas wykonania znacząco różnił się w poszczególnych wywołaniach.
-Podobna zależność występuje dla funkcji Kotlin/Native, które osiągają niestabilne wyniki dla rozmiarów pamięci 512 MB oraz 1024 MB.
-
-\begin{table}[!h]
+\begin{table}[h]
     \caption{Porównanie średnich czasów działania funkcji podczas ciepłego startu względem funkcji bazowej [źródło: opracowanie własne]}
     \centering
     \begin{tabular}{|>{\raggedright\arraybackslash}p{3.5cm}| >{\raggedright\arraybackslash}p{1.8cm}| >{\raggedright\arraybackslash}p{1.8cm}| >{\raggedright\arraybackslash}p{1.8cm}| >{\raggedright\arraybackslash}p{1.8cm}| >{\raggedright\arraybackslash}p{1.8cm}|}
@@ -76,3 +51,29 @@ Podobna zależność występuje dla funkcji Kotlin/Native, które osiągają nie
     \end{tabular}
     \label{table:warm_start_comparison}
 \end{table}
+
+Na Rysunkach \ref{fig:warm_start_256} oraz \ref{fig:warm_start_1024} przedstawiono wykresy pudełkowe z czasami wykonania funkcji dla rozmiarów pamięci 256 MB i 1024 MB.
+Funkcje oparte wyłącznie o maszynę wirtualną wykazały najmniej zróżnicowane wyniki.
+Aktywacja funkcji SnapStart znacząco obniżyła stabilność czasów odpowiedzi, podobnie jak Kotlin/JS.
+Warte zwrócenia uwagi są jednak funkcje natywne. 
+Obrazy GraalVM wykazują jednolite wyniki, oprócz pamięci 256 MB, gdzie czas wykonania znacząco różnił się w poszczególnych wywołaniach.
+Podobna zależność występuje dla funkcji Kotlin/Native, które osiągają niestabilne wyniki dla rozmiarów pamięci 512 MB oraz 1024 MB.
+
+% --- Row 1: 256 MB and 1024 MB charts ---
+\begin{figure}[h]
+    \centering % Center the minipages on the line
+    \begin{minipage}[t]{0.48\textwidth} % [t] for top alignment
+        \centering % Center content within this minipage
+        \includegraphics[width=\linewidth]{charts/results/warm-start-boxplot-256.png}
+        \captionof{figure}{Czas wykonania funkcji (ciepły start, 256 MB) [źródło: opracowanie własne]}
+        \label{fig:warm_start_256} % Unique label for this figure
+    \end{minipage}% <--- % is important
+    \hfill % Space between minipages
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{charts/results/warm-start-boxplot-1024.png}
+        \captionof{figure}{Czas wykonania funkcji (ciepły start, 1024 MB) [źródło: opracowanie własne]}
+        \label{fig:warm_start_1024} % Unique label
+    \end{minipage}
+    % No overall \caption for this outer figure environment, as it's just for layout.
+\end{figure}
