@@ -20,6 +20,24 @@ A.~Agache, M.~Brooker, A.~Iordache, A.~Liguori, R.~Neugebauer, P.~Piwonka, and D
 \newblock Firecracker: Lightweight virtualization for serverless applications.
 \newblock In {\em 17th USENIX Symposium on Networked Systems Design and Implementation (NSDI 20)}, pages 419--434, Santa Clara, CA, Feb. 2020. USENIX Association.
 
+\bibitem{aws-sdk-java-v2}
+{Amazon Web Service}.
+\newblock {Repozytorium AWS SDK dla Java}.
+\newblock \url{https://github.com/aws/aws-sdk-java-v2}, 2025.
+\newblock Dostęp: 20.05.2025.
+
+\bibitem{aws-sdk-js-v3}
+{Amazon Web Service}.
+\newblock {Repozytorium AWS SDK dla JavaScript}.
+\newblock \url{https://github.com/aws/aws-sdk-js-v3}, 2025.
+\newblock Dostęp: 20.05.2025.
+
+\bibitem{aws-sdk-kotlin}
+{Amazon Web Service}.
+\newblock {Repozytorium AWS SDK dla Kotlin}.
+\newblock \url{https://github.com/awslabs/aws-sdk-kotlin}, 2025.
+\newblock Dostęp: 20.05.2025.
+
 \bibitem{awsLambdaDeveloperGuide}
 {Amazon Web Services}.
 \newblock Aws lambda developer guide.

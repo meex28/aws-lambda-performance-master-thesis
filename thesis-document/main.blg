@@ -1,0 +1,57 @@
+This is BibTeX, Version 0.99d (TeX Live 2025)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: abbrv.bst
+Database file #1: sources/bibliography.bib
+Warning--entry type for "cui2024serverless" isn't style-file defined
+--line 547 of file sources/bibliography.bib
+Warning--entry type for "vanDonkersgoed2023postnl" isn't style-file defined
+--line 556 of file sources/bibliography.bib
+Warning--to sort, need author or key in kotlinlangKotlinDocs
+Warning--to sort, need author or key in http4kCoreDocs
+Warning--to sort, need author or key in kotlinIrCompilatorGithub
+Warning--empty booktitle in Cavalheiro202389
+Warning--empty booktitle in Cordingly2020704
+Warning--empty booktitle in FerreiraDosSantos2023
+You've used 73 entries,
+            2118 wiz_defined-function locations,
+            884 strings with 18242 characters,
+and the built_in function-call counts, 25985 in all, are:
+= -- 2517
+> -- 1215
+< -- 30
++ -- 490
+- -- 410
+* -- 1510
+:= -- 4026
+add.period$ -- 238
+call.type$ -- 73
+change.case$ -- 422
+chr.to.int$ -- 0
+cite$ -- 79
+duplicate$ -- 1082
+empty$ -- 2114
+format.name$ -- 410
+if$ -- 5785
+int.to.chr$ -- 0
+int.to.str$ -- 73
+missing$ -- 44
+newline$ -- 379
+num.names$ -- 140
+pop$ -- 615
+preamble$ -- 1
+purify$ -- 351
+quote$ -- 0
+skip$ -- 929
+stack$ -- 0
+substring$ -- 1240
+swap$ -- 399
+text.length$ -- 30
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 292
+warning$ -- 6
+while$ -- 204
+width$ -- 75
+write$ -- 806
+(There were 8 warnings)

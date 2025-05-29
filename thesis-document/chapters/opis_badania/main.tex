@@ -61,10 +61,10 @@ Ostatni czynnik nie został zawarty w metryce, gdyż nie jest on zależny od wyd
 Dwa pierwsze liczone są jako GB-sekundy, które są iloczynem wielkości pamięci (w GB) i czasu działania funkcji (w sekundach).
 Metryka ta jest istotna, gdyż w badaniu zostały zawarte różne wielkości pamięci funkcji.
 Z tego względu wartościowy jest także pomiar wpływu poszczególnych metod na wydajność kosztową, na którą składają się zarówno czas działania, jak i wielkość pamięci.
-Na potrzeby pracy koszt działania przykładowej funkcji został określony wzorem:
+Na potrzeby pracy opracowano wzór opisujący koszt działania funkcji przez 30 dni przy określonej liczbie zapytań na sekundę:
 
 \[
-\text{K} = P \cdot M \cdot  r \cdot \left( p_c \cdot d_c + p_w \cdot d_w \right)
+\text{K} = P \cdot M \cdot  r \cdot \left( p_c \cdot d_c + p_w \cdot d_w \right) \cdot 2592000
 \]
 
 gdzie:
@@ -76,7 +76,8 @@ gdzie:
   \item \( p_w \) - udział ciepłych startów (np. 0,95),
   \item \( p_c \) - udział zimnych startów (np. 0,05), gdzie \( p_c = 1 - p_w \),
   \item \( d_c \) - średni rozliczany czas dla zimnych startów (w sekundach),
-  \item \( d_w \) - średni rozliczany czas dla ciepłych startów (w sekundach).
+  \item \( d_w \) - średni rozliczany czas dla ciepłych startów (w sekundach),
+  \item \( 2592000 \) - liczba sekund odpowiadająca okresowi 30 dni.
 \end{itemize}
 
 Kolejnym istotnym obszarem badawczym pracy jest analiza kompromisów w procesie rozwoju oprogramowania, które mogą wynikać z implementacji poszczególnych metod optymalizacji.
