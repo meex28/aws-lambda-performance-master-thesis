@@ -10,27 +10,34 @@ Usługa ta implementuje założenia modelu funkcji jako usługi, oferując progr
 AWS Lambda przejmuje odpowiedzialność za przydzielenie zasobów, skalowanie, monitorowanie oraz zarządzanie cyklem życia wykonywanych funkcji.
 Umożliwia to twórcom oprogramowania skupienie się na logice biznesowej aplikacji, rozliczając ich jedynie za faktyczny czas obliczeń i liczbę wywołań.
 
-\begin{lstlisting}[
-    caption={Przykładowa implementacja funkcji AWS Lambda w języku Java [źródło: opracowanie własne]}, 
-    label={code:example_aws_lambda},
-]
-public class MyHandler implements 
-    RequestHandler<MyHandler.Request, String> {
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.95\textwidth]{charts/sample-lambda-code.png}
+    \caption{Przykładowa implementacja funkcji AWS Lambda w języku Java [źródło: opracowanie własne]}
+    \label{fig:example_aws_lambda}
+\end{figure}
+
+% \begin{lstlisting}[
+%     caption={Przykładowa implementacja funkcji AWS Lambda w języku Java [źródło: opracowanie własne]}, 
+%     label={code:example_aws_lambda},
+% ]
+% public class MyHandler implements 
+%     RequestHandler<MyHandler.Request, String> {
     
-    public record Request(String message) {}
+%     public record Request(String message) {}
 
-    public record Response() {}
+%     public record Response() {}
 
-    @Override
-    public Response handleRequest(Request event, Context context) {
-        // logika biznesowa funkcji
-        return Response()
-    }
-}
-\end{lstlisting}
+%     @Override
+%     public Response handleRequest(Request event, Context context) {
+%         // logika biznesowa funkcji
+%         return Response()
+%     }
+% }
+% \end{lstlisting}
 
 Pierwszym krokiem wdrożenia funkcji AWS Lambda jest napisanie uruchamianego kodu.
-Przykładowa implementacja została przedstawiona w Kodzie Źródłowym \ref{code:example_aws_lambda}. 
+Przykładowa implementacja została przedstawiona na Rysunku \ref{fig:example_aws_lambda}. 
 Odpowiedni interfejs, który wykorzystuje programista, jest dostarczany przez AWS.
 Jego implementacja w klasie MyHandler pozwala na nadpisanie metody handleRequest, która jest wywoływana w momencie obsługi zdarzenia.
 W ciele metody umieszczana jest konkretna logika biznesowa funkcji chmurowej, na której skupia się użytkownik.

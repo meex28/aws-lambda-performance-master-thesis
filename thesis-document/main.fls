@@ -480,6 +480,11 @@ INPUT ./chapters/dzialanie_faas/aws_lambda.tex
 INPUT ./chapters/dzialanie_faas/aws_lambda.tex
 INPUT ./chapters/dzialanie_faas/aws_lambda.tex
 INPUT chapters/dzialanie_faas/aws_lambda.tex
+INPUT ./charts/sample-lambda-code.png
+INPUT ./charts/sample-lambda-code.png
+INPUT ./charts/sample-lambda-code.png
+INPUT ./charts/sample-lambda-code.png
+INPUT ./charts/sample-lambda-code.png
 INPUT ./charts/aws_lambda_lifecycle.drawio.png
 INPUT ./charts/aws_lambda_lifecycle.drawio.png
 INPUT ./charts/aws_lambda_lifecycle.drawio.png

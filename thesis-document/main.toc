@@ -12,8 +12,8 @@
 \contentsline {section}{\numberline {2.3}Proces przeglądu}{14}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}Omówienie pytań badawczych}{14}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}Przeszukiwane zasoby}{15}{subsection.2.3.2}%
-\contentsline {subsubsection}{Biblioteki cyfrowe}{15}{subsubsection*.5}%
-\contentsline {subsubsection}{Szara literatura}{15}{subsubsection*.6}%
+\contentsline {subsubsection}{Biblioteki cyfrowe}{15}{subsubsection*.6}%
+\contentsline {subsubsection}{Szara literatura}{15}{subsubsection*.7}%
 \contentsline {subsection}{\numberline {2.3.3}Wyszukiwane terminy}{15}{subsection.2.3.3}%
 \contentsline {subsection}{\numberline {2.3.4}Selekcja literatury}{18}{subsection.2.3.4}%
 \contentsline {subsection}{\numberline {2.3.5}Ocena jakości}{19}{subsection.2.3.5}%
@@ -40,4 +40,4 @@
 \contentsline {section}{\numberline {5.4}Koszt funkcji}{63}{section.5.4}%
 \contentsline {section}{\numberline {5.5}Wpływ na rozwój oprogramowania}{64}{section.5.5}%
 \contentsline {chapter}{\numberline {6}Wnioski i dyskusja}{67}{chapter.6}%
-\contentsline {chapter}{Zakończenie}{69}{chapter*.30}%
+\contentsline {chapter}{Zakończenie}{69}{chapter*.31}%
