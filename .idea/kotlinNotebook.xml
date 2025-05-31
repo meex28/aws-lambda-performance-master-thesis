@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="KotlinNotebookOptionsProvider">
-    <option name="jdkName" value="21" />
+    <option name="jdkName" value="corretto-24" />
   </component>
   <component name="KotlinNotebookPlotExportOptionsProvider">
     <option name="fileName" value="plot.png" />

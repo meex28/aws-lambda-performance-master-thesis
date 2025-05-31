@@ -1,1 +1,67 @@
 \chapter{Wnioski i dyskusja}\label{chapter:wnioski_dyskusja}
+
+% Jakiś wstęp
+
+\section{Odpowiedzi na pytania badawcze}\label{chapter:odpowiedzi_na_pytania_badawcze}
+
+W ramach podrozdziału udzielono odpowiedzi na pytania badawcze sformułowane w pracy. 
+Odpowiedzi bazowały na wynikach opisanych w Rozdziale \ref{chapter:wyniki} oraz przypadku trzeciego pytania badawczego także na cechach metod opisanych w Rozdziale \ref{chapter:wybrane_metody_optimalizacji}.
+
+\subsection*{Odpowiedź na pierwsze pytanie badawcze}
+
+Pierwsze pytanie badawcze postawione w pracy brzmi: ,,Które metody optymalizacji pozwalają na najlepszą poprawę ogólnej wydajności funkcji AWS Lambda w ekosystemie Java?''.
+W celu odpowiedzi w pracy zawarto cztery różne kryteria: czas działania funkcji podczas ciepłych startów, czas działania funkcji podczas zimnych startów, współczynnik wydajności funkcji oraz koszt działania funkcji.
+Badania pod ich kątem wykazały, że efektywność poszczególnych metod jest bardzo zależna od konkretnego przypadku użycia (np. często lub rzadko używane funkcje) oraz wielkości pamięci.
+
+W przypadku funkcji o wysokiej aktywności (czyli z dominacją ciepłych startów), żadna z badanych metod nie wykazała poprawy wydajności dla każdej z badanych wielkości pamięci.
+Dla czasu ciepłych startów widoczny jest negatywny wpływ usługi SnapStart (zarówno w przypadku Javy, jak i Kotlina) oraz zastosowania języka interpretowanego (w przypadku użycia Kotlin/JS).
+Metody bazujące na kompilacji kodu do natywnych plików binarnych są najbardziej obiecujące.
+Są to platformy GraalVM oraz Kotlin/Native, których efektywność możemy rozpatrzyć pod kątem małych i dużych rozmiarów pamięci.
+Dla małych rozmiarów pamięci (128 MB oraz 256 MB) Kotlin/Native zapewnił poprawę względem klasycznej funkcji Java JVM, o odpowiednio 49\% i 35\%.
+GraalVM pozwolił na większą poprawę dla pamięci 128 MB (o 60\%), jednak w przypadku pamięci 256 MB cechował się wydłużeniem czasu odpowiedzi.
+Dla pamięci 512 MB obie metody cechowały się dłuższym czasem procesowania niż klasyczna funkcja Java JVM, jednak GraalVM był znacznie szybszy (pogorszenie o 12\%, w porównaniu z 231\% dla Kotlin/Native).
+W przypadku większych pamięci, czyli 1024 MB i 2048 MB, GraalVM skrócił czas procesowania o odpowiednio 40\% i 23\%.
+
+Zatem dla funkcji AWS Lambda o wysokiej aktywności i wysokim ponownym użyciu rozgrzanych już instancji najbardziej uniwersalnym wyborem będzie użycie GraalVM.
+Jednak w przypadku chęci użycia mniejszej pamięci, Kotlin/Native będzie sposobem bardziej stabilnym (ze względu na brak znacznego pogorszenia wydajności dla pamięci 256 MB).
+Dodatkowo, metoda ta wykazuje bardzo wysoką poprawę efektywności kosztowej.
+Dla rozmiarów pamięci 128 MB i 256 MB Kotlin/Native pozwolił na uzyskanie najniższych kosztów, zatem może to być istotny czynnik w wyborze metod optymalizacji przez zespoły programistyczne.
+
+Analizując przypadek funkcji mniej aktywnych (czyli z większym udziałem zimnych startów), metody wykazywały inne właściwości niż dla ciepłych startów.
+Poprzez ocenę współczynnika wydajności funkcji (WWF) można stwierdzić, że większość metod pozwoliły na pewną poprawę wydajności.
+Jedynie dla mniejszych pamięci (128 MB, 256 MB) metody jak SnapStart i Kotlin prowadziły do pogorszenia wydajności (oprócz użycia Javy z aktywnym SnapStart i pamięci 256 MB).
+Dla pamięci wielkości 128 MB, 256 MB ponownie najbardziej skuteczne okazały się metody oparte o kompilację do natywnych plików binarnych.
+Szczególną uwagę przykuwa jednak użycie Kotlin/Native, który zapewnił znacznie większy wzrost wydajności niż GraalVM.
+Wykazał się on najbardziej efektywną metodą dla funkcji o pamięci 128 MB, a także dla rozmiaru 256 MB, gdzie wzrost wydajności był kolosalny.
+Kotlin/Native osiągnał trzykrotnie większą wartość współczynnika niż GraalVM, który był drugą najbardziej skuteczną metodą.
+Czas uruchomienia funkcji dla pamięci 128 MB i 256 MB był także najniższy dla Kotlin/Native.
+Zostanie to omówione szczegółowe w ramach odpowiedzi na drugie pytanie badawcze.
+Dodatkowo, w ramach tych wartości pamięci możliwe było uzyskanie najniższych kosztów działania funkcji wśród wszystkich badanych konfiguracji.
+Zostało to otrzymane dzięki użyciu kompilacji Kotlina do natywnych plików binarnych.
+Wszystkie te aspekty wskazują na bardzo wysoką skuteczność tej metody w zakresie niewielkich rozmiarów pamięci (128 MB, 256 MB).
+
+Dla aktywnych funkcji o rozmiarze pamięci od 512 MB do 2048 MB, trzy z badanych metod wykazały istotną skuteczność.
+Były to Kotlin/JS, Kotlin/Native oraz GraalVM.
+Dla pamięci 512 MB, metody wykazały zbliżoną skuteczność pod względem współczynnika wydajności funkcji (przy czym GraalVM był najbardziej wydajny).
+Wraz z wzrostem pamięci rosła wydajność wszystkich trzech metod, jednak istotny jest tutaj wzrost wydajności dla funkcji używających Kotlin/Native.
+Dla rozmiaru pamięci 1024 MB Kotlin/Native uzyskał najwyższą wartość współczynnika, o około 10\% wyższą niż kolejny GraalVM.
+Jednak dla rozmiaru 2048 MB, różnica ta zdecydowanie zwiększyła się, gdzie Kotlin/Native osiągnął wynik o około 74\% wyższy od GraalVM.
+Wartym uwagi jest także bardzo wysoka wydajność Kotlin/Native w konfiguracji pamięci 256 MB, gdzie było to połączenie o drugiej najwyższej wartości współczynnika.
+Dodatkowo, Kotlin/Native cechował się wysoką efektywnością kosztową, gdzie pozwolił na uzyskanie niższego kosztu działania niż GraalVM we wszystkich z badanych rozmiarów pamięci.
+
+Podsumowując, niemożliwe jest wybranie jednej najbardziej efektywnej metody optymalizacji wydajności dla wszystkich przypadków użycia funkcji AWS Lambda w ekosystemie Java.
+Dla funkcji o bardzo wysokiej aktywności, GraalVM byłby najbardziej uniwersalną techniką, która jednak nie jest skuteczna dla każdej konfiguracji pamięci.
+Podczas użycia funkcji o mniejszej aktywności i wyższym znaczeniu zimnych startów, bardzo sprawną techniką jest Kotlin/Native, który cechuje się także dobrą efektywnością kosztową, w porównaniu z alternatywnym GraalVM.
+Wartym uwagi jest jednak przypadek funkcji o niewielkim rozmiarze pamięci (128 MB, 256 MB) i używających Kotlin/Native.
+W ramach tych funkcji metoda ta pozwala na poprawę wydajności w ramach każdego z badanych aspektów.
+Redukuje ona czas ciepłych startów, osiąga najniższy czas działania dla zimnych startów oraz najwyższy współczynnik wydajności funkcji w ramach tych rozmiarów pamięci.
+Wszystko to jest możliwe przy jednocześnie najniższych z otrzymanych w badaniu kosztów działania.
+Z tego względu Kotlin/Native powinien być rozważany w przypadku decyzji o wyborze metody optymalizacji wydajności.
+
+\subsection*{Odpowiedź na drugie pytanie badawcze}
+
+Drugim pytaniem badawczym sformułowane w pracy jest: ,,W jakim stopniu wybrane metody optymalizacji redukują czas zimnego startu funkcji Java w AWS Lambda?''.
+
+\subsection*{Odpowiedź na trzecie pytanie badawcze}
+
+Trzecim pytaniem badawczym, które zostało uwzględnione w pracy, jest: ,,Jakie kompromisy w procesie rozwoju oprogramowania wiążą się implementacją poszczególnych metod optymalizacji wydajności funkcji Java w AWS Lambda?''.

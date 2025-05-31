@@ -40,4 +40,5 @@
 \contentsline {section}{\numberline {5.4}Koszt funkcji}{63}{section.5.4}%
 \contentsline {section}{\numberline {5.5}Wpływ na rozwój oprogramowania}{64}{section.5.5}%
 \contentsline {chapter}{\numberline {6}Wnioski i dyskusja}{67}{chapter.6}%
-\contentsline {chapter}{Zakończenie}{69}{chapter*.31}%
+\contentsline {section}{\numberline {6.1}Odpowiedzi na pytania badawcze}{67}{section.6.1}%
+\contentsline {chapter}{Zakończenie}{71}{chapter*.31}%
