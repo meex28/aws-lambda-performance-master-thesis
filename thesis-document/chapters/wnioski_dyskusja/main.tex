@@ -61,7 +61,40 @@ Z tego względu Kotlin/Native powinien być rozważany w przypadku decyzji o wyb
 \subsection*{Odpowiedź na drugie pytanie badawcze}
 
 Drugim pytaniem badawczym sformułowane w pracy jest: ,,W jakim stopniu wybrane metody optymalizacji redukują czas zimnego startu funkcji Java w AWS Lambda?''.
+W celu udzielenia odpowiedzi w badaniu zawarto pomiar czasu działania funkcji podczas zimnych startów.
+Dokładne wyniki zostały przedstawione w Rozdziale \ref{chapter:results_cold_start}.
+W tym przypadku skuteczność metod była generalnie wysoka.
+Jedynym wyjątkiem było zastosowanie funkcji SnapStart w połączeniu z Kotliniem, co wpłynęło negatywnie na efektywność podczas zimnych startów.
+Dla Javy użycie SnapStart zredukowało czas zimnych startów od 10\% (dla pamięci 128 MB) do 55\% (dla pamięci 1024 MB).
+Użycie Kotlina także było skuteczne, choć tylko dla większych rozmiarów pamięci (512 MB, 1024 MB, 2048 MB), gdzie poprawa wynosiła odpowiednio 28\%, 54\% oraz 65\%.
+
+Najbardziej wydajnymi metodami były te oparte o kompilacje do natywnych plików binarnych (GraalVM, Kotlin/Native) oraz używające języków interpretowanych (Kotlin/JS).
+Porównując GraalVM oraz Kotlin/JS, pierwsza metoda była średnio bardziej skuteczna dla małych pamięci (128 MB, 256 MB).
+Zapewniła ona poprawę czasu odpowiedzi o odpowiednio 78\% i 81\%, gdy dla Kotlin/JS wynik ten wynosił odpowiednio 75\% i 80\%.
+W przypadku pamięci 512 MB, 1024 MB i 2048 MB GraalVM zredukował czas odpowiedzi o odpowiednio 82\%, 82\% i 80\%, a Kotlin/JS zredukował czas odpowiedzi o odpowiednio 84\%, 84\% i 86\%.  
+Jednak dla obu tych metod róznice w skuteczności są niewielkie. 
+
+Najefektywniejszą metodą okazał się jednak Kotlin/Native.
+Dla każdej z badanych wielkości pamięci pozwolił on na największą redukcję czasu działania.
+Wynosiła ona od 88\% (dla pamięci 128 MB) do 93\% (dla pamięci 1024 MB i 2048 MB) w porównaniu z bazową funkcją Java JVM.
+Dla rozmiarów pamięci 128 MB i 256 MB, funkcje z Kotlin/Native charakteryzowały się zimnymi startami odpowiednio o około 45\% i 51\% niższymi w porównaniu do GraalVM.
+Z kolei dla konfiguracji z pamięcią 512 MB, 1024 MB i 2048 MB, czasy zimnego startu były odpowiednio o 50\%, 48\% i 48\% krótsze niż dla Kotlin/JS.
 
 \subsection*{Odpowiedź na trzecie pytanie badawcze}
 
 Trzecim pytaniem badawczym, które zostało uwzględnione w pracy, jest: ,,Jakie kompromisy w procesie rozwoju oprogramowania wiążą się implementacją poszczególnych metod optymalizacji wydajności funkcji Java w AWS Lambda?''.
+Wpływ na rozwój oprogramowania to istotny czynnik, który powinien być wzięty pod uwagę przez zespoły programistyczne podczas wyboru odpowiedniej metody optymalizacji wydajności.
+Znaczenie może zostać ocenione pod kątem różnych kryteriów jak: czas budowy artefaktu, jego wielkość, dostępność narzędzi SDK (ang. Software Development Kit) czy kosztem działania.
+W ramach oceny wszystkie metody są porównywane do bazowej implementacji Java działającej z użyciem JVM.
+
+Podczas użycia usługi SnapStart programista dalej wykorzystuje ten sam artefakt i platformę, jak w funkcji bazowej.
+Zatem nie ma ona wpływu na czynniki jak czas budowy, wielkość artefaktu czy dostępność SDK.
+Istotny jest jednak wpływ na koszt funkcji, który był wyższy dla każdego z badanych rozmiarów pamięci oraz dla obu języków (Java i Kotlin).
+W trakcie tworzenia systemów korzystających z SnapStart programista powinien uwzględnić jednak kilka aspektów związanych z stanem funkcji (co zostało opisane w Rozdziale \ref{chapter:snapstart}).
+Wpływa to na połączenia sieciowe funkcji (szczególnie ważne podczas integracji z innymi serwisami) oraz generowania wartości unikalnych (jak identyfikatory).
+Wynika to z sposobu działania SnapStart, który tworzy migawki stanu funkcji, wykorzystywane później w wielu wywołaniach.
+
+% Opis dla Kotlin
+% Opis dla Kotlin/JS
+% Opis dla GraalVM
+% Opis dla Kotlin/Native

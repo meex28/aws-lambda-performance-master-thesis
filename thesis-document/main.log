@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.30)  31 MAY 2025 22:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.30)  1 JUN 2025 11:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1619,16 +1619,16 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[68]) (./chapters/zakonczenie/main.tex
+[68]
 
-[69]
+[69]) (./chapters/zakonczenie/main.tex
 
-[70
+[70]) (./main.bbl
+
+[71
 
 
-]) (./main.bbl
-
-[71]
+]
 
 [72
 
@@ -1663,7 +1663,7 @@ Underfull \vbox (badness 4467) has occurred while \output is active []
 
 
 [81]
-runsystem(latexminted cleantemp  --timestamp 20250531222920 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
+runsystem(latexminted cleantemp  --timestamp 20250601115927 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
 
  (./main.aux)
  ***********
@@ -1682,10 +1682,10 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  99i,21n,96p,1071b,760s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
-Output written on main.pdf (86 pages, 1317264 bytes).
+Output written on main.pdf (86 pages, 1320554 bytes).
 PDF statistics:
- 1283 PDF objects out of 1440 (max. 8388607)
- 1085 compressed objects within 11 object streams
+ 1285 PDF objects out of 1440 (max. 8388607)
+ 1087 compressed objects within 11 object streams
  252 named destinations out of 1000 (max. 500000)
  37317 words of extra memory for PDF output out of 42996 (max. 10000000)
 
