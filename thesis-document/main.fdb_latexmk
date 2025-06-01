@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1748772736.11611 "main.aux" "main.bbl" "main" 1748778234.00042 0
+["bibtex main"] 1748818515.77541 "main.aux" "main.bbl" "main" 1748819698.04931 0
   "./sources/bibliography.bib" 1748509858.66269 40798 f7c73e8ba1d4b39220a7f9ca3ef2eb12 ""
   "/usr/local/texlive/2025/texmf-dist/bibtex/bst/base/abbrv.bst" 1292289607 20329 b5fed53e10044d0f8112183785c759b1 ""
-  "main.aux" 1748778233.50989 31210 52881ed0b5fea699083c3dd38d542712 "pdflatex"
+  "main.aux" 1748819697.75063 31210 80a29314e556ad9a7a785ef366ca34f1 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1748778230.44179 "/Users/piotr/dev/aws-lambda-performance-master-thesis/thesis-document/main.tex" "main.pdf" "main" 1748778234.0006 0
+["pdflatex"] 1748819694.74169 "/Users/piotr/dev/aws-lambda-performance-master-thesis/thesis-document/main.tex" "main.pdf" "main" 1748819698.04952 0
   "/Users/piotr/dev/aws-lambda-performance-master-thesis/thesis-document/main.tex" 1747560372.17962 1632 05ab45c87171aac344f89567b5cd90ec ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -252,7 +252,7 @@
   "chapters/przeglad_literatury/review_method.tex" 1746563226.87061 16418 e77d33ddb2c486255f7c17f9dc7d82da ""
   "chapters/przeglad_literatury/review_process_table.tex" 1748084117.57061 2042 fde9cdd2857ca19542df84fb6b9c183f ""
   "chapters/slownik_pojec.tex" 1748361413.67389 429 d222e1481f3bf01715d736e54271d65b ""
-  "chapters/wnioski_dyskusja/main.tex" 1748778230.1245 11707 ce0af5702dddd7d5f47a459f739a0c40 ""
+  "chapters/wnioski_dyskusja/main.tex" 1748819694.45602 16873 cb9f385fb557044a5adabd902a18b5fd ""
   "chapters/wstep/main.tex" 1748523307.81838 4887 40f9a3b5966e1ca4422371ec773da97d ""
   "chapters/wyniki/cold-start.tex" 1748522622.30619 5583 977f796ade7a3ba249ad0814053f409c ""
   "chapters/wyniki/development-process.tex" 1748515926.12681 4362 5d4539e5a5ecb362cf42cb06d4423c82 ""
@@ -278,18 +278,18 @@
   "charts/results/cold-start-boxplot-256.png" 1748502847.3095 28607 cf15217ac4bfd4495fe2995aea7baa0a ""
   "charts/results/warm-start-boxplot-1024.png" 1748502847.31436 24527 3020146206f418444e4dc2e90c348dbb ""
   "charts/results/warm-start-boxplot-256.png" 1748502847.3132 25082 0195c25c1f09f6762f7bb334078da1c5 ""
-  "charts/results/wwf.png" 1748502847.31546 41805 b4163654ec99244f48eee2cf25e1a9de ""
+  "charts/results/wwf.png" 1748778332.40567 41726 2a6fdc2f23dbf089fba9226017f220ac ""
   "charts/sample-lambda-code.png" 1748525437.21478 122355 43f2e22a9196aec5faa75fe5e15c437e ""
   "charts/snapstart.png" 1747166600.43648 34764 c43215429c0695a75ee03953cacf9371 ""
   "charts/warm_cold_starts_lambda.png" 1746546942.012 42675 885c6ed02a874e6f4e4e06e114eec961 ""
   "latex-settings.tex" 1748371387.93244 14274 af9fe670a14d1fa65d1265b92e74ce81 ""
-  "main.aux" 1748778233.50989 31210 52881ed0b5fea699083c3dd38d542712 "pdflatex"
-  "main.bbl" 1748772736.31826 17134 26d0f577b8ff6a708a8913191d5522be "bibtex main"
-  "main.lof" 1748778233.51352 3997 bc2628d257087677eb364fe4548ed0c3 "pdflatex"
-  "main.lot" 1748778233.51355 1510 1ab30f72fcc1aed50063e1b65bd5d3bf "pdflatex"
-  "main.out" 1748778233.51298 6517 74626d018e05e65df22e1052a5845418 "pdflatex"
+  "main.aux" 1748819697.75063 31210 80a29314e556ad9a7a785ef366ca34f1 "pdflatex"
+  "main.bbl" 1748818515.91639 17134 26d0f577b8ff6a708a8913191d5522be "bibtex main"
+  "main.lof" 1748819697.75459 3997 bc2628d257087677eb364fe4548ed0c3 "pdflatex"
+  "main.lot" 1748819697.75463 1510 1ab30f72fcc1aed50063e1b65bd5d3bf "pdflatex"
+  "main.out" 1748819697.75401 6517 74626d018e05e65df22e1052a5845418 "pdflatex"
   "main.tex" 1747560372.17962 1632 05ab45c87171aac344f89567b5cd90ec ""
-  "main.toc" 1748778233.51348 3547 1fbb9a3b8efb9f870ecf058174c790f6 "pdflatex"
+  "main.toc" 1748819697.75454 3547 c3bffd2cb2a28aaf61d28caa1dc51bd0 "pdflatex"
   "title_page/title_page.pdf" 1743361834 144139 62ae5feb3df1e7daff15bf715bfb2fa9 ""
   (generated)
   "main.aux"

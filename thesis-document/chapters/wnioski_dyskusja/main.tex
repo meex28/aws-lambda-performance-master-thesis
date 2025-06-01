@@ -101,10 +101,61 @@ Wpływa to na np. mechanizm refleksji, którego użycie wymaga od programisty do
 Możliwe jest jednak dalej użycie AWS SDK, by integrować funkcje z innymi usługami.
 Mimo poprawy wydajności kosztów, ważnym aspektem jest jednak wzrost kosztów dla większych pamięci funkcji (1024 MB, 2048 MB).
 
-
-% Opis dla Kotlin
-% Opis dla Kotlin/JS
-% Opis dla Kotlin/Native
+Poprzez użycie języka Kotlin programista zyskusje szeroke możliwości związane z projektem Kotlin Multiplatform.
+Język ten jest zbliżony do Javy i w przypadku użycia razem z JVM, nie niesie za sobą znacznych kompromisów w procesie rozwoju oprogramowania.
+Należy jedynie wspomnieć o negatywnym wpływie na koszt działania, który średnio był wyższy niż dla analogicznych funkcji w Javie.
+Większy wpływ na tworzenie aplikacji mają metody oparte o Kotlin/JS oraz Kotlin/Native.
+Pierwszym z nich jest czas tworzenia artefaktu, który jest wyższy dla obu metod (jednak znacznie wyższy dla Kotlin/Native).
+Warto jednak zaznaczyć, że rozmiar artefaktu był mniejszy dla wszystkich funkcji opartych o Kotlin, w porównaniu z klasyczną Javą.
+Pewnym kompromisem są także integracje z zewnętrznymi serwisami, którą mogą być utrudnione ze względu na dostępność AWS SDK.
+Jest ono niedostępne dla Kotlin/Native oraz dostępne pośrednio dla Kotlin/JS, co wymaga dodatkowej integracji.
+Ograniczeniami dla tych sposobów są także ograniczone możliwości użycia mechanizmu refleksji, podobnie jak w przypadku GraalVM.
 
 \section{Zagrożenia trafności wyników}\label{chapter:zagrozenia_trafnosci_wynikow}
 
+% TODO: wstęp czemu te typy
+
+\subsection*{Trafność wnioskowania}
+
+Istotnym zagrożeniem dla wniosków wyciągniętych na podstawie eksperymentu może być niska moc statystyczna wyników. 
+Badanie opierało się na dużej, jednak określonej, liczbie wywołań dla każdej z funkcji i konfiguracji. 
+Mimo przeprowadzenia wielu testów, zmienność środowiska chmurowego i potencjalne losowe zmiany w czasach odpowiedzi mogły wpłynąć na wyniki. 
+W ramach badania starano się zminimalizować ten wpływ, np. poprzez brak integracji z zewnętrznymi serwisami.
+Aby jeszcze bardziej zmniejszyć to ryzyko możliwe byłoby wydłużenie czasu eksperymentu i regularne wywoływanie funkcji przez dłuższy okres (np. kilku dni).
+Proces ten wymaga jednak dłuższego badania, które przekracza zakres aktualnej pracy.
+
+\subsection*{Trafność wewnętrzna}
+
+Potencjalnym czynnikiem, który mógłby negatywnie wpłynąć na trafność wewnętrzną eksperymentu jest dynamiczna natura środowiska chmurowego.
+Inne procesy działające w tym samym czasie w infrastrukturze AWS i niezwiązane z badaniem, mogły teoretycznie wpłynąć na wydajność badanych funkcji (np. poprzez chwilowe obciążenie sieci lub współdzielonych zasobów).
+
+Innym aspektem są potencjalne błędy lub różnice w implementacji funkcji.
+W przypadku języka Kotlin postarano się zminimalizować ten wpływ poprzez współdzielenie kodu między wszystkiem metody oparte o ten język.
+Jednak poszczególne metody stosują różne biblioteki i frameworki, których wybór jest ograniczony poprzez daną metodę (np. wsparcie dla kompilacji natywnej).
+Sama ich analiza i porównanie może być jednak wymagające, co stanowi potencjalny kierunek rozwoju pracy.
+
+\subsection*{Trafność konstruktu}
+
+Trafność konstruktu mogła być zagrożona ze poprzez przyjęte w pracy miary wydajności oraz kompromisów w procesiu rozwoju oprogramowania.
+Wydajność została zmierzona za pomocą czasu wykonania (ciepłe i zimne starty), kosztu oraz autorskiego współczynnika WWF.
+Trafność ta może być jednak zagrożona ze względu na zróżnicowane proporcje ciepłych i zimnych startów w systemach opartych o funkcje AWS Lambda.
+W ramach badania przyjęto jedynie pojedyncze ich propocje, zatem istnieje ryzyko niezawarcia w badaniu szczególnych przypadków użycia badanej usługi.
+
+Wpływ na proces rozwoju oprogramowania oceniono na podstawie czasu budowy artefaktu, jego wielkości, dostępności AWS SDK, kosztu działania funkcji oraz innych czynników opisanych w Rozdziale \ref{chapter:wybrane_metody_optimalizacji}.
+Opis procesu rozwoju oprogramowania jedynie w tych aspektach jest jednak uproszczony.
+Niesie to zatem ryzyko nieprawidłowej oceny konkretnych metod.
+Aby zapewnić lepszą jakość badania pod tym względem, możliwa byłaby analiza konkretnych projektów korzystających z danych metod.
+Jest to jednak utrudnione ze względu na niewielką popularność części z nich.
+
+\subsection*{Trafność zewnętrzna}
+
+W badaniu zaimplementowano bardzo ogólne zadanie obliczeniowe czyli mnożenie macierzy oraz powstrzymano się od integracji zewnętrznych usług.
+Miało to na celu ograniczenie wpływu zewnętrznych czynników na czas działania funkcji.
+Jak wykazano w przeglądzie literatury dodatkowe serwisy są jednak bardzo częstym elementem architektur bezserwerowych.
+Z tego powodu zaimplementowane operacje mogą być niewystarczające aby przełożyć wyniki badania na przypadki innych systemów.
+Systemy te mogą opierać się np. o wywołania dodatkowych API, które nie zostały uwzględnione w eksperymencie.
+
+AWS Lambda zapewnia istotną abstrakcję na infrastrukturę chmurową, która jednak dalej odgrywa istotną rolę w wydajności funkcji.
+Eksperyment przeprowadzono w jednym regionie AWS i dla jednej architektury procesora (x86-64). 
+Jak wykazał przegląd literatury, wydajność może różnić się w zależności od regionu geograficznego oraz architektury (np. ARM64). 
+Zatem wyniki mogą nie być w pełni reprezentatywne dla wszystkich dostępnych konfiguracji.
