@@ -47,7 +47,7 @@ Wraz z wzrostem pamięci rosła wydajność wszystkich trzech metod, jednak isto
 Dla rozmiaru pamięci 1024 MB Kotlin/Native uzyskał najwyższą wartość współczynnika, o około 10\% wyższą niż kolejny GraalVM.
 Jednak dla rozmiaru 2048 MB, różnica ta zdecydowanie zwiększyła się, gdzie Kotlin/Native osiągnął wynik o około 74\% wyższy od GraalVM.
 Wartym uwagi jest także bardzo wysoka wydajność Kotlin/Native w konfiguracji pamięci 256 MB, gdzie było to połączenie o drugiej najwyższej wartości współczynnika.
-Dodatkowo, Kotlin/Native cechował się wysoką efektywnością kosztową, gdzie pozwolił na uzyskanie niższego kosztu działania niż GraalVM we wszystkich z badanych rozmiarów pamięci.
+Dodatkowo, Kotlin/Native cechował się wysoką efektywnością kosztową, gdzie pozwolił na uzyskanie niższego kosztu działania niż GraalVM w prawie wszystkich z badanych rozmiarów pamięci (oprócz 512 MB).
 
 Podsumowując, niemożliwe jest wybranie jednej najbardziej efektywnej metody optymalizacji wydajności dla wszystkich przypadków użycia funkcji AWS Lambda w ekosystemie Java.
 Dla funkcji o bardzo wysokiej aktywności, GraalVM byłby najbardziej uniwersalną techniką, która jednak nie jest skuteczna dla każdej konfiguracji pamięci.
@@ -94,7 +94,17 @@ W trakcie tworzenia systemów korzystających z SnapStart programista powinien u
 Wpływa to na połączenia sieciowe funkcji (szczególnie ważne podczas integracji z innymi serwisami) oraz generowania wartości unikalnych (jak identyfikatory).
 Wynika to z sposobu działania SnapStart, który tworzy migawki stanu funkcji, wykorzystywane później w wielu wywołaniach.
 
+Użycie GraalVM niesie za sobą pewne kompromisy dla rozwoju oprogramowania, które są jednak umiarkowane.
+Istotny jest wpływ na tworzony artefakt funkcji, którego budowa znacznie wydłuża się (w porównaniu z tworzeniem klasycznego pliku JAR), a rozmiar zwiększa się.
+GraalVM poprzez zmianę w sposobie kompilacji zmienia także zachowanie tworzonego kodu.
+Wpływa to na np. mechanizm refleksji, którego użycie wymaga od programisty dodatkowej pracy związanej z odpowiednim oznaczenim metod i klas.
+Możliwe jest jednak dalej użycie AWS SDK, by integrować funkcje z innymi usługami.
+Mimo poprawy wydajności kosztów, ważnym aspektem jest jednak wzrost kosztów dla większych pamięci funkcji (1024 MB, 2048 MB).
+
+
 % Opis dla Kotlin
 % Opis dla Kotlin/JS
-% Opis dla GraalVM
 % Opis dla Kotlin/Native
+
+\section{Zagrożenia trafności wyników}\label{chapter:zagrozenia_trafnosci_wynikow}
+
