@@ -143,6 +143,12 @@ J.~Dantas, H.~Khazaei, and M.~Litoiu.
 \newblock Application deployment strategies for reducing the cold start delay of aws lambda.
 \newblock In {\em 2022 IEEE 15th International Conference on Cloud Computing (CLOUD)}, pages 1--10, 2022.
 
+\bibitem{datadog_state_of_serverless}
+{Datadog}.
+\newblock The state of serverless.
+\newblock Web page, August 2023.
+\newblock Dostęp: 31.05.2025.
+
 \bibitem{EBRAHIMI2024103115}
 A.~Ebrahimi, M.~Ghobaei-Arani, and H.~Saboohi.
 \newblock Cold start latency mitigation mechanisms in serverless computing: Taxonomy, review, and future directions.
@@ -324,6 +330,12 @@ R.~Ritzal.
 S.~Shrestha.
 \newblock Comparing programming languages used in aws lambda for serverless architecture.
 \newblock Bachelor's thesis, Theseus, 2019.
+
+\bibitem{stackoverflow_survey_2024}
+{Stack Overflow}.
+\newblock 2024 developer survey - most popular technologies: Programming, scripting, and markup languages.
+\newblock Web page, 2024.
+\newblock Dostęp: 31.05.2025.
 
 \bibitem{9912641}
 D.~Taibi, B.~Kehoe, and D.~Poccia.

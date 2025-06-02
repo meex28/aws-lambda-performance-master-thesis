@@ -1,29 +1,29 @@
 \babel@toc {polish}{}\relax 
 \babel@toc {polish}{}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Przykładowa implementacja funkcji AWS Lambda w języku Java [źródło: opracowanie własne]}}{9}{figure.caption.3}%
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Cykl życia funkcji AWS Lambda [źródło: opracowanie własne na bazie dokumentacji AWS Lambda \cite {awsLambdaDocs}]}}{10}{figure.caption.4}%
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Proces uruchomienia AWS Lambda w kontekście zimnych i ciepłych startów [źródło: opracowanie własne na bazie dokumentacji AWS Lambda \cite {awsLambdaDocs}]}}{11}{figure.caption.5}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Przykładowa implementacja funkcji AWS Lambda w języku Java [źródło: opracowanie własne]}}{11}{figure.caption.3}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Cykl życia funkcji AWS Lambda [źródło: opracowanie własne na bazie dokumentacji AWS Lambda \cite {awsLambdaDocs}]}}{12}{figure.caption.4}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Proces uruchomienia AWS Lambda w kontekście zimnych i ciepłych startów [źródło: opracowanie własne na bazie dokumentacji AWS Lambda \cite {awsLambdaDocs}]}}{13}{figure.caption.5}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Proces selekcji literatury [źródło: opracowanie własne]}}{18}{figure.caption.8}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Proces selekcji literatury [źródło: opracowanie własne]}}{20}{figure.caption.8}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Proces uruchomienia AWS Lambda z użyciem metody SnapStart [źródło:~opracowanie~własne]}}{36}{figure.caption.11}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Uproszczony proces budowy obrazu natywnego GraalVM [źródło:~opracowanie~własne]}}{38}{figure.caption.12}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Przykładowa struktura pojektu Kotlin Multiplatform [źródło:~opracowanie~własne]}}{42}{figure.caption.13}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Proces transformacji kodu Kotlin do kodu JavaScript [źródło:~opracowanie~własne na bazie repozytorium kompilatora IR \cite {kotlinIrCompilatorGithub}]}}{43}{figure.caption.14}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Proces uruchomienia AWS Lambda z użyciem metody SnapStart [źródło:~opracowanie~własne]}}{38}{figure.caption.11}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Uproszczony proces budowy obrazu natywnego GraalVM [źródło:~opracowanie~własne]}}{40}{figure.caption.12}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Przykładowa struktura pojektu Kotlin Multiplatform [źródło:~opracowanie~własne]}}{44}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Proces transformacji kodu Kotlin do kodu JavaScript [źródło:~opracowanie~własne na bazie repozytorium kompilatora IR \cite {kotlinIrCompilatorGithub}]}}{45}{figure.caption.14}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Wizualizacja procesu realizowanego przez badane funkcje AWS Lambda [źródło: opracowanie własne]}}{50}{figure.caption.15}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Architektura środowiska badawczego [źródło:~opracowanie~własne]}}{55}{figure.caption.19}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Wizualizacja procesu realizowanego przez badane funkcje AWS Lambda [źródło: opracowanie własne]}}{52}{figure.caption.15}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Architektura środowiska badawczego [źródło:~opracowanie~własne]}}{57}{figure.caption.19}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Średni czas wykonywania funkcji (ciepły start) z użyciem wybranych metod w zależności od rozmiaru pamięci [źródło: opracowanie własne]}}{57}{figure.caption.20}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Czas wykonania funkcji (ciepły start, 256 MB) [źródło: opracowanie własne]}}{59}{figure.caption.22}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Czas wykonania funkcji (ciepły start, 1024 MB) [źródło: opracowanie własne]}}{59}{figure.caption.22}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Średni czas wykonywania funkcji (zimny start) dla rozmiarów pamięci: 512 MB, 1024 MB, 2048 MB [źródło: opracowanie własne]}}{59}{figure.caption.23}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Średni czas wykonywania funkcji (zimny start) dla rozmiarów pamięci: 128 MB, 256 MB [źródło: opracowanie własne]}}{61}{figure.caption.25}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Czas wykonania funkcji (zimny start, 256 MB) [źródło: opracowanie własne]}}{61}{figure.caption.25}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Czas wykonania funkcji (zimny start, 1024 MB) [źródło: opracowanie własne]}}{61}{figure.caption.25}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Współczynnik wydajności funkcji w zależności od rozmiaru pamięci [źródło: opracowanie własne]}}{62}{figure.caption.26}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Średni koszt funkcji w zależności od rozmiaru pamięci [źródło: opracowanie własne]}}{63}{figure.caption.27}%
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Średni czas budowy artefaktu dla poszczególnych rodzajów funkcji [źródło: opracowanie własne]}}{64}{figure.caption.28}%
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Wielkość artefaktu dla poszczególnych rodzajów funkcji [źródło: opracowanie własne]}}{65}{figure.caption.29}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Średni czas wykonywania funkcji (ciepły start) z użyciem wybranych metod w zależności od rozmiaru pamięci [źródło: opracowanie własne]}}{59}{figure.caption.20}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Czas wykonania funkcji (ciepły start, 256 MB) [źródło: opracowanie własne]}}{61}{figure.caption.22}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Czas wykonania funkcji (ciepły start, 1024 MB) [źródło: opracowanie własne]}}{61}{figure.caption.22}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Średni czas wykonywania funkcji (zimny start) dla rozmiarów pamięci: 512 MB, 1024 MB, 2048 MB [źródło: opracowanie własne]}}{61}{figure.caption.23}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Średni czas wykonywania funkcji (zimny start) dla rozmiarów pamięci: 128 MB, 256 MB [źródło: opracowanie własne]}}{63}{figure.caption.25}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Czas wykonania funkcji (zimny start, 256 MB) [źródło: opracowanie własne]}}{63}{figure.caption.25}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Czas wykonania funkcji (zimny start, 1024 MB) [źródło: opracowanie własne]}}{63}{figure.caption.25}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Współczynnik wydajności funkcji w zależności od rozmiaru pamięci [źródło: opracowanie własne]}}{64}{figure.caption.26}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Średni koszt funkcji w zależności od rozmiaru pamięci [źródło: opracowanie własne]}}{65}{figure.caption.27}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Średni czas budowy artefaktu dla poszczególnych rodzajów funkcji [źródło: opracowanie własne]}}{66}{figure.caption.28}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Wielkość artefaktu dla poszczególnych rodzajów funkcji [źródło: opracowanie własne]}}{67}{figure.caption.29}%
 \addvspace {10\p@ }

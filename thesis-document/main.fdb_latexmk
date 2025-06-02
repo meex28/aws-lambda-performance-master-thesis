@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1748818515.77541 "main.aux" "main.bbl" "main" 1748819698.04931 0
-  "./sources/bibliography.bib" 1748509858.66269 40798 f7c73e8ba1d4b39220a7f9ca3ef2eb12 ""
+["bibtex main"] 1748877356.92472 "main.aux" "main.bbl" "main" 1748877745.47132 0
+  "./sources/bibliography.bib" 1748868784.11252 41484 e82afc64426a3054ca042d821994e9ec ""
   "/usr/local/texlive/2025/texmf-dist/bibtex/bst/base/abbrv.bst" 1292289607 20329 b5fed53e10044d0f8112183785c759b1 ""
-  "main.aux" 1748819697.75063 31210 80a29314e556ad9a7a785ef366ca34f1 "pdflatex"
+  "main.aux" 1748877745.18802 31853 485ceabf4c8c97df6a364f7674ad5471 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1748819694.74169 "/Users/piotr/dev/aws-lambda-performance-master-thesis/thesis-document/main.tex" "main.pdf" "main" 1748819698.04952 0
+["pdflatex"] 1748877741.76356 "/Users/piotr/dev/aws-lambda-performance-master-thesis/thesis-document/main.tex" "main.pdf" "main" 1748877745.47151 0
   "/Users/piotr/dev/aws-lambda-performance-master-thesis/thesis-document/main.tex" 1747560372.17962 1632 05ab45c87171aac344f89567b5cd90ec ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -251,9 +251,9 @@
   "chapters/przeglad_literatury/results_papers.tex" 1746386763.17655 2751 d3e68082c715b51119b25da65deeed3d ""
   "chapters/przeglad_literatury/review_method.tex" 1746563226.87061 16418 e77d33ddb2c486255f7c17f9dc7d82da ""
   "chapters/przeglad_literatury/review_process_table.tex" 1748084117.57061 2042 fde9cdd2857ca19542df84fb6b9c183f ""
-  "chapters/slownik_pojec.tex" 1748361413.67389 429 d222e1481f3bf01715d736e54271d65b ""
+  "chapters/slownik_pojec.tex" 1748861398.84029 334 be3c4e7d7f89d113256bcaa49f5e5732 ""
   "chapters/wnioski_dyskusja/main.tex" 1748819694.45602 16873 cb9f385fb557044a5adabd902a18b5fd ""
-  "chapters/wstep/main.tex" 1748523307.81838 4887 40f9a3b5966e1ca4422371ec773da97d ""
+  "chapters/wstep/main.tex" 1748877741.28329 8606 a303c1957ed0327d860e405c9b380e41 ""
   "chapters/wyniki/cold-start.tex" 1748522622.30619 5583 977f796ade7a3ba249ad0814053f409c ""
   "chapters/wyniki/development-process.tex" 1748515926.12681 4362 5d4539e5a5ecb362cf42cb06d4423c82 ""
   "chapters/wyniki/functions-costs.tex" 1748778095.11516 2291 87ea0fc1abb28fe3b3e4d329b0ccf244 ""
@@ -283,13 +283,13 @@
   "charts/snapstart.png" 1747166600.43648 34764 c43215429c0695a75ee03953cacf9371 ""
   "charts/warm_cold_starts_lambda.png" 1746546942.012 42675 885c6ed02a874e6f4e4e06e114eec961 ""
   "latex-settings.tex" 1748371387.93244 14274 af9fe670a14d1fa65d1265b92e74ce81 ""
-  "main.aux" 1748819697.75063 31210 80a29314e556ad9a7a785ef366ca34f1 "pdflatex"
-  "main.bbl" 1748818515.91639 17134 26d0f577b8ff6a708a8913191d5522be "bibtex main"
-  "main.lof" 1748819697.75459 3997 bc2628d257087677eb364fe4548ed0c3 "pdflatex"
-  "main.lot" 1748819697.75463 1510 1ab30f72fcc1aed50063e1b65bd5d3bf "pdflatex"
-  "main.out" 1748819697.75401 6517 74626d018e05e65df22e1052a5845418 "pdflatex"
+  "main.aux" 1748877745.18802 31853 485ceabf4c8c97df6a364f7674ad5471 "pdflatex"
+  "main.bbl" 1748877357.008 17502 b3bb32235434826b981ea6d95dc4db6b "bibtex main"
+  "main.lof" 1748877745.20149 3998 ea91c1977dd429b15074bf6065cc0030 "pdflatex"
+  "main.lot" 1748877745.20153 1510 b0cf3eb954c0ce2b0bced2801ae4f897 "pdflatex"
+  "main.out" 1748877745.201 6517 74626d018e05e65df22e1052a5845418 "pdflatex"
   "main.tex" 1747560372.17962 1632 05ab45c87171aac344f89567b5cd90ec ""
-  "main.toc" 1748819697.75454 3547 c3bffd2cb2a28aaf61d28caa1dc51bd0 "pdflatex"
+  "main.toc" 1748877745.20144 3548 82ee67a825e278f71828e40d68ee29f4 "pdflatex"
   "title_page/title_page.pdf" 1743361834 144139 62ae5feb3df1e7daff15bf715bfb2fa9 ""
   (generated)
   "main.aux"

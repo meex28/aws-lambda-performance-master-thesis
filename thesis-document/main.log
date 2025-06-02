@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.30)  2 JUN 2025 01:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.30)  2 JUN 2025 17:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1266,79 +1266,83 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 
 
 ] (./chapters/wstep/main.tex
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 21.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
 
 [1
 
 
-{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]) (./chapters/slownik_pojec.tex
-
-[2]) (./chapters/dzialanie_faas/main.tex
-
-[3
-
-
 ]
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 51.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+
+[2{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]) (./chapters/slownik_pojec.tex
+
+[3]
 
 [4
+
+
+]) (./chapters/dzialanie_faas/main.tex
+
+[5]
+
+[6
 
 
 ]
 Rozdzia\l  1.
 (./chapters/dzialanie_faas/model_serverless.tex
 
-[5]) (./chapters/dzialanie_faas/funkcja_jako_usluga.tex
+[7]) (./chapters/dzialanie_faas/funkcja_jako_usluga.tex
 
-[6]
+[8]
 
-[7]) (./chapters/dzialanie_faas/aws_lambda.tex
-<charts/sample-lambda-code.png, id=374, 1563.8425pt x 682.55pt>
+[9]) (./chapters/dzialanie_faas/aws_lambda.tex
+<charts/sample-lambda-code.png, id=407, 1563.8425pt x 682.55pt>
 File: charts/sample-lambda-code.png Graphic file (type png)
 <use charts/sample-lambda-code.png>
 Package pdftex.def Info: charts/sample-lambda-code.png  used on input line 15.
 (pdftex.def)             Requested size: 448.42822pt x 195.71606pt.
 
 
-[8]
+[10]
 
-[9 <./charts/sample-lambda-code.png>]
-<charts/aws_lambda_lifecycle.drawio.png, id=395, 1087.06125pt x 171.64125pt>
+[11 <./charts/sample-lambda-code.png>]
+<charts/aws_lambda_lifecycle.drawio.png, id=427, 1087.06125pt x 171.64125pt>
 File: charts/aws_lambda_lifecycle.drawio.png Graphic file (type png)
 <use charts/aws_lambda_lifecycle.drawio.png>
 Package pdftex.def Info: charts/aws_lambda_lifecycle.drawio.png  used on input line 73.
 (pdftex.def)             Requested size: 448.42822pt x 70.8055pt.
 
 
-[10 <./charts/aws_lambda_lifecycle.drawio.png>]
-<charts/warm_cold_starts_lambda.png, id=408, 773.89125pt x 156.585pt>
+[12 <./charts/aws_lambda_lifecycle.drawio.png>]
+<charts/warm_cold_starts_lambda.png, id=440, 773.89125pt x 156.585pt>
 File: charts/warm_cold_starts_lambda.png Graphic file (type png)
 <use charts/warm_cold_starts_lambda.png>
 Package pdftex.def Info: charts/warm_cold_starts_lambda.png  used on input line 107.
 (pdftex.def)             Requested size: 448.42822pt x 90.73334pt.
 )) (./chapters/przeglad_literatury/main.tex
 
-[11 <./charts/warm_cold_starts_lambda.png>]
+[13 <./charts/warm_cold_starts_lambda.png>]
 
-[12
+[14
 
 
 ]
 Rozdzia\l  2.
 (./chapters/przeglad_literatury/review_method.tex
 
-[13]
-
-[14]
-
 [15]
 
 [16]
 
 [17]
-<charts/literature_review_process.drawio.png, id=463, 1024.82875pt x 402.50375pt>
+
+[18]
+
+[19]
+<charts/literature_review_process.drawio.png, id=496, 1024.82875pt x 402.50375pt>
 File: charts/literature_review_process.drawio.png Graphic file (type png)
 <use charts/literature_review_process.drawio.png>
 Package pdftex.def Info: charts/literature_review_process.drawio.png  used on input line 206.
@@ -1355,11 +1359,7 @@ Overfull \hbox (1.99545pt too wide) in paragraph at lines 9--10
 
 )
 
-[18 <./charts/literature_review_process.drawio.png>]) (./chapters/przeglad_literatury/results.tex (./chapters/przeglad_literatury/results_papers.tex)
-
-[19]
-
-[20]
+[20 <./charts/literature_review_process.drawio.png>]) (./chapters/przeglad_literatury/results.tex (./chapters/przeglad_literatury/results_papers.tex)
 
 [21]
 
@@ -1378,25 +1378,29 @@ Overfull \hbox (1.99545pt too wide) in paragraph at lines 9--10
 [28]
 
 [29]
-Underfull \vbox (badness 2600) has occurred while \output is active []
-
-
 
 [30]
 
 [31]
+Underfull \vbox (badness 2600) has occurred while \output is active []
 
-[32])) (./chapters/metody_optimalizacji/main.tex
+
+
+[32]
 
 [33]
 
-[34
+[34])) (./chapters/metody_optimalizacji/main.tex
+
+[35]
+
+[36
 
 
 ]
 Rozdzia\l  3.
 (./chapters/metody_optimalizacji/snapstart.tex
-<charts/snapstart.png, id=685, 764.8575pt x 214.8025pt>
+<charts/snapstart.png, id=710, 764.8575pt x 214.8025pt>
 File: charts/snapstart.png Graphic file (type png)
 <use charts/snapstart.png>
 Package pdftex.def Info: charts/snapstart.png  used on input line 22.
@@ -1407,24 +1411,24 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[35]
-
-[36 <./charts/snapstart.png>]) (./chapters/metody_optimalizacji/graalvm.tex
-
 [37]
-<charts/graalvm-build-process.drawio.png, id=731, 603.25375pt x 289.08pt>
+
+[38 <./charts/snapstart.png>]) (./chapters/metody_optimalizacji/graalvm.tex
+
+[39]
+<charts/graalvm-build-process.drawio.png, id=757, 603.25375pt x 289.08pt>
 File: charts/graalvm-build-process.drawio.png Graphic file (type png)
 <use charts/graalvm-build-process.drawio.png>
 Package pdftex.def Info: charts/graalvm-build-process.drawio.png  used on input line 38.
 (pdftex.def)             Requested size: 448.42822pt x 214.88626pt.
 
 
-[38 <./charts/graalvm-build-process.drawio.png>]) (./chapters/metody_optimalizacji/kotlin.tex
+[40 <./charts/graalvm-build-process.drawio.png>]) (./chapters/metody_optimalizacji/kotlin.tex
 
-[39]
+[41]
 
-[40]
-<charts/kmp-structure.drawio.png, id=774, 643.40375pt x 563.10374pt>
+[42]
+<charts/kmp-structure.drawio.png, id=799, 643.40375pt x 563.10374pt>
 File: charts/kmp-structure.drawio.png Graphic file (type png)
 <use charts/kmp-structure.drawio.png>
 Package pdftex.def Info: charts/kmp-structure.drawio.png  used on input line 88.
@@ -1435,51 +1439,51 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 ) (./chapters/metody_optimalizacji/kotlin-js.tex
 
-[41]
+[43]
 
-[42 <./charts/kmp-structure.drawio.png>]
-<charts/kotlin-js-ir.drawio.png, id=794, 1478.52374pt x 983.675pt>
+[44 <./charts/kmp-structure.drawio.png>]
+<charts/kotlin-js-ir.drawio.png, id=820, 1478.52374pt x 983.675pt>
 File: charts/kotlin-js-ir.drawio.png Graphic file (type png)
 <use charts/kotlin-js-ir.drawio.png>
 Package pdftex.def Info: charts/kotlin-js-ir.drawio.png  used on input line 21.
 (pdftex.def)             Requested size: 472.03123pt x 314.04695pt.
 
 
-[43 <./charts/kotlin-js-ir.drawio.png>]) (./chapters/metody_optimalizacji/kotlin-native.tex
-
-[44]
-
-[45])) (./chapters/opis_badania/main.tex
+[45 <./charts/kotlin-js-ir.drawio.png>]) (./chapters/metody_optimalizacji/kotlin-native.tex
 
 [46]
+
+[47])) (./chapters/opis_badania/main.tex
+
+[48]
 Rozdzia\l  4.
 
 
-[47
+[49
 
 
 ]
 
-[48{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
+[50{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
 
-[49]
-<charts/lambda_workflow.drawio.png, id=871, 603.25375pt x 171.64125pt>
+[51]
+<charts/lambda_workflow.drawio.png, id=897, 603.25375pt x 171.64125pt>
 File: charts/lambda_workflow.drawio.png Graphic file (type png)
 <use charts/lambda_workflow.drawio.png>
 Package pdftex.def Info: charts/lambda_workflow.drawio.png  used on input line 128.
 (pdftex.def)             Requested size: 448.42822pt x 127.5887pt.
 
 
-[50 <./charts/lambda_workflow.drawio.png>]
+[52 <./charts/lambda_workflow.drawio.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 157--157
 []|\T1/lmr/m/n/12 (+20) io.quarkus:quarkus-
  []
 
 
 
-[51]
+[53]
 
-[52]
+[54]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1488,8 +1492,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[53]
-<charts/experiment-architecture.drawio.png, id=910, 733.74126pt x 630.355pt>
+[55]
+<charts/experiment-architecture.drawio.png, id=935, 733.74126pt x 630.355pt>
 File: charts/experiment-architecture.drawio.png Graphic file (type png)
 <use charts/experiment-architecture.drawio.png>
 Package pdftex.def Info: charts/experiment-architecture.drawio.png  used on input line 275.
@@ -1500,30 +1504,30 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[54]
-
-[55 <./charts/experiment-architecture.drawio.png>]) (./chapters/wyniki/main.tex
-
 [56]
+
+[57 <./charts/experiment-architecture.drawio.png>]) (./chapters/wyniki/main.tex
+
+[58]
 Rozdzia\l  5.
 (./chapters/wyniki/warm-start.tex
-<charts/results/avg-warm-start.png, id=932, 752.8125pt x 376.40625pt>
+<charts/results/avg-warm-start.png, id=957, 752.8125pt x 376.40625pt>
 File: charts/results/avg-warm-start.png Graphic file (type png)
 <use charts/results/avg-warm-start.png>
 Package pdftex.def Info: charts/results/avg-warm-start.png  used on input line 11.
 (pdftex.def)             Requested size: 448.42822pt x 224.22008pt.
 
 
-[57
+[59
 
 
  <./charts/results/avg-warm-start.png>]
-<charts/results/warm-start-boxplot-256.png, id=942, 451.6875pt x 451.6875pt>
+<charts/results/warm-start-boxplot-256.png, id=967, 451.6875pt x 451.6875pt>
 File: charts/results/warm-start-boxplot-256.png Graphic file (type png)
 <use charts/results/warm-start-boxplot-256.png>
 Package pdftex.def Info: charts/results/warm-start-boxplot-256.png  used on input line 67.
 (pdftex.def)             Requested size: 226.57297pt x 226.57376pt.
-<charts/results/warm-start-boxplot-1024.png, id=943, 451.6875pt x 451.6875pt>
+<charts/results/warm-start-boxplot-1024.png, id=968, 451.6875pt x 451.6875pt>
 File: charts/results/warm-start-boxplot-1024.png Graphic file (type png)
 <use charts/results/warm-start-boxplot-1024.png>
 Package pdftex.def Info: charts/results/warm-start-boxplot-1024.png  used on input line 74.
@@ -1534,57 +1538,57 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 ) (./chapters/wyniki/cold-start.tex
 
-[58]
-<charts/results/avg-cold-start-512-2048.png, id=955, 752.8125pt x 376.40625pt>
+[60]
+<charts/results/avg-cold-start-512-2048.png, id=980, 752.8125pt x 376.40625pt>
 File: charts/results/avg-cold-start-512-2048.png Graphic file (type png)
 <use charts/results/avg-cold-start-512-2048.png>
 Package pdftex.def Info: charts/results/avg-cold-start-512-2048.png  used on input line 10.
 (pdftex.def)             Requested size: 448.42822pt x 224.22008pt.
 
 
-[59 <./charts/results/warm-start-boxplot-256.png> <./charts/results/warm-start-boxplot-1024.png> <./charts/results/avg-cold-start-512-2048.png>]
-<charts/results/avg-cold-start-128-256.png, id=968, 752.8125pt x 376.40625pt>
+[61 <./charts/results/warm-start-boxplot-256.png> <./charts/results/warm-start-boxplot-1024.png> <./charts/results/avg-cold-start-512-2048.png>]
+<charts/results/avg-cold-start-128-256.png, id=994, 752.8125pt x 376.40625pt>
 File: charts/results/avg-cold-start-128-256.png Graphic file (type png)
 <use charts/results/avg-cold-start-128-256.png>
 Package pdftex.def Info: charts/results/avg-cold-start-128-256.png  used on input line 60.
 (pdftex.def)             Requested size: 448.42822pt x 224.22008pt.
-<charts/results/cold-start-boxplot-256.png, id=969, 451.6875pt x 451.6875pt>
+<charts/results/cold-start-boxplot-256.png, id=995, 451.6875pt x 451.6875pt>
 File: charts/results/cold-start-boxplot-256.png Graphic file (type png)
 <use charts/results/cold-start-boxplot-256.png>
 Package pdftex.def Info: charts/results/cold-start-boxplot-256.png  used on input line 70.
 (pdftex.def)             Requested size: 226.57297pt x 226.57376pt.
-<charts/results/cold-start-boxplot-1024.png, id=970, 451.6875pt x 451.6875pt>
+<charts/results/cold-start-boxplot-1024.png, id=996, 451.6875pt x 451.6875pt>
 File: charts/results/cold-start-boxplot-1024.png Graphic file (type png)
 <use charts/results/cold-start-boxplot-1024.png>
 Package pdftex.def Info: charts/results/cold-start-boxplot-1024.png  used on input line 77.
 (pdftex.def)             Requested size: 226.57297pt x 226.57376pt.
 ) (./chapters/wyniki/wwf.tex
 
-[60]
+[62]
 
-[61 <./charts/results/avg-cold-start-128-256.png> <./charts/results/cold-start-boxplot-256.png> <./charts/results/cold-start-boxplot-1024.png>]
-<charts/results/wwf.png, id=984, 752.8125pt x 376.40625pt>
+[63 <./charts/results/avg-cold-start-128-256.png> <./charts/results/cold-start-boxplot-256.png> <./charts/results/cold-start-boxplot-1024.png>]
+<charts/results/wwf.png, id=1011, 752.8125pt x 376.40625pt>
 File: charts/results/wwf.png Graphic file (type png)
 <use charts/results/wwf.png>
 Package pdftex.def Info: charts/results/wwf.png  used on input line 12.
 (pdftex.def)             Requested size: 448.42822pt x 224.22008pt.
 )
 
-[62 <./charts/results/wwf.png>] (./chapters/wyniki/functions-costs.tex
-<charts/results/average-cost.png, id=995, 752.8125pt x 376.40625pt>
+[64 <./charts/results/wwf.png>] (./chapters/wyniki/functions-costs.tex
+<charts/results/average-cost.png, id=1020, 752.8125pt x 376.40625pt>
 File: charts/results/average-cost.png Graphic file (type png)
 <use charts/results/average-cost.png>
 Package pdftex.def Info: charts/results/average-cost.png  used on input line 10.
 (pdftex.def)             Requested size: 448.42822pt x 224.22008pt.
 )
 
-[63 <./charts/results/average-cost.png>] (./chapters/wyniki/development-process.tex
-<charts/results/avg-build-times.png, id=1003, 752.8125pt x 376.40625pt>
+[65 <./charts/results/average-cost.png>] (./chapters/wyniki/development-process.tex
+<charts/results/avg-build-times.png, id=1028, 752.8125pt x 376.40625pt>
 File: charts/results/avg-build-times.png Graphic file (type png)
 <use charts/results/avg-build-times.png>
 Package pdftex.def Info: charts/results/avg-build-times.png  used on input line 9.
 (pdftex.def)             Requested size: 448.42822pt x 224.22008pt.
-<charts/results/artifact-size.png, id=1005, 752.8125pt x 376.40625pt>
+<charts/results/artifact-size.png, id=1030, 752.8125pt x 376.40625pt>
 File: charts/results/artifact-size.png Graphic file (type png)
 <use charts/results/artifact-size.png>
 Package pdftex.def Info: charts/results/artifact-size.png  used on input line 23.
@@ -1595,7 +1599,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 
-[64 <./charts/results/avg-build-times.png>]
+[66 <./charts/results/avg-build-times.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 42--42
 []|\T1/lmr/bx/n/12 (+20) Dost¦pno±¢
  []
@@ -1605,13 +1609,13 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 )) (./chapters/wnioski_dyskusja/main.tex
 
-[65 <./charts/results/artifact-size.png>]
+[67 <./charts/results/artifact-size.png>]
 
-[66]
+[68]
 Rozdzia\l  6.
 
 
-[67
+[69
 
 
 ]
@@ -1619,37 +1623,37 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[68]
-
-[69]
-
-[70]) (./chapters/zakonczenie/main.tex
+[70]
 
 [71]
 
-[72
-
-
-]) (./main.bbl
+[72]) (./chapters/zakonczenie/main.tex
 
 [73]
 
 [74
 
 
-]
+]) (./main.bbl
 
 [75]
 
-[76]
+[76
+
+
+]
 
 [77]
 
 [78]
 
-[79])
+[79]
 
-[80] (./main.lof)
+[80]
+
+[81])
+
+[82] (./main.lof)
 \tf@lof=\write8
 \openout8 = `main.lof'.
 
@@ -1658,16 +1662,16 @@ Underfull \vbox (badness 4467) has occurred while \output is active []
 
 
 
-[81]
+[83]
 
-[82] (./main.lot)
+[84] (./main.lot)
 \tf@lot=\write9
 \openout9 = `main.lot'.
 
 
 
-[83]
-runsystem(latexminted cleantemp  --timestamp 20250602011454 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
+[85]
+runsystem(latexminted cleantemp  --timestamp 20250602172221 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
 
  (./main.aux)
  ***********
@@ -1678,18 +1682,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 74626D018E05E65DF22E1052A5845418;6517.
  ) 
 Here is how much of TeX's memory you used:
- 31063 strings out of 473190
- 573332 string characters out of 5715800
- 1199235 words of memory out of 5000000
- 53223 multiletter control sequences out of 15000+600000
+ 31069 strings out of 473190
+ 573464 string characters out of 5715800
+ 1199335 words of memory out of 5000000
+ 53225 multiletter control sequences out of 15000+600000
  628419 words of font info for 174 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,21n,96p,1071b,760s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
-Output written on main.pdf (88 pages, 1325945 bytes).
+Output written on main.pdf (90 pages, 1330533 bytes).
 PDF statistics:
- 1302 PDF objects out of 1440 (max. 8388607)
- 1101 compressed objects within 12 object streams
- 255 named destinations out of 1000 (max. 500000)
+ 1328 PDF objects out of 1440 (max. 8388607)
+ 1125 compressed objects within 12 object streams
+ 259 named destinations out of 1000 (max. 500000)
  37325 words of extra memory for PDF output out of 42996 (max. 10000000)
 
