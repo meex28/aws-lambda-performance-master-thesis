@@ -13,45 +13,45 @@ Warning--to sort, need author or key in kotlinIrCompilatorGithub
 Warning--empty booktitle in Cavalheiro202389
 Warning--empty booktitle in Cordingly2020704
 Warning--empty booktitle in FerreiraDosSantos2023
-You've used 75 entries,
+You've used 78 entries,
             2118 wiz_defined-function locations,
-            893 strings with 18470 characters,
-and the built_in function-call counts, 26423 in all, are:
-= -- 2561
-> -- 1229
+            904 strings with 18803 characters,
+and the built_in function-call counts, 27076 in all, are:
+= -- 2627
+> -- 1250
 < -- 30
-+ -- 497
-- -- 414
-* -- 1524
-:= -- 4100
-add.period$ -- 246
-call.type$ -- 75
-change.case$ -- 430
++ -- 507
+- -- 420
+* -- 1542
+:= -- 4211
+add.period$ -- 258
+call.type$ -- 78
+change.case$ -- 442
 chr.to.int$ -- 0
-cite$ -- 81
-duplicate$ -- 1096
-empty$ -- 2158
-format.name$ -- 414
-if$ -- 5881
+cite$ -- 84
+duplicate$ -- 1117
+empty$ -- 2224
+format.name$ -- 420
+if$ -- 6025
 int.to.chr$ -- 0
-int.to.str$ -- 75
+int.to.str$ -- 78
 missing$ -- 44
-newline$ -- 391
-num.names$ -- 144
-pop$ -- 631
+newline$ -- 409
+num.names$ -- 150
+pop$ -- 655
 preamble$ -- 1
-purify$ -- 357
+purify$ -- 366
 quote$ -- 0
-skip$ -- 941
+skip$ -- 959
 stack$ -- 0
-substring$ -- 1251
-swap$ -- 401
+substring$ -- 1267
+swap$ -- 404
 text.length$ -- 30
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 300
+type$ -- 312
 warning$ -- 6
-while$ -- 208
-width$ -- 77
-write$ -- 830
+while$ -- 214
+width$ -- 80
+write$ -- 866
 (There were 8 warnings)

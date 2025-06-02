@@ -1,20 +1,26 @@
-\chapter*{Słownik pojęć}
+\chapter*{Słownik pojęć i akronimów}
+
+Słownik pojęć i akronimów zawiera definicje kluczowych pojęć i akronimów wykorzystywanych w niniejszej pracy. 
+Precyzyjne objaśnienie tych terminów ma na celu ułatwienie czytelnikowi zrozumienia omawianych zagadnień.
+
 \addcontentsline{toc}{chapter}{Słownik pojęć i akronimów}  
 
-\subsubsection*{AWS}
+\begin{description}
+    \item[\textbf{Model bezserwerowy (ang. serverless)}] - podejście w chmurze obliczeniowej, w którym odpowiedzialność za zarządzanie i skalowanie infrastrukturą serwerową jest w pełni przeniesiona na dostawcę usług chmurowych. Aplikacje w tym modelu są najczęściej sterowane zdarzeniami i uruchamiane na żądanie, co pozwala na zastosowanie granularnego modelu rozliczeń (ang. pay-per-use). Opłata naliczana jest wyłącznie za faktycznie wykorzystany czas i zasoby obliczeniowe, eliminując koszty bezczynności infrastruktury \cite{SpecRgCloudGroupVisionOnThePerformanceChallengesOfFaas}\cite{ServerlessApplicationsWhyWhenAndHow}.
 
-\subsubsection*{AWS Lambda}
+    \item[\textbf{Funkcja jako usługa (ang. Function-as-a-Service, FaaS)}] - model obliczeniowy i kluczowy komponent architektury bezserwerowej. W modelu tym dostawca chmury w pełni zarządza zasobami, cyklem życia oraz sterowanym zdarzeniami wykonywaniem kodu dostarczonego przez użytkownika. Rola dewelopera ogranicza się do m.in. dostarczenia bezstanowego kodu realizującego pojedynczą, dobrze zdefiniowaną odpowiedzialność, nazywanego funkcją chmurową. Platforma odpowiada za jego automatyczne uruchomienie w odpowiedzi na zdarzenie, skalowanie oraz wygaszenie, zwalniając twórcę z zadań związanych z utrzymaniem infrastruktury \cite{SpecRgCloudGroupVisionOnThePerformanceChallengesOfFaas}.
 
-\subsubsection*{Ciepły start}
+    \item[\textbf{AWS (Amazon Web Services)}] - platforma chmury obliczeniowej oferowana przez firmę Amazon \cite{aws_what_is_aws}. Dostarcza szeroki wachlarz usług informatycznych na żądanie, które dostępne są w wielu rejonach świata. Zasadniczą cechą jej działania jest udostępnianie zasobów, takich jak moc obliczeniowa, bazy danych czy usługi sieciowe, w modelu opłat wyłącznie za faktyczne zużycie. Model ten pozwala organizacjom oraz deweloperom na budowanie i skalowanie aplikacji bez potrzeby inwestowania w fizyczną infrastrukturę serwerową i zarządzania nią. W ramach portfolio usług AWS znajduje się między innymi AWS Lambda, będąca kluczowym serwisem w kontekście badanej w pracy architektury bezserwerowej \cite{aws_what_is_aws}.
 
-\subsubsection*{Ekosystem Java}
+    \item[\textbf{AWS Lambda}] - konkretna implementacja modelu funkcji jako usługi oferowana przez Amazon Web Services. Usługa ta przejmuje od programisty pełną odpowiedzialność za zarządzanie infrastrukturą. Obejmuje to alokację zasobów, automatyczne skalowanie oraz zarządzanie cyklem życia funkcji. Dzięki temu deweloper może skupić się na implementacji logiki biznesowej, poprzez dostarczenie stworzonego kodu. Kod ten jest następnie uruchamiany w odpowiedzi na zdarzenia, a model rozliczeń opiera się wyłącznie na liczbie wywołań i faktycznym czasie obliczeń \cite{awsLambdaDocs}.
 
-\subsubsection*{FaaS}
+    \item[\textbf{Zimny start}] - zjawisko występujące w AWS Lambda, gdy funkcja jest wywoływana w momencie, w którym żadne środowisko wykonawcze nie jest dla niej aktywne \cite{awsLambdaDocs}. Proces ten obejmuje pełną fazę inicjalizacji, w tym pobranie kodu funkcji i uruchomienie nowego środowiska wykonawczego (np. maszyny wirtualnej Javy) \cite{awsLambdaDocs}. Zimny start nie jest w pełni wliczany w koszt wykonania, jednak wprowadza znaczące opóźnienie, które wpływa na całkowity czas odpowiedzi funkcji.
 
-\subsubsection*{JVM}
+    \item[\textbf{Ciepły start}] - zjawisko występujące w AWS Lambda, gdy wywołanie funkcji jest obsługiwane przez już istniejące środowisko wykonawcze, które zostało utworzone przez poprzednie żądanie. Platforma utrzymuje aktywne środowiska przez pewien czas po ich użyciu, co umożliwia pominięcie kosztownej fazy inicjalizacji. Ciepły start pozwala na ponowne wykorzystanie gotowego środowiska, co znacząco skraca czas uruchomienia i całkowity czas odpowiedzi funkcji \cite{awsLambdaDocs}.
 
-\subsubsection*{Serverless}
+    \item[\textbf{Ekosystem Java}] - na potrzeby pracy przyjęto definicję ekosystemu Java jako zbioru technologii, które wywodzą się z Javy jako języka programowania lub są oparte o maszynę wirtualną Java. Głównym elementem tego ekosystemu jest sama Java, jednak obejmuje on również inne języki programowania działające w oparciu o JVM (np. Kotlin, Groovy, Scala). W skład ekosystemu wchodzą także liczne biblioteki i frameworki (np. Spring, Quarkus, Micronaut) oraz środowiska wykonawcze. Najczęściej używanym środowiskiem jest JVM, jednak do ekosystemu zaliczono również alternatywne technologie, takie jak kompilacja AOT (ang. Ahead-of-Time) oferowana przez GraalVM.
 
-\subsubsection*{Zimny start}
+    \item[\textbf{Wirtualna maszyna Javy (ang. Java Virtual Machine, JVM)}] - abstrakcyjna maszyna obliczeniowa stanowiąca środowisko wykonawcze dla programów napisanych w języku Java oraz innych języków kompilowanych do kodu bajtowego Javy. Jej kluczowym zadaniem jest zapewnienie niezależności od platformy sprzętowej i systemowej. Realizuje ona zasadę ,,napisz raz, uruchamiaj wszędzie'' (ang. write once, run anywhere). JVM interpretuje skompilowany kod bajtowy i tłumaczy go na instrukcje maszynowe właściwe dla danego systemu operacyjnego, zarządzając przy tym automatycznie pamięcią i innymi zasobami systemowymi \cite{oracle_jvm_spec}.
 
-\subsubsection*{SDK}
+    \item[\textbf{Zestaw narzędzi programistycznych (ang. Software Development Kit, SDK)}] - zbiór narzędzi, bibliotek, dokumentacji oraz przykładowych kodów dostarczany przez producenta oprogramowania lub platformy w celu ułatwienia tworzenia na nią aplikacji \cite{ibm_sdk_vs_api}. SDK oferowane jest jako alternatywa do korzystania z usług poprzez niskopoziomowe protokoły (np. bezpośrednie wywołania HTTP API). Pozwala to na uproszczenie integracji z zewnętrznymi usługami. W kontekście Amazon Web Services, AWS SDK to zestaw narzędzi dla konkretnych języków programowania (np. Java, Python), który pozwala na wygodną i bezpieczną interakcję z usługami AWS.
+\end{description}

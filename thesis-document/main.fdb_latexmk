@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1748877356.92472 "main.aux" "main.bbl" "main" 1748877745.47132 0
-  "./sources/bibliography.bib" 1748868784.11252 41484 e82afc64426a3054ca042d821994e9ec ""
+["bibtex main"] 1748881952.20945 "main.aux" "main.bbl" "main" 1748881956.75101 0
+  "./sources/bibliography.bib" 1748881455.38889 42252 4618bf8ba87859cef937dee4abbff241 ""
   "/usr/local/texlive/2025/texmf-dist/bibtex/bst/base/abbrv.bst" 1292289607 20329 b5fed53e10044d0f8112183785c759b1 ""
-  "main.aux" 1748877745.18802 31853 485ceabf4c8c97df6a364f7674ad5471 "pdflatex"
+  "main.aux" 1748881956.27136 32328 73307414336adc53c930ac73013430d4 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1748877741.76356 "/Users/piotr/dev/aws-lambda-performance-master-thesis/thesis-document/main.tex" "main.pdf" "main" 1748877745.47151 0
+["pdflatex"] 1748881952.4452 "/Users/piotr/dev/aws-lambda-performance-master-thesis/thesis-document/main.tex" "main.pdf" "main" 1748881956.75119 0
   "/Users/piotr/dev/aws-lambda-performance-master-thesis/thesis-document/main.tex" 1747560372.17962 1632 05ab45c87171aac344f89567b5cd90ec ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -235,7 +235,7 @@
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1743368361 3345740 ffe5f51373ccf13d75fbfff4bb879045 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
   "chapters/abstrakt.tex" 1746550711.58769 115 26b1752a84850e89b82be27d553e74a1 ""
-  "chapters/dzialanie_faas/aws_lambda.tex" 1748525556.27499 7697 84e9dc13fac13855c09e9aa1d595d6c3 ""
+  "chapters/dzialanie_faas/aws_lambda.tex" 1748880284.58817 7697 b9ef6ffa0647529d9f336286b632ae99 ""
   "chapters/dzialanie_faas/funkcja_jako_usluga.tex" 1746640617.2625 8030 659ef87fc94c43fef9966f27d5c8b57a ""
   "chapters/dzialanie_faas/main.tex" 1746550541.83039 229 e52cd7dc8ed7911420fc683cedceddcb ""
   "chapters/dzialanie_faas/model_serverless.tex" 1746639834.05166 6470 53ad125615940d0274c4f852e7f04ab4 ""
@@ -251,7 +251,7 @@
   "chapters/przeglad_literatury/results_papers.tex" 1746386763.17655 2751 d3e68082c715b51119b25da65deeed3d ""
   "chapters/przeglad_literatury/review_method.tex" 1746563226.87061 16418 e77d33ddb2c486255f7c17f9dc7d82da ""
   "chapters/przeglad_literatury/review_process_table.tex" 1748084117.57061 2042 fde9cdd2857ca19542df84fb6b9c183f ""
-  "chapters/slownik_pojec.tex" 1748861398.84029 334 be3c4e7d7f89d113256bcaa49f5e5732 ""
+  "chapters/slownik_pojec.tex" 1748881947.79693 6211 f476173f83be4e4252ccca12bcbf952d ""
   "chapters/wnioski_dyskusja/main.tex" 1748819694.45602 16873 cb9f385fb557044a5adabd902a18b5fd ""
   "chapters/wstep/main.tex" 1748877741.28329 8606 a303c1957ed0327d860e405c9b380e41 ""
   "chapters/wyniki/cold-start.tex" 1748522622.30619 5583 977f796ade7a3ba249ad0814053f409c ""
@@ -283,13 +283,13 @@
   "charts/snapstart.png" 1747166600.43648 34764 c43215429c0695a75ee03953cacf9371 ""
   "charts/warm_cold_starts_lambda.png" 1746546942.012 42675 885c6ed02a874e6f4e4e06e114eec961 ""
   "latex-settings.tex" 1748371387.93244 14274 af9fe670a14d1fa65d1265b92e74ce81 ""
-  "main.aux" 1748877745.18802 31853 485ceabf4c8c97df6a364f7674ad5471 "pdflatex"
-  "main.bbl" 1748877357.008 17502 b3bb32235434826b981ea6d95dc4db6b "bibtex main"
-  "main.lof" 1748877745.20149 3998 ea91c1977dd429b15074bf6065cc0030 "pdflatex"
-  "main.lot" 1748877745.20153 1510 b0cf3eb954c0ce2b0bced2801ae4f897 "pdflatex"
-  "main.out" 1748877745.201 6517 74626d018e05e65df22e1052a5845418 "pdflatex"
+  "main.aux" 1748881956.27136 32328 73307414336adc53c930ac73013430d4 "pdflatex"
+  "main.bbl" 1748881952.43224 18079 ecfd8c5fa03fab87cf9f171a406fa8c7 "bibtex main"
+  "main.lof" 1748881956.27677 3998 ea91c1977dd429b15074bf6065cc0030 "pdflatex"
+  "main.lot" 1748881956.27681 1510 b0cf3eb954c0ce2b0bced2801ae4f897 "pdflatex"
+  "main.out" 1748881956.27462 6517 74626d018e05e65df22e1052a5845418 "pdflatex"
   "main.tex" 1747560372.17962 1632 05ab45c87171aac344f89567b5cd90ec ""
-  "main.toc" 1748877745.20144 3548 82ee67a825e278f71828e40d68ee29f4 "pdflatex"
+  "main.toc" 1748881956.27668 3548 82ee67a825e278f71828e40d68ee29f4 "pdflatex"
   "title_page/title_page.pdf" 1743361834 144139 62ae5feb3df1e7daff15bf715bfb2fa9 ""
   (generated)
   "main.aux"

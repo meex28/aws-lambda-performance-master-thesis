@@ -17,25 +17,6 @@ Umożliwia to twórcom oprogramowania skupienie się na logice biznesowej aplika
     \label{fig:example_aws_lambda}
 \end{figure}
 
-% \begin{lstlisting}[
-%     caption={Przykładowa implementacja funkcji AWS Lambda w języku Java [źródło: opracowanie własne]}, 
-%     label={code:example_aws_lambda},
-% ]
-% public class MyHandler implements 
-%     RequestHandler<MyHandler.Request, String> {
-    
-%     public record Request(String message) {}
-
-%     public record Response() {}
-
-%     @Override
-%     public Response handleRequest(Request event, Context context) {
-%         // logika biznesowa funkcji
-%         return Response()
-%     }
-% }
-% \end{lstlisting}
-
 Pierwszym krokiem wdrożenia funkcji AWS Lambda jest napisanie uruchamianego kodu.
 Przykładowa implementacja została przedstawiona na Rysunku \ref{fig:example_aws_lambda}. 
 Odpowiedni interfejs, który wykorzystuje programista, jest dostarczany przez AWS.
@@ -108,3 +89,22 @@ Zjawisko to nazywane jest ciepłym startem (ang. warm start) \cite{awsLambdaDocs
     \caption{Proces uruchomienia AWS Lambda w kontekście zimnych i ciepłych startów [źródło: opracowanie własne na bazie dokumentacji AWS Lambda \cite{awsLambdaDocs}]}
     \label{fig:aws_lambda_warm_cold_starts}    
 \end{figure}
+
+% \begin{lstlisting}[
+%     caption={Przykładowa implementacja funkcji AWS Lambda w języku Java [źródło: opracowanie własne]}, 
+%     label={code:example_aws_lambda},
+% ]
+% public class MyHandler implements 
+%     RequestHandler<MyHandler.Request, String> {
+    
+%     public record Request(String message) {}
+
+%     public record Response() {}
+
+%     @Override
+%     public Response handleRequest(Request event, Context context) {
+%         // logika biznesowa funkcji
+%         return Response()
+%     }
+% }
+% \end{lstlisting}

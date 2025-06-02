@@ -78,6 +78,12 @@ A.~Agache, M.~Brooker, A.~Iordache, A.~Liguori, R.~Neugebauer, P.~Piwonka, and D
 \newblock \url{https://aws.amazon.com/lambda/pricing/}, {2025}.
 \newblock Dostęp: 20.05.2025.
 
+\bibitem{aws_what_is_aws}
+{Amazon Web Services}.
+\newblock What is aws?
+\newblock \url{https://aws.amazon.com/what-is-aws/}, 2025.
+\newblock Dostęp: 31.05.2025.
+
 \bibitem{8513710}
 D.~Bardsley, L.~Ryan, and J.~Howard.
 \newblock Serverless performance and optimization strategies.
@@ -199,6 +205,12 @@ L.~A. Goodman.
 \newblock {\em Reflekcja w obrazie natywnym}, 2024.
 \newblock Dostęp: 13.05.2025.
 
+\bibitem{ibm_sdk_vs_api}
+{IBM Technology}.
+\newblock Sdk vs. api: What's the difference?
+\newblock \url{https://www.ibm.com/think/topics/api-vs-sdk}, 2021.
+\newblock Dostęp: 31.05.2025.
+
 \bibitem{Ivanov_Petrova_2024}
 D.~Ivanov and A.~Petrova.
 \newblock Serverless computing architectures and applications in aws.
@@ -289,6 +301,12 @@ M.~Nazari, S.~Goodarzy, E.~Keller, E.~Rozner, and S.~Mishra.
 J.~Nupponen and D.~Taibi.
 \newblock Serverless: What it is, what to do and what not to do.
 \newblock In {\em 2020 IEEE International Conference on Software Architecture Companion (ICSA-C)}, pages 49--50, 2020.
+
+\bibitem{oracle_jvm_spec}
+{Oracle Corporation}.
+\newblock The java virtual machine specification, java se 22 edition.
+\newblock \url{https://docs.oracle.com/javase/specs/jvms/se22/html/}, 2024.
+\newblock Dostęp: 31.05.2025.
 
 \bibitem{pawlik2019performanceconsiderationsexecutionlarge}
 M.~Pawlik, K.~Figiela, and M.~Malawski.
