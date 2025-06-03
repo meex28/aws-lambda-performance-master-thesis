@@ -1,6 +1,28 @@
 \section*{Streszczenie}
 
-Streszczenie  w języku polskim.
+AWS Lambda to jedna z najważniejszych usług bezserwerowych oferowana przez Amazon Web Services.
+Kluczowym aspektem tego typu serwisów jest wydajność, która przekłada się bezpośrednio na koszt użycia oraz doświadczenia użytkownika.
+Zespoły programistyczne mogą tworzyć funkcje AWS Lambda z użyciem Javy oraz pokrewnych technologii z jej ekosystemu.
+Narzędzia te mogą jednak powodować problemy z wydajnością, jak na przykład długi czas inicjalizacji.
+Tworzy to potrzebę dostarczenia zespołom programistycznym odpowiednich metod poprawy wydajności.
+
+Celem pracy było zaproponowanie nowych metod poprawy wydajności AWS Lambda dla rozwiązań z ekosystemu Java oraz analiza ich wpływu na wydajność funkcji i inne wybrane czynniki, które mogą wpłynąć na jakość pracy programistów.
+W opracowaniu zawarto metody SnapStart, GraalVM, Kotlin JVM, Kotlin/JS oraz Kotlin/Native.
+
+Przeprowadzono systematyczny przegląd literatury, który pozwolił na poznanie aktualnego stanu wiedzy o wydajności AWS Lambda.
+Wpłynęło to na wybór metod oraz ostateczny kształt badania.
+W pracy przeanalizowano wydajność funkcji pod kątem czasu wykonania podczas zimnych i ciepłych startów, zaproponowanego współczynnika wydajności funckji oraz kosztu działania.
+Do badania wpływu na proces rozwoju oprogramowania użyto takżemetryk opisująch proces budowy artefaktu i ograniczeń w integracji z usługami zewnętrznymi.
+W eksperymencie wzięto pod uwagę różne rozmiary pamięci funkcji.
+
+Stwierdzono, że wybór metody optymalizacji powinien być zależny od charakterystyki funkcji.
+Dla aktywnych funkcji z przewagą ciepłych startów najefektywniejsze okazały się GraalVM oraz Kotlin/Native.
+Wykazano, że Kotlin/Native jest szczególnie skuteczny dla niewielkich rozmiarów pamięci funkcji, jak 128 MB oraz 256 MB.
+Dodatkowo, cechuje się on najniższymi kosztami w tych wielkościach pamięci.
+
+W pracy ustalono także kompromisy, z którymi muszą liczyć się zespoły programistyczne decydujące się na użycie poszczególnych metod.
+Zalicza się do nich między innymi potencjalne ograniczenia w korzystaniu z funkcji języka, czas budowy artefaktu i ograniczenia w integracji z zewnętrznymi usługami.
+Opracowanie dostarcza programistom wiedzy, który pozwala na świadomy wybór techniki poprawy wydajności funkcji.
 
 \section*{Abstract}
 
