@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.30)  3 JUN 2025 09:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.30)  3 JUN 2025 15:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1210,9 +1210,11 @@ Non-PDF special ignored!
 
 
 
- <./title_page/title_page.pdf>] (./chapters/abstrakt.tex)
+ <./title_page/title_page.pdf>] (./chapters/abstrakt.tex
 
-[1{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}] (./main.toc
+[1{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}])
+
+[2] (./main.toc
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 3.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -1252,7 +1254,7 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 3.
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 
-[2
+[3
 
 ])
 \tf@toc=\write7
@@ -1260,14 +1262,11 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 
 
 
-[3]
-
-[4
-
-
-] (./chapters/wstep/main.tex
+[4] (./chapters/wstep/main.tex
 
 [1
+
+
 
 
 ]
@@ -1685,7 +1684,7 @@ Underfull \vbox (badness 4467) has occurred while \output is active []
 
 
 [87]
-runsystem(latexminted cleantemp  --timestamp 20250603090625 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
+runsystem(latexminted cleantemp  --timestamp 20250603153000 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
 
  (./main.aux)
  ***********
@@ -1704,7 +1703,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  99i,21n,96p,1071b,760s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
-Output written on main.pdf (92 pages, 1347005 bytes).
+Output written on main.pdf (92 pages, 1349138 bytes).
 PDF statistics:
  1356 PDF objects out of 1440 (max. 8388607)
  1151 compressed objects within 12 object streams

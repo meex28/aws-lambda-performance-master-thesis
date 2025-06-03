@@ -11,7 +11,7 @@ W opracowaniu zawarto metody SnapStart, GraalVM, Kotlin JVM, Kotlin/JS oraz Kotl
 
 Przeprowadzono systematyczny przegląd literatury, który pozwolił na poznanie aktualnego stanu wiedzy o wydajności AWS Lambda.
 Wpłynęło to na wybór metod oraz ostateczny kształt badania.
-W pracy przeanalizowano wydajność funkcji pod kątem czasu wykonania podczas zimnych i ciepłych startów, zaproponowanego współczynnika wydajności funckji oraz kosztu działania.
+W pracy przeanalizowano wydajność funkcji pod kątem czasu wykonania podczas zimnych i ciepłych startów, zaproponowanego współczynnika wydajności funkcji oraz kosztu działania.
 Do badania wpływu na proces rozwoju oprogramowania użyto także metryk opisująch proces budowy artefaktu i ograniczeń w integracji z usługami zewnętrznymi.
 W eksperymencie wzięto pod uwagę różne rozmiary pamięci funkcji.
 
@@ -24,6 +24,29 @@ W pracy ustalono także kompromisy, z którymi muszą liczyć się zespoły prog
 Zalicza się do nich między innymi potencjalne ograniczenia w korzystaniu z funkcji języka, czas budowy artefaktu i ograniczenia w integracji z zewnętrznymi usługami.
 Opracowanie dostarcza programistom wiedzy, który pozwala na świadomy wybór techniki poprawy wydajności funkcji.
 
+\newpage
 \section*{Abstract}
 
-Streszczenie  w języku angielskim.
+AWS Lambda is one of the most important serverless services offered by Amazon Web Services.
+A key aspect of such services is performance, which translates directly into cost of use and user experience.
+Development teams can create AWS Lambda functions using Java and related technologies from its ecosystem.
+However, these tools can cause performance issues, such as long initialization times.
+This creates the need to provide development teams with appropriate methods to improve performance.
+
+The purpose of the study was to propose new methods for improving AWS Lambda performance for solutions from the Java ecosystem and to analyze their impact on functions performance and other selected factors that can affect the quality of developers' work.
+The study included SnapStart, GraalVM, Kotlin JVM, Kotlin/JS and Kotlin/Native methods.
+
+A systematic review of the literature was conducted to learn about the current state of knowledge on AWS Lambda performance.
+This influenced the choice of methods and the final design of the study.
+The paper analyzed the performance of functions in terms of execution time during cold and warm starts, the proposed function performance factor and the cost of operation.
+Metrics describing the process of building an artifact and constraints on integration with external services were also used to study the impact on the software development process.
+Different sizes of function memory were considered in the experiment.
+
+It was found that the choice of optimization method should depend on the characteristics of the function.
+For active functions with a preponderance of warm starts, GraalVM and Kotlin/Native were found to be the most effective.
+Kotlin/Native was shown to be particularly effective for small function memory sizes, such as 128 MB and 256 MB.
+In addition, it features the lowest cost in these memory sizes.
+
+The paper also establishes the trade-offs that development teams must reckon with when deciding to use particular methods.
+These include, among others, potential limitations in the use of language features, the time it takes to build an artifact and limitations in integration with external services.
+The study provides developers with the knowledge to make an informed choice of techniques to improve feature performance.
