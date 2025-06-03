@@ -28,14 +28,14 @@ Dodatkowo, metoda ta wykazuje bardzo wysoką poprawę efektywności kosztowej.
 Dla rozmiarów pamięci 128 MB i 256 MB Kotlin/Native pozwolił na uzyskanie najniższych kosztów, zatem może to być istotny czynnik w wyborze metod optymalizacji przez zespoły programistyczne.
 
 Analizując przypadek funkcji mniej aktywnych (czyli z większym udziałem zimnych startów), metody wykazywały inne właściwości niż dla ciepłych startów.
-Poprzez ocenę współczynnika wydajności funkcji (WWF) można stwierdzić, że większość metod pozwoliły na pewną poprawę wydajności.
+Poprzez ocenę współczynnika wydajności funkcji (WWF) można stwierdzić, że większość metod pozwoliło na pewną poprawę wydajności.
 Jedynie dla mniejszych pamięci (128 MB, 256 MB) metody jak SnapStart i Kotlin prowadziły do pogorszenia wydajności (oprócz użycia Javy z aktywnym SnapStart i pamięci 256 MB).
 Dla pamięci wielkości 128 MB, 256 MB ponownie najbardziej skuteczne okazały się metody oparte o kompilację do natywnych plików binarnych.
 Szczególną uwagę przykuwa jednak użycie Kotlin/Native, który zapewnił znacznie większy wzrost wydajności niż GraalVM.
 Wykazał się on najbardziej efektywną metodą dla funkcji o pamięci 128 MB, a także dla rozmiaru 256 MB, gdzie wzrost wydajności był kolosalny.
 Kotlin/Native osiągnał trzykrotnie większą wartość współczynnika niż GraalVM, który był drugą najbardziej skuteczną metodą.
 Czas uruchomienia funkcji dla pamięci 128 MB i 256 MB był także najniższy dla Kotlin/Native.
-Zostanie to omówione szczegółowe w ramach odpowiedzi na drugie pytanie badawcze.
+Zostanie to omówione szczegółowo w ramach odpowiedzi na drugie pytanie badawcze.
 Dodatkowo, w ramach tych wartości pamięci możliwe było uzyskanie najniższych kosztów działania funkcji wśród wszystkich badanych konfiguracji.
 Zostało to otrzymane dzięki użyciu kompilacji Kotlina do natywnych plików binarnych.
 Wszystkie te aspekty wskazują na bardzo wysoką skuteczność tej metody w zakresie niewielkich rozmiarów pamięci (128 MB, 256 MB).
@@ -107,8 +107,8 @@ Należy jedynie wspomnieć o negatywnym wpływie na koszt działania, który śr
 Większy wpływ na tworzenie aplikacji mają metody oparte o Kotlin/JS oraz Kotlin/Native.
 Pierwszym z nich jest czas tworzenia artefaktu, który jest wyższy dla obu metod (jednak znacznie wyższy dla Kotlin/Native).
 Warto jednak zaznaczyć, że rozmiar artefaktu był mniejszy dla wszystkich funkcji opartych o Kotlin, w porównaniu z klasyczną Javą.
-Pewnym kompromisem są także integracje z zewnętrznymi serwisami, którą mogą być utrudnione ze względu na dostępność AWS SDK.
-Jest ono niedostępne dla Kotlin/Native oraz dostępne pośrednio dla Kotlin/JS, co wymaga dodatkowej integracji.
+Pewnym kompromisem są także integracje z zewnętrznymi serwisami, które mogą być utrudnione ze względu na dostępność AWS SDK.
+Jest ono niedostępne dla Kotlin/Native oraz dostępne pośrednio dla Kotlin/JS, gdzie wymaga dodatkowej integracji.
 Ograniczeniami dla tych sposobów są także ograniczone możliwości użycia mechanizmu refleksji, podobnie jak w przypadku GraalVM.
 
 \section{Zagrożenia trafności wyników}\label{chapter:zagrozenia_trafnosci_wynikow}

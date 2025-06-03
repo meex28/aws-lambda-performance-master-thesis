@@ -11,24 +11,26 @@
 \begin{document}
 
 \includepdf[pages={1}]{title_page/title_page.pdf}
-% \doublepage
-
+\doublepage
 % Add table of contents
 \pagestyle{tableOfContentStyle}
 % Add abstract
 \pagenumbering{Roman}
 \input{chapters/abstrakt.tex}
-% \doublepage
-\clearpage
+\doublepage
 \tableofcontents 
-% \doublepage
+\doublepage
 % Set page style 
 \pagestyle{custom}
 \mainmatter
 
 % Create chapters:
+\pagestyle{customUnnumberedStyle}
 \input{chapters/wstep/main}
 \input{chapters/slownik_pojec}
+
+\newpage
+\pagestyle{custom}
 \input{chapters/dzialanie_faas/main}
 \input{chapters/przeglad_literatury/main}
 \input{chapters/metody_optimalizacji/main.tex}
@@ -36,6 +38,7 @@
 \input{chapters/wyniki/main.tex}
 \input{chapters/wnioski_dyskusja/main.tex}
 \input{chapters/zakonczenie/main.tex}
+\newpage
 
 % Redefine plain for 1st bibliography page style
 \resetformatting
@@ -43,13 +46,7 @@
 %https://www.overleaf.com/learn/latex/Bibliography_management_with_bibtex
 \pagestyle{bibliographyStyle}
 \bibliographystyle{abbrv}
-\bibliography{sources/bibliography}
-
-%https://www.overleaf.com/learn/latex/Bibliography_management_with_bibtex
-% \pagestyle{bibliographyStyle}
-% \bibliographystyle{abbrv}
-% % zmienić tytuł
-% \bibliography{sources/internet_sources}
+\bibliography{bibliography}
 
 % Add list of figures and tables
 \pagestyle{custom}
@@ -60,6 +57,27 @@
 \pagestyle{ListofTablesStyle}
 \listoftables
 
-% TODO: spis kodów źródłówych
+% % Redefine plain for 1st bibliography page style
+% \resetformatting
+% % Please read :
+% %https://www.overleaf.com/learn/latex/Bibliography_management_with_bibtex
+% \pagestyle{bibliographyStyle}
+% \bibliographystyle{abbrv}
+% \bibliography{sources/bibliography}
+
+% %https://www.overleaf.com/learn/latex/Bibliography_management_with_bibtex
+% % \pagestyle{bibliographyStyle}
+% % \bibliographystyle{abbrv}
+% % % zmienić tytuł
+% % \bibliography{sources/internet_sources}
+
+% % Add list of figures and tables
+% \pagestyle{custom}
+% \newpage
+% \pagestyle{ListofFiguresStyle}
+% \listoffigures
+% \newpage
+% \pagestyle{ListofTablesStyle}
+% \listoftables
 
 \end{document}

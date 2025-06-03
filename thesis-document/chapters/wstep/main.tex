@@ -3,19 +3,19 @@
 
 Usługa AWS Lambda jest jednym z kluczowych serwisów oferowanych przez chmurę Amazon Web Services (AWS) w architekturze bezserwerowej. 
 Wraz z rosnącą popularnością tego rodzaju architektur, pojawia się potrzeba ciągłej poprawy ich działania. 
-Jednym z pierwotnie dostępnych języków programowania w AWS Lambda jest Java oraz inne języki oparte o jej maszyne wirtualną.
+Jednym z pierwotnie dostępnych języków programowania w AWS Lambda jest Java oraz inne języki oparte o jej maszynę wirtualną.
 Według raportu Datadog ,,The State of Serverless'' około 10\% wywołań funkcji AWS Lambda jest obsługiwane przez język Java \cite{datadog_state_of_serverless}.
 Języki oparte o maszynę wirtualną Java są jednak wykorzystywane o wiele częściej.
-Według ankiety StackOverflow w 2024 roku, około 30\% profesjonlanych programistów zadeklarowało, że korzysta z tego Javy.
+Według ankiety StackOverflow w 2024 roku, około 30\% profesjonalnych programistów zadeklarowało, że korzysta z Javy.
 Dodatkowo prawie 9.9\% z nich oznajmiło korzystanie z Kotlina, 3.8\% z Groovy, a 2.9\% z języka Scala. 
 
 Wydajność jest jednym z najbardziej istotnych aspektów usług bezserwerowych.
 Wynika to z specyficznego modelu tych usług, gdzie opłacany jest wyłącznie czas realnego korzystania z infrastruktury (tzw. ,,płać za użycie'', ang. ,,pay-per-use'') \cite{ServerlessApplicationsWhyWhenAndHow}.
 Ze względu na jego wyjątkowe cechy i bezpośredni wpływ na koszt działania, opis tego modelu zostanie także zawarty w pracy.
-Istotę omawianego aspektu podkreśla także fakt, że znaczącym czynnikiem w wyborze usług bezserwerowych jest właśnie redukcja kosztów \cite{ServerlessApplicationsWhyWhenAndHow}, która jest z bezpośrednio powiązana z efektywnością.
-Wspomniany raport Datadog ,,The State of Serverless'' \cite{datadog_state_of_serverless} porusza problemy wydajnościowe w konkteście ekosystemu Java dwukrotnie.
+Istotę omawianego aspektu podkreśla także fakt, że znaczącym czynnikiem w wyborze usług bezserwerowych jest właśnie redukcja kosztów \cite{ServerlessApplicationsWhyWhenAndHow}, która jest bezpośrednio powiązana z efektywnością.
+Wspomniany raport Datadog ,,The State of Serverless'' \cite{datadog_state_of_serverless} dwukrotnie porusza problemy wydajnościowe w konkteście ekosystemu Java.
 Po pierwsze podkreśla znacznie dłuższe zimne starty w porównaniu z innymi językami programowania, a także alokację większych rozmiarów pamięci dla funkcji AWS Lambda opartych o Javę.
-Z tego powodu redukcja wpływu tych problemów może znacznie ułatwić korzystanie z AWS Lambda w ekosystemie Java, a co za tym idzie większą popularyzację tego języka programowania jako narzędzia dla usług bezserwerowych.
+Z tego powodu redukcja wpływu tych problemów może znacznie ułatwić korzystanie z AWS Lambda w ekosystemie Java, a co za tym idzie zwiększyć popularność tego języka programowania jako narzędzia dla usług bezserwerowych.
 
 Jednymi z metod optymalizacji wydajności Javy w ramach AWS Lambda mogą być usługa SnapStart oraz kompilacja GraalVM.
 W ramach przeglądu literatury odnaleziono jedynie pojedyncze prace opisujące ich użycie w kontekście AWS Lambda \cite{menéndez2023performancebestpracticesusing}\cite{ritzal2020optimizing}.
@@ -26,7 +26,7 @@ Jest to jednak istotny element, który powinien być wzięty pod uwagę podzas w
 
 Nie odnaleziono także prac badających wydajność użycia w AWS Lambda, alternatywnych języków programowania opartych o maszynę wirtualną Javy.
 Istotną motywacją do badań w tym zakresie jest popularność języka Kotlin, którego użycie w ankiecie StackOverflow \cite{stackoverflow_survey_2024} zadeklarowało 9.9\% profesjonalnych programistów.
-Sam Kotlin zapewnia szeroki wybór narzędzi oraz bibliotek, a także w ramach języka rozwijany jest projekt Kotlin Multiplatform, który może zostać potencjalnie wykorzystany w ramach AWS Lambda.
+Sam Kotlin zapewnia szeroki wybór narzędzi oraz bibliotek. W ramach tego języka rozwijany jest także projekt Kotlin Multiplatform, który może zostać potencjalnie wykorzystany dla AWS Lambda.
 Zatem język ten stanowi szeroki obszar do badań w kontekście wydajności w usłudze AWS Lambda.
 
 \section*{Problem badawczy}\label{chapter:problem_badawczy}
@@ -73,7 +73,7 @@ Cel pracy zostanie zrealizowany poprzez następujące działania stanowiące zas
 
 Praca składa się ze wstępu, słownika pojęć i akronimów, sześciu rozdziałów, zakończenia oraz bibliografii.
 W ramach wstępu zdefiniowano problem badawczy, cel pracy, pytania badawcze oraz zakres pracy.
-W pierwszym rozdziale opisano teoretyczne podstawy działania AWS Lambda, a także znaczenie modeli bezserwerowych i funkcji jako usług (na których opiera się AWS Lambda).
+W pierwszym rozdziale opisano teoretyczne podstawy działania AWS Lambda, a także znaczenie modeli bezserwerowych i funkcji jako usług (o które opiera się AWS Lambda).
 W rozdziale drugim dokonano systematycznego przeglądu literatury, na bazie którego opisano aktualny stan wiedzy.
 Odpowiedziano na pytania badawcze do przeglądu oraz zlokalizowano luki w literaturze, co zostało wykorzystane w następnym rozdziale.
 W trzecim rozdziale zawarto opis wybranych metod optymalizacji, w tym nowo zaproponowanych.

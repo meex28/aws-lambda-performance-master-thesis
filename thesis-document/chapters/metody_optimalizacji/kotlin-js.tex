@@ -55,36 +55,5 @@ Po pierwsze, mimo integracji z bibliotekami zewnętrznymi, może wymagać ona zn
 Wynika to z użycia słowa kluczowego ,,external'' i potrzeby utrzymywania kodu, który zawiera typy bibliotek zewnętrznych.
 Może to znacząco spowolnić wszelkie zmiany wersji bibliotek, które mogą zmienić swoje interfejsy.
 Dodatkowo, Kotlin/JS posiada znaczne ograniczenia w mechanizmie refleksji.
-Nie implementuje on całego API reflekcji Kotlina, a jednymie referencję klasy (::class), typy KType i KClass oraz powiązane z nimi funkcje ,,typeof()'' (zwracającą typ) i ,,createInstance()'' (tworzącą nową instancję klasy).
+Nie implementuje on całego API refleksji Kotlina, a jednymie referencję klasy (,,::class''), typy KType i KClass oraz powiązane z nimi funkcje ,,typeof()'' (zwracającą typ) i ,,createInstance()'' (tworzącą nową instancję klasy).
 Czynniki te powinny być uwzględnione w przypadku wyboru Kotlin/JS jako technologii systemu działającego w AWS Lambda.
-
-% 0. Wstęp
-
-% 1. Sposób działania:
-% Kotlin\JS jako docelowa platforma. Kod kotlin -> JavaScript
-% Jak to działa? - Kompilator IR
-% Wsparcie dla browser lub node.js
-
-% 2. Integracja z JS:
-% Wsparcie dla bibliotek i kodu JS z Kotlina
-% Generowanie typów typescript
-
-% 3. Wielkość artefaktu (ważne w AWS Lambda):
-% Wsparcie dla webpacka (czy dla node.js też?)
-% Dead Code Elimination i @JsExport
-% Minification - jak to przetłumaczyć?
-
-% 4. Ograniczenia:
-% Reflection jako ograniczenie
-
-% Linki:
-% https://kotlinlang.org/docs/js-overview.html
-% https://kotlinlang.org/docs/js-ir-compiler.html
-% https://kotlinlang.org/docs/javascript-dce.html
-% https://kotlinlang.org/docs/js-ir-compiler.html#minification-of-member-names-in-production
-% https://kotlinlang.org/docs/js-ir-compiler.html#current-limitations-of-the-ir-compiler - końcówka, zawrzeć odnośnie JsExport
-% https://kotlinlang.org/docs/js-ir-compiler.html#preview-generation-of-typescript-declaration-files-d-ts - typescript
-% https://kotlinlang.org/docs/dynamic-type.html - do używania kodu JS z Kotlina
-% https://kotlinlang.org/docs/using-packages-from-npm.html - używanie NPM
-% https://kotlinlang.org/docs/js-to-kotlin-interop.html#kotlin-types-in-javascript - używanie kotlina z JS (?)
-% https://kotlinlang.org/docs/js-reflection.html - reflection jako ograniczenie

@@ -443,8 +443,6 @@ INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm
 OUTPUT main.toc
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmr12.tfm
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmr10.tfm
 INPUT ./chapters/wstep/main.tex
 INPUT ./chapters/wstep/main.tex
 INPUT ./chapters/wstep/main.tex
@@ -454,6 +452,8 @@ INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ts1-lmr12.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmr12.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmr10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc
 INPUT ./chapters/slownik_pojec.tex
 INPUT ./chapters/slownik_pojec.tex

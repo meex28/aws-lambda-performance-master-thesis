@@ -33,7 +33,7 @@ Po pierwsze, wykazali oni, że użycie odśmiecania pamięci może negatywnie wp
 Następnie, poprzez użycie techniki  ,,Garbage Collector Control Interceptor", złagodzili negatywny wpływ GC (ang. Garbace Collector), co przyspieszyło czas odpowiedzi o około 10\% oraz zmniejszyło koszt działania o 7\%. 
 
 Wybór odpowiedniej wielkości pamięci funkcji jest bardzo ważnym elementem wdrożenia także ze względu na bezpośredni jej wpływ na koszty. Elgamal i inni autorzy \cite{8567674} zaproponowali model optymalizacji kosztów funkcji, w którym jednym z czynników była pamięć AWS Lambda. 
-Zwrócili uwagę na to, że nawet niewielkie wartości (z 128 MB do 256 MB) było wstanie poprawić szybkość wykonania algorytmu o 10\%, przy jednoczesnym obniżeniu kosztów o 6\%.
+Zwrócili uwagę na to, że wzrost o nawet niewielkie wartości (z 128 MB do 256 MB) był w stanie poprawić szybkość wykonania algorytmu o 10\%, przy jednoczesnym obniżeniu kosztów o 6\%.
 
 Pawlik, Figiela i Malawski \cite{pawlik2019performanceconsiderationsexecutionlarge} zwrócili uwagę na wpływ pamięci FaaS dla konkretnych zastosowań naukowych. 
 Dokonali równoczesnej ewaluacji 5120 zadań z użyciem serwisów różnych dostawców (m. in. AWS). 
@@ -74,7 +74,7 @@ Jest to ważny czynnik wpływający na serwisy jak AWS Lambda, w szczególności
 Zimne starty występują często na platformie AWS, co stwierdzili Kelly, Glavin i Barrett \cite{9284261} podczas analizy infrastruktury obsługującej AWS Lambda. 
 Podczas badań z użyciem powtarzających się co godzinę wywołań doświadczyli oni bardzo częstych zimnych startów funkcji (aż około 89\% uruchomień). 
 Podkreśla to wielkość problemu zimnych startów w przypadku rzadko używanych funkcji. 
-Zimne start na platformie AWS były jednak znacząco krótsze niż w usługach innych dostawców. 
+Zimne starty na platformie AWS były jednak znacząco krótsze niż w usługach innych dostawców. 
 Dla funkcji o pamięci 128 MB było to maksymalnie około 350 milisekund. 
 W przypadku funkcji o większym rozmiarze pamięci opóźnienia były zbliżone. 
 Na bazie porówniania różnych dostawców chmurowych autorzy podkreślili, że infrastruktura AWS Lambda ma tendencję do utrzymywania gotowych maszyn wirtualnych krócej niż inni dostawcy, co prowadzi do częstszych zimnych startów, jednak z mniejszymi opóźnieniami.
@@ -107,14 +107,14 @@ Znaczące różnice w wydajności pomiędzy językami w AWS Lambda podkreślili 
 W przypadku ciepłych startów najszybszymi testowanymi językami były Python (średnio 6,13 ms) oraz  .NET 2 (średnio 6,32 ms). 
 Java uplasowała się na trzecim miejscu (średnio 11,33 ms), a najgorszy okazał się Go (średnio 19,21 ms). 
 Wzorce wydajności zmieniają się jednak diametralnie w przypadku zimnych startów: najszybszy dalej jest Python (średnio 2,94 ms). 
-Java wykazała znacząco większe opóźnienia (391,91 ms) w porównaniu z ciepłym startem (ponad 3-krotny wzrost). 
-Interesującym faktem jest około 40-krotny wzrost opóźnienia funkcji .NET 2 dla zimnych startów (średnio 2.5 sekundy). 
-Czas wykonania wpłynął bezpośrednio na koszty, które różniły się nawet 13-krotnie. 
-Badania nie zostały niestety wykonane na różnych wielkościach pamięci, która jest jednym z głównych składowych kosztu działania.
+Java wykazała znacząco większe opóźnienia (391,91 ms) w porównaniu z ciepłym startem (ponad trzykrotny wzrost). 
+Interesującym faktem jest około czterdziestokrotny wzrost opóźnienia funkcji .NET 2 dla zimnych startów (średnio 2.5 sekundy). 
+Czas wykonania wpłynął bezpośrednio na koszty, które różniły się nawet trzynastokrotnie. 
+Badania nie zostały niestety wykonane na różnych wielkościach pamięci, która jest jedną z głównych składowych kosztu działania.
 
 Cordingly i inni autorzy \cite{Cordingly2020704} zwracają uwagę na potrzebę odpowiedniego doboru języka programowania do konkretnej funkcji AWS Lambda. 
 Poprzez przygotowanie procesu Transform-Load-Query, składającego się z kilku komponentów, byli w stanie dokładnie przeanalizować wpływ języków na poszczególne jego etapy. 
-Badane języki mogą być podzielone na dwie grupy: kompilowane (Java, Go) oraz interpretowane (Python, Javascript). Wykazano, że żaden z języków nie był najlepszego dla każdego etapu procesu. 
+Badane języki mogą być podzielone na dwie grupy: kompilowane (Java, Go) oraz interpretowane (Python, Javascript). Wykazano, że żaden z języków nie był najlepszy dla każdego etapu procesu. 
 Poprzez przygotowanie hybrydowego pipeline’u możliwe było osiągnięcie znaczącej poprawy opóźnień (17\%-129\% szybciej). Wybrany język ma także wpływ na czas inicjalizacji funkcji. 
 W przypadku Javy wymagana jest inicjalizacja JVM, jednak nie powodowało to znacząco dłuższych zimnych startów w porównaniu z Python i Node.js. Go prezentowało jednak około 20\% dłuższe zimne starty.
 
@@ -170,7 +170,7 @@ Wyniki te były spójne niezależnie od testowanego rozmiaru aplikacji czy iloś
 
 Po wykonaniu zapytania do funkcji AWS Lambda maszyny wirtualne, które zostały wykorzystane, pozostają aktywne w oczekiwaniu na kolejne uruchomienia. 
 Trwa to przeważnie kilka minut \cite{9284261}, gdy uruchomiony już kod dalej jest gotowy do działania.
-Taktyką z tym związaną jest regularne uruchamianie funkcji zaproponowane przez \cite{8605779} Lloyd i innych autorów. 
+Taktyką z tym związaną jest regularne uruchamianie funkcji zaproponowane przez Lloyd i innych autorów \cite{8605779}. 
 Funkcje AWS Lambda były uruchamiane przez specjalne instancje EC2 lub uslugę CloudWatch, co pozwoliło utrzymać funkcje aktywne nawet do 24 godzin.
 Podejście to pozwoliło na redukcję zimnych startów i przyspieszenie funkcji około czterokrotnie.
 W porównaniu z klasyczną infrastrukturą (opartą o np. kontenery Docker) funkcje Lambda były około 10\% wolniejsze, jednak użycie funkcji bezserwerowych pozwoliło na około 18-krotne zmniejszenie kosztów. 
@@ -188,7 +188,7 @@ Autor zwraca jednak uwagę na skomplikowanie Javy i jej specyficznych konstrukcj
 Choć głównym celem pracy jest automatyzacja migracji monolitycznych aplikacji do architektury bezserwerowej, autor prezentuje interesujące podejście do użycia Java w AWS Lambda.
 W celu uniknięcia wyzwań jak zimne starty czy czasochłonność budowy aplikacji, pośrednie użycie innego języka może być skuteczną metodą optymalizacji.
 
-Podobny trend został także zaprezentowany w pracy Dos Santosa i innych autorów \cite{FerreiraDosSantos2023}.
+Podobny trend został także zaprezentowany w pracy Dos Santos i innych autorów \cite{FerreiraDosSantos2023}.
 Jako rozwiązanie problemu zimnych startów funkcji AWS Lambda o niskiej częstotliwości użycia, autorzy zaproponowali użycie NodeJS jako alternatywy dla Javy.
 W ramach badania wykazano, że Node.js oferuje znaczącą redukcję czasu zimnego startu w porównaniu do Javy (nawet o 82\%). 
 Zaobserwowano, że funkcje z pamięcią 512 MB stawały się nieaktywne już po 6-7 minutach, co czyni problem zimnego startu szczególnie istotnym dla rzadziej używanych aplikacji.
@@ -251,13 +251,16 @@ Na bazie doświadczeń programistów, zebrali oni najczęstsze problemy związan
 Bezpośrednio wskazują oni na problem zbyt wielu funkcji, który może utrudnić utrzymanie i zrozumienie systemu.
 Problemem jest także komunikacja między funkcjami, która może być szczególnie wymagana przy dużej ich liczbie. 
 Autorzy podkreślają, że ,,asynchroniczne wywołania do i pomiędzy funkcjami bezserwerowymi zwiększają złożoność systemu''\cite{9095731}, 
-a problemem bezpośrednich wywołań jest ,,Złożone debugowanie, luźna izolacja funkcji. Dodatkowe koszty, jeśli funkcje są wywoływane synchronicznie, ponieważ musimy płacić za dwie funkcje działające w tym samym czasie.''\cite{9095731}
+a problemem bezpośrednich wywołań jest:
+\begin{quote}
+     ,,Złożone debugowanie, luźna izolacja funkcji. Dodatkowe koszty, jeśli funkcje są wywoływane synchronicznie, ponieważ musimy płacić za dwie funkcje działające w tym samym czasie.''\cite{9095731}
+\end{quote}
 W przypadku zbyt dużych funkcji, problematyczne staje się także użycie zbyt dużej liczby bibliotek, co zwiększa ryzyko przekroczenia limitu wielkości artefaktu funkcji.
 
 W kolejnej pracy Taibi kontynuuje analizy w tym zakresie wraz z Kehoe i Poccia \cite{9912641}. 
 Wykonali oni badanie ankietowe wśród doświadczonych praktyków pracujących z aplikacjami w architekturach bezserwerowych.
 Aż 38.46\% badanych wskazało, że synchroniczne zapytania między funkcjami mają znaczny negatywny wpływ na stan aplikacji.
-Także około co 5. badany wskazał, że złą praktyką jest także dzielenie tego samego kodu między wieloma funkcjami.
+Także około co 5. badany wskazał, że złą praktyką jest dzielenie tego samego kodu między wieloma funkcjami.
 Same funkcje powinny być skupione wyłącznie na pojedynczym zadaniu biznesowym.
 
 Jak wykazali Eismann i inni \cite{eismann2021reviewserverlessusecases} systemy składające się powyżej 5 funkcji są bardzo rzadkie.
@@ -324,7 +327,7 @@ Pozwala to zmniejszyć czas odpowiedzi tam, gdzie jest to kluczowe oraz zwiększ
 Narzędziami, które mogą znacząco poprawić doświadczenie programistów pracujących z technologiami bezserwerowymi są różnego rodzaju frameworki. 
 Ich analizy dokonali Skrzypek i Kritikos \cite{8605774}, którzy w swoim przeglądzie wskazali na kluczowe cechy tych narzędzi wspierające zespoły programistyczne.
 Zwrócili oni uwagę na wsparcie dla testowania, poprzez lokalne lub zdalne wywołanie wykonanie funkcji.
-Tylko niektóre narzędzia w ograniczony sposób wspierały testy jednostkowe (np. framework ,,Fn'' dla Javy i JavaScript oraz framework ,,Serverless'' dla Javascript).
+Tylko niektóre narzędzia w ograniczony sposób wspierały testy jednostkowe (np. framework ,,Fn'' dla Javy i JavaScript oraz framework ,,Serverless'' dla JavaScript).
 W narzędziach brakuje jednak wsparcia dla testów integracyjnych.
 
 Chatley i Allerton \cite{10.1145/3377812.3382135} w swojej pracy nad frameworkiem Nimbus również mocno podkreślają, że testowanie jest jednym z głównych wyzwań w trakcie tworzenia aplikacji bezserwerowych.

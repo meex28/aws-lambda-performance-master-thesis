@@ -115,6 +115,33 @@
 % Definiowanie własnych stylów nagłówków i/lub stopek
 \usepackage{fancyhdr}
 
+% Styl dla rozdziałów nienumerowanych (np. Wstęp, Podziękowania)
+\fancypagestyle{customUnnumberedStyle}{
+	\fancyhf{}									% wyczyść stopki i nagłówki
+	\fancyhead[RO]{								% Prawy, nieparzysty nagłówek
+		\large \hrulefill 
+		\put(-471.5,5.5){%
+			\makebox(0,0)[l]{%
+				\small Politechnika Wrocławska
+			}
+		}
+	}
+	\fancyhead[LE]{								% Lewy, parzysty nagłówek
+		\large \hrulefill 
+		\put(-267,5.5){%
+			\makebox(0,0)[l]{%
+				\small Wydział Informatyki i Telekomunikacji
+			}
+		}
+	}
+	\fancyfoot[LE,RO]{							% Stopki
+		\thepage
+	}
+	\renewcommand{\headrulewidth}{0pt}			% Grubość linii w nagłówku
+	\renewcommand{\footrulewidth}{0.2pt}		% Grubość linii w stopce
+}
+
+
 % Domyślny styl dla pracy 
 \fancypagestyle{custom}{
 	\fancyhf{}									% wyczyść stopki i nagłówki
@@ -145,7 +172,7 @@
 \fancypagestyle{ListofFiguresStyle}{
 	\fancyhf{}									% wyczyść stopki i nagłówki
 	\fancyhead[RO]{								% Prawy, nieparzysty nagłówek
-		\hrulefill \hspace{16pt} \large List of Figures
+		\hrulefill \hspace{16pt} \large Spis rysunków
 		\put(-471.5,5.5){%
 			\makebox(0,0)[l]{%
 				\small Politechnika Wrocławska
@@ -153,7 +180,7 @@
 		}
 	}
 	\fancyhead[LE]{								% Lewy, parzysty nagłówek
-		\large List of Figures \hspace{16pt} \hrulefill 
+		\large Spis rysunków \hspace{16pt} \hrulefill 
 		\put(-267,5.5){%
 			\makebox(0,0)[l]{%
 				\small Wydział Informatyki i Telekomunikacji
@@ -171,7 +198,7 @@
 \fancypagestyle{ListofTablesStyle}{
 	\fancyhf{}									% wyczyść stopki i nagłówki
 	\fancyhead[RO]{								% Prawy, nieparzysty nagłówek
-		\hrulefill \hspace{16pt} \large List of Tables
+		\hrulefill \hspace{16pt} \large Spis tabel
 		\put(-471.5,5.5){%
 			\makebox(0,0)[l]{%
 				\small Politechnika Wrocławska
@@ -179,7 +206,7 @@
 		}
 	}
 	\fancyhead[LE]{								% Lewy, parzysty nagłówek
-		\large List of Tables \hspace{16pt} \hrulefill 
+		\large Spis tabel \hspace{16pt} \hrulefill 
 		\put(-267,5.5){%
 			\makebox(0,0)[l]{%
 				\small Wydział Informatyki i Telekomunikacji

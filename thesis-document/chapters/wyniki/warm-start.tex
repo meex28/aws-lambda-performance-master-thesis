@@ -3,6 +3,7 @@
 Pierwszym kryterium badanym w testach wydajnościowych był czas działania funkcji podczas ciepłych startów.
 Oznacza to sytuację, gdy funkcja była wywołana w momencie, gdy aktywna była jedna z instancji funkcji.
 Powoduje to, że nie jest wymagana inicjalizacja usługi, a kod rozpoczyna działanie bezpośrednio po wywołaniu.
+W badaniu każda funkcja została wywołana stukrotnie, a wyniki zostały zagregowane.
 Średni czas wykonania w zależności od metody i rozmiaru pamięci został przedstawiony na Rysunku \ref{fig:avg_warm_start}.
 Dokładne wartości oraz różnica względem funkcji bazowej (Java JVM) zostały zaprezentowane w Tabeli \ref{table:warm_start_comparison}.
 
@@ -20,7 +21,7 @@ Zastosowanie obrazów natywnych GraalVM pozwala na zmniejszenie czasu w niektór
 Podobnie zachowuje się funkcja napisana w Kotlinie, działające w ramach JVM: tutaj poprawa jest widoczna dla pamięci 128 MB i 512 MB.
 
 Funkcja działające w oparciu o kod JavaScript, stworzony poprzez translację Kotlin/JS, niesie negatywny wpływ na czas wykonania.
-Metoda ta nie przyniosła poprawy w żadnym z badanych rozmiarów pamięci, przy czym w małych rozmiarach (128 MB, 256 MB) wpłynęła znacząco negatywnie na wydajność.
+Metoda ta nie przyniosła poprawy w żadnym z badanych rozmiarów pamięci, przy czym w małych rozmiarach (128 MB, 256 MB) wpłynęła znacznie negatywnie na wydajność.
 Dodatkowo, nie widać znacznej poprawy efektywności wraz z wzrostem rozmiaru pamięci z 512 MB do 2048 MB. 
 Ciekawa zależność widoczna jest w przypadku funkcji Kotlin/Native, która wskazuje wykazuje poprawę czasu działania dla małych wielkości pamięci (128 MB i 256 MB).
 Szczególna poprawa widoczna jest dla rozmiaru 256 MB, gdzie metoda ta osiągnęła niższe czasy wykonania niż funkcja Java JVM dla większych wielkości pamięci (512-2048 MB).

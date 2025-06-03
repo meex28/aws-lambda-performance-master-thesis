@@ -9,7 +9,7 @@ Po pierwsze, skupiono się na dwóch pierwszych pytaniach badawczych:
     \item PB2: W jakim stopniu wybrane metody optymalizacji redukują czas zimnego startu funkcji Java w AWS Lambda?
 \end{itemize}
 Aby udzielić odpowiedzi na powyższe pytania, zdecydowano się na wykonanie testów wydajnościowych funkcji.
-Opierały się one na przygotowanych wcześniej funkcjach, które implementowały konkretne metody optymalizacji (opisane w Rozdziale \ref{chapter:wybrane_metody_optimalizacji}).
+Opierały się one o przygotowane wcześniej funkcje, które implementowały konkretne metody optymalizacji (opisane w Rozdziale \ref{chapter:wybrane_metody_optimalizacji}).
 Specyfikacja poszczególnych funkcji została przedstawiona w kolejnych rozdziałach.
 Bazując na wnioskach wyciągniętych w ramach przeglądu literatury (opisanego w Rozdziale \ref{chapter:przeglad_literatury}) zdecydowano się na rozszerzenie badania o wybrane parametry, które mogą wpłynąć na ogólną wydajność usługi.
 Były to wielkość pamięci funkcji oraz pomiar zarówno ciepłych, jak i zimnych startów.  
@@ -75,8 +75,8 @@ gdzie:
   \item \( r \) - liczba wywołań funkcji na sekundę,
   \item \( p_w \) - udział ciepłych startów (np. 0,95),
   \item \( p_c \) - udział zimnych startów (np. 0,05), gdzie \( p_c = 1 - p_w \),
-  \item \( d_c \) - średni rozliczany czas dla zimnych startów (w sekundach),
-  \item \( d_w \) - średni rozliczany czas dla ciepłych startów (w sekundach),
+  \item \( d_c \) - średni naliczony czas działania dla zimnych startów [s],
+  \item \( d_w \) - średni naliczony czas działania dla ciepłych startów [s],
   \item \( 2592000 \) - liczba sekund odpowiadająca okresowi 30 dni.
 \end{itemize}
 
@@ -103,7 +103,7 @@ Ostatnim z przyjętych mierników jest dostępność AWS SDK. Ocena tego element
 
 Dla przeprowadzenia badania niezbędne było określenie zadań, które będą realizowane przez funkcję AWS Lambda.
 W celu zapewnienia lepszej oceny skuteczności konkretnych metod optymalizacji oraz upodobnienia środowiska badawczego do realnych użyć usługi, przyjęto kilka założeń.
-Następnie, stworzono implementację usługi, zgodną z przyjętymi wcześniej zasadami.
+Następnie, stworzono implementację usługi zgodną z przyjętymi wcześniej zasadami.
 
 Po pierwsze, funkcja powinna wykonywać pewne obliczenia oraz nie być programem zwracającym jedynie tekstową wiadomość (np. ,,Hello World!''). 
 Założenie to pozwoli na lepszą weryfikację metod, poprzez realne użycie zaimplementowanego kodu.
@@ -215,6 +215,7 @@ Przygotowanie potoku ciągłego integracji jest także niezbędne w przypadku u�
 Funkcje zostały wdrożone w architekturze x86-64, zatem do budowy artefaktów potrzebne było użycie maszyn operujących także w tym typie procesora.
 
 Cały proces budowy artefaktów oraz ich wdrażania został zautomatyzowany z użyciem GitHub Actions.
+W ramach potoku wykorzystywano maszyny z systemem Linux (Ubuntu 24.04), cztero-rdzeniowym procesorem w architekturze x64, pamięcią RAM o rozmiarze 16 GB i dyskiem SSD wielkości 14 GB.
 Do wytworzenia artefaktu użyto narzędzia Gradle, który pozwał na uruchomienie odpowiedniego zadania dla każdej z zaimplementowanych funkcji.
 Odpowiadało ono za kompilację kodu źródłowego, czego wynikiem były pliki gotowe do uruchomienia programu.
 Dla każdej z przygotowanych funkcji utworzono odpowiedni krok w procesie GitHub Actions, który uruchamiał proces budowy dla danej platformy i docelowej architektury x86-64 (np. Java JVM czy Kotlin/JS).

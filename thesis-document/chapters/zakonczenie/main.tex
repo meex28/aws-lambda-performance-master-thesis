@@ -6,12 +6,12 @@ Analiza została dokonana poprzez badanie wydajności funkcji oraz ich wpływu n
 W pracy zawarto dwie metody zidentyfikowane w ramach przeglądu, czyli SnapStart oraz GraalVM.
 Kluczowym elementem pracy są jednak metody oparte o język Kotlin, które zostały zaproponowane jako nowe sposoby optymalizacji wydajności.
 Nowo zaproponowane techniki to Kotlin JVM (także z aktywną funkcją SnapStart), Kotlin/JS oraz Kotlin/Native.
-Wszystkie z poruszonych metod zostały zcharakteryzowane w ramach pracy, uwzględniając sposób ich działata, zalety oraz wady, co było ważnym elementem oceny ich wpływu na wytwarzanie oprogramowania.
+Wszystkie z poruszonych metod zostały zcharakteryzowane w ramach pracy, uwzględniając sposób ich działania, zalety oraz wady, co było ważnym elementem oceny ich wpływu na wytwarzanie oprogramowania.
 
 W celu dokonania rzetelnej analizy skuteczności poszczególnych metod przygotowano eksperyment badający wydajność poszczególnych metod.
 Dla każdej z omawianych metod przygotowano i opisano implementację funkcji AWS Lambda.
 Następnie, funkcje te zostały wdrożone w różnych konfiguracjach pamięci, w ramach środowiska przedstawionego w opracowaniu.
-Z jego jego użyciem wykonano pomiar wydajności w ramach metryk: czas działania funkcji podczas ciepłego i zimnego startu, zaproponowany w ramach pracy współczynnik wydajności funkcji oraz koszt działania.
+Z jego użyciem wykonano pomiar wydajności w ramach metryk: czas działania funkcji podczas ciepłego i zimnego startu, zaproponowany w ramach pracy współczynnik wydajności funkcji oraz koszt działania.
 Metryki te pozwoliły odpowiedzieć na dwa pierwsze pytania badawcze sformułowane w pracy, które poruszały poprawę ogólnej wydajności funkcji oraz redukcji czasu działania funkcji podczas zimnego startu.
 W ramach pracy odpowiedziano także na trzecie pytanie badawcze, które analizowało oddziaływanie metod na proces rozwoju oprogramowania.
 W tym celu przeanalizowano proces budowy artefaktów z użyciem poszczególnych metod, potencjalne ograniczenia w korzystaniu z AWS SDK, koszt działania funkcji oraz inne cechy, które zawarto w charakterystykach poszczególnych metod.
@@ -35,7 +35,7 @@ W jej przypadku były one najniższe dla rozmiarów pamięci 128 MB i 256 MB.
 
 Ważnym aspektem pracy jest także analiza użycia badanych metod na proces rozwoju oprogramowania.
 Zidentyfikowano kompromisy, których muszą być świadomi programiści decydujący się na wdrożenie wybranych metod poprawy wydajności.
-W pracy opisano potencjalnie ograniczenia w korzystaniu z funkcji języka (jak w przypadku SnapStart, GraalVM, Kotlin/Native), czy negatywny wpływ na koszty działania.
+W pracy opisano potencjalne ograniczenia w korzystaniu z funkcji języka (jak w przypadku SnapStart, GraalVM, Kotlin/Native), czy negatywny wpływ na koszt działania.
 Ważny może być także wydłużony czas budowy artefaktu dla metod GraalVM i Kotlin/Native, a także znacznie większy rozmiar plików wdrożeniowych w przypadku pierwszej metody.
 Istotna może być jednak możliwość integracji z zewnętrznymi serwisami, która jest utrudniona w przypadku korzystania z metod Kotlin/JS i Kotlin/Native.
 
