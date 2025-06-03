@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.30)  3 JUN 2025 20:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.30)  3 JUN 2025 22:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -527,7 +527,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 )
 \Hy@SectionHShift=\skip134
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 372.
+Package hyperref Info: Option `colorlinks' set `true' on input line 398.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
 \labelindent=\skip135
@@ -955,7 +955,249 @@ File: pppdftex.def 2025/01/30 v0.6e Pdfpages driver for pdfTeX (AM)
 \AM@lof@heading=\toks61
 \c@AM@survey=\count402
 \AM@templatesizebox=\box142
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/pifont.sty
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2024/03/21 v3.20 programmable bibliographies (PK/MW)
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count403
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+\c@tabx@nest=\count404
+\c@listtotal=\count405
+\c@listcount=\count406
+\c@liststart=\count407
+\c@liststop=\count408
+\c@citecount=\count409
+\c@citetotal=\count410
+\c@multicitecount=\count411
+\c@multicitetotal=\count412
+\c@instcount=\count413
+\c@maxnames=\count414
+\c@minnames=\count415
+\c@maxitems=\count416
+\c@minitems=\count417
+\c@citecounter=\count418
+\c@maxcitecounter=\count419
+\c@savedcitecounter=\count420
+\c@uniquelist=\count421
+\c@uniquename=\count422
+\c@refsection=\count423
+\c@refsegment=\count424
+\c@maxextratitle=\count425
+\c@maxextratitleyear=\count426
+\c@maxextraname=\count427
+\c@maxextradate=\count428
+\c@maxextraalpha=\count429
+\c@abbrvpenalty=\count430
+\c@highnamepenalty=\count431
+\c@lownamepenalty=\count432
+\c@maxparens=\count433
+\c@parenlevel=\count434
+\blx@tempcnta=\count435
+\blx@tempcntb=\count436
+\blx@tempcntc=\count437
+\c@blx@maxsection=\count438
+\blx@maxsegment@0=\count439
+\blx@notetype=\count440
+\blx@parenlevel@text=\count441
+\blx@parenlevel@foot=\count442
+\blx@sectionciteorder@0=\count443
+\blx@sectionciteorderinternal@0=\count444
+\blx@entrysetcounter=\count445
+\blx@biblioinstance=\count446
+\labelnumberwidth=\skip149
+\labelalphawidth=\skip150
+\biblabelsep=\skip151
+\bibitemsep=\skip152
+\bibnamesep=\skip153
+\bibinitsep=\skip154
+\bibparsep=\skip155
+\bibhang=\skip156
+\blx@bcfin=\read4
+\blx@bcfout=\write5
+\blx@langwohyphens=\language91
+\c@mincomprange=\count447
+\c@maxcomprange=\count448
+\c@mincompwidth=\count449
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2024/03/21 v3.20 biblatex datamodel (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count450
+\c@savedafterword=\count451
+\c@annotator=\count452
+\c@savedannotator=\count453
+\c@author=\count454
+\c@savedauthor=\count455
+\c@bookauthor=\count456
+\c@savedbookauthor=\count457
+\c@commentator=\count458
+\c@savedcommentator=\count459
+\c@editor=\count460
+\c@savededitor=\count461
+\c@editora=\count462
+\c@savededitora=\count463
+\c@editorb=\count464
+\c@savededitorb=\count465
+\c@editorc=\count466
+\c@savededitorc=\count467
+\c@foreword=\count468
+\c@savedforeword=\count469
+\c@holder=\count470
+\c@savedholder=\count471
+\c@introduction=\count472
+\c@savedintroduction=\count473
+\c@namea=\count474
+\c@savednamea=\count475
+\c@nameb=\count476
+\c@savednameb=\count477
+\c@namec=\count478
+\c@savednamec=\count479
+\c@translator=\count480
+\c@savedtranslator=\count481
+\c@shortauthor=\count482
+\c@savedshortauthor=\count483
+\c@shorteditor=\count484
+\c@savedshorteditor=\count485
+\c@labelname=\count486
+\c@savedlabelname=\count487
+\c@institution=\count488
+\c@savedinstitution=\count489
+\c@lista=\count490
+\c@savedlista=\count491
+\c@listb=\count492
+\c@savedlistb=\count493
+\c@listc=\count494
+\c@savedlistc=\count495
+\c@listd=\count496
+\c@savedlistd=\count497
+\c@liste=\count498
+\c@savedliste=\count499
+\c@listf=\count500
+\c@savedlistf=\count501
+\c@location=\count502
+\c@savedlocation=\count503
+\c@organization=\count504
+\c@savedorganization=\count505
+\c@origlocation=\count506
+\c@savedoriglocation=\count507
+\c@origpublisher=\count508
+\c@savedorigpublisher=\count509
+\c@publisher=\count510
+\c@savedpublisher=\count511
+\c@language=\count512
+\c@savedlanguage=\count513
+\c@origlanguage=\count514
+\c@savedoriglanguage=\count515
+\c@pageref=\count516
+\c@savedpageref=\count517
+\shorthandwidth=\skip157
+\shortjournalwidth=\skip158
+\shortserieswidth=\skip159
+\shorttitlewidth=\skip160
+\shortauthorwidth=\skip161
+\shorteditorwidth=\skip162
+\locallabelnumberwidth=\skip163
+\locallabelalphawidth=\skip164
+\localshorthandwidth=\skip165
+\localshortjournalwidth=\skip166
+\localshortserieswidth=\skip167
+\localshorttitlewidth=\skip168
+\localshortauthorwidth=\skip169
+\localshorteditorwidth=\skip170
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
+\c@textcitecount=\count518
+\c@textcitetotal=\count519
+\c@textcitemaxnames=\count520
+\c@biburlbigbreakpenalty=\count521
+\c@biburlbreakpenalty=\count522
+\c@biburlnumpenalty=\count523
+\c@biburlucpenalty=\count524
+\c@biburllcpenalty=\count525
+\biburlbigskip=\muskip19
+\biburlnumskip=\muskip20
+\biburlucskip=\muskip21
+\biburllcskip=\muskip22
+\c@smartand=\count526
+)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+File: numeric.bbx 2024/03/21 v3.20 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2024/03/21 v3.20 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count527
+\c@bbx:relatedtotal=\count528
+))
+Package biblatex Info: Trying to load citation style 'numeric'...
+Package biblatex Info: ... file 'numeric.cbx' found.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
+File: numeric.cbx 2024/03/21 v3.20 biblatex citation style (PK/MW)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Document encoding is UTF8 ....
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2025-01-18 L3 programming layer (loader) 
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count529
+\l__pdf_internal_box=\box143
+))
+Package biblatex Info: ... and expl3
+(biblatex)             2025-01-18 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty (/usr/local/texlive/2025/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2024-08-16 L3 Experimental document command parser
+)
+Package: blx-case-expl3 2024/03/21 v3.20 expl3 case changing code for biblatex
+)) (/usr/local/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.sty
+Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
+\csq@reset=\count530
+\csq@gtype=\count531
+\csq@glevel=\count532
+\csq@qlevel=\count533
+\csq@maxlvl=\count534
+\csq@tshold=\count535
+\csq@ltx@everypar=\toks62
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.def
+File: csquotes.def 2024-04-04 v5.2o csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/csquotes/csquotes.cfg
+File: csquotes.cfg 
+)) (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/pifont.sty
 Package: pifont 2020/03/25 PSNFSS-v9.3 Pi font support (SPQR) 
 LaTeX Font Info:    Trying to load font information for U+pzd on input line 63.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/upzd.fd
@@ -964,11 +1206,7 @@ File: upzd.fd 2001/06/04 font definitions for U/pzd.
 LaTeX Font Info:    Trying to load font information for U+psy on input line 64.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/upsy.fd
 File: upsy.fd 2001/06/04 font definitions for U/psy.
-)) (/usr/local/texlive/2025/texmf-dist/tex/latex/cite/cite.sty
-LaTeX Info: Redefining \cite on input line 302.
-LaTeX Info: Redefining \nocite on input line 332.
-Package: cite 2015/02/27  v 5.5
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/svg/svg.sty
+)) (/usr/local/texlive/2025/texmf-dist/tex/latex/svg/svg.sty
 Package: svg 2020/11/26 v2.02k (include SVG pictures)
  (/usr/local/texlive/2025/texmf-dist/tex/latex/koma-script/scrbase.sty
 Package: scrbase 2024/10/24 v3.43 KOMA-Script package (KOMA-Script-independent basics and keyval usage)
@@ -984,21 +1222,22 @@ Already applied: [0000/00/00] Usage of raw or classic option list on input line 
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 )
-\c@svg@param@lastpage=\count403
-\svg@box=\box143
-\c@svg@param@currpage=\count404
+\c@svg@param@lastpage=\count536
+\svg@box=\box144
+\c@svg@param@currpage=\count537
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/transparent/transparent.sty
 Package: transparent 2022-10-27 v1.5 Transparency with color stacks
  (/usr/local/texlive/2025/texmf-dist/tex/latex/transparent/transparent-nometadata.sty
 Package: transparent-nometadata 2022-10-27 v1.5 Transparency via pdfTeX's color stack (HO)
  (/usr/local/texlive/2025/texmf-dist/tex/latex/auxhook/auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
-))) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks62
+))) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks63
 \pgfutil@tempdima=\dimen363
 \pgfutil@tempdimb=\dimen364
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box144
+\pgfutil@abb=\box145
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/pgf.revision.tex)
 Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
 )) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
@@ -1013,16 +1252,16 @@ Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 \pgf@yc=\dimen372
 \pgf@xd=\dimen373
 \pgf@yd=\dimen374
-\w@pgf@writea=\write5
-\r@pgf@reada=\read4
-\c@pgf@counta=\count405
-\c@pgf@countb=\count406
-\c@pgf@countc=\count407
-\c@pgf@countd=\count408
-\t@pgf@toka=\toks63
-\t@pgf@tokb=\toks64
-\t@pgf@tokc=\toks65
-\pgf@sys@id@count=\count409
+\w@pgf@writea=\write6
+\r@pgf@reada=\read5
+\c@pgf@counta=\count538
+\c@pgf@countb=\count539
+\c@pgf@countc=\count540
+\c@pgf@countd=\count541
+\t@pgf@toka=\toks64
+\t@pgf@tokb=\toks65
+\t@pgf@tokc=\toks66
+\pgf@sys@id@count=\count542
  (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
 )
@@ -1033,8 +1272,8 @@ File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
 File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
 ))) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfsyssoftpath@smallbuffer@items=\count410
-\pgfsyssoftpath@bigbuffer@items=\count411
+\pgfsyssoftpath@smallbuffer@items=\count543
+\pgfsyssoftpath@bigbuffer@items=\count544
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )) (/usr/local/texlive/2025/texmf-dist/tex/latex/tabto-ltx/tabto.sty
@@ -1044,60 +1283,59 @@ Package: tabto 2018/12/28  v 1.4  Another tabbing mechanism
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/wrapfig/wrapfig.sty
 \wrapoverhang=\dimen377
 \WF@size=\dimen378
-\c@WF@wrappedlines=\count412
-\WF@box=\box145
-\WF@everypar=\toks66
+\c@WF@wrappedlines=\count545
+\WF@box=\box146
+\WF@everypar=\toks67
 Package: wrapfig 2003/01/31  v 3.6
 ))
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11.
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+Package csquotes Info: Adjusting default style.
+Package csquotes Info: Redefining alias 'default' -> 'polish'.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 12.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count413
-\l__pdf_internal_box=\box146
-)
-(./main.aux)
+) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
  (/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count414
+\scratchcounter=\count546
 \scratchdimen=\dimen379
 \scratchbox=\box147
-\nofMPsegments=\count415
-\nofMParguments=\count416
-\everyMPshowfont=\toks67
-\MPscratchCnt=\count417
+\nofMPsegments=\count547
+\nofMParguments=\count548
+\everyMPshowfont=\toks68
+\MPscratchCnt=\count549
 \MPscratchDim=\dimen380
-\MPnumerator=\count418
-\makeMPintoPDFobject=\count419
-\everyMPtoPDFconversion=\toks68
+\MPnumerator=\count550
+\makeMPintoPDFobject=\count551
+\everyMPtoPDFconversion=\toks69
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-\c@lstlisting=\count420
+\c@lstlisting=\count552
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1133,10 +1371,10 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 11.
+Package hyperref Info: Link coloring ON on input line 12.
 (./main.out) (./main.out)
-\@outlinefile=\write6
-\openout6 = `main.out'.
+\@outlinefile=\write7
+\openout7 = `main.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
@@ -1147,20 +1385,20 @@ Package caption Info: End \AtBeginDocument code.
 Package microtype Info: Patching varwidth to enable character protrusion.
 \MT@vwid@leftmargin=\dimen381
 \MT@vwid@rightmargin=\dimen382
-LaTeX Info: Redefining \microtypecontext on input line 11.
-Package microtype Info: Applying patch `item' on input line 11.
-Package microtype Info: Applying patch `toc' on input line 11.
-Package microtype Info: Applying patch `eqnum' on input line 11.
-Package microtype Info: Applying patch `footnote' on input line 11.
-Package microtype Info: Applying patch `verbatim' on input line 11.
-LaTeX Info: Redefining \microtypesetup on input line 11.
+LaTeX Info: Redefining \microtypecontext on input line 12.
+Package microtype Info: Applying patch `item' on input line 12.
+Package microtype Info: Applying patch `toc' on input line 12.
+Package microtype Info: Applying patch `eqnum' on input line 12.
+Package microtype Info: Applying patch `footnote' on input line 12.
+Package microtype Info: Applying patch `verbatim' on input line 12.
+LaTeX Info: Redefining \microtypesetup on input line 12.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 11.
+LaTeX Info: Redefining \showhyphens on input line 12.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1175,33 +1413,48 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
-<title_page/title_page.pdf, id=171, 597.432pt x 845.07718pt>
+Package biblatex Info: Trying to load language 'polish'...
+Package biblatex Info: ... file 'polish.lbx' found.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/biblatex/lbx/polish.lbx
+File: polish.lbx 2024/03/21 v3.20 biblatex localization (PK/MW)
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout5 = `main.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'main.bbl' found.
+ (./main.bbl)
+Package biblatex Info: Reference section=0 on input line 12.
+Package biblatex Info: Reference segment=0 on input line 12.
+<title_page/title_page.pdf, id=185, 597.432pt x 845.07718pt>
 File: title_page/title_page.pdf Graphic file (type pdf)
 <use title_page/title_page.pdf>
-Package pdftex.def Info: title_page/title_page.pdf  used on input line 13.
+Package pdftex.def Info: title_page/title_page.pdf  used on input line 14.
 (pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
-<title_page/title_page.pdf, id=173, page=1, 597.432pt x 845.07718pt>
+<title_page/title_page.pdf, id=187, page=1, 597.432pt x 845.07718pt>
 File: title_page/title_page.pdf Graphic file (type pdf)
 <use title_page/title_page.pdf, page 1>
-Package pdftex.def Info: title_page/title_page.pdf , page1 used on input line 13.
+Package pdftex.def Info: title_page/title_page.pdf , page1 used on input line 14.
 (pdftex.def)             Requested size: 597.43054pt x 845.07512pt.
 File: title_page/title_page.pdf Graphic file (type pdf)
 <use title_page/title_page.pdf, page 1>
-Package pdftex.def Info: title_page/title_page.pdf , page1 used on input line 13.
+Package pdftex.def Info: title_page/title_page.pdf , page1 used on input line 14.
 (pdftex.def)             Requested size: 562.05109pt x 795.0303pt.
 File: title_page/title_page.pdf Graphic file (type pdf)
 <use title_page/title_page.pdf, page 1>
-Package pdftex.def Info: title_page/title_page.pdf , page1 used on input line 13.
+Package pdftex.def Info: title_page/title_page.pdf , page1 used on input line 14.
 (pdftex.def)             Requested size: 562.05109pt x 795.0303pt.
 File: title_page/title_page.pdf Graphic file (type pdf)
 <use title_page/title_page.pdf, page 1>
-Package pdftex.def Info: title_page/title_page.pdf , page1 used on input line 13.
+Package pdftex.def Info: title_page/title_page.pdf , page1 used on input line 14.
 (pdftex.def)             Requested size: 562.05109pt x 795.0303pt.
 
 
 File: title_page/title_page.pdf Graphic file (type pdf)
 <use title_page/title_page.pdf, page 1>
-Package pdftex.def Info: title_page/title_page.pdf , page1 used on input line 13.
+Package pdftex.def Info: title_page/title_page.pdf , page1 used on input line 14.
 (pdftex.def)             Requested size: 562.05109pt x 795.0303pt.
 [1
 Non-PDF special ignored!
@@ -1263,8 +1516,8 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 
 
 ])
-\tf@toc=\write7
-\openout7 = `main.toc'.
+\tf@toc=\write8
+\openout8 = `main.toc'.
 
 
 
@@ -1316,7 +1569,7 @@ Rozdzia\l  1.
 [8]
 
 [9]) (./chapters/dzialanie_faas/aws_lambda.tex
-<charts/sample-lambda-code.png, id=425, 1563.8425pt x 682.55pt>
+<charts/sample-lambda-code.png, id=443, 1563.8425pt x 682.55pt>
 File: charts/sample-lambda-code.png Graphic file (type png)
 <use charts/sample-lambda-code.png>
 Package pdftex.def Info: charts/sample-lambda-code.png  used on input line 15.
@@ -1326,7 +1579,7 @@ Package pdftex.def Info: charts/sample-lambda-code.png  used on input line 15.
 [10]
 
 [11 <./charts/sample-lambda-code.png>]
-<charts/aws_lambda_lifecycle.drawio.png, id=445, 1087.06125pt x 171.64125pt>
+<charts/aws_lambda_lifecycle.drawio.png, id=463, 1087.06125pt x 171.64125pt>
 File: charts/aws_lambda_lifecycle.drawio.png Graphic file (type png)
 <use charts/aws_lambda_lifecycle.drawio.png>
 Package pdftex.def Info: charts/aws_lambda_lifecycle.drawio.png  used on input line 54.
@@ -1334,7 +1587,7 @@ Package pdftex.def Info: charts/aws_lambda_lifecycle.drawio.png  used on input l
 
 
 [12 <./charts/aws_lambda_lifecycle.drawio.png>]
-<charts/warm_cold_starts_lambda.png, id=458, 773.89125pt x 156.585pt>
+<charts/warm_cold_starts_lambda.png, id=476, 773.89125pt x 156.585pt>
 File: charts/warm_cold_starts_lambda.png Graphic file (type png)
 <use charts/warm_cold_starts_lambda.png>
 Package pdftex.def Info: charts/warm_cold_starts_lambda.png  used on input line 88.
@@ -1359,7 +1612,7 @@ Rozdzia\l  2.
 [18]
 
 [19]
-<charts/literature_review_process.drawio.png, id=515, 1024.82875pt x 402.50375pt>
+<charts/literature_review_process.drawio.png, id=533, 1024.82875pt x 402.50375pt>
 File: charts/literature_review_process.drawio.png Graphic file (type png)
 <use charts/literature_review_process.drawio.png>
 Package pdftex.def Info: charts/literature_review_process.drawio.png  used on input line 205.
@@ -1417,7 +1670,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [36]
 Rozdzia\l  3.
 (./chapters/metody_optimalizacji/snapstart.tex
-<charts/snapstart.png, id=799, 764.8575pt x 214.8025pt>
+<charts/snapstart.png, id=817, 764.8575pt x 214.8025pt>
 File: charts/snapstart.png Graphic file (type png)
 <use charts/snapstart.png>
 Package pdftex.def Info: charts/snapstart.png  used on input line 22.
@@ -1436,7 +1689,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [38 <./charts/snapstart.png>]) (./chapters/metody_optimalizacji/graalvm.tex
 
 [39]
-<charts/graalvm-build-process.drawio.png, id=845, 603.25375pt x 289.08pt>
+<charts/graalvm-build-process.drawio.png, id=863, 603.25375pt x 289.08pt>
 File: charts/graalvm-build-process.drawio.png Graphic file (type png)
 <use charts/graalvm-build-process.drawio.png>
 Package pdftex.def Info: charts/graalvm-build-process.drawio.png  used on input line 38.
@@ -1448,7 +1701,7 @@ Package pdftex.def Info: charts/graalvm-build-process.drawio.png  used on input 
 [41]
 
 [42]
-<charts/kmp-structure.drawio.png, id=887, 643.40375pt x 563.10374pt>
+<charts/kmp-structure.drawio.png, id=905, 643.40375pt x 563.10374pt>
 File: charts/kmp-structure.drawio.png Graphic file (type png)
 <use charts/kmp-structure.drawio.png>
 Package pdftex.def Info: charts/kmp-structure.drawio.png  used on input line 88.
@@ -1462,7 +1715,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [43]
 
 [44 <./charts/kmp-structure.drawio.png>]
-<charts/kotlin-js-ir.drawio.png, id=908, 1478.52374pt x 983.675pt>
+<charts/kotlin-js-ir.drawio.png, id=926, 1478.52374pt x 983.675pt>
 File: charts/kotlin-js-ir.drawio.png Graphic file (type png)
 <use charts/kotlin-js-ir.drawio.png>
 Package pdftex.def Info: charts/kotlin-js-ir.drawio.png  used on input line 21.
@@ -1487,7 +1740,7 @@ Rozdzia\l  4.
 [50{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
 
 [51]
-<charts/lambda_workflow.drawio.png, id=985, 603.25375pt x 171.64125pt>
+<charts/lambda_workflow.drawio.png, id=1003, 603.25375pt x 171.64125pt>
 File: charts/lambda_workflow.drawio.png Graphic file (type png)
 <use charts/lambda_workflow.drawio.png>
 Package pdftex.def Info: charts/lambda_workflow.drawio.png  used on input line 128.
@@ -1513,7 +1766,7 @@ Underfull \vbox (badness 2671) has occurred while \output is active []
 
 
 [55]
-<charts/experiment-architecture.drawio.png, id=1024, 733.74126pt x 630.355pt>
+<charts/experiment-architecture.drawio.png, id=1042, 733.74126pt x 630.355pt>
 File: charts/experiment-architecture.drawio.png Graphic file (type png)
 <use charts/experiment-architecture.drawio.png>
 Package pdftex.def Info: charts/experiment-architecture.drawio.png  used on input line 276.
@@ -1531,7 +1784,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [58]
 Rozdzia\l  5.
 (./chapters/wyniki/warm-start.tex
-<charts/results/avg-warm-start.png, id=1045, 752.8125pt x 376.40625pt>
+<charts/results/avg-warm-start.png, id=1064, 752.8125pt x 376.40625pt>
 File: charts/results/avg-warm-start.png Graphic file (type png)
 <use charts/results/avg-warm-start.png>
 Package pdftex.def Info: charts/results/avg-warm-start.png  used on input line 12.
@@ -1542,12 +1795,12 @@ Package pdftex.def Info: charts/results/avg-warm-start.png  used on input line 1
 
 
  <./charts/results/avg-warm-start.png>]
-<charts/results/warm-start-boxplot-256.png, id=1056, 451.6875pt x 451.6875pt>
+<charts/results/warm-start-boxplot-256.png, id=1074, 451.6875pt x 451.6875pt>
 File: charts/results/warm-start-boxplot-256.png Graphic file (type png)
 <use charts/results/warm-start-boxplot-256.png>
 Package pdftex.def Info: charts/results/warm-start-boxplot-256.png  used on input line 68.
 (pdftex.def)             Requested size: 226.57297pt x 226.57376pt.
-<charts/results/warm-start-boxplot-1024.png, id=1057, 451.6875pt x 451.6875pt>
+<charts/results/warm-start-boxplot-1024.png, id=1075, 451.6875pt x 451.6875pt>
 File: charts/results/warm-start-boxplot-1024.png Graphic file (type png)
 <use charts/results/warm-start-boxplot-1024.png>
 Package pdftex.def Info: charts/results/warm-start-boxplot-1024.png  used on input line 75.
@@ -1559,7 +1812,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 ) (./chapters/wyniki/cold-start.tex
 
 [60]
-<charts/results/avg-cold-start-512-2048.png, id=1069, 752.8125pt x 376.40625pt>
+<charts/results/avg-cold-start-512-2048.png, id=1087, 752.8125pt x 376.40625pt>
 File: charts/results/avg-cold-start-512-2048.png Graphic file (type png)
 <use charts/results/avg-cold-start-512-2048.png>
 Package pdftex.def Info: charts/results/avg-cold-start-512-2048.png  used on input line 11.
@@ -1567,17 +1820,17 @@ Package pdftex.def Info: charts/results/avg-cold-start-512-2048.png  used on inp
 
 
 [61 <./charts/results/warm-start-boxplot-256.png> <./charts/results/warm-start-boxplot-1024.png> <./charts/results/avg-cold-start-512-2048.png>]
-<charts/results/avg-cold-start-128-256.png, id=1083, 752.8125pt x 376.40625pt>
+<charts/results/avg-cold-start-128-256.png, id=1101, 752.8125pt x 376.40625pt>
 File: charts/results/avg-cold-start-128-256.png Graphic file (type png)
 <use charts/results/avg-cold-start-128-256.png>
 Package pdftex.def Info: charts/results/avg-cold-start-128-256.png  used on input line 61.
 (pdftex.def)             Requested size: 448.42822pt x 224.22008pt.
-<charts/results/cold-start-boxplot-256.png, id=1084, 451.6875pt x 451.6875pt>
+<charts/results/cold-start-boxplot-256.png, id=1102, 451.6875pt x 451.6875pt>
 File: charts/results/cold-start-boxplot-256.png Graphic file (type png)
 <use charts/results/cold-start-boxplot-256.png>
 Package pdftex.def Info: charts/results/cold-start-boxplot-256.png  used on input line 71.
 (pdftex.def)             Requested size: 226.57297pt x 226.57376pt.
-<charts/results/cold-start-boxplot-1024.png, id=1085, 451.6875pt x 451.6875pt>
+<charts/results/cold-start-boxplot-1024.png, id=1103, 451.6875pt x 451.6875pt>
 File: charts/results/cold-start-boxplot-1024.png Graphic file (type png)
 <use charts/results/cold-start-boxplot-1024.png>
 Package pdftex.def Info: charts/results/cold-start-boxplot-1024.png  used on input line 78.
@@ -1587,7 +1840,7 @@ Package pdftex.def Info: charts/results/cold-start-boxplot-1024.png  used on inp
 [62]
 
 [63 <./charts/results/avg-cold-start-128-256.png> <./charts/results/cold-start-boxplot-256.png> <./charts/results/cold-start-boxplot-1024.png>]
-<charts/results/wwf.png, id=1099, 752.8125pt x 376.40625pt>
+<charts/results/wwf.png, id=1117, 752.8125pt x 376.40625pt>
 File: charts/results/wwf.png Graphic file (type png)
 <use charts/results/wwf.png>
 Package pdftex.def Info: charts/results/wwf.png  used on input line 12.
@@ -1595,7 +1848,7 @@ Package pdftex.def Info: charts/results/wwf.png  used on input line 12.
 )
 
 [64 <./charts/results/wwf.png>] (./chapters/wyniki/functions-costs.tex
-<charts/results/average-cost.png, id=1108, 752.8125pt x 376.40625pt>
+<charts/results/average-cost.png, id=1127, 752.8125pt x 376.40625pt>
 File: charts/results/average-cost.png Graphic file (type png)
 <use charts/results/average-cost.png>
 Package pdftex.def Info: charts/results/average-cost.png  used on input line 10.
@@ -1603,12 +1856,12 @@ Package pdftex.def Info: charts/results/average-cost.png  used on input line 10.
 )
 
 [65 <./charts/results/average-cost.png>] (./chapters/wyniki/development-process.tex
-<charts/results/avg-build-times.png, id=1116, 752.8125pt x 376.40625pt>
+<charts/results/avg-build-times.png, id=1135, 752.8125pt x 376.40625pt>
 File: charts/results/avg-build-times.png Graphic file (type png)
 <use charts/results/avg-build-times.png>
 Package pdftex.def Info: charts/results/avg-build-times.png  used on input line 9.
 (pdftex.def)             Requested size: 448.42822pt x 224.22008pt.
-<charts/results/artifact-size.png, id=1118, 752.8125pt x 376.40625pt>
+<charts/results/artifact-size.png, id=1137, 752.8125pt x 376.40625pt>
 File: charts/results/artifact-size.png Graphic file (type png)
 <use charts/results/artifact-size.png>
 Package pdftex.def Info: charts/results/artifact-size.png  used on input line 23.
@@ -1647,9 +1900,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [71]
 
-[72]) (./chapters/zakonczenie/main.tex
+[72])
 
-[73]
+[73] (./chapters/zakonczenie/main.tex
 
 [74
 
@@ -1660,12 +1913,39 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [76]
 
-[77] (./main.bbl
+[77]
+
+Package biblatex Warning: Split bibliography detected.
+(biblatex)                Many simple split bibliography setups with
+(biblatex)                non-overlapping bibliographies benefit from
+(biblatex)                setting 'defernumbers=true'.
+(biblatex)                See the documentation for details.
+(biblatex)                This warning can be suppressed with
+(biblatex)                '\BiblatexSplitbibDefernumbersWarningOff'.
+
+
 
 [78
 
 
 ]
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/lmr/m/sc/12'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 59.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+Overfull \hbox (0.10995pt too wide) in paragraph at lines 59--59
+\T1/lmr/m/n/12 (+6) 85178522391 & doi = 10 . 1109 % 2fSBAC -[] PADW60351 . 2023 . 00023 & partnerID = 40 & md5 =
+ []
+
+
 
 [79]
 
@@ -1675,27 +1955,56 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [82]
 
-[83])
+[83]
 
-[84] (./main.lof)
-\tf@lof=\write8
-\openout8 = `main.lof'.
+Package biblatex Warning: Split bibliography detected.
+(biblatex)                Many simple split bibliography setups with
+(biblatex)                non-overlapping bibliographies benefit from
+(biblatex)                setting 'defernumbers=true'.
+(biblatex)                See the documentation for details.
+(biblatex)                This warning can be suppressed with
+(biblatex)                '\BiblatexSplitbibDefernumbersWarningOff'.
+
+
+
+[84
+
+
+]
+Overfull \hbox (11.0077pt too wide) in paragraph at lines 69--69
+[]\T1/lmr/m/n/12 (-20) Luc van Don-kers-goed. \T1/lmr/m/it/12 (-20) Po-stNL's Se-rver-less Jo-ur-ney: Bu-si-ness Ove-rview\T1/lmr/m/n/12 (-20) . Do-st¦p: 04.05.2025.
+ []
+
+
+
+[85]
+
+
+Package fancyhdr Warning: \headheight is too small (18.0pt): 
+(fancyhdr)                Make it at least 18.60484pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.60484pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.60484pt}.
+
+[86] (./main.lof)
+\tf@lof=\write9
+\openout9 = `main.lof'.
 
 
 Underfull \vbox (badness 4467) has occurred while \output is active []
 
 
 
-[85]
-
-[86] (./main.lot)
-\tf@lot=\write9
-\openout9 = `main.lot'.
-
-
-
 [87]
-runsystem(latexminted cleantemp  --timestamp 20250603205959 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
+
+[88] (./main.lot)
+\tf@lot=\write10
+\openout10 = `main.lot'.
+
+
+
+[89]
+runsystem(latexminted cleantemp  --timestamp 20250603224720 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
 
  (./main.aux)
  ***********
@@ -1703,21 +2012,27 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 74626D018E05E65DF22E1052A5845418;6517.
+(rerunfilecheck)             Checksum: 8BF8990F0D3BD9DBDF5484EFF292DCAC;6987.
+Package logreq Info: Writing requests to 'main.run.xml'.
+\openout1 = `main.run.xml'.
+
  ) 
 Here is how much of TeX's memory you used:
- 31086 strings out of 473190
- 573808 string characters out of 5715800
- 1203691 words of memory out of 5000000
- 53235 multiletter control sequences out of 15000+600000
- 628419 words of font info for 174 fonts, out of 8000000 for 9000
+ 39115 strings out of 473190
+ 745900 string characters out of 5715800
+ 1784571 words of memory out of 5000000
+ 61165 multiletter control sequences out of 15000+600000
+ 633591 words of font info for 195 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,21n,96p,1071b,762s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
-Output written on main.pdf (93 pages, 1353650 bytes).
+ 99i,21n,96p,1618b,3332s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{cite.0@ritzal2020optimizing} has been referenced but does not exist, replaced by a fixed one
+
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
+Output written on main.pdf (95 pages, 1401817 bytes).
 PDF statistics:
- 1431 PDF objects out of 1440 (max. 8388607)
- 1159 compressed objects within 12 object streams
- 266 named destinations out of 1000 (max. 500000)
- 37325 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 1563 PDF objects out of 1728 (max. 8388607)
+ 1286 compressed objects within 13 object streams
+ 269 named destinations out of 1000 (max. 500000)
+ 39917 words of extra memory for PDF output out of 42996 (max. 10000000)
 

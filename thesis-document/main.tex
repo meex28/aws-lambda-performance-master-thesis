@@ -3,6 +3,7 @@
 
 \documentclass[12pt, twoside]{book}
 \input{latex-settings.tex}
+\addbibresource{sources/bibliography.bib} % Your .bib file
 
 \frontmatter
 %check the current front page here:
@@ -37,6 +38,9 @@
 \input{chapters/opis_badania/main.tex}
 \input{chapters/wyniki/main.tex}
 \input{chapters/wnioski_dyskusja/main.tex}
+\newpage
+
+\pagestyle{customUnnumberedStyle}
 \input{chapters/zakonczenie/main.tex}
 \newpage
 
@@ -45,16 +49,35 @@
 % Please read :
 %https://www.overleaf.com/learn/latex/Bibliography_management_with_bibtex
 \pagestyle{bibliographyStyle}
-\bibliographystyle{abbrv}
-\bibliography{bibliography}
+\defbibfilter{bibliographyPapers}{
+  type=article or
+  type=inproceedings or
+  type=conference or
+  type=mastersthesis
+}
+\addcontentsline{toc}{chapter}{Bibliografia}  
+\printbibliography[filter=bibliographyPapers,title={Bibliografia}]
+\newpage
+
+\pagestyle{onlineSourcesStyle}
+\defbibfilter{onlinePapers}{
+  type=online or
+  type=misc or
+  type=manual
+}
+\addcontentsline{toc}{chapter}{Źródła internetowe}  
+\printbibliography[filter=onlinePapers,title={Źródła internetowe}]
+\newpage
 
 % Add list of figures and tables
 \pagestyle{custom}
 \newpage
 \pagestyle{ListofFiguresStyle}
+\addcontentsline{toc}{chapter}{Spis rysunków}  
 \listoffigures
 \newpage
 \pagestyle{ListofTablesStyle}
+\addcontentsline{toc}{chapter}{Spis tabel}  
 \listoftables
 
 % % Redefine plain for 1st bibliography page style

@@ -1,57 +1,18 @@
-This is BibTeX, Version 0.99d (TeX Live 2025)
-Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
-The top-level auxiliary file: main.aux
-The style file: abbrv.bst
-Database file #1: sources/bibliography.bib
-Warning--entry type for "cui2024serverless" isn't style-file defined
---line 547 of file sources/bibliography.bib
-Warning--entry type for "vanDonkersgoed2023postnl" isn't style-file defined
---line 556 of file sources/bibliography.bib
-Warning--to sort, need author or key in kotlinlangKotlinDocs
-Warning--to sort, need author or key in http4kCoreDocs
-Warning--to sort, need author or key in kotlinIrCompilatorGithub
-Warning--empty booktitle in Cavalheiro202389
-Warning--empty booktitle in Cordingly2020704
-Warning--empty booktitle in FerreiraDosSantos2023
-You've used 79 entries,
-            2118 wiz_defined-function locations,
-            911 strings with 19031 characters,
-and the built_in function-call counts, 27414 in all, are:
-= -- 2661
-> -- 1263
-< -- 30
-+ -- 512
-- -- 424
-* -- 1568
-:= -- 4267
-add.period$ -- 261
-call.type$ -- 79
-change.case$ -- 447
-chr.to.int$ -- 0
-cite$ -- 85
-duplicate$ -- 1128
-empty$ -- 2252
-format.name$ -- 424
-if$ -- 6096
-int.to.chr$ -- 0
-int.to.str$ -- 79
-missing$ -- 45
-newline$ -- 414
-num.names$ -- 152
-pop$ -- 658
-preamble$ -- 1
-purify$ -- 370
-quote$ -- 0
-skip$ -- 967
-stack$ -- 0
-substring$ -- 1299
-swap$ -- 405
-text.length$ -- 30
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 316
-warning$ -- 6
-while$ -- 217
-width$ -- 81
-write$ -- 877
-(There were 8 warnings)
+[0] Config.pm:308> INFO - This is Biber 2.20
+[0] Config.pm:311> INFO - Logfile is 'main.blg'
+[35] biber-darwin:340> INFO - === Tue Jun  3, 2025, 22:41:12
+[43] Biber.pm:420> INFO - Reading 'main.bcf'
+[111] Biber.pm:994> INFO - Found 79 citekeys in bib section 0
+[118] Biber.pm:4463> INFO - Processing section 0
+[123] Biber.pm:4654> INFO - Looking for bibtex file 'sources/bibliography.bib' for section 0
+[135] bibtex.pm:1713> INFO - LaTeX decoding ...
+[171] bibtex.pm:1519> INFO - Found BibTeX data source 'sources/bibliography.bib'
+[411] UCollate.pm:68> INFO - Overriding locale 'pl-PL' defaults 'variable = shifted' with 'variable = non-ignorable'
+[411] UCollate.pm:68> INFO - Overriding locale 'pl-PL' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[411] Biber.pm:4283> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'pl-PL'
+[447] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[464] bbl.pm:779> INFO - Output to main.bbl
+[465] Biber.pm:131> WARN - legacy month field 'August' in entry 'datadog_state_of_serverless' is not an integer - this will probably not sort properly.
+[465] Biber.pm:131> WARN - legacy month field 'Jun.' in entry 'Ivanov_Petrova_2024' is not an integer - this will probably not sort properly.
+[465] Biber.pm:131> WARN - legacy month field 'Dec.' in entry 'Gajek_Plechawska-Wójcik_2024' is not an integer - this will probably not sort properly.
+[465] Biber.pm:133> INFO - WARNINGS: 3

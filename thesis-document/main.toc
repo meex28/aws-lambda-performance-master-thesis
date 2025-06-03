@@ -43,3 +43,7 @@
 \contentsline {section}{\numberline {6.1}Odpowiedzi na pytania badawcze}{69}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Zagrożenia trafności wyników}{72}{section.6.2}%
 \contentsline {chapter}{Zakończenie}{75}{chapter*.31}%
+\contentsline {chapter}{Bibliografia}{78}{chapter*.31}%
+\contentsline {chapter}{Źródła internetowe}{84}{chapter*.32}%
+\contentsline {chapter}{Spis rysunków}{87}{chapter*.33}%
+\contentsline {chapter}{Spis tabel}{89}{chapter*.33}%

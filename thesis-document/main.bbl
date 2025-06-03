@@ -1,414 +1,3126 @@
-\begin{thebibliography}{10}
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{246288}{inproceedings}{}{}
+      \name{author}{7}{}{%
+        {{hash=801daa22684483ff154ba832767424f5}{%
+           family={Agache},
+           familyi={A\bibinitperiod},
+           given={Alexandru},
+           giveni={A\bibinitperiod}}}%
+        {{hash=37ab8016df037eabf3dec67d4d37408d}{%
+           family={Brooker},
+           familyi={B\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod}}}%
+        {{hash=c1d73171754244a57e7bbbf3d5194ae2}{%
+           family={Iordache},
+           familyi={I\bibinitperiod},
+           given={Alexandra},
+           giveni={A\bibinitperiod}}}%
+        {{hash=bf57e75d7dec1849ec9d9253370f6b2f}{%
+           family={Liguori},
+           familyi={L\bibinitperiod},
+           given={Anthony},
+           giveni={A\bibinitperiod}}}%
+        {{hash=fa3ae5e343a7c6399697a3aaffd5d05a}{%
+           family={Neugebauer},
+           familyi={N\bibinitperiod},
+           given={Rolf},
+           giveni={R\bibinitperiod}}}%
+        {{hash=ce3d0512d4f2cce08501969ffe4f9e80}{%
+           family={Piwonka},
+           familyi={P\bibinitperiod},
+           given={Phil},
+           giveni={P\bibinitperiod}}}%
+        {{hash=1cd882573536e6f62286b38d5e19918d}{%
+           family={Popa},
+           familyi={P\bibinitperiod},
+           given={Diana-Maria},
+           giveni={D\bibinithyphendelim M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Santa Clara, CA}%
+      }
+      \list{publisher}{1}{%
+        {USENIX Association}%
+      }
+      \strng{namehash}{1de0120f4f27a94410df1f1449a01d64}
+      \strng{fullhash}{f9435a1b2baff3e7a1a1499ff6205917}
+      \strng{fullhashraw}{f9435a1b2baff3e7a1a1499ff6205917}
+      \strng{bibnamehash}{1de0120f4f27a94410df1f1449a01d64}
+      \strng{authorbibnamehash}{1de0120f4f27a94410df1f1449a01d64}
+      \strng{authornamehash}{1de0120f4f27a94410df1f1449a01d64}
+      \strng{authorfullhash}{f9435a1b2baff3e7a1a1499ff6205917}
+      \strng{authorfullhashraw}{f9435a1b2baff3e7a1a1499ff6205917}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{17th USENIX Symposium on Networked Systems Design and Implementation (NSDI 20)}
+      \field{isbn}{978-1-939133-13-7}
+      \field{month}{2}
+      \field{title}{Firecracker: Lightweight Virtualization for Serverless Applications}
+      \field{year}{2020}
+      \field{pages}{419\bibrangedash 434}
+      \range{pages}{16}
+      \verb{urlraw}
+      \verb https://www.usenix.org/conference/nsdi20/presentation/agache
+      \endverb
+      \verb{url}
+      \verb https://www.usenix.org/conference/nsdi20/presentation/agache
+      \endverb
+    \endentry
+    \entry{aws-sdk-java-v2}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=f0c5282ac7e568c0822a67c9facc9190}{%
+           family={{Amazon Web Service}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{f0c5282ac7e568c0822a67c9facc9190}
+      \strng{fullhash}{f0c5282ac7e568c0822a67c9facc9190}
+      \strng{fullhashraw}{f0c5282ac7e568c0822a67c9facc9190}
+      \strng{bibnamehash}{f0c5282ac7e568c0822a67c9facc9190}
+      \strng{authorbibnamehash}{f0c5282ac7e568c0822a67c9facc9190}
+      \strng{authornamehash}{f0c5282ac7e568c0822a67c9facc9190}
+      \strng{authorfullhash}{f0c5282ac7e568c0822a67c9facc9190}
+      \strng{authorfullhashraw}{f0c5282ac7e568c0822a67c9facc9190}
+      \field{extraname}{1}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://github.com/aws/aws-sdk-java-v2}}
+      \field{note}{Dostęp: 20.05.2025}
+      \field{title}{{Repozytorium AWS SDK dla Java}}
+      \field{year}{2025}
+    \endentry
+    \entry{aws-sdk-js-v3}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=f0c5282ac7e568c0822a67c9facc9190}{%
+           family={{Amazon Web Service}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{f0c5282ac7e568c0822a67c9facc9190}
+      \strng{fullhash}{f0c5282ac7e568c0822a67c9facc9190}
+      \strng{fullhashraw}{f0c5282ac7e568c0822a67c9facc9190}
+      \strng{bibnamehash}{f0c5282ac7e568c0822a67c9facc9190}
+      \strng{authorbibnamehash}{f0c5282ac7e568c0822a67c9facc9190}
+      \strng{authornamehash}{f0c5282ac7e568c0822a67c9facc9190}
+      \strng{authorfullhash}{f0c5282ac7e568c0822a67c9facc9190}
+      \strng{authorfullhashraw}{f0c5282ac7e568c0822a67c9facc9190}
+      \field{extraname}{2}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://github.com/aws/aws-sdk-js-v3}}
+      \field{note}{Dostęp: 20.05.2025}
+      \field{title}{{Repozytorium AWS SDK dla JavaScript}}
+      \field{year}{2025}
+    \endentry
+    \entry{aws-sdk-kotlin}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=f0c5282ac7e568c0822a67c9facc9190}{%
+           family={{Amazon Web Service}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{f0c5282ac7e568c0822a67c9facc9190}
+      \strng{fullhash}{f0c5282ac7e568c0822a67c9facc9190}
+      \strng{fullhashraw}{f0c5282ac7e568c0822a67c9facc9190}
+      \strng{bibnamehash}{f0c5282ac7e568c0822a67c9facc9190}
+      \strng{authorbibnamehash}{f0c5282ac7e568c0822a67c9facc9190}
+      \strng{authornamehash}{f0c5282ac7e568c0822a67c9facc9190}
+      \strng{authorfullhash}{f0c5282ac7e568c0822a67c9facc9190}
+      \strng{authorfullhashraw}{f0c5282ac7e568c0822a67c9facc9190}
+      \field{extraname}{3}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://github.com/awslabs/aws-sdk-kotlin}}
+      \field{note}{Dostęp: 20.05.2025}
+      \field{title}{{Repozytorium AWS SDK dla Kotlin}}
+      \field{year}{2025}
+    \endentry
+    \entry{awsEc2Guide}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=3eb2c1a57a8160029f036e3dcbf84bf1}{%
+           family={{Amazon Web Services}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{fullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{fullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{bibnamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorbibnamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authornamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorfullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorfullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \field{extraname}{1}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://docs.aws.amazon.com/ec2/}}
+      \field{note}{Dostęp 21.03.2025}
+      \field{title}{Amazon EC2 Documentation}
+      \field{year}{2025}
+    \endentry
+    \entry{awsEcsDevGuide}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=3eb2c1a57a8160029f036e3dcbf84bf1}{%
+           family={{Amazon Web Services}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{fullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{fullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{bibnamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorbibnamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authornamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorfullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorfullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \field{extraname}{2}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://docs.aws.amazon.com/AmazonECS/latest/developerguide}}
+      \field{note}{Dostęp 21.03.2025}
+      \field{title}{Amazon ECS Developer Guide}
+      \field{year}{2025}
+    \endentry
+    \entry{awsLambdaDeveloperGuide}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=3eb2c1a57a8160029f036e3dcbf84bf1}{%
+           family={{Amazon Web Services}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{fullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{fullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{bibnamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorbibnamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authornamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorfullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorfullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \field{extraname}{3}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://docs.aws.amazon.com/lambda/latest/dg/welcome.html}}
+      \field{note}{[Dostęp: 13.05.2025]}
+      \field{title}{AWS Lambda Developer Guide}
+    \endentry
+    \entry{awsLambdaDocs}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=3eb2c1a57a8160029f036e3dcbf84bf1}{%
+           family={{Amazon Web Services}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{fullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{fullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{bibnamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorbibnamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authornamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorfullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorfullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \field{extraname}{4}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://docs.aws.amazon.com/lambda/latest/dg/}}
+      \field{note}{Dostęp: 21.03.2025}
+      \field{title}{AWS Lambda Documentation}
+      \field{year}{2025}
+    \endentry
+    \entry{awsLambdaPricing}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=3eb2c1a57a8160029f036e3dcbf84bf1}{%
+           family={{Amazon Web Services}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{fullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{fullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{bibnamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorbibnamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authornamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorfullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorfullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \field{extraname}{5}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://aws.amazon.com/lambda/pricing/}}
+      \field{note}{Dostęp: 20.05.2025}
+      \field{title}{{AWS Lambda pricing}}
+      \field{year}{2025}
+    \endentry
+    \entry{amazonSnapstartDeveloperGUide}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=3eb2c1a57a8160029f036e3dcbf84bf1}{%
+           family={{Amazon Web Services}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{fullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{fullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{bibnamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorbibnamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authornamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorfullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorfullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \field{extraname}{6}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html}}
+      \field{note}{[Dostęp: 13.05.2025]}
+      \field{title}{AWS Lambda SnapStart Developer Guide}
+    \endentry
+    \entry{awsSDKForKotlinDeveloperGuide}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=3eb2c1a57a8160029f036e3dcbf84bf1}{%
+           family={{Amazon Web Services}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{fullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{fullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{bibnamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorbibnamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authornamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorfullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorfullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \field{extraname}{7}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://docs.aws.amazon.com/sdk-for-kotlin/latest/developer-guide/home.html}}
+      \field{note}{[Dostęp: 13.05.2025]}
+      \field{title}{AWS SDK for Kotlin Developer Guide}
+    \endentry
+    \entry{aws_what_is_aws}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=3eb2c1a57a8160029f036e3dcbf84bf1}{%
+           family={{Amazon Web Services}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{fullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{fullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{bibnamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorbibnamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authornamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorfullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorfullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \field{extraname}{8}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://aws.amazon.com/what-is-aws/}}
+      \field{note}{Dostęp: 31.05.2025}
+      \field{title}{What is AWS?}
+      \field{year}{2025}
+    \endentry
+    \entry{8513710}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=b2e04dfb3edc8015aea0227fd74e3eb7}{%
+           family={Bardsley},
+           familyi={B\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=57f600a26473cac4a4284c2776fa6613}{%
+           family={Ryan},
+           familyi={R\bibinitperiod},
+           given={Larry},
+           giveni={L\bibinitperiod}}}%
+        {{hash=73edc97a41ac1ec1a583b648819062fd}{%
+           family={Howard},
+           familyi={H\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{66e6d825e2dee433a6bb3c0523c2599b}
+      \strng{fullhash}{66e6d825e2dee433a6bb3c0523c2599b}
+      \strng{fullhashraw}{66e6d825e2dee433a6bb3c0523c2599b}
+      \strng{bibnamehash}{66e6d825e2dee433a6bb3c0523c2599b}
+      \strng{authorbibnamehash}{66e6d825e2dee433a6bb3c0523c2599b}
+      \strng{authornamehash}{66e6d825e2dee433a6bb3c0523c2599b}
+      \strng{authorfullhash}{66e6d825e2dee433a6bb3c0523c2599b}
+      \strng{authorfullhashraw}{66e6d825e2dee433a6bb3c0523c2599b}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2018 IEEE International Conference on Smart Cloud (SmartCloud)}
+      \field{title}{Serverless Performance and Optimization Strategies}
+      \field{year}{2018}
+      \field{pages}{19\bibrangedash 26}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/SmartCloud.2018.00012
+      \endverb
+      \keyw{Computer architecture;Logic gates;Servers;Time factors;Ecosystems;Monitoring;Computational modeling;serverless;aws;lambdas;architecture;performance}
+    \endentry
+    \entry{DBLP:journals/corr/BergstromFRS13}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=f138f2b760ef7bf1265cad7357981ef4}{%
+           family={Bergstrom},
+           familyi={B\bibinitperiod},
+           given={Lars},
+           giveni={L\bibinitperiod}}}%
+        {{hash=7fe92450ea91e503c33879ac5f103770}{%
+           family={Fluet},
+           familyi={F\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod}}}%
+        {{hash=717544b13aa73056e996b920003960e6}{%
+           family={Reppy},
+           familyi={R\bibinitperiod},
+           given={John\bibnamedelima H.},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=6600d220da1fa7d35bceb3c45de86dc6}{%
+           family={Sandler},
+           familyi={S\bibinitperiod},
+           given={Nora},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{d5bb551a134e93f0714c3ea983c032db}
+      \strng{fullhash}{a74956d932f234151210f83c4db98c3d}
+      \strng{fullhashraw}{a74956d932f234151210f83c4db98c3d}
+      \strng{bibnamehash}{d5bb551a134e93f0714c3ea983c032db}
+      \strng{authorbibnamehash}{d5bb551a134e93f0714c3ea983c032db}
+      \strng{authornamehash}{d5bb551a134e93f0714c3ea983c032db}
+      \strng{authorfullhash}{a74956d932f234151210f83c4db98c3d}
+      \strng{authorfullhashraw}{a74956d932f234151210f83c4db98c3d}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{Practical Inlining of Functions with Free Variables}
+      \field{volume}{abs/1306.1919}
+      \field{year}{2013}
+      \verb{eprint}
+      \verb 1306.1919
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1306.1919
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1306.1919
+      \endverb
+    \endentry
+    \entry{9803765}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=cd787fd2d8d97ae849185496d3acb394}{%
+           family={Beronić},
+           familyi={B\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=e8b3b33713ca6dd5d45cc694e065b1cd}{%
+           family={Modrić},
+           familyi={M\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=2120651c3939262433d979464627be9a}{%
+           family={Mihaljević},
+           familyi={M\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=c9479fb9f93bd7870e9c6ef00f028c7a}{%
+           family={Radovan},
+           familyi={R\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{edcbf6d55959c925b2437e0873484717}
+      \strng{fullhash}{8138c5664b782d4e4bdf0104f313d87b}
+      \strng{fullhashraw}{8138c5664b782d4e4bdf0104f313d87b}
+      \strng{bibnamehash}{edcbf6d55959c925b2437e0873484717}
+      \strng{authorbibnamehash}{edcbf6d55959c925b2437e0873484717}
+      \strng{authornamehash}{edcbf6d55959c925b2437e0873484717}
+      \strng{authorfullhash}{8138c5664b782d4e4bdf0104f313d87b}
+      \strng{authorfullhashraw}{8138c5664b782d4e4bdf0104f313d87b}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2022 45th Jubilee International Convention on Information, Communication and Electronic Technology (MIPRO)}
+      \field{title}{Comparison of Structured Concurrency Constructs in Java and Kotlin - Virtual Threads and Coroutines}
+      \field{year}{2022}
+      \field{pages}{1466\bibrangedash 1471}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.23919/MIPRO55190.2022.9803765
+      \endverb
+    \endentry
+    \entry{brooker2021restoringuniquenessmicrovmsnapshots}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=37ab8016df037eabf3dec67d4d37408d}{%
+           family={Brooker},
+           familyi={B\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod}}}%
+        {{hash=df6440bdb4d96ce2a60c6ad04ffda8b0}{%
+           family={Catangiu},
+           familyi={C\bibinitperiod},
+           given={Adrian\bibnamedelima Costin},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=2c9442fef599fc6abb91ca4c3da82238}{%
+           family={Danilov},
+           familyi={D\bibinitperiod},
+           given={Mike},
+           giveni={M\bibinitperiod}}}%
+        {{hash=2283cb4388a4361c73b2cecbc40d9aac}{%
+           family={Graf},
+           familyi={G\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+        {{hash=024081dd6308b8f40d5a9a9f0ca0c318}{%
+           family={MacCarthaigh},
+           familyi={M\bibinitperiod},
+           given={Colm},
+           giveni={C\bibinitperiod}}}%
+        {{hash=31c3988363a3b64ac82a53e7080de6d0}{%
+           family={Sandu},
+           familyi={S\bibinitperiod},
+           given={Andrei},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{d4779db762532f447b4598b69722d834}
+      \strng{fullhash}{1b50ddf871bc0d5681d73f721e5a364c}
+      \strng{fullhashraw}{1b50ddf871bc0d5681d73f721e5a364c}
+      \strng{bibnamehash}{d4779db762532f447b4598b69722d834}
+      \strng{authorbibnamehash}{d4779db762532f447b4598b69722d834}
+      \strng{authornamehash}{d4779db762532f447b4598b69722d834}
+      \strng{authorfullhash}{1b50ddf871bc0d5681d73f721e5a364c}
+      \strng{authorfullhashraw}{1b50ddf871bc0d5681d73f721e5a364c}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.CR}
+      \field{eprinttype}{arXiv}
+      \field{title}{Restoring Uniqueness in MicroVM Snapshots}
+      \field{year}{2021}
+      \verb{eprint}
+      \verb 2102.12892
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2102.12892
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2102.12892
+      \endverb
+    \endentry
+    \entry{10.1145/3458336.3465305}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=9769c01477fd6a34e0f7732729ee8eb4}{%
+           family={Carreira},
+           familyi={C\bibinitperiod},
+           given={Joao},
+           giveni={J\bibinitperiod}}}%
+        {{hash=ceb46c4017393e55c8dba970d233d2e9}{%
+           family={Kohli},
+           familyi={K\bibinitperiod},
+           given={Sumer},
+           giveni={S\bibinitperiod}}}%
+        {{hash=c9babe95ae27eeb2f5740b6a011e3cde}{%
+           family={Bruno},
+           familyi={B\bibinitperiod},
+           given={Rodrigo},
+           giveni={R\bibinitperiod}}}%
+        {{hash=db622d388bff2f2c1f23c1efaa8ca9fb}{%
+           family={Fonseca},
+           familyi={F\bibinitperiod},
+           given={Pedro},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Ann Arbor, Michigan}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{954205331503342ef14ffe23b66e51d1}
+      \strng{fullhash}{5fba707cdb3392e8d928d969e662b112}
+      \strng{fullhashraw}{5fba707cdb3392e8d928d969e662b112}
+      \strng{bibnamehash}{954205331503342ef14ffe23b66e51d1}
+      \strng{authorbibnamehash}{954205331503342ef14ffe23b66e51d1}
+      \strng{authornamehash}{954205331503342ef14ffe23b66e51d1}
+      \strng{authorfullhash}{5fba707cdb3392e8d928d969e662b112}
+      \strng{authorfullhashraw}{5fba707cdb3392e8d928d969e662b112}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The serverless computing model leverages high-level languages, such as JavaScript and Java, to raise the level of abstraction for cloud programming. However, today's design of serverless computing platforms based on stateless short-lived functions leads to missed opportunities for modern runtimes to optimize serverless functions through techniques such as JIT compilation and code profiling.In this paper, we show that modern serverless platforms, such as AWS Lambda, do not fully leverage language runtime optimizations. We find that a significant number of function invocations running on warm containers are executed with unoptimized code (warm-starts), leading to orders of magnitude performance slowdowns.We explore the idea of exploiting the runtime knowledge spread throughout potentially thousands of nodes to profile and optimize code. To that end, we propose Ignite, a serverless platform that orchestrates runtimes across machines to run optimized code from the start (hot-start). We present evidence that runtime orchestration has the potential to greatly reduce cost and latency of serverless workloads by running optimized code across thousands of serverless functions.}
+      \field{booktitle}{Proceedings of the Workshop on Hot Topics in Operating Systems}
+      \field{isbn}{9781450384384}
+      \field{series}{HotOS '21}
+      \field{title}{From warm to hot starts: leveraging runtimes for the serverless era}
+      \field{year}{2021}
+      \field{pages}{58\bibrangedash 64}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1145/3458336.3465305
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3458336.3465305
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3458336.3465305
+      \endverb
+    \endentry
+    \entry{cartaxo2020rapidreviewssoftwareengineering}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=4f7b4a35dbd0eb3693e3aa34398366d8}{%
+           family={Cartaxo},
+           familyi={C\bibinitperiod},
+           given={Bruno},
+           giveni={B\bibinitperiod}}}%
+        {{hash=7cd33a70cc04a556fbbe23038130a798}{%
+           family={Pinto},
+           familyi={P\bibinitperiod},
+           given={Gustavo},
+           giveni={G\bibinitperiod}}}%
+        {{hash=7b25fc8575fb0c78b819d952eece7caa}{%
+           family={Soares},
+           familyi={S\bibinitperiod},
+           given={Sergio},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{91e60351df35013b173471f787301bfb}
+      \strng{fullhash}{91e60351df35013b173471f787301bfb}
+      \strng{fullhashraw}{91e60351df35013b173471f787301bfb}
+      \strng{bibnamehash}{91e60351df35013b173471f787301bfb}
+      \strng{authorbibnamehash}{91e60351df35013b173471f787301bfb}
+      \strng{authornamehash}{91e60351df35013b173471f787301bfb}
+      \strng{authorfullhash}{91e60351df35013b173471f787301bfb}
+      \strng{authorfullhashraw}{91e60351df35013b173471f787301bfb}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.SE}
+      \field{eprinttype}{arXiv}
+      \field{title}{Rapid Reviews in Software Engineering}
+      \field{year}{2020}
+      \verb{eprint}
+      \verb 2003.10006
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2003.10006
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2003.10006
+      \endverb
+    \endentry
+    \entry{Cavalheiro202389}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=8f507ed661c3b950d1b4dcb8ed769b6c}{%
+           family={Cavalheiro},
+           familyi={C\bibinitperiod},
+           given={Adriano\bibnamedelima Prado},
+           giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=d1682df4a215aae1006ef19120ee9d57}{%
+           family={Schepke},
+           familyi={S\bibinitperiod},
+           given={Claudio},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{47b384a7fbd42652f1f9bd78fc216f66}
+      \strng{fullhash}{47b384a7fbd42652f1f9bd78fc216f66}
+      \strng{fullhashraw}{47b384a7fbd42652f1f9bd78fc216f66}
+      \strng{bibnamehash}{47b384a7fbd42652f1f9bd78fc216f66}
+      \strng{authorbibnamehash}{47b384a7fbd42652f1f9bd78fc216f66}
+      \strng{authornamehash}{47b384a7fbd42652f1f9bd78fc216f66}
+      \strng{authorfullhash}{47b384a7fbd42652f1f9bd78fc216f66}
+      \strng{authorfullhashraw}{47b384a7fbd42652f1f9bd78fc216f66}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings - Symposium on Computer Architecture and High Performance Computing}
+      \field{note}{Cited by: 0}
+      \field{title}{Exploring the Serverless First Strategy in Cloud Application Development}
+      \field{type}{Conference paper}
+      \field{year}{2023}
+      \field{pages}{89\bibrangedash 94}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/SBAC-PADW60351.2023.00023
+      \endverb
+      \verb{urlraw}
+      \verb https://www.scopus.com/inward/record.uri?eid=2-s2.0-85178522391&doi=10.1109%2fSBAC-PADW60351.2023.00023&partnerID=40&md5=4e45e6bc8d77da46ffaecd9219c2533d
+      \endverb
+      \verb{url}
+      \verb https://www.scopus.com/inward/record.uri?eid=2-s2.0-85178522391&doi=10.1109%2fSBAC-PADW60351.2023.00023&partnerID=40&md5=4e45e6bc8d77da46ffaecd9219c2533d
+      \endverb
+    \endentry
+    \entry{10.1145/3377812.3382135}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=42d37cc4bccbfa84ad613780417ca050}{%
+           family={Chatley},
+           familyi={C\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=70df4d5f02f971e4630b16a5ca2379a5}{%
+           family={Allerton},
+           familyi={A\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Seoul, South Korea}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{fb88910246d2a6c581d312ca5fa259f0}
+      \strng{fullhash}{fb88910246d2a6c581d312ca5fa259f0}
+      \strng{fullhashraw}{fb88910246d2a6c581d312ca5fa259f0}
+      \strng{bibnamehash}{fb88910246d2a6c581d312ca5fa259f0}
+      \strng{authorbibnamehash}{fb88910246d2a6c581d312ca5fa259f0}
+      \strng{authornamehash}{fb88910246d2a6c581d312ca5fa259f0}
+      \strng{authorfullhash}{fb88910246d2a6c581d312ca5fa259f0}
+      \strng{authorfullhashraw}{fb88910246d2a6c581d312ca5fa259f0}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We present Nimbus, a framework for writing and deploying Java applications on a Function-as-a-Service ("serverless") platform. Nimbus aims to soothe four main pain points experienced by developers working on serverless applications: that testing can be difficult, that deployment can be a slow and painful process, that it is challenging to avoid vendor lock-in, and that long cold start times can introduce unwelcome latency to function invocations.Nimbus provides a number of features that aim to overcome these challenges when working with serverless applications. It uses an annotation-based configuration to avoid having to work with large configuration files. It aims to allow the code written to be cloud-agnostic. It provides an environment for local testing where the complete application can be run locally before deployment. Lastly, Nimbus provides mechanisms for optimising the contents and size of the artifacts that are deployed to the cloud, which helps to reduce both deployment times and cold start times.Video: https://www.youtube.com/watch?v=0nYchh8jdY4}
+      \field{booktitle}{Proceedings of the ACM/IEEE 42nd International Conference on Software Engineering: Companion Proceedings}
+      \field{isbn}{9781450371223}
+      \field{series}{ICSE '20}
+      \field{title}{Nimbus: improving the developer experience for serverless applications}
+      \field{year}{2020}
+      \field{pages}{85\bibrangedash 88}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1145/3377812.3382135
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3377812.3382135
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3377812.3382135
+      \endverb
+      \keyw{serverless,developer tools,developer experience}
+    \endentry
+    \entry{10.1145/3631295.3631394}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=41b3f7a33d89b16094ac79a30859a4b1}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Xinghan},
+           giveni={X\bibinitperiod}}}%
+        {{hash=93b95882e6e470278779fea66d65ad15}{%
+           family={Hung},
+           familyi={H\bibinitperiod},
+           given={Ling-Hong},
+           giveni={L\bibinithyphendelim H\bibinitperiod}}}%
+        {{hash=1df9e2344fc023e24a65df1df8b59dd9}{%
+           family={Cordingly},
+           familyi={C\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=6bdcb9a832508ac26fd1046f22f75529}{%
+           family={Lloyd},
+           familyi={L\bibinitperiod},
+           given={Wes},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Bologna, Italy}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{b484058d57676c3109746e6c31061944}
+      \strng{fullhash}{e0955b719db428e67cc8ce0f3240d069}
+      \strng{fullhashraw}{e0955b719db428e67cc8ce0f3240d069}
+      \strng{bibnamehash}{b484058d57676c3109746e6c31061944}
+      \strng{authorbibnamehash}{b484058d57676c3109746e6c31061944}
+      \strng{authornamehash}{b484058d57676c3109746e6c31061944}
+      \strng{authorfullhash}{e0955b719db428e67cc8ce0f3240d069}
+      \strng{authorfullhashraw}{e0955b719db428e67cc8ce0f3240d069}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Function-as-a-Service (FaaS) platforms enable easy deployment and hosting of code known as serverless functions and have gained considerable traction among software developers. Recently, Amazon has offered ARM64 processors as an alternative to x86 for hosting serverless functions on AWS Lambda. To encourage developers to migrate code to ARM64, use of ARM64 processors has been incentivized with a 20\% discount. In this paper, we investigate the implications of adopting ARM64 processors for hosting serverless functions. We deploy and benchmark 18 distinct serverless functions that stress a variety of system resources. Additionally, we scaled up the runtime for each of our functions by increasing the work they performed using 40 incremental steps to increase runtime from a few seconds to several minutes. We compared performance differences of x86 vs. ARM64 processors for our serverless function workoads and present our findings summarizing differences in: CPU utilization, function runtime, function runtime variation, and hosting costs. While only 7 of 18 functions ran faster on ARM64, 15 of 18 were less expensive thanks to the cloud provider discount. Performance variation on ARM64 processors was less than half compared to x86 processors potentially from the lack of hyperthreading and lower resource contention for ARM64 CPUs.}
+      \field{booktitle}{Proceedings of the 9th International Workshop on Serverless Computing}
+      \field{isbn}{9798400704550}
+      \field{series}{WoSC '23}
+      \field{title}{X86 vs. ARM64: An Investigation of Factors Influencing Serverless Performance}
+      \field{year}{2023}
+      \field{pages}{7\bibrangedash 12}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1145/3631295.3631394
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3631295.3631394
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3631295.3631394
+      \endverb
+      \keyw{Serverless Computing,Performance,Function-as-a-Service,ARM}
+    \endentry
+    \entry{9946331}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=1df9e2344fc023e24a65df1df8b59dd9}{%
+           family={Cordingly},
+           familyi={C\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=756189342d86881a0f54b3c42fabb3c3}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Sonia},
+           giveni={S\bibinitperiod}}}%
+        {{hash=6bdcb9a832508ac26fd1046f22f75529}{%
+           family={Lloyd},
+           familyi={L\bibinitperiod},
+           given={Wes},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{7312fdbf6bd4dbd9cb1fd29140b2391d}
+      \strng{fullhash}{7312fdbf6bd4dbd9cb1fd29140b2391d}
+      \strng{fullhashraw}{7312fdbf6bd4dbd9cb1fd29140b2391d}
+      \strng{bibnamehash}{7312fdbf6bd4dbd9cb1fd29140b2391d}
+      \strng{authorbibnamehash}{7312fdbf6bd4dbd9cb1fd29140b2391d}
+      \strng{authornamehash}{7312fdbf6bd4dbd9cb1fd29140b2391d}
+      \strng{authorfullhash}{7312fdbf6bd4dbd9cb1fd29140b2391d}
+      \strng{authorfullhashraw}{7312fdbf6bd4dbd9cb1fd29140b2391d}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2022 IEEE International Conference on Cloud Engineering (IC2E)}
+      \field{title}{Function Memory Optimization for Heterogeneous Serverless Platforms with CPU Time Accounting}
+      \field{year}{2022}
+      \field{pages}{104\bibrangedash 115}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1109/IC2E55432.2022.00019
+      \endverb
+      \keyw{Couplings;Costs;Runtime;Computational modeling;Memory management;Force;Throughput;Serverless Computing;Function-as-a-Service;Performance Evaluation;Performance Modeling}
+    \endentry
+    \entry{Cordingly2020704}{inproceedings}{}{}
+      \name{author}{8}{}{%
+        {{hash=1df9e2344fc023e24a65df1df8b59dd9}{%
+           family={Cordingly},
+           familyi={C\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=043c0740f74f62cc3b45881ccb659374}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Hanfei},
+           giveni={H\bibinitperiod}}}%
+        {{hash=edb04bf34006fcac2a47212555557d24}{%
+           family={Hoang},
+           familyi={H\bibinitperiod},
+           given={Varik},
+           giveni={V\bibinitperiod}}}%
+        {{hash=440fbf756e847de2e02df5fcec88eeea}{%
+           family={Perez},
+           familyi={P\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=3a63f6e7314a41240432f5b1aaa56827}{%
+           family={Foster},
+           familyi={F\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=849318ba1db0d7a407ff658ba613b43d}{%
+           family={Sadeghi},
+           familyi={S\bibinitperiod},
+           given={Zohreh},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=c72bda457b20c80205b9a9d1cb6c4bf6}{%
+           family={Hatchett},
+           familyi={H\bibinitperiod},
+           given={Rashad},
+           giveni={R\bibinitperiod}}}%
+        {{hash=92b8a19a21abfb191b7acbb6368d1d00}{%
+           family={Lloyd},
+           familyi={L\bibinitperiod},
+           given={Wes\bibnamedelima J.},
+           giveni={W\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{ff0a4c14c2fa3d32f1d5c044bdee495b}
+      \strng{fullhash}{149762bffcddcb22ba6ee4c3421e965c}
+      \strng{fullhashraw}{149762bffcddcb22ba6ee4c3421e965c}
+      \strng{bibnamehash}{ff0a4c14c2fa3d32f1d5c044bdee495b}
+      \strng{authorbibnamehash}{ff0a4c14c2fa3d32f1d5c044bdee495b}
+      \strng{authornamehash}{ff0a4c14c2fa3d32f1d5c044bdee495b}
+      \strng{authorfullhash}{149762bffcddcb22ba6ee4c3421e965c}
+      \strng{authorfullhashraw}{149762bffcddcb22ba6ee4c3421e965c}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings - IEEE 18th International Conference on Dependable, Autonomic and Secure Computing, IEEE 18th International Conference on Pervasive Intelligence and Computing, IEEE 6th International Conference on Cloud and Big Data Computing and IEEE 5th Cyber Science and Technology Congress, DASC/PiCom/CBDCom/CyberSciTech 2020}
+      \field{note}{Cited by: 21}
+      \field{title}{Implications of Programming Language Selection for Serverless Data Processing Pipelines}
+      \field{type}{Conference paper}
+      \field{year}{2020}
+      \field{pages}{704 \\bibrangedash  711}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1109/DASC-PICom-CBDCom-CyberSciTech49142.2020.00120
+      \endverb
+      \verb{urlraw}
+      \verb https://www.scopus.com/inward/record.uri?eid=2-s2.0-85097643570&doi=10.1109%2fDASC-PICom-CBDCom-CyberSciTech49142.2020.00120&partnerID=40&md5=6ba8219c9d3074d2cf8457077c211184
+      \endverb
+      \verb{url}
+      \verb https://www.scopus.com/inward/record.uri?eid=2-s2.0-85097643570&doi=10.1109%2fDASC-PICom-CBDCom-CyberSciTech49142.2020.00120&partnerID=40&md5=6ba8219c9d3074d2cf8457077c211184
+      \endverb
+    \endentry
+    \entry{cui2024serverless}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=77900a39c97aedaef8bb51bdf6edc633}{%
+           family={Cui},
+           familyi={C\bibinitperiod},
+           given={Yan},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{77900a39c97aedaef8bb51bdf6edc633}
+      \strng{fullhash}{77900a39c97aedaef8bb51bdf6edc633}
+      \strng{fullhashraw}{77900a39c97aedaef8bb51bdf6edc633}
+      \strng{bibnamehash}{77900a39c97aedaef8bb51bdf6edc633}
+      \strng{authorbibnamehash}{77900a39c97aedaef8bb51bdf6edc633}
+      \strng{authornamehash}{77900a39c97aedaef8bb51bdf6edc633}
+      \strng{authorfullhash}{77900a39c97aedaef8bb51bdf6edc633}
+      \strng{authorfullhashraw}{77900a39c97aedaef8bb51bdf6edc633}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{10}
+      \field{note}{Dostęp: 28.04.2025}
+      \field{title}{Should "serverless" just mean "function-as-a-service"?}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://theburningmonk.com/2024/10/should-serverless-just-mean-functions-as-a-service/
+      \endverb
+      \verb{url}
+      \verb https://theburningmonk.com/2024/10/should-serverless-just-mean-functions-as-a-service/
+      \endverb
+    \endentry
+    \entry{9860368}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=329ab0f768b937ec060a9783f57eec0a}{%
+           family={Dantas},
+           familyi={D\bibinitperiod},
+           given={Jaime},
+           giveni={J\bibinitperiod}}}%
+        {{hash=6399bf16a9af647f1989264cba981682}{%
+           family={Khazaei},
+           familyi={K\bibinitperiod},
+           given={Hamzeh},
+           giveni={H\bibinitperiod}}}%
+        {{hash=0fe6081f8b6c139a87563e18066c0f1f}{%
+           family={Litoiu},
+           familyi={L\bibinitperiod},
+           given={Marin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{fd23c7542a2aef540bcf01aa9649e183}
+      \strng{fullhash}{fd23c7542a2aef540bcf01aa9649e183}
+      \strng{fullhashraw}{fd23c7542a2aef540bcf01aa9649e183}
+      \strng{bibnamehash}{fd23c7542a2aef540bcf01aa9649e183}
+      \strng{authorbibnamehash}{fd23c7542a2aef540bcf01aa9649e183}
+      \strng{authornamehash}{fd23c7542a2aef540bcf01aa9649e183}
+      \strng{authorfullhash}{fd23c7542a2aef540bcf01aa9649e183}
+      \strng{authorfullhashraw}{fd23c7542a2aef540bcf01aa9649e183}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2022 IEEE 15th International Conference on Cloud Computing (CLOUD)}
+      \field{title}{Application Deployment Strategies for Reducing the Cold Start Delay of AWS Lambda}
+      \field{year}{2022}
+      \field{pages}{1\bibrangedash 10}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1109/CLOUD55607.2022.00016
+      \endverb
+      \keyw{Industries;Runtime;Web services;Computational modeling;Serverless computing;Benchmark testing;Software;AWS Lambda;Cold Start;Function as a Service;Serverless Computing;Performance Benchmark}
+    \endentry
+    \entry{datadog_state_of_serverless}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=3983159b26a23291e755be54ac03be23}{%
+           family={{Datadog}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{3983159b26a23291e755be54ac03be23}
+      \strng{fullhash}{3983159b26a23291e755be54ac03be23}
+      \strng{fullhashraw}{3983159b26a23291e755be54ac03be23}
+      \strng{bibnamehash}{3983159b26a23291e755be54ac03be23}
+      \strng{authorbibnamehash}{3983159b26a23291e755be54ac03be23}
+      \strng{authornamehash}{3983159b26a23291e755be54ac03be23}
+      \strng{authorfullhash}{3983159b26a23291e755be54ac03be23}
+      \strng{authorfullhashraw}{3983159b26a23291e755be54ac03be23}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Web page}
+      \field{month}{8}
+      \field{note}{Dostęp: 31.05.2025}
+      \field{title}{The State of Serverless}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb {https://www.datadoghq.com/state-of-serverless/}
+      \endverb
+      \verb{url}
+      \verb %7Bhttps://www.datadoghq.com/state-of-serverless/%7D
+      \endverb
+    \endentry
+    \entry{kotlinlangKotlinDocs}{misc}{}{}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://kotlinlang.org/docs/home.html}}
+      \field{note}{[Dostęp: 15.05.2025]}
+      \field{title}{{Dokumentacja Kotlin}}
+    \endentry
+    \entry{http4kCoreDocs}{misc}{}{}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.http4k.org/ecosystem/http4k/}}
+      \field{note}{[Dostęp: 16.05.2025]}
+      \field{title}{{Dokumentacja narzędzia http4k Core}}
+    \endentry
+    \entry{vanDonkersgoed2023postnl}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=eb8cccc4c3ca64375ab7498268339adf}{%
+           family={Donkersgoed},
+           familyi={D\bibinitperiod},
+           given={Luc},
+           giveni={L\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {PostNL Engineering on Medium}%
+      }
+      \strng{namehash}{eb8cccc4c3ca64375ab7498268339adf}
+      \strng{fullhash}{eb8cccc4c3ca64375ab7498268339adf}
+      \strng{fullhashraw}{eb8cccc4c3ca64375ab7498268339adf}
+      \strng{bibnamehash}{eb8cccc4c3ca64375ab7498268339adf}
+      \strng{authorbibnamehash}{eb8cccc4c3ca64375ab7498268339adf}
+      \strng{authornamehash}{eb8cccc4c3ca64375ab7498268339adf}
+      \strng{authorfullhash}{eb8cccc4c3ca64375ab7498268339adf}
+      \strng{authorfullhashraw}{eb8cccc4c3ca64375ab7498268339adf}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{10}
+      \field{note}{Dostęp: 04.05.2025}
+      \field{title}{PostNL's Serverless Journey: Business Overview}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://medium.com/postnl-engineering/business-overview-f7c8d8ebee2c
+      \endverb
+      \verb{url}
+      \verb https://medium.com/postnl-engineering/business-overview-f7c8d8ebee2c
+      \endverb
+    \endentry
+    \entry{EBRAHIMI2024103115}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=3fbee02beb737273473d580bb18cd4a9}{%
+           family={Ebrahimi},
+           familyi={E\bibinitperiod},
+           given={Ana},
+           giveni={A\bibinitperiod}}}%
+        {{hash=6ad19463b8112d31544124919b13d482}{%
+           family={Ghobaei-Arani},
+           familyi={G\bibinithyphendelim A\bibinitperiod},
+           given={Mostafa},
+           giveni={M\bibinitperiod}}}%
+        {{hash=0a8213a5fd339fdada7c4fa64b5173e1}{%
+           family={Saboohi},
+           familyi={S\bibinitperiod},
+           given={Hadi},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{0e118ef29b7a704a5364f27a6f4e4556}
+      \strng{fullhash}{0e118ef29b7a704a5364f27a6f4e4556}
+      \strng{fullhashraw}{0e118ef29b7a704a5364f27a6f4e4556}
+      \strng{bibnamehash}{0e118ef29b7a704a5364f27a6f4e4556}
+      \strng{authorbibnamehash}{0e118ef29b7a704a5364f27a6f4e4556}
+      \strng{authornamehash}{0e118ef29b7a704a5364f27a6f4e4556}
+      \strng{authorfullhash}{0e118ef29b7a704a5364f27a6f4e4556}
+      \strng{authorfullhashraw}{0e118ef29b7a704a5364f27a6f4e4556}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1383-7621}
+      \field{journaltitle}{Journal of Systems Architecture}
+      \field{title}{Cold start latency mitigation mechanisms in serverless computing: Taxonomy, review, and future directions}
+      \field{volume}{151}
+      \field{year}{2024}
+      \field{pages}{103115}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.sysarc.2024.103115
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S1383762124000523
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S1383762124000523
+      \endverb
+      \keyw{Serverless computing,Cold start,Function-as-a-Service,Performance,Benchmarking,Latency,Survey}
+    \endentry
+    \entry{eismann2021reviewserverlessusecases}{article}{}{}
+      \name{author}{8}{}{%
+        {{hash=ae18bd68b582f6b493ecea652b3aa0c1}{%
+           family={Eismann},
+           familyi={E\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod}}}%
+        {{hash=67f430acd782318a1293865d7e262b1b}{%
+           family={Scheuner},
+           familyi={S\bibinitperiod},
+           given={Joel},
+           giveni={J\bibinitperiod}}}%
+        {{hash=6767c4e5a86ea027c81be9733d0ee454}{%
+           family={Eyk},
+           familyi={E\bibinitperiod},
+           given={Erwin},
+           giveni={E\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+        {{hash=2255deea83529576168c5fb40e1e4b90}{%
+           family={Schwinger},
+           familyi={S\bibinitperiod},
+           given={Maximilian},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d53ec718fc566c52020626fa6613fa22}{%
+           family={Grohmann},
+           familyi={G\bibinitperiod},
+           given={Johannes},
+           giveni={J\bibinitperiod}}}%
+        {{hash=149352c61471c9c1f040a55dfc6cce02}{%
+           family={Herbst},
+           familyi={H\bibinitperiod},
+           given={Nikolas},
+           giveni={N\bibinitperiod}}}%
+        {{hash=d99f679b8e30c0b6382d7d93bbfe1d25}{%
+           family={Abad},
+           familyi={A\bibinitperiod},
+           given={Cristina\bibnamedelima L.},
+           giveni={C\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=a75eb74f3b66a4d93355b1b8be243552}{%
+           family={Iosup},
+           familyi={I\bibinitperiod},
+           given={Alexandru},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{eaad9cc03a6a35beb8308a1ce67d8ba1}
+      \strng{fullhash}{d36d559da82b75982deffad5ffac83bb}
+      \strng{fullhashraw}{d36d559da82b75982deffad5ffac83bb}
+      \strng{bibnamehash}{eaad9cc03a6a35beb8308a1ce67d8ba1}
+      \strng{authorbibnamehash}{eaad9cc03a6a35beb8308a1ce67d8ba1}
+      \strng{authornamehash}{eaad9cc03a6a35beb8308a1ce67d8ba1}
+      \strng{authorfullhash}{d36d559da82b75982deffad5ffac83bb}
+      \strng{authorfullhashraw}{d36d559da82b75982deffad5ffac83bb}
+      \field{extraname}{1}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.SE}
+      \field{eprinttype}{arXiv}
+      \field{title}{A Review of Serverless Use Cases and their Characteristics}
+      \field{year}{2021}
+      \verb{eprint}
+      \verb 2008.11110
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2008.11110
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2008.11110
+      \endverb
+    \endentry
+    \entry{ServerlessApplicationsWhyWhenAndHow}{article}{}{}
+      \name{author}{8}{}{%
+        {{hash=ae18bd68b582f6b493ecea652b3aa0c1}{%
+           family={Eismann},
+           familyi={E\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod}}}%
+        {{hash=67f430acd782318a1293865d7e262b1b}{%
+           family={Scheuner},
+           familyi={S\bibinitperiod},
+           given={Joel},
+           giveni={J\bibinitperiod}}}%
+        {{hash=6767c4e5a86ea027c81be9733d0ee454}{%
+           family={Eyk},
+           familyi={E\bibinitperiod},
+           given={Erwin},
+           giveni={E\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+        {{hash=2255deea83529576168c5fb40e1e4b90}{%
+           family={Schwinger},
+           familyi={S\bibinitperiod},
+           given={Maximilian},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d53ec718fc566c52020626fa6613fa22}{%
+           family={Grohmann},
+           familyi={G\bibinitperiod},
+           given={Johannes},
+           giveni={J\bibinitperiod}}}%
+        {{hash=149352c61471c9c1f040a55dfc6cce02}{%
+           family={Herbst},
+           familyi={H\bibinitperiod},
+           given={Nikolas},
+           giveni={N\bibinitperiod}}}%
+        {{hash=d99f679b8e30c0b6382d7d93bbfe1d25}{%
+           family={Abad},
+           familyi={A\bibinitperiod},
+           given={Cristina\bibnamedelima L.},
+           giveni={C\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=a75eb74f3b66a4d93355b1b8be243552}{%
+           family={Iosup},
+           familyi={I\bibinitperiod},
+           given={Alexandru},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{eaad9cc03a6a35beb8308a1ce67d8ba1}
+      \strng{fullhash}{d36d559da82b75982deffad5ffac83bb}
+      \strng{fullhashraw}{d36d559da82b75982deffad5ffac83bb}
+      \strng{bibnamehash}{eaad9cc03a6a35beb8308a1ce67d8ba1}
+      \strng{authorbibnamehash}{eaad9cc03a6a35beb8308a1ce67d8ba1}
+      \strng{authornamehash}{eaad9cc03a6a35beb8308a1ce67d8ba1}
+      \strng{authorfullhash}{d36d559da82b75982deffad5ffac83bb}
+      \strng{authorfullhashraw}{d36d559da82b75982deffad5ffac83bb}
+      \field{extraname}{2}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Software}
+      \field{number}{1}
+      \field{title}{Serverless Applications: Why, When, and How?}
+      \field{volume}{38}
+      \field{year}{2021}
+      \field{pages}{32\bibrangedash 39}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/MS.2020.3023302
+      \endverb
+      \keyw{Servers;Computer applications;Social network services;Logic gates;Resource management;Scalability;Task analysis}
+    \endentry
+    \entry{Ekwe_Ekwe_2024}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=eba5033e6babbc0a2a1078c6737053e4}{%
+           family={Ekwe-Ekwe},
+           familyi={E\bibinithyphendelim E\bibinitperiod},
+           given={Nnamdi},
+           giveni={N\bibinitperiod}}}%
+        {{hash=57ab91f01186f8704c624fa88f59f521}{%
+           family={Amos},
+           familyi={A\bibinitperiod},
+           given={Lucas},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{dc65c2c083eb0be84257d163d2b3c1ec}
+      \strng{fullhash}{dc65c2c083eb0be84257d163d2b3c1ec}
+      \strng{fullhashraw}{dc65c2c083eb0be84257d163d2b3c1ec}
+      \strng{bibnamehash}{dc65c2c083eb0be84257d163d2b3c1ec}
+      \strng{authorbibnamehash}{dc65c2c083eb0be84257d163d2b3c1ec}
+      \strng{authornamehash}{dc65c2c083eb0be84257d163d2b3c1ec}
+      \strng{authorfullhash}{dc65c2c083eb0be84257d163d2b3c1ec}
+      \strng{authorfullhashraw}{dc65c2c083eb0be84257d163d2b3c1ec}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2024 IEEE 17th International Conference on Cloud Computing (CLOUD)}
+      \field{month}{7}
+      \field{title}{The State of FaaS: An Analysis of Public Functions-as-a-Service Providers}
+      \field{year}{2024}
+      \field{pages}{430\bibrangedash 438}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1109/cloud62652.2024.00055
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1109/CLOUD62652.2024.00055
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1109/CLOUD62652.2024.00055
+      \endverb
+    \endentry
+    \entry{8567674}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=ffc9447c639ccebeaaeb45fcc752a8f4}{%
+           family={Elgamal},
+           familyi={E\bibinitperiod},
+           given={Tarek},
+           giveni={T\bibinitperiod}}}%
+        {{hash=4a46219f3948a0ab911c26a1da757074}{%
+           family={Sandur},
+           familyi={S\bibinitperiod},
+           given={Atul},
+           giveni={A\bibinitperiod}}}%
+        {{hash=75d9ced3bb71010a31ef6631b3df329d}{%
+           family={Nahrstedt},
+           familyi={N\bibinitperiod},
+           given={Klara},
+           giveni={K\bibinitperiod}}}%
+        {{hash=ceee4f9845640e2da055562279a2e04c}{%
+           family={Agha},
+           familyi={A\bibinitperiod},
+           given={Gul},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{65e39a6dc2c23d30fcd3009a780165d9}
+      \strng{fullhash}{0f6b7e22e10f833e6e99193cf9e1b705}
+      \strng{fullhashraw}{0f6b7e22e10f833e6e99193cf9e1b705}
+      \strng{bibnamehash}{65e39a6dc2c23d30fcd3009a780165d9}
+      \strng{authorbibnamehash}{65e39a6dc2c23d30fcd3009a780165d9}
+      \strng{authornamehash}{65e39a6dc2c23d30fcd3009a780165d9}
+      \strng{authorfullhash}{0f6b7e22e10f833e6e99193cf9e1b705}
+      \strng{authorfullhashraw}{0f6b7e22e10f833e6e99193cf9e1b705}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2018 IEEE/ACM Symposium on Edge Computing (SEC)}
+      \field{title}{Costless: Optimizing Cost of Serverless Computing through Function Fusion and Placement}
+      \field{year}{2018}
+      \field{pages}{300\bibrangedash 312}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1109/SEC.2018.00029
+      \endverb
+      \keyw{Computational modeling;Fuses;Pricing;Cloud computing;Internet of Things;Memory management;Face;Serverless;Edge computing;AWS Lambda;Cloud Computing;Cost Optimization}
+    \endentry
+    \entry{SpecRgCloudGroupVisionOnThePerformanceChallengesOfFaas}{inproceedings}{}{}
+      \name{author}{5}{}{%
+        {{hash=6767c4e5a86ea027c81be9733d0ee454}{%
+           family={Eyk},
+           familyi={E\bibinitperiod},
+           given={Erwin},
+           giveni={E\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+        {{hash=a75eb74f3b66a4d93355b1b8be243552}{%
+           family={Iosup},
+           familyi={I\bibinitperiod},
+           given={Alexandru},
+           giveni={A\bibinitperiod}}}%
+        {{hash=d99f679b8e30c0b6382d7d93bbfe1d25}{%
+           family={Abad},
+           familyi={A\bibinitperiod},
+           given={Cristina\bibnamedelima L.},
+           giveni={C\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=d53ec718fc566c52020626fa6613fa22}{%
+           family={Grohmann},
+           familyi={G\bibinitperiod},
+           given={Johannes},
+           giveni={J\bibinitperiod}}}%
+        {{hash=ae18bd68b582f6b493ecea652b3aa0c1}{%
+           family={Eismann},
+           familyi={E\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{e2cf44d43cd63d3e7c8f8ef15e530396}
+      \strng{fullhash}{02e7313066bb9897a8847c3ffda946fc}
+      \strng{fullhashraw}{02e7313066bb9897a8847c3ffda946fc}
+      \strng{bibnamehash}{e2cf44d43cd63d3e7c8f8ef15e530396}
+      \strng{authorbibnamehash}{e2cf44d43cd63d3e7c8f8ef15e530396}
+      \strng{authornamehash}{e2cf44d43cd63d3e7c8f8ef15e530396}
+      \strng{authorfullhash}{02e7313066bb9897a8847c3ffda946fc}
+      \strng{authorfullhashraw}{02e7313066bb9897a8847c3ffda946fc}
+      \field{extraname}{1}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{As a key part of the serverless computing paradigm, Function-as-a-Service (FaaS) platforms enable users to run arbitrary functions without being concerned about operational issues. However, there are several performance-related issues surrounding the state-of-the-art FaaS platforms that can deter widespread adoption of FaaS, including sizeable overheads, unreliable performance, and new forms of the cost-performance trade-off. In this work we, the SPEC RG Cloud Group, identify six performance-related challenges that arise specifically in this FaaS model, and present our roadmap to tackle these problems in the near future. This paper aims at motivating the community to solve these challenges together.}
+      \field{booktitle}{Companion of the 2018 ACM/SPEC International Conference on Performance Engineering}
+      \field{isbn}{9781450356299}
+      \field{title}{A SPEC RG Cloud Group's Vision on the Performance Challenges of FaaS Cloud Architectures}
+      \field{year}{2018}
+      \field{pages}{21\bibrangedash 24}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1145/3185768.3186308
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3185768.3186308
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3185768.3186308
+      \endverb
+    \endentry
+    \entry{ServerlessIsMoreFromPaaSToPresentCloudComputing}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=6767c4e5a86ea027c81be9733d0ee454}{%
+           family={Eyk},
+           familyi={E\bibinitperiod},
+           given={Erwin},
+           giveni={E\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+        {{hash=0a5643ecb597841dac2f7d292ffad0c9}{%
+           family={Toader},
+           familyi={T\bibinitperiod},
+           given={Lucian},
+           giveni={L\bibinitperiod}}}%
+        {{hash=53eae855e1893d6c5100048b1985fe1c}{%
+           family={Talluri},
+           familyi={T\bibinitperiod},
+           given={Sacheendra},
+           giveni={S\bibinitperiod}}}%
+        {{hash=70e8b2f8a2aea53fbdb69e4062384ea5}{%
+           family={Versluis},
+           familyi={V\bibinitperiod},
+           given={Laurens},
+           giveni={L\bibinitperiod}}}%
+        {{hash=6e9edcf101a66f0b45e42e572f9bfafb}{%
+           family={Uță},
+           familyi={U\bibinitperiod},
+           given={Alexandru},
+           giveni={A\bibinitperiod}}}%
+        {{hash=a75eb74f3b66a4d93355b1b8be243552}{%
+           family={Iosup},
+           familyi={I\bibinitperiod},
+           given={Alexandru},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{e2cf44d43cd63d3e7c8f8ef15e530396}
+      \strng{fullhash}{84eaa82e3711137e5512b3871be955e0}
+      \strng{fullhashraw}{84eaa82e3711137e5512b3871be955e0}
+      \strng{bibnamehash}{e2cf44d43cd63d3e7c8f8ef15e530396}
+      \strng{authorbibnamehash}{e2cf44d43cd63d3e7c8f8ef15e530396}
+      \strng{authornamehash}{e2cf44d43cd63d3e7c8f8ef15e530396}
+      \strng{authorfullhash}{84eaa82e3711137e5512b3871be955e0}
+      \strng{authorfullhashraw}{84eaa82e3711137e5512b3871be955e0}
+      \field{extraname}{2}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Internet Computing}
+      \field{number}{5}
+      \field{title}{Serverless is More: From PaaS to Present Cloud Computing}
+      \field{volume}{22}
+      \field{year}{2018}
+      \field{pages}{8\bibrangedash 17}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1109/MIC.2018.053681358
+      \endverb
+      \keyw{Cloud computing;Internet;Economics;Servers;serverless;function-as-a-service;cloud computing;workflows;internet;internet computing}
+    \endentry
+    \entry{FerreiraDosSantos2023}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=8e5e2d44e141b6c9a61ed40d9e4614b8}{%
+           family={Ferreira\bibnamedelimb Dos\bibnamedelima Santos},
+           familyi={F\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Paulo\bibnamedelima Otavio},
+           giveni={P\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=ec008c93abb42822dea49cd6f2d83be1}{%
+           family={Jorge\bibnamedelimb De\bibnamedelimb Moura\bibnamedelima Costa},
+           familyi={J\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={Humberto},
+           giveni={H\bibinitperiod}}}%
+        {{hash=96539d2de9e3b32360f16894bf32f185}{%
+           family={Leithardt},
+           familyi={L\bibinitperiod},
+           given={Valderi\bibnamedelimb R.\bibnamedelimi Q.},
+           giveni={V\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim Q\bibinitperiod}}}%
+        {{hash=f03c5dabaebcbdfafeecbf3f55b9a9ae}{%
+           family={Jorge\bibnamedelimb Silveira\bibnamedelima Ferreira},
+           familyi={J\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim F\bibinitperiod},
+           given={Paulo},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{c1903df1ad09f645e7c8f01cf0a504dc}
+      \strng{fullhash}{6eab46c7372944689b111dc012a171a9}
+      \strng{fullhashraw}{6eab46c7372944689b111dc012a171a9}
+      \strng{bibnamehash}{c1903df1ad09f645e7c8f01cf0a504dc}
+      \strng{authorbibnamehash}{c1903df1ad09f645e7c8f01cf0a504dc}
+      \strng{authornamehash}{c1903df1ad09f645e7c8f01cf0a504dc}
+      \strng{authorfullhash}{6eab46c7372944689b111dc012a171a9}
+      \strng{authorfullhashraw}{6eab46c7372944689b111dc012a171a9}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Conference on Electrical, Computer, Communications and Mechatronics Engineering, ICECCME 2023}
+      \field{note}{Cited by: 0}
+      \field{title}{An Alternative to FaaS Cold Start Latency of Low Request Frequency Applications}
+      \field{type}{Conference paper}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.1109/ICECCME57830.2023.10253389
+      \endverb
+      \verb{urlraw}
+      \verb https://www.scopus.com/inward/record.uri?eid=2-s2.0-85174032097&doi=10.1109%2fICECCME57830.2023.10253389&partnerID=40&md5=e391b9aa0be19276d63880d17189cf69
+      \endverb
+      \verb{url}
+      \verb https://www.scopus.com/inward/record.uri?eid=2-s2.0-85174032097&doi=10.1109%2fICECCME57830.2023.10253389&partnerID=40&md5=e391b9aa0be19276d63880d17189cf69
+      \endverb
+    \endentry
+    \entry{Gajek_Plechawska-Wójcik_2024}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=5bcbb26f790b0e2de8a831c5db7e1443}{%
+           family={Gajek},
+           familyi={G\bibinitperiod},
+           given={Piotr},
+           giveni={P\bibinitperiod}}}%
+        {{hash=22fc0bd64effce4e73b7278ca51d7233}{%
+           family={Plechawska-Wójcik},
+           familyi={P\bibinithyphendelim W\bibinitperiod},
+           given={Małgorzata},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{de41e10d03c909af12ae0156da748c65}
+      \strng{fullhash}{de41e10d03c909af12ae0156da748c65}
+      \strng{fullhashraw}{de41e10d03c909af12ae0156da748c65}
+      \strng{bibnamehash}{de41e10d03c909af12ae0156da748c65}
+      \strng{authorbibnamehash}{de41e10d03c909af12ae0156da748c65}
+      \strng{authornamehash}{de41e10d03c909af12ae0156da748c65}
+      \strng{authorfullhash}{de41e10d03c909af12ae0156da748c65}
+      \strng{authorfullhashraw}{de41e10d03c909af12ae0156da748c65}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Computer Sciences Institute}
+      \field{month}{12}
+      \field{title}{Performance comparison of the Java and Kotlin programming languages based on an auto-scroller mobile game}
+      \field{volume}{33}
+      \field{year}{2024}
+      \field{pages}{285\bibrangedash 291}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.35784/jcsi.6314
+      \endverb
+      \verb{urlraw}
+      \verb https://ph.pollub.pl/index.php/jcsi/article/view/6314
+      \endverb
+      \verb{url}
+      \verb https://ph.pollub.pl/index.php/jcsi/article/view/6314
+      \endverb
+    \endentry
+    \entry{9027427}{inproceedings}{}{}
+      \name{author}{6}{}{%
+        {{hash=4db256d83c34573f1c3c4ddeb0a14337}{%
+           family={Ghosh},
+           familyi={G\bibinitperiod},
+           given={Bishakh\bibnamedelima Chandra},
+           giveni={B\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=f89e9db86826eb7dbb4162114b6c3753}{%
+           family={Addya},
+           familyi={A\bibinitperiod},
+           given={Sourav\bibnamedelima Kanti},
+           giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=a0136e83d2b67065cc325254ca7d34c0}{%
+           family={Somy},
+           familyi={S\bibinitperiod},
+           given={Nishant\bibnamedelima Baranwal},
+           giveni={N\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=0fd609271c77c0b5284a2e3e3bc7f66a}{%
+           family={Nath},
+           familyi={N\bibinitperiod},
+           given={Shubha\bibnamedelima Brata},
+           giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=a57e12e843efed07f6db4ae775e2920d}{%
+           family={Chakraborty},
+           familyi={C\bibinitperiod},
+           given={Sandip},
+           giveni={S\bibinitperiod}}}%
+        {{hash=52cfe882f26ff6435dd9657e65f33ef7}{%
+           family={Ghosh},
+           familyi={G\bibinitperiod},
+           given={Soumya\bibnamedelima K},
+           giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \strng{namehash}{1f934dfe15db64f692cb4528843cfc9c}
+      \strng{fullhash}{095dc93b0bbc767e67f93f06d3c883d0}
+      \strng{fullhashraw}{095dc93b0bbc767e67f93f06d3c883d0}
+      \strng{bibnamehash}{1f934dfe15db64f692cb4528843cfc9c}
+      \strng{authorbibnamehash}{1f934dfe15db64f692cb4528843cfc9c}
+      \strng{authornamehash}{1f934dfe15db64f692cb4528843cfc9c}
+      \strng{authorfullhash}{095dc93b0bbc767e67f93f06d3c883d0}
+      \strng{authorfullhashraw}{095dc93b0bbc767e67f93f06d3c883d0}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2020 International Conference on COMmunication Systems \& NETworkS (COMSNETS)}
+      \field{title}{Caching Techniques to Improve Latency in Serverless Architectures}
+      \field{year}{2020}
+      \field{pages}{666\bibrangedash 669}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1109/COMSNETS48256.2020.9027427
+      \endverb
+      \keyw{Databases;Time factors;Computer architecture;Containers;Cloud computing;Servers;Data analysis;FaaS;Serverless Computing;Cloud Computing;Response Time}
+    \endentry
+    \entry{10.1214/aoms/1177705148}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=d146ab5ac751638646b07b1cf762f93c}{%
+           family={Goodman},
+           familyi={G\bibinitperiod},
+           given={Leo\bibnamedelima A.},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Institute of Mathematical Statistics}%
+      }
+      \strng{namehash}{d146ab5ac751638646b07b1cf762f93c}
+      \strng{fullhash}{d146ab5ac751638646b07b1cf762f93c}
+      \strng{fullhashraw}{d146ab5ac751638646b07b1cf762f93c}
+      \strng{bibnamehash}{d146ab5ac751638646b07b1cf762f93c}
+      \strng{authorbibnamehash}{d146ab5ac751638646b07b1cf762f93c}
+      \strng{authornamehash}{d146ab5ac751638646b07b1cf762f93c}
+      \strng{authorfullhash}{d146ab5ac751638646b07b1cf762f93c}
+      \strng{authorfullhashraw}{d146ab5ac751638646b07b1cf762f93c}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Annals of Mathematical Statistics}
+      \field{number}{1}
+      \field{title}{{Snowball Sampling}}
+      \field{volume}{32}
+      \field{year}{1961}
+      \field{pages}{148\bibrangedash 170}
+      \range{pages}{23}
+      \verb{doi}
+      \verb 10.1214/aoms/1177705148
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1214/aoms/1177705148
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1214/aoms/1177705148
+      \endverb
+    \endentry
+    \entry{graalvm-reflection-jdk21}{manual}{}{}
+      \name{author}{1}{}{%
+        {{hash=2af99c1fb546556eada4a46cdbdd4ead}{%
+           family={{GraalVM Team}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{2af99c1fb546556eada4a46cdbdd4ead}
+      \strng{fullhash}{2af99c1fb546556eada4a46cdbdd4ead}
+      \strng{fullhashraw}{2af99c1fb546556eada4a46cdbdd4ead}
+      \strng{bibnamehash}{2af99c1fb546556eada4a46cdbdd4ead}
+      \strng{authorbibnamehash}{2af99c1fb546556eada4a46cdbdd4ead}
+      \strng{authornamehash}{2af99c1fb546556eada4a46cdbdd4ead}
+      \strng{authorfullhash}{2af99c1fb546556eada4a46cdbdd4ead}
+      \strng{authorfullhashraw}{2af99c1fb546556eada4a46cdbdd4ead}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Dostęp: 13.05.2025}
+      \field{title}{Reflekcja w obrazie natywnym}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.graalvm.org/jdk21/reference-manual/native-image/dynamic-features/Reflection/
+      \endverb
+      \verb{url}
+      \verb https://www.graalvm.org/jdk21/reference-manual/native-image/dynamic-features/Reflection/
+      \endverb
+    \endentry
+    \entry{ibm_sdk_vs_api}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=6cd715179810c1052b66ba54ccb46f73}{%
+           family={{IBM Technology}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{6cd715179810c1052b66ba54ccb46f73}
+      \strng{fullhash}{6cd715179810c1052b66ba54ccb46f73}
+      \strng{fullhashraw}{6cd715179810c1052b66ba54ccb46f73}
+      \strng{bibnamehash}{6cd715179810c1052b66ba54ccb46f73}
+      \strng{authorbibnamehash}{6cd715179810c1052b66ba54ccb46f73}
+      \strng{authornamehash}{6cd715179810c1052b66ba54ccb46f73}
+      \strng{authorfullhash}{6cd715179810c1052b66ba54ccb46f73}
+      \strng{authorfullhashraw}{6cd715179810c1052b66ba54ccb46f73}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.ibm.com/think/topics/api-vs-sdk}}
+      \field{note}{Dostęp: 31.05.2025}
+      \field{title}{SDK vs. API: What's the difference?}
+      \field{year}{2021}
+    \endentry
+    \entry{Ivanov_Petrova_2024}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=2b0eee2af138b8891f2107d5bfb1285e}{%
+           family={Ivanov},
+           familyi={I\bibinitperiod},
+           given={Dmitry},
+           giveni={D\bibinitperiod}}}%
+        {{hash=18e4864ae22cf19f7c58ef7bfef4fd49}{%
+           family={Petrova},
+           familyi={P\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{fe6adb9dcd6561ae64f233f4b96d087e}
+      \strng{fullhash}{fe6adb9dcd6561ae64f233f4b96d087e}
+      \strng{fullhashraw}{fe6adb9dcd6561ae64f233f4b96d087e}
+      \strng{bibnamehash}{fe6adb9dcd6561ae64f233f4b96d087e}
+      \strng{authorbibnamehash}{fe6adb9dcd6561ae64f233f4b96d087e}
+      \strng{authornamehash}{fe6adb9dcd6561ae64f233f4b96d087e}
+      \strng{authorfullhash}{fe6adb9dcd6561ae64f233f4b96d087e}
+      \strng{authorfullhashraw}{fe6adb9dcd6561ae64f233f4b96d087e}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{MZ Journal of Artificial Intelligence}
+      \field{month}{6}
+      \field{number}{1}
+      \field{title}{Serverless Computing Architectures and Applications in AWS}
+      \field{volume}{1}
+      \field{year}{2024}
+      \field{pages}{1\bibrangedash 10}
+      \range{pages}{10}
+      \verb{urlraw}
+      \verb https://mzresearch.com/index.php/MZJAI/article/view/174
+      \endverb
+      \verb{url}
+      \verb https://mzresearch.com/index.php/MZJAI/article/view/174
+      \endverb
+    \endentry
+    \entry{kotlinNativeLambdaRuntime}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=28a83515100b1554355b72612e233971}{%
+           family={Ivanovichev},
+           familyi={I\bibinitperiod},
+           given={Viacheslav},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{28a83515100b1554355b72612e233971}
+      \strng{fullhash}{28a83515100b1554355b72612e233971}
+      \strng{fullhashraw}{28a83515100b1554355b72612e233971}
+      \strng{bibnamehash}{28a83515100b1554355b72612e233971}
+      \strng{authorbibnamehash}{28a83515100b1554355b72612e233971}
+      \strng{authornamehash}{28a83515100b1554355b72612e233971}
+      \strng{authorfullhash}{28a83515100b1554355b72612e233971}
+      \strng{authorfullhashraw}{28a83515100b1554355b72612e233971}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://github.com/trueangle/kotlin-native-aws-lambda-runtime}}
+      \field{note}{[Dostęp: 16.05.2025]}
+      \field{title}{{Kotlin Native Runtime for AWS Lambda}}
+    \endentry
+    \entry{8605773}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=0797224a26610277542fc85c953a1378}{%
+           family={Jackson},
+           familyi={J\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=8f90b0c346d053448f2da192077a1169}{%
+           family={Clynch},
+           familyi={C\bibinitperiod},
+           given={Gary},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{06cc83dd859623916221589c1e0ce8e4}
+      \strng{fullhash}{06cc83dd859623916221589c1e0ce8e4}
+      \strng{fullhashraw}{06cc83dd859623916221589c1e0ce8e4}
+      \strng{bibnamehash}{06cc83dd859623916221589c1e0ce8e4}
+      \strng{authorbibnamehash}{06cc83dd859623916221589c1e0ce8e4}
+      \strng{authornamehash}{06cc83dd859623916221589c1e0ce8e4}
+      \strng{authorfullhash}{06cc83dd859623916221589c1e0ce8e4}
+      \strng{authorfullhashraw}{06cc83dd859623916221589c1e0ce8e4}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2018 IEEE/ACM International Conference on Utility and Cloud Computing Companion (UCC Companion)}
+      \field{title}{An Investigation of the Impact of Language Runtime on the Performance and Cost of Serverless Functions}
+      \field{year}{2018}
+      \field{pages}{154\bibrangedash 160}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/UCC-Companion.2018.00050
+      \endverb
+    \endentry
+    \entry{kotlinMultiplatformDev}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=b6a77f3f5bead76a495a90d63703e1f9}{%
+           family={JetBrains},
+           familyi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{b6a77f3f5bead76a495a90d63703e1f9}
+      \strng{fullhash}{b6a77f3f5bead76a495a90d63703e1f9}
+      \strng{fullhashraw}{b6a77f3f5bead76a495a90d63703e1f9}
+      \strng{bibnamehash}{b6a77f3f5bead76a495a90d63703e1f9}
+      \strng{authorbibnamehash}{b6a77f3f5bead76a495a90d63703e1f9}
+      \strng{authornamehash}{b6a77f3f5bead76a495a90d63703e1f9}
+      \strng{authorfullhash}{b6a77f3f5bead76a495a90d63703e1f9}
+      \strng{authorfullhashraw}{b6a77f3f5bead76a495a90d63703e1f9}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.jetbrains.com/help/kotlin-multiplatform-dev}}
+      \field{note}{[Dostęp: 15.05.2025]}
+      \field{title}{{Kotlin Multiplatform Development}}
+    \endentry
+    \entry{8844428}{inproceedings}{}{}
+      \name{author}{1}{}{%
+        {{hash=916871cbaf0bfb9ff59df73e61c216a9}{%
+           family={Kaplunovich},
+           familyi={K\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{916871cbaf0bfb9ff59df73e61c216a9}
+      \strng{fullhash}{916871cbaf0bfb9ff59df73e61c216a9}
+      \strng{fullhashraw}{916871cbaf0bfb9ff59df73e61c216a9}
+      \strng{bibnamehash}{916871cbaf0bfb9ff59df73e61c216a9}
+      \strng{authorbibnamehash}{916871cbaf0bfb9ff59df73e61c216a9}
+      \strng{authornamehash}{916871cbaf0bfb9ff59df73e61c216a9}
+      \strng{authorfullhash}{916871cbaf0bfb9ff59df73e61c216a9}
+      \strng{authorfullhashraw}{916871cbaf0bfb9ff59df73e61c216a9}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2019 IEEE/ACM 3rd International Workshop on Refactoring (IWoR)}
+      \field{title}{ToLambda--Automatic Path to Serverless Architectures}
+      \field{year}{2019}
+      \field{pages}{1\bibrangedash 8}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/IWoR.2019.00008
+      \endverb
+      \keyw{Cloud computing;Java;Computer architecture;Tools;Servers;Python;Market research;Serverless,Microservices,AWS,Cloud,Lambda,Automation,Refactoring,Transformation,FaaS,Parsing,Java,JavaScript,Node.js}
+    \endentry
+    \entry{kehoe_serverless_2018}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=1cc27defea0328d61a6fe05c2b27ae60}{%
+           family={Kehoe},
+           familyi={K\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{1cc27defea0328d61a6fe05c2b27ae60}
+      \strng{fullhash}{1cc27defea0328d61a6fe05c2b27ae60}
+      \strng{fullhashraw}{1cc27defea0328d61a6fe05c2b27ae60}
+      \strng{bibnamehash}{1cc27defea0328d61a6fe05c2b27ae60}
+      \strng{authorbibnamehash}{1cc27defea0328d61a6fe05c2b27ae60}
+      \strng{authornamehash}{1cc27defea0328d61a6fe05c2b27ae60}
+      \strng{authorfullhash}{1cc27defea0328d61a6fe05c2b27ae60}
+      \strng{authorfullhashraw}{1cc27defea0328d61a6fe05c2b27ae60}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Dostęp: 28.04.2025}
+      \field{title}{Serverless is a State of Mind}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://ben11kehoe.medium.com/serverless-is-a-state-of-mind-717ef2088b42
+      \endverb
+      \verb{url}
+      \verb https://ben11kehoe.medium.com/serverless-is-a-state-of-mind-717ef2088b42
+      \endverb
+    \endentry
+    \entry{9284261}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=8625c753265a307bed17df2f9f15208a}{%
+           family={Kelly},
+           familyi={K\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=4db5fdda44d980dfd1fa3c357d9f1fe3}{%
+           family={Glavin},
+           familyi={G\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod}}}%
+        {{hash=b0ee2e6fa1b855d4cfcb60802ffc0408}{%
+           family={Barrett},
+           familyi={B\bibinitperiod},
+           given={Enda},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{464777340f7c098de6fbad0e8801fd48}
+      \strng{fullhash}{464777340f7c098de6fbad0e8801fd48}
+      \strng{fullhashraw}{464777340f7c098de6fbad0e8801fd48}
+      \strng{bibnamehash}{464777340f7c098de6fbad0e8801fd48}
+      \strng{authorbibnamehash}{464777340f7c098de6fbad0e8801fd48}
+      \strng{authornamehash}{464777340f7c098de6fbad0e8801fd48}
+      \strng{authorfullhash}{464777340f7c098de6fbad0e8801fd48}
+      \strng{authorfullhashraw}{464777340f7c098de6fbad0e8801fd48}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2020 IEEE 13th International Conference on Cloud Computing (CLOUD)}
+      \field{title}{Serverless Computing: Behind the Scenes of Major Platforms}
+      \field{year}{2020}
+      \field{pages}{304\bibrangedash 312}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1109/CLOUD49709.2020.00050
+      \endverb
+      \keyw{Cloud computing;Conferences;Computer architecture;Interference;Servers;Resource management;Serverless Computing;Cloud Computing;Function-as-a-Service;Performance Measurement;Benchmarking}
+    \endentry
+    \entry{KitchenhamProceduresSR}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=19919e365e4f12f6028593c952a9bacf}{%
+           family={Kitchenham},
+           familyi={K\bibinitperiod},
+           given={Barbara},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{19919e365e4f12f6028593c952a9bacf}
+      \strng{fullhash}{19919e365e4f12f6028593c952a9bacf}
+      \strng{fullhashraw}{19919e365e4f12f6028593c952a9bacf}
+      \strng{bibnamehash}{19919e365e4f12f6028593c952a9bacf}
+      \strng{authorbibnamehash}{19919e365e4f12f6028593c952a9bacf}
+      \strng{authornamehash}{19919e365e4f12f6028593c952a9bacf}
+      \strng{authorfullhash}{19919e365e4f12f6028593c952a9bacf}
+      \strng{authorfullhashraw}{19919e365e4f12f6028593c952a9bacf}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Keele, UK, Keele Univ.}
+      \field{month}{08}
+      \field{title}{Procedures for Performing Systematic Reviews}
+      \field{volume}{33}
+      \field{year}{2004}
+    \endentry
+    \entry{9754223}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=19919e365e4f12f6028593c952a9bacf}{%
+           family={Kitchenham},
+           familyi={K\bibinitperiod},
+           given={Barbara},
+           giveni={B\bibinitperiod}}}%
+        {{hash=1a0ba2430085c5a97a955809d3390af4}{%
+           family={Madeyski},
+           familyi={M\bibinitperiod},
+           given={Lech},
+           giveni={L\bibinitperiod}}}%
+        {{hash=c3879154809891887a27016663fe556f}{%
+           family={Budgen},
+           familyi={B\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{3a71239344388d22ad0836855afaffa7}
+      \strng{fullhash}{3a71239344388d22ad0836855afaffa7}
+      \strng{fullhashraw}{3a71239344388d22ad0836855afaffa7}
+      \strng{bibnamehash}{3a71239344388d22ad0836855afaffa7}
+      \strng{authorbibnamehash}{3a71239344388d22ad0836855afaffa7}
+      \strng{authornamehash}{3a71239344388d22ad0836855afaffa7}
+      \strng{authorfullhash}{3a71239344388d22ad0836855afaffa7}
+      \strng{authorfullhashraw}{3a71239344388d22ad0836855afaffa7}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Software Engineering}
+      \field{number}{2}
+      \field{title}{How Should Software Engineering Secondary Studies Include Grey Material?}
+      \field{volume}{49}
+      \field{year}{2023}
+      \field{pages}{872\bibrangedash 882}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1109/TSE.2022.3165938
+      \endverb
+      \keyw{Social networking (online);Systematics;Software engineering;Guidelines;Blogs;Industries;Government;Evidence-based software engineering;systematic reviews;systematic mapping studies;mixed-methods reviews;grey literature;multivocal reviews}
+    \endentry
+    \entry{8605774}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=91de8fe5c86f92873f098b712bf97c59}{%
+           family={Kritikos},
+           familyi={K\bibinitperiod},
+           given={Kyriakos},
+           giveni={K\bibinitperiod}}}%
+        {{hash=788930d35c7ae93fca1e117e2e512f3d}{%
+           family={Skrzypek},
+           familyi={S\bibinitperiod},
+           given={Paweł},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{1631bc0265e5f224e5a2181e8c10b3f3}
+      \strng{fullhash}{1631bc0265e5f224e5a2181e8c10b3f3}
+      \strng{fullhashraw}{1631bc0265e5f224e5a2181e8c10b3f3}
+      \strng{bibnamehash}{1631bc0265e5f224e5a2181e8c10b3f3}
+      \strng{authorbibnamehash}{1631bc0265e5f224e5a2181e8c10b3f3}
+      \strng{authornamehash}{1631bc0265e5f224e5a2181e8c10b3f3}
+      \strng{authorfullhash}{1631bc0265e5f224e5a2181e8c10b3f3}
+      \strng{authorfullhashraw}{1631bc0265e5f224e5a2181e8c10b3f3}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2018 IEEE/ACM International Conference on Utility and Cloud Computing Companion (UCC Companion)}
+      \field{title}{A Review of Serverless Frameworks}
+      \field{year}{2018}
+      \field{pages}{161\bibrangedash 168}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/UCC-Companion.2018.00051
+      \endverb
+      \keyw{Cloud computing;Software;Testing;Computer languages;Runtime;Monitoring;Production;serverless,function-as-a-service,abstraction,provisioning,framework,review}
+    \endentry
+    \entry{10.1145/3491204.3543506}{inproceedings}{}{}
+      \name{author}{5}{}{%
+        {{hash=184918765e8b1bd23d6c8e05022e046f}{%
+           family={Lambion},
+           familyi={L\bibinitperiod},
+           given={Danielle},
+           giveni={D\bibinitperiod}}}%
+        {{hash=e4af92afda68233c0c738c4cc83945b2}{%
+           family={Schmitz},
+           familyi={S\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=1df9e2344fc023e24a65df1df8b59dd9}{%
+           family={Cordingly},
+           familyi={C\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=e39d847ccfe537f4486e2b5a03ad4cbf}{%
+           family={Heydari},
+           familyi={H\bibinitperiod},
+           given={Navid},
+           giveni={N\bibinitperiod}}}%
+        {{hash=6bdcb9a832508ac26fd1046f22f75529}{%
+           family={Lloyd},
+           familyi={L\bibinitperiod},
+           given={Wes},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Bejing, China}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{28fed2ed924c91fe7587d1179b2c2675}
+      \strng{fullhash}{a053ec46e7e0aee00b045e7ca6152491}
+      \strng{fullhashraw}{a053ec46e7e0aee00b045e7ca6152491}
+      \strng{bibnamehash}{28fed2ed924c91fe7587d1179b2c2675}
+      \strng{authorbibnamehash}{28fed2ed924c91fe7587d1179b2c2675}
+      \strng{authornamehash}{28fed2ed924c91fe7587d1179b2c2675}
+      \strng{authorfullhash}{a053ec46e7e0aee00b045e7ca6152491}
+      \strng{authorfullhashraw}{a053ec46e7e0aee00b045e7ca6152491}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this paper, we leverage a Natural Language Processing (NLP) pipeline for topic modeling consisting of three functions for data preprocessing, model training, and inferencing to analyze serverless platform performance variation. Specifically, we investigated performance using x86_64 and ARM64 processors over a 24-hour day starting at midnight local time on four cloud regions across three continents on AWS Lambda. We identified public cloud resource contention by leveraging the CPU steal metric, and examined relationships to NLP pipeline runtime. Intel x86_64 Xeon processors at the same clock rate as ARM64 processors (Graviton 2) were more than 23\% faster for model training, but ARM64 processors were faster for data preprocessing and inferencing. Use of the Intel x86_64 architecture for the NLP pipeline was up to 33.4\% more expensive than ARM64 as a result of incentivized pricing from the cloud provider and slower pipeline runtime due to greater resource contention for Intel processors.}
+      \field{booktitle}{Companion of the 2022 ACM/SPEC International Conference on Performance Engineering}
+      \field{isbn}{9781450391597}
+      \field{series}{ICPE '22}
+      \field{title}{Characterizing X86 and ARM Serverless Performance Variation: A Natural Language Processing Case Study}
+      \field{year}{2022}
+      \field{pages}{69\bibrangedash 75}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1145/3491204.3543506
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3491204.3543506
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3491204.3543506
+      \endverb
+      \keyw{topic modeling,serverless computing,resource contention,performance variation,function-as-a-service}
+    \endentry
+    \entry{1281665}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=4d858f5bbf45615625cd18cd3b2ea86e}{%
+           family={Lattner},
+           familyi={L\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=017576d67e6e625a0446eac935217f40}{%
+           family={Adve},
+           familyi={A\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{d7f89711a4b1e03e6ca320fdd0bb064b}
+      \strng{fullhash}{d7f89711a4b1e03e6ca320fdd0bb064b}
+      \strng{fullhashraw}{d7f89711a4b1e03e6ca320fdd0bb064b}
+      \strng{bibnamehash}{d7f89711a4b1e03e6ca320fdd0bb064b}
+      \strng{authorbibnamehash}{d7f89711a4b1e03e6ca320fdd0bb064b}
+      \strng{authornamehash}{d7f89711a4b1e03e6ca320fdd0bb064b}
+      \strng{authorfullhash}{d7f89711a4b1e03e6ca320fdd0bb064b}
+      \strng{authorfullhashraw}{d7f89711a4b1e03e6ca320fdd0bb064b}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{International Symposium on Code Generation and Optimization, 2004. CGO 2004.}
+      \field{title}{LLVM: a compilation framework for lifelong program analysis \& transformation}
+      \field{year}{2004}
+      \field{pages}{75\bibrangedash 86}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1109/CGO.2004.1281665
+      \endverb
+    \endentry
+    \entry{LEITNER2019340}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=e172c0c71241609eecf24b0afd70e341}{%
+           family={Leitner},
+           familyi={L\bibinitperiod},
+           given={Philipp},
+           giveni={P\bibinitperiod}}}%
+        {{hash=d0e8b14a4e4b668d18827aa2c0fcee6f}{%
+           family={Wittern},
+           familyi={W\bibinitperiod},
+           given={Erik},
+           giveni={E\bibinitperiod}}}%
+        {{hash=ead52c8bfc835b4b8ab2d9e4d1a4eba4}{%
+           family={Spillner},
+           familyi={S\bibinitperiod},
+           given={Josef},
+           giveni={J\bibinitperiod}}}%
+        {{hash=eb184730926d8a16859d0fe670faa3ad}{%
+           family={Hummer},
+           familyi={H\bibinitperiod},
+           given={Waldemar},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{a3ee761dc9d894f59f9892c53ec48c0b}
+      \strng{fullhash}{15c4c52b3277b1d2b11c4569d6fc7e1f}
+      \strng{fullhashraw}{15c4c52b3277b1d2b11c4569d6fc7e1f}
+      \strng{bibnamehash}{a3ee761dc9d894f59f9892c53ec48c0b}
+      \strng{authorbibnamehash}{a3ee761dc9d894f59f9892c53ec48c0b}
+      \strng{authornamehash}{a3ee761dc9d894f59f9892c53ec48c0b}
+      \strng{authorfullhash}{15c4c52b3277b1d2b11c4569d6fc7e1f}
+      \strng{authorfullhashraw}{15c4c52b3277b1d2b11c4569d6fc7e1f}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Function-as-a-Service (FaaS) describes cloud computing services that make infrastructure components transparent to application developers, thus falling in the larger group of “serverless” computing models. When using FaaS offerings, such as AWS Lambda, developers provide atomic and short-running code for their functions, and FaaS providers execute and horizontally scale them on-demand. Currently, there is no systematic research on how developers use serverless, what types of applications lend themselves to this model, or what architectural styles and practices FaaS-based applications are based on. We present results from a mixed-method study, combining interviews with practitioners who develop applications and systems that use FaaS, a systematic analysis of grey literature, and a Web-based survey. We find that successfully adopting FaaS requires a different mental model, where systems are primarily constructed by composing pre-existing services, with FaaS often acting as the “glue” that brings these services together. Tooling availability and maturity, especially related to testing and deployment, remains a major difficulty. Further, we find that current FaaS systems lack systematic support for function reuse, and abstractions and programming models for building non-trivial FaaS applications are limited. We conclude with a discussion of implications for FaaS providers, software developers, and researchers.}
+      \field{issn}{0164-1212}
+      \field{journaltitle}{Journal of Systems and Software}
+      \field{title}{A mixed-method empirical study of Function-as-a-Service software development in industrial practice}
+      \field{volume}{149}
+      \field{year}{2019}
+      \field{pages}{340\bibrangedash 359}
+      \range{pages}{20}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.jss.2018.12.013
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0164121218302735
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0164121218302735
+      \endverb
+      \keyw{Cloud computing,Serverless,Function-as-a-Service,Empirical research}
+    \endentry
+    \entry{8605779}{inproceedings}{}{}
+      \name{author}{5}{}{%
+        {{hash=6bdcb9a832508ac26fd1046f22f75529}{%
+           family={Lloyd},
+           familyi={L\bibinitperiod},
+           given={Wes},
+           giveni={W\bibinitperiod}}}%
+        {{hash=74aa9c929438e591fd9f5978bcd97525}{%
+           family={Vu},
+           familyi={V\bibinitperiod},
+           given={Minh},
+           giveni={M\bibinitperiod}}}%
+        {{hash=1b1a3d437dac1329e7df3456e7a8b503}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Baojia},
+           giveni={B\bibinitperiod}}}%
+        {{hash=784426574c0895e259647c59aa90c091}{%
+           family={David},
+           familyi={D\bibinitperiod},
+           given={Olaf},
+           giveni={O\bibinitperiod}}}%
+        {{hash=412b7eef0501a031a96d2b57c0f502ff}{%
+           family={Leavesley},
+           familyi={L\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{6915f416a3d213439dbc50a1d34e429c}
+      \strng{fullhash}{f1cdaeefedbb0a111700a0ca4a1ae599}
+      \strng{fullhashraw}{f1cdaeefedbb0a111700a0ca4a1ae599}
+      \strng{bibnamehash}{6915f416a3d213439dbc50a1d34e429c}
+      \strng{authorbibnamehash}{6915f416a3d213439dbc50a1d34e429c}
+      \strng{authornamehash}{6915f416a3d213439dbc50a1d34e429c}
+      \strng{authorfullhash}{f1cdaeefedbb0a111700a0ca4a1ae599}
+      \strng{authorfullhashraw}{f1cdaeefedbb0a111700a0ca4a1ae599}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2018 IEEE/ACM International Conference on Utility and Cloud Computing Companion (UCC Companion)}
+      \field{title}{Improving Application Migration to Serverless Computing Platforms: Latency Mitigation with Keep-Alive Workloads}
+      \field{year}{2018}
+      \field{pages}{195\bibrangedash 200}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/UCC-Companion.2018.00056
+      \endverb
+      \keyw{Cloud computing;FAA;Containers;Computational modeling;Java;Load management;Load modeling;Resource Management and Performance;Serverless Computing;Function-as-a-Service;Application Migration}
+    \endentry
+    \entry{wouldWiderAdoption}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=1a0ba2430085c5a97a955809d3390af4}{%
+           family={Madeyski},
+           familyi={M\bibinitperiod},
+           given={Lech},
+           giveni={L\bibinitperiod}}}%
+        {{hash=19919e365e4f12f6028593c952a9bacf}{%
+           family={Kitchenham},
+           familyi={K\bibinitperiod},
+           given={Barbara},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{c92c30fc3d17c071161b03b71b620a37}
+      \strng{fullhash}{c92c30fc3d17c071161b03b71b620a37}
+      \strng{fullhashraw}{c92c30fc3d17c071161b03b71b620a37}
+      \strng{bibnamehash}{c92c30fc3d17c071161b03b71b620a37}
+      \strng{authorbibnamehash}{c92c30fc3d17c071161b03b71b620a37}
+      \strng{authornamehash}{c92c30fc3d17c071161b03b71b620a37}
+      \strng{authorfullhash}{c92c30fc3d17c071161b03b71b620a37}
+      \strng{authorfullhashraw}{c92c30fc3d17c071161b03b71b620a37}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Intelligent \& Fuzzy Systems}
+      \field{month}{01}
+      \field{title}{Would wider adoption of reproducible research be beneficial for empirical software engineering research?}
+      \field{volume}{32}
+      \field{year}{2017}
+      \field{pages}{1509\bibrangedash 1521}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.3233/JIFS-169146
+      \endverb
+    \endentry
+    \entry{8605777}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=9de7effdc09f8d6e34234e4352bf57de}{%
+           family={Manner},
+           familyi={M\bibinitperiod},
+           given={Johannes},
+           giveni={J\bibinitperiod}}}%
+        {{hash=d3b462ebed7c067dd34e550f8f1a2cea}{%
+           family={Endreß},
+           familyi={E\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=4246f8418e5d2d07b3342e6cb095e273}{%
+           family={Heckel},
+           familyi={H\bibinitperiod},
+           given={Tobias},
+           giveni={T\bibinitperiod}}}%
+        {{hash=46f831f42e21a3e59ea1fb8d55814738}{%
+           family={Wirtz},
+           familyi={W\bibinitperiod},
+           given={Guido},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{b0da206c5c5c041c872bc7cc978d1ced}
+      \strng{fullhash}{27aac8d07dd0e196e0a7b89ba4304b75}
+      \strng{fullhashraw}{27aac8d07dd0e196e0a7b89ba4304b75}
+      \strng{bibnamehash}{b0da206c5c5c041c872bc7cc978d1ced}
+      \strng{authorbibnamehash}{b0da206c5c5c041c872bc7cc978d1ced}
+      \strng{authornamehash}{b0da206c5c5c041c872bc7cc978d1ced}
+      \strng{authorfullhash}{27aac8d07dd0e196e0a7b89ba4304b75}
+      \strng{authorfullhashraw}{27aac8d07dd0e196e0a7b89ba4304b75}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2018 IEEE/ACM International Conference on Utility and Cloud Computing Companion (UCC Companion)}
+      \field{title}{Cold Start Influencing Factors in Function as a Service}
+      \field{year}{2018}
+      \field{pages}{181\bibrangedash 188}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/UCC-Companion.2018.00054
+      \endverb
+      \keyw{FAA;Containers;Benchmark testing;Cloud computing;Java;Pipelines;Serverless Computing,Function as a Service,FaaS,Cloud Functions,Cold Start,Benchmarking}
+    \endentry
+    \entry{menéndez2023performancebestpracticesusing}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=80df2dfd43c3135fed7bde801b91f1d8}{%
+           family={Menéndez},
+           familyi={M\bibinitperiod},
+           given={Juan\bibnamedelima Mera},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=172c15ae9960257a189dacac71287aad}{%
+           family={Bartlett},
+           familyi={B\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{804a1a3776ff1a3b54709ec545c6073d}
+      \strng{fullhash}{804a1a3776ff1a3b54709ec545c6073d}
+      \strng{fullhashraw}{804a1a3776ff1a3b54709ec545c6073d}
+      \strng{bibnamehash}{804a1a3776ff1a3b54709ec545c6073d}
+      \strng{authorbibnamehash}{804a1a3776ff1a3b54709ec545c6073d}
+      \strng{authornamehash}{804a1a3776ff1a3b54709ec545c6073d}
+      \strng{authorfullhash}{804a1a3776ff1a3b54709ec545c6073d}
+      \strng{authorfullhashraw}{804a1a3776ff1a3b54709ec545c6073d}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.SE}
+      \field{eprinttype}{arXiv}
+      \field{title}{Performance best practices using Java and AWS Lambda}
+      \field{year}{2023}
+      \verb{eprint}
+      \verb 2310.16510
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2310.16510
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2310.16510
+      \endverb
+    \endentry
+    \entry{9732138}{inproceedings}{}{}
+      \name{author}{5}{}{%
+        {{hash=9434a1aa6411e8629f5a8bc55f8b5474}{%
+           family={Nazari},
+           familyi={N\bibinitperiod},
+           given={Maziyar},
+           giveni={M\bibinitperiod}}}%
+        {{hash=c0f63b709d2e4714f0a8a9c14a1ceca1}{%
+           family={Goodarzy},
+           familyi={G\bibinitperiod},
+           given={Sepideh},
+           giveni={S\bibinitperiod}}}%
+        {{hash=8840ed31c6ee8a9fdc2dca1648c82288}{%
+           family={Keller},
+           familyi={K\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=c251ccfe8fe62a815439035715b2462f}{%
+           family={Rozner},
+           familyi={R\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=857114532e023d63ab4a44e9591557a4}{%
+           family={Mishra},
+           familyi={M\bibinitperiod},
+           given={Shivakant},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{6cfb7f177e0d53ee1e87642ab02f76c8}
+      \strng{fullhash}{6ff143b30874b91d387403adedafc921}
+      \strng{fullhashraw}{6ff143b30874b91d387403adedafc921}
+      \strng{bibnamehash}{6cfb7f177e0d53ee1e87642ab02f76c8}
+      \strng{authorbibnamehash}{6cfb7f177e0d53ee1e87642ab02f76c8}
+      \strng{authornamehash}{6cfb7f177e0d53ee1e87642ab02f76c8}
+      \strng{authorfullhash}{6ff143b30874b91d387403adedafc921}
+      \strng{authorfullhashraw}{6ff143b30874b91d387403adedafc921}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2021 Eighth International Conference on Software Defined Systems (SDS)}
+      \field{title}{Optimizing and Extending Serverless Platforms: A Survey}
+      \field{year}{2021}
+      \field{pages}{1\bibrangedash 8}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/SDS54264.2021.9732138
+      \endverb
+      \keyw{Industries;Fault tolerance;Bibliographies;Fault tolerant systems;Serverless computing;Pricing;Elasticity;Serverless Computing;Function-as-a-Service;Cloud Computing;Optimization;Extension}
+    \endentry
+    \entry{9095731}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=ecb55a59ee50221f3003fec9c8d706b3}{%
+           family={Nupponen},
+           familyi={N\bibinitperiod},
+           given={Jussi},
+           giveni={J\bibinitperiod}}}%
+        {{hash=4d08ae1a3f71e9cc303d7cc0722f5186}{%
+           family={Taibi},
+           familyi={T\bibinitperiod},
+           given={Davide},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{05e791f8c98cb3506ee49f7b453237c8}
+      \strng{fullhash}{05e791f8c98cb3506ee49f7b453237c8}
+      \strng{fullhashraw}{05e791f8c98cb3506ee49f7b453237c8}
+      \strng{bibnamehash}{05e791f8c98cb3506ee49f7b453237c8}
+      \strng{authorbibnamehash}{05e791f8c98cb3506ee49f7b453237c8}
+      \strng{authornamehash}{05e791f8c98cb3506ee49f7b453237c8}
+      \strng{authorfullhash}{05e791f8c98cb3506ee49f7b453237c8}
+      \strng{authorfullhashraw}{05e791f8c98cb3506ee49f7b453237c8}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2020 IEEE International Conference on Software Architecture Companion (ICSA-C)}
+      \field{title}{Serverless: What it Is, What to Do and What Not to Do}
+      \field{year}{2020}
+      \field{pages}{49\bibrangedash 50}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1109/ICSA-C50368.2020.00016
+      \endverb
+      \keyw{FAA;Cloud computing;Libraries;Tools;Servers;Complexity theory;Computer architecture;Serverless;Function-as-a-service;FaaS}
+    \endentry
+    \entry{oracle_jvm_spec}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=d51288dc67d9f5e0330d927a009e208b}{%
+           family={{Oracle Corporation}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{d51288dc67d9f5e0330d927a009e208b}
+      \strng{fullhash}{d51288dc67d9f5e0330d927a009e208b}
+      \strng{fullhashraw}{d51288dc67d9f5e0330d927a009e208b}
+      \strng{bibnamehash}{d51288dc67d9f5e0330d927a009e208b}
+      \strng{authorbibnamehash}{d51288dc67d9f5e0330d927a009e208b}
+      \strng{authornamehash}{d51288dc67d9f5e0330d927a009e208b}
+      \strng{authorfullhash}{d51288dc67d9f5e0330d927a009e208b}
+      \strng{authorfullhashraw}{d51288dc67d9f5e0330d927a009e208b}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://docs.oracle.com/javase/specs/jvms/se22/html/}}
+      \field{note}{Dostęp: 31.05.2025}
+      \field{title}{The Java Virtual Machine Specification, Java SE 22 Edition}
+      \field{year}{2024}
+    \endentry
+    \entry{pawlik2019performanceconsiderationsexecutionlarge}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=be5b890db540fe3ecba952f3ebff78ab}{%
+           family={Pawlik},
+           familyi={P\bibinitperiod},
+           given={Maciej},
+           giveni={M\bibinitperiod}}}%
+        {{hash=36f4a1e05b1753aca532e6930d482a03}{%
+           family={Figiela},
+           familyi={F\bibinitperiod},
+           given={Kamil},
+           giveni={K\bibinitperiod}}}%
+        {{hash=888a21e3e74778f19adf58a1bfe4fa34}{%
+           family={Malawski},
+           familyi={M\bibinitperiod},
+           given={Maciej},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{b5a1c6f18a57fb7ec66a319811fd656e}
+      \strng{fullhash}{b5a1c6f18a57fb7ec66a319811fd656e}
+      \strng{fullhashraw}{b5a1c6f18a57fb7ec66a319811fd656e}
+      \strng{bibnamehash}{b5a1c6f18a57fb7ec66a319811fd656e}
+      \strng{authorbibnamehash}{b5a1c6f18a57fb7ec66a319811fd656e}
+      \strng{authornamehash}{b5a1c6f18a57fb7ec66a319811fd656e}
+      \strng{authorfullhash}{b5a1c6f18a57fb7ec66a319811fd656e}
+      \strng{authorfullhashraw}{b5a1c6f18a57fb7ec66a319811fd656e}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.DC}
+      \field{eprinttype}{arXiv}
+      \field{title}{Performance considerations on execution of large scale workflow applications on cloud functions}
+      \field{year}{2019}
+      \verb{eprint}
+      \verb 1909.03555
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1909.03555
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1909.03555
+      \endverb
+    \endentry
+    \entry{8116416}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=44f57304e3959244e8e11b85d01a2469}{%
+           family={Puripunpinyo},
+           familyi={P\bibinitperiod},
+           given={Hussachai},
+           giveni={H\bibinitperiod}}}%
+        {{hash=0d7fa33cde10be303f586e05cfeb0b40}{%
+           family={Samadzadeh},
+           familyi={S\bibinitperiod},
+           given={M.H.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{7c5cb5f56ca8f5e264a76f251cf0849a}
+      \strng{fullhash}{7c5cb5f56ca8f5e264a76f251cf0849a}
+      \strng{fullhashraw}{7c5cb5f56ca8f5e264a76f251cf0849a}
+      \strng{bibnamehash}{7c5cb5f56ca8f5e264a76f251cf0849a}
+      \strng{authorbibnamehash}{7c5cb5f56ca8f5e264a76f251cf0849a}
+      \strng{authornamehash}{7c5cb5f56ca8f5e264a76f251cf0849a}
+      \strng{authorfullhash}{7c5cb5f56ca8f5e264a76f251cf0849a}
+      \strng{authorfullhashraw}{7c5cb5f56ca8f5e264a76f251cf0849a}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2017 IEEE Conference on Computer Communications Workshops (INFOCOM WKSHPS)}
+      \field{title}{Effect of optimizing Java deployment artifacts on AWS Lambda}
+      \field{year}{2017}
+      \field{pages}{438\bibrangedash 443}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/INFCOMW.2017.8116416
+      \endverb
+      \keyw{Java;Libraries;Computer architecture;Tools;Servers;XML;Big Data;Serverless Architecture;Deployment;AWS Lambda;JVM;Java;Optimization;Performance}
+    \endentry
+    \entry{9235063}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=5adfb9dcd21c6ff5ac88bc80958034dd}{%
+           family={Quaresma},
+           familyi={Q\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=bba39380e7e8cd7245b3bf5ca74098da}{%
+           family={Fireman},
+           familyi={F\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=864015c18c3b3e4c2d9e926ebe110405}{%
+           family={Pereira},
+           familyi={P\bibinitperiod},
+           given={Thiago\bibnamedelima Emmanuel},
+           giveni={T\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{4b226982f316691e61125efd30372a18}
+      \strng{fullhash}{4b226982f316691e61125efd30372a18}
+      \strng{fullhashraw}{4b226982f316691e61125efd30372a18}
+      \strng{bibnamehash}{4b226982f316691e61125efd30372a18}
+      \strng{authorbibnamehash}{4b226982f316691e61125efd30372a18}
+      \strng{authornamehash}{4b226982f316691e61125efd30372a18}
+      \strng{authorfullhash}{4b226982f316691e61125efd30372a18}
+      \strng{authorfullhashraw}{4b226982f316691e61125efd30372a18}
+      \field{sortinit}{Q}
+      \field{sortinithash}{ce69a400a872ddd02ee7fdb3b38c6abd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2020 IEEE 32nd International Symposium on Computer Architecture and High Performance Computing (SBAC-PAD)}
+      \field{title}{Controlling Garbage Collection and Request Admission to Improve Performance of FaaS Applications}
+      \field{year}{2020}
+      \field{pages}{175\bibrangedash 182}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/SBAC-PAD49847.2020.00033
+      \endverb
+      \keyw{FAA;Time factors;Memory management;Cloud computing;Runtime environment;Load modeling;Java;serverless;faas;garbage collector;cold start;gci;cloud computing;cloud services}
+    \endentry
+    \entry{quarkus-docs}{manual}{}{}
+      \name{author}{1}{}{%
+        {{hash=1eff03b548763d2778cac4f487f98065}{%
+           family={{Quarkus}},
+           familyi={Q\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Red Hat}%
+      }
+      \strng{namehash}{1eff03b548763d2778cac4f487f98065}
+      \strng{fullhash}{1eff03b548763d2778cac4f487f98065}
+      \strng{fullhashraw}{1eff03b548763d2778cac4f487f98065}
+      \strng{bibnamehash}{1eff03b548763d2778cac4f487f98065}
+      \strng{authorbibnamehash}{1eff03b548763d2778cac4f487f98065}
+      \strng{authornamehash}{1eff03b548763d2778cac4f487f98065}
+      \strng{authorfullhash}{1eff03b548763d2778cac4f487f98065}
+      \strng{authorfullhashraw}{1eff03b548763d2778cac4f487f98065}
+      \field{sortinit}{Q}
+      \field{sortinithash}{ce69a400a872ddd02ee7fdb3b38c6abd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Dostęp: 13.05.2025}
+      \field{title}{Dokumentacja Quarkus}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://quarkus.io/guides/
+      \endverb
+      \verb{url}
+      \verb https://quarkus.io/guides/
+      \endverb
+    \endentry
+    \entry{raza2021sok}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=e7b51c2b3d468c3aded647d712c77c9a}{%
+           family={Raza},
+           familyi={R\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=6e81b5fdb01e475d5e766b7047c74ad6}{%
+           family={Matta},
+           familyi={M\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod}}}%
+        {{hash=40df7b26864dd8938168d23ac85bd798}{%
+           family={Akhtar},
+           familyi={A\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+        {{hash=acafbc80c4941fb0f97919b2f8049851}{%
+           family={Kalavri},
+           familyi={K\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+        {{hash=d880aa0bce174f3a16b766634f3a457d}{%
+           family={Isahagian},
+           familyi={I\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{ef928d9314a0137984aa8fc9d57dca6b}
+      \strng{fullhash}{cd2a3047faef969481bcdc13011e02dd}
+      \strng{fullhashraw}{cd2a3047faef969481bcdc13011e02dd}
+      \strng{bibnamehash}{ef928d9314a0137984aa8fc9d57dca6b}
+      \strng{authorbibnamehash}{ef928d9314a0137984aa8fc9d57dca6b}
+      \strng{authornamehash}{ef928d9314a0137984aa8fc9d57dca6b}
+      \strng{authorfullhash}{cd2a3047faef969481bcdc13011e02dd}
+      \strng{authorfullhashraw}{cd2a3047faef969481bcdc13011e02dd}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Systems Research}
+      \field{number}{1}
+      \field{title}{{SoK: Function-As-A-Service: From An Application Developer’s Perspective}}
+      \field{volume}{1}
+      \field{year}{2021}
+      \verb{doi}
+      \verb 10.5070/SR31154815
+      \endverb
+      \verb{urlraw}
+      \verb https://escholarship.org/uc/item/1wg7h0qf
+      \endverb
+      \verb{url}
+      \verb https://escholarship.org/uc/item/1wg7h0qf
+      \endverb
+    \endentry
+    \entry{kotlinIrCompilatorGithub}{misc}{}{}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://github.com/JetBrains/kotlin/tree/master/compiler/ir/}}
+      \field{note}{[Dostęp: 16.05.2025]}
+      \field{title}{{Repozytorium kodu źródłowego kompilatora Kotlin IR}}
+    \endentry
+    \entry{serverlessArchitectureMarketReport}{online}{}{}
+      \name{author}{2}{}{%
+        {{hash=f027f27d0d548351e4d362e9b90678a9}{%
+           family={Research},
+           familyi={R\bibinitperiod}}}%
+        {{hash=52c37b612a408d420a70bf7858af6636}{%
+           family={Markets},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{bcfba9902d5739d4f7d97ff9c47aa22e}
+      \strng{fullhash}{bcfba9902d5739d4f7d97ff9c47aa22e}
+      \strng{fullhashraw}{bcfba9902d5739d4f7d97ff9c47aa22e}
+      \strng{bibnamehash}{bcfba9902d5739d4f7d97ff9c47aa22e}
+      \strng{authorbibnamehash}{bcfba9902d5739d4f7d97ff9c47aa22e}
+      \strng{authornamehash}{bcfba9902d5739d4f7d97ff9c47aa22e}
+      \strng{authorfullhash}{bcfba9902d5739d4f7d97ff9c47aa22e}
+      \strng{authorfullhashraw}{bcfba9902d5739d4f7d97ff9c47aa22e}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.researchandmarkets.com/reports/5953253/serverless-architecture-market-report}}
+      \field{note}{Dostęp: 20.03.2025}
+      \field{title}{Serverless Architecture Market Report 2025}
+      \field{year}{2025}
+    \endentry
+    \entry{ritzal2020optimizing}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=1141956db17e55f8e0dcfa1883a74ced}{%
+           family={Ritzal},
+           familyi={R\bibinitperiod},
+           given={Roman},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {University of Applied Sciences FH Campus Wien}%
+      }
+      \strng{namehash}{1141956db17e55f8e0dcfa1883a74ced}
+      \strng{fullhash}{1141956db17e55f8e0dcfa1883a74ced}
+      \strng{fullhashraw}{1141956db17e55f8e0dcfa1883a74ced}
+      \strng{bibnamehash}{1141956db17e55f8e0dcfa1883a74ced}
+      \strng{authorbibnamehash}{1141956db17e55f8e0dcfa1883a74ced}
+      \strng{authornamehash}{1141956db17e55f8e0dcfa1883a74ced}
+      \strng{authorfullhash}{1141956db17e55f8e0dcfa1883a74ced}
+      \strng{authorfullhashraw}{1141956db17e55f8e0dcfa1883a74ced}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Optimizing Java for serverless applications}
+      \field{type}{mathesis}
+      \field{year}{2020}
+    \endentry
+    \entry{shrestha2019lambda}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=fa533b7d4d52646da95c3d0c58caaeff}{%
+           family={Shrestha},
+           familyi={S\bibinitperiod},
+           given={Sachin},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{fa533b7d4d52646da95c3d0c58caaeff}
+      \strng{fullhash}{fa533b7d4d52646da95c3d0c58caaeff}
+      \strng{fullhashraw}{fa533b7d4d52646da95c3d0c58caaeff}
+      \strng{bibnamehash}{fa533b7d4d52646da95c3d0c58caaeff}
+      \strng{authorbibnamehash}{fa533b7d4d52646da95c3d0c58caaeff}
+      \strng{authornamehash}{fa533b7d4d52646da95c3d0c58caaeff}
+      \strng{authorfullhash}{fa533b7d4d52646da95c3d0c58caaeff}
+      \strng{authorfullhashraw}{fa533b7d4d52646da95c3d0c58caaeff}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Bachelor's thesis, Theseus}
+      \field{title}{Comparing Programming Languages used in AWS Lambda for Serverless Architecture}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://www.theseus.fi/handle/10024/227117
+      \endverb
+      \verb{url}
+      \verb https://www.theseus.fi/handle/10024/227117
+      \endverb
+    \endentry
+    \entry{8756917}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=f9c82c100e8501a12cb8300f5910633b}{%
+           family={Šipek},
+           familyi={Š\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=2120651c3939262433d979464627be9a}{%
+           family={Mihaljević},
+           familyi={M\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=c9479fb9f93bd7870e9c6ef00f028c7a}{%
+           family={Radovan},
+           familyi={R\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{e8e851cc5e47d7b1c1a83042618d7b7d}
+      \strng{fullhash}{e8e851cc5e47d7b1c1a83042618d7b7d}
+      \strng{fullhashraw}{e8e851cc5e47d7b1c1a83042618d7b7d}
+      \strng{bibnamehash}{e8e851cc5e47d7b1c1a83042618d7b7d}
+      \strng{authorbibnamehash}{e8e851cc5e47d7b1c1a83042618d7b7d}
+      \strng{authornamehash}{e8e851cc5e47d7b1c1a83042618d7b7d}
+      \strng{authorfullhash}{e8e851cc5e47d7b1c1a83042618d7b7d}
+      \strng{authorfullhashraw}{e8e851cc5e47d7b1c1a83042618d7b7d}
+      \field{sortinit}{Š}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2019 42nd International Convention on Information and Communication Technology, Electronics and Microelectronics (MIPRO)}
+      \field{title}{Exploring Aspects of Polyglot High-Performance Virtual Machine GraalVM}
+      \field{year}{2019}
+      \field{pages}{1671\bibrangedash 1676}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.23919/MIPRO.2019.8756917
+      \endverb
+      \keyw{Java;Optimization;Virtual machining;Interoperability;Program processors;Runtime;GraalVM;Graal;polyglot virtual machine;Java Virtual Machine;Java;programming languages;cross-language interoperability}
+    \endentry
+    \entry{9245290}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=f9c82c100e8501a12cb8300f5910633b}{%
+           family={Šipek},
+           familyi={Š\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=0b6fc5a5419ea5de3cc482bf592475fb}{%
+           family={Muharemagić},
+           familyi={M\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=2120651c3939262433d979464627be9a}{%
+           family={Mihaljević},
+           familyi={M\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=c9479fb9f93bd7870e9c6ef00f028c7a}{%
+           family={Radovan},
+           familyi={R\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{c9cc4f00b6522806418f04efab2a78dc}
+      \strng{fullhash}{d81b37f9b51f9e0dde4350aa97565227}
+      \strng{fullhashraw}{d81b37f9b51f9e0dde4350aa97565227}
+      \strng{bibnamehash}{c9cc4f00b6522806418f04efab2a78dc}
+      \strng{authorbibnamehash}{c9cc4f00b6522806418f04efab2a78dc}
+      \strng{authornamehash}{c9cc4f00b6522806418f04efab2a78dc}
+      \strng{authorfullhash}{d81b37f9b51f9e0dde4350aa97565227}
+      \strng{authorfullhashraw}{d81b37f9b51f9e0dde4350aa97565227}
+      \field{sortinit}{Š}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2020 43rd International Convention on Information, Communication and Electronic Technology (MIPRO)}
+      \field{title}{Enhancing Performance of Cloud-based Software Applications with GraalVM and Quarkus}
+      \field{year}{2020}
+      \field{pages}{1746\bibrangedash 1751}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.23919/MIPRO48935.2020.9245290
+      \endverb
+      \keyw{Cloud computing;Java;Production;Tools;Virtual machining;Servers;Virtualization;GraalVM;Kubernetes;Quarkus;Cloud computing;native image}
+    \endentry
+    \entry{stackoverflow_survey_2024}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=84d7dc19766c446f5e4084e8fce87f82}{%
+           family={{Stack Overflow}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{84d7dc19766c446f5e4084e8fce87f82}
+      \strng{fullhash}{84d7dc19766c446f5e4084e8fce87f82}
+      \strng{fullhashraw}{84d7dc19766c446f5e4084e8fce87f82}
+      \strng{bibnamehash}{84d7dc19766c446f5e4084e8fce87f82}
+      \strng{authorbibnamehash}{84d7dc19766c446f5e4084e8fce87f82}
+      \strng{authornamehash}{84d7dc19766c446f5e4084e8fce87f82}
+      \strng{authorfullhash}{84d7dc19766c446f5e4084e8fce87f82}
+      \strng{authorfullhashraw}{84d7dc19766c446f5e4084e8fce87f82}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Web page}
+      \field{note}{Dostęp: 31.05.2025}
+      \field{title}{2024 Developer Survey - Most Popular Technologies: Programming, scripting, and markup languages}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://survey.stackoverflow.co/2024/technology#most-popular-technologies-language
+      \endverb
+      \verb{url}
+      \verb https://survey.stackoverflow.co/2024/technology#most-popular-technologies-language
+      \endverb
+    \endentry
+    \entry{9912641}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=4d08ae1a3f71e9cc303d7cc0722f5186}{%
+           family={Taibi},
+           familyi={T\bibinitperiod},
+           given={Davide},
+           giveni={D\bibinitperiod}}}%
+        {{hash=1cc27defea0328d61a6fe05c2b27ae60}{%
+           family={Kehoe},
+           familyi={K\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod}}}%
+        {{hash=a5d4c0b067e66f75e1848b727e558489}{%
+           family={Poccia},
+           familyi={P\bibinitperiod},
+           given={Danilo},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{23d9de599cce14e523ffcc452e1d3460}
+      \strng{fullhash}{23d9de599cce14e523ffcc452e1d3460}
+      \strng{fullhashraw}{23d9de599cce14e523ffcc452e1d3460}
+      \strng{bibnamehash}{23d9de599cce14e523ffcc452e1d3460}
+      \strng{authorbibnamehash}{23d9de599cce14e523ffcc452e1d3460}
+      \strng{authornamehash}{23d9de599cce14e523ffcc452e1d3460}
+      \strng{authorfullhash}{23d9de599cce14e523ffcc452e1d3460}
+      \strng{authorfullhashraw}{23d9de599cce14e523ffcc452e1d3460}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2022 IEEE International Conference on Service-Oriented System Engineering (SOSE)}
+      \field{title}{Serverless: From Bad Practices to Good Solutions}
+      \field{year}{2022}
+      \field{pages}{85\bibrangedash 92}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/SOSE55356.2022.00016
+      \endverb
+      \keyw{Industries;Codes;Service-oriented systems engineering;Microservice architectures;Serverless computing;Computer architecture;Guidelines;Microservices;serverless;function-as-a-service;cloud-native;anti-patterns;bad smells}
+    \endentry
+    \entry{SpotBugsProject}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=11b7784588e1a960b14f7bc496c6c4be}{%
+           family={{The SpotBugs team}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{11b7784588e1a960b14f7bc496c6c4be}
+      \strng{fullhash}{11b7784588e1a960b14f7bc496c6c4be}
+      \strng{fullhashraw}{11b7784588e1a960b14f7bc496c6c4be}
+      \strng{bibnamehash}{11b7784588e1a960b14f7bc496c6c4be}
+      \strng{authorbibnamehash}{11b7784588e1a960b14f7bc496c6c4be}
+      \strng{authornamehash}{11b7784588e1a960b14f7bc496c6c4be}
+      \strng{authorfullhash}{11b7784588e1a960b14f7bc496c6c4be}
+      \strng{authorfullhashraw}{11b7784588e1a960b14f7bc496c6c4be}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://spotbugs.github.io/}}
+      \field{note}{Dostęp: 13.05.2025}
+      \field{title}{SpotBugs Static Analysis for Java}
+    \endentry
+    \entry{riseOfThePlanetOfServerlessComputing}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=86b04d0440ecd526b5148c00b59f1501}{%
+           family={Wen},
+           familyi={W\bibinitperiod},
+           given={Jinfeng},
+           giveni={J\bibinitperiod}}}%
+        {{hash=b6cce0181ec392628baa2a6a806703d1}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Zhenpeng},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=25d35f1e3db69ef117155be8b0774e3c}{%
+           family={Jin},
+           familyi={J\bibinitperiod},
+           given={Xin},
+           giveni={X\bibinitperiod}}}%
+        {{hash=79882c057d27c79425483ff1e0ff8f15}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Xuanzhe},
+           giveni={X\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{b2576f1bb03be2b823895979fa634a94}
+      \strng{fullhash}{fe8a499472aeb2ab7e673fa154773d32}
+      \strng{fullhashraw}{fe8a499472aeb2ab7e673fa154773d32}
+      \strng{bibnamehash}{b2576f1bb03be2b823895979fa634a94}
+      \strng{authorbibnamehash}{b2576f1bb03be2b823895979fa634a94}
+      \strng{authornamehash}{b2576f1bb03be2b823895979fa634a94}
+      \strng{authorfullhash}{fe8a499472aeb2ab7e673fa154773d32}
+      \strng{authorfullhashraw}{fe8a499472aeb2ab7e673fa154773d32}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1049-331X}
+      \field{journaltitle}{ACM Trans. Softw. Eng. Methodol.}
+      \field{month}{7}
+      \field{number}{5}
+      \field{title}{Rise of the Planet of Serverless Computing: A Systematic Review}
+      \field{volume}{32}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.1145/3579643
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3579643
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3579643
+      \endverb
+      \keyw{literature view,Serverless computing}
+    \endentry
+    \entry{doi:10.1177/0739456X17723971}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=12c29a6c8f31ed3fdbac484e161786ef}{%
+           family={Xiao},
+           familyi={X\bibinitperiod},
+           given={Yu},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=0b39d96640a40583fb72e6e38b117f2a}{%
+           family={Watson},
+           familyi={W\bibinitperiod},
+           given={Maria},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{49c457e11056ab79b777320c081dad7f}
+      \strng{fullhash}{49c457e11056ab79b777320c081dad7f}
+      \strng{fullhashraw}{49c457e11056ab79b777320c081dad7f}
+      \strng{bibnamehash}{49c457e11056ab79b777320c081dad7f}
+      \strng{authorbibnamehash}{49c457e11056ab79b777320c081dad7f}
+      \strng{authornamehash}{49c457e11056ab79b777320c081dad7f}
+      \strng{authorfullhash}{49c457e11056ab79b777320c081dad7f}
+      \strng{authorfullhashraw}{49c457e11056ab79b777320c081dad7f}
+      \field{sortinit}{X}
+      \field{sortinithash}{1965c258adceecf23ce3d67b05113442}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Planning Education and Research}
+      \field{number}{1}
+      \field{title}{Guidance on Conducting a Systematic Literature Review}
+      \field{volume}{39}
+      \field{year}{2019}
+      \field{pages}{93\bibrangedash 112}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1177/0739456X17723971
+      \endverb
+      \verb{eprint}
+      \verb https://doi.org/10.1177/0739456X17723971
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1177/0739456X17723971
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1177/0739456X17723971
+      \endverb
+    \endentry
+    \entry{10.1145/3419111.3421280}{inproceedings}{}{}
+      \name{author}{9}{}{%
+        {{hash=f57e4a43e8e0a6328f6d4277a977d877}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Tianyi},
+           giveni={T\bibinitperiod}}}%
+        {{hash=29f9e419d0e15b8f81c007a44997efd4}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Qingyuan},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=9eb95fc30db7b2423369b6f27dffdacc}{%
+           family={Du},
+           familyi={D\bibinitperiod},
+           given={Dong},
+           giveni={D\bibinitperiod}}}%
+        {{hash=e2e386d1b28bbed49baff57c429fbaad}{%
+           family={Xia},
+           familyi={X\bibinitperiod},
+           given={Yubin},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=4dff1f859954eb57862d7ccccf24d6d9}{%
+           family={Zang},
+           familyi={Z\bibinitperiod},
+           given={Binyu},
+           giveni={B\bibinitperiod}}}%
+        {{hash=3a0b4824c8f5e3ba00ead02bb2de7164}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Ziqian},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=a6367e652c142d470a52c5f5b12bf85d}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Pingchao},
+           giveni={P\bibinitperiod}}}%
+        {{hash=14876cee7727752d66496ffc5c4a942c}{%
+           family={Qin},
+           familyi={Q\bibinitperiod},
+           given={Chenggang},
+           giveni={C\bibinitperiod}}}%
+        {{hash=d5c36f34b65110f35dbb94158f05a30d}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Haibo},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Virtual Event, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{c962654735ddb15c00c70efd24b21df6}
+      \strng{fullhash}{d772e0f336fc2c5b2f3d59644b093dc1}
+      \strng{fullhashraw}{d772e0f336fc2c5b2f3d59644b093dc1}
+      \strng{bibnamehash}{c962654735ddb15c00c70efd24b21df6}
+      \strng{authorbibnamehash}{c962654735ddb15c00c70efd24b21df6}
+      \strng{authornamehash}{c962654735ddb15c00c70efd24b21df6}
+      \strng{authorfullhash}{d772e0f336fc2c5b2f3d59644b093dc1}
+      \strng{authorfullhashraw}{d772e0f336fc2c5b2f3d59644b093dc1}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Serverless computing promises auto-scalability and cost-efficiency (in "pay-as-you-go" manner) for high-productive software development. Because of its virtue, serverless computing has motivated increasingly new applications and services in the cloud. This, however, also presents new challenges including how to efficiently design high-performance serverless platforms and how to efficiently program on the platforms.This paper proposes ServerlessBench, an open-source benchmark suite for characterizing serverless platforms. It includes test cases exploring characteristic metrics of serverless computing, e.g., communication efficiency, startup latency, stateless overhead, and performance isolation. We have applied the benchmark suite to evaluate the most popular serverless computing platforms, including AWS Lambda, Open-Whisk, and Fn, and present new serverless implications from the study. For example, we show scenarios where decoupling an application into a composition of serverless functions can be beneficial in cost-saving and performance, and that the "stateless" property in serverless computing can hurt the execution performance of serverless functions. These implications form several design guidelines, which may help platform designers to optimize serverless platforms and application developers to design their functions best fit to the platforms.}
+      \field{booktitle}{Proceedings of the 11th ACM Symposium on Cloud Computing}
+      \field{isbn}{9781450381376}
+      \field{series}{SoCC '20}
+      \field{title}{Characterizing serverless platforms with serverlessbench}
+      \field{year}{2020}
+      \field{pages}{30\bibrangedash 44}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1145/3419111.3421280
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3419111.3421280
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3419111.3421280
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
 
-\bibitem{kotlinlangKotlinDocs}
-{Dokumentacja Kotlin}.
-\newblock \url{https://kotlinlang.org/docs/home.html}.
-\newblock [Dostęp: 15.05.2025].
-
-\bibitem{http4kCoreDocs}
-{Dokumentacja narzędzia http4k Core}.
-\newblock \url{https://www.http4k.org/ecosystem/http4k/}.
-\newblock [Dostęp: 16.05.2025].
-
-\bibitem{kotlinIrCompilatorGithub}
-{Repozytorium kodu źródłowego kompilatora Kotlin IR}.
-\newblock \url{https://github.com/JetBrains/kotlin/tree/master/compiler/ir/}.
-\newblock [Dostęp: 16.05.2025].
-
-\bibitem{246288}
-A.~Agache, M.~Brooker, A.~Iordache, A.~Liguori, R.~Neugebauer, P.~Piwonka, and D.-M. Popa.
-\newblock Firecracker: Lightweight virtualization for serverless applications.
-\newblock In {\em 17th USENIX Symposium on Networked Systems Design and Implementation (NSDI 20)}, pages 419--434, Santa Clara, CA, Feb. 2020. USENIX Association.
-
-\bibitem{aws-sdk-java-v2}
-{Amazon Web Service}.
-\newblock {Repozytorium AWS SDK dla Java}.
-\newblock \url{https://github.com/aws/aws-sdk-java-v2}, 2025.
-\newblock Dostęp: 20.05.2025.
-
-\bibitem{aws-sdk-js-v3}
-{Amazon Web Service}.
-\newblock {Repozytorium AWS SDK dla JavaScript}.
-\newblock \url{https://github.com/aws/aws-sdk-js-v3}, 2025.
-\newblock Dostęp: 20.05.2025.
-
-\bibitem{aws-sdk-kotlin}
-{Amazon Web Service}.
-\newblock {Repozytorium AWS SDK dla Kotlin}.
-\newblock \url{https://github.com/awslabs/aws-sdk-kotlin}, 2025.
-\newblock Dostęp: 20.05.2025.
-
-\bibitem{awsLambdaDeveloperGuide}
-{Amazon Web Services}.
-\newblock Aws lambda developer guide.
-\newblock \url{https://docs.aws.amazon.com/lambda/latest/dg/welcome.html}.
-\newblock [Dostęp: 13.05.2025].
-
-\bibitem{amazonSnapstartDeveloperGUide}
-{Amazon Web Services}.
-\newblock Aws lambda snapstart developer guide.
-\newblock \url{https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html}.
-\newblock [Dostęp: 13.05.2025].
-
-\bibitem{awsSDKForKotlinDeveloperGuide}
-{Amazon Web Services}.
-\newblock Aws sdk for kotlin developer guide.
-\newblock \url{https://docs.aws.amazon.com/sdk-for-kotlin/latest/developer-guide/home.html}.
-\newblock [Dostęp: 13.05.2025].
-
-\bibitem{awsEc2Guide}
-{Amazon Web Services}.
-\newblock Amazon ec2 documentation, {2025}.
-\newblock Dostęp 21.03.2025 z https://docs.aws.amazon.com/ec2/.
-
-\bibitem{awsEcsDevGuide}
-{Amazon Web Services}.
-\newblock Amazon ecs developer guide, {2025}.
-\newblock Dostęp 21.03.2025 z https://docs.aws.amazon.com/AmazonECS/latest/developerguide.
-
-\bibitem{awsLambdaDocs}
-{Amazon Web Services}.
-\newblock Aws lambda documentation.
-\newblock \url{https://docs.aws.amazon.com/lambda/latest/dg/}, {2025}.
-\newblock Dostęp: 21.03.2025.
-
-\bibitem{awsLambdaPricing}
-{Amazon Web Services}.
-\newblock {AWS Lambda pricing}.
-\newblock \url{https://aws.amazon.com/lambda/pricing/}, {2025}.
-\newblock Dostęp: 20.05.2025.
-
-\bibitem{aws_what_is_aws}
-{Amazon Web Services}.
-\newblock What is aws?
-\newblock \url{https://aws.amazon.com/what-is-aws/}, 2025.
-\newblock Dostęp: 31.05.2025.
-
-\bibitem{8513710}
-D.~Bardsley, L.~Ryan, and J.~Howard.
-\newblock Serverless performance and optimization strategies.
-\newblock In {\em 2018 IEEE International Conference on Smart Cloud (SmartCloud)}, pages 19--26, 2018.
-
-\bibitem{DBLP:journals/corr/BergstromFRS13}
-L.~Bergstrom, M.~Fluet, J.~H. Reppy, and N.~Sandler.
-\newblock Practical inlining of functions with free variables.
-\newblock {\em CoRR}, abs/1306.1919, 2013.
-
-\bibitem{9803765}
-D.~Beronić, L.~Modrić, B.~Mihaljević, and A.~Radovan.
-\newblock Comparison of structured concurrency constructs in java and kotlin - virtual threads and coroutines.
-\newblock In {\em 2022 45th Jubilee International Convention on Information, Communication and Electronic Technology (MIPRO)}, pages 1466--1471, 2022.
-
-\bibitem{brooker2021restoringuniquenessmicrovmsnapshots}
-M.~Brooker, A.~C. Catangiu, M.~Danilov, A.~Graf, C.~MacCarthaigh, and A.~Sandu.
-\newblock Restoring uniqueness in microvm snapshots, 2021.
-
-\bibitem{10.1145/3458336.3465305}
-J.~Carreira, S.~Kohli, R.~Bruno, and P.~Fonseca.
-\newblock From warm to hot starts: leveraging runtimes for the serverless era.
-\newblock In {\em Proceedings of the Workshop on Hot Topics in Operating Systems}, HotOS '21, page 58–64, New York, NY, USA, 2021. Association for Computing Machinery.
-
-\bibitem{cartaxo2020rapidreviewssoftwareengineering}
-B.~Cartaxo, G.~Pinto, and S.~Soares.
-\newblock Rapid reviews in software engineering, 2020.
-
-\bibitem{Cavalheiro202389}
-A.~P. Cavalheiro and C.~Schepke.
-\newblock Exploring the serverless first strategy in cloud application development.
-\newblock pages 89 -- 94, 2023.
-\newblock Cited by: 0.
-
-\bibitem{10.1145/3377812.3382135}
-R.~Chatley and T.~Allerton.
-\newblock Nimbus: improving the developer experience for serverless applications.
-\newblock In {\em Proceedings of the ACM/IEEE 42nd International Conference on Software Engineering: Companion Proceedings}, ICSE '20, page 85–88, New York, NY, USA, 2020. Association for Computing Machinery.
-
-\bibitem{10.1145/3631295.3631394}
-X.~Chen, L.-H. Hung, R.~Cordingly, and W.~Lloyd.
-\newblock X86 vs. arm64: An investigation of factors influencing serverless performance.
-\newblock In {\em Proceedings of the 9th International Workshop on Serverless Computing}, WoSC '23, page 7–12, New York, NY, USA, 2023. Association for Computing Machinery.
-
-\bibitem{9946331}
-R.~Cordingly, S.~Xu, and W.~Lloyd.
-\newblock Function memory optimization for heterogeneous serverless platforms with cpu time accounting.
-\newblock In {\em 2022 IEEE International Conference on Cloud Engineering (IC2E)}, pages 104--115, 2022.
-
-\bibitem{Cordingly2020704}
-R.~Cordingly, H.~Yu, V.~Hoang, D.~Perez, D.~Foster, Z.~Sadeghi, R.~Hatchett, and W.~J. Lloyd.
-\newblock Implications of programming language selection for serverless data processing pipelines.
-\newblock page 704 – 711, 2020.
-\newblock Cited by: 21.
-
-\bibitem{cui2024serverless}
-Y.~Cui.
-\newblock Should "serverless" just mean "function-as-a-service"?, October 2024.
-\newblock Dostęp: 28.04.2025.
-
-\bibitem{9860368}
-J.~Dantas, H.~Khazaei, and M.~Litoiu.
-\newblock Application deployment strategies for reducing the cold start delay of aws lambda.
-\newblock In {\em 2022 IEEE 15th International Conference on Cloud Computing (CLOUD)}, pages 1--10, 2022.
-
-\bibitem{datadog_state_of_serverless}
-{Datadog}.
-\newblock The state of serverless.
-\newblock Web page, August 2023.
-\newblock Dostęp: 31.05.2025.
-
-\bibitem{EBRAHIMI2024103115}
-A.~Ebrahimi, M.~Ghobaei-Arani, and H.~Saboohi.
-\newblock Cold start latency mitigation mechanisms in serverless computing: Taxonomy, review, and future directions.
-\newblock {\em Journal of Systems Architecture}, 151:103115, 2024.
-
-\bibitem{eismann2021reviewserverlessusecases}
-S.~Eismann, J.~Scheuner, E.~van Eyk, M.~Schwinger, J.~Grohmann, N.~Herbst, C.~L. Abad, and A.~Iosup.
-\newblock A review of serverless use cases and their characteristics, 2021.
-
-\bibitem{ServerlessApplicationsWhyWhenAndHow}
-S.~Eismann, J.~Scheuner, E.~van Eyk, M.~Schwinger, J.~Grohmann, N.~Herbst, C.~L. Abad, and A.~Iosup.
-\newblock Serverless applications: Why, when, and how?
-\newblock {\em IEEE Software}, 38(1):32--39, 2021.
-
-\bibitem{Ekwe_Ekwe_2024}
-N.~Ekwe-Ekwe and L.~Amos.
-\newblock The state of faas: An analysis of public functions-as-a-service providers.
-\newblock In {\em 2024 IEEE 17th International Conference on Cloud Computing (CLOUD)}, pages 430--438. IEEE, July 2024.
-
-\bibitem{8567674}
-T.~Elgamal, A.~Sandur, K.~Nahrstedt, and G.~Agha.
-\newblock Costless: Optimizing cost of serverless computing through function fusion and placement.
-\newblock In {\em 2018 IEEE/ACM Symposium on Edge Computing (SEC)}, pages 300--312, 2018.
-
-\bibitem{FerreiraDosSantos2023}
-P.~O. Ferreira Dos~Santos, H.~Jorge De Moura~Costa, V.~R.~Q. Leithardt, and P.~Jorge Silveira~Ferreira.
-\newblock An alternative to faas cold start latency of low request frequency applications.
-\newblock 2023.
-\newblock Cited by: 0.
-
-\bibitem{Gajek_Plechawska-Wójcik_2024}
-P.~Gajek and M.~Plechawska-Wójcik.
-\newblock Performance comparison of the java and kotlin programming languages based on an auto-scroller mobile game.
-\newblock {\em Journal of Computer Sciences Institute}, 33:285--291, Dec. 2024.
-
-\bibitem{9027427}
-B.~C. Ghosh, S.~K. Addya, N.~B. Somy, S.~B. Nath, S.~Chakraborty, and S.~K. Ghosh.
-\newblock Caching techniques to improve latency in serverless architectures.
-\newblock In {\em 2020 International Conference on COMmunication Systems \& NETworkS (COMSNETS)}, pages 666--669, 2020.
-
-\bibitem{10.1214/aoms/1177705148}
-L.~A. Goodman.
-\newblock {Snowball Sampling}.
-\newblock {\em The Annals of Mathematical Statistics}, 32(1):148 -- 170, 1961.
-
-\bibitem{graalvm-reflection-jdk21}
-{GraalVM Team}.
-\newblock {\em Reflekcja w obrazie natywnym}, 2024.
-\newblock Dostęp: 13.05.2025.
-
-\bibitem{ibm_sdk_vs_api}
-{IBM Technology}.
-\newblock Sdk vs. api: What's the difference?
-\newblock \url{https://www.ibm.com/think/topics/api-vs-sdk}, 2021.
-\newblock Dostęp: 31.05.2025.
-
-\bibitem{Ivanov_Petrova_2024}
-D.~Ivanov and A.~Petrova.
-\newblock Serverless computing architectures and applications in aws.
-\newblock {\em MZ Journal of Artificial Intelligence}, 1(1):1--10, Jun. 2024.
-
-\bibitem{kotlinNativeLambdaRuntime}
-V.~Ivanovichev.
-\newblock {Kotlin Native Runtime for AWS Lambda}.
-\newblock \url{https://github.com/trueangle/kotlin-native-aws-lambda-runtime}.
-\newblock [Dostęp: 16.05.2025].
-
-\bibitem{8605773}
-D.~Jackson and G.~Clynch.
-\newblock An investigation of the impact of language runtime on the performance and cost of serverless functions.
-\newblock In {\em 2018 IEEE/ACM International Conference on Utility and Cloud Computing Companion (UCC Companion)}, pages 154--160, 2018.
-
-\bibitem{kotlinMultiplatformDev}
-JetBrains.
-\newblock {Kotlin Multiplatform Development}.
-\newblock \url{https://www.jetbrains.com/help/kotlin-multiplatform-dev}.
-\newblock [Dostęp: 15.05.2025].
-
-\bibitem{8844428}
-A.~Kaplunovich.
-\newblock Tolambda--automatic path to serverless architectures.
-\newblock In {\em 2019 IEEE/ACM 3rd International Workshop on Refactoring (IWoR)}, pages 1--8, 2019.
-
-\bibitem{kehoe_serverless_2018}
-B.~Kehoe.
-\newblock Serverless is a state of mind, 2018.
-\newblock Dostęp: 28.04.2025.
-
-\bibitem{9284261}
-D.~Kelly, F.~Glavin, and E.~Barrett.
-\newblock Serverless computing: Behind the scenes of major platforms.
-\newblock In {\em 2020 IEEE 13th International Conference on Cloud Computing (CLOUD)}, pages 304--312, 2020.
-
-\bibitem{KitchenhamProceduresSR}
-B.~Kitchenham.
-\newblock Procedures for performing systematic reviews.
-\newblock {\em Keele, UK, Keele Univ.}, 33, 08 2004.
-
-\bibitem{9754223}
-B.~Kitchenham, L.~Madeyski, and D.~Budgen.
-\newblock How should software engineering secondary studies include grey material?
-\newblock {\em IEEE Transactions on Software Engineering}, 49(2):872--882, 2023.
-
-\bibitem{8605774}
-K.~Kritikos and P.~Skrzypek.
-\newblock A review of serverless frameworks.
-\newblock In {\em 2018 IEEE/ACM International Conference on Utility and Cloud Computing Companion (UCC Companion)}, pages 161--168, 2018.
-
-\bibitem{10.1145/3491204.3543506}
-D.~Lambion, R.~Schmitz, R.~Cordingly, N.~Heydari, and W.~Lloyd.
-\newblock Characterizing x86 and arm serverless performance variation: A natural language processing case study.
-\newblock In {\em Companion of the 2022 ACM/SPEC International Conference on Performance Engineering}, ICPE '22, page 69–75, New York, NY, USA, 2022. Association for Computing Machinery.
-
-\bibitem{1281665}
-C.~Lattner and V.~Adve.
-\newblock Llvm: a compilation framework for lifelong program analysis \& transformation.
-\newblock In {\em International Symposium on Code Generation and Optimization, 2004. CGO 2004.}, pages 75--86, 2004.
-
-\bibitem{LEITNER2019340}
-P.~Leitner, E.~Wittern, J.~Spillner, and W.~Hummer.
-\newblock A mixed-method empirical study of function-as-a-service software development in industrial practice.
-\newblock {\em Journal of Systems and Software}, 149:340--359, 2019.
-
-\bibitem{8605779}
-W.~Lloyd, M.~Vu, B.~Zhang, O.~David, and G.~Leavesley.
-\newblock Improving application migration to serverless computing platforms: Latency mitigation with keep-alive workloads.
-\newblock In {\em 2018 IEEE/ACM International Conference on Utility and Cloud Computing Companion (UCC Companion)}, pages 195--200, 2018.
-
-\bibitem{wouldWiderAdoption}
-L.~Madeyski and B.~Kitchenham.
-\newblock Would wider adoption of reproducible research be beneficial for empirical software engineering research?
-\newblock {\em Journal of Intelligent \& Fuzzy Systems}, 32:1509--1521, 01 2017.
-
-\bibitem{8605777}
-J.~Manner, M.~Endreß, T.~Heckel, and G.~Wirtz.
-\newblock Cold start influencing factors in function as a service.
-\newblock In {\em 2018 IEEE/ACM International Conference on Utility and Cloud Computing Companion (UCC Companion)}, pages 181--188, 2018.
-
-\bibitem{menéndez2023performancebestpracticesusing}
-J.~M. Menéndez and M.~Bartlett.
-\newblock Performance best practices using java and aws lambda, 2023.
-
-\bibitem{9732138}
-M.~Nazari, S.~Goodarzy, E.~Keller, E.~Rozner, and S.~Mishra.
-\newblock Optimizing and extending serverless platforms: A survey.
-\newblock In {\em 2021 Eighth International Conference on Software Defined Systems (SDS)}, pages 1--8, 2021.
-
-\bibitem{9095731}
-J.~Nupponen and D.~Taibi.
-\newblock Serverless: What it is, what to do and what not to do.
-\newblock In {\em 2020 IEEE International Conference on Software Architecture Companion (ICSA-C)}, pages 49--50, 2020.
-
-\bibitem{oracle_jvm_spec}
-{Oracle Corporation}.
-\newblock The java virtual machine specification, java se 22 edition.
-\newblock \url{https://docs.oracle.com/javase/specs/jvms/se22/html/}, 2024.
-\newblock Dostęp: 31.05.2025.
-
-\bibitem{pawlik2019performanceconsiderationsexecutionlarge}
-M.~Pawlik, K.~Figiela, and M.~Malawski.
-\newblock Performance considerations on execution of large scale workflow applications on cloud functions, 2019.
-
-\bibitem{8116416}
-H.~Puripunpinyo and M.~Samadzadeh.
-\newblock Effect of optimizing java deployment artifacts on aws lambda.
-\newblock In {\em 2017 IEEE Conference on Computer Communications Workshops (INFOCOM WKSHPS)}, pages 438--443, 2017.
-
-\bibitem{9235063}
-D.~Quaresma, D.~Fireman, and T.~E. Pereira.
-\newblock Controlling garbage collection and request admission to improve performance of faas applications.
-\newblock In {\em 2020 IEEE 32nd International Symposium on Computer Architecture and High Performance Computing (SBAC-PAD)}, pages 175--182, 2020.
-
-\bibitem{quarkus-docs}
-{Quarkus}.
-\newblock {\em Dokumentacja Quarkus}.
-\newblock Red Hat, 2025.
-\newblock Dostęp: 13.05.2025.
-
-\bibitem{raza2021sok}
-A.~Raza, I.~Matta, N.~Akhtar, V.~Kalavri, and V.~Isahagian.
-\newblock {SoK: Function-As-A-Service: From An Application Developer’s Perspective}.
-\newblock {\em Journal of Systems Research}, 1(1), 2021.
-
-\bibitem{serverlessArchitectureMarketReport}
-Research and Markets.
-\newblock Serverless architecture market report 2025.
-\newblock \url{https://www.researchandmarkets.com/reports/5953253/serverless-architecture-market-report}, (2025).
-\newblock Dostęp: 20.03.2025.
-
-\bibitem{ritzal2020optimizing}
-R.~Ritzal.
-\newblock Optimizing java for serverless applications.
-\newblock Master's thesis, University of Applied Sciences FH Campus Wien, 2020.
-
-\bibitem{shrestha2019lambda}
-S.~Shrestha.
-\newblock Comparing programming languages used in aws lambda for serverless architecture.
-\newblock Bachelor's thesis, Theseus, 2019.
-
-\bibitem{stackoverflow_survey_2024}
-{Stack Overflow}.
-\newblock 2024 developer survey - most popular technologies: Programming, scripting, and markup languages.
-\newblock Web page, 2024.
-\newblock Dostęp: 31.05.2025.
-
-\bibitem{9912641}
-D.~Taibi, B.~Kehoe, and D.~Poccia.
-\newblock Serverless: From bad practices to good solutions.
-\newblock In {\em 2022 IEEE International Conference on Service-Oriented System Engineering (SOSE)}, pages 85--92, 2022.
-
-\bibitem{SpotBugsProject}
-{The SpotBugs team}.
-\newblock Spotbugs static analysis for java.
-\newblock \url{https://spotbugs.github.io/}.
-\newblock Dostęp: 13.05.2025.
-
-\bibitem{vanDonkersgoed2023postnl}
-L.~van Donkersgoed.
-\newblock Postnl's serverless journey: Business overview, oct 2023.
-\newblock Dostęp: 04.05.2025.
-
-\bibitem{SpecRgCloudGroupVisionOnThePerformanceChallengesOfFaas}
-E.~van Eyk, A.~Iosup, C.~L. Abad, J.~Grohmann, and S.~Eismann.
-\newblock A spec rg cloud group's vision on the performance challenges of faas cloud architectures.
-\newblock In {\em Companion of the 2018 ACM/SPEC International Conference on Performance Engineering}, page 21–24, New York, NY, USA, 2018. Association for Computing Machinery.
-
-\bibitem{ServerlessIsMoreFromPaaSToPresentCloudComputing}
-E.~van Eyk, L.~Toader, S.~Talluri, L.~Versluis, A.~Uță, and A.~Iosup.
-\newblock Serverless is more: From paas to present cloud computing.
-\newblock {\em IEEE Internet Computing}, 22(5):8--17, 2018.
-
-\bibitem{riseOfThePlanetOfServerlessComputing}
-J.~Wen, Z.~Chen, X.~Jin, and X.~Liu.
-\newblock Rise of the planet of serverless computing: A systematic review.
-\newblock {\em ACM Trans. Softw. Eng. Methodol.}, 32(5), 2023.
-
-\bibitem{doi:10.1177/0739456X17723971}
-Y.~Xiao and M.~Watson.
-\newblock Guidance on conducting a systematic literature review.
-\newblock {\em Journal of Planning Education and Research}, 39(1):93--112, 2019.
-
-\bibitem{10.1145/3419111.3421280}
-T.~Yu, Q.~Liu, D.~Du, Y.~Xia, B.~Zang, Z.~Lu, P.~Yang, C.~Qin, and H.~Chen.
-\newblock Characterizing serverless platforms with serverlessbench.
-\newblock In {\em Proceedings of the 11th ACM Symposium on Cloud Computing}, SoCC '20, page 30–44, New York, NY, USA, 2020. Association for Computing Machinery.
-
-\bibitem{8756917}
-M.~Šipek, B.~Mihaljević, and A.~Radovan.
-\newblock Exploring aspects of polyglot high-performance virtual machine graalvm.
-\newblock In {\em 2019 42nd International Convention on Information and Communication Technology, Electronics and Microelectronics (MIPRO)}, pages 1671--1676, 2019.
-
-\bibitem{9245290}
-M.~Šipek, D.~Muharemagić, B.~Mihaljević, and A.~Radovan.
-\newblock Enhancing performance of cloud-based software applications with graalvm and quarkus.
-\newblock In {\em 2020 43rd International Convention on Information, Communication and Electronic Technology (MIPRO)}, pages 1746--1751, 2020.
-
-\end{thebibliography}
