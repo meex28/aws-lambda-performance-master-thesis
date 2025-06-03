@@ -283,6 +283,11 @@ W.~Lloyd, M.~Vu, B.~Zhang, O.~David, and G.~Leavesley.
 \newblock Improving application migration to serverless computing platforms: Latency mitigation with keep-alive workloads.
 \newblock In {\em 2018 IEEE/ACM International Conference on Utility and Cloud Computing Companion (UCC Companion)}, pages 195--200, 2018.
 
+\bibitem{wouldWiderAdoption}
+L.~Madeyski and B.~Kitchenham.
+\newblock Would wider adoption of reproducible research be beneficial for empirical software engineering research?
+\newblock {\em Journal of Intelligent \& Fuzzy Systems}, 32:1509--1521, 01 2017.
+
 \bibitem{8605777}
 J.~Manner, M.~Endreß, T.~Heckel, and G.~Wirtz.
 \newblock Cold start influencing factors in function as a service.
