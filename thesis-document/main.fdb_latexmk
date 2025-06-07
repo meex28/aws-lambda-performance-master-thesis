@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1749290333.89132 "main.bcf" "main.bbl" "main" 1749292004.84891 0
-  "main.bcf" 1749292004.68103 128606 5f12e5e3ebab66e15e2fbf510edef896 "pdflatex"
+["biber main"] 1749290333.89132 "main.bcf" "main.bbl" "main" 1749297975.23179 0
+  "main.bcf" 1749297974.8712 128606 5f12e5e3ebab66e15e2fbf510edef896 "pdflatex"
   "sources/bibliography.bib" 1749286801.90971 46918 c1e1ce76a449d4a769f94cd1ab76d188 ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1749291998.89665 "/Users/piotr/dev/aws-lambda-performance-master-thesis/thesis-document/main.tex" "main.pdf" "main" 1749292004.84925 0
+["pdflatex"] 1749297969.12897 "/Users/piotr/dev/aws-lambda-performance-master-thesis/thesis-document/main.tex" "main.pdf" "main" 1749297975.23218 0
   "/Users/piotr/dev/aws-lambda-performance-master-thesis/thesis-document/main.tex" 1748983640.37093 2723 b91ce0189eee9f0a4a25467622ca14c8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -307,7 +307,7 @@
   "chapters/wyniki/development-process.tex" 1748515926.12681 4362 5d4539e5a5ecb362cf42cb06d4423c82 ""
   "chapters/wyniki/functions-costs.tex" 1748983154.74345 2358 dac78b9d0bcfbd1e68f33cd51f4e8a94 ""
   "chapters/wyniki/main.tex" 1749287030.19436 747 93e2dbbc8d4d031ee1453745649ff8a6 ""
-  "chapters/wyniki/warm-start.tex" 1749291992.42026 17001 9e48f4f11d29463a4edfde8521e11a2c ""
+  "chapters/wyniki/warm-start.tex" 1749297966.02911 17154 d62702463ef4934a1b21d5cb8f8dcdf7 ""
   "chapters/wyniki/wwf.tex" 1748721659.0743 2732 1629b943adee750f95c1aa45e451a023 ""
   "chapters/zakonczenie/main.tex" 1748983640.37096 7459 b18ebf2915027f43bc6061e6ef9ebde8 ""
   "charts/aws_lambda_lifecycle.drawio.png" 1746548141.47446 47267 2942f91f9d8354f0a97699c8f1fa8248 ""
@@ -331,15 +331,15 @@
   "charts/sample-lambda-code.png" 1748525437.21478 122355 43f2e22a9196aec5faa75fe5e15c437e ""
   "charts/snapstart.png" 1747166600.43648 34764 c43215429c0695a75ee03953cacf9371 ""
   "charts/warm_cold_starts_lambda.png" 1746546942.012 42675 885c6ed02a874e6f4e4e06e114eec961 ""
-  "latex-settings.tex" 1749290687.21761 15784 b2613c32c3728f689953a9153037b01a ""
-  "main.aux" 1749292004.63295 52607 4234d209073cc13bd915cbdb8103e449 "pdflatex"
+  "latex-settings.tex" 1749297557.27648 15784 b2613c32c3728f689953a9153037b01a ""
+  "main.aux" 1749297974.82986 52671 2a08b5877be7b0896097c04781c4f9cd "pdflatex"
   "main.bbl" 1749290335.29601 151071 09f84b90d9b8f38f952f468f4bd2f7b4 "biber main"
-  "main.lof" 1749292004.68192 4067 9e241267c5c39a3a82c390f61537292d "pdflatex"
-  "main.lot" 1749292004.68195 2496 0108999370b9159294b1d5e483e805f1 "pdflatex"
-  "main.out" 1749292004.67816 7145 91978460d570b31d78f06612b4ecfedd "pdflatex"
-  "main.run.xml" 1749292004.6818 2314 ef83e421653ff3ee274ec82bc9aace72 "pdflatex"
+  "main.lof" 1749297974.87214 4067 9e241267c5c39a3a82c390f61537292d "pdflatex"
+  "main.lot" 1749297974.87216 2528 1e0c193bf775bd172c085bbd138ce7c2 "pdflatex"
+  "main.out" 1749297974.86846 7145 91978460d570b31d78f06612b4ecfedd "pdflatex"
+  "main.run.xml" 1749297974.87202 2314 ef83e421653ff3ee274ec82bc9aace72 "pdflatex"
   "main.tex" 1748983640.37093 2723 b91ce0189eee9f0a4a25467622ca14c8 ""
-  "main.toc" 1749292004.68188 3862 b34becb1987994074491ec445f5fb6a7 "pdflatex"
+  "main.toc" 1749297974.87211 3862 b34becb1987994074491ec445f5fb6a7 "pdflatex"
   "title_page/title_page.pdf" 1743361834 144139 62ae5feb3df1e7daff15bf715bfb2fa9 ""
   (generated)
   "main.aux"

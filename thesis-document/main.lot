@@ -12,9 +12,9 @@
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {5.1}{\ignorespaces Porównanie średnich, median oraz odchyleń standardowych czasów działania funkcji podczas ciepłego startu względem funkcji bazowej (Java JVM) [źródło: opracowanie własne]}}{63}{table.caption.21}%
 \contentsline {table}{\numberline {5.2}{\ignorespaces Wyniki testu Kruskal-Wallis dla wyników pomiaru czasu działania funkcji podczas ciepłych startów [źródło: opracowanie własne]}}{64}{table.caption.23}%
-\contentsline {table}{\numberline {5.3}{\ignorespaces Wyniki testu Kruskal-Wallis dla wyników pomiaru czasu działania funkcji podczas zimnych startów [źródło: opracowanie własne]}}{64}{table.caption.24}%
-\contentsline {table}{\numberline {5.4}{\ignorespaces Wartości p testu Dunn dla czasów działania funkcji podczas ciepłych startów (\textbf {istotne różnice pogrubione}) [źródło: opracowanie własne]}}{65}{table.caption.25}%
-\contentsline {table}{\numberline {5.5}{\ignorespaces Wartości p testu Dunn dla czasów działania funkcji podczas zimnych startów (\textbf {istotne różnice pogrubione}) [źródło: opracowanie własne]}}{66}{table.caption.26}%
-\contentsline {table}{\numberline {5.6}{\ignorespaces Porównanie średnich, median oraz odchyleń standardowych czasów działania funkcji podczas zimnego startu względem funkcji bazowej (Java JVM) [źródło: opracowanie własne]}}{68}{table.caption.28}%
-\contentsline {table}{\numberline {5.7}{\ignorespaces Dostępność AWS SDK dla rodzajów funkcji [źródło: opracowanie własne]}}{74}{table.caption.34}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Porównanie czasów działania funkcji podczas ciepłych startów poprzez wartość p testu Dunn (\textbf {istotne różnice pogrubione}) [źródło: opracowanie własne]}}{65}{table.caption.24}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces Porównanie średnich, median oraz odchyleń standardowych czasów działania funkcji podczas zimnego startu względem funkcji bazowej (Java JVM) [źródło: opracowanie własne]}}{67}{table.caption.26}%
+\contentsline {table}{\numberline {5.5}{\ignorespaces Wyniki testu Kruskal-Wallis dla wyników pomiaru czasu działania funkcji podczas zimnych startów [źródło: opracowanie własne]}}{69}{table.caption.28}%
+\contentsline {table}{\numberline {5.6}{\ignorespaces Porównanie czasów działania funkcji podczas zimnych startów poprzez wartość p testu Dunn (\textbf {istotne różnice pogrubione}) [źródło: opracowanie własne]}}{70}{table.caption.29}%
+\contentsline {table}{\numberline {5.7}{\ignorespaces Dostępność AWS SDK dla rodzajów funkcji [źródło: opracowanie własne]}}{75}{table.caption.34}%
 \addvspace {10\p@ }

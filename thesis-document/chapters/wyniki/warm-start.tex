@@ -126,112 +126,57 @@ Podobna zależność występuje dla funkcji Kotlin/Native, które osiągają nie
 \end{table}
 
 \begin{table}[H]
-    \centering
-    \caption{Wyniki testu Kruskal-Wallis dla wyników pomiaru czasu działania funkcji podczas zimnych startów [źródło: opracowanie własne]}
-    \begin{tabular}{|c|c|}
-    \hline
-    \textbf{Wielkość pamięci [MB]} & \textbf{Wartość p} \\
-    \hline
-    128 & $5.15 \times 10^{-89}$ \\
-    \hline
-    256 & $5.24 \times 10^{-102}$ \\
-    \hline
-    512 & $8.86 \times 10^{-102}$ \\
-    \hline
-    1024 & $6.51 \times 10^{-91}$ \\
-    \hline
-    2048 & $3.94 \times 10^{-99}$ \\
-    \hline
-    \end{tabular}
-    \label{table:kruskal_wallis_test_cold_starts}
-\end{table}
-
-\begin{table}[H]
-    \caption{Wartości p testu Dunn dla czasów działania funkcji podczas ciepłych startów (\textbf{istotne różnice pogrubione}) [źródło: opracowanie własne]}
+    \caption{Porównanie czasów działania funkcji podczas ciepłych startów poprzez wartość p testu Dunn (\textbf{istotne różnice pogrubione}) [źródło: opracowanie własne]}
     \centering
     \footnotesize
-    \begin{tabular}{|>{\raggedright\arraybackslash}p{6cm}|>{\raggedright\arraybackslash}p{1.5cm}|>{\raggedright\arraybackslash}p{1.5cm}|>{\raggedright\arraybackslash}p{1.5cm}|>{\raggedright\arraybackslash}p{1.5cm}|>{\raggedright\arraybackslash}p{1.5cm}|}
+    \begin{tabular}{|p{3cm}|>{\raggedright\arraybackslash}p{3cm}|>{\raggedright\arraybackslash}p{1.5cm}|>{\raggedright\arraybackslash}p{1.5cm}|>{\raggedright\arraybackslash}p{1.5cm}|>{\raggedright\arraybackslash}p{1.5cm}|>{\raggedright\arraybackslash}p{1.5cm}|}
     \hline
-    \multirow{2}{*}{\textbf{Porównywane funkcje}} & \multicolumn{5}{c|}{\textbf{Wielkość pamięci [MB]}} \\
-    \cline{2-6}
-    & \textbf{128} & \textbf{256} & \textbf{512} & \textbf{1024} & \textbf{2048} \\
+    \multirow{2}{*}{\textbf{Pierwsza funkcja}} & \multirow{2}{*}{\textbf{Druga funkcja}} & \multicolumn{5}{c|}{\textbf{Wielkość pamięci [MB]}} \\
+    \cline{3-7}
+    & & \textbf{128} & \textbf{256} & \textbf{512} & \textbf{1024} & \textbf{2048} \\
     \hline
-    Java GraalVM i Java JVM & $\bm{5.44 \times 10^{-16}}$ & 0.7368 & $\bm{5.51 \times 10^{-11}}$ & $\bm{1.93 \times 10^{-9}}$ & $\bm{2.08 \times 10^{-16}}$ \\ 
+    \multirow{6}{*}{Java GraalVM} & Java JVM & $\bm{5.44 \times 10^{-16}}$ & 0.7368 & $\bm{5.51 \times 10^{-11}}$ & $\bm{1.93 \times 10^{-9}}$ & $\bm{2.08 \times 10^{-16}}$ \\ 
+    \cline{2-7}
+    & Java JVM + SnapStart & $\bm{1.29 \times 10^{-25}}$ & $\bm{4.78 \times 10^{-8}}$ & $\bm{1.48 \times 10^{-19}}$ & $\bm{2.65 \times 10^{-21}}$ & $\bm{2.52 \times 10^{-34}}$ \\
+    \cline{2-7}
+    & Kotlin JVM & $\bm{9.37 \times 10^{-10}}$ & 0.6159 & $\bm{9.01 \times 10^{-5}}$ & $\bm{4.54 \times 10^{-32}}$ & $\bm{5.90 \times 10^{-19}}$ \\
+    \cline{2-7}
+    & Kotlin JVM + SnapStart & $\bm{4.27 \times 10^{-32}}$ & $\bm{5.80 \times 10^{-10}}$ & $\bm{2.98 \times 10^{-18}}$ & $\bm{9.73 \times 10^{-21}}$ & $\bm{8.19 \times 10^{-33}}$ \\
+    \cline{2-7}
+    & Kotlin/JS & $\bm{6.55 \times 10^{-15}}$ & $\bm{3.89 \times 10^{-10}}$ & $\bm{3.05 \times 10^{-9}}$ & $\bm{3.32 \times 10^{-20}}$ & $\bm{8.88 \times 10^{-39}}$ \\
+    \cline{2-7}
+    & Kotlin/Native & $\bm{9.37 \times 10^{-10}}$ & 1.0000 & $\bm{3.86 \times 10^{-34}}$ & $\bm{1.11 \times 10^{-66}}$ & $\bm{1.37 \times 10^{-19}}$ \\
     \hline
-    Java GraalVM i Java JVM + SnapStart & $\bm{1.29 \times 10^{-25}}$ & $\bm{4.78 \times 10^{-8}}$ & $\bm{1.48 \times 10^{-19}}$ & $\bm{2.65 \times 10^{-21}}$ & $\bm{2.52 \times 10^{-34}}$ \\
+    \multirow{5}{*}{Java JVM} & Java JVM + SnapStart & 0.0740 & \textbf{0.0042} & 0.0835 & \textbf{0.0359} & $\bm{1.89 \times 10^{-10}}$ \\
+    \cline{2-7}
+    & Kotlin JVM & 0.3281 & 1.0000 & 0.0893 & 0.4362 & \textbf{0.0153} \\
+    \cline{2-7}
+    & Kotlin JVM + SnapStart & \textbf{0.0011} & $\bm{5.69 \times 10^{-4}}$ & 0.1263 & \textbf{0.0329} & $\bm{2.38 \times 10^{-9}}$ \\
+    \cline{2-7}
+    & Kotlin/JS & 0.1164 & $\bm{6.92 \times 10^{-4}}$ & 0.1195 & 0.1252 & $\bm{8.36 \times 10^{-12}}$ \\
+    \cline{2-7}
+    & Kotlin/Native & 0.3281 & 1.0000 & $\bm{5.70 \times 10^{-4}}$ & $\bm{5.29 \times 10^{-8}}$ & \textbf{0.0104} \\
     \hline
-    Java GraalVM i Kotlin JVM & $\bm{9.37 \times 10^{-10}}$ & 0.6159 & $\bm{9.01 \times 10^{-5}}$ & $\bm{4.54 \times 10^{-32}}$ & $\bm{5.90 \times 10^{-19}}$ \\
+    \multirow{4}{\linewidth}{Java JVM + SnapStart} & Kotlin JVM & $\bm{9.08 \times 10^{-5}}$ & \textbf{0.0057} & $\bm{8.12 \times 10^{-6}}$ & 0.4362 & \textbf{0.0153} \\
+    \cline{2-7}
+    & Kotlin JVM + SnapStart & 0.9682 & 1.0000 & 1.0000 & 1.0000 & 1.0000 \\
+    \cline{2-7}
+    & Kotlin/JS & $\bm{7.12 \times 10^{-7}}$ & 1.0000 & $\bm{1.09 \times 10^{-6}}$ & 1.0000 & 1.0000 \\
+    \cline{2-7}
+    & Kotlin/Native & $\bm{9.08 \times 10^{-5}}$ & $\bm{1.06 \times 10^{-4}}$ & 1.0000 & 0.3242 & \textbf{0.0180} \\
     \hline
-    Java GraalVM i Kotlin JVM + SnapStart & $\bm{4.27 \times 10^{-32}}$ & $\bm{5.80 \times 10^{-10}}$ & $\bm{2.98 \times 10^{-18}}$ & $\bm{9.73 \times 10^{-21}}$ & $\bm{8.19 \times 10^{-33}}$ \\
+    \multirow{3}{*}{Kotlin JVM} & Kotlin JVM + SnapStart & $\bm{1.59 \times 10^{-7}}$ & $\bm{7.84 \times 10^{-4}}$ & $\bm{3.48 \times 10^{-5}}$ & 0.4362 & \textbf{0.0349} \\
+    \cline{2-7}
+    & Kotlin/JS & 1.0000 & $\bm{9.48 \times 10^{-4}}$ & 1.0000 & 0.8655 & \textbf{0.0106} \\
+    \cline{2-7}
+    & Kotlin/Native & 1.0000 & 1.0000 & $\bm{5.51 \times 10^{-11}}$ & $\bm{5.91 \times 10^{-8}}$ & 1.0000 \\
     \hline
-    Java GraalVM i Kotlin/JS & $\bm{6.55 \times 10^{-15}}$ & $\bm{3.89 \times 10^{-10}}$ & $\bm{3.05 \times 10^{-9}}$ & $\bm{3.32 \times 10^{-20}}$ & $\bm{8.88 \times 10^{-39}}$ \\
+    \multirow{2}{\linewidth}{Kotlin JVM + SnapStart} & Kotlin/JS & $\bm{5.86 \times 10^{-11}}$ & 1.0000 & $\bm{8.12 \times 10^{-6}}$ & 1.0000 & 1.0000 \\
+    \cline{2-7}
+    & Kotlin/Native & $\bm{1.59 \times 10^{-7}}$ & $\bm{7.13 \times 10^{-6}}$ & 0.8982 & 0.4362 & \textbf{0.0427} \\
     \hline
-    Java GraalVM i Kotlin/Native & $\bm{9.37 \times 10^{-10}}$ & 1.0000 & $\bm{3.86 \times 10^{-34}}$ & $\bm{1.11 \times 10^{-66}}$ & $\bm{1.37 \times 10^{-19}}$ \\
-    \hline
-    Java JVM + SnapStart i Kotlin JVM & $\bm{9.08 \times 10^{-5}}$ & \textbf{0.0057} & $\bm{8.12 \times 10^{-6}}$ & 0.4362 & \textbf{0.0153} \\
-    \hline
-    Java JVM + SnapStart i Kotlin JVM + SnapStart & 0.9682 & 1.0000 & 1.0000 & 1.0000 & 1.0000 \\
-    \hline
-    Java JVM + SnapStart i Kotlin/JS & $\bm{7.12 \times 10^{-7}}$ & 1.0000 & $\bm{1.09 \times 10^{-6}}$ & 1.0000 & 1.0000 \\
-    \hline
-    Java JVM + SnapStart i Kotlin/Native & $\bm{9.08 \times 10^{-5}}$ & $\bm{1.06 \times 10^{-4}}$ & 1.0000 & 0.3242 & \textbf{0.0180} \\
-    \hline
-    Java JVM i Java JVM + SnapStart & 0.0740 & \textbf{0.0042} & 0.0835 & \textbf{0.0359} & $\bm{1.89 \times 10^{-10}}$ \\
-    \hline
-    Java JVM i Kotlin JVM & 0.3281 & 1.0000 & 0.0893 & 0.4362 & \textbf{0.0153} \\
-    \hline
-    Java JVM i Kotlin JVM + SnapStart & \textbf{0.0011} & $\bm{5.69 \times 10^{-4}}$ & 0.1263 & \textbf{0.0329} & $\bm{2.38 \times 10^{-9}}$ \\
-    \hline
-    Java JVM i Kotlin/JS & 0.1164 & $\bm{6.92 \times 10^{-4}}$ & 0.1195 & 0.1252 & $\bm{8.36 \times 10^{-12}}$ \\
-    \hline
-    Java JVM i Kotlin/Native & 0.3281 & 1.0000 & $\bm{5.70 \times 10^{-4}}$ & $\bm{5.29 \times 10^{-8}}$ & \textbf{0.0104} \\
-    \hline
-    Kotlin JVM + SnapStart i Kotlin/JS & $\bm{5.86 \times 10^{-11}}$ & 1.0000 & $\bm{8.12 \times 10^{-6}}$ & 1.0000 & 1.0000 \\
-    \hline
-    Kotlin JVM + SnapStart i Kotlin/Native & $\bm{1.59 \times 10^{-7}}$ & $\bm{7.13 \times 10^{-6}}$ & 0.8982 & 0.4362 & \textbf{0.0427} \\
-    \hline
-    Kotlin JVM i Kotlin JVM + SnapStart & $\bm{1.59 \times 10^{-7}}$ & $\bm{7.84 \times 10^{-4}}$ & $\bm{3.48 \times 10^{-5}}$ & 0.4362 & \textbf{0.0349} \\
-    \hline
-    Kotlin JVM i Kotlin/JS & 1.0000 & $\bm{9.48 \times 10^{-4}}$ & 1.0000 & 0.8655 & \textbf{0.0106} \\
-    \hline
-    Kotlin JVM i Kotlin/Native & 1.0000 & 1.0000 & $\bm{5.51 \times 10^{-11}}$ & $\bm{5.91 \times 10^{-8}}$ & 1.0000 \\
-    \hline
-    Kotlin/JS i Kotlin/Native & 1.0000 & $\bm{8.07 \times 10^{-6}}$ & $\bm{2.04 \times 10^{-17}}$ & \textbf{0.0466} & \textbf{0.0153} \\
+    Kotlin/JS & Kotlin/Native & 1.0000 & $\bm{8.07 \times 10^{-6}}$ & $\bm{2.04 \times 10^{-17}}$ & \textbf{0.0466} & \textbf{0.0153} \\
     \hline
     \end{tabular}
     \label{table:dunn_results_warm_starts}
-\end{table}
-
-\begin{table}[H]
-    \caption{Wartości p testu Dunn dla czasów działania funkcji podczas zimnych startów (\textbf{istotne różnice pogrubione}) [źródło: opracowanie własne]}
-    \centering
-    \footnotesize
-    \begin{tabular}{|>{\raggedright\arraybackslash}p{6cm}|>{\raggedright\arraybackslash}p{1.5cm}|>{\raggedright\arraybackslash}p{1.5cm}|>{\raggedright\arraybackslash}p{1.5cm}|>{\raggedright\arraybackslash}p{1.5cm}|>{\raggedright\arraybackslash}p{1.5cm}|}
-    \hline
-    \multirow{2}{*}{\textbf{Porównywane funkcje}} & \multicolumn{5}{c|}{\textbf{Wielkość pamięci [MB]}} \\
-    \cline{2-6}
-    & \textbf{128} & \textbf{256} & \textbf{512} & \textbf{1024} & \textbf{2048} \\ \hline
-    Java GraalVM i Java JVM & $\bm{1.02 \times 10^{-12}}$ & $\bm{8.69 \times 10^{-10}}$ & $\bm{3.02 \times 10^{-14}}$ & $\bm{2.54 \times 10^{-20}}$ & $\bm{6.40 \times 10^{-18}}$ \\ \hline
-    Java GraalVM i Java JVM + SnapStart & $\bm{6.02 \times 10^{-09}}$ & $\bm{2.31 \times 10^{-05}}$ & 0.0851 & \textbf{0.0064} & $\bm{3.09 \times 10^{-07}}$ \\ \hline
-    Java GraalVM i Kotlin JVM & $\bm{7.80 \times 10^{-29}}$ & $\bm{5.31 \times 10^{-17}}$ & $\bm{5.62 \times 10^{-07}}$ & $\bm{5.09 \times 10^{-06}}$ & 0.1048 \\ \hline
-    Java GraalVM i Kotlin JVM + SnapStart & $\bm{3.86 \times 10^{-40}}$ & $\bm{1.64 \times 10^{-25}}$ & $\bm{1.47 \times 10^{-17}}$ & $\bm{1.36 \times 10^{-14}}$ & $\bm{8.43 \times 10^{-14}}$ \\ \hline
-    Java GraalVM i Kotlin/JS & 0.1224 & 0.3735 & 0.0851 & \textbf{0.0064} & 0.0654 \\ \hline
-    Java GraalVM i Kotlin/Native & 0.0766 & $\bm{1.29 \times 10^{-05}}$ & $\bm{1.32 \times 10^{-08}}$ & $\bm{1.86 \times 10^{-07}}$ & $\bm{1.74 \times 10^{-08}}$ \\ \hline
-    Java JVM + SnapStart i Kotlin JVM & $\bm{4.08 \times 10^{-11}}$ & \textbf{0.0003} & \textbf{0.0065} & 0.1166 & \textbf{0.0043} \\ \hline
-    Java JVM + SnapStart i Kotlin JVM + SnapStart & $\bm{1.14 \times 10^{-20}}$ & $\bm{2.52 \times 10^{-09}}$ & $\bm{3.67 \times 10^{-11}}$ & $\bm{3.47 \times 10^{-06}}$ & \textbf{0.0025} \\ \hline
-    Java JVM + SnapStart i Kotlin/JS & $\bm{3.02 \times 10^{-05}}$ & $\bm{1.57 \times 10^{-05}}$ & $\bm{1.15 \times 10^{-05}}$ & $\bm{2.12 \times 10^{-11}}$ & $\bm{3.57 \times 10^{-18}}$ \\ \hline
-    Java JVM + SnapStart i Kotlin/Native & $\bm{3.33 \times 10^{-17}}$ & $\bm{4.13 \times 10^{-25}}$ & $\bm{1.49 \times 10^{-18}}$ & $\bm{2.41 \times 10^{-18}}$ & $\bm{1.20 \times 10^{-46}}$ \\ \hline
-    Java JVM i Java JVM + SnapStart & \textbf{0.0337} & 0.1140 & $\bm{1.32 \times 10^{-08}}$ & $\bm{1.80 \times 10^{-10}}$ & $\bm{7.08 \times 10^{-06}}$ \\ \hline
-    Java JVM i Kotlin JVM & \textbf{0.0030} & 0.1629 & \textbf{0.0007} & $\bm{3.35 \times 10^{-08}}$ & $\bm{2.92 \times 10^{-11}}$ \\ \hline
-    Java JVM i Kotlin JVM + SnapStart & $\bm{3.73 \times 10^{-08}}$ & \textbf{0.0003} & 0.4993 & 0.1074 & 0.1773 \\ \hline
-    Java JVM i Kotlin/JS & $\bm{8.88 \times 10^{-09}}$ & $\bm{4.31 \times 10^{-11}}$ & $\bm{5.82 \times 10^{-28}}$ & $\bm{4.31 \times 10^{-45}}$ & $\bm{3.07 \times 10^{-32}}$ \\ \hline
-    Java JVM i Kotlin/Native & $\bm{8.05 \times 10^{-21}}$ & $\bm{1.30 \times 10^{-34}}$ & $\bm{3.63 \times 10^{-53}}$ & $\bm{2.12 \times 10^{-51}}$ & $\bm{1.05 \times 10^{-60}}$ \\ \hline
-    Kotlin JVM + SnapStart i Kotlin/JS & $\bm{2.11 \times 10^{-33}}$ & $\bm{7.28 \times 10^{-33}}$ & $\bm{3.42 \times 10^{-34}}$ & $\bm{9.07 \times 10^{-37}}$ & $\bm{1.60 \times 10^{-26}}$ \\ \hline
-    Kotlin JVM + SnapStart i Kotlin/Native & $\bm{6.09 \times 10^{-55}}$ & $\bm{1.66 \times 10^{-69}}$ & $\bm{1.53 \times 10^{-63}}$ & $\bm{2.23 \times 10^{-43}}$ & $\bm{3.23 \times 10^{-53}}$ \\ \hline
-    Kotlin JVM i Kotlin JVM + SnapStart & \textbf{0.0217} & \textbf{0.0428} & $\bm{1.42 \times 10^{-05}}$ & \textbf{0.0003} & $\bm{5.74 \times 10^{-08}}$ \\ \hline
-    Kotlin JVM i Kotlin/JS & $\bm{1.02 \times 10^{-22}}$ & $\bm{9.07 \times 10^{-22}}$ & $\bm{9.31 \times 10^{-19}}$ & $\bm{5.47 \times 10^{-22}}$ & $\bm{7.01 \times 10^{-05}}$ \\ \hline
-    Kotlin JVM i Kotlin/Native & $\bm{5.75 \times 10^{-42}}$ & $\bm{2.79 \times 10^{-55}}$ & $\bm{2.93 \times 10^{-46}}$ & $\bm{3.78 \times 10^{-29}}$ & $\bm{1.03 \times 10^{-15}}$ \\ \hline
-    Kotlin/JS i Kotlin/Native & \textbf{0.0013} & $\bm{1.05 \times 10^{-12}}$ & $\bm{2.99 \times 10^{-05}}$ & \textbf{0.0041} & \textbf{0.0004} \\ \hline
-    \end{tabular}
-    \label{table:dunn_results_cold_starts}
 \end{table}
