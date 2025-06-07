@@ -33,10 +33,11 @@ Pozytywny wpływ mechanizmu inline został przedstawiony przez Bergstrom i innyc
 
 Innym istotnym elementem Kotlina wspierającym wydajność są korutyny (ang. coroutines).
 Mogą być one użyteczne zwłaszcza w kontekście operacji wejścia-wyjścia (I/O).
+Nie pozwolą one na przyspieszenie samego transferu danych, lecz na znacznie efektywniejsze zarządzanie zasobami systemowymi w trakcie oczekiwania na zakończenie tej operacji.
 Systemy oparte o usługę AWS Lambda często integrowane są z zewnętrznymi serwisami (co zostało zauważone w ramach przeglądu literatury w Rozdziale \ref{chapter:przeglad_literatury}).
 Wymaga to komunikacji opartej o operacje sieciowe.
 Tradycyjne podejście oparte na wątkach może konsumować dużą ilość zasobów serwera i prowadzić do blokowania wykonania.
-Korutyny pozwalają na pisanie asynchronicznego, nieblokującego kodu w sposób bardziej sekwencyjny i czytelny \cite{kotlinlangKotlinDocs}.
+Korutyny poprzez mechanizm zawieszania pozwalają na pisanie asynchronicznego, nieblokującego kodu w sposób bardziej sekwencyjny i czytelny \cite{kotlinlangKotlinDocs}.
 Na lepszą wydajność korutyn w porównaniu z tradycyjnymi wątkami wskazali Beronić i inni autorzy \cite{9803765}.
 
 Implementacja mechanizmów poprawiających wydajność w języku programowania, pozwala następnie na ich użycie w bibliotekach, które są wykorzystywane przez programistów.

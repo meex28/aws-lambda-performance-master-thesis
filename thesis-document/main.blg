@@ -1,0 +1,18 @@
+[0] Config.pm:308> INFO - This is Biber 2.20
+[0] Config.pm:311> INFO - Logfile is 'main.blg'
+[34] biber-darwin:340> INFO - === sob cze  7, 2025, 22:25:34
+[44] Biber.pm:420> INFO - Reading 'main.bcf'
+[111] Biber.pm:994> INFO - Found 83 citekeys in bib section 0
+[119] Biber.pm:4463> INFO - Processing section 0
+[124] Biber.pm:4654> INFO - Looking for bibtex file 'sources/bibliography.bib' for section 0
+[136] bibtex.pm:1713> INFO - LaTeX decoding ...
+[176] bibtex.pm:1519> INFO - Found BibTeX data source 'sources/bibliography.bib'
+[421] UCollate.pm:68> INFO - Overriding locale 'pl-PL' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[421] UCollate.pm:68> INFO - Overriding locale 'pl-PL' defaults 'variable = shifted' with 'variable = non-ignorable'
+[421] Biber.pm:4283> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'pl-PL'
+[460] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[478] bbl.pm:779> INFO - Output to main.bbl
+[478] Biber.pm:131> WARN - legacy month field 'August' in entry 'datadog_state_of_serverless' is not an integer - this will probably not sort properly.
+[478] Biber.pm:131> WARN - legacy month field 'Jun.' in entry 'Ivanov_Petrova_2024' is not an integer - this will probably not sort properly.
+[478] Biber.pm:131> WARN - legacy month field 'Dec.' in entry 'Gajek_Plechawska-Wójcik_2024' is not an integer - this will probably not sort properly.
+[478] Biber.pm:133> INFO - WARNINGS: 3

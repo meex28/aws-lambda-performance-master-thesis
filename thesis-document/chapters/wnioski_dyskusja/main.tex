@@ -20,8 +20,8 @@ Nie były to jednak różnice znaczne, gdyż nie zostały potwierdzone wynikami 
 GraalVM pozwolił na znaczną poprawę średniego czasu wykonania dla pamięci 128 MB (o 60\%), jednak w przypadku pamięci 256 MB cechował się wydłużeniem średniego czasu odpowiedzi.
 Dla pamięci 512 MB obie metody cechowały się dłuższym średnim czasem procesowania niż klasyczna funkcja Java JVM, jednak GraalVM był znacznie szybszy (pogorszenie o 12\%, w porównaniu z 231\% dla Kotlin/Native).
 W przypadku większych pamięci, czyli 1024 MB i 2048 MB, GraalVM skrócił czas średni procesowania o odpowiednio 40\% i 23\%.
-Istotny jest także fakt, że GraalVM cechował się pewną niestabilnością, objawiającą się wysokimi wartościami odchyleń standardowych.
-Może to świadczyć o niestabilności natywnych obrazów GraalVM.
+Istotny jest także fakt, że metody bazujące na kompilacji do natywnych plików binarnych cechowały się pewną niestabilnością.
+Objawiała się ona wysokimi wartościami odchyleń standardowych (w przypadku GraalVM) lub nagłymi skokami wydajności wraz z zmianą pamięci (w przypadku Kotlin/Native).
 
 Zatem dla funkcji AWS Lambda o wysokiej aktywności i wysokim ponownym użyciu rozgrzanych już instancji najbardziej uniwersalnym wyborem będzie użycie GraalVM.
 Jednak w przypadku chęci użycia mniejszej pamięci, Kotlin/Native będzie sposobem bardziej stabilnym (ze względu na dużo niższe odchylenia standardowe), który zapewni pewną poprawę czasu działania.
@@ -122,9 +122,11 @@ Ograniczeniami dla tych sposobów są także ograniczone możliwości użycia me
 Istotnym zagrożeniem dla wniosków wyciągniętych na podstawie eksperymentu może być niska moc statystyczna wyników. 
 Badanie opierało się na dużej, jednak określonej, liczbie wywołań dla każdej z funkcji i konfiguracji. 
 Mimo przeprowadzenia wielu testów, zmienność środowiska chmurowego i potencjalne losowe zmiany w czasach odpowiedzi mogły wpłynąć na wyniki. 
-W ramach badania starano się zminimalizować ten wpływ, np. poprzez brak integracji z zewnętrznymi serwisami oraz przeprowadzenie analizy statystycznej.
-Aby jeszcze bardziej zmniejszyć to ryzyko możliwe byłoby wydłużenie czasu eksperymentu i regularne wywoływanie funkcji przez dłuższy okres (np. kilku dni).
-Proces ten wymaga jednak dłuższego badania, które przekracza zakres aktualnej pracy.
+W ramach badania starano się zminimalizować ten wpływ, poprzez kilka czynników. 
+Był to brak integracji z zewnętrznymi serwisami (np. API Gateway, DynamoDB), przeprowadzenie analizy statystycznej oraz wydłużenie czasu eksperymentu poprzez oczekiwanie pomiędzy kolejnymi wywołaniami.
+Dodatkowo, eksperyment został wykonany w pojedynczym regione (eu-central-1) oraz w godzinach nocnych, gdzie obciążenie infrastruktury AWS jest mniejsze \cite{10.1145/3491204.3543506}.
+Aby jeszcze bardziej zmniejszyć to ryzyko możliwe byłoby jeszcze większe wydłużenie czasu eksperymentu i regularne wywoływanie funkcji przez na przykład kilka dni.
+Proces ten wymaga jednak znacznie dłuższego badania, które przekracza zakres aktualnej pracy.
 
 \subsection*{Trafność wewnętrzna}
 

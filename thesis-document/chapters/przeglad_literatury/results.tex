@@ -56,8 +56,9 @@ Chen, Hung, Cordingly oraz Lloyd \cite{10.1145/3631295.3631394} zwrócili uwagę
 
 Wykazali oni podobne zużycie procesora dla obu architektur. Wiele funkcji wykorzystywało wyłącznie jeden z dostępnych rdzeni procesora, co wskazuje na możliwość optymalizacji w kierunku zrównoleglania obliczeń. 
 Mimo podobnego zużycia, sam czas działania funkcji był zróżnicowany. 
-7 z 18 funkcji działało szybciej na ARM64 (4 były ponad 10\% szybsze), podczas gdy 6 działało znacznie wolniej (o ponad 10\%). 
-Funkcje ARM64 były bardziej opłacalne dla większości przypadków. 15 z 18 funkcji miało niższe szacunkowe koszty działania na ARM64 w porównaniu do X86 (jednak znaczący wpływ na to miała zniżka oferowana przez dostawcę chmurowego).
+7 z 18 funkcji działało szybciej na ARM64 (4 były ponad 10\% szybsze), podczas gdy 6 działało znacznie wolniej (o ponad 10\%).
+Mimo to, funkcje oparte o procesory w architekturze ARM64 (procesory Graviton2) okazały się bardziej opłacalne w większości przypadków, oferując lepszy stosunek kosztu do wydajności.
+15 z 18 funkcji miało niższe szacunkowe koszty działania na ARM64 w porównaniu do X86 (jednak znaczący wpływ na to miała zniżka oferowana przez dostawcę chmurowego).
 
 Lambion i inni autorzy \cite{10.1145/3491204.3543506} przeprowadzili analizę użycia algorytmów przetwarzania języka naturalnego z użyciem obu architektur procesora. W ramach badania przygotowali oni składający się z kilku etapów pipeline, który używał wspomniancyh algorytmów. Funkcje zostały wdrożone z użyciem obu architektur oraz w różnych regionach AWS.
 
@@ -461,3 +462,57 @@ Trudności w procesie progamistycznym aplikacji opartych o AWS Lambda przynosi t
 Aktualnie testy funkcji opierają się głównie o testy jednostkowe, które są wspierane przez różne frameworki \cite{8605774}.
 Brakującym elementem są testy integracyjne, które w tym modelu są mocno skomplikowane.
 Dlatego metody poprawy wydajności nie powinny utrudniać testowania, które jest już teraz jest wyzwaniem.
+
+\subsection{Zidentyfikowane luki badawcze}\label{chapter:przeglad_literatury_wyniki_luki}
+
+Poprzez zrealizowanie przeglądu literatury możliwe było nie tylko poznanie aktualnego stanu wiedzy w kontekście AWS Lambda ale także identyfikacja luk badawczych.
+Obszary te stanowią uzasadnienie wyboru metod optymalizacji, które zostaną zawarte w pracy.
+Dodatkowo, pozwoli to na stworzenie warunków badania, które przeanalizują wybrane metody pod kątem nowych aspektów.
+oraz sposobu ich analizy, co zostało zawarte w pracy.
+
+\subsubsection*{Brak reprezentacji alternatywnych języków ekosystemu Java w AWS Lambda}
+
+W ramach przeglądu literatury wykazano, że istniejące badania koncentrują się niemal wyłącznie na samym języku Java.
+Istotną luką jest brak prac badawczych, które poruszałyby języki alternatywne do Javy.
+Mogą to być popularne języki jak Kotlin, Scala czy Groovy.
+Ważna jest tutaj rosnąca popularność Kotlina, który według ankiety StackOverflow z 2024 roku jest używany przez blisko 10\% profesjonalnych programistów \cite{stackoverflow_survey_2024}.
+Języki alternatywne oprócz samych aspektów języka, dostarczają także bardzo szeroki wachlarz narzędzi.
+Zawarcie tych elementów w badaniach może być znacznym czynnikiem, który spopularyzuje języki jak Kotlin w usłudze AWS Lambda.
+
+Przypadek języka Kotlin może być szczególnym dla AWS Lambda.
+Po pierwsze, stanowi on bezpośrednią alternatywę dla Javy, który zapewnia inną jakość pracy dla programistów oraz interoperacyjność z Javą.
+Oferuje także projekt Kotlin Multiplatform, który może pozwolić na wykorzystanie kodu Kotlin w innych środowiskach wykonawczych niż maszyna wirtualna Java.
+Może na to pozwolić JavaScript (poprzez translację z użyciem Kotlin/JS), a także natywne pliki uruchomienione (poprzez Kotlin/Native).
+W ramach przeglądu zawarto pewien trend użycia JavaScript zamiast Javy.
+Metody jak Kotlin/JS mogą być innowacyjne ze względu na możliwość uruchamiania kodu funkcji w środowisku Node.js przy jednoczesnym rozwijaniu oprogramowania w języku z rodziny Java.
+Dodatkowo, Kotlin/Native może być alternatywną metodą dla GraalVM, który także nie jest dostatecznie reprezentowany w badaniach.
+
+\subsubsection*{Ograniczone i niekompletne analizy metod SnapStart i GraalVM}
+
+W ramach przeglądu literatury zauważono, że metody SnapStart oraz GraalVM są wskazywane jako skuteczne metody optymalizacji.
+Poświęcono im jednak niewielką liczbę badań \cite{menéndez2023performancebestpracticesusing}\cite{ritzal2020optimizing}.
+Dodatkowo, skupiały się one tylko na podstawowych metrykach jak czas działania funkcji podczas ciepłych i zimnych startów.
+Nie analizowały one także skuteczności metod w zależności od rozmiaru pamięci, która ma znaczący wpływ na wydajność samej funkcji.
+Pomijają one także niemal całkowicie badanie wpływu tych metod na proces rozwoju oprogramowania.
+Wpływ ten jest jednak istotnym aspektem w momencie wyboru metody optymalizacji wydajności.
+
+\subsubsection*{Niewystarczająca analiza wydajności funkcji AWS Lambda}
+
+Przegląd literatury wykazał, że istniejące badania skupiają swoją ocenę wydajność jedynie poprzez czas zimnych i ciepłych startów.
+Są one traktowane rozłącznie, jako dwie niezależne od siebie metryki.
+Takie podejście jest poprawne, jednak niewystarczające aby w pełni odwzorować realne użycie funkcji AWS Lambda.
+W praktyce każda funkcja podlega obu typom uruchomień.
+Ich proporcje zależą od typu funkcji, która może być bardziej aktywna (z dominacją ciepłych startów) lub mało aktywna (gdzie częściej występują zimne starty).
+Dodatkowo, brak analizy obu tych aspektów w pewnym połączeniu, uniemożliwia realną ocenę kosztów działania funkcji.
+Z tego powodu, istnieje potrzeba stworzenia metryk, które odzwierciedlą realne działanie funkcji AWS Lambda.
+Mogą to być metryki agregujące oba typy startów oraz oparte o koszt działania funkcji, który jest ważną cechą usług bezserwerowych.
+
+\subsubsection*{Brak analizy wpływu metod optymalizacji na proces rozwoju oprogramowania}
+
+Jedynie pojedyncza praca z przeglądu literatury poruszała wpływ metody optymalizacji wydajności na proces rozwoju oprogramowania \cite{10.1145/3377812.3382135}.
+Element ten jest jednak kluczowy z punktu widzenia programisty rozwijającego system używający usługi AWS Lambda.
+Sama wydajność nie powinna być jedynym czynnikiem decydującym o wyborze metody optymalizacji.
+W przypadku metody, która znacznie ogranicza możliwości rozwoju oprogramowania, oszczędności za działanie funkcji mogą być iluzoryczne.
+Ukrytymi kosztami może być wtedy dłuższy czas rozwoju nowych funkcji lub dłuższy proces tworzenia artefaktów.
+Bardzo istotny jest zatem obszar analizy metod w kontekście wybranych aspektów procesu rozwoju oprogramowania systemów bezserwerowych.
+Aspekt ten powinien zostać zawarty w pracy, aby ułatwić programistom podjęcie świadomej decyzji o metodzie optymalizacji wydajności. 

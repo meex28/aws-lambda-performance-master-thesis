@@ -6,15 +6,15 @@
 \contentsline {table}{\numberline {2.2}{\ignorespaces Prace wybrane w ramach przeglądu literatury [źródło: opracowanie własne]}}{23}{table.caption.10}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Zewnętrzne zależności wykorzystane w badanych funkcjach}}{53}{table.caption.16}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Biblioteki oraz frameworki użyte podczas implementacji badanych funkcji}}{54}{table.caption.17}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces Środowiska wykonawcze użyte w badanych funkcjach AWS Lambda}}{56}{table.caption.18}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Zewnętrzne zależności wykorzystane w badanych funkcjach}}{55}{table.caption.16}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Biblioteki oraz frameworki użyte podczas implementacji badanych funkcji}}{56}{table.caption.17}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Środowiska wykonawcze użyte w badanych funkcjach AWS Lambda}}{58}{table.caption.18}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Wyniki testu Kruskal-Wallis dla wyników pomiaru czasu działania funkcji podczas ciepłych startów [źródło: opracowanie własne]}}{61}{table.caption.20}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces Porównanie średnich, median oraz odchyleń standardowych czasów działania funkcji podczas ciepłego startu względem funkcji bazowej (Java JVM) [źródło: opracowanie własne]}}{64}{table.caption.22}%
-\contentsline {table}{\numberline {5.3}{\ignorespaces Porównanie czasów działania funkcji podczas ciepłych startów poprzez wartość p testu Dunn (\textbf {istotne różnice pogrubione}) [źródło: opracowanie własne]}}{65}{table.caption.23}%
-\contentsline {table}{\numberline {5.4}{\ignorespaces Wyniki testu Kruskal-Wallis dla wyników pomiaru czasu działania funkcji podczas zimnych startów [źródło: opracowanie własne]}}{66}{table.caption.24}%
-\contentsline {table}{\numberline {5.5}{\ignorespaces Porównanie średnich, median oraz odchyleń standardowych czasów działania funkcji podczas zimnego startu względem funkcji bazowej (Java JVM) [źródło: opracowanie własne]}}{69}{table.caption.27}%
-\contentsline {table}{\numberline {5.6}{\ignorespaces Porównanie czasów działania funkcji podczas zimnych startów poprzez wartość p testu Dunn (\textbf {istotne różnice pogrubione}) [źródło: opracowanie własne]}}{70}{table.caption.28}%
-\contentsline {table}{\numberline {5.7}{\ignorespaces Dostępność AWS SDK dla rodzajów funkcji [źródło: opracowanie własne]}}{75}{table.caption.33}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Wyniki testu Kruskal-Wallis dla wyników pomiaru czasu działania funkcji podczas ciepłych startów [źródło: opracowanie własne]}}{63}{table.caption.20}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Porównanie średnich, median oraz odchyleń standardowych czasów działania funkcji podczas ciepłego startu względem funkcji bazowej (Java JVM) [źródło: opracowanie własne]}}{66}{table.caption.22}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Porównanie czasów działania funkcji podczas ciepłych startów poprzez wartość p testu Dunn (\textbf {istotne różnice pogrubione}) [źródło: opracowanie własne]}}{67}{table.caption.23}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces Wyniki testu Kruskal-Wallis dla wyników pomiaru czasu działania funkcji podczas zimnych startów [źródło: opracowanie własne]}}{68}{table.caption.24}%
+\contentsline {table}{\numberline {5.5}{\ignorespaces Porównanie średnich, median oraz odchyleń standardowych czasów działania funkcji podczas zimnego startu względem funkcji bazowej (Java JVM) [źródło: opracowanie własne]}}{71}{table.caption.27}%
+\contentsline {table}{\numberline {5.6}{\ignorespaces Porównanie czasów działania funkcji podczas zimnych startów poprzez wartość p testu Dunn (\textbf {istotne różnice pogrubione}) [źródło: opracowanie własne]}}{72}{table.caption.28}%
+\contentsline {table}{\numberline {5.7}{\ignorespaces Dostępność AWS SDK dla rodzajów funkcji [źródło: opracowanie własne]}}{77}{table.caption.33}%
 \addvspace {10\p@ }
