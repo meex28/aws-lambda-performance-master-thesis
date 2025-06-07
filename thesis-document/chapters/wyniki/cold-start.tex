@@ -25,33 +25,56 @@ Niezależnie od rozmiaru pamięci najkrótszy czas działania w przypadku zimneg
 Metoda ta pozwoliła także na osiągnięcie wyników o podobnej stabilności jak pozostałe funkcje, co zostało przedstawione na Rysunkach \ref{fig:warm_start_256} i \ref{fig:warm_start_1024}.
 Mocno zróżnicowane wyniki zostały osiągnięte przez funkcję Kotlin z aktywowaną funkcją SnapStart.
 
-\begin{table}[h]
-    \caption{Porównanie średnich czasów działania funkcji podczas zimnego startu względem funkcji bazowej [źródło: opracowanie własne]}
-    \centering
-    % Modified column definitions for left alignment
-    \begin{tabular}{|>{\raggedright\arraybackslash}p{3.5cm}|>{\raggedright\arraybackslash}p{1.8cm}|>{\raggedright\arraybackslash}p{1.8cm}|>{\raggedright\arraybackslash}p{1.8cm}|>{\raggedright\arraybackslash}p{1.8cm}|>{\raggedright\arraybackslash}p{1.8cm}|}
-    \hline
-    % Header: First cell's \makecell changed to [l] for left alignment
-    \multirow{2}{*}{\makecell[l]{\textbf{Rodzaj funkcji} \\ \scriptsize{\textit{Czas [ms] (\% różnicy)}}}} & \multicolumn{5}{c|}{\textbf{Rozmiar pamięci [MB]}} \\ % Kept multicolumn centered, change 'c' to 'l' if left-align needed
-    \cline{2-6} 
-    & \textbf{128} & \textbf{256} & \textbf{512} & \textbf{1024} & \textbf{2048} \\
-    \hline
-    Java JVM & 2726 & 2165 & 1827 & 1652 & 1450 \\
-    \hline
-    Java JVM +~SnapStart & 2466 \mbox{(-10\%)} & 1287 \mbox{(-41\%)} & 901 \mbox{(-51\%)} & 745 \mbox{(-55\%)} & 731 \mbox{(-50\%)} \\
-    \hline
-    Java GraalVM & 596 \mbox{(-78\%)} & 417 \mbox{(-81\%)} & 335 \mbox{(-82\%)} & 299 \mbox{(-82\%)} & 287 \mbox{(-80\%)} \\
-    \hline
-    Kotlin JVM & 4927 \mbox{(81\%)} & 2426 \mbox{(12\%)} & 1320 \mbox{(-28\%)} & 754 \mbox{(-54\%)} & 504 \mbox{(-65\%)} \\
-    \hline
-    Kotlin JVM +~SnapStart & 5853 \mbox{(115\%)} & 3185 \mbox{(47\%)} & 1915 \mbox{(5\%)} & 1347 \mbox{(-18\%)} & 1272 \mbox{(-12\%)} \\
-    \hline
-    Kotlin/JS & 679 \mbox{(-75\%)} & 424 \mbox{(-80\%)} & 287 \mbox{(-84\%)} & 228 \mbox{(-86\%)} & 201 \mbox{(-86\%)} \\
-    \hline
-    Kotlin/Native & 328 \mbox{(-88\%)} & 204 \mbox{(-91\%)} & 143 \mbox{(-92\%)} & 119 \mbox{(-93\%)} & 105 \mbox{(-93\%)} \\
-    \hline
-    \end{tabular}
-    \label{table:cold_start_comparison}
+\begin{table}[htbp]
+\centering
+\caption{Porównanie średnich, median oraz odchyleń standardowych czasów działania funkcji podczas zimnego startu względem funkcji bazowej (Java JVM) [źródło: opracowanie własne]}
+\small
+\begin{tabular}{|>{\centering\arraybackslash}m{2cm}|l|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+\toprule
+Rozmiar pamięci [MB] & Metoda & Średnia [ms] & Zmiana średniej & Mediana [ms] & Zmiana mediany & Odch. stand. \\
+\midrule
+\multirow{7}{*}{128} & Java JVM & 2725.84 & \mbox{0\%} & 2735.50 & \mbox{0\%} & 117.90 \\
+ & Java GraalVM & 596.04 & \mbox{-78\%} & 600.22 & \mbox{-78\%} & 23.59 \\
+ & Java JVM + SnapStart & 2465.93 & \mbox{-10\%} & 2473.31 & \mbox{-10\%} & 271.41 \\
+ & Kotlin JVM & 4926.53 & \mbox{+81\%} & 4943.95 & \mbox{+81\%} & 200.56 \\
+ & Kotlin JVM + SnapStart & 5853.27 & \mbox{+115\%} & 5937.41 & \mbox{+117\%} & 296.27 \\
+ & Kotlin/JS & 679.17 & \mbox{-75\%} & 716.08 & \mbox{-74\%} & 110.08 \\
+ & Kotlin/Native & 328.30 & \mbox{-88\%} & 323.46 & \mbox{-88\%} & 27.58 \\
+\midrule
+\multirow{7}{*}{256} & Java JVM & 2165.08 & \mbox{0\%} & 2196.40 & \mbox{0\%} & 109.60 \\
+ & Java GraalVM & 416.56 & \mbox{-81\%} & 422.00 & \mbox{-81\%} & 19.06 \\
+ & Java JVM + SnapStart & 1287.45 & \mbox{-41\%} & 1274.12 & \mbox{-42\%} & 200.26 \\
+ & Kotlin JVM & 2426.35 & \mbox{+12\%} & 2449.18 & \mbox{+12\%} & 186.12 \\
+ & Kotlin JVM + SnapStart & 3185.35 & \mbox{+47\%} & 3239.76 & \mbox{+48\%} & 234.01 \\
+ & Kotlin/JS & 424.45 & \mbox{-80\%} & 430.08 & \mbox{-80\%} & 23.58 \\
+ & Kotlin/Native & 204.49 & \mbox{-91\%} & 198.43 & \mbox{-91\%} & 25.21 \\
+\midrule
+\multirow{7}{*}{512} & Java JVM & 1826.74 & \mbox{0\%} & 1864.82 & \mbox{0\%} & 121.63 \\
+ & Java GraalVM & 335.18 & \mbox{-82\%} & 343.65 & \mbox{-82\%} & 22.05 \\
+ & Java JVM + SnapStart & 901.46 & \mbox{-51\%} & 887.57 & \mbox{-52\%} & 173.60 \\
+ & Kotlin JVM & 1319.84 & \mbox{-28\%} & 1325.18 & \mbox{-29\%} & 71.54 \\
+ & Kotlin JVM + SnapStart & 1915.50 & \mbox{+5\%} & 1997.87 & \mbox{+7\%} & 240.69 \\
+ & Kotlin/JS & 286.63 & \mbox{-84\%} & 291.69 & \mbox{-84\%} & 20.85 \\
+ & Kotlin/Native & 142.86 & \mbox{-92\%} & 135.35 & \mbox{-93\%} & 26.23 \\
+\midrule
+\multirow{7}{*}{1024} & Java JVM & 1651.76 & \mbox{0\%} & 1681.09 & \mbox{0\%} & 105.45 \\
+ & Java GraalVM & 299.29 & \mbox{-82\%} & 307.39 & \mbox{-82\%} & 26.36 \\
+ & Java JVM + SnapStart & 745.45 & \mbox{-55\%} & 719.96 & \mbox{-57\%} & 192.00 \\
+ & Kotlin JVM & 754.19 & \mbox{-54\%} & 760.33 & \mbox{-55\%} & 58.38 \\
+ & Kotlin JVM + SnapStart & 1346.78 & \mbox{-18\%} & 1417.63 & \mbox{-16\%} & 253.09 \\
+ & Kotlin/JS & 227.63 & \mbox{-86\%} & 230.38 & \mbox{-86\%} & 17.27 \\
+ & Kotlin/Native & 119.18 & \mbox{-93\%} & 108.99 & \mbox{-94\%} & 27.45 \\
+\midrule
+\multirow{7}{*}{2048} & Java JVM & 1450.35 & \mbox{0\%} & 1472.77 & \mbox{0\%} & 82.92 \\
+ & Java GraalVM & 286.81 & \mbox{-80\%} & 297.54 & \mbox{-80\%} & 21.87 \\
+ & Java JVM + SnapStart & 730.70 & \mbox{-50\%} & 712.26 & \mbox{-52\%} & 153.74 \\
+ & Kotlin JVM & 504.26 & \mbox{-65\%} & 493.75 & \mbox{-66\%} & 63.05 \\
+ & Kotlin JVM + SnapStart & 1272.25 & \mbox{-12\%} & 1351.34 & \mbox{-8\%} & 276.00 \\
+ & Kotlin/JS & 201.25 & \mbox{-86\%} & 203.99 & \mbox{-86\%} & 12.08 \\
+ & Kotlin/Native & 105.19 & \mbox{-93\%} & 99.50 & \mbox{-93\%} & 20.28 \\
+\bottomrule
+\end{tabular}
+\label{tab:cold_start_comparison}
 \end{table}
 
 \begin{figure}[p] % Use [p] to suggest a float page. Or [!htbp] for more flexibility.

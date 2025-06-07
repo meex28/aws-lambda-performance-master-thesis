@@ -33,17 +33,18 @@
 \contentsline {section}{\numberline {4.2}Implementacja funkcji}{52}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Wdrożenie funkcji}{55}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Środowisko badawcze}{56}{section.4.4}%
-\contentsline {chapter}{\numberline {5}Wyniki}{59}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Ciepły start}{59}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Zimny start}{61}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Współczynnik wydajności funkcji}{64}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Koszt funkcji}{65}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Wpływ na rozwój oprogramowania}{66}{section.5.5}%
-\contentsline {chapter}{\numberline {6}Wnioski i dyskusja}{69}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Odpowiedzi na pytania badawcze}{69}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Zagrożenia trafności wyników}{72}{section.6.2}%
-\contentsline {chapter}{Zakończenie}{75}{chapter*.31}%
-\contentsline {chapter}{Bibliografia}{78}{chapter*.31}%
-\contentsline {chapter}{Źródła internetowe}{84}{chapter*.32}%
-\contentsline {chapter}{Spis rysunków}{87}{chapter*.33}%
-\contentsline {chapter}{Spis tabel}{89}{chapter*.33}%
+\contentsline {section}{\numberline {4.5}Analiza statystyczna}{58}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Wyniki}{61}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Ciepły start}{61}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Zimny start}{67}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Współczynnik wydajności funkcji}{70}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Koszt funkcji}{71}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Wpływ na rozwój oprogramowania}{72}{section.5.5}%
+\contentsline {chapter}{\numberline {6}Wnioski i dyskusja}{75}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Odpowiedzi na pytania badawcze}{75}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Zagrożenia trafności wyników}{78}{section.6.2}%
+\contentsline {chapter}{Zakończenie}{81}{chapter*.35}%
+\contentsline {chapter}{Bibliografia}{84}{chapter*.35}%
+\contentsline {chapter}{Źródła internetowe}{90}{chapter*.36}%
+\contentsline {chapter}{Spis rysunków}{93}{chapter*.37}%
+\contentsline {chapter}{Spis tabel}{95}{chapter*.37}%

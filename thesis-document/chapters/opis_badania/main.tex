@@ -323,3 +323,30 @@ Aby móc dokonać analizy wyników niezbędne było ich zagregowanie i zapisanie
 Wykorzystano do tego przygotowaną funkcję procesora logów (oznaczoną numerem 4 na Rysunku \ref{fig:experiment_architecture}), która pobierała logi z raportami z usługi CloudWatch, transformowała oraz zapisywała w pliku JSON.
 Następnie plik był wgrywany do usługi S3, co pozwalało na pobranie przez użytkownika.
 Tak przygotowana agregacja logów umożliwiła następnie niezbędną analizę wyników badania.
+
+\section{Analiza statystyczna}\label{chapter:analiza_statystyczna}
+
+Aby uzyskać rzetelne wyniki badań zdecydowano się na przeprowadzenie analizy statystycznej.
+Obejmuje ona wyniki badania w kontekście działania funkcji podczas zimnych i ciepłych startów.
+Pierwszym krokiem jest podstawowy przegląd pomiarów, który obejmuje wartości średnie, mediany oraz odchylenia standardowe.
+Wartości te zostały obliczone na bazie wyników poszczególnych rodzajów funkcji (np. Kotlin JVM), w zależności od rozmiaru pamięci (np. 512 MB).
+Wyniki zostaną przedstawione w tabelach podsumowujących dla obu rodzajów startów i zawarte w Rozdziale \ref{chapter:wyniki}.
+
+Aby możliwa była dokładniejsza ocena, czy dana metody wpłynęła na czas działania funkcji (w porównaniu z funkcją bazową), niezbędne jest przeprowadzenie serii testów statystycznych.
+Pozwolą one na weryfikację postawionych w badaniu hipotez odnośnie wielkości i kształtu wyników poszczególnych grup.
+Pierwszą czynnością była weryfikacja, czy poszczególne grupy pochodzą z populacji o rozkładzie normalnym. 
+W tym celu wykorzystano test Shapiro-Wilk \cite{eb32428d-e089-3d0c-8541-5f3e8f273532}, na poziomie istotności $\alpha = 0.05$.
+W procesie planowania przewidywano jednak, że zebrane próbki nie będą pochodzić z rozkładów normalnych.
+W przypadku pomyślnej weryfikacji hipotezy, że wszystkie grupy pochodzą z rozkładów normalnych, zastosowanoby parametryczne testy statystyczne.
+W przeciwnym wypadku, przygotowano testy nieparametryczne, które można zastosować dla grup spełniających rozkład normalnych oraz tych niespełniających.
+
+Pierwszym krokiem dla testów nieparametrycznych było wykonanie testu Kruskal-Wallis \cite{ac6c544c-0197-38bd-8c06-ec4f655ff4fd}, na poziomie istotności $\alpha = 0.05$.
+Test ten pozwolił na weryfikację zgodności rozkładów badanych grup oraz istnieje istotnych sstatystyczne różnić pomiędzy trzema lub więcej niezależnymi próbami.
+Każda grupa była wynikami pomiarów dla kombinacji poszczególnego rodzaju funkcji, rozmiaru pamięci i rodzaju startu.
+W ramach testu porównywano grupy o różnych rodzajach funkcji ale tym samym rozmiarze pamięci i rodzaju startu.
+
+W przypadku stwierdzenia istotnych statystycznie różnic pomiędzy grupami przeprowadzono test Dunn \cite{c3fa9fa7-dd2a-35f2-84a0-d5c07e68dd08}.
+Pozwoliło to na weryfikację, które pary grup są istotnie różne.
+Służyło to po pierwsze do sprawdzenia, czy poszczególne metody wpłynęły na efektywność funkcji dla danej pamięci i rodzaju startu.
+Po drugie, pozwoliło to na porównanie skuteczności poszczególnych metod i wyboru najbardziej skutecznej.
+W celu zminimalizowania ryzyka popełnienia bledu typu I, w ramach testu użyto korekty Holma-Bonferroniego na wielokrotne porównania \cite{29def780-e117-38f0-8afb-edf384af3fad}.
