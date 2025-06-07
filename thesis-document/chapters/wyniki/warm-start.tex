@@ -6,6 +6,30 @@ Powoduje to, że nie jest wymagana inicjalizacja usługi, a kod rozpoczyna dzia�
 W badaniu każda funkcja została wywołana stukrotnie, a wyniki zostały zagregowane.
 Średni czas wykonania w zależności od metody i rozmiaru pamięci został przedstawiony na Rysunku \ref{fig:avg_warm_start}.
 Dokładne wartości badanych parametrów (czas średni, mediana, odchylenie standardowe) i różnice względem funkcji bazowej (Java JVM) zostały zaprezentowane w Tabeli \ref{table:warm_start_comparison}.
+Dla wszystkich badanych grup wykonano test Shapiro-Wilka, który wykazał, że jedynie dwie z badanych grup wykazywały rozkład normalny (funkcje SnapStart dla pamięci 128 MB).
+Ze względu na brak normalności rozkładu pozostałych, przeprowadzono test Kruskal-Wallis, którego wyniki zostały przedstawione w Tabeli \ref{table:kruskal_wallis_test_warm_starts}.
+Jego wyniki były zbliżone do zera (oraz poniżej poziomu istotności $\alpha = 0,05$), zatem wykonano test Dunn (którego wyniki zaprezentowano w Tabeli \ref{table:dunn_results_warm_starts}).
+
+\begin{table}[h!]
+    \centering
+    \caption{Wyniki testu Kruskal-Wallis dla wyników pomiaru czasu działania funkcji podczas ciepłych startów [źródło: opracowanie własne]}
+    \begin{tabular}{|c|c|}
+    \hline
+    \textbf{Wielkość pamięci [MB]} & \textbf{Wartość p} \\
+    \hline
+    128 & $6.46 \times 10^{-38}$ \\
+    \hline
+    256 & $1.65 \times 10^{-18}$ \\
+    \hline
+    512 & $9.37 \times 10^{-43}$ \\
+    \hline
+    1024 & $3.62 \times 10^{-72}$ \\
+    \hline
+    2048 & $1.69 \times 10^{-72}$ \\
+    \hline
+    \end{tabular}
+    \label{table:kruskal_wallis_test_warm_starts}
+\end{table}
 
 \begin{figure}[h]
     \centering
@@ -16,21 +40,58 @@ Dokładne wartości badanych parametrów (czas średni, mediana, odchylenie stan
 
 Dla każdego z badanych rodzajów funkcji widoczne jest znaczne zróżnicowanie czasu wykonania w zależności od rozmiaru pamięci.
 Sama skuteczność metod w poprawie wydajności różni się także ze względu na pamięć funkcji.
-Pierwsza metoda, czyli usługa SnapStart, nie przyniosła poprawy czasu wykonania w żadnej z badanych wielkości pamięci.
+Analizy wartości średnich oraz mediany dla pierwszej metody, czyli usługi SnapStart wykazuje, że metoda ta nie przyniosła poprawy czasu wykonania w żadnej z badanych wielkości pamięci.
+Istotne różnice wykazał także przeprowadzony test Dunn (którego wyniki zaprezentowano w Tabeli \ref{table:dunn_results_warm_starts}).
+W przypadku Javy, wyniki SnapStart są istotnie różne dla pamięci 256 MB, 1024 MB i 2048 MB dla przyjętego poziomu istotności.
+Dla pozostałych rozmiarów pamięci (128 MB, 512 MB) wartość p nie była jednak także wysoka i wynosi około 0,08.
+W przypadku Kotlina, test Dunn pozwolił odrzucić hipotezę zerową dla wszystkich rozmiarów pamięci oprócz 1024 MB, gdzie wyniki były zbliżone. 
+
+W ramach funkcji opartych o JVM, użycie Kotlina w miejscu Javy nie przyniosło znacznych różnic w wydajności.
+Analiza wyników testu Dunn wykazała jedynie znaczną różnicę w przypadku funkcji o pamięci 2048 MB, gdzie Java pozwoliła na istotnie krótszy czas działania.
+Wartość średnia oraz mediana jest niższa dla funkcji Kotlin dla pamięci 128 MB i 512 MB.
+Różnica nie jest jednak na tyle znacząca, by możliwe było potwierdzenie tego faktu testem Dunn.
+Dla pamięci 512 MB, wartość p wynosi jednak około 0,9, zatem metoda ta była najbliższa poprawie wydajności w tym konkretnym scenariuszu. 
+
+Trudnym w ocenie przypadkiem są funkcje oparte o Kotlin/JS.
+Według przewidywań, użycie języka intepretowanego powinno zapewnić istotnie dłuższy czas procesowania względem języków kompilowanych (Java i Kotlin).
+Kotlin/JS cechuje się bardzo dużą różnicą między wartością średnią i medianą oraz wartością odchylenia standardowego.
+Oznacza to bardzo dużą niestabilność wyników.
+Dla wszystkich rozmiarów funkcji średni czas działania był wyższy niż dla analogicznych funkcji Java JVM i Kotlin JVM.
+Mediany były jednak niższe dla rozmiarów 128 MB i 512 MB.
+Test Dunn nie pozwolił na odrzucenie hipotezy zerowej pomiędzy Kotlin/JS oraz Java JVM i Kotlin JVM dla pamięci 128 MB, 512 MB i 10224 MB.
+Dla pamięci 256 MB i 2048 MB możliwe jest stwierdzenie o istotnie negatywnym wpływie Kotlin/JS na czas działania funkcji.
+Dla pozostałych pamięci średni czas działania funkcji wykazuje także negatywny wpływ, jednak niemożliwie jest statystyczne potwierdzenie tego faktu.
+Może to wynikać z niestabilności działania Kotlin/JS, na co wpływ może mieć natura języka JavaScript.
+
 Zastosowanie obrazów natywnych GraalVM pozwala na zmniejszenie czasu w niektórych rozmiarach pamięci: 128 MB, 1024 MB oraz 2048 MB.
-Podobnie zachowuje się funkcja napisana w Kotlinie, działające w ramach JVM: tutaj poprawa jest widoczna dla pamięci 128 MB i 512 MB.
+Dla tych rozmiarów wartości średnie oraz mediany są niższe niż dla analogicznej funkcji działającej w JVM.
+Zostało to także potwierdzone testem Dunn.
+Dla pamięci 256 MB i 512 MB, wartości średnie są wyższe dla GraalVM, jednak mediany znacznie niższe.
+Test Dunn pozwolił odrzucić hipotezę zerową w przypadku pamięci 512 MB.
+Nie jest jednak możliwe stwierdzenie poprawy wydajności dla tych wielkości pamięci, co może wynikać z dużej niestabilności wyników GraalVM.
+Ważnym faktem jest również wysoka wartość odchylenia standardowego, która jest wyższa dla GraalVM w każdej z badanych wielkości pamięci.
+Może to wskazywać na niestabilność obrazów natywnych GraalVM.
 
-Funkcja działające w oparciu o kod JavaScript, stworzony poprzez translację Kotlin/JS, niesie negatywny wpływ na czas wykonania.
-Metoda ta nie przyniosła poprawy w żadnym z badanych rozmiarów pamięci, przy czym w małych rozmiarach (128 MB, 256 MB) wpłynęła znacznie negatywnie na wydajność.
-Dodatkowo, nie widać znacznej poprawy efektywności wraz z wzrostem rozmiaru pamięci z 512 MB do 2048 MB. 
-Ciekawa zależność widoczna jest w przypadku funkcji Kotlin/Native, która wskazuje wykazuje poprawę czasu działania dla małych wielkości pamięci (128 MB i 256 MB).
-Szczególna poprawa widoczna jest dla rozmiaru 256 MB, gdzie metoda ta osiągnęła niższe czasy wykonania niż funkcja Java JVM dla większych wielkości pamięci (512-2048 MB).
+Skuteczność Kotlin/Native zależy znacznie od wielkości pamięci.
+Dla dużych rozmiarów (512-2048 MB), metoda ta wpłynęła negatywnie na czas działania.
+Wartości średnie i mediany są znacznie wyższe dla tych pamięci, a wyniki testu Dunn pozwalają na stwierdzenie o istotnych różnicach względem funkcji Java JVM. 
+Kotlin/Native wpłynął także na czas procesowania w porównaniu z funkcjami Kotlin JVM dla rozmiarów 512 MB i 1024 MB.
+Dla największej pamięci 2048 MB, czas działania Kotlin/Native jest jednak zbliżony do Kotlin JVM (test Dunn wykazał wartość p równą 1, zatem różnice nie są znaczne).
+W przypadku pamięci małych (128 MB, 256 MB), Kotlin/Native pozwolił na uzyskanie niższych średni czasów wykonania oraz ich median.
+Test Dunn nie wskazał jednak na różnicę istotną statystycznie.
+Kotlin/Native cechuje się jednak niższym odchyleniem standardowym niż druga metoda oparta o kompilację natywną, czyli GraalVM.
+Wartości te są zbliżone dla pamięci 512 MB i 1024 MB, jednak przy dużej różnicy średnich czasów na niekorzyść Kotlin/Native.
+Sam Kotlin/Native może jednak także cechować się pewną niestabilnością.
+Istotna jest różnica wydajności między pamięciami 128 MB i 256 MB oraz 256 MB i 512 MB.
+Dla pierwszej pary czas działania znacznie zmalał wraz z wzrostem pamięci, dla drugiej sytuacja była odwrotna.
 
-\begin{table}[htbp]
+\newpage
+
+\begin{table}[!h]
 \centering
 \caption{Porównanie średnich, median oraz odchyleń standardowych czasów działania funkcji podczas ciepłego startu względem funkcji bazowej (Java JVM) [źródło: opracowanie własne]}
 \small
-\begin{tabular}{|>{\centering\arraybackslash}m{2cm}|l|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+\begin{tabular}{|>{\centering\arraybackslash}m{1.5cm}|l|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
 \toprule
 Rozmiar pamięci [MB] & Metoda & Średnia [ms] & Zmiana średniej & Mediana [ms] & Zmiana mediany & Odch. stand. \\
 \midrule
@@ -78,54 +139,26 @@ Rozmiar pamięci [MB] & Metoda & Średnia [ms] & Zmiana średniej & Mediana [ms]
 \label{table:warm_start_comparison}
 \end{table}
 
-Na Rysunkach \ref{fig:warm_start_256} oraz \ref{fig:warm_start_1024} przedstawiono wykresy pudełkowe z czasami wykonania funkcji dla rozmiarów pamięci 256 MB i 1024 MB.
-Funkcje oparte wyłącznie o maszynę wirtualną wykazały najmniej zróżnicowane wyniki.
-Aktywacja funkcji SnapStart znacząco obniżyła stabilność czasów odpowiedzi, podobnie jak Kotlin/JS.
-Warte zwrócenia uwagi są jednak funkcje natywne. 
-Obrazy GraalVM wykazują jednolite wyniki, oprócz pamięci 256 MB, gdzie czas wykonania znacząco różnił się w poszczególnych wywołaniach.
-Podobna zależność występuje dla funkcji Kotlin/Native, które osiągają niestabilne wyniki dla rozmiarów pamięci 512 MB oraz 1024 MB.
+% % --- Row 1: 256 MB and 1024 MB charts ---
+% \begin{figure}[h]
+%     \centering % Center the minipages on the line
+%     \begin{minipage}[t]{0.48\textwidth} % [t] for top alignment
+%         \centering % Center content within this minipage
+%         \includegraphics[width=\linewidth]{charts/results/warm-start-boxplot-256.png}
+%         \captionof{figure}{Czas wykonania funkcji (ciepły start, 256 MB) [źródło: opracowanie własne]}
+%         \label{fig:warm_start_256} % Unique label for this figure
+%     \end{minipage}% <--- % is important
+%     \hfill % Space between minipages
+%     \begin{minipage}[t]{0.48\textwidth}
+%         \centering
+%         \includegraphics[width=\linewidth]{charts/results/warm-start-boxplot-1024.png}
+%         \captionof{figure}{Czas wykonania funkcji (ciepły start, 1024 MB) [źródło: opracowanie własne]}
+%         \label{fig:warm_start_1024} % Unique label
+%     \end{minipage}
+%     % No overall \caption for this outer figure environment, as it's just for layout.
+% \end{figure}
 
-% --- Row 1: 256 MB and 1024 MB charts ---
-\begin{figure}[h]
-    \centering % Center the minipages on the line
-    \begin{minipage}[t]{0.48\textwidth} % [t] for top alignment
-        \centering % Center content within this minipage
-        \includegraphics[width=\linewidth]{charts/results/warm-start-boxplot-256.png}
-        \captionof{figure}{Czas wykonania funkcji (ciepły start, 256 MB) [źródło: opracowanie własne]}
-        \label{fig:warm_start_256} % Unique label for this figure
-    \end{minipage}% <--- % is important
-    \hfill % Space between minipages
-    \begin{minipage}[t]{0.48\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{charts/results/warm-start-boxplot-1024.png}
-        \captionof{figure}{Czas wykonania funkcji (ciepły start, 1024 MB) [źródło: opracowanie własne]}
-        \label{fig:warm_start_1024} % Unique label
-    \end{minipage}
-    % No overall \caption for this outer figure environment, as it's just for layout.
-\end{figure}
-
-\begin{table}[H]
-    \centering
-    \caption{Wyniki testu Kruskal-Wallis dla wyników pomiaru czasu działania funkcji podczas ciepłych startów [źródło: opracowanie własne]}
-    \begin{tabular}{|c|c|}
-    \hline
-    \textbf{Wielkość pamięci [MB]} & \textbf{Wartość p} \\
-    \hline
-    128 & $6.46 \times 10^{-38}$ \\
-    \hline
-    256 & $1.65 \times 10^{-18}$ \\
-    \hline
-    512 & $9.37 \times 10^{-43}$ \\
-    \hline
-    1024 & $3.62 \times 10^{-72}$ \\
-    \hline
-    2048 & $1.69 \times 10^{-72}$ \\
-    \hline
-    \end{tabular}
-    \label{table:kruskal_wallis_test_warm_starts}
-\end{table}
-
-\begin{table}[H]
+\begin{table}[!h]
     \caption{Porównanie czasów działania funkcji podczas ciepłych startów poprzez wartość p testu Dunn (\textbf{istotne różnice pogrubione}) [źródło: opracowanie własne]}
     \centering
     \footnotesize
@@ -180,3 +213,5 @@ Podobna zależność występuje dla funkcji Kotlin/Native, które osiągają nie
     \end{tabular}
     \label{table:dunn_results_warm_starts}
 \end{table}
+
+\newpage

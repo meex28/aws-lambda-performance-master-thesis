@@ -15,15 +15,10 @@
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Wizualizacja procesu realizowanego przez badane funkcje AWS Lambda [źródło: opracowanie własne]}}{52}{figure.caption.15}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Architektura środowiska badawczego [źródło:~opracowanie~własne]}}{57}{figure.caption.19}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Średni czas wykonywania funkcji (ciepły start) z użyciem wybranych metod w zależności od rozmiaru pamięci [źródło: opracowanie własne]}}{61}{figure.caption.20}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Czas wykonania funkcji (ciepły start, 256 MB) [źródło: opracowanie własne]}}{62}{figure.caption.22}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Czas wykonania funkcji (ciepły start, 1024 MB) [źródło: opracowanie własne]}}{62}{figure.caption.22}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Średni czas wykonywania funkcji (zimny start) dla rozmiarów pamięci: 512 MB, 1024 MB, 2048 MB [źródło: opracowanie własne]}}{66}{figure.caption.25}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Średni czas wykonywania funkcji (zimny start) dla rozmiarów pamięci: 128 MB, 256 MB [źródło: opracowanie własne]}}{68}{figure.caption.27}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Czas wykonania funkcji (zimny start, 256 MB) [źródło: opracowanie własne]}}{68}{figure.caption.27}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Czas wykonania funkcji (zimny start, 1024 MB) [źródło: opracowanie własne]}}{68}{figure.caption.27}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Współczynnik wydajności funkcji w zależności od rozmiaru pamięci [źródło: opracowanie własne]}}{71}{figure.caption.30}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Średni koszt funkcji w zależności od rozmiaru pamięci [źródło: opracowanie własne]}}{72}{figure.caption.31}%
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Średni czas budowy artefaktu dla poszczególnych rodzajów funkcji [źródło: opracowanie własne]}}{73}{figure.caption.32}%
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Wielkość artefaktu dla poszczególnych rodzajów funkcji [źródło: opracowanie własne]}}{74}{figure.caption.33}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Średni czas wykonywania funkcji (ciepły start) z użyciem wybranych metod w zależności od rozmiaru pamięci [źródło: opracowanie własne]}}{62}{figure.caption.21}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Średni czas wykonywania funkcji (zimny start) dla rozmiarów pamięci: 512 MB, 1024 MB, 2048 MB [źródło: opracowanie własne]}}{66}{figure.caption.25}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Współczynnik wydajności funkcji w zależności od rozmiaru pamięci [źródło: opracowanie własne]}}{70}{figure.caption.28}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Średni koszt funkcji w zależności od rozmiaru pamięci [źródło: opracowanie własne]}}{71}{figure.caption.29}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Średni czas budowy artefaktu dla poszczególnych rodzajów funkcji [źródło: opracowanie własne]}}{72}{figure.caption.30}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Wielkość artefaktu dla poszczególnych rodzajów funkcji [źródło: opracowanie własne]}}{73}{figure.caption.31}%
 \addvspace {10\p@ }
