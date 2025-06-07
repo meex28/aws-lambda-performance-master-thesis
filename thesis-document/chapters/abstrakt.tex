@@ -17,7 +17,8 @@ W eksperymencie wzięto pod uwagę różne rozmiary pamięci funkcji.
 
 Stwierdzono, że wybór metody optymalizacji powinien być zależny od charakterystyki funkcji.
 Dla aktywnych funkcji z przewagą ciepłych startów najefektywniejsze okazały się GraalVM oraz Kotlin/Native.
-Wykazano, że Kotlin/Native jest szczególnie skuteczny dla niewielkich rozmiarów pamięci funkcji, jak 128 MB oraz 256 MB.
+Dla funkcji mało aktywnych najskuteczniejszą metodą jest użycie Kotlin/Native.
+Wykazano, że Kotlin/Native może być wyspecjalizowany dla niewielkich rozmiarów pamięci funkcji, jak 128 MB oraz 256 MB.
 Dodatkowo, cechuje się on najniższymi kosztami w tych wielkościach pamięci.
 
 W pracy ustalono także kompromisy, z którymi muszą liczyć się zespoły programistyczne decydujące się na użycie poszczególnych metod.
@@ -44,7 +45,8 @@ Different sizes of function memory were considered in the experiment.
 
 It was found that the choice of optimization method should depend on the characteristics of the function.
 For active functions with a preponderance of warm starts, GraalVM and Kotlin/Native were found to be the most effective.
-Kotlin/Native was shown to be particularly effective for small function memory sizes, such as 128 MB and 256 MB.
+For low-activity functions, the most efficient method is to use Kotlin/Native.
+It has been shown that Kotlin/Native can be specialized for small function memory sizes, such as 128 MB and 256 MB.
 In addition, it features the lowest cost in these memory sizes.
 
 The paper also establishes the trade-offs that development teams must reckon with when deciding to use particular methods.

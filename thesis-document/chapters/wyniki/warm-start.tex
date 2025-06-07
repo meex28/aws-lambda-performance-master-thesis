@@ -8,7 +8,7 @@ W badaniu każda funkcja została wywołana stukrotnie, a wyniki zostały zagreg
 Dokładne wartości badanych parametrów (czas średni, mediana, odchylenie standardowe) i różnice względem funkcji bazowej (Java JVM) zostały zaprezentowane w Tabeli \ref{table:warm_start_comparison}.
 Dla wszystkich badanych grup wykonano test Shapiro-Wilka, który wykazał, że jedynie dwie z badanych grup wykazywały rozkład normalny (funkcje SnapStart dla pamięci 128 MB).
 Ze względu na brak normalności rozkładu pozostałych, przeprowadzono test Kruskal-Wallis, którego wyniki zostały przedstawione w Tabeli \ref{table:kruskal_wallis_test_warm_starts}.
-Jego wyniki były zbliżone do zera (oraz poniżej poziomu istotności $\alpha = 0,05$), zatem wykonano test Dunn (którego wyniki zaprezentowano w Tabeli \ref{table:dunn_results_warm_starts}).
+Wartości p testu były zbliżone do zera (oraz poniżej poziomu istotności $\alpha = 0,05$), zatem wykonano test Dunn (którego wyniki zaprezentowano w Tabeli \ref{table:dunn_results_warm_starts}).
 
 \begin{table}[h!]
     \centering
@@ -31,7 +31,7 @@ Jego wyniki były zbliżone do zera (oraz poniżej poziomu istotności $\alpha =
     \label{table:kruskal_wallis_test_warm_starts}
 \end{table}
 
-\begin{figure}[h]
+\begin{figure}[h!]
     \centering
     \includegraphics[width=0.95\textwidth]{charts/results/avg-warm-start.png}
     \caption{Średni czas wykonywania funkcji (ciepły start) z użyciem wybranych metod w zależności od rozmiaru pamięci [źródło: opracowanie własne]}
@@ -50,15 +50,15 @@ W ramach funkcji opartych o JVM, użycie Kotlina w miejscu Javy nie przyniosło 
 Analiza wyników testu Dunn wykazała jedynie znaczną różnicę w przypadku funkcji o pamięci 2048 MB, gdzie Java pozwoliła na istotnie krótszy czas działania.
 Wartość średnia oraz mediana jest niższa dla funkcji Kotlin dla pamięci 128 MB i 512 MB.
 Różnica nie jest jednak na tyle znacząca, by możliwe było potwierdzenie tego faktu testem Dunn.
-Dla pamięci 512 MB, wartość p wynosi jednak około 0,9, zatem metoda ta była najbliższa poprawie wydajności w tym konkretnym scenariuszu. 
+Dla pamięci 512 MB, wartość p wynosi jednak około 0,9, zatem metoda ta była najbliższa statystycznie istotnej poprawie wydajności w tym konkretnym scenariuszu. 
 
 Trudnym w ocenie przypadkiem są funkcje oparte o Kotlin/JS.
 Według przewidywań, użycie języka intepretowanego powinno zapewnić istotnie dłuższy czas procesowania względem języków kompilowanych (Java i Kotlin).
-Kotlin/JS cechuje się bardzo dużą różnicą między wartością średnią i medianą oraz wartością odchylenia standardowego.
+Kotlin/JS cechuje się bardzo dużą różnicą między wartością średnią i medianą oraz wysoką wartością odchylenia standardowego.
 Oznacza to bardzo dużą niestabilność wyników.
 Dla wszystkich rozmiarów funkcji średni czas działania był wyższy niż dla analogicznych funkcji Java JVM i Kotlin JVM.
 Mediany były jednak niższe dla rozmiarów 128 MB i 512 MB.
-Test Dunn nie pozwolił na odrzucenie hipotezy zerowej pomiędzy Kotlin/JS oraz Java JVM i Kotlin JVM dla pamięci 128 MB, 512 MB i 10224 MB.
+Test Dunn nie pozwolił na odrzucenie hipotezy zerowej pomiędzy Kotlin/JS oraz Java JVM i Kotlin JVM dla pamięci 128 MB, 512 MB i 1024 MB.
 Dla pamięci 256 MB i 2048 MB możliwe jest stwierdzenie o istotnie negatywnym wpływie Kotlin/JS na czas działania funkcji.
 Dla pozostałych pamięci średni czas działania funkcji wykazuje także negatywny wpływ, jednak niemożliwie jest statystyczne potwierdzenie tego faktu.
 Może to wynikać z niestabilności działania Kotlin/JS, na co wpływ może mieć natura języka JavaScript.
@@ -76,18 +76,16 @@ Skuteczność Kotlin/Native zależy znacznie od wielkości pamięci.
 Dla dużych rozmiarów (512-2048 MB), metoda ta wpłynęła negatywnie na czas działania.
 Wartości średnie i mediany są znacznie wyższe dla tych pamięci, a wyniki testu Dunn pozwalają na stwierdzenie o istotnych różnicach względem funkcji Java JVM. 
 Kotlin/Native wpłynął także na czas procesowania w porównaniu z funkcjami Kotlin JVM dla rozmiarów 512 MB i 1024 MB.
-Dla największej pamięci 2048 MB, czas działania Kotlin/Native jest jednak zbliżony do Kotlin JVM (test Dunn wykazał wartość p równą 1, zatem różnice nie są znaczne).
+Dla największej pamięci 2048 MB, czas działania Kotlin/Native jest jednak zbliżony do Kotlin JVM (test Dunn wykazał wartość p równą 1, zatem prawdopodobnie różnice nie są znaczne).
 W przypadku pamięci małych (128 MB, 256 MB), Kotlin/Native pozwolił na uzyskanie niższych średni czasów wykonania oraz ich median.
-Test Dunn nie wskazał jednak na różnicę istotną statystycznie.
+Test Dunn nie wskazał jednak na różnicę istotną statystycznie, a dla pamięci 256 MB wartość p wynosi 1, zatem obie funkcje wykazały prawdopodobnie zbliżoną wydajność.
 Kotlin/Native cechuje się jednak niższym odchyleniem standardowym niż druga metoda oparta o kompilację natywną, czyli GraalVM.
 Wartości te są zbliżone dla pamięci 512 MB i 1024 MB, jednak przy dużej różnicy średnich czasów na niekorzyść Kotlin/Native.
 Sam Kotlin/Native może jednak także cechować się pewną niestabilnością.
 Istotna jest różnica wydajności między pamięciami 128 MB i 256 MB oraz 256 MB i 512 MB.
 Dla pierwszej pary czas działania znacznie zmalał wraz z wzrostem pamięci, dla drugiej sytuacja była odwrotna.
 
-\newpage
-
-\begin{table}[!h]
+\begin{table}[h!]
 \centering
 \caption{Porównanie średnich, median oraz odchyleń standardowych czasów działania funkcji podczas ciepłego startu względem funkcji bazowej (Java JVM) [źródło: opracowanie własne]}
 \small
@@ -139,6 +137,7 @@ Rozmiar pamięci [MB] & Metoda & Średnia [ms] & Zmiana średniej & Mediana [ms]
 \label{table:warm_start_comparison}
 \end{table}
 
+\newpage
 % % --- Row 1: 256 MB and 1024 MB charts ---
 % \begin{figure}[h]
 %     \centering % Center the minipages on the line
@@ -158,7 +157,7 @@ Rozmiar pamięci [MB] & Metoda & Średnia [ms] & Zmiana średniej & Mediana [ms]
 %     % No overall \caption for this outer figure environment, as it's just for layout.
 % \end{figure}
 
-\begin{table}[!h]
+\begin{table}[h!]
     \caption{Porównanie czasów działania funkcji podczas ciepłych startów poprzez wartość p testu Dunn (\textbf{istotne różnice pogrubione}) [źródło: opracowanie własne]}
     \centering
     \footnotesize
@@ -214,4 +213,4 @@ Rozmiar pamięci [MB] & Metoda & Średnia [ms] & Zmiana średniej & Mediana [ms]
     \label{table:dunn_results_warm_starts}
 \end{table}
 
-\newpage
+\clearpage

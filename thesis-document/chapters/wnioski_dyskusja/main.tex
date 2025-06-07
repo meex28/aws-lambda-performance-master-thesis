@@ -1,7 +1,5 @@
 \chapter{Wnioski i dyskusja}\label{chapter:wnioski_dyskusja}
 
-% Jakiś wstęp
-
 \section{Odpowiedzi na pytania badawcze}\label{chapter:odpowiedzi_na_pytania_badawcze}
 
 W ramach podrozdziału udzielono odpowiedzi na pytania badawcze sformułowane w pracy. 
@@ -17,13 +15,16 @@ W przypadku funkcji o wysokiej aktywności (czyli z dominacją ciepłych startó
 Dla czasu ciepłych startów widoczny jest negatywny wpływ usługi SnapStart (zarówno w przypadku Javy, jak i Kotlina) oraz zastosowania języka interpretowanego (w przypadku użycia Kotlin/JS).
 Metody bazujące na kompilacji kodu do natywnych plików binarnych są najbardziej obiecujące.
 Są to platformy GraalVM oraz Kotlin/Native, których efektywność możemy rozpatrzyć pod kątem małych i dużych rozmiarów pamięci.
-Dla małych rozmiarów pamięci (128 MB oraz 256 MB) Kotlin/Native zapewnił poprawę względem klasycznej funkcji Java JVM, o odpowiednio 49\% i 35\%.
-GraalVM pozwolił na większą poprawę dla pamięci 128 MB (o 60\%), jednak w przypadku pamięci 256 MB cechował się wydłużeniem czasu odpowiedzi.
-Dla pamięci 512 MB obie metody cechowały się dłuższym czasem procesowania niż klasyczna funkcja Java JVM, jednak GraalVM był znacznie szybszy (pogorszenie o 12\%, w porównaniu z 231\% dla Kotlin/Native).
-W przypadku większych pamięci, czyli 1024 MB i 2048 MB, GraalVM skrócił czas procesowania o odpowiednio 40\% i 23\%.
+Dla małych rozmiarów pamięci (128 MB oraz 256 MB) Kotlin/Native zapewnił niższe średnie czasy wykonania niż klasyczna funkcja Java JVM, o odpowiednio 49\% i 35\%.
+Nie były to jednak różnice znaczne, gdyż nie zostały potwierdzone wynikami testu statystycznego.
+GraalVM pozwolił na znaczną poprawę średniego czasu wykonania dla pamięci 128 MB (o 60\%), jednak w przypadku pamięci 256 MB cechował się wydłużeniem średniego czasu odpowiedzi.
+Dla pamięci 512 MB obie metody cechowały się dłuższym średnim czasem procesowania niż klasyczna funkcja Java JVM, jednak GraalVM był znacznie szybszy (pogorszenie o 12\%, w porównaniu z 231\% dla Kotlin/Native).
+W przypadku większych pamięci, czyli 1024 MB i 2048 MB, GraalVM skrócił czas średni procesowania o odpowiednio 40\% i 23\%.
+Istotny jest także fakt, że GraalVM cechował się pewną niestabilnością, objawiającą się wysokimi wartościami odchyleń standardowych.
+Może to świadczyć o niestabilności natywnych obrazów GraalVM.
 
 Zatem dla funkcji AWS Lambda o wysokiej aktywności i wysokim ponownym użyciu rozgrzanych już instancji najbardziej uniwersalnym wyborem będzie użycie GraalVM.
-Jednak w przypadku chęci użycia mniejszej pamięci, Kotlin/Native będzie sposobem bardziej stabilnym (ze względu na brak znacznego pogorszenia wydajności dla pamięci 256 MB).
+Jednak w przypadku chęci użycia mniejszej pamięci, Kotlin/Native będzie sposobem bardziej stabilnym (ze względu na dużo niższe odchylenia standardowe), który zapewni pewną poprawę czasu działania.
 Dodatkowo, metoda ta wykazuje bardzo wysoką poprawę efektywności kosztowej.
 Dla rozmiarów pamięci 128 MB i 256 MB Kotlin/Native pozwolił na uzyskanie najniższych kosztów, zatem może to być istotny czynnik w wyborze metod optymalizacji przez zespoły programistyczne.
 
@@ -31,7 +32,7 @@ Analizując przypadek funkcji mniej aktywnych (czyli z większym udziałem zimny
 Poprzez ocenę współczynnika wydajności funkcji (WWF) można stwierdzić, że większość metod pozwoliło na pewną poprawę wydajności.
 Jedynie dla mniejszych pamięci (128 MB, 256 MB) metody jak SnapStart i Kotlin prowadziły do pogorszenia wydajności (oprócz użycia Javy z aktywnym SnapStart i pamięci 256 MB).
 Dla pamięci wielkości 128 MB, 256 MB ponownie najbardziej skuteczne okazały się metody oparte o kompilację do natywnych plików binarnych.
-Szczególną uwagę przykuwa jednak użycie Kotlin/Native, który zapewnił znacznie większy wzrost wydajności niż GraalVM.
+Szczególną uwagę przykuwa jednak użycie Kotlin/Native, który zapewnił znacznie większy wzrost wydajności mierzony przez WWF niż GraalVM.
 Wykazał się on najbardziej efektywną metodą dla funkcji o pamięci 128 MB, a także dla rozmiaru 256 MB, gdzie wzrost wydajności był kolosalny.
 Kotlin/Native osiągnał trzykrotnie większą wartość współczynnika niż GraalVM, który był drugą najbardziej skuteczną metodą.
 Czas uruchomienia funkcji dla pamięci 128 MB i 256 MB był także najniższy dla Kotlin/Native.
@@ -40,7 +41,7 @@ Dodatkowo, w ramach tych wartości pamięci możliwe było uzyskanie najniższyc
 Zostało to otrzymane dzięki użyciu kompilacji Kotlina do natywnych plików binarnych.
 Wszystkie te aspekty wskazują na bardzo wysoką skuteczność tej metody w zakresie niewielkich rozmiarów pamięci (128 MB, 256 MB).
 
-Dla aktywnych funkcji o rozmiarze pamięci od 512 MB do 2048 MB, trzy z badanych metod wykazały istotną skuteczność.
+Dla mniej aktywnych funkcji o rozmiarze pamięci od 512 MB do 2048 MB, trzy z badanych metod wykazały istotną skuteczność.
 Były to Kotlin/JS, Kotlin/Native oraz GraalVM.
 Dla pamięci 512 MB, metody wykazały zbliżoną skuteczność pod względem współczynnika wydajności funkcji (przy czym GraalVM był najbardziej wydajny).
 Wraz z wzrostem pamięci rosła wydajność wszystkich trzech metod, jednak istotny jest tutaj wzrost wydajności dla funkcji używających Kotlin/Native.
@@ -53,8 +54,9 @@ Podsumowując, niemożliwe jest wybranie jednej najbardziej efektywnej metody op
 Dla funkcji o bardzo wysokiej aktywności, GraalVM byłby najbardziej uniwersalną techniką, która jednak nie jest skuteczna dla każdej konfiguracji pamięci.
 Podczas użycia funkcji o mniejszej aktywności i wyższym znaczeniu zimnych startów, bardzo sprawną techniką jest Kotlin/Native, który cechuje się także dobrą efektywnością kosztową, w porównaniu z alternatywnym GraalVM.
 Wartym uwagi jest jednak przypadek funkcji o niewielkim rozmiarze pamięci (128 MB, 256 MB) i używających Kotlin/Native.
-W ramach tych funkcji metoda ta pozwala na poprawę wydajności w ramach każdego z badanych aspektów.
-Redukuje ona czas ciepłych startów, osiąga najniższy czas działania dla zimnych startów oraz najwyższy współczynnik wydajności funkcji w ramach tych rozmiarów pamięci.
+W ramach tych funkcji metoda ta pozwala na poprawę wydajności w ramach większości z badanych aspektów.
+Osiąga ona najniższy czas działania dla zimnych startów oraz najwyższy współczynnik wydajności funkcji w ramach tych rozmiarów pamięci.
+W przypadku ciepłych startów, jej efektywność jest wyższa lub podobna w porównaniu z funkcją Java JVM.
 Wszystko to jest możliwe przy jednocześnie najniższych z otrzymanych w badaniu kosztów działania.
 Z tego względu Kotlin/Native powinien być rozważany w przypadku decyzji o wyborze metody optymalizacji wydajności.
 
@@ -69,10 +71,10 @@ Dla Javy użycie SnapStart zredukowało czas zimnych startów od 10\% (dla pami�
 Użycie Kotlina także było skuteczne, choć tylko dla większych rozmiarów pamięci (512 MB, 1024 MB, 2048 MB), gdzie poprawa wynosiła odpowiednio 28\%, 54\% oraz 65\%.
 
 Najbardziej wydajnymi metodami były te oparte o kompilacje do natywnych plików binarnych (GraalVM, Kotlin/Native) oraz używające języków interpretowanych (Kotlin/JS).
-Porównując GraalVM oraz Kotlin/JS, pierwsza metoda była średnio bardziej skuteczna dla małych pamięci (128 MB, 256 MB).
-Zapewniła ona poprawę czasu odpowiedzi o odpowiednio 78\% i 81\%, gdy dla Kotlin/JS wynik ten wynosił odpowiednio 75\% i 80\%.
-W przypadku pamięci 512 MB, 1024 MB i 2048 MB GraalVM zredukował czas odpowiedzi o odpowiednio 82\%, 82\% i 80\%, a Kotlin/JS zredukował czas odpowiedzi o odpowiednio 84\%, 84\% i 86\%.  
-Jednak dla obu tych metod róznice w skuteczności są niewielkie. 
+Porównując GraalVM oraz Kotlin/JS, pierwsza metoda była średnio bardziej skuteczna dla małych pamięci (128 MB, 256 MB), jednak nie była to znaczna różnica.
+Zapewniła ona poprawę średniego czasu odpowiedzi o odpowiednio 78\% i 81\%, gdy dla Kotlin/JS wynik ten wynosił odpowiednio 75\% i 80\%.
+W przypadku pamięci 512 MB, 1024 MB i 2048 MB GraalVM zredukował czas odpowiedzi o odpowiednio 82\%, 82\% i 80\%, a Kotlin/JS zredukował czas odpowiedzi o odpowiednio 84\%, 84\% i 86\%.
+Na bazie testów statystycznych wykazano, że dla pamięci 1024 MB przewaga Kotlin/JS jest znaczna, dla pozostałych już mniejsza.
 
 Najefektywniejszą metodą okazał się jednak Kotlin/Native.
 Dla każdej z badanych wielkości pamięci pozwolił on na największą redukcję czasu działania.
@@ -120,7 +122,7 @@ Ograniczeniami dla tych sposobów są także ograniczone możliwości użycia me
 Istotnym zagrożeniem dla wniosków wyciągniętych na podstawie eksperymentu może być niska moc statystyczna wyników. 
 Badanie opierało się na dużej, jednak określonej, liczbie wywołań dla każdej z funkcji i konfiguracji. 
 Mimo przeprowadzenia wielu testów, zmienność środowiska chmurowego i potencjalne losowe zmiany w czasach odpowiedzi mogły wpłynąć na wyniki. 
-W ramach badania starano się zminimalizować ten wpływ, np. poprzez brak integracji z zewnętrznymi serwisami.
+W ramach badania starano się zminimalizować ten wpływ, np. poprzez brak integracji z zewnętrznymi serwisami oraz przeprowadzenie analizy statystycznej.
 Aby jeszcze bardziej zmniejszyć to ryzyko możliwe byłoby wydłużenie czasu eksperymentu i regularne wywoływanie funkcji przez dłuższy okres (np. kilku dni).
 Proces ten wymaga jednak dłuższego badania, które przekracza zakres aktualnej pracy.
 
@@ -139,7 +141,7 @@ Sama ich analiza i porównanie może być jednak wymagające, co stanowi potencj
 Trafność konstruktu mogła być zagrożona ze poprzez przyjęte w pracy miary wydajności oraz kompromisów w procesiu rozwoju oprogramowania.
 Wydajność została zmierzona za pomocą czasu wykonania (ciepłe i zimne starty), kosztu oraz autorskiego współczynnika WWF.
 Trafność ta może być jednak zagrożona ze względu na zróżnicowane proporcje ciepłych i zimnych startów w systemach opartych o funkcje AWS Lambda.
-W ramach badania przyjęto jedynie pojedyncze ich propocje, zatem istnieje ryzyko niezawarcia w badaniu szczególnych przypadków użycia badanej usługi.
+W ramach badania przyjęto jedynie pojedyncze ich proporcje, zatem istnieje ryzyko niezawarcia w badaniu szczególnych przypadków użycia badanej usługi.
 
 Wpływ na proces rozwoju oprogramowania oceniono na podstawie czasu budowy artefaktu, jego wielkości, dostępności AWS SDK, kosztu działania funkcji oraz innych czynników opisanych w Rozdziale \ref{chapter:wybrane_metody_optimalizacji}.
 Opis procesu rozwoju oprogramowania jedynie w tych aspektach jest jednak uproszczony.

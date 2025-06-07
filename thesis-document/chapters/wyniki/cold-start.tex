@@ -1,4 +1,3 @@
-\newpage
 \section{Zimny start}\label{chapter:results_cold_start}
 
 Drugim badanym kryterium jest czas działania funkcji podczas zimnych startów, które wymagają odpowiedniej inicjaliacji funkcji.
@@ -12,7 +11,7 @@ Ze względu na brak normalności rozkładu pozostałych, przeprowadzono test Kru
 Wyniki testu były zbliżone do zera (oraz poniżej poziomu istotności $\alpha = 0,05$).
 Wykonano zatem test Dunn (którego wyniki zaprezentowano w Tabeli \ref{table:dunn_results_cold_starts}).
 
-\begin{table}[H]
+\begin{table}[h]
     \centering
     \caption{Wyniki testu Kruskal-Wallis dla wyników pomiaru czasu działania funkcji podczas zimnych startów [źródło: opracowanie własne]}
     \begin{tabular}{|c|c|}
@@ -33,11 +32,18 @@ Wykonano zatem test Dunn (którego wyniki zaprezentowano w Tabeli \ref{table:dun
     \label{table:kruskal_wallis_test_cold_starts}
 \end{table}
 
-\begin{figure}[!h]
+\begin{figure}[h]
     \centering
     \includegraphics[width=0.95\textwidth]{charts/results/avg-cold-start-512-2048.png}
     \caption{Średni czas wykonywania funkcji (zimny start) dla rozmiarów pamięci: 512 MB, 1024 MB, 2048 MB  [źródło: opracowanie własne]}
     \label{fig:avg_cold_start_512_2045}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.95\textwidth]{charts/results/avg-cold-start-128-256.png}
+    \caption{Średni czas wykonywania funkcji (zimny start) dla rozmiarów pamięci: 128 MB, 256 MB  [źródło: opracowanie własne]}
+    \label{fig:avg_cold_start_128_256}
 \end{figure}
 
 \newpage
@@ -58,10 +64,10 @@ Znaczna poprawa wydajności została osiągnięta dla funkcji opartych o GraalVM
 Dla małych rozmiarów pamięci (128 MB, 256 MB) obie metody na poprawę czasu działania o około 80\% względem funkcji Java JVM.
 Dla 256 MB ich wyniki były zbliżone, a dla 128 MB z korzyścią dla GraalVM.
 Nie były to jednak różnice wystarczająco istotne, aby potwierdzić różnicę wynikiem testu Dunn.
-Dla wielkośći 512-2048 MB, Kotlin/JS cechował się niższymi wartościami średnimi oraz medianami czasu działania.
+Dla wielkości 512-2048 MB, Kotlin/JS cechował się niższymi wartościami średnimi oraz medianami czasu działania.
 W przypadku pamięci 1024 MB, różnica ta jest statystycznie istotna (na bazie testu Dunn).
 Dla pozostałych pamięci, wartości p wynoszą jednak mniej niż 0,09. 
-Różnica między obiema metodami jest zatem możliwa, jednak przy większym prawdopobieństwie błędu.
+Stwierdznie różnicy między obiema metodami jest zatem możliwe, jednak przy większym prawdopobieństwie błędu.
 
 Interesującymi wynikami charakteryzuje się jednak metoda Kotlin/Native, który osiągnął najniższe wartości średnich oraz median ze wszystkich badanych metod.
 Technika ta pozwoliła na redukcję wartości średnich i median czasu działania dla wszystkich rozmiarów pamięci o około 90\% względem funkcji Java JVM.
@@ -71,7 +77,7 @@ Kotlin/Native pozwolił na istotnie krótszy czas wykonywania dla pamięci funkc
 Dla najmniejszej pamięci 128 MB, test nie pozwolił na odrzucenie hipotezy zerowej na określonym poziomie istotności.
 Wartość p wynosi jednak w tym przypadku mniej niż 0,08.
 
-\begin{table}[htbp]
+\begin{table}[h!]
 \centering
 \caption{Porównanie średnich, median oraz odchyleń standardowych czasów działania funkcji podczas zimnego startu względem funkcji bazowej (Java JVM) [źródło: opracowanie własne]}
 \small
@@ -123,7 +129,7 @@ Rozmiar pamięci [MB] & Metoda & Średnia [ms] & Zmiana średniej & Mediana [ms]
 \label{table:cold_start_comparison}
 \end{table}
 
-\begin{table}[H]
+\begin{table}[h!]
     \caption{Porównanie czasów działania funkcji podczas zimnych startów poprzez wartość p testu Dunn (\textbf{istotne różnice pogrubione}) [źródło: opracowanie własne]}
     \centering
     \footnotesize
@@ -178,6 +184,8 @@ Rozmiar pamięci [MB] & Metoda & Średnia [ms] & Zmiana średniej & Mediana [ms]
     \end{tabular}
     \label{table:dunn_results_cold_starts}
 \end{table}
+
+\clearpage
 
 % \begin{figure}[p] % Use [p] to suggest a float page. Or [!htbp] for more flexibility.
 %     \centering

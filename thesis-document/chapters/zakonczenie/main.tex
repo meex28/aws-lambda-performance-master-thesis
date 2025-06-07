@@ -13,6 +13,7 @@ Dla każdej z omawianych metod przygotowano i opisano implementację funkcji AWS
 Następnie, funkcje te zostały wdrożone w różnych konfiguracjach pamięci, w ramach środowiska przedstawionego w opracowaniu.
 Z jego użyciem wykonano pomiar wydajności w ramach metryk: czas działania funkcji podczas ciepłego i zimnego startu, zaproponowany w ramach pracy współczynnik wydajności funkcji oraz koszt działania.
 Metryki te pozwoliły odpowiedzieć na dwa pierwsze pytania badawcze sformułowane w pracy, które poruszały poprawę ogólnej wydajności funkcji oraz redukcji czasu działania funkcji podczas zimnego startu.
+Dodatkowo, analizie statystycznej poddano wyniki pomiarów czasu działania funkcji podczas zimnych oraz ciepłych startów, co pozwoliło na rzetelniejszą ich ocenę.
 W ramach pracy odpowiedziano także na trzecie pytanie badawcze, które analizowało oddziaływanie metod na proces rozwoju oprogramowania.
 W tym celu przeanalizowano proces budowy artefaktów z użyciem poszczególnych metod, potencjalne ograniczenia w korzystaniu z AWS SDK, koszt działania funkcji oraz inne cechy, które zawarto w charakterystykach poszczególnych metod.
 
@@ -25,7 +26,7 @@ Dodatkowo, w przeglądzie literatury ustalono czynniki, które wpływają na wyd
 
 Poprzez analizę wydajności funkcji pod względem różnych metryk oraz rozmiarów pamięci stwierdzono znaczne zróżnicowanie w skuteczności metod w zależności od przypadku użycia.
 Dla funkcji aktywnych, czyli z większym udziałem ciepłych startów, zauważono, że metody oparte o kompilację do plików natywnych są najskuteczniejsze.
-Stwierdzono, że GraalVM jest najbardziej uniwersalną metodą dla tego przypadku funkcji, jednak Kotlin/Native jest bardziej wyspecjalizowany dla funkcji o małym rozmiarze pamięci (128 MB, 256 MB).
+Stwierdzono, że GraalVM jest najbardziej uniwersalną metodą dla tego przypadku funkcji, jednak Kotlin/Native może być bardziej wyspecjalizowany dla funkcji o małym rozmiarze pamięci (128 MB, 256 MB).
 Dla funkcji o mniejszej aktywności, czyli z znaczym udziałem zimnych startów, metody GraalVM, Kotlin/JS i Kotlin/Native wykazały się wysoką efektywnością.
 Aby odwzorować wydajność funkcji zaproponowano współczynnik wydajności funkcji (WWF), który agregował średnie czasy wykonania podczas zarówno ciepłych, jak i zimnych startów.
 Poprzez jego analizę stwierdzono, że Kotlin/Native jest najskuteczniejszą metodą dla większości rozmiarów pamięci.
@@ -59,6 +60,6 @@ Dalszymi kierunkami rozwoju dla tematu pracy może być bardziej dogłębna anal
 Interesującym obszarem są dalsze badania języka Kotlin w kontekście AWS Lambda, poprzez na przykład analizę narzędzi (np. bibliotek), który ten język oferuje.
 Wynikiem skłaniającym do dalszych eksperymentów jest także bardzo niska skuteczność użycia usługi SnapStart w połączeniu z Kotlinem.
 Jest to efekt inny niż zastosowanie z Javą, zatem poznanie przyczyn tego zjawiska może być elementem kolejnego badania.
-Praca może być także rozwijana w zastosowań funkcji AWS Lambda, innych niż te poruszone w pracy.
+Praca może być także rozwijana w ramach zastosowań funkcji AWS Lambda, innych niż te poruszone w pracy.
 Metody mogą zostać ocenione w innych scenariuszach, jak integracja z zewnętrznymi usługami, czy operacje wymagające dużej mocy obliczeniowej.
 Praca skłania do dalszych badań i eksperymentów nad użyciem Kotlina w AWS Lambda, co może przyczynić się do większej popularyzacji tego języka.
