@@ -133,6 +133,14 @@ Proces ten wymaga jednak znacznie dłuższego badania, które przekracza zakres 
 Potencjalnym czynnikiem, który mógłby negatywnie wpłynąć na trafność wewnętrzną eksperymentu jest dynamiczna natura środowiska chmurowego.
 Inne procesy działające w tym samym czasie w infrastrukturze AWS i niezwiązane z badaniem, mogły teoretycznie wpłynąć na wydajność badanych funkcji (np. poprzez chwilowe obciążenie sieci lub współdzielonych zasobów).
 
+Innym zagrożeniem dla funkcji opartych o maszynę wirtualnych o maszynę wirtualną Javy, może być mechanizm odśmiecania pamięci (Garbage Collector).
+Z natury działa on niedeterministycznie, co może prowadzić do jego uruchomienia w ramach niektórych wywołań usługi.
+Działanie to może mieć wpływ na ostateczne wyniki analizy statystycznej.
+W ramach badania starano się zminimalizować jego wpływ poprzez wykonanie dużej liczby pomiarów.
+Istotny jest jednak fakt, że mechanizm odśmiecania pamięci jest integralną częścią środowiska JVM.
+W przypadku praktycznych zastosowań funkcji opartych o to środowisko, wpływ odśmiecania pamięci prawdopodobnie nie byłby kontrolowany.
+Z tego względu, przy jednoczesnym zachowaniu wielokrotnych wywołań, jego losowy wpływ może w pewnym stopniu lepiej odzwierciedlać praktyczną wydajność funkcji.
+
 Innym aspektem są potencjalne błędy lub różnice w implementacji funkcji.
 W przypadku języka Kotlin postarano się zminimalizować ten wpływ poprzez współdzielenie kodu między wszystkiem metody oparte o ten język.
 Jednak poszczególne metody stosują różne biblioteki i frameworki, których wybór jest ograniczony poprzez daną metodę (np. wsparcie dla kompilacji natywnej).

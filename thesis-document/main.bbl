@@ -89,6 +89,18 @@
       \verb https://www.usenix.org/conference/nsdi20/presentation/agache
       \endverb
     \endentry
+    \entry{AWSCloudWatchLogs}{online}{}{}
+      \list{organization}{1}{%
+        {Amazon Web Services}%
+      }
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/WhatIsCloudWatchLogs.html}}
+      \field{note}{Dostęp: 05.06.2025}
+      \field{title}{Amazon CloudWatch User Guide}
+      \field{year}{2024}
+    \endentry
     \entry{aws-sdk-java-v2}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=f0c5282ac7e568c0822a67c9facc9190}{%

@@ -324,6 +324,14 @@ Wykorzystano do tego przygotowaną funkcję procesora logów (oznaczoną numerem
 Następnie plik był wgrywany do usługi S3, co pozwalało na pobranie przez użytkownika.
 Tak przygotowana agregacja logów umożliwiła następnie niezbędną analizę wyników badania.
 
+Istotnym faktem jest, że logi zostały zebrane bezpośrednio po zakończeniu wywołań.
+Domyślnie są one przechowywane przez nieokreślony czas i nigdy nie wygasają \cite{AWSCloudWatchLogs}, jednak opcja ta może być zmieniona.
+W przypadku odtworzenia badania jest zatem ważne, aby konfiguracja ta została sprawdzona przed jego rozpoczęciem.
+Dodatkowo, zaproponowane środowisko testowe nie korzysta z metryk CloudWatch.
+Wynika to z faktu, że metryki te podlegają stałej agregacji, która może zmniejszyć dokładność danych wraz z upływem czasu.
+Po upływie 15 dni, dane są redukowane do okresów pięciominutowych \cite{AWSCloudWatchLogs}.
+W takim przypadku wyniki testów weryfikowane po tym okresie mogą być niepełne, zatem istotne jest dobranie odpowiedniej metody pobierania danych wydajnościowych.
+
 \section{Analiza statystyczna}\label{chapter:analiza_statystyczna}
 
 Aby uzyskać rzetelne wyniki badań zdecydowano się na przeprowadzenie analizy statystycznej.
