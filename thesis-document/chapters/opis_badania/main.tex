@@ -332,6 +332,14 @@ Wynika to z faktu, że metryki te podlegają stałej agregacji, która może zmn
 Po upływie 15 dni, dane są redukowane do okresów pięciominutowych \cite{AWSCloudWatchLogs}.
 W takim przypadku wyniki testów weryfikowane po tym okresie mogą być niepełne, zatem istotne jest dobranie odpowiedniej metody pobierania danych wydajnościowych.
 
+Aby umożliwić odtworzenie badania do pracy dołączono przygotowane repozytorium \cite{RepozytoriumEksperyment}, które zawiera kod źródłowy środowiska badawczego.
+Element ten zaproponowali Madeyski i Kitchenham \cite{wouldWiderAdoption}. 
+Jest on istotny ze względu na możliwość dokładnego odtworzenia badania oraz ich powtarzalność.
+Repozytorium zawiera kod źródłowy funkcji Java (folder ,,java-function'') oraz Kotlin (folder ,,kotlin-function) oraz definicję infrastruktury Terraform (folder ,,infrastructure'').
+Budowa wszystkich potrzebnych artefaktów jest możliwe poprzez użycie narzędzia Taskfile, którego definicja znajduje się w pliku ,,taskfile.yml''.
+Folder ,,infrastructure'' zawiera zarówno deklaracje funkcji Lambda, które były badane, jak i całego środowiska badawczego.
+Aby uruchomić badanie wymagane jest jedynie wywołanie instancji Step Function, a następnie funkcji procesora logów, co zostało opisane w rozdziale. 
+
 \section{Analiza statystyczna}\label{chapter:analiza_statystyczna}
 
 Aby uzyskać rzetelne wyniki badań zdecydowano się na przeprowadzenie analizy statystycznej.

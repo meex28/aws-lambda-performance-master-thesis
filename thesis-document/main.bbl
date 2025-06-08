@@ -241,7 +241,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://docs.aws.amazon.com/lambda/latest/dg/welcome.html}}
-      \field{note}{[Dostęp: 13.05.2025]}
+      \field{note}{Dostęp: 13.05.2025}
       \field{title}{AWS Lambda Developer Guide}
     \endentry
     \entry{awsLambdaDocs}{online}{}{}
@@ -312,7 +312,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html}}
-      \field{note}{[Dostęp: 13.05.2025]}
+      \field{note}{Dostęp: 13.05.2025}
       \field{title}{AWS Lambda SnapStart Developer Guide}
     \endentry
     \entry{awsSDKForKotlinDeveloperGuide}{online}{}{}
@@ -335,7 +335,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://docs.aws.amazon.com/sdk-for-kotlin/latest/developer-guide/home.html}}
-      \field{note}{[Dostęp: 13.05.2025]}
+      \field{note}{Dostęp: 13.05.2025}
       \field{title}{AWS SDK for Kotlin Developer Guide}
     \endentry
     \entry{aws_what_is_aws}{misc}{}{}
@@ -1028,7 +1028,7 @@
       \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://kotlinlang.org/docs/home.html}}
-      \field{note}{[Dostęp: 15.05.2025]}
+      \field{note}{Dostęp: 15.05.2025}
       \field{title}{{Dokumentacja Kotlin}}
     \endentry
     \entry{http4kCoreDocs}{misc}{}{}
@@ -1036,7 +1036,7 @@
       \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://www.http4k.org/ecosystem/http4k/}}
-      \field{note}{[Dostęp: 16.05.2025]}
+      \field{note}{Dostęp: 16.05.2025}
       \field{title}{{Dokumentacja narzędzia http4k Core}}
     \endentry
     \entry{vanDonkersgoed2023postnl}{online}{}{}
@@ -1865,7 +1865,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://github.com/trueangle/kotlin-native-aws-lambda-runtime}}
-      \field{note}{[Dostęp: 16.05.2025]}
+      \field{note}{Dostęp: 16.05.2025}
       \field{title}{{Kotlin Native Runtime for AWS Lambda}}
     \endentry
     \entry{8605773}{inproceedings}{}{}
@@ -1921,7 +1921,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://www.jetbrains.com/help/kotlin-multiplatform-dev}}
-      \field{note}{[Dostęp: 15.05.2025]}
+      \field{note}{Dostęp: 15.05.2025}
       \field{title}{{Kotlin Multiplatform Development}}
     \endentry
     \entry{8844428}{inproceedings}{}{}
@@ -2650,6 +2650,35 @@
       \verb https://arxiv.org/abs/1909.03555
       \endverb
     \endentry
+    \entry{RepozytoriumEksperyment}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=ceaf18e641c6698dd8cdea1fe4679efc}{%
+           family={Puchała},
+           familyi={P\bibinitperiod},
+           given={Piotr},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{ceaf18e641c6698dd8cdea1fe4679efc}
+      \strng{fullhash}{ceaf18e641c6698dd8cdea1fe4679efc}
+      \strng{fullhashraw}{ceaf18e641c6698dd8cdea1fe4679efc}
+      \strng{bibnamehash}{ceaf18e641c6698dd8cdea1fe4679efc}
+      \strng{authorbibnamehash}{ceaf18e641c6698dd8cdea1fe4679efc}
+      \strng{authornamehash}{ceaf18e641c6698dd8cdea1fe4679efc}
+      \strng{authorfullhash}{ceaf18e641c6698dd8cdea1fe4679efc}
+      \strng{authorfullhashraw}{ceaf18e641c6698dd8cdea1fe4679efc}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Dostęp: 08.06.2025}
+      \field{title}{Repozytorium zawierające kod źródłowy środowiska badawczego}
+      \verb{urlraw}
+      \verb https://github.com/meex28/aws-lambda-performance-experiment
+      \endverb
+      \verb{url}
+      \verb https://github.com/meex28/aws-lambda-performance-experiment
+      \endverb
+    \endentry
     \entry{8116416}{inproceedings}{}{}
       \name{author}{2}{}{%
         {{hash=44f57304e3959244e8e11b85d01a2469}{%
@@ -2816,7 +2845,7 @@
       \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://github.com/JetBrains/kotlin/tree/master/compiler/ir/}}
-      \field{note}{[Dostęp: 16.05.2025]}
+      \field{note}{Dostęp: 16.05.2025}
       \field{title}{{Repozytorium kodu źródłowego kompilatora Kotlin IR}}
     \endentry
     \entry{serverlessArchitectureMarketReport}{online}{}{}
