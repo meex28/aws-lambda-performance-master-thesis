@@ -13,26 +13,28 @@ Dla każdej z omawianych metod przygotowano i opisano implementację funkcji AWS
 Następnie, funkcje te zostały wdrożone w różnych konfiguracjach pamięci, w ramach środowiska przedstawionego w opracowaniu oraz udostępnionego w formie repozytorium \cite{RepozytoriumEksperyment}.
 Z jego użyciem wykonano pomiar wydajności w ramach metryk: czas działania funkcji podczas ciepłego i zimnego startu, zaproponowany w ramach pracy współczynnik wydajności funkcji oraz koszt działania.
 Metryki te pozwoliły odpowiedzieć na dwa pierwsze pytania badawcze sformułowane w pracy, które poruszały poprawę ogólnej wydajności funkcji oraz redukcji czasu działania funkcji podczas zimnego startu.
-Dodatkowo, analizie statystycznej poddano wyniki pomiarów czasu działania funkcji podczas zimnych oraz ciepłych startów, co pozwoliło na rzetelniejszą ich ocenę.
+Dodatkowo, analizie statystycznej poddano wyniki pomiarów czasu działania funkcji podczas zimnych oraz ciepłych startów, co pozwoliło na rzetelniejszą ocenę.
 W ramach pracy odpowiedziano także na trzecie pytanie badawcze, które analizowało oddziaływanie metod na proces rozwoju oprogramowania.
 W tym celu przeanalizowano proces budowy artefaktów z użyciem poszczególnych metod, potencjalne ograniczenia w korzystaniu z AWS SDK, koszt działania funkcji oraz inne cechy, które zawarto w charakterystykach poszczególnych metod.
 
 \subsection*{Wnioski}
 
 W ramach pracy dokonano przeglądu literatury, który pozwolił na poznanie aktualnego stanu wiedzy na temat poprawy wydajności AWS Lambda w ekosystemie Java.
-Na jego bazie włączono do pracy dwie istniejące już metody, które nie były jednak poruszone w wielu pracach, a cechowały się wysoką skutecznością.
-Zidentyfikowano także obszar, który nie został jeszcze zbadany, czyli użycia języka Kotlin wraz z jego rozbudowanym zestawem narzędzi.
-Dodatkowo, w przeglądzie literatury ustalono czynniki, które wpływają na wydajność funkcji, m.in. zimne starty i wielkość pamięci, co wykorzystano w badaniu.
+Poprzez przegląd zidentyfikowano luki badawcze, który wpłynęły następnie na wybór metod optymalizacji oraz kształt badania.
+Wykazano brak reprezentacji w badaniach alternatywnych do Javy języków programowania, czego wynikiem jest zawarcie w pracy trzech metody optymalizacji opartych o język Kotlin.
+Dodatkowo, do pracy włączono dwie metody zidentyfikowane w przeglądzie, które nie były jednak dostatecznie zbadane, a cechowały się wysoką skutecznością.
+Na bazie analizy istniejących prac stwierdzono także niewystarczające badania w kontekście wydajności.
+Z tego powodu w pracy zawarto analizę funkcji pod kątem różnych rozmiarów pamięci, czasu działania funkcji podczas ciepłych i zimnych startów oraz metryk łączących oba rodzaje uruchomień: zaproponowanego współczynnika wydajności funkcji oraz kosztu działania.
+Dodatkowo, przeanalizowano wpływ poszczególnych metod na proces rozwoju oprogramowania, co nie było poruszane wyłącznie przez pojedynczą pracę w przeglądzie literatury.
 
 Poprzez analizę wydajności funkcji pod względem różnych metryk oraz rozmiarów pamięci stwierdzono znaczne zróżnicowanie w skuteczności metod w zależności od przypadku użycia.
 Dla funkcji aktywnych, czyli z większym udziałem ciepłych startów, zauważono, że metody oparte o kompilację do plików natywnych są najskuteczniejsze.
-Stwierdzono, że GraalVM jest najbardziej uniwersalną metodą dla tego przypadku funkcji, jednak Kotlin/Native może być bardziej wyspecjalizowany dla funkcji o małym rozmiarze pamięci (128 MB, 256 MB).
+Stwierdzono, że GraalVM jest najbardziej uniwersalną metodą dla tego przypadku funkcji, jednak Kotlin/Native może być bardziej stabilną metodą dla funkcji o małym rozmiarze pamięci (128 MB, 256 MB).
 Dla funkcji o mniejszej aktywności, czyli z znaczym udziałem zimnych startów, metody GraalVM, Kotlin/JS i Kotlin/Native wykazały się wysoką efektywnością.
 Aby odwzorować wydajność funkcji zaproponowano współczynnik wydajności funkcji (WWF), który agregował średnie czasy wykonania podczas zarówno ciepłych, jak i zimnych startów.
 Poprzez jego analizę stwierdzono, że Kotlin/Native jest najskuteczniejszą metodą dla większości rozmiarów pamięci.
 Dodatkowo, zauważono, że Kotlin/Native cechował się najniższym czasem zimnych startów dla wszystkich badanych pamięci.
-Co istotne, metoda ta pozwoliła na osiągnięcie najniższych możliwych kosztów wśród badanych metod.
-W jej przypadku były one najniższe dla rozmiarów pamięci 128 MB i 256 MB.
+Istotnym jest także przypadek rozmiarów 128 MB i 256 MB, gdzie Kotlin/Native pozwolił na uzyskanie najniższych kosztów ze wszystkich badanych kombinacji.
 
 Ważnym aspektem pracy jest także analiza użycia badanych metod na proces rozwoju oprogramowania.
 Zidentyfikowano kompromisy, których muszą być świadomi programiści decydujący się na wdrożenie wybranych metod poprawy wydajności.
