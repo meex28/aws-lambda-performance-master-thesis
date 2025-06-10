@@ -46,6 +46,5 @@
 \contentsline {section}{\numberline {6.2}Zagrożenia trafności wyników}{82}{section.6.2}%
 \contentsline {chapter}{Zakończenie}{85}{chapter*.34}%
 \contentsline {chapter}{Bibliografia}{88}{chapter*.34}%
-\contentsline {chapter}{Źródła internetowe}{94}{chapter*.35}%
-\contentsline {chapter}{Spis rysunków}{97}{chapter*.36}%
-\contentsline {chapter}{Spis tabel}{98}{chapter*.36}%
+\contentsline {chapter}{Spis rysunków}{96}{chapter*.35}%
+\contentsline {chapter}{Spis tabel}{97}{chapter*.35}%

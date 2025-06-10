@@ -48,25 +48,29 @@
 \resetformatting
 % Please read :
 %https://www.overleaf.com/learn/latex/Bibliography_management_with_bibtex
-\pagestyle{bibliographyStyle}
-\defbibfilter{bibliographyPapers}{
-  type=article or
-  type=inproceedings or
-  type=conference or
-  type=mastersthesis
-}
-\addcontentsline{toc}{chapter}{Bibliografia}  
-\printbibliography[filter=bibliographyPapers,title={Bibliografia}]
-\newpage
+% \pagestyle{bibliographyStyle}
+% \defbibfilter{bibliographyPapers}{
+%   type=article or
+%   type=inproceedings or
+%   type=conference or
+%   type=mastersthesis
+% }
+% \addcontentsline{toc}{chapter}{Bibliografia}  
+% \printbibliography[filter=bibliographyPapers,title={Bibliografia}]
+% \newpage
 
-\pagestyle{onlineSourcesStyle}
-\defbibfilter{onlinePapers}{
-  type=online or
-  type=misc or
-  type=manual
-}
-\addcontentsline{toc}{chapter}{Źródła internetowe}  
-\printbibliography[filter=onlinePapers,title={Źródła internetowe}]
+% \pagestyle{onlineSourcesStyle}
+% \defbibfilter{onlinePapers}{
+%   type=online or
+%   type=misc or
+%   type=manual
+% }
+% \addcontentsline{toc}{chapter}{Źródła internetowe}  
+% \printbibliography[filter=onlinePapers,title={Źródła internetowe}]
+
+\pagestyle{bibliographyStyle}
+\addcontentsline{toc}{chapter}{Bibliografia}  
+\printbibliography[title={Bibliografia}]
 \newpage
 
 % Add list of figures and tables

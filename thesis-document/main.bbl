@@ -89,18 +89,6 @@
       \verb https://www.usenix.org/conference/nsdi20/presentation/agache
       \endverb
     \endentry
-    \entry{AWSCloudWatchLogs}{online}{}{}
-      \list{organization}{1}{%
-        {Amazon Web Services}%
-      }
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/WhatIsCloudWatchLogs.html}}
-      \field{note}{Dostęp: 05.06.2025}
-      \field{title}{Amazon CloudWatch User Guide}
-      \field{year}{2024}
-    \endentry
     \entry{aws-sdk-java-v2}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=f0c5282ac7e568c0822a67c9facc9190}{%
@@ -173,7 +161,7 @@
       \field{title}{{Repozytorium AWS SDK dla Kotlin}}
       \field{year}{2025}
     \endentry
-    \entry{awsEc2Guide}{online}{}{}
+    \entry{AWSCloudWatchLogs}{online}{}{}
       \name{author}{1}{}{%
         {{hash=3eb2c1a57a8160029f036e3dcbf84bf1}{%
            family={{Amazon Web Services}},
@@ -188,6 +176,30 @@
       \strng{authorfullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
       \strng{authorfullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
       \field{extraname}{1}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/WhatIsCloudWatchLogs.html}}
+      \field{note}{Dostęp: 05.06.2025}
+      \field{title}{Amazon CloudWatch User Guide}
+      \field{year}{2024}
+    \endentry
+    \entry{awsEc2Guide}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=3eb2c1a57a8160029f036e3dcbf84bf1}{%
+           family={{Amazon Web Services}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{fullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{fullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{bibnamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorbibnamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authornamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorfullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorfullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \field{extraname}{2}
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{labelnamesource}{author}
@@ -211,7 +223,7 @@
       \strng{authornamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
       \strng{authorfullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
       \strng{authorfullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
-      \field{extraname}{2}
+      \field{extraname}{3}
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{labelnamesource}{author}
@@ -235,7 +247,7 @@
       \strng{authornamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
       \strng{authorfullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
       \strng{authorfullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
-      \field{extraname}{3}
+      \field{extraname}{4}
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{labelnamesource}{author}
@@ -258,7 +270,7 @@
       \strng{authornamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
       \strng{authorfullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
       \strng{authorfullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
-      \field{extraname}{4}
+      \field{extraname}{5}
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{labelnamesource}{author}
@@ -282,7 +294,7 @@
       \strng{authornamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
       \strng{authorfullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
       \strng{authorfullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
-      \field{extraname}{5}
+      \field{extraname}{6}
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{labelnamesource}{author}
@@ -306,7 +318,7 @@
       \strng{authornamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
       \strng{authorfullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
       \strng{authorfullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
-      \field{extraname}{6}
+      \field{extraname}{7}
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{labelnamesource}{author}
@@ -329,7 +341,7 @@
       \strng{authornamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
       \strng{authorfullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
       \strng{authorfullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
-      \field{extraname}{7}
+      \field{extraname}{8}
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{labelnamesource}{author}
@@ -352,7 +364,7 @@
       \strng{authornamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
       \strng{authorfullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
       \strng{authorfullhashraw}{3eb2c1a57a8160029f036e3dcbf84bf1}
-      \field{extraname}{8}
+      \field{extraname}{9}
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{labelnamesource}{author}
