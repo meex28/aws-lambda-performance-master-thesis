@@ -30,7 +30,7 @@
 \contentsline {section}{\numberline {3.4}Kotlin/JS}{46}{section.3.4}%
 \contentsline {section}{\numberline {3.5}Kotlin/Native}{49}{section.3.5}%
 \contentsline {chapter}{\numberline {4}Opis badania}{51}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Cel i metodologia badań}{51}{section.4.1}%
+\contentsline {section}{\numberline {4.1}Cel i metodyka badań}{51}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Implementacja funkcji}{54}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Wdrożenie funkcji}{57}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Środowisko badawcze}{58}{section.4.4}%
