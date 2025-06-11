@@ -374,6 +374,34 @@
       \field{title}{What is AWS?}
       \field{year}{2025}
     \endentry
+    \entry{llrt2025}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=878bce098120bfbf10e65758b861adb5}{%
+           family={{awslabs}},
+           familyi={a\bibinitperiod}}}%
+      }
+      \strng{namehash}{878bce098120bfbf10e65758b861adb5}
+      \strng{fullhash}{878bce098120bfbf10e65758b861adb5}
+      \strng{fullhashraw}{878bce098120bfbf10e65758b861adb5}
+      \strng{bibnamehash}{878bce098120bfbf10e65758b861adb5}
+      \strng{authorbibnamehash}{878bce098120bfbf10e65758b861adb5}
+      \strng{authornamehash}{878bce098120bfbf10e65758b861adb5}
+      \strng{authorfullhash}{878bce098120bfbf10e65758b861adb5}
+      \strng{authorfullhashraw}{878bce098120bfbf10e65758b861adb5}
+      \field{sortinit}{a}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Dostęp: 10.06.2025}
+      \field{title}{Repozytorium LLRT (Low-Latency Runtime)}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://github.com/awslabs/llrt
+      \endverb
+      \verb{url}
+      \verb https://github.com/awslabs/llrt
+      \endverb
+    \endentry
     \entry{8513710}{inproceedings}{}{}
       \name{author}{3}{}{%
         {{hash=b2e04dfb3edc8015aea0227fd74e3eb7}{%
@@ -2187,6 +2215,45 @@
       \verb http://www.jstor.org/stable/2280779
       \endverb
     \endentry
+    \entry{JEP483}{misc}{}{}
+      \name{author}{3}{}{%
+        {{hash=6184ab0c511b956eaf066d64430082ff}{%
+           family={Lam},
+           familyi={L\bibinitperiod},
+           given={Ioi},
+           giveni={I\bibinitperiod}}}%
+        {{hash=1ea2e158fca00fdd935f272449968a0d}{%
+           family={Heidinga},
+           familyi={H\bibinitperiod},
+           given={Dan},
+           giveni={D\bibinitperiod}}}%
+        {{hash=d34acc0f7f70c248b20aa34bf0264b96}{%
+           family={Rose},
+           familyi={R\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{f6dc95196493d9cf992507308adc7b27}
+      \strng{fullhash}{f6dc95196493d9cf992507308adc7b27}
+      \strng{fullhashraw}{f6dc95196493d9cf992507308adc7b27}
+      \strng{bibnamehash}{f6dc95196493d9cf992507308adc7b27}
+      \strng{authorbibnamehash}{f6dc95196493d9cf992507308adc7b27}
+      \strng{authornamehash}{f6dc95196493d9cf992507308adc7b27}
+      \strng{authorfullhash}{f6dc95196493d9cf992507308adc7b27}
+      \strng{authorfullhashraw}{f6dc95196493d9cf992507308adc7b27}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{JEP 483: Ahead-of-Time Class Loading \& Linking}}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://openjdk.org/jeps/483
+      \endverb
+      \verb{url}
+      \verb https://openjdk.org/jeps/483
+      \endverb
+    \endentry
     \entry{10.1145/3491204.3543506}{inproceedings}{}{}
       \name{author}{5}{}{%
         {{hash=184918765e8b1bd23d6c8e05022e046f}{%
@@ -2508,6 +2575,34 @@
       \endverb
       \verb{url}
       \verb https://arxiv.org/abs/2310.16510
+      \endverb
+    \endentry
+    \entry{micronaut_docs_2025}{manual}{}{}
+      \name{author}{1}{}{%
+        {{hash=30d1f3a3b17e728a850eda47e1433467}{%
+           family={{Micronaut Foundation}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{30d1f3a3b17e728a850eda47e1433467}
+      \strng{fullhash}{30d1f3a3b17e728a850eda47e1433467}
+      \strng{fullhashraw}{30d1f3a3b17e728a850eda47e1433467}
+      \strng{bibnamehash}{30d1f3a3b17e728a850eda47e1433467}
+      \strng{authorbibnamehash}{30d1f3a3b17e728a850eda47e1433467}
+      \strng{authornamehash}{30d1f3a3b17e728a850eda47e1433467}
+      \strng{authorfullhash}{30d1f3a3b17e728a850eda47e1433467}
+      \strng{authorfullhashraw}{30d1f3a3b17e728a850eda47e1433467}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Dostęp: 10.06.2025}
+      \field{title}{Dokumentacja Micronaut}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://docs.micronaut.io/
+      \endverb
+      \verb{url}
+      \verb https://docs.micronaut.io/
       \endverb
     \endentry
     \entry{9732138}{inproceedings}{}{}
@@ -3075,6 +3170,70 @@
       \endverb
       \keyw{Cloud computing;Java;Production;Tools;Virtual machining;Servers;Virtualization;GraalVM;Kubernetes;Quarkus;Cloud computing;native image}
     \endentry
+    \entry{spring-aot-docs}{manual}{}{}
+      \name{author}{1}{}{%
+        {{hash=e91bfa9a2528a57b80f04b42a61f2504}{%
+           family={{Spring Framework Team}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {VMware, Inc.}%
+      }
+      \strng{namehash}{e91bfa9a2528a57b80f04b42a61f2504}
+      \strng{fullhash}{e91bfa9a2528a57b80f04b42a61f2504}
+      \strng{fullhashraw}{e91bfa9a2528a57b80f04b42a61f2504}
+      \strng{bibnamehash}{e91bfa9a2528a57b80f04b42a61f2504}
+      \strng{authorbibnamehash}{e91bfa9a2528a57b80f04b42a61f2504}
+      \strng{authornamehash}{e91bfa9a2528a57b80f04b42a61f2504}
+      \strng{authorfullhash}{e91bfa9a2528a57b80f04b42a61f2504}
+      \strng{authorfullhashraw}{e91bfa9a2528a57b80f04b42a61f2504}
+      \field{extraname}{1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Dostęp: 10.06.2025}
+      \field{title}{Dokumentacja frameworku Spring: Ahead of Time (AOT) Optimizations}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://docs.spring.io/spring-framework/reference/core/aot.html
+      \endverb
+      \verb{url}
+      \verb https://docs.spring.io/spring-framework/reference/core/aot.html
+      \endverb
+    \endentry
+    \entry{spring-kotlin-docs}{manual}{}{}
+      \name{author}{1}{}{%
+        {{hash=e91bfa9a2528a57b80f04b42a61f2504}{%
+           family={{Spring Framework Team}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {VMware, Inc.}%
+      }
+      \strng{namehash}{e91bfa9a2528a57b80f04b42a61f2504}
+      \strng{fullhash}{e91bfa9a2528a57b80f04b42a61f2504}
+      \strng{fullhashraw}{e91bfa9a2528a57b80f04b42a61f2504}
+      \strng{bibnamehash}{e91bfa9a2528a57b80f04b42a61f2504}
+      \strng{authorbibnamehash}{e91bfa9a2528a57b80f04b42a61f2504}
+      \strng{authornamehash}{e91bfa9a2528a57b80f04b42a61f2504}
+      \strng{authorfullhash}{e91bfa9a2528a57b80f04b42a61f2504}
+      \strng{authorfullhashraw}{e91bfa9a2528a57b80f04b42a61f2504}
+      \field{extraname}{2}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Dostęp: 10.06.2025}
+      \field{title}{Dokumentacja frameworku Spring: Kotlin Support}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://docs.spring.io/spring-boot/reference/features/kotlin.html
+      \endverb
+      \verb{url}
+      \verb https://docs.spring.io/spring-boot/reference/features/kotlin.html
+      \endverb
+    \endentry
     \entry{stackoverflow_survey_2024}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=84d7dc19766c446f5e4084e8fce87f82}{%
@@ -3165,6 +3324,34 @@
       \field{howpublished}{\url{https://spotbugs.github.io/}}
       \field{note}{Dostęp: 13.05.2025}
       \field{title}{SpotBugs Static Analysis for Java}
+    \endentry
+    \entry{spring_cloud_function_2025}{manual}{}{}
+      \name{author}{1}{}{%
+        {{hash=7da57f1962f18dcb73eba4178b672fed}{%
+           family={{VMware, Inc.}},
+           familyi={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{7da57f1962f18dcb73eba4178b672fed}
+      \strng{fullhash}{7da57f1962f18dcb73eba4178b672fed}
+      \strng{fullhashraw}{7da57f1962f18dcb73eba4178b672fed}
+      \strng{bibnamehash}{7da57f1962f18dcb73eba4178b672fed}
+      \strng{authorbibnamehash}{7da57f1962f18dcb73eba4178b672fed}
+      \strng{authornamehash}{7da57f1962f18dcb73eba4178b672fed}
+      \strng{authorfullhash}{7da57f1962f18dcb73eba4178b672fed}
+      \strng{authorfullhashraw}{7da57f1962f18dcb73eba4178b672fed}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Dostęp: 10.06.2025}
+      \field{title}{Spring Cloud Function}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://spring.io/projects/spring-cloud-function
+      \endverb
+      \verb{url}
+      \verb https://spring.io/projects/spring-cloud-function
+      \endverb
     \endentry
     \entry{riseOfThePlanetOfServerlessComputing}{article}{}{}
       \name{author}{4}{}{%

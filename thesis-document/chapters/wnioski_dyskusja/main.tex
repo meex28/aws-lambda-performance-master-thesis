@@ -115,8 +115,6 @@ Ograniczeniami dla tych sposobów są także ograniczone możliwości użycia me
 
 \section{Zagrożenia trafności wyników}\label{chapter:zagrozenia_trafnosci_wynikow}
 
-% TODO: wstęp czemu te typy
-
 \subsection*{Trafność wnioskowania}
 
 Istotnym zagrożeniem dla wniosków wyciągniętych na podstawie eksperymentu może być niska moc statystyczna wyników. 
@@ -171,3 +169,127 @@ AWS Lambda zapewnia istotną abstrakcję na infrastrukturę chmurową, która je
 Eksperyment przeprowadzono w jednym regionie AWS i dla jednej architektury procesora (x86-64). 
 Jak wykazał przegląd literatury, wydajność może różnić się w zależności od regionu geograficznego oraz architektury (np. ARM64). 
 Zatem wyniki mogą nie być w pełni reprezentatywne dla wszystkich dostępnych konfiguracji.
+
+\section{Nowe kierunki rozwoju i zaawansowane techniki}
+
+Poprawa wydajności jest widocznym trendem zarówno w usłudze AWS Lambda, jak i narzędziach ekosystemu Java.
+Prowadzi to do możliwości wykorzystania nowych technologii w celu dalszej poprawy efektywności tworzonych funkcji.
+W ramach rozdziału opisano techniki, które mogą stanowić rozwinięcie badań przedstawionych w pracy.
+Opisane sposoby nie zostały uwzględnione w pierwotnym opracowaniu. 
+Ze względu na swoją użyteczność mogą jednak stanowić cenne uzupełnienie istniejących metod oraz wyznaczać kierunki dalszych analiz.
+
+\subsection*{Ładowanie i łączenie klas z wyprzedzeniem}
+
+Ładowanie i łączenie klas z wyprzedzeniem (ang. Ahead-of-Time Class Loading and Linking) to nowoczesna technika, która jest rozwijana w ramach OpenJDK.
+Została zaprezentowana w JEP 483 (ang. JDK Enhancement Proposal) oraz zawartym w najnowszej wersji Java 24 \cite{JEP483}, która osiągnęła ogólną dostępność w marcu 2025 roku.
+Głównym celem inicjatywy zawartej w JEP 483 jest optymalizacja czasu uruchomienia aplikacji oraz redukcja zużycia pamięci.
+Element ten jest kluczowy w środowiskach chmurowych, a tym bardziej bezserwerowych.
+Mechanizm ten jest częścią szerszej inicjatywy ,,Project Leyden'', co stanowi ewolucję istniejącej funkcji współdzielenia danych klas (ang. Class-Data Sharing).
+
+Omawiana technika opiera się na przygotowaniu pamięci podręcznej AOT (ang. Ahead-of-Time). 
+Jest ona tworzona przed właściwym uruchomieniem, na podstawie trybu treningowego.
+Podczas treningowego uruchomienia, mechanizm identyfikuje klasy ładowane przy starcie aplikacji, a następnie zapisuje ich załadowane i połączone dane w pliku.
+Dzięki temu, przy kolejnych uruchomieniach, maszyna wirtualna wykorzystuje ten gotowy artefakt.
+Znacząco przyspiesza to start maszyny wirtualnej oraz nie wymaga przy tym żadnych zmian w kodzie źródłowym.
+
+Znaczenie tej technologii dla całego ekosystemu Java podkreśla zainteresowanie nią ze strony społeczności frameworku Spring.
+Zespół Spring postrzega JEP 483 jako obiecującą metodę na znaczące skrócenie czasu uruchomienia, bez konieczności sięgania po kompilację natywną i rezygnacji z dynamicznych mechanizmów refleksji, co jest jednym z głównych kompromisów przy użyciu GraalVM.
+Wsparcie dla tej funkcji \cite{spring-aot-docs} jest zatem sygnałem, który potwierdza istotę JEP483 w ekosystemie Java.
+Poprawa wydajności z jej użyciem jest istotna, gdyż jak wskazują eksperymenty, pozwala na poprawę czasu startu aplikacji o około 42\% \cite{JEP483}.
+Pomiar został przeprowadzony na aplikacji Spring PetClinic, przez twórców funkcji.
+
+Przedstawiona technika stanowi interesujące rozwinięcie metod optymalizacji wydajności opartych o standardową maszynę wirtualną Javy.
+Może być ona wartą uwagi alternatywą dla kompilacji natywnych, która nie ogranicza możliwości oferowanych przez język programowania.
+Jej potencjał może leżeć także w połączeniu z innymi mechanizmami AWS Lambda, jak SnapStart.
+Przyspieszenie fazy inicjalizacji maszyny wirtualnej przez AOT Cache mogłoby bezpośrednio skrócić czas potrzebny na utworzenie migawki przez SnapStart, co prowadziłoby do szybszego wdrażania nowych wersji funkcji.
+Oba te obszary wyznaczają nowy, interesujący kierunek badań nad dalszą poprawą wydajności funkcji AWS Lambda.
+
+\subsection*{AWS Graviton}
+
+Innym interesującym kierunkiem rozwoju jest wykorzystanie architektur ARM, które zyskują na popularności w centrach danych dzięki swojej efektywności.
+Kluczową rolę w kontekście chmury obliczeniowej firmy Amazon odgrywają oferowane przez nią procesory AWS Graviton.
+Najnowszy z nich, czyli Graviton4 został zaprezentowany przez Amazon w lipcu 2024 roku.
+Wybór tego rodzaju procesorów pozwala na znaczną poprawę wydajności w stosunku do kosztów działania funkcji.
+
+W kontekście tej metody, szczególnego znaczenia nabierają techniki oparte o kompilację natywną Kotlin/Native.
+Umożliwia ona kompilację kodu Kotlin bezpośrednio do binarnego pliku wykonywalnego dla architektury linuxArm64 \cite{kotlinlangKotlinDocs}.
+W ramach pracy wykazano istotne zdolności Kotlin/Native w kontekście optymalizacji kosztowej.
+W przypadku użycia z procesorami Graviton potencjał ten może wzrosnąć, a co za tym idzie pozwolić na jeszcze większą wydajność funkcji przy niższych kosztach.
+Będzie to możliwe dzięki redukcji czasu zimnych startów przez Kotlin/Native i wysoką efektywność architektury ARM.
+Dodatkowo, skuteczność Kotlin/Native w kontekście małych pamięci może otworzyć nową drogą do użycia niewielkich i wyspecjalizowanych funkcji AWS Lambda.
+Będą one cechować się minimalnym kosztem utrzymania i wysoką wydajnością. 
+Pozwoli to na budowanie kompletnych systemów z drobnych, wyspecjalizowanych zadań. 
+Stanowi to silną alternatywę dla funkcji pisanych w językach takich jak JavaScript lub Python, co pozwoli zespołom programistycznym korzystanie z spójnego ekosystemu opartego o język Kotlin.
+
+\subsection*{Rozwój Kotlin Multiplatform}
+
+Popularność projektu Kotlin Multiplatform stale rośnie, czego dowodem jest rosnąca liczba bibliotek integrujących różne platformy przez niego oferowane.
+Mogą być one wyszukane i analizowane poprzez użycie specjalnej wyszukiwarki ,,klibs.io'', stworzonej przez JetBrains, czyli twórców język Kotlin.
+Rozwój ten jest także widoczny poprzez osiągnięcie przez projekt stabilności, co czyni go w pełni gotowym do zastosowań produkcyjnych, także po stronie serwera.
+Istotnym czynnikiem w tym rozwoju jest wsparcie frameworków dla języka Kotlin, takich jak Spring Boot \cite{spring-kotlin-docs}.
+Twórcy narzędzia intensywnie inwestują w integracje języka, co pozwala na osiągnięcie lepszej satysfakcji programistów rozwijających systemy w tej technologii.
+
+Jedną z kluczowych czynności wykonywanych podczas rozwoju funkcji AWS Lambda jest dobór odpowiedniego rozmiaru pamięci.
+Jest to dokonywane także w trakcie życia fukcji, której pamięć jest stale optymalizowana pod kątem rozmiaru.
+Kotlin Multiplatform pozwala jednak pójść o krok dalej dostarczając możliwość optymalizacji docelowego środowiska wykonawczego.
+Zamiast jedynie dostrajać parametry dla jednego środowiska (np. JVM), zespoły mogą wybrać różne środowiska dla każdej funkcji z osobna, w zależności od jej zadań.
+Poprzez współdzielenie kodu możliwe byłaby dynamiczna zmiana tego środowiska, gdzie ten sam kod mógłby zostać skompilowany do różnych platform.
+
+To podejście otwiera nową drogę do testów wykonywanych na funkcjach AWS Lambda.
+Poprzez mechanizmy routingu na poziomie usług takich jak API Gateway, możliwe jest wdrożenie kilku wariantów tej samej logiki biznesowej jako oddzielne funkcje Lambda (np. w wersji JVM, JS i natywnej).
+Dzięki temu poprzez odpowiedni podział ruchu, możliwe jest monitorowanie wydajności poszczególnych funkcji w czasie rzeczywistym.
+Na bazie tego możliwa jest decyzja odnośnie ostatecznie wybranego środowiska wykonawczego usługi.
+Co ważne, wybór ten nie wymaga dodatkowych nakładów pracy, które byłyby konieczne w przypadku używania róznych języków (np. Java, Python i JavaScript) w ramach pojedynczego systemu.
+Jest to możliwe dzięki funkcji wspołdzielenie kodu przez Kotlin Multiplatform.
+
+\subsection*{Projekt CRaC}
+
+Kolejną kluczową inicjatywą w kontekście zimnych startów Javy jest projekt CRaC, czyli skoordynowane przywracanie w punkcie kontrolnym (ang. Coordinated Restore at Checkpoint).
+Jest to projekt rozwijany w ramach OpenJDK, którego celem jest drastyczne skrócenie czasu uruchamiania aplikacji Java.
+Mechanizm ten opiera się na tworzeniu migawek oraz późniejszym przywracaniu ich.
+Pozwala to na uruchomienie aplikacji w momencie, gdy wszystkie wymagane klasy są już rozgrzane, co pozwala na szybszą inicjalizację programu.
+Istotna jest ,,koordynacja'' tej funkcji, która oznacza, że programista jest w stanie implementować odpowiednie funkcje, które są uruchamiane w momencie konkretnych zdarzeń (np. przed wykonaniem migawki).
+Dzięki temu aplikacja aktywnie uczestniczy w procesie tworzenia migawek oraz go koordynuje.
+
+Dalszy rozwój projektu CRaC w ramach społeczności OpenJDK niesie ze sobą obiecujące perspektywy dla użytkowników SnapStart. 
+Wszelkie usprawnienia w mechanizmie tworzenia punktów kontrolnych mogą w przyszłości zostać zaimplementowane w usłudze AWS, czyniąc ją jeszcze bardziej efektywną.
+Badanie możliwości oraz wpływu CRaC na usługę SnapStart i bezpośrednio funkcje AWS Lambda stanowi interesujący obszar dalszych badań.
+Ma to szczególne znaczenie w kontekście języka Kotlin, dla którego, jak wykazano w pracy, obecna implementacja SnapStart jest mało skuteczna, a usprawnienia w CRaC mogłyby rozwiązać ten problem.
+
+\subsection*{Wsparcie zaawansowanych frameworków}
+
+Dużą popularnością wśród programistów cechują się różnego rodzaju frameworki ekosystemu Java.
+Przeszły one jednak transformację, gdzie przestały być skupione wyłącznie na tworzeniu serwerów, ale coraz mocniej wspierają integracje z funkcjami bezserwerowymi i ich optymalizację.
+Ich główną rolą w architekturze serverless jest abstrakcja i uproszczenie implementacji zaawansowanych technik, takich jak kompilacja do obrazów natywnych czy integracja z usługą AWS SnapStart.
+Z tego powodu, wybór dedykowanego frameworka jest ważną decyzją architektoniczną.
+Wpływa ona bezpośrednio na wydajność oraz jakość rozwoju oprogramowania.
+
+Trend użycia frameworków w AWS Lambda podkreśla technologia AWS Lambda Web Adapter.
+Umożliwia ona uruchamianie standardowych aplikacji webowych jako funkcji AWS Lambda bez modyfikacji kodu, co znacznie wspiera migrację istniejących systemów do usług bezserwerowych.
+Spring Boot w wersji 3, dzięki wsparciu dla kompilacji natywnej, pozwala na transformację tradycyjnych monolitów w wysoce zoptymalizowane funkcje \cite{spring_cloud_function_2025}.
+Micronaut poprzez architekturę opartą o kompilację Ahead-of-Time (AOT) oferuje natychmiastową gotowość do pracy w wysoce wydajnym środowisku funkcji AWS Lambda \cite{micronaut_docs_2025}.
+Quarkus z kolei, zaprojektowany dla chmury, przenosi znaczną część logiki startowej do fazy budowania \cite{quarkus-docs}.
+Wszystkie te narzędzia wspierają dodatkowo kompilację natywną z użyciem GraalVM, co podkreśla rozbudowany trend poprawy wydajności.
+
+Z tego powodu, wybór odpowiedniego frameworka sam w sobie jest zaawansowaną techniką i istotną decyzją architektoniczną. 
+Analiza tych narzędzi pod kątem wydajności oraz ich wpływu na jakość rozwoju oprogramowania wyznacza interesujący kierunek do dalszych badań.
+Może to być naturalne rozwinięcie badań zawartych już w pracy.
+Pozwoli to na dokładną ocenę zachowania opisanych narzędzi zarówno z językiem Java, jak i Kotlin oraz z technikami GraalVM i SnapStart.
+Dzięki temu zespoły programistyczne będą w stanie podjąć bardziej świadomą decyzję o wyborze frameworka dla AWS Lambda.
+
+\subsection*{Wysoce wydajne środowiska wykonawcze JavaScript}
+
+Trend poprawy wydajności widoczny jest nie tylko w ekosystemie Java, ale także w ramach języka JavaScript.
+W ostatnim czasie obserwujemy rozwój coraz to nowszych środowisk wykonawczych, które są alternatywą dla tradycyjnego Node.js.
+Są to na przykład Deno, Bun czy LLRT (ang. Low-Latency Runtime), które skupiają się na poprawie efektywności wykonywania kodu JavaScript.
+Środowisko Deno oparte jest o język Rust, co podkreśla jego dążenia do osiągnięcia wysokiej efektywności.
+Natomiast Bun jest projektem skupionym na osiągnięciu jak najkrótszych czasów wykonania, poprzez użycie języka Zig i silnika JavaScriptCore.
+Na szczególną uwagę zasługuje LLRT, który rozwijany jest bezpośrednio przez AWS i wyspecjalizowany do użycia w funkcjach AWS Lambda.
+W porównaniu z Node.js, pozwala on na znaczną redukcję czasów startu.
+Dla 95. percentyla wywołań, czasy zimnych i ciepłych startów są krótsze o odpowiednio około 86\% i 69\% \cite{llrt2025}.
+Samo istnienie LLRT jest sygnałem o wysokiej motywacji społeczności JavaScript do projektowania rozwiązań skupionych na efektywności, co jest kluczowe dla AWS Lambda.
+
+Pojawienie się wspomnianych środowisk tworzy zupełnie nową ścieżkę rozwoju dla Kotlin/JS.
+Możliwość translacji kodu Kotlin do JavaScript oznacza, że jego wykonanie nie jest ograniczone tylko do środowiska Node.js.
+Kompletnie nowym obszarem badań mogą być procesy i mechanizmy, które pozwolą na wykonanie kodu stworzonego przez Kotlin/JS w Deno, Bun lub LLRT.
+Opracowanie takich rozwiązań byłoby istotnym krokiem naprzód, pozwalającym łączyć zalety języka Kotlin z wysoką wydajnością oferowaną przez wyspecjalizowane środowiska wykonawcze.

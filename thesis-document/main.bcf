@@ -2645,7 +2645,16 @@
     <bcf:citekey order="337" intorder="1">aws-sdk-kotlin</bcf:citekey>
     <bcf:citekey order="338" intorder="1">aws-sdk-js-v3</bcf:citekey>
     <bcf:citekey order="339" intorder="1">10.1145/3491204.3543506</bcf:citekey>
-    <bcf:citekey order="340" intorder="1">RepozytoriumEksperyment</bcf:citekey>
+    <bcf:citekey order="340" intorder="1">JEP483</bcf:citekey>
+    <bcf:citekey order="341" intorder="1">spring-aot-docs</bcf:citekey>
+    <bcf:citekey order="342" intorder="1">JEP483</bcf:citekey>
+    <bcf:citekey order="343" intorder="1">kotlinlangKotlinDocs</bcf:citekey>
+    <bcf:citekey order="344" intorder="1">spring-kotlin-docs</bcf:citekey>
+    <bcf:citekey order="345" intorder="1">spring_cloud_function_2025</bcf:citekey>
+    <bcf:citekey order="346" intorder="1">micronaut_docs_2025</bcf:citekey>
+    <bcf:citekey order="347" intorder="1">quarkus-docs</bcf:citekey>
+    <bcf:citekey order="348" intorder="1">llrt2025</bcf:citekey>
+    <bcf:citekey order="349" intorder="1">RepozytoriumEksperyment</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
